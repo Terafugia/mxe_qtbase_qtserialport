@@ -1,0 +1,2 @@
+../../test-driver: line 107: ./t-eq.exe: cannot execute binary file: Exec format error
+FAIL t-eq.exe (exit status: 126)

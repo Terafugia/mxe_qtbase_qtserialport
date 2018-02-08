@@ -1,0 +1,2 @@
+../../test-driver: line 107: ./t-get_d_2exp.exe: cannot execute binary file: Exec format error
+FAIL t-get_d_2exp.exe (exit status: 126)

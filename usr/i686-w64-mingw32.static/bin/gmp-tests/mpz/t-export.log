@@ -1,0 +1,2 @@
+../../test-driver: line 107: ./t-export.exe: cannot execute binary file: Exec format error
+FAIL t-export.exe (exit status: 126)

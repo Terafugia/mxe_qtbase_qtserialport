@@ -1,0 +1,2 @@
+../../test-driver: line 107: ./t-hgcd_appr.exe: cannot execute binary file: Exec format error
+FAIL t-hgcd_appr.exe (exit status: 126)

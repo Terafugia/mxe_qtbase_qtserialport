@@ -1,0 +1,2 @@
+../../test-driver: line 107: ./t-powm.exe: cannot execute binary file: Exec format error
+FAIL t-powm.exe (exit status: 126)

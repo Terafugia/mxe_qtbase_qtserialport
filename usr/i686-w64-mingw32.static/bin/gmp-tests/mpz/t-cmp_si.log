@@ -1,0 +1,2 @@
+../../test-driver: line 107: ./t-cmp_si.exe: cannot execute binary file: Exec format error
+FAIL t-cmp_si.exe (exit status: 126)

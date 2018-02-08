@@ -1,0 +1,2 @@
+../../test-driver: line 107: ./t-ui_div.exe: cannot execute binary file: Exec format error
+FAIL t-ui_div.exe (exit status: 126)

@@ -1,0 +1,2029 @@
+make[1]: Entering directory '/home/user/mxe'
+uname -a
+Linux user-VirtualBox 4.13.0-21-generic #24-Ubuntu SMP Mon Dec 18 17:29:35 UTC 2017 i686 i686 i686 GNU/Linux
+git log --pretty=tformat:"%H - %s [%ar] [%d]" -1
+1b7d2e0562f2ec93848f536d2a9d4cd414356d9e - Update packages.json & build-matrix.html [3 days ago] [ (HEAD -> master, origin/master, origin/HEAD)]
+lsb_release -a 2>/dev/null || sw_vers 2>/dev/null || true
+Distributor ID:	Ubuntu
+Description:	Ubuntu 17.10
+Release:	17.10
+Codename:	artful
+autoconf --version 2>/dev/null | head -1
+autoconf (GNU Autoconf) 2.69
+automake --version 2>/dev/null | head -1
+automake (GNU automake) 1.15
+gcc --version
+gcc (Ubuntu 7.2.0-8ubuntu3) 7.2.0
+Copyright (C) 2017 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+g++ --version
+g++ (Ubuntu 7.2.0-8ubuntu3) 7.2.0
+Copyright (C) 2017 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+python --version
+Python 2.7.14
+perl --version 2>&1 | head -3
+
+This is perl 5, version 26, subversion 0 (v5.26.0) built for i686-linux-gnu-thread-multi-64int
+(with 56 registered patches, see perl -V for more detail)
+rm -rf   '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu'
+mkdir -p '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu'
+mkdir -p '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2'
+mkdir -p '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2.build_'
+# disable wine with readonly directory
+# see https://github.com/mxe/mxe/issues/841
+mkdir -p '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/readonly'
+chmod 0555 '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/readonly'
+cd '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu' &&  tar xzf '/home/user/mxe/pkg/mpc-1.0.2.tar.gz'
+cd '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2'
+cd '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2' && ./configure --host='i686-pc-linux-gnu' --build='i686-pc-linux-gnu' --prefix='/home/user/mxe/usr/i686-pc-linux-gnu'  --enable-static --disable-shared  ac_cv_prog_HAVE_DOXYGEN="false" --enable-doc=no --enable-gtk-doc=no --enable-gtk-doc-html=no --enable-gtk-doc-pdf=no --{docdir,infodir,mandir,with-html-dir}='/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2.build_.sink' --disable-doxygen --with-gmp='/home/user/mxe/usr/i686-pc-linux-gnu/' --with-mpfr='/home/user/mxe/usr/i686-pc-linux-gnu/'
+configure: WARNING: unrecognized options: --enable-doc, --enable-gtk-doc, --enable-gtk-doc-html, --enable-gtk-doc-pdf, --with-html-dir, --disable-doxygen
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /bin/mkdir -p
+checking for gawk... no
+checking for mawk... mawk
+checking whether make sets $(MAKE)... yes
+checking whether to enable maintainer-specific portions of Makefiles... no
+checking build system type... i686-pc-linux-gnu
+checking host system type... i686-pc-linux-gnu
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for a sed that does not truncate output... /bin/sed
+checking for CC and CFLAGS in gmp.h... yes CC=gcc CFLAGS=-m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro
+checking for CC=gcc and CFLAGS=-m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro... yes
+checking for i686-pc-linux-gnu-gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking for style of include used by make... GNU
+checking dependency style of gcc... gcc3
+checking for i686-pc-linux-gnu-ar... no
+checking for i686-pc-linux-gnu-lib... no
+checking for i686-pc-linux-gnu-link... no
+checking for ar... ar
+checking the archiver (ar) interface... ar
+checking how to print strings... printf
+checking for a sed that does not truncate output... (cached) /bin/sed
+checking for fgrep... /bin/grep -F
+checking for ld used by gcc... /usr/bin/ld
+checking if the linker (/usr/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/nm -B
+checking the name lister (/usr/bin/nm -B) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 1572864
+checking whether the shell understands some XSI constructs... yes
+checking whether the shell understands "+="... yes
+checking how to convert i686-pc-linux-gnu file names to i686-pc-linux-gnu format... func_convert_file_noop
+checking how to convert i686-pc-linux-gnu file names to toolchain format... func_convert_file_noop
+checking for /usr/bin/ld option to reload object files... -r
+checking for i686-pc-linux-gnu-objdump... no
+checking for objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking for i686-pc-linux-gnu-dlltool... no
+checking for dlltool... no
+checking how to associate runtime and link libraries... printf %s\n
+checking for i686-pc-linux-gnu-ar... ar
+checking for archiver @FILE support... @
+checking for i686-pc-linux-gnu-strip... no
+checking for strip... strip
+checking for i686-pc-linux-gnu-ranlib... no
+checking for ranlib... ranlib
+checking command to parse /usr/bin/nm -B output from gcc object... ok
+checking for sysroot... no
+checking for i686-pc-linux-gnu-mt... no
+checking for mt... mt
+checking if mt is a manifest tool... no
+checking how to run the C preprocessor... gcc -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if gcc supports -fno-rtti -fno-exceptions... no
+checking for gcc option to produce PIC... -fPIC -DPIC
+checking if gcc PIC flag -fPIC -DPIC works... yes
+checking if gcc static flag -static works... yes
+checking if gcc supports -c -o file.o... yes
+checking if gcc supports -c -o file.o... (cached) yes
+checking whether the gcc linker (/usr/bin/ld) supports shared libraries... yes
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... no
+checking whether to build static libraries... yes
+checking for gmp.h... yes
+checking for ANSI C header files... (cached) yes
+checking locale.h usability... yes
+checking locale.h presence... yes
+checking for locale.h... yes
+checking for inttypes.h... (cached) yes
+checking for stdint.h... (cached) yes
+checking limits.h usability... yes
+checking limits.h presence... yes
+checking for limits.h... yes
+checking for unistd.h... (cached) yes
+checking sys/time.h usability... yes
+checking sys/time.h presence... yes
+checking for sys/time.h... yes
+checking whether time.h and sys/time.h may both be included... yes
+checking complex.h usability... yes
+checking complex.h presence... yes
+checking for complex.h... yes
+checking for library containing creal... -lm
+checking whether creal, cimag and I can be used... yes
+checking for an ANSI C-conforming const... yes
+checking for size_t... yes
+checking for gettimeofday... yes
+checking for localeconv... yes
+checking for setlocale... yes
+checking for dup... yes
+checking for dup2... yes
+checking for __gmpz_init in -lgmp... yes
+checking for MPFR... yes
+checking for recent GMP... yes
+checking for recent MPFR... yes
+checking if gcc accepts -dumpversion option... yes
+checking gcc version... 7
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating src/Makefile
+config.status: creating tests/Makefile
+config.status: creating doc/Makefile
+config.status: creating config.h
+config.status: executing depfiles commands
+config.status: executing libtool commands
+configure: WARNING: unrecognized options: --enable-doc, --enable-gtk-doc, --enable-gtk-doc-html, --enable-gtk-doc-pdf, --with-html-dir, --disable-doxygen
+make -C '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2' -j '1'
+make[2]: Entering directory '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2'
+make  all-recursive
+make[3]: Entering directory '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2'
+Making all in src
+make[4]: Entering directory '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src'
+/bin/bash ../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..   -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include   -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT abs.lo -MD -MP -MF .deps/abs.Tpo -c -o abs.lo abs.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT abs.lo -MD -MP -MF .deps/abs.Tpo -c abs.c -o abs.o
+mv -f .deps/abs.Tpo .deps/abs.Plo
+/bin/bash ../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..   -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include   -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT acos.lo -MD -MP -MF .deps/acos.Tpo -c -o acos.lo acos.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT acos.lo -MD -MP -MF .deps/acos.Tpo -c acos.c -o acos.o
+mv -f .deps/acos.Tpo .deps/acos.Plo
+/bin/bash ../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..   -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include   -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT acosh.lo -MD -MP -MF .deps/acosh.Tpo -c -o acosh.lo acosh.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT acosh.lo -MD -MP -MF .deps/acosh.Tpo -c acosh.c -o acosh.o
+mv -f .deps/acosh.Tpo .deps/acosh.Plo
+/bin/bash ../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..   -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include   -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT add.lo -MD -MP -MF .deps/add.Tpo -c -o add.lo add.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT add.lo -MD -MP -MF .deps/add.Tpo -c add.c -o add.o
+mv -f .deps/add.Tpo .deps/add.Plo
+/bin/bash ../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..   -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include   -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT add_fr.lo -MD -MP -MF .deps/add_fr.Tpo -c -o add_fr.lo add_fr.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT add_fr.lo -MD -MP -MF .deps/add_fr.Tpo -c add_fr.c -o add_fr.o
+mv -f .deps/add_fr.Tpo .deps/add_fr.Plo
+/bin/bash ../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..   -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include   -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT add_si.lo -MD -MP -MF .deps/add_si.Tpo -c -o add_si.lo add_si.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT add_si.lo -MD -MP -MF .deps/add_si.Tpo -c add_si.c -o add_si.o
+mv -f .deps/add_si.Tpo .deps/add_si.Plo
+/bin/bash ../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..   -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include   -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT add_ui.lo -MD -MP -MF .deps/add_ui.Tpo -c -o add_ui.lo add_ui.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT add_ui.lo -MD -MP -MF .deps/add_ui.Tpo -c add_ui.c -o add_ui.o
+mv -f .deps/add_ui.Tpo .deps/add_ui.Plo
+/bin/bash ../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..   -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include   -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT arg.lo -MD -MP -MF .deps/arg.Tpo -c -o arg.lo arg.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT arg.lo -MD -MP -MF .deps/arg.Tpo -c arg.c -o arg.o
+mv -f .deps/arg.Tpo .deps/arg.Plo
+/bin/bash ../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..   -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include   -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT asin.lo -MD -MP -MF .deps/asin.Tpo -c -o asin.lo asin.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT asin.lo -MD -MP -MF .deps/asin.Tpo -c asin.c -o asin.o
+mv -f .deps/asin.Tpo .deps/asin.Plo
+/bin/bash ../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..   -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include   -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT asinh.lo -MD -MP -MF .deps/asinh.Tpo -c -o asinh.lo asinh.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT asinh.lo -MD -MP -MF .deps/asinh.Tpo -c asinh.c -o asinh.o
+mv -f .deps/asinh.Tpo .deps/asinh.Plo
+/bin/bash ../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..   -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include   -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT atan.lo -MD -MP -MF .deps/atan.Tpo -c -o atan.lo atan.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT atan.lo -MD -MP -MF .deps/atan.Tpo -c atan.c -o atan.o
+mv -f .deps/atan.Tpo .deps/atan.Plo
+/bin/bash ../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..   -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include   -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT atanh.lo -MD -MP -MF .deps/atanh.Tpo -c -o atanh.lo atanh.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT atanh.lo -MD -MP -MF .deps/atanh.Tpo -c atanh.c -o atanh.o
+mv -f .deps/atanh.Tpo .deps/atanh.Plo
+/bin/bash ../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..   -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include   -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT clear.lo -MD -MP -MF .deps/clear.Tpo -c -o clear.lo clear.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT clear.lo -MD -MP -MF .deps/clear.Tpo -c clear.c -o clear.o
+mv -f .deps/clear.Tpo .deps/clear.Plo
+/bin/bash ../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..   -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include   -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT cmp.lo -MD -MP -MF .deps/cmp.Tpo -c -o cmp.lo cmp.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT cmp.lo -MD -MP -MF .deps/cmp.Tpo -c cmp.c -o cmp.o
+mv -f .deps/cmp.Tpo .deps/cmp.Plo
+/bin/bash ../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..   -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include   -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT cmp_si_si.lo -MD -MP -MF .deps/cmp_si_si.Tpo -c -o cmp_si_si.lo cmp_si_si.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT cmp_si_si.lo -MD -MP -MF .deps/cmp_si_si.Tpo -c cmp_si_si.c -o cmp_si_si.o
+mv -f .deps/cmp_si_si.Tpo .deps/cmp_si_si.Plo
+/bin/bash ../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..   -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include   -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT conj.lo -MD -MP -MF .deps/conj.Tpo -c -o conj.lo conj.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT conj.lo -MD -MP -MF .deps/conj.Tpo -c conj.c -o conj.o
+mv -f .deps/conj.Tpo .deps/conj.Plo
+/bin/bash ../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..   -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include   -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT cos.lo -MD -MP -MF .deps/cos.Tpo -c -o cos.lo cos.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT cos.lo -MD -MP -MF .deps/cos.Tpo -c cos.c -o cos.o
+mv -f .deps/cos.Tpo .deps/cos.Plo
+/bin/bash ../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..   -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include   -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT cosh.lo -MD -MP -MF .deps/cosh.Tpo -c -o cosh.lo cosh.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT cosh.lo -MD -MP -MF .deps/cosh.Tpo -c cosh.c -o cosh.o
+mv -f .deps/cosh.Tpo .deps/cosh.Plo
+/bin/bash ../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..   -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include   -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT div_2si.lo -MD -MP -MF .deps/div_2si.Tpo -c -o div_2si.lo div_2si.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT div_2si.lo -MD -MP -MF .deps/div_2si.Tpo -c div_2si.c -o div_2si.o
+mv -f .deps/div_2si.Tpo .deps/div_2si.Plo
+/bin/bash ../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..   -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include   -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT div_2ui.lo -MD -MP -MF .deps/div_2ui.Tpo -c -o div_2ui.lo div_2ui.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT div_2ui.lo -MD -MP -MF .deps/div_2ui.Tpo -c div_2ui.c -o div_2ui.o
+mv -f .deps/div_2ui.Tpo .deps/div_2ui.Plo
+/bin/bash ../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..   -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include   -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT div.lo -MD -MP -MF .deps/div.Tpo -c -o div.lo div.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT div.lo -MD -MP -MF .deps/div.Tpo -c div.c -o div.o
+mv -f .deps/div.Tpo .deps/div.Plo
+/bin/bash ../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..   -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include   -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT div_fr.lo -MD -MP -MF .deps/div_fr.Tpo -c -o div_fr.lo div_fr.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT div_fr.lo -MD -MP -MF .deps/div_fr.Tpo -c div_fr.c -o div_fr.o
+mv -f .deps/div_fr.Tpo .deps/div_fr.Plo
+/bin/bash ../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..   -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include   -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT div_ui.lo -MD -MP -MF .deps/div_ui.Tpo -c -o div_ui.lo div_ui.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT div_ui.lo -MD -MP -MF .deps/div_ui.Tpo -c div_ui.c -o div_ui.o
+mv -f .deps/div_ui.Tpo .deps/div_ui.Plo
+/bin/bash ../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..   -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include   -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT exp.lo -MD -MP -MF .deps/exp.Tpo -c -o exp.lo exp.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT exp.lo -MD -MP -MF .deps/exp.Tpo -c exp.c -o exp.o
+mv -f .deps/exp.Tpo .deps/exp.Plo
+/bin/bash ../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..   -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include   -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT fma.lo -MD -MP -MF .deps/fma.Tpo -c -o fma.lo fma.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT fma.lo -MD -MP -MF .deps/fma.Tpo -c fma.c -o fma.o
+mv -f .deps/fma.Tpo .deps/fma.Plo
+/bin/bash ../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..   -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include   -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT fr_div.lo -MD -MP -MF .deps/fr_div.Tpo -c -o fr_div.lo fr_div.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT fr_div.lo -MD -MP -MF .deps/fr_div.Tpo -c fr_div.c -o fr_div.o
+mv -f .deps/fr_div.Tpo .deps/fr_div.Plo
+/bin/bash ../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..   -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include   -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT fr_sub.lo -MD -MP -MF .deps/fr_sub.Tpo -c -o fr_sub.lo fr_sub.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT fr_sub.lo -MD -MP -MF .deps/fr_sub.Tpo -c fr_sub.c -o fr_sub.o
+mv -f .deps/fr_sub.Tpo .deps/fr_sub.Plo
+/bin/bash ../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..   -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include   -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT get_prec2.lo -MD -MP -MF .deps/get_prec2.Tpo -c -o get_prec2.lo get_prec2.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT get_prec2.lo -MD -MP -MF .deps/get_prec2.Tpo -c get_prec2.c -o get_prec2.o
+mv -f .deps/get_prec2.Tpo .deps/get_prec2.Plo
+/bin/bash ../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..   -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include   -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT get_prec.lo -MD -MP -MF .deps/get_prec.Tpo -c -o get_prec.lo get_prec.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT get_prec.lo -MD -MP -MF .deps/get_prec.Tpo -c get_prec.c -o get_prec.o
+mv -f .deps/get_prec.Tpo .deps/get_prec.Plo
+/bin/bash ../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..   -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include   -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT get_version.lo -MD -MP -MF .deps/get_version.Tpo -c -o get_version.lo get_version.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT get_version.lo -MD -MP -MF .deps/get_version.Tpo -c get_version.c -o get_version.o
+mv -f .deps/get_version.Tpo .deps/get_version.Plo
+/bin/bash ../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..   -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include   -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT get_x.lo -MD -MP -MF .deps/get_x.Tpo -c -o get_x.lo get_x.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT get_x.lo -MD -MP -MF .deps/get_x.Tpo -c get_x.c -o get_x.o
+mv -f .deps/get_x.Tpo .deps/get_x.Plo
+/bin/bash ../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..   -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include   -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT imag.lo -MD -MP -MF .deps/imag.Tpo -c -o imag.lo imag.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT imag.lo -MD -MP -MF .deps/imag.Tpo -c imag.c -o imag.o
+mv -f .deps/imag.Tpo .deps/imag.Plo
+/bin/bash ../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..   -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include   -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT init2.lo -MD -MP -MF .deps/init2.Tpo -c -o init2.lo init2.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT init2.lo -MD -MP -MF .deps/init2.Tpo -c init2.c -o init2.o
+mv -f .deps/init2.Tpo .deps/init2.Plo
+/bin/bash ../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..   -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include   -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT init3.lo -MD -MP -MF .deps/init3.Tpo -c -o init3.lo init3.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT init3.lo -MD -MP -MF .deps/init3.Tpo -c init3.c -o init3.o
+mv -f .deps/init3.Tpo .deps/init3.Plo
+/bin/bash ../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..   -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include   -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT inp_str.lo -MD -MP -MF .deps/inp_str.Tpo -c -o inp_str.lo inp_str.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT inp_str.lo -MD -MP -MF .deps/inp_str.Tpo -c inp_str.c -o inp_str.o
+mv -f .deps/inp_str.Tpo .deps/inp_str.Plo
+/bin/bash ../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..   -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include   -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT log.lo -MD -MP -MF .deps/log.Tpo -c -o log.lo log.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT log.lo -MD -MP -MF .deps/log.Tpo -c log.c -o log.o
+mv -f .deps/log.Tpo .deps/log.Plo
+/bin/bash ../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..   -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include   -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT log10.lo -MD -MP -MF .deps/log10.Tpo -c -o log10.lo log10.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT log10.lo -MD -MP -MF .deps/log10.Tpo -c log10.c -o log10.o
+mv -f .deps/log10.Tpo .deps/log10.Plo
+/bin/bash ../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..   -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include   -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT mem.lo -MD -MP -MF .deps/mem.Tpo -c -o mem.lo mem.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT mem.lo -MD -MP -MF .deps/mem.Tpo -c mem.c -o mem.o
+mv -f .deps/mem.Tpo .deps/mem.Plo
+/bin/bash ../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..   -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include   -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT mul_2si.lo -MD -MP -MF .deps/mul_2si.Tpo -c -o mul_2si.lo mul_2si.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT mul_2si.lo -MD -MP -MF .deps/mul_2si.Tpo -c mul_2si.c -o mul_2si.o
+mv -f .deps/mul_2si.Tpo .deps/mul_2si.Plo
+/bin/bash ../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..   -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include   -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT mul_2ui.lo -MD -MP -MF .deps/mul_2ui.Tpo -c -o mul_2ui.lo mul_2ui.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT mul_2ui.lo -MD -MP -MF .deps/mul_2ui.Tpo -c mul_2ui.c -o mul_2ui.o
+mv -f .deps/mul_2ui.Tpo .deps/mul_2ui.Plo
+/bin/bash ../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..   -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include   -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT mul.lo -MD -MP -MF .deps/mul.Tpo -c -o mul.lo mul.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT mul.lo -MD -MP -MF .deps/mul.Tpo -c mul.c -o mul.o
+mv -f .deps/mul.Tpo .deps/mul.Plo
+/bin/bash ../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..   -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include   -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT mul_fr.lo -MD -MP -MF .deps/mul_fr.Tpo -c -o mul_fr.lo mul_fr.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT mul_fr.lo -MD -MP -MF .deps/mul_fr.Tpo -c mul_fr.c -o mul_fr.o
+mv -f .deps/mul_fr.Tpo .deps/mul_fr.Plo
+/bin/bash ../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..   -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include   -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT mul_i.lo -MD -MP -MF .deps/mul_i.Tpo -c -o mul_i.lo mul_i.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT mul_i.lo -MD -MP -MF .deps/mul_i.Tpo -c mul_i.c -o mul_i.o
+mv -f .deps/mul_i.Tpo .deps/mul_i.Plo
+/bin/bash ../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..   -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include   -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT mul_si.lo -MD -MP -MF .deps/mul_si.Tpo -c -o mul_si.lo mul_si.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT mul_si.lo -MD -MP -MF .deps/mul_si.Tpo -c mul_si.c -o mul_si.o
+mv -f .deps/mul_si.Tpo .deps/mul_si.Plo
+/bin/bash ../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..   -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include   -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT mul_ui.lo -MD -MP -MF .deps/mul_ui.Tpo -c -o mul_ui.lo mul_ui.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT mul_ui.lo -MD -MP -MF .deps/mul_ui.Tpo -c mul_ui.c -o mul_ui.o
+mv -f .deps/mul_ui.Tpo .deps/mul_ui.Plo
+/bin/bash ../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..   -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include   -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT neg.lo -MD -MP -MF .deps/neg.Tpo -c -o neg.lo neg.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT neg.lo -MD -MP -MF .deps/neg.Tpo -c neg.c -o neg.o
+mv -f .deps/neg.Tpo .deps/neg.Plo
+/bin/bash ../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..   -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include   -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT norm.lo -MD -MP -MF .deps/norm.Tpo -c -o norm.lo norm.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT norm.lo -MD -MP -MF .deps/norm.Tpo -c norm.c -o norm.o
+mv -f .deps/norm.Tpo .deps/norm.Plo
+/bin/bash ../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..   -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include   -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT out_str.lo -MD -MP -MF .deps/out_str.Tpo -c -o out_str.lo out_str.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT out_str.lo -MD -MP -MF .deps/out_str.Tpo -c out_str.c -o out_str.o
+mv -f .deps/out_str.Tpo .deps/out_str.Plo
+/bin/bash ../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..   -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include   -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT pow.lo -MD -MP -MF .deps/pow.Tpo -c -o pow.lo pow.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT pow.lo -MD -MP -MF .deps/pow.Tpo -c pow.c -o pow.o
+mv -f .deps/pow.Tpo .deps/pow.Plo
+/bin/bash ../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..   -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include   -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT pow_fr.lo -MD -MP -MF .deps/pow_fr.Tpo -c -o pow_fr.lo pow_fr.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT pow_fr.lo -MD -MP -MF .deps/pow_fr.Tpo -c pow_fr.c -o pow_fr.o
+mv -f .deps/pow_fr.Tpo .deps/pow_fr.Plo
+/bin/bash ../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..   -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include   -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT pow_ld.lo -MD -MP -MF .deps/pow_ld.Tpo -c -o pow_ld.lo pow_ld.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT pow_ld.lo -MD -MP -MF .deps/pow_ld.Tpo -c pow_ld.c -o pow_ld.o
+mv -f .deps/pow_ld.Tpo .deps/pow_ld.Plo
+/bin/bash ../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..   -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include   -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT pow_d.lo -MD -MP -MF .deps/pow_d.Tpo -c -o pow_d.lo pow_d.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT pow_d.lo -MD -MP -MF .deps/pow_d.Tpo -c pow_d.c -o pow_d.o
+mv -f .deps/pow_d.Tpo .deps/pow_d.Plo
+/bin/bash ../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..   -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include   -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT pow_si.lo -MD -MP -MF .deps/pow_si.Tpo -c -o pow_si.lo pow_si.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT pow_si.lo -MD -MP -MF .deps/pow_si.Tpo -c pow_si.c -o pow_si.o
+mv -f .deps/pow_si.Tpo .deps/pow_si.Plo
+/bin/bash ../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..   -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include   -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT pow_ui.lo -MD -MP -MF .deps/pow_ui.Tpo -c -o pow_ui.lo pow_ui.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT pow_ui.lo -MD -MP -MF .deps/pow_ui.Tpo -c pow_ui.c -o pow_ui.o
+mv -f .deps/pow_ui.Tpo .deps/pow_ui.Plo
+/bin/bash ../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..   -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include   -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT pow_z.lo -MD -MP -MF .deps/pow_z.Tpo -c -o pow_z.lo pow_z.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT pow_z.lo -MD -MP -MF .deps/pow_z.Tpo -c pow_z.c -o pow_z.o
+mv -f .deps/pow_z.Tpo .deps/pow_z.Plo
+/bin/bash ../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..   -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include   -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT proj.lo -MD -MP -MF .deps/proj.Tpo -c -o proj.lo proj.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT proj.lo -MD -MP -MF .deps/proj.Tpo -c proj.c -o proj.o
+mv -f .deps/proj.Tpo .deps/proj.Plo
+/bin/bash ../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..   -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include   -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT real.lo -MD -MP -MF .deps/real.Tpo -c -o real.lo real.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT real.lo -MD -MP -MF .deps/real.Tpo -c real.c -o real.o
+mv -f .deps/real.Tpo .deps/real.Plo
+/bin/bash ../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..   -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include   -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT urandom.lo -MD -MP -MF .deps/urandom.Tpo -c -o urandom.lo urandom.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT urandom.lo -MD -MP -MF .deps/urandom.Tpo -c urandom.c -o urandom.o
+mv -f .deps/urandom.Tpo .deps/urandom.Plo
+/bin/bash ../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..   -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include   -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT set.lo -MD -MP -MF .deps/set.Tpo -c -o set.lo set.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT set.lo -MD -MP -MF .deps/set.Tpo -c set.c -o set.o
+mv -f .deps/set.Tpo .deps/set.Plo
+/bin/bash ../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..   -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include   -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT set_prec.lo -MD -MP -MF .deps/set_prec.Tpo -c -o set_prec.lo set_prec.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT set_prec.lo -MD -MP -MF .deps/set_prec.Tpo -c set_prec.c -o set_prec.o
+mv -f .deps/set_prec.Tpo .deps/set_prec.Plo
+/bin/bash ../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..   -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include   -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT set_str.lo -MD -MP -MF .deps/set_str.Tpo -c -o set_str.lo set_str.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT set_str.lo -MD -MP -MF .deps/set_str.Tpo -c set_str.c -o set_str.o
+mv -f .deps/set_str.Tpo .deps/set_str.Plo
+/bin/bash ../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..   -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include   -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT set_x.lo -MD -MP -MF .deps/set_x.Tpo -c -o set_x.lo set_x.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT set_x.lo -MD -MP -MF .deps/set_x.Tpo -c set_x.c -o set_x.o
+mv -f .deps/set_x.Tpo .deps/set_x.Plo
+/bin/bash ../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..   -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include   -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT set_x_x.lo -MD -MP -MF .deps/set_x_x.Tpo -c -o set_x_x.lo set_x_x.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT set_x_x.lo -MD -MP -MF .deps/set_x_x.Tpo -c set_x_x.c -o set_x_x.o
+mv -f .deps/set_x_x.Tpo .deps/set_x_x.Plo
+/bin/bash ../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..   -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include   -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT sin.lo -MD -MP -MF .deps/sin.Tpo -c -o sin.lo sin.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT sin.lo -MD -MP -MF .deps/sin.Tpo -c sin.c -o sin.o
+mv -f .deps/sin.Tpo .deps/sin.Plo
+/bin/bash ../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..   -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include   -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT sin_cos.lo -MD -MP -MF .deps/sin_cos.Tpo -c -o sin_cos.lo sin_cos.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT sin_cos.lo -MD -MP -MF .deps/sin_cos.Tpo -c sin_cos.c -o sin_cos.o
+mv -f .deps/sin_cos.Tpo .deps/sin_cos.Plo
+/bin/bash ../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..   -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include   -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT sinh.lo -MD -MP -MF .deps/sinh.Tpo -c -o sinh.lo sinh.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT sinh.lo -MD -MP -MF .deps/sinh.Tpo -c sinh.c -o sinh.o
+mv -f .deps/sinh.Tpo .deps/sinh.Plo
+/bin/bash ../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..   -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include   -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT sqr.lo -MD -MP -MF .deps/sqr.Tpo -c -o sqr.lo sqr.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT sqr.lo -MD -MP -MF .deps/sqr.Tpo -c sqr.c -o sqr.o
+mv -f .deps/sqr.Tpo .deps/sqr.Plo
+/bin/bash ../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..   -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include   -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT sqrt.lo -MD -MP -MF .deps/sqrt.Tpo -c -o sqrt.lo sqrt.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT sqrt.lo -MD -MP -MF .deps/sqrt.Tpo -c sqrt.c -o sqrt.o
+mv -f .deps/sqrt.Tpo .deps/sqrt.Plo
+/bin/bash ../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..   -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include   -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT strtoc.lo -MD -MP -MF .deps/strtoc.Tpo -c -o strtoc.lo strtoc.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT strtoc.lo -MD -MP -MF .deps/strtoc.Tpo -c strtoc.c -o strtoc.o
+mv -f .deps/strtoc.Tpo .deps/strtoc.Plo
+/bin/bash ../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..   -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include   -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT sub.lo -MD -MP -MF .deps/sub.Tpo -c -o sub.lo sub.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT sub.lo -MD -MP -MF .deps/sub.Tpo -c sub.c -o sub.o
+mv -f .deps/sub.Tpo .deps/sub.Plo
+/bin/bash ../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..   -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include   -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT sub_fr.lo -MD -MP -MF .deps/sub_fr.Tpo -c -o sub_fr.lo sub_fr.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT sub_fr.lo -MD -MP -MF .deps/sub_fr.Tpo -c sub_fr.c -o sub_fr.o
+mv -f .deps/sub_fr.Tpo .deps/sub_fr.Plo
+/bin/bash ../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..   -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include   -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT sub_ui.lo -MD -MP -MF .deps/sub_ui.Tpo -c -o sub_ui.lo sub_ui.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT sub_ui.lo -MD -MP -MF .deps/sub_ui.Tpo -c sub_ui.c -o sub_ui.o
+mv -f .deps/sub_ui.Tpo .deps/sub_ui.Plo
+/bin/bash ../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..   -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include   -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT swap.lo -MD -MP -MF .deps/swap.Tpo -c -o swap.lo swap.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT swap.lo -MD -MP -MF .deps/swap.Tpo -c swap.c -o swap.o
+mv -f .deps/swap.Tpo .deps/swap.Plo
+/bin/bash ../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..   -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include   -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT tan.lo -MD -MP -MF .deps/tan.Tpo -c -o tan.lo tan.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT tan.lo -MD -MP -MF .deps/tan.Tpo -c tan.c -o tan.o
+mv -f .deps/tan.Tpo .deps/tan.Plo
+/bin/bash ../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..   -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include   -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT tanh.lo -MD -MP -MF .deps/tanh.Tpo -c -o tanh.lo tanh.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT tanh.lo -MD -MP -MF .deps/tanh.Tpo -c tanh.c -o tanh.o
+mv -f .deps/tanh.Tpo .deps/tanh.Plo
+/bin/bash ../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..   -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include   -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT uceil_log2.lo -MD -MP -MF .deps/uceil_log2.Tpo -c -o uceil_log2.lo uceil_log2.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT uceil_log2.lo -MD -MP -MF .deps/uceil_log2.Tpo -c uceil_log2.c -o uceil_log2.o
+mv -f .deps/uceil_log2.Tpo .deps/uceil_log2.Plo
+/bin/bash ../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..   -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include   -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT ui_div.lo -MD -MP -MF .deps/ui_div.Tpo -c -o ui_div.lo ui_div.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT ui_div.lo -MD -MP -MF .deps/ui_div.Tpo -c ui_div.c -o ui_div.o
+mv -f .deps/ui_div.Tpo .deps/ui_div.Plo
+/bin/bash ../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..   -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include   -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT ui_ui_sub.lo -MD -MP -MF .deps/ui_ui_sub.Tpo -c -o ui_ui_sub.lo ui_ui_sub.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -MT ui_ui_sub.lo -MD -MP -MF .deps/ui_ui_sub.Tpo -c ui_ui_sub.c -o ui_ui_sub.o
+mv -f .deps/ui_ui_sub.Tpo .deps/ui_ui_sub.Plo
+/bin/bash ../libtool --tag=CC   --mode=link gcc  -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro  -version-info 3:0:0 -L/home/user/mxe/usr/i686-pc-linux-gnu//lib -L/home/user/mxe/usr/i686-pc-linux-gnu//lib  -o libmpc.la -rpath /home/user/mxe/usr/i686-pc-linux-gnu/lib abs.lo acos.lo acosh.lo add.lo add_fr.lo add_si.lo add_ui.lo arg.lo asin.lo asinh.lo atan.lo atanh.lo clear.lo cmp.lo cmp_si_si.lo conj.lo cos.lo cosh.lo div_2si.lo div_2ui.lo div.lo div_fr.lo div_ui.lo exp.lo fma.lo fr_div.lo fr_sub.lo get_prec2.lo get_prec.lo get_version.lo get_x.lo imag.lo init2.lo init3.lo inp_str.lo log.lo log10.lo mem.lo mul_2si.lo mul_2ui.lo mul.lo mul_fr.lo mul_i.lo mul_si.lo mul_ui.lo neg.lo norm.lo out_str.lo pow.lo pow_fr.lo pow_ld.lo pow_d.lo pow_si.lo pow_ui.lo pow_z.lo proj.lo real.lo urandom.lo set.lo set_prec.lo set_str.lo set_x.lo set_x_x.lo sin.lo sin_cos.lo sinh.lo sqr.lo sqrt.lo strtoc.lo sub.lo sub_fr.lo sub_ui.lo swap.lo tan.lo tanh.lo uceil_log2.lo ui_div.lo ui_ui_sub.lo  -lmpfr -lgmp -lm 
+libtool: link: ar cru .libs/libmpc.a  abs.o acos.o acosh.o add.o add_fr.o add_si.o add_ui.o arg.o asin.o asinh.o atan.o atanh.o clear.o cmp.o cmp_si_si.o conj.o cos.o cosh.o div_2si.o div_2ui.o div.o div_fr.o div_ui.o exp.o fma.o fr_div.o fr_sub.o get_prec2.o get_prec.o get_version.o get_x.o imag.o init2.o init3.o inp_str.o log.o log10.o mem.o mul_2si.o mul_2ui.o mul.o mul_fr.o mul_i.o mul_si.o mul_ui.o neg.o norm.o out_str.o pow.o pow_fr.o pow_ld.o pow_d.o pow_si.o pow_ui.o pow_z.o proj.o real.o urandom.o set.o set_prec.o set_str.o set_x.o set_x_x.o sin.o sin_cos.o sinh.o sqr.o sqrt.o strtoc.o sub.o sub_fr.o sub_ui.o swap.o tan.o tanh.o uceil_log2.o ui_div.o ui_ui_sub.o
+ar: `u' modifier ignored since `D' is the default (see `U')
+libtool: link: ranlib .libs/libmpc.a
+libtool: link: ( cd ".libs" && rm -f "libmpc.la" && ln -s "../libmpc.la" "libmpc.la" )
+make[4]: Leaving directory '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src'
+Making all in tests
+make[4]: Entering directory '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests'
+make[4]: Nothing to be done for 'all'.
+make[4]: Leaving directory '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests'
+Making all in doc
+make[4]: Entering directory '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/doc'
+make[4]: Nothing to be done for 'all'.
+make[4]: Leaving directory '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/doc'
+make[4]: Entering directory '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2'
+make[4]: Leaving directory '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2'
+make[3]: Leaving directory '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2'
+make[2]: Leaving directory '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2'
+make -C '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2' -j '1' install
+make[2]: Entering directory '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2'
+Making install in src
+make[3]: Entering directory '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src'
+make[4]: Entering directory '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src'
+ /bin/mkdir -p '/home/user/mxe/usr/i686-pc-linux-gnu/lib'
+ /bin/bash ../libtool   --mode=install /usr/bin/install -c   libmpc.la '/home/user/mxe/usr/i686-pc-linux-gnu/lib'
+libtool: install: /usr/bin/install -c .libs/libmpc.lai /home/user/mxe/usr/i686-pc-linux-gnu/lib/libmpc.la
+libtool: install: /usr/bin/install -c .libs/libmpc.a /home/user/mxe/usr/i686-pc-linux-gnu/lib/libmpc.a
+libtool: install: chmod 644 /home/user/mxe/usr/i686-pc-linux-gnu/lib/libmpc.a
+libtool: install: ranlib /home/user/mxe/usr/i686-pc-linux-gnu/lib/libmpc.a
+libtool: finish: PATH="/home/user/mxe/usr/i686-pc-linux-gnu/bin:/home/user/mxe/usr/bin:/home/user/mxe/usr/i686-pc-linux-gnu/bin:/home/user/mxe/usr/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/sbin" ldconfig -n /home/user/mxe/usr/i686-pc-linux-gnu/lib
+----------------------------------------------------------------------
+Libraries have been installed in:
+   /home/user/mxe/usr/i686-pc-linux-gnu/lib
+
+If you ever happen to want to link against installed libraries
+in a given directory, LIBDIR, you must either use libtool, and
+specify the full pathname of the library, or use the `-LLIBDIR'
+flag during linking and do at least one of the following:
+   - add LIBDIR to the `LD_LIBRARY_PATH' environment variable
+     during execution
+   - add LIBDIR to the `LD_RUN_PATH' environment variable
+     during linking
+   - use the `-Wl,-rpath -Wl,LIBDIR' linker flag
+   - have your system administrator add LIBDIR to `/etc/ld.so.conf'
+
+See any operating system documentation about shared libraries for
+more information, such as the ld(1) and ld.so(8) manual pages.
+----------------------------------------------------------------------
+make[4]: Nothing to be done for 'install-data-am'.
+make[4]: Leaving directory '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src'
+make[3]: Leaving directory '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src'
+Making install in tests
+make[3]: Entering directory '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests'
+make[4]: Entering directory '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests'
+make[4]: Nothing to be done for 'install-exec-am'.
+make[4]: Nothing to be done for 'install-data-am'.
+make[4]: Leaving directory '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests'
+make[3]: Leaving directory '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests'
+Making install in doc
+make[3]: Entering directory '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/doc'
+make[4]: Entering directory '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/doc'
+make[4]: Nothing to be done for 'install-exec-am'.
+ /bin/mkdir -p '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2.build_.sink'
+ /usr/bin/install -c -m 644 ./mpc.info '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2.build_.sink'
+ install-info --info-dir='/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2.build_.sink' '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2.build_.sink/mpc.info'
+make[4]: Leaving directory '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/doc'
+make[3]: Leaving directory '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/doc'
+make[3]: Entering directory '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2'
+make[4]: Entering directory '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2'
+make[4]: Nothing to be done for 'install-exec-am'.
+ /bin/mkdir -p '/home/user/mxe/usr/i686-pc-linux-gnu/include'
+ /usr/bin/install -c -m 644 src/mpc.h '/home/user/mxe/usr/i686-pc-linux-gnu/include'
+make[4]: Leaving directory '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2'
+make[3]: Leaving directory '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2'
+make[2]: Leaving directory '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2'
+
+/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/config.log
+This file contains any messages produced by compilers while
+running configure, to aid debugging if configure makes a mistake.
+
+It was created by mpc configure 1.0.2, which was
+generated by GNU Autoconf 2.69.  Invocation command line was
+
+  $ ./configure --host=i686-pc-linux-gnu --build=i686-pc-linux-gnu --prefix=/home/user/mxe/usr/i686-pc-linux-gnu --enable-static --disable-shared ac_cv_prog_HAVE_DOXYGEN=false --enable-doc=no --enable-gtk-doc=no --enable-gtk-doc-html=no --enable-gtk-doc-pdf=no --docdir=/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2.build_.sink --infodir=/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2.build_.sink --mandir=/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2.build_.sink --with-html-dir=/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2.build_.sink --disable-doxygen --with-gmp=/home/user/mxe/usr/i686-pc-linux-gnu/ --with-mpfr=/home/user/mxe/usr/i686-pc-linux-gnu/
+
+## --------- ##
+## Platform. ##
+## --------- ##
+
+hostname = user-VirtualBox
+uname -m = i686
+uname -r = 4.13.0-21-generic
+uname -s = Linux
+uname -v = #24-Ubuntu SMP Mon Dec 18 17:29:35 UTC 2017
+
+/usr/bin/uname -p = unknown
+/bin/uname -X     = unknown
+
+/bin/arch              = unknown
+/usr/bin/arch -k       = unknown
+/usr/convex/getsysinfo = unknown
+/usr/bin/hostinfo      = unknown
+/bin/machine           = unknown
+/usr/bin/oslevel       = unknown
+/bin/universe          = unknown
+
+PATH: /home/user/mxe/usr/i686-pc-linux-gnu/bin
+PATH: /home/user/mxe/usr/bin
+PATH: /home/user/mxe/usr/i686-pc-linux-gnu/bin
+PATH: /home/user/mxe/usr/bin
+PATH: /usr/local/sbin
+PATH: /usr/local/bin
+PATH: /usr/sbin
+PATH: /usr/bin
+PATH: /sbin
+PATH: /bin
+PATH: /usr/games
+PATH: /usr/local/games
+PATH: /snap/bin
+
+
+## ----------- ##
+## Core tests. ##
+## ----------- ##
+
+configure:2332: checking for a BSD-compatible install
+configure:2400: result: /usr/bin/install -c
+configure:2411: checking whether build environment is sane
+configure:2466: result: yes
+configure:2617: checking for a thread-safe mkdir -p
+configure:2656: result: /bin/mkdir -p
+configure:2663: checking for gawk
+configure:2693: result: no
+configure:2663: checking for mawk
+configure:2679: found /usr/bin/mawk
+configure:2690: result: mawk
+configure:2701: checking whether make sets $(MAKE)
+configure:2723: result: yes
+configure:2810: checking whether to enable maintainer-specific portions of Makefiles
+configure:2819: result: no
+configure:2840: checking build system type
+configure:2854: result: i686-pc-linux-gnu
+configure:2874: checking host system type
+configure:2887: result: i686-pc-linux-gnu
+configure:3068: checking for grep that handles long lines and -e
+configure:3126: result: /bin/grep
+configure:3131: checking for egrep
+configure:3193: result: /bin/grep -E
+configure:3198: checking for a sed that does not truncate output
+configure:3262: result: /bin/sed
+configure:3269: checking for CC and CFLAGS in gmp.h
+configure:3295: result: yes CC=gcc CFLAGS=-m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro
+configure:3301: checking for CC=gcc and CFLAGS=-m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro
+configure:3305: result: yes
+configure:3328: checking for i686-pc-linux-gnu-gcc
+configure:3355: result: gcc
+configure:3624: checking for C compiler version
+configure:3633: gcc --version >&5
+gcc (Ubuntu 7.2.0-8ubuntu3) 7.2.0
+Copyright (C) 2017 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+configure:3644: $? = 0
+configure:3633: gcc -v >&5
+Using built-in specs.
+COLLECT_GCC=gcc
+COLLECT_LTO_WRAPPER=/usr/lib/gcc/i686-linux-gnu/7/lto-wrapper
+Target: i686-linux-gnu
+Configured with: ../src/configure -v --with-pkgversion='Ubuntu 7.2.0-8ubuntu3' --with-bugurl=file:///usr/share/doc/gcc-7/README.Bugs --enable-languages=c,ada,c++,go,brig,d,fortran,objc,obj-c++ --prefix=/usr --with-gcc-major-version-only --program-suffix=-7 --program-prefix=i686-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --with-sysroot=/ --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-libmpx --enable-plugin --enable-default-pie --with-system-zlib --with-target-system-zlib --enable-objc-gc=auto --enable-targets=all --enable-multiarch --disable-werror --with-arch-32=i686 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-checking=release --build=i686-linux-gnu --host=i686-linux-gnu --target=i686-linux-gnu
+Thread model: posix
+gcc version 7.2.0 (Ubuntu 7.2.0-8ubuntu3) 
+configure:3644: $? = 0
+configure:3633: gcc -V >&5
+gcc: error: unrecognized command line option '-V'
+gcc: fatal error: no input files
+compilation terminated.
+configure:3644: $? = 1
+configure:3633: gcc -qversion >&5
+gcc: error: unrecognized command line option '-qversion'; did you mean '--version'?
+gcc: fatal error: no input files
+compilation terminated.
+configure:3644: $? = 1
+configure:3664: checking whether the C compiler works
+configure:3686: gcc -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include  -L/home/user/mxe/usr/i686-pc-linux-gnu//lib -L/home/user/mxe/usr/i686-pc-linux-gnu//lib  conftest.c  >&5
+configure:3690: $? = 0
+configure:3738: result: yes
+configure:3741: checking for C compiler default output file name
+configure:3743: result: a.out
+configure:3749: checking for suffix of executables
+configure:3756: gcc -o conftest -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include  -L/home/user/mxe/usr/i686-pc-linux-gnu//lib -L/home/user/mxe/usr/i686-pc-linux-gnu//lib  conftest.c  >&5
+configure:3760: $? = 0
+configure:3782: result: 
+configure:3804: checking whether we are cross compiling
+configure:3812: gcc -o conftest -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include  -L/home/user/mxe/usr/i686-pc-linux-gnu//lib -L/home/user/mxe/usr/i686-pc-linux-gnu//lib  conftest.c  >&5
+configure:3816: $? = 0
+configure:3823: ./conftest
+configure:3827: $? = 0
+configure:3842: result: no
+configure:3847: checking for suffix of object files
+configure:3869: gcc -c -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include  conftest.c >&5
+configure:3873: $? = 0
+configure:3894: result: o
+configure:3898: checking whether we are using the GNU C compiler
+configure:3917: gcc -c -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include  conftest.c >&5
+configure:3917: $? = 0
+configure:3926: result: yes
+configure:3935: checking whether gcc accepts -g
+configure:3955: gcc -c -g -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include  conftest.c >&5
+configure:3955: $? = 0
+configure:3996: result: yes
+configure:4013: checking for gcc option to accept ISO C89
+configure:4076: gcc  -c -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include  conftest.c >&5
+configure:4076: $? = 0
+configure:4089: result: none needed
+configure:4120: checking for style of include used by make
+configure:4148: result: GNU
+configure:4174: checking dependency style of gcc
+configure:4285: result: gcc3
+configure:4314: checking for i686-pc-linux-gnu-ar
+configure:4344: result: no
+configure:4314: checking for i686-pc-linux-gnu-lib
+configure:4344: result: no
+configure:4314: checking for i686-pc-linux-gnu-link
+configure:4344: result: no
+configure:4358: checking for ar
+configure:4374: found /usr/bin/ar
+configure:4385: result: ar
+configure:4411: checking the archiver (ar) interface
+configure:4421: gcc -c -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include  conftest.c >&5
+configure:4421: $? = 0
+configure:4423: ar cru libconftest.a conftest.o >&5
+ar: `u' modifier ignored since `D' is the default (see `U')
+configure:4426: $? = 0
+configure:4449: result: ar
+configure:4517: checking how to print strings
+configure:4544: result: printf
+configure:4565: checking for a sed that does not truncate output
+configure:4629: result: /bin/sed
+configure:4647: checking for fgrep
+configure:4709: result: /bin/grep -F
+configure:4744: checking for ld used by gcc
+configure:4811: result: /usr/bin/ld
+configure:4818: checking if the linker (/usr/bin/ld) is GNU ld
+configure:4833: result: yes
+configure:4845: checking for BSD- or MS-compatible name lister (nm)
+configure:4894: result: /usr/bin/nm -B
+configure:5024: checking the name lister (/usr/bin/nm -B) interface
+configure:5031: gcc -c -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include  conftest.c >&5
+configure:5034: /usr/bin/nm -B "conftest.o"
+configure:5037: output
+00000000 B some_variable
+configure:5044: result: BSD nm
+configure:5047: checking whether ln -s works
+configure:5051: result: yes
+configure:5059: checking the maximum length of command line arguments
+configure:5184: result: 1572864
+configure:5201: checking whether the shell understands some XSI constructs
+configure:5211: result: yes
+configure:5215: checking whether the shell understands "+="
+configure:5221: result: yes
+configure:5256: checking how to convert i686-pc-linux-gnu file names to i686-pc-linux-gnu format
+configure:5296: result: func_convert_file_noop
+configure:5303: checking how to convert i686-pc-linux-gnu file names to toolchain format
+configure:5323: result: func_convert_file_noop
+configure:5330: checking for /usr/bin/ld option to reload object files
+configure:5337: result: -r
+configure:5371: checking for i686-pc-linux-gnu-objdump
+configure:5401: result: no
+configure:5411: checking for objdump
+configure:5427: found /usr/bin/objdump
+configure:5438: result: objdump
+configure:5470: checking how to recognize dependent libraries
+configure:5672: result: pass_all
+configure:5717: checking for i686-pc-linux-gnu-dlltool
+configure:5747: result: no
+configure:5757: checking for dlltool
+configure:5787: result: no
+configure:5817: checking how to associate runtime and link libraries
+configure:5844: result: printf %s\n
+configure:5860: checking for i686-pc-linux-gnu-ar
+configure:5887: result: ar
+configure:5968: checking for archiver @FILE support
+configure:5985: gcc -c -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include  conftest.c >&5
+configure:5985: $? = 0
+configure:5988: ar cru libconftest.a @conftest.lst >&5
+ar: `u' modifier ignored since `D' is the default (see `U')
+configure:5991: $? = 0
+configure:5996: ar cru libconftest.a @conftest.lst >&5
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: conftest.o: No such file or directory
+configure:5999: $? = 1
+configure:6011: result: @
+configure:6029: checking for i686-pc-linux-gnu-strip
+configure:6059: result: no
+configure:6069: checking for strip
+configure:6085: found /usr/bin/strip
+configure:6096: result: strip
+configure:6128: checking for i686-pc-linux-gnu-ranlib
+configure:6158: result: no
+configure:6168: checking for ranlib
+configure:6184: found /usr/bin/ranlib
+configure:6195: result: ranlib
+configure:6297: checking command to parse /usr/bin/nm -B output from gcc object
+configure:6416: gcc -c -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include  conftest.c >&5
+configure:6419: $? = 0
+configure:6423: /usr/bin/nm -B conftest.o \| sed -n -e 's/^.*[ ]\([ABCDGIRSTW][ABCDGIRSTW]*\)[ ][ ]*\([_A-Za-z][_A-Za-z0-9]*\)$/\1 \2 \2/p' | sed '/ __gnu_lto/d' \> conftest.nm
+configure:6426: $? = 0
+configure:6492: gcc -o conftest -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include  -L/home/user/mxe/usr/i686-pc-linux-gnu//lib -L/home/user/mxe/usr/i686-pc-linux-gnu//lib  conftest.c conftstm.o >&5
+conftest.c:29:20: warning: ISO C forbids conversion of function pointer to object pointer type [-Wpedantic]
+   {"nm_test_func", (void *) &nm_test_func},
+                    ^
+configure:6495: $? = 0
+configure:6533: result: ok
+configure:6570: checking for sysroot
+configure:6600: result: no
+configure:6803: checking for i686-pc-linux-gnu-mt
+configure:6833: result: no
+configure:6843: checking for mt
+configure:6859: found /bin/mt
+configure:6870: result: mt
+configure:6893: checking if mt is a manifest tool
+configure:6899: mt '-?'
+configure:6907: result: no
+configure:7539: checking how to run the C preprocessor
+configure:7570: gcc -E -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include  conftest.c
+configure:7570: $? = 0
+configure:7584: gcc -E -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include  conftest.c
+conftest.c:11:10: fatal error: ac_nonexistent.h: No such file or directory
+ #include <ac_nonexistent.h>
+          ^~~~~~~~~~~~~~~~~~
+compilation terminated.
+configure:7584: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "mpc"
+| #define PACKAGE_TARNAME "mpc"
+| #define PACKAGE_VERSION "1.0.2"
+| #define PACKAGE_STRING "mpc 1.0.2"
+| #define PACKAGE_BUGREPORT "mpc-discuss@lists.gforge.inria.fr"
+| #define PACKAGE_URL ""
+| #define PACKAGE "mpc"
+| #define VERSION "1.0.2"
+| /* end confdefs.h.  */
+| #include <ac_nonexistent.h>
+configure:7609: result: gcc -E
+configure:7629: gcc -E -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include  conftest.c
+configure:7629: $? = 0
+configure:7643: gcc -E -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include  conftest.c
+conftest.c:11:10: fatal error: ac_nonexistent.h: No such file or directory
+ #include <ac_nonexistent.h>
+          ^~~~~~~~~~~~~~~~~~
+compilation terminated.
+configure:7643: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "mpc"
+| #define PACKAGE_TARNAME "mpc"
+| #define PACKAGE_VERSION "1.0.2"
+| #define PACKAGE_STRING "mpc 1.0.2"
+| #define PACKAGE_BUGREPORT "mpc-discuss@lists.gforge.inria.fr"
+| #define PACKAGE_URL ""
+| #define PACKAGE "mpc"
+| #define VERSION "1.0.2"
+| /* end confdefs.h.  */
+| #include <ac_nonexistent.h>
+configure:7672: checking for ANSI C header files
+configure:7692: gcc -c -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include  conftest.c >&5
+configure:7692: $? = 0
+configure:7765: gcc -o conftest -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include  -L/home/user/mxe/usr/i686-pc-linux-gnu//lib -L/home/user/mxe/usr/i686-pc-linux-gnu//lib  conftest.c  >&5
+configure:7765: $? = 0
+configure:7765: ./conftest
+configure:7765: $? = 0
+configure:7776: result: yes
+configure:7789: checking for sys/types.h
+configure:7789: gcc -c -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include  conftest.c >&5
+configure:7789: $? = 0
+configure:7789: result: yes
+configure:7789: checking for sys/stat.h
+configure:7789: gcc -c -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include  conftest.c >&5
+configure:7789: $? = 0
+configure:7789: result: yes
+configure:7789: checking for stdlib.h
+configure:7789: gcc -c -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include  conftest.c >&5
+configure:7789: $? = 0
+configure:7789: result: yes
+configure:7789: checking for string.h
+configure:7789: gcc -c -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include  conftest.c >&5
+configure:7789: $? = 0
+configure:7789: result: yes
+configure:7789: checking for memory.h
+configure:7789: gcc -c -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include  conftest.c >&5
+configure:7789: $? = 0
+configure:7789: result: yes
+configure:7789: checking for strings.h
+configure:7789: gcc -c -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include  conftest.c >&5
+configure:7789: $? = 0
+configure:7789: result: yes
+configure:7789: checking for inttypes.h
+configure:7789: gcc -c -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include  conftest.c >&5
+configure:7789: $? = 0
+configure:7789: result: yes
+configure:7789: checking for stdint.h
+configure:7789: gcc -c -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include  conftest.c >&5
+configure:7789: $? = 0
+configure:7789: result: yes
+configure:7789: checking for unistd.h
+configure:7789: gcc -c -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include  conftest.c >&5
+configure:7789: $? = 0
+configure:7789: result: yes
+configure:7803: checking for dlfcn.h
+configure:7803: gcc -c -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include  conftest.c >&5
+configure:7803: $? = 0
+configure:7803: result: yes
+configure:7990: checking for objdir
+configure:8005: result: .libs
+configure:8276: checking if gcc supports -fno-rtti -fno-exceptions
+configure:8294: gcc -c -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include  -fno-rtti -fno-exceptions conftest.c >&5
+cc1: warning: command line option '-fno-rtti' is valid for C++/ObjC++ but not for C
+configure:8298: $? = 0
+configure:8311: result: no
+configure:8621: checking for gcc option to produce PIC
+configure:8628: result: -fPIC -DPIC
+configure:8636: checking if gcc PIC flag -fPIC -DPIC works
+configure:8654: gcc -c -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include  -fPIC -DPIC -DPIC conftest.c >&5
+configure:8658: $? = 0
+configure:8671: result: yes
+configure:8700: checking if gcc static flag -static works
+configure:8728: result: yes
+configure:8743: checking if gcc supports -c -o file.o
+configure:8764: gcc -c -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include  -o out/conftest2.o conftest.c >&5
+configure:8768: $? = 0
+configure:8790: result: yes
+configure:8798: checking if gcc supports -c -o file.o
+configure:8845: result: yes
+configure:8878: checking whether the gcc linker (/usr/bin/ld) supports shared libraries
+configure:10040: result: yes
+configure:10285: checking dynamic linker characteristics
+configure:10800: gcc -o conftest -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include  -L/home/user/mxe/usr/i686-pc-linux-gnu//lib -L/home/user/mxe/usr/i686-pc-linux-gnu//lib  -Wl,-rpath -Wl,/foo conftest.c  >&5
+configure:10800: $? = 0
+configure:11034: result: GNU/Linux ld.so
+configure:11141: checking how to hardcode library paths into programs
+configure:11166: result: immediate
+configure:11706: checking whether stripping libraries is possible
+configure:11711: result: yes
+configure:11746: checking if libtool supports shared libraries
+configure:11748: result: yes
+configure:11751: checking whether to build shared libraries
+configure:11772: result: no
+configure:11775: checking whether to build static libraries
+configure:11779: result: yes
+configure:11816: checking for gmp.h
+configure:11824: gcc -c -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include  conftest.c >&5
+configure:11824: $? = 0
+configure:11825: result: yes
+configure:12844: checking for ANSI C header files
+configure:12948: result: yes
+configure:12959: checking locale.h usability
+configure:12959: gcc -c -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include  conftest.c >&5
+configure:12959: $? = 0
+configure:12959: result: yes
+configure:12959: checking locale.h presence
+configure:12959: gcc -E -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include  conftest.c
+configure:12959: $? = 0
+configure:12959: result: yes
+configure:12959: checking for locale.h
+configure:12959: result: yes
+configure:12959: checking for inttypes.h
+configure:12959: result: yes
+configure:12959: checking for stdint.h
+configure:12959: result: yes
+configure:12959: checking limits.h usability
+configure:12959: gcc -c -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include  conftest.c >&5
+configure:12959: $? = 0
+configure:12959: result: yes
+configure:12959: checking limits.h presence
+configure:12959: gcc -E -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include  conftest.c
+configure:12959: $? = 0
+configure:12959: result: yes
+configure:12959: checking for limits.h
+configure:12959: result: yes
+configure:12959: checking for unistd.h
+configure:12959: result: yes
+configure:12959: checking sys/time.h usability
+configure:12959: gcc -c -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include  conftest.c >&5
+configure:12959: $? = 0
+configure:12959: result: yes
+configure:12959: checking sys/time.h presence
+configure:12959: gcc -E -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include  conftest.c
+configure:12959: $? = 0
+configure:12959: result: yes
+configure:12959: checking for sys/time.h
+configure:12959: result: yes
+configure:12969: checking whether time.h and sys/time.h may both be included
+configure:12989: gcc -c -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include  conftest.c >&5
+configure:12989: $? = 0
+configure:12996: result: yes
+configure:13005: checking complex.h usability
+configure:13005: gcc -c -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include  conftest.c >&5
+configure:13005: $? = 0
+configure:13005: result: yes
+configure:13005: checking complex.h presence
+configure:13005: gcc -E -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include  conftest.c
+configure:13005: $? = 0
+configure:13005: result: yes
+configure:13005: checking for complex.h
+configure:13005: result: yes
+configure:13010: checking for library containing creal
+configure:13041: gcc -o conftest -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include  -L/home/user/mxe/usr/i686-pc-linux-gnu//lib -L/home/user/mxe/usr/i686-pc-linux-gnu//lib  conftest.c  >&5
+conftest.c:38:6: warning: conflicting types for built-in function 'creal' [-Wbuiltin-declaration-mismatch]
+ char creal ();
+      ^~~~~
+/tmp/cc97dTRy.o: In function `main':
+conftest.c:(.text.startup+0x13): undefined reference to `creal'
+collect2: error: ld returned 1 exit status
+configure:13041: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "mpc"
+| #define PACKAGE_TARNAME "mpc"
+| #define PACKAGE_VERSION "1.0.2"
+| #define PACKAGE_STRING "mpc 1.0.2"
+| #define PACKAGE_BUGREPORT "mpc-discuss@lists.gforge.inria.fr"
+| #define PACKAGE_URL ""
+| #define PACKAGE "mpc"
+| #define VERSION "1.0.2"
+| #define STDC_HEADERS 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_MEMORY_H 1
+| #define HAVE_STRINGS_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_UNISTD_H 1
+| #define HAVE_DLFCN_H 1
+| #define LT_OBJDIR ".libs/"
+| #define STDC_HEADERS 1
+| #define HAVE_LOCALE_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_LIMITS_H 1
+| #define HAVE_UNISTD_H 1
+| #define HAVE_SYS_TIME_H 1
+| #define TIME_WITH_SYS_TIME 1
+| /* end confdefs.h.  */
+| 
+| /* Override any GCC internal prototype to avoid an error.
+|    Use char because int might match the return type of a GCC
+|    builtin and then its argument prototype would still apply.  */
+| #ifdef __cplusplus
+| extern "C"
+| #endif
+| char creal ();
+| int
+| main ()
+| {
+| return creal ();
+|   ;
+|   return 0;
+| }
+configure:13041: gcc -o conftest -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include  -L/home/user/mxe/usr/i686-pc-linux-gnu//lib -L/home/user/mxe/usr/i686-pc-linux-gnu//lib  conftest.c -lm   >&5
+conftest.c:38:6: warning: conflicting types for built-in function 'creal' [-Wbuiltin-declaration-mismatch]
+ char creal ();
+      ^~~~~
+configure:13041: $? = 0
+configure:13058: result: -lm
+configure:13067: checking whether creal, cimag and I can be used
+configure:13084: gcc -o conftest -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include  -L/home/user/mxe/usr/i686-pc-linux-gnu//lib -L/home/user/mxe/usr/i686-pc-linux-gnu//lib  conftest.c -lm  >&5
+configure:13084: $? = 0
+configure:13086: result: yes
+configure:13109: checking for an ANSI C-conforming const
+configure:13175: gcc -c -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include  conftest.c >&5
+configure:13175: $? = 0
+configure:13182: result: yes
+configure:13190: checking for size_t
+configure:13190: gcc -c -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include  conftest.c >&5
+configure:13190: $? = 0
+configure:13190: gcc -c -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include  conftest.c >&5
+conftest.c: In function 'main':
+conftest.c:68:21: error: expected expression before ')' token
+ if (sizeof ((size_t)))
+                     ^
+configure:13190: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "mpc"
+| #define PACKAGE_TARNAME "mpc"
+| #define PACKAGE_VERSION "1.0.2"
+| #define PACKAGE_STRING "mpc 1.0.2"
+| #define PACKAGE_BUGREPORT "mpc-discuss@lists.gforge.inria.fr"
+| #define PACKAGE_URL ""
+| #define PACKAGE "mpc"
+| #define VERSION "1.0.2"
+| #define STDC_HEADERS 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_MEMORY_H 1
+| #define HAVE_STRINGS_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_UNISTD_H 1
+| #define HAVE_DLFCN_H 1
+| #define LT_OBJDIR ".libs/"
+| #define STDC_HEADERS 1
+| #define HAVE_LOCALE_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_LIMITS_H 1
+| #define HAVE_UNISTD_H 1
+| #define HAVE_SYS_TIME_H 1
+| #define TIME_WITH_SYS_TIME 1
+| #define HAVE_COMPLEX_H 1
+| /* end confdefs.h.  */
+| #include <stdio.h>
+| #ifdef HAVE_SYS_TYPES_H
+| # include <sys/types.h>
+| #endif
+| #ifdef HAVE_SYS_STAT_H
+| # include <sys/stat.h>
+| #endif
+| #ifdef STDC_HEADERS
+| # include <stdlib.h>
+| # include <stddef.h>
+| #else
+| # ifdef HAVE_STDLIB_H
+| #  include <stdlib.h>
+| # endif
+| #endif
+| #ifdef HAVE_STRING_H
+| # if !defined STDC_HEADERS && defined HAVE_MEMORY_H
+| #  include <memory.h>
+| # endif
+| # include <string.h>
+| #endif
+| #ifdef HAVE_STRINGS_H
+| # include <strings.h>
+| #endif
+| #ifdef HAVE_INTTYPES_H
+| # include <inttypes.h>
+| #endif
+| #ifdef HAVE_STDINT_H
+| # include <stdint.h>
+| #endif
+| #ifdef HAVE_UNISTD_H
+| # include <unistd.h>
+| #endif
+| int
+| main ()
+| {
+| if (sizeof ((size_t)))
+| 	    return 0;
+|   ;
+|   return 0;
+| }
+configure:13190: result: yes
+configure:13206: checking for gettimeofday
+configure:13206: gcc -o conftest -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include  -L/home/user/mxe/usr/i686-pc-linux-gnu//lib -L/home/user/mxe/usr/i686-pc-linux-gnu//lib  conftest.c -lm  >&5
+configure:13206: $? = 0
+configure:13206: result: yes
+configure:13206: checking for localeconv
+configure:13206: gcc -o conftest -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include  -L/home/user/mxe/usr/i686-pc-linux-gnu//lib -L/home/user/mxe/usr/i686-pc-linux-gnu//lib  conftest.c -lm  >&5
+configure:13206: $? = 0
+configure:13206: result: yes
+configure:13206: checking for setlocale
+configure:13206: gcc -o conftest -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include  -L/home/user/mxe/usr/i686-pc-linux-gnu//lib -L/home/user/mxe/usr/i686-pc-linux-gnu//lib  conftest.c -lm  >&5
+configure:13206: $? = 0
+configure:13206: result: yes
+configure:13218: checking for dup
+configure:13218: gcc -o conftest -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include  -L/home/user/mxe/usr/i686-pc-linux-gnu//lib -L/home/user/mxe/usr/i686-pc-linux-gnu//lib  conftest.c -lm  >&5
+configure:13218: $? = 0
+configure:13218: result: yes
+configure:13218: checking for dup2
+configure:13218: gcc -o conftest -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include  -L/home/user/mxe/usr/i686-pc-linux-gnu//lib -L/home/user/mxe/usr/i686-pc-linux-gnu//lib  conftest.c -lm  >&5
+configure:13218: $? = 0
+configure:13218: result: yes
+configure:13232: checking for __gmpz_init in -lgmp
+configure:13257: gcc -o conftest -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include  -L/home/user/mxe/usr/i686-pc-linux-gnu//lib -L/home/user/mxe/usr/i686-pc-linux-gnu//lib  conftest.c -lgmp  -lm  >&5
+configure:13257: $? = 0
+configure:13266: result: yes
+configure:13275: checking for MPFR
+configure:13290: gcc -o conftest -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include  -L/home/user/mxe/usr/i686-pc-linux-gnu//lib -L/home/user/mxe/usr/i686-pc-linux-gnu//lib  conftest.c -lmpfr -lgmp -lm  >&5
+configure:13290: $? = 0
+configure:13291: result: yes
+configure:13309: checking for recent GMP
+configure:13321: gcc -c -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include  conftest.c >&5
+configure:13321: $? = 0
+configure:13322: result: yes
+configure:13336: checking for recent MPFR
+configure:13348: gcc -c -m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro -I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include  conftest.c >&5
+configure:13348: $? = 0
+configure:13349: result: yes
+configure:13870: checking if gcc accepts -dumpversion option
+configure:13895: cat conftest.c 1>&5
+int main()
+{
+	return 0;
+}
+configure:13898: $? = 0
+configure:13902: gcc  -dumpversion -c conftest.c 1>&5
+7
+configure:13905: $? = 0
+configure:13908: result: yes
+configure:13935: checking gcc version
+configure:13949: result: 7
+configure:14139: checking that generated files are newer than configure
+configure:14145: result: done
+configure:14172: creating ./config.status
+
+## ---------------------- ##
+## Running config.status. ##
+## ---------------------- ##
+
+This file was extended by mpc config.status 1.0.2, which was
+generated by GNU Autoconf 2.69.  Invocation command line was
+
+  CONFIG_FILES    = 
+  CONFIG_HEADERS  = 
+  CONFIG_LINKS    = 
+  CONFIG_COMMANDS = 
+  $ ./config.status 
+
+on user-VirtualBox
+
+config.status:1107: creating Makefile
+config.status:1107: creating src/Makefile
+config.status:1107: creating tests/Makefile
+config.status:1107: creating doc/Makefile
+config.status:1107: creating config.h
+config.status:1336: executing depfiles commands
+config.status:1336: executing libtool commands
+configure:16401: WARNING: unrecognized options: --enable-doc, --enable-gtk-doc, --enable-gtk-doc-html, --enable-gtk-doc-pdf, --with-html-dir, --disable-doxygen
+
+## ---------------- ##
+## Cache variables. ##
+## ---------------- ##
+
+ac_cv_build=i686-pc-linux-gnu
+ac_cv_c_compiler_gnu=yes
+ac_cv_c_const=yes
+ac_cv_env_CC_set=
+ac_cv_env_CC_value=
+ac_cv_env_CFLAGS_set=
+ac_cv_env_CFLAGS_value=
+ac_cv_env_CPPFLAGS_set=
+ac_cv_env_CPPFLAGS_value=
+ac_cv_env_CPP_set=
+ac_cv_env_CPP_value=
+ac_cv_env_LDFLAGS_set=
+ac_cv_env_LDFLAGS_value=
+ac_cv_env_LIBS_set=
+ac_cv_env_LIBS_value=
+ac_cv_env_build_alias_set=set
+ac_cv_env_build_alias_value=i686-pc-linux-gnu
+ac_cv_env_host_alias_set=set
+ac_cv_env_host_alias_value=i686-pc-linux-gnu
+ac_cv_env_target_alias_set=
+ac_cv_env_target_alias_value=
+ac_cv_func_dup2=yes
+ac_cv_func_dup=yes
+ac_cv_func_gettimeofday=yes
+ac_cv_func_localeconv=yes
+ac_cv_func_setlocale=yes
+ac_cv_header_complex_h=yes
+ac_cv_header_dlfcn_h=yes
+ac_cv_header_inttypes_h=yes
+ac_cv_header_limits_h=yes
+ac_cv_header_locale_h=yes
+ac_cv_header_memory_h=yes
+ac_cv_header_stdc=yes
+ac_cv_header_stdint_h=yes
+ac_cv_header_stdlib_h=yes
+ac_cv_header_string_h=yes
+ac_cv_header_strings_h=yes
+ac_cv_header_sys_stat_h=yes
+ac_cv_header_sys_time_h=yes
+ac_cv_header_sys_types_h=yes
+ac_cv_header_time=yes
+ac_cv_header_unistd_h=yes
+ac_cv_host=i686-pc-linux-gnu
+ac_cv_lib_gmp___gmpz_init=yes
+ac_cv_objext=o
+ac_cv_path_EGREP='/bin/grep -E'
+ac_cv_path_FGREP='/bin/grep -F'
+ac_cv_path_GREP=/bin/grep
+ac_cv_path_SED=/bin/sed
+ac_cv_path_install='/usr/bin/install -c'
+ac_cv_path_mkdir=/bin/mkdir
+ac_cv_prog_AR=ar
+ac_cv_prog_AWK=mawk
+ac_cv_prog_CC=gcc
+ac_cv_prog_CPP='gcc -E'
+ac_cv_prog_HAVE_DOXYGEN=false
+ac_cv_prog_ac_ct_AR=ar
+ac_cv_prog_ac_ct_MANIFEST_TOOL=mt
+ac_cv_prog_ac_ct_OBJDUMP=objdump
+ac_cv_prog_ac_ct_RANLIB=ranlib
+ac_cv_prog_ac_ct_STRIP=strip
+ac_cv_prog_cc_c89=
+ac_cv_prog_cc_g=yes
+ac_cv_prog_make_make_set=yes
+ac_cv_search_creal=-lm
+ac_cv_type_size_t=yes
+am_cv_CC_dependencies_compiler_type=gcc3
+am_cv_ar_interface=ar
+ax_cv_gcc_version=7
+lt_cv_ar_at_file=@
+lt_cv_deplibs_check_method=pass_all
+lt_cv_file_magic_cmd='$MAGIC_CMD'
+lt_cv_file_magic_test_file=
+lt_cv_ld_reload_flag=-r
+lt_cv_nm_interface='BSD nm'
+lt_cv_objdir=.libs
+lt_cv_path_LD=/usr/bin/ld
+lt_cv_path_NM='/usr/bin/nm -B'
+lt_cv_path_mainfest_tool=no
+lt_cv_prog_compiler_c_o=yes
+lt_cv_prog_compiler_pic='-fPIC -DPIC'
+lt_cv_prog_compiler_pic_works=yes
+lt_cv_prog_compiler_rtti_exceptions=no
+lt_cv_prog_compiler_static_works=yes
+lt_cv_prog_gnu_ld=yes
+lt_cv_sharedlib_from_linklib_cmd='printf %s\n'
+lt_cv_shlibpath_overrides_runpath=yes
+lt_cv_sys_global_symbol_pipe='sed -n -e '\''s/^.*[	 ]\([ABCDGIRSTW][ABCDGIRSTW]*\)[	 ][	 ]*\([_A-Za-z][_A-Za-z0-9]*\)$/\1 \2 \2/p'\'' | sed '\''/ __gnu_lto/d'\'''
+lt_cv_sys_global_symbol_to_c_name_address='sed -n -e '\''s/^: \([^ ]*\)[ ]*$/  {\"\1\", (void *) 0},/p'\'' -e '\''s/^[ABCDGIRSTW]* \([^ ]*\) \([^ ]*\)$/  {"\2", (void *) \&\2},/p'\'''
+lt_cv_sys_global_symbol_to_c_name_address_lib_prefix='sed -n -e '\''s/^: \([^ ]*\)[ ]*$/  {\"\1\", (void *) 0},/p'\'' -e '\''s/^[ABCDGIRSTW]* \([^ ]*\) \(lib[^ ]*\)$/  {"\2", (void *) \&\2},/p'\'' -e '\''s/^[ABCDGIRSTW]* \([^ ]*\) \([^ ]*\)$/  {"lib\2", (void *) \&\2},/p'\'''
+lt_cv_sys_global_symbol_to_cdecl='sed -n -e '\''s/^T .* \(.*\)$/extern int \1();/p'\'' -e '\''s/^[ABCDGIRSTW]* .* \(.*\)$/extern char \1;/p'\'''
+lt_cv_sys_max_cmd_len=1572864
+lt_cv_to_host_file_cmd=func_convert_file_noop
+lt_cv_to_tool_file_cmd=func_convert_file_noop
+
+## ----------------- ##
+## Output variables. ##
+## ----------------- ##
+
+ACLOCAL='${SHELL} /home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/missing --run aclocal-1.12'
+AMDEPBACKSLASH='\'
+AMDEP_FALSE='#'
+AMDEP_TRUE=''
+AMTAR='$${TAR-tar}'
+AR='ar'
+AS='as'
+AUTOCONF='${SHELL} /home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/missing --run autoconf'
+AUTOHEADER='${SHELL} /home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/missing --run autoheader'
+AUTOMAKE='${SHELL} /home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/missing --run automake-1.12'
+AWK='mawk'
+CC='gcc'
+CCDEPMODE='depmode=gcc3'
+CFLAGS='-m32 -O2 -pedantic -fomit-frame-pointer -mtune=pentiumpro -march=pentiumpro'
+CPP='gcc -E'
+CPPFLAGS='-I/home/user/mxe/usr/i686-pc-linux-gnu//include -I/home/user/mxe/usr/i686-pc-linux-gnu//include '
+CYGPATH_W='echo'
+DEFS='-DHAVE_CONFIG_H'
+DEPDIR='.deps'
+DLLTOOL='false'
+DSYMUTIL=''
+DUMPBIN=''
+ECHO_C=''
+ECHO_N='-n'
+ECHO_T=''
+EGREP='/bin/grep -E'
+EXEEXT=''
+FGREP='/bin/grep -F'
+GCC_VERSION='7'
+GREP='/bin/grep'
+HASSVNVERSION=''
+INSTALL_DATA='${INSTALL} -m 644'
+INSTALL_PROGRAM='${INSTALL}'
+INSTALL_SCRIPT='${INSTALL}'
+INSTALL_STRIP_PROGRAM='$(install_sh) -c -s'
+LD='/usr/bin/ld'
+LDFLAGS='-L/home/user/mxe/usr/i686-pc-linux-gnu//lib -L/home/user/mxe/usr/i686-pc-linux-gnu//lib '
+LIBOBJS=''
+LIBS='-lmpfr -lgmp -lm '
+LIBTOOL='$(SHELL) $(top_builddir)/libtool'
+LIPO=''
+LN_S='ln -s'
+LTLIBOBJS=''
+MAINT='#'
+MAINTAINER_MODE_FALSE=''
+MAINTAINER_MODE_TRUE='#'
+MAKEINFO='${SHELL} /home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/missing --run makeinfo'
+MANIFEST_TOOL=':'
+MKDIR_P='/bin/mkdir -p'
+MPC_LDFLAGS=''
+MPC_LOG_H=''
+NM='/usr/bin/nm -B'
+NMEDIT=''
+OBJDUMP='objdump'
+OBJEXT='o'
+OTOOL64=''
+OTOOL=''
+PACKAGE='mpc'
+PACKAGE_BUGREPORT='mpc-discuss@lists.gforge.inria.fr'
+PACKAGE_NAME='mpc'
+PACKAGE_STRING='mpc 1.0.2'
+PACKAGE_TARNAME='mpc'
+PACKAGE_URL=''
+PACKAGE_VERSION='1.0.2'
+PATH_SEPARATOR=':'
+RANLIB='ranlib'
+SED='/bin/sed'
+SET_MAKE=''
+SHELL='/bin/bash'
+STRIP='strip'
+SVNVERSION=''
+VALGRIND=''
+VERSION='1.0.2'
+ac_ct_AR='ar'
+ac_ct_CC=''
+ac_ct_DUMPBIN=''
+am__EXEEXT_FALSE=''
+am__EXEEXT_TRUE='#'
+am__fastdepCC_FALSE='#'
+am__fastdepCC_TRUE=''
+am__include='include'
+am__isrc=''
+am__leading_dot='.'
+am__nodep='_no'
+am__quote=''
+am__tar='$${TAR-tar} chof - "$$tardir"'
+am__untar='$${TAR-tar} xf -'
+bindir='${exec_prefix}/bin'
+build='i686-pc-linux-gnu'
+build_alias='i686-pc-linux-gnu'
+build_cpu='i686'
+build_os='linux-gnu'
+build_vendor='pc'
+datadir='${datarootdir}'
+datarootdir='${prefix}/share'
+docdir='/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2.build_.sink'
+dvidir='${docdir}'
+exec_prefix='${prefix}'
+host='i686-pc-linux-gnu'
+host_alias='i686-pc-linux-gnu'
+host_cpu='i686'
+host_os='linux-gnu'
+host_vendor='pc'
+htmldir='${docdir}'
+includedir='${prefix}/include'
+infodir='/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2.build_.sink'
+install_sh='${SHELL} /home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/install-sh'
+libdir='${exec_prefix}/lib'
+libexecdir='${exec_prefix}/libexec'
+localedir='${datarootdir}/locale'
+localstatedir='${prefix}/var'
+mandir='/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2.build_.sink'
+mkdir_p='$(MKDIR_P)'
+oldincludedir='/usr/include'
+pdfdir='${docdir}'
+prefix='/home/user/mxe/usr/i686-pc-linux-gnu'
+program_transform_name='s,x,x,'
+psdir='${docdir}'
+sbindir='${exec_prefix}/sbin'
+sharedstatedir='${prefix}/com'
+sysconfdir='${prefix}/etc'
+target_alias=''
+
+## ----------- ##
+## confdefs.h. ##
+## ----------- ##
+
+/* confdefs.h */
+#define PACKAGE_NAME "mpc"
+#define PACKAGE_TARNAME "mpc"
+#define PACKAGE_VERSION "1.0.2"
+#define PACKAGE_STRING "mpc 1.0.2"
+#define PACKAGE_BUGREPORT "mpc-discuss@lists.gforge.inria.fr"
+#define PACKAGE_URL ""
+#define PACKAGE "mpc"
+#define VERSION "1.0.2"
+#define STDC_HEADERS 1
+#define HAVE_SYS_TYPES_H 1
+#define HAVE_SYS_STAT_H 1
+#define HAVE_STDLIB_H 1
+#define HAVE_STRING_H 1
+#define HAVE_MEMORY_H 1
+#define HAVE_STRINGS_H 1
+#define HAVE_INTTYPES_H 1
+#define HAVE_STDINT_H 1
+#define HAVE_UNISTD_H 1
+#define HAVE_DLFCN_H 1
+#define LT_OBJDIR ".libs/"
+#define STDC_HEADERS 1
+#define HAVE_LOCALE_H 1
+#define HAVE_INTTYPES_H 1
+#define HAVE_STDINT_H 1
+#define HAVE_LIMITS_H 1
+#define HAVE_UNISTD_H 1
+#define HAVE_SYS_TIME_H 1
+#define TIME_WITH_SYS_TIME 1
+#define HAVE_COMPLEX_H 1
+#define HAVE_GETTIMEOFDAY 1
+#define HAVE_LOCALECONV 1
+#define HAVE_SETLOCALE 1
+#define HAVE_DUP 1
+#define HAVE_DUP2 1
+#define MPC_GCC "yes"
+#define MPC_CC "gcc"
+#define MPC_GCC_VERSION "7"
+
+configure: exit 0
+
+settings.mk
+# This is a template of configuration file for MXE. See
+# docs/index.html for more extensive documentations.
+
+# This variable controls the number of compilation processes
+# within one package ("intra-package parallelism").
+#JOBS := 
+
+# This variable controls where intermediate files are created
+# this is necessary when compiling inside a virtualbox shared
+# directory. Some commands like strip fail in there with Protocol error
+# default is the current directory
+#MXE_TMP := /tmp
+
+# This variable controls the targets that will build.
+#MXE_TARGETS := i686-w64-mingw32.static i686-w64-mingw32.shared x86_64-w64-mingw32.static x86_64-w64-mingw32.shared
+
+# This variable controls which plugins are in use.
+# See plugins/README.md for further information.
+#override MXE_PLUGIN_DIRS += plugins/apps plugins/native
+
+# This variable controls the download mirror for SourceForge,
+# when it is used. Enabling the value below means auto.
+#SOURCEFORGE_MIRROR := downloads.sourceforge.net
+
+# The three lines below makes `make` build these "local
+# packages" instead of all packages.
+#LOCAL_PKG_LIST := boost curl file flac lzo pthreads vorbis wxwidgets
+#.DEFAULT_GOAL  := local-pkg-list
+#local-pkg-list: $(LOCAL_PKG_LIST)
+i686-pc-linux-gnu-strip '/home/user/mxe/usr/i686-pc-linux-gnu/bin/test-mpc.exe'
+bash: i686-pc-linux-gnu-strip: command not found
+Makefile:786: recipe for target 'build-only-mpc_i686-pc-linux-gnu' failed
+make[1]: [build-only-mpc_i686-pc-linux-gnu] Error 127 (ignored)
+(du -k -d 0 '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu' 2>/dev/null || du -k --max-depth 0 '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu') | sed -n 's/^\(\S*\).*/du: \1 KiB/p'
+du: 5876 KiB
+rm -rfv  '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/configure.ac'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/stamp-h1'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/NEWS'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/config.sub'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/README'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/Makefile.in'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/ui_div.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/sin_cos.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/fma.o'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/sub_fr.o'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/asinh.o'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/div_fr.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/add.lo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/div_2ui.o'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/add_fr.lo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/set_prec.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/real.lo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/exp.o'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/sub.o'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/mul_si.lo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/pow_z.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/exp.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/swap.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/out_str.lo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/acosh.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/sqr.lo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/proj.lo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/sqrt.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/sqrt.o'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/mul_2ui.lo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/set_str.o'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/pow_ld.lo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/set.lo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/mpc.h'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/urandom.o'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/swap.o'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/abs.o'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/div_2si.o'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/acos.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/add.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/pow.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/ui_ui_sub.o'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/atan.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/atan.o'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/uceil_log2.o'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/atanh.o'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/libmpc.la'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/pow_ld.o'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/acosh.o'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/tan.o'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/Makefile.in'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/mpc-impl.h'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/clear.lo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/tanh.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/cmp.lo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/norm.o'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/get_prec.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/add_si.o'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/pow_z.lo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/exp.lo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/set_x_x.o'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/asin.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/clear.o'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/mul_ui.o'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/cosh.lo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/pow_si.lo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/inp_str.lo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/urandom.lo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/log.lo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/div_ui.lo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/sinh.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/init2.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/set_x.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/mul_si.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/set.o'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/uceil_log2.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/mul_ui.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/mul.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/init3.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/mul_fr.lo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/.libs/libmpc.la'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/.libs/libmpc.lai'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/.libs/libmpc.a'
+removed directory '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/.libs'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/div_2ui.lo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/get_version.lo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/div.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/add_ui.lo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/sub_fr.lo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/set_x.lo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/cmp_si_si.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/sinh.o'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/atanh.lo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/pow_si.o'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/pow_fr.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/add_fr.o'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/acos.o'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/abs.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/real.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/add_ui.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/neg.o'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/real.o'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/fr_div.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/div.o'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/mul_2si.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/add_fr.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/.deps/sqrt.Plo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/.deps/sin_cos.Plo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/.deps/real.Plo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/.deps/atanh.Plo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/.deps/asinh.Plo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/.deps/proj.Plo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/.deps/pow_z.Plo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/.deps/pow_fr.Plo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/.deps/mul_i.Plo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/.deps/inp_str.Plo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/.deps/abs.Plo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/.deps/log.Plo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/.deps/get_version.Plo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/.deps/add_si.Plo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/.deps/sub.Plo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/.deps/mul.Plo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/.deps/div_2ui.Plo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/.deps/mul_2si.Plo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/.deps/clear.Plo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/.deps/sub_fr.Plo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/.deps/set_x.Plo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/.deps/tanh.Plo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/.deps/mul_ui.Plo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/.deps/fr_sub.Plo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/.deps/fr_div.Plo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/.deps/strtoc.Plo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/.deps/add.Plo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/.deps/acos.Plo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/.deps/exp.Plo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/.deps/pow_ui.Plo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/.deps/fma.Plo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/.deps/out_str.Plo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/.deps/ui_ui_sub.Plo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/.deps/cmp.Plo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/.deps/acosh.Plo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/.deps/set_str.Plo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/.deps/init3.Plo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/.deps/set.Plo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/.deps/arg.Plo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/.deps/mul_si.Plo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/.deps/div_2si.Plo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/.deps/pow.Plo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/.deps/div_fr.Plo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/.deps/pow_ld.Plo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/.deps/sub_ui.Plo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/.deps/div.Plo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/.deps/sqr.Plo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/.deps/neg.Plo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/.deps/sin.Plo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/.deps/mul_2ui.Plo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/.deps/urandom.Plo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/.deps/get_prec2.Plo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/.deps/logging.Plo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/.deps/imag.Plo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/.deps/atan.Plo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/.deps/div_ui.Plo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/.deps/norm.Plo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/.deps/get_x.Plo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/.deps/tan.Plo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/.deps/uceil_log2.Plo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/.deps/set_prec.Plo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/.deps/sinh.Plo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/.deps/init2.Plo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/.deps/ui_div.Plo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/.deps/add_fr.Plo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/.deps/cos.Plo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/.deps/mem.Plo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/.deps/asin.Plo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/.deps/add_ui.Plo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/.deps/get_prec.Plo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/.deps/cmp_si_si.Plo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/.deps/mul_fr.Plo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/.deps/set_x_x.Plo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/.deps/conj.Plo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/.deps/log10.Plo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/.deps/cosh.Plo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/.deps/swap.Plo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/.deps/pow_d.Plo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/.deps/pow_si.Plo'
+removed directory '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/.deps'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/mpc-log.h'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/mem.lo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/sin.o'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/acos.lo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/cosh.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/arg.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/tanh.o'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/log10.o'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/get_version.o'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/mul_2ui.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/mul_i.lo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/out_str.o'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/init2.lo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/imag.o'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/set.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/inp_str.o'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/pow_ui.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/norm.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/neg.lo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/add_si.lo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/add_si.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/pow_d.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/uceil_log2.lo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/out_str.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/ui_ui_sub.lo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/get_prec2.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/pow_fr.o'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/set_str.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/mem.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/pow_d.lo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/ui_ui_sub.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/conj.o'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/pow_fr.lo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/Makefile'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/add.o'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/sub.lo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/fma.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/arg.lo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/cmp.o'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/log10.lo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/get_x.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/get_prec2.o'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/norm.lo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/get_version.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/pow_si.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/tan.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/urandom.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/mul_2si.o'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/cos.o'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/proj.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/sinh.lo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/sqrt.lo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/mul_ui.lo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/proj.o'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/div_2ui.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/set_x_x.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/div_2si.lo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/abs.lo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/asinh.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/cmp_si_si.lo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/div.lo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/set_prec.lo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/inp_str.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/sin.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/pow.lo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/strtoc.lo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/fr_div.o'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/mul.lo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/imag.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/sqr.o'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/sub_fr.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/asin.lo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/mul_si.o'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/mul.o'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/init2.o'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/fr_div.lo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/div_fr.lo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/div_ui.o'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/sub_ui.o'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/strtoc.o'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/add_ui.o'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/swap.lo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/init3.o'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/mul_2si.lo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/div_fr.o'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/cmp.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/get_prec.lo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/get_x.lo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/atanh.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/ui_div.o'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/arg.o'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/cmp_si_si.o'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/sin_cos.lo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/acosh.lo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/mul_i.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/cos.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/log10.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/mul_fr.o'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/atan.lo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/log.o'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/set_x_x.lo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/sub.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/cos.lo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/strtoc.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/div_ui.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/conj.lo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/fr_sub.o'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/tan.lo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/asinh.lo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/sin.lo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/cosh.o'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/pow_ui.o'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/mul_fr.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/ui_div.lo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/get_prec.o'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/mem.o'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/sqr.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/sub_ui.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/conj.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/div_2si.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/init3.lo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/get_x.o'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/log.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/sin_cos.o'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/pow_z.o'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/pow_ld.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/set_x.o'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/neg.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/pow_d.o'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/get_prec2.lo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/fr_sub.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/fma.lo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/mul_i.o'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/mul_2ui.o'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/pow.o'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/imag.lo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/set_prec.o'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/logging.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/Makefile.am'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/clear.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/asin.o'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/pow_ui.lo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/fr_sub.lo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/tanh.lo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/set_str.lo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src/sub_ui.lo'
+removed directory '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/src'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/config.h'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/config.h.in'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/aclocal.m4'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/depcomp'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/TODO'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/ltmain.sh'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/install-sh'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/Makefile'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/config.guess'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/m4/libtool.m4'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/m4/ltsugar.m4'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/m4/ax_gcc_option.m4'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/m4/ax_c_check_flag.m4'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/m4/ltoptions.m4'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/m4/ax_gcc_version.m4'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/m4/mpc.m4'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/m4/lt~obsolete.m4'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/m4/valgrind-tests.m4'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/m4/ltversion.m4'
+removed directory '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/m4'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/COPYING.LESSER'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/ChangeLog'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/doc/Makefile.in'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/doc/fdl-1.3.texi'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/doc/mdate-sh'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/doc/mpc.info'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/doc/Makefile'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/doc/stamp-vti'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/doc/version.texi'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/doc/texinfo.tex'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/doc/mpc.texi'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/doc/Makefile.am'
+removed directory '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/doc'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/INSTALL'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/Makefile.vc'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/AUTHORS'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/config.log'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/ar-lib'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/configure'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/missing'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/config.status'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/tpow_si.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/random.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/pow_si.dat'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/tpow_ld.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/tasin.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/norm.dat'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/conj.dat'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/acosh.dat'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/arg.dat'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/tfr_sub.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/tdiv_fr.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/tcosh.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/tsub_fr.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/tneg.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/inp_str.dat'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/tproj.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/tdiv.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/tadd_fr.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/tmul_2si.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/asinh.dat'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/tdiv_ui.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/tsub.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/tanh.dat'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/ttan.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/tatan.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/tgeneric.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/Makefile.in'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/abs.dat'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/tsqrt.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/proj.dat'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/fma.dat'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/tadd_si.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/tpow_z.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/tconj.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/div_fr.dat'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/fr_sub.dat'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/pow.dat'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/tacos.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/tpow_d.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/ttanh.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/tio_str.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/tsin_cos.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/mul_fr.dat'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/atanh.dat'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/tmul_i.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/asin.dat'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/tsub_ui.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/tstrtoc.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/.deps/timag.Po'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/.deps/tset.Po'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/.deps/tasinh.Po'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/.deps/tget_version.Po'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/.deps/tadd.Po'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/.deps/tlog.Po'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/.deps/tpow_z.Po'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/.deps/tcos.Po'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/.deps/tsin_cos.Po'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/.deps/ttanh.Po'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/.deps/tsqrt.Po'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/.deps/tabs.Po'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/.deps/tui_ui_sub.Po'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/.deps/tsub_fr.Po'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/.deps/tswap.Po'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/.deps/tadd_fr.Po'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/.deps/tdiv_2ui.Po'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/.deps/tatan.Po'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/.deps/tsin.Po'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/.deps/tfma.Po'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/.deps/tpow_d.Po'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/.deps/tpow.Po'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/.deps/tmul_2si.Po'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/.deps/tneg.Po'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/.deps/tpow_fr.Po'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/.deps/tproj.Po'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/.deps/tfr_sub.Po'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/.deps/tsinh.Po'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/.deps/tmul_fr.Po'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/.deps/tatanh.Po'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/.deps/tconj.Po'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/.deps/tpow_ui.Po'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/.deps/tmul_ui.Po'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/.deps/tdiv_fr.Po'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/.deps/tdiv.Po'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/.deps/tacos.Po'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/.deps/random.Plo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/.deps/tacosh.Po'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/.deps/tmul.Po'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/.deps/ttan.Po'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/.deps/tstrtoc.Po'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/.deps/tfr_div.Po'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/.deps/tnorm.Po'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/.deps/tasin.Po'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/.deps/tcosh.Po'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/.deps/tdiv_2si.Po'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/.deps/tsub_ui.Po'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/.deps/tmul_si.Po'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/.deps/targ.Po'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/.deps/treimref.Po'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/.deps/tui_div.Po'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/.deps/tgeneric.Plo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/.deps/tdiv_ui.Po'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/.deps/comparisons.Plo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/.deps/tmul_i.Po'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/.deps/tadd_si.Po'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/.deps/texp.Po'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/.deps/treal.Po'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/.deps/tlog10.Po'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/.deps/read_data.Plo'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/.deps/tadd_ui.Po'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/.deps/tmul_2ui.Po'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/.deps/tsub.Po'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/.deps/tsqr.Po'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/.deps/tprec.Po'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/.deps/tpow_si.Po'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/.deps/tio_str.Po'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/.deps/tpow_ld.Po'
+removed directory '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/.deps'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/treal.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/mpc-tests.h'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/tmul.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/sub_fr.dat'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/tprec.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/tmul_2ui.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/tacosh.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/tadd.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/tlog10.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/Makefile'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/cos.dat'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/sin.dat'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/tatanh.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/tnorm.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/tmul_fr.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/tfr_div.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/neg.dat'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/texp.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/comparisons.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/strtoc.dat'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/tcos.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/log10.dat'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/tsinh.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/tui_div.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/tfma.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/tdiv_2ui.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/tget_version.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/tasinh.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/tan.dat'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/cosh.dat'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/sinh.dat'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/sub.dat'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/log.dat'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/targ.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/tlog.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/mul.dat'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/sqr.dat'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/fr_div.dat'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/tpow_fr.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/tsqr.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/treimref.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/tpow_ui.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/tui_ui_sub.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/tswap.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/add_fr.dat'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/tadd_ui.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/pow_fr.dat'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/exp.dat'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/tabs.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/atan.dat'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/read_data.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/tset.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/div.dat'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/sqrt.dat'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/Makefile.am'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/tdiv_2si.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/tpow.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/pow_ui.dat'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/acos.dat'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/tmul_si.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/add.dat'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/tmul_ui.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/tsin.c'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests/timag.c'
+removed directory '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/tests'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/Makefile.am'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2/libtool'
+removed directory '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2'
+removed directory '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/readonly'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2.build_.sink/dir'
+removed '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2.build_.sink/mpc.info'
+removed directory '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2.build_.sink'
+removed directory '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu/mpc-1.0.2.build_'
+removed directory '/home/user/mxe/tmp-mpc-i686-pc-linux-gnu'
+touch '/home/user/mxe/usr/i686-pc-linux-gnu/installed/mpc'
+make[1]: Leaving directory '/home/user/mxe'
+
+real	3m33.245s
+user	0m46.392s
+sys	2m41.905s

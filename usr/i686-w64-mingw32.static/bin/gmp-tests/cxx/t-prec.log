@@ -1,0 +1,2 @@
+../../test-driver: line 107: ./t-prec.exe: cannot execute binary file: Exec format error
+FAIL t-prec.exe (exit status: 126)

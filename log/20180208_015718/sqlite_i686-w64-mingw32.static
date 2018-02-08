@@ -1,0 +1,1908 @@
+make[1]: Entering directory '/home/user/mxe'
+uname -a
+Linux user-VirtualBox 4.13.0-21-generic #24-Ubuntu SMP Mon Dec 18 17:29:35 UTC 2017 i686 i686 i686 GNU/Linux
+git log --pretty=tformat:"%H - %s [%ar] [%d]" -1
+1b7d2e0562f2ec93848f536d2a9d4cd414356d9e - Update packages.json & build-matrix.html [4 days ago] [ (HEAD -> master, origin/master, origin/HEAD)]
+lsb_release -a 2>/dev/null || sw_vers 2>/dev/null || true
+Distributor ID:	Ubuntu
+Description:	Ubuntu 17.10
+Release:	17.10
+Codename:	artful
+autoconf --version 2>/dev/null | head -1
+autoconf (GNU Autoconf) 2.69
+automake --version 2>/dev/null | head -1
+automake (GNU automake) 1.15
+gcc --version
+gcc (Ubuntu 7.2.0-8ubuntu3) 7.2.0
+Copyright (C) 2017 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+g++ --version
+g++ (Ubuntu 7.2.0-8ubuntu3) 7.2.0
+Copyright (C) 2017 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+python --version
+Python 2.7.14
+perl --version 2>&1 | head -3
+
+This is perl 5, version 26, subversion 0 (v5.26.0) built for i686-linux-gnu-thread-multi-64int
+(with 56 registered patches, see perl -V for more detail)
+rm -rf   '/home/user/mxe/tmp-sqlite-i686-w64-mingw32.static'
+mkdir -p '/home/user/mxe/tmp-sqlite-i686-w64-mingw32.static'
+mkdir -p '/home/user/mxe/tmp-sqlite-i686-w64-mingw32.static/sqlite-autoconf-3220000'
+mkdir -p '/home/user/mxe/tmp-sqlite-i686-w64-mingw32.static/sqlite-autoconf-3220000.build_'
+# disable wine with readonly directory
+# see https://github.com/mxe/mxe/issues/841
+mkdir -p '/home/user/mxe/tmp-sqlite-i686-w64-mingw32.static/readonly'
+chmod 0555 '/home/user/mxe/tmp-sqlite-i686-w64-mingw32.static/readonly'
+cd '/home/user/mxe/tmp-sqlite-i686-w64-mingw32.static' &&  tar xzf '/home/user/mxe/pkg/sqlite-autoconf-3220000.tar.gz'
+cd '/home/user/mxe/tmp-sqlite-i686-w64-mingw32.static/sqlite-autoconf-3220000'
+cd '/home/user/mxe/tmp-sqlite-i686-w64-mingw32.static/sqlite-autoconf-3220000' && ./configure --host='i686-w64-mingw32.static' --build='i686-pc-linux-gnu' --prefix='/home/user/mxe/usr/i686-w64-mingw32.static'  --enable-static --disable-shared  ac_cv_prog_HAVE_DOXYGEN="false" --enable-doc=no --enable-gtk-doc=no --enable-gtk-doc-html=no --enable-gtk-doc-pdf=no --{docdir,infodir,mandir,with-html-dir}='/home/user/mxe/tmp-sqlite-i686-w64-mingw32.static/sqlite-autoconf-3220000.build_.sink' --disable-doxygen --disable-readline --enable-threadsafe CFLAGS="-Os -DSQLITE_ENABLE_COLUMN_METADATA"
+configure: WARNING: unrecognized options: --enable-doc, --enable-gtk-doc, --enable-gtk-doc-html, --enable-gtk-doc-pdf, --with-html-dir, --disable-doxygen
+configure: loading site script /home/user/mxe/usr/i686-w64-mingw32.static/share/config.site
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for i686-w64-mingw32.static-strip... i686-w64-mingw32.static-strip
+checking for a thread-safe mkdir -p... /bin/mkdir -p
+checking for gawk... no
+checking for mawk... mawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking for style of include used by make... GNU
+checking for i686-w64-mingw32.static-gcc... i686-w64-mingw32.static-gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.exe
+checking for suffix of executables... .exe
+checking whether we are cross compiling... yes
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether i686-w64-mingw32.static-gcc accepts -g... yes
+checking for i686-w64-mingw32.static-gcc option to accept ISO C89... none needed
+checking whether i686-w64-mingw32.static-gcc understands -c and -o together... yes
+checking dependency style of i686-w64-mingw32.static-gcc... gcc3
+checking for special C compiler options needed for large files... no
+checking for _FILE_OFFSET_BITS value needed for large files... 64
+checking for i686-w64-mingw32.static-gcc... (cached) i686-w64-mingw32.static-gcc
+checking whether we are using the GNU C compiler... (cached) yes
+checking whether i686-w64-mingw32.static-gcc accepts -g... (cached) yes
+checking for i686-w64-mingw32.static-gcc option to accept ISO C89... (cached) none needed
+checking whether i686-w64-mingw32.static-gcc understands -c and -o together... (cached) yes
+checking dependency style of i686-w64-mingw32.static-gcc... (cached) gcc3
+checking build system type... (cached) i686-pc-linux-gnu
+checking host system type... i686-w64-mingw32.static
+checking how to print strings... printf
+checking for a sed that does not truncate output... /bin/sed
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for fgrep... /bin/grep -F
+checking for ld used by i686-w64-mingw32.static-gcc... /home/user/mxe/usr/bin/i686-w64-mingw32.static-ld
+checking if the linker (/home/user/mxe/usr/bin/i686-w64-mingw32.static-ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /home/user/mxe/usr/bin/i686-w64-mingw32.static-nm -B
+checking the name lister (/home/user/mxe/usr/bin/i686-w64-mingw32.static-nm -B) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 1572864
+checking how to convert i686-pc-linux-gnu file names to i686-w64-mingw32.static format... func_convert_file_nix_to_w32
+checking how to convert i686-pc-linux-gnu file names to toolchain format... func_convert_file_noop
+checking for /home/user/mxe/usr/bin/i686-w64-mingw32.static-ld option to reload object files... -r
+checking for i686-w64-mingw32.static-objdump... i686-w64-mingw32.static-objdump
+checking how to recognize dependent libraries... file_magic ^x86 archive import|^x86 DLL
+checking for i686-w64-mingw32.static-dlltool... i686-w64-mingw32.static-dlltool
+checking how to associate runtime and link libraries... func_cygming_dll_for_implib
+checking for i686-w64-mingw32.static-ar... i686-w64-mingw32.static-ar
+checking for archiver @FILE support... @
+checking for i686-w64-mingw32.static-strip... (cached) i686-w64-mingw32.static-strip
+checking for i686-w64-mingw32.static-ranlib... i686-w64-mingw32.static-ranlib
+checking command to parse /home/user/mxe/usr/bin/i686-w64-mingw32.static-nm -B output from i686-w64-mingw32.static-gcc object... ok
+checking for sysroot... no
+checking for a working dd... /bin/dd
+checking how to truncate binary pipes... /bin/dd bs=4096 count=1
+checking for i686-w64-mingw32.static-mt... no
+checking for mt... mt
+configure: WARNING: using cross tools not prefixed with host triplet
+checking if mt is a manifest tool... no
+checking how to run the C preprocessor... i686-w64-mingw32.static-gcc -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking for dlfcn.h... no
+checking for objdir... .libs
+checking if i686-w64-mingw32.static-gcc supports -fno-rtti -fno-exceptions... no
+checking for i686-w64-mingw32.static-gcc option to produce PIC... -DDLL_EXPORT -DPIC
+checking if i686-w64-mingw32.static-gcc PIC flag -DDLL_EXPORT -DPIC works... yes
+checking if i686-w64-mingw32.static-gcc static flag -static works... yes
+checking if i686-w64-mingw32.static-gcc supports -c -o file.o... yes
+checking if i686-w64-mingw32.static-gcc supports -c -o file.o... (cached) yes
+checking whether the i686-w64-mingw32.static-gcc linker (/home/user/mxe/usr/bin/i686-w64-mingw32.static-ld) supports shared libraries... yes
+checking dynamic linker characteristics... Win32 ld.exe
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... no
+checking whether to build static libraries... yes
+checking for fdatasync... no
+checking for usleep... yes
+checking for fullfsync... no
+checking for localtime_r... no
+checking for gmtime_r... no
+checking whether strerror_r is declared... no
+checking for strerror_r... no
+checking whether strerror_r returns char *... no
+checking editline/readline.h usability... no
+checking editline/readline.h presence... no
+checking for editline/readline.h... no
+checking for library containing pthread_create... -lpthread
+checking for library containing pthread_mutexattr_init... none required
+checking for library containing dlopen... no
+checking for whether to support dynamic extensions... yes
+checking for posix_fallocate... no
+checking zlib.h usability... yes
+checking zlib.h presence... yes
+checking for zlib.h... yes
+checking for library containing deflate... -lz
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating sqlite3.pc
+config.status: executing depfiles commands
+config.status: executing libtool commands
+configure: WARNING: unrecognized options: --enable-doc, --enable-gtk-doc, --enable-gtk-doc-html, --enable-gtk-doc-pdf, --with-html-dir, --disable-doxygen
+make -C '/home/user/mxe/tmp-sqlite-i686-w64-mingw32.static/sqlite-autoconf-3220000' -j 1 install
+make[2]: Entering directory '/home/user/mxe/tmp-sqlite-i686-w64-mingw32.static/sqlite-autoconf-3220000'
+/bin/bash ./libtool  --tag=CC   --mode=compile i686-w64-mingw32.static-gcc -DPACKAGE_NAME=\"sqlite\" -DPACKAGE_TARNAME=\"sqlite\" -DPACKAGE_VERSION=\"3.22.0\" -DPACKAGE_STRING=\"sqlite\ 3.22.0\" -DPACKAGE_BUGREPORT=\"http://www.sqlite.org\" -DPACKAGE_URL=\"\" -DPACKAGE=\"sqlite\" -DVERSION=\"3.22.0\" -D_FILE_OFFSET_BITS=64 -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DLT_OBJDIR=\".libs/\" -DHAVE_USLEEP=1 -DHAVE_DECL_STRERROR_R=0 -DHAVE_ZLIB_H=1 -I.    -D_REENTRANT=1 -DSQLITE_THREADSAFE=1    -DSQLITE_HAVE_ZLIB  -DSQLITE_ENABLE_FTS3 -DSQLITE_ENABLE_RTREE -Os -DSQLITE_ENABLE_COLUMN_METADATA -MT sqlite3.lo -MD -MP -MF .deps/sqlite3.Tpo -c -o sqlite3.lo sqlite3.c
+libtool: compile:  i686-w64-mingw32.static-gcc -DPACKAGE_NAME=\"sqlite\" -DPACKAGE_TARNAME=\"sqlite\" -DPACKAGE_VERSION=\"3.22.0\" "-DPACKAGE_STRING=\"sqlite 3.22.0\"" -DPACKAGE_BUGREPORT=\"http://www.sqlite.org\" -DPACKAGE_URL=\"\" -DPACKAGE=\"sqlite\" -DVERSION=\"3.22.0\" -D_FILE_OFFSET_BITS=64 -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DLT_OBJDIR=\".libs/\" -DHAVE_USLEEP=1 -DHAVE_DECL_STRERROR_R=0 -DHAVE_ZLIB_H=1 -I. -D_REENTRANT=1 -DSQLITE_THREADSAFE=1 -DSQLITE_HAVE_ZLIB -DSQLITE_ENABLE_FTS3 -DSQLITE_ENABLE_RTREE -Os -DSQLITE_ENABLE_COLUMN_METADATA -MT sqlite3.lo -MD -MP -MF .deps/sqlite3.Tpo -c sqlite3.c -o sqlite3.o
+mv -f .deps/sqlite3.Tpo .deps/sqlite3.Plo
+/bin/bash ./libtool  --tag=CC   --mode=link i686-w64-mingw32.static-gcc -D_REENTRANT=1 -DSQLITE_THREADSAFE=1    -DSQLITE_HAVE_ZLIB  -DSQLITE_ENABLE_FTS3 -DSQLITE_ENABLE_RTREE -Os -DSQLITE_ENABLE_COLUMN_METADATA -no-undefined -version-info 8:6:8  -o libsqlite3.la -rpath /home/user/mxe/usr/i686-w64-mingw32.static/lib sqlite3.lo  -lz -lpthread 
+libtool: link: i686-w64-mingw32.static-ar cru .libs/libsqlite3.a  sqlite3.o
+i686-w64-mingw32.static-ar: `u' modifier ignored since `D' is the default (see `U')
+libtool: link: i686-w64-mingw32.static-ranlib .libs/libsqlite3.a
+libtool: link: ( cd ".libs" && rm -f "libsqlite3.la" && ln -s "../libsqlite3.la" "libsqlite3.la" )
+i686-w64-mingw32.static-gcc -DPACKAGE_NAME=\"sqlite\" -DPACKAGE_TARNAME=\"sqlite\" -DPACKAGE_VERSION=\"3.22.0\" -DPACKAGE_STRING=\"sqlite\ 3.22.0\" -DPACKAGE_BUGREPORT=\"http://www.sqlite.org\" -DPACKAGE_URL=\"\" -DPACKAGE=\"sqlite\" -DVERSION=\"3.22.0\" -D_FILE_OFFSET_BITS=64 -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DLT_OBJDIR=\".libs/\" -DHAVE_USLEEP=1 -DHAVE_DECL_STRERROR_R=0 -DHAVE_ZLIB_H=1 -I.    -D_REENTRANT=1 -DSQLITE_THREADSAFE=1    -DSQLITE_HAVE_ZLIB  -DSQLITE_ENABLE_FTS3 -DSQLITE_ENABLE_RTREE -DSQLITE_ENABLE_EXPLAIN_COMMENTS -DSQLITE_ENABLE_DBPAGE_VTAB -DSQLITE_ENABLE_STMTVTAB -DSQLITE_ENABLE_DBSTAT_VTAB -Os -DSQLITE_ENABLE_COLUMN_METADATA -MT sqlite3-shell.o -MD -MP -MF .deps/sqlite3-shell.Tpo -c -o sqlite3-shell.o `test -f 'shell.c' || echo './'`shell.c
+mv -f .deps/sqlite3-shell.Tpo .deps/sqlite3-shell.Po
+i686-w64-mingw32.static-gcc -DPACKAGE_NAME=\"sqlite\" -DPACKAGE_TARNAME=\"sqlite\" -DPACKAGE_VERSION=\"3.22.0\" -DPACKAGE_STRING=\"sqlite\ 3.22.0\" -DPACKAGE_BUGREPORT=\"http://www.sqlite.org\" -DPACKAGE_URL=\"\" -DPACKAGE=\"sqlite\" -DVERSION=\"3.22.0\" -D_FILE_OFFSET_BITS=64 -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DLT_OBJDIR=\".libs/\" -DHAVE_USLEEP=1 -DHAVE_DECL_STRERROR_R=0 -DHAVE_ZLIB_H=1 -I.    -D_REENTRANT=1 -DSQLITE_THREADSAFE=1    -DSQLITE_HAVE_ZLIB  -DSQLITE_ENABLE_FTS3 -DSQLITE_ENABLE_RTREE -DSQLITE_ENABLE_EXPLAIN_COMMENTS -DSQLITE_ENABLE_DBPAGE_VTAB -DSQLITE_ENABLE_STMTVTAB -DSQLITE_ENABLE_DBSTAT_VTAB -Os -DSQLITE_ENABLE_COLUMN_METADATA -MT sqlite3-sqlite3.o -MD -MP -MF .deps/sqlite3-sqlite3.Tpo -c -o sqlite3-sqlite3.o `test -f 'sqlite3.c' || echo './'`sqlite3.c
+mv -f .deps/sqlite3-sqlite3.Tpo .deps/sqlite3-sqlite3.Po
+/bin/bash ./libtool  --tag=CC   --mode=link i686-w64-mingw32.static-gcc -D_REENTRANT=1 -DSQLITE_THREADSAFE=1    -DSQLITE_HAVE_ZLIB  -DSQLITE_ENABLE_FTS3 -DSQLITE_ENABLE_RTREE -DSQLITE_ENABLE_EXPLAIN_COMMENTS -DSQLITE_ENABLE_DBPAGE_VTAB -DSQLITE_ENABLE_STMTVTAB -DSQLITE_ENABLE_DBSTAT_VTAB -Os -DSQLITE_ENABLE_COLUMN_METADATA   -o sqlite3.exe sqlite3-shell.o sqlite3-sqlite3.o  -lz -lpthread 
+libtool: link: i686-w64-mingw32.static-gcc -D_REENTRANT=1 -DSQLITE_THREADSAFE=1 -DSQLITE_HAVE_ZLIB -DSQLITE_ENABLE_FTS3 -DSQLITE_ENABLE_RTREE -DSQLITE_ENABLE_EXPLAIN_COMMENTS -DSQLITE_ENABLE_DBPAGE_VTAB -DSQLITE_ENABLE_STMTVTAB -DSQLITE_ENABLE_DBSTAT_VTAB -Os -DSQLITE_ENABLE_COLUMN_METADATA -o sqlite3.exe sqlite3-shell.o sqlite3-sqlite3.o  -lz -lpthread
+make[3]: Entering directory '/home/user/mxe/tmp-sqlite-i686-w64-mingw32.static/sqlite-autoconf-3220000'
+ /bin/mkdir -p '/home/user/mxe/usr/i686-w64-mingw32.static/lib'
+ /bin/bash ./libtool   --mode=install /usr/bin/install -c   libsqlite3.la '/home/user/mxe/usr/i686-w64-mingw32.static/lib'
+libtool: install: /usr/bin/install -c .libs/libsqlite3.lai /home/user/mxe/usr/i686-w64-mingw32.static/lib/libsqlite3.la
+libtool: install: /usr/bin/install -c .libs/libsqlite3.a /home/user/mxe/usr/i686-w64-mingw32.static/lib/libsqlite3.a
+libtool: install: chmod 644 /home/user/mxe/usr/i686-w64-mingw32.static/lib/libsqlite3.a
+libtool: install: i686-w64-mingw32.static-ranlib /home/user/mxe/usr/i686-w64-mingw32.static/lib/libsqlite3.a
+ /bin/mkdir -p '/home/user/mxe/usr/i686-w64-mingw32.static/bin'
+  /bin/bash ./libtool   --mode=install /usr/bin/install -c sqlite3.exe '/home/user/mxe/usr/i686-w64-mingw32.static/bin'
+libtool: install: /usr/bin/install -c sqlite3.exe /home/user/mxe/usr/i686-w64-mingw32.static/bin/sqlite3.exe
+ /bin/mkdir -p '/home/user/mxe/usr/i686-w64-mingw32.static/include'
+ /usr/bin/install -c -m 644 sqlite3.h sqlite3ext.h '/home/user/mxe/usr/i686-w64-mingw32.static/include'
+ /bin/mkdir -p '/home/user/mxe/tmp-sqlite-i686-w64-mingw32.static/sqlite-autoconf-3220000.build_.sink/man1'
+ /usr/bin/install -c -m 644 sqlite3.1 '/home/user/mxe/tmp-sqlite-i686-w64-mingw32.static/sqlite-autoconf-3220000.build_.sink/man1'
+ /bin/mkdir -p '/home/user/mxe/usr/i686-w64-mingw32.static/lib/pkgconfig'
+ /usr/bin/install -c -m 644 sqlite3.pc '/home/user/mxe/usr/i686-w64-mingw32.static/lib/pkgconfig'
+make[3]: Leaving directory '/home/user/mxe/tmp-sqlite-i686-w64-mingw32.static/sqlite-autoconf-3220000'
+make[2]: Leaving directory '/home/user/mxe/tmp-sqlite-i686-w64-mingw32.static/sqlite-autoconf-3220000'
+
+/home/user/mxe/tmp-sqlite-i686-w64-mingw32.static/sqlite-autoconf-3220000/config.log
+This file contains any messages produced by compilers while
+running configure, to aid debugging if configure makes a mistake.
+
+It was created by sqlite configure 3.22.0, which was
+generated by GNU Autoconf 2.69.  Invocation command line was
+
+  $ ./configure --host=i686-w64-mingw32.static --build=i686-pc-linux-gnu --prefix=/home/user/mxe/usr/i686-w64-mingw32.static --enable-static --disable-shared ac_cv_prog_HAVE_DOXYGEN=false --enable-doc=no --enable-gtk-doc=no --enable-gtk-doc-html=no --enable-gtk-doc-pdf=no --docdir=/home/user/mxe/tmp-sqlite-i686-w64-mingw32.static/sqlite-autoconf-3220000.build_.sink --infodir=/home/user/mxe/tmp-sqlite-i686-w64-mingw32.static/sqlite-autoconf-3220000.build_.sink --mandir=/home/user/mxe/tmp-sqlite-i686-w64-mingw32.static/sqlite-autoconf-3220000.build_.sink --with-html-dir=/home/user/mxe/tmp-sqlite-i686-w64-mingw32.static/sqlite-autoconf-3220000.build_.sink --disable-doxygen --disable-readline --enable-threadsafe CFLAGS=-Os -DSQLITE_ENABLE_COLUMN_METADATA
+
+## --------- ##
+## Platform. ##
+## --------- ##
+
+hostname = user-VirtualBox
+uname -m = i686
+uname -r = 4.13.0-21-generic
+uname -s = Linux
+uname -v = #24-Ubuntu SMP Mon Dec 18 17:29:35 UTC 2017
+
+/usr/bin/uname -p = unknown
+/bin/uname -X     = unknown
+
+/bin/arch              = unknown
+/usr/bin/arch -k       = unknown
+/usr/convex/getsysinfo = unknown
+/usr/bin/hostinfo      = unknown
+/bin/machine           = unknown
+/usr/bin/oslevel       = unknown
+/bin/universe          = unknown
+
+PATH: /home/user/mxe/usr/i686-pc-linux-gnu/bin
+PATH: /home/user/mxe/usr/bin
+PATH: /home/user/mxe/usr/i686-pc-linux-gnu/bin
+PATH: /home/user/mxe/usr/bin
+PATH: /usr/local/sbin
+PATH: /usr/local/bin
+PATH: /usr/sbin
+PATH: /usr/bin
+PATH: /sbin
+PATH: /bin
+PATH: /usr/games
+PATH: /usr/local/games
+PATH: /snap/bin
+
+
+## ----------- ##
+## Core tests. ##
+## ----------- ##
+
+configure:2192: loading site script /home/user/mxe/usr/i686-w64-mingw32.static/share/config.site
+| ac_cv_build=i686-pc-linux-gnu
+configure:2336: checking for a BSD-compatible install
+configure:2404: result: /usr/bin/install -c
+configure:2415: checking whether build environment is sane
+configure:2470: result: yes
+configure:2529: checking for i686-w64-mingw32.static-strip
+configure:2545: found /home/user/mxe/usr/bin/i686-w64-mingw32.static-strip
+configure:2556: result: i686-w64-mingw32.static-strip
+configure:2621: checking for a thread-safe mkdir -p
+configure:2660: result: /bin/mkdir -p
+configure:2667: checking for gawk
+configure:2697: result: no
+configure:2667: checking for mawk
+configure:2683: found /usr/bin/mawk
+configure:2694: result: mawk
+configure:2705: checking whether make sets $(MAKE)
+configure:2727: result: yes
+configure:2756: checking whether make supports nested variables
+configure:2773: result: yes
+configure:2912: checking for style of include used by make
+configure:2940: result: GNU
+configure:2971: checking for i686-w64-mingw32.static-gcc
+configure:2987: found /home/user/mxe/usr/bin/i686-w64-mingw32.static-gcc
+configure:2998: result: i686-w64-mingw32.static-gcc
+configure:3267: checking for C compiler version
+configure:3276: i686-w64-mingw32.static-gcc --version >&5
+i686-w64-mingw32.static-gcc (GCC) 5.4.0
+Copyright (C) 2015 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+configure:3287: $? = 0
+configure:3276: i686-w64-mingw32.static-gcc -v >&5
+Using built-in specs.
+COLLECT_GCC=i686-w64-mingw32.static-gcc
+COLLECT_LTO_WRAPPER=/home/user/mxe/usr/libexec/gcc/i686-w64-mingw32.static/5.4.0/lto-wrapper
+Target: i686-w64-mingw32.static
+Configured with: /home/user/mxe/tmp-gcc-i686-w64-mingw32.static/gcc-5.4.0/configure ac_cv_prog_HAVE_DOXYGEN=false --enable-doc=no --enable-gtk-doc=no --enable-gtk-doc-html=no --enable-gtk-doc-pdf=no --docdir=/home/user/mxe/tmp-gcc-i686-w64-mingw32.static/gcc-5.4.0.build_.sink --infodir=/home/user/mxe/tmp-gcc-i686-w64-mingw32.static/gcc-5.4.0.build_.sink --mandir=/home/user/mxe/tmp-gcc-i686-w64-mingw32.static/gcc-5.4.0.build_.sink --with-html-dir=/home/user/mxe/tmp-gcc-i686-w64-mingw32.static/gcc-5.4.0.build_.sink --disable-doxygen --target=i686-w64-mingw32.static --build=i686-pc-linux-gnu --prefix=/home/user/mxe/usr --libdir=/home/user/mxe/usr/lib --enable-languages=c,c++,objc,fortran --enable-version-specific-runtime-libs --with-gcc --with-gnu-ld --with-gnu-as --disable-nls --disable-shared --disable-multilib --without-x --disable-win32-registry --enable-threads=win32 --enable-sjlj-exceptions --enable-libgomp --with-gmp=/home/user/mxe/usr/i686-pc-linux-gnu --with-isl=/home/user/mxe/usr/i686-pc-linux-gnu --with-mpc=/home/user/mxe/usr/i686-pc-linux-gnu --with-mpfr=/home/user/mxe/usr/i686-pc-linux-gnu --with-as=/home/user/mxe/usr/bin/i686-w64-mingw32.static-as --with-ld=/home/user/mxe/usr/bin/i686-w64-mingw32.static-ld --with-nm=/home/user/mxe/usr/bin/i686-w64-mingw32.static-nm
+Thread model: win32
+gcc version 5.4.0 (GCC) 
+configure:3287: $? = 0
+configure:3276: i686-w64-mingw32.static-gcc -V >&5
+i686-w64-mingw32.static-gcc: error: unrecognized command line option '-V'
+i686-w64-mingw32.static-gcc: fatal error: no input files
+compilation terminated.
+configure:3287: $? = 1
+configure:3276: i686-w64-mingw32.static-gcc -qversion >&5
+i686-w64-mingw32.static-gcc: error: unrecognized command line option '-qversion'
+i686-w64-mingw32.static-gcc: fatal error: no input files
+compilation terminated.
+configure:3287: $? = 1
+configure:3307: checking whether the C compiler works
+configure:3329: i686-w64-mingw32.static-gcc -Os -DSQLITE_ENABLE_COLUMN_METADATA   conftest.c  >&5
+configure:3333: $? = 0
+configure:3381: result: yes
+configure:3384: checking for C compiler default output file name
+configure:3386: result: a.exe
+configure:3392: checking for suffix of executables
+configure:3399: i686-w64-mingw32.static-gcc -o conftest.exe -Os -DSQLITE_ENABLE_COLUMN_METADATA   conftest.c  >&5
+configure:3403: $? = 0
+configure:3425: result: .exe
+configure:3447: checking whether we are cross compiling
+configure:3485: result: yes
+configure:3490: checking for suffix of object files
+configure:3512: i686-w64-mingw32.static-gcc -c -Os -DSQLITE_ENABLE_COLUMN_METADATA  conftest.c >&5
+configure:3516: $? = 0
+configure:3537: result: o
+configure:3541: checking whether we are using the GNU C compiler
+configure:3560: i686-w64-mingw32.static-gcc -c -Os -DSQLITE_ENABLE_COLUMN_METADATA  conftest.c >&5
+configure:3560: $? = 0
+configure:3569: result: yes
+configure:3578: checking whether i686-w64-mingw32.static-gcc accepts -g
+configure:3598: i686-w64-mingw32.static-gcc -c -g  conftest.c >&5
+configure:3598: $? = 0
+configure:3639: result: yes
+configure:3656: checking for i686-w64-mingw32.static-gcc option to accept ISO C89
+configure:3719: i686-w64-mingw32.static-gcc  -c -Os -DSQLITE_ENABLE_COLUMN_METADATA  conftest.c >&5
+configure:3719: $? = 0
+configure:3732: result: none needed
+configure:3757: checking whether i686-w64-mingw32.static-gcc understands -c and -o together
+configure:3779: i686-w64-mingw32.static-gcc -c conftest.c -o conftest2.o
+configure:3782: $? = 0
+configure:3779: i686-w64-mingw32.static-gcc -c conftest.c -o conftest2.o
+configure:3782: $? = 0
+configure:3794: result: yes
+configure:3813: checking dependency style of i686-w64-mingw32.static-gcc
+configure:3924: result: gcc3
+configure:3947: checking for special C compiler options needed for large files
+configure:3992: result: no
+configure:3998: checking for _FILE_OFFSET_BITS value needed for large files
+configure:4023: i686-w64-mingw32.static-gcc -c -Os -DSQLITE_ENABLE_COLUMN_METADATA  conftest.c >&5
+conftest.c:16:33: warning: left shift count >= width of type [-Wshift-count-overflow]
+ #define LARGE_OFF_T (((off_t) 1 << 62) - 1 + ((off_t) 1 << 62))
+                                 ^
+conftest.c:17:23: note: in expansion of macro 'LARGE_OFF_T'
+   int off_t_is_large[(LARGE_OFF_T % 2147483629 == 721
+                       ^
+conftest.c:16:57: warning: left shift count >= width of type [-Wshift-count-overflow]
+ #define LARGE_OFF_T (((off_t) 1 << 62) - 1 + ((off_t) 1 << 62))
+                                                         ^
+conftest.c:17:23: note: in expansion of macro 'LARGE_OFF_T'
+   int off_t_is_large[(LARGE_OFF_T % 2147483629 == 721
+                       ^
+conftest.c:16:33: warning: left shift count >= width of type [-Wshift-count-overflow]
+ #define LARGE_OFF_T (((off_t) 1 << 62) - 1 + ((off_t) 1 << 62))
+                                 ^
+conftest.c:18:13: note: in expansion of macro 'LARGE_OFF_T'
+          && LARGE_OFF_T % 2147483647 == 1)
+             ^
+conftest.c:16:57: warning: left shift count >= width of type [-Wshift-count-overflow]
+ #define LARGE_OFF_T (((off_t) 1 << 62) - 1 + ((off_t) 1 << 62))
+                                                         ^
+conftest.c:18:13: note: in expansion of macro 'LARGE_OFF_T'
+          && LARGE_OFF_T % 2147483647 == 1)
+             ^
+conftest.c:17:7: error: variably modified 'off_t_is_large' at file scope
+   int off_t_is_large[(LARGE_OFF_T % 2147483629 == 721
+       ^
+configure:4023: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "sqlite"
+| #define PACKAGE_TARNAME "sqlite"
+| #define PACKAGE_VERSION "3.22.0"
+| #define PACKAGE_STRING "sqlite 3.22.0"
+| #define PACKAGE_BUGREPORT "http://www.sqlite.org"
+| #define PACKAGE_URL ""
+| #define PACKAGE "sqlite"
+| #define VERSION "3.22.0"
+| /* end confdefs.h.  */
+| #include <sys/types.h>
+|  /* Check that off_t can represent 2**63 - 1 correctly.
+|     We can't simply define LARGE_OFF_T to be 9223372036854775807,
+|     since some C++ compilers masquerading as C compilers
+|     incorrectly reject 9223372036854775807.  */
+| #define LARGE_OFF_T (((off_t) 1 << 62) - 1 + ((off_t) 1 << 62))
+|   int off_t_is_large[(LARGE_OFF_T % 2147483629 == 721
+| 		       && LARGE_OFF_T % 2147483647 == 1)
+| 		      ? 1 : -1];
+| int
+| main ()
+| {
+| 
+|   ;
+|   return 0;
+| }
+configure:4047: i686-w64-mingw32.static-gcc -c -Os -DSQLITE_ENABLE_COLUMN_METADATA  conftest.c >&5
+configure:4047: $? = 0
+configure:4055: result: 64
+configure:4150: checking for i686-w64-mingw32.static-gcc
+configure:4177: result: i686-w64-mingw32.static-gcc
+configure:4446: checking for C compiler version
+configure:4455: i686-w64-mingw32.static-gcc --version >&5
+i686-w64-mingw32.static-gcc (GCC) 5.4.0
+Copyright (C) 2015 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+configure:4466: $? = 0
+configure:4455: i686-w64-mingw32.static-gcc -v >&5
+Using built-in specs.
+COLLECT_GCC=i686-w64-mingw32.static-gcc
+COLLECT_LTO_WRAPPER=/home/user/mxe/usr/libexec/gcc/i686-w64-mingw32.static/5.4.0/lto-wrapper
+Target: i686-w64-mingw32.static
+Configured with: /home/user/mxe/tmp-gcc-i686-w64-mingw32.static/gcc-5.4.0/configure ac_cv_prog_HAVE_DOXYGEN=false --enable-doc=no --enable-gtk-doc=no --enable-gtk-doc-html=no --enable-gtk-doc-pdf=no --docdir=/home/user/mxe/tmp-gcc-i686-w64-mingw32.static/gcc-5.4.0.build_.sink --infodir=/home/user/mxe/tmp-gcc-i686-w64-mingw32.static/gcc-5.4.0.build_.sink --mandir=/home/user/mxe/tmp-gcc-i686-w64-mingw32.static/gcc-5.4.0.build_.sink --with-html-dir=/home/user/mxe/tmp-gcc-i686-w64-mingw32.static/gcc-5.4.0.build_.sink --disable-doxygen --target=i686-w64-mingw32.static --build=i686-pc-linux-gnu --prefix=/home/user/mxe/usr --libdir=/home/user/mxe/usr/lib --enable-languages=c,c++,objc,fortran --enable-version-specific-runtime-libs --with-gcc --with-gnu-ld --with-gnu-as --disable-nls --disable-shared --disable-multilib --without-x --disable-win32-registry --enable-threads=win32 --enable-sjlj-exceptions --enable-libgomp --with-gmp=/home/user/mxe/usr/i686-pc-linux-gnu --with-isl=/home/user/mxe/usr/i686-pc-linux-gnu --with-mpc=/home/user/mxe/usr/i686-pc-linux-gnu --with-mpfr=/home/user/mxe/usr/i686-pc-linux-gnu --with-as=/home/user/mxe/usr/bin/i686-w64-mingw32.static-as --with-ld=/home/user/mxe/usr/bin/i686-w64-mingw32.static-ld --with-nm=/home/user/mxe/usr/bin/i686-w64-mingw32.static-nm
+Thread model: win32
+gcc version 5.4.0 (GCC) 
+configure:4466: $? = 0
+configure:4455: i686-w64-mingw32.static-gcc -V >&5
+i686-w64-mingw32.static-gcc: error: unrecognized command line option '-V'
+i686-w64-mingw32.static-gcc: fatal error: no input files
+compilation terminated.
+configure:4466: $? = 1
+configure:4455: i686-w64-mingw32.static-gcc -qversion >&5
+i686-w64-mingw32.static-gcc: error: unrecognized command line option '-qversion'
+i686-w64-mingw32.static-gcc: fatal error: no input files
+compilation terminated.
+configure:4466: $? = 1
+configure:4470: checking whether we are using the GNU C compiler
+configure:4498: result: yes
+configure:4507: checking whether i686-w64-mingw32.static-gcc accepts -g
+configure:4568: result: yes
+configure:4585: checking for i686-w64-mingw32.static-gcc option to accept ISO C89
+configure:4661: result: none needed
+configure:4686: checking whether i686-w64-mingw32.static-gcc understands -c and -o together
+configure:4723: result: yes
+configure:4742: checking dependency style of i686-w64-mingw32.static-gcc
+configure:4853: result: gcc3
+configure:4897: checking build system type
+configure:4911: result: i686-pc-linux-gnu
+configure:4931: checking host system type
+configure:4944: result: i686-w64-mingw32.static
+configure:4985: checking how to print strings
+configure:5012: result: printf
+configure:5033: checking for a sed that does not truncate output
+configure:5097: result: /bin/sed
+configure:5115: checking for grep that handles long lines and -e
+configure:5173: result: /bin/grep
+configure:5178: checking for egrep
+configure:5240: result: /bin/grep -E
+configure:5245: checking for fgrep
+configure:5307: result: /bin/grep -F
+configure:5342: checking for ld used by i686-w64-mingw32.static-gcc
+configure:5409: result: /home/user/mxe/usr/bin/i686-w64-mingw32.static-ld
+configure:5416: checking if the linker (/home/user/mxe/usr/bin/i686-w64-mingw32.static-ld) is GNU ld
+configure:5431: result: yes
+configure:5443: checking for BSD- or MS-compatible name lister (nm)
+configure:5497: result: /home/user/mxe/usr/bin/i686-w64-mingw32.static-nm -B
+configure:5627: checking the name lister (/home/user/mxe/usr/bin/i686-w64-mingw32.static-nm -B) interface
+configure:5634: i686-w64-mingw32.static-gcc -c -Os -DSQLITE_ENABLE_COLUMN_METADATA  conftest.c >&5
+configure:5637: /home/user/mxe/usr/bin/i686-w64-mingw32.static-nm -B "conftest.o"
+configure:5640: output
+00000000 b .bss
+00000000 d .data
+00000000 r .rdata$zzz
+00000000 t .text
+00000000 B _some_variable
+configure:5647: result: BSD nm
+configure:5650: checking whether ln -s works
+configure:5654: result: yes
+configure:5662: checking the maximum length of command line arguments
+configure:5793: result: 1572864
+configure:5841: checking how to convert i686-pc-linux-gnu file names to i686-w64-mingw32.static format
+configure:5881: result: func_convert_file_nix_to_w32
+configure:5888: checking how to convert i686-pc-linux-gnu file names to toolchain format
+configure:5908: result: func_convert_file_noop
+configure:5915: checking for /home/user/mxe/usr/bin/i686-w64-mingw32.static-ld option to reload object files
+configure:5922: result: -r
+configure:5956: checking for i686-w64-mingw32.static-objdump
+configure:5972: found /home/user/mxe/usr/bin/i686-w64-mingw32.static-objdump
+configure:5983: result: i686-w64-mingw32.static-objdump
+configure:6055: checking how to recognize dependent libraries
+configure:6255: result: file_magic ^x86 archive import|^x86 DLL
+configure:6300: checking for i686-w64-mingw32.static-dlltool
+configure:6316: found /home/user/mxe/usr/bin/i686-w64-mingw32.static-dlltool
+configure:6327: result: i686-w64-mingw32.static-dlltool
+configure:6400: checking how to associate runtime and link libraries
+configure:6427: result: func_cygming_dll_for_implib
+configure:6443: checking for i686-w64-mingw32.static-ar
+configure:6459: found /home/user/mxe/usr/bin/i686-w64-mingw32.static-ar
+configure:6470: result: i686-w64-mingw32.static-ar
+configure:6551: checking for archiver @FILE support
+configure:6568: i686-w64-mingw32.static-gcc -c -Os -DSQLITE_ENABLE_COLUMN_METADATA  conftest.c >&5
+configure:6568: $? = 0
+configure:6571: i686-w64-mingw32.static-ar cru libconftest.a @conftest.lst >&5
+i686-w64-mingw32.static-ar: `u' modifier ignored since `D' is the default (see `U')
+configure:6574: $? = 0
+configure:6579: i686-w64-mingw32.static-ar cru libconftest.a @conftest.lst >&5
+i686-w64-mingw32.static-ar: `u' modifier ignored since `D' is the default (see `U')
+i686-w64-mingw32.static-ar: conftest.o: No such file or directory
+configure:6582: $? = 1
+configure:6594: result: @
+configure:6612: checking for i686-w64-mingw32.static-strip
+configure:6639: result: i686-w64-mingw32.static-strip
+configure:6711: checking for i686-w64-mingw32.static-ranlib
+configure:6727: found /home/user/mxe/usr/bin/i686-w64-mingw32.static-ranlib
+configure:6738: result: i686-w64-mingw32.static-ranlib
+configure:6880: checking command to parse /home/user/mxe/usr/bin/i686-w64-mingw32.static-nm -B output from i686-w64-mingw32.static-gcc object
+configure:7033: i686-w64-mingw32.static-gcc -c -Os -DSQLITE_ENABLE_COLUMN_METADATA  conftest.c >&5
+configure:7036: $? = 0
+configure:7040: /home/user/mxe/usr/bin/i686-w64-mingw32.static-nm -B conftest.o \| sed -n -e 's/^.*[ ]\([ABCDGIRSTW][ABCDGIRSTW]*\)[ ][ ]*\([_A-Za-z][_A-Za-z0-9]*\)$/\1 \2 \2/p' | sed '/ __gnu_lto/d' \> conftest.nm
+configure:7043: $? = 0
+cannot find nm_test_var in conftest.nm
+configure:7033: i686-w64-mingw32.static-gcc -c -Os -DSQLITE_ENABLE_COLUMN_METADATA  conftest.c >&5
+configure:7036: $? = 0
+configure:7040: /home/user/mxe/usr/bin/i686-w64-mingw32.static-nm -B conftest.o \| sed -n -e 's/^.*[ ]\([ABCDGIRSTW][ABCDGIRSTW]*\)[ ][ ]*_\([_A-Za-z][_A-Za-z0-9]*\)$/\1 _\2 \2/p' | sed '/ __gnu_lto/d' \> conftest.nm
+configure:7043: $? = 0
+configure:7109: i686-w64-mingw32.static-gcc -o conftest.exe -Os -DSQLITE_ENABLE_COLUMN_METADATA   conftest.c conftstm.o >&5
+configure:7112: $? = 0
+configure:7150: result: ok
+configure:7197: checking for sysroot
+configure:7227: result: no
+configure:7234: checking for a working dd
+configure:7272: result: /bin/dd
+configure:7276: checking how to truncate binary pipes
+configure:7291: result: /bin/dd bs=4096 count=1
+configure:7580: checking for i686-w64-mingw32.static-mt
+configure:7610: result: no
+configure:7620: checking for mt
+configure:7636: found /bin/mt
+configure:7647: result: mt
+configure:7659: WARNING: using cross tools not prefixed with host triplet
+configure:7670: checking if mt is a manifest tool
+configure:7676: mt '-?'
+configure:7684: result: no
+configure:8361: checking how to run the C preprocessor
+configure:8392: i686-w64-mingw32.static-gcc -E  conftest.c
+configure:8392: $? = 0
+configure:8406: i686-w64-mingw32.static-gcc -E  conftest.c
+conftest.c:12:28: fatal error: ac_nonexistent.h: No such file or directory
+compilation terminated.
+configure:8406: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "sqlite"
+| #define PACKAGE_TARNAME "sqlite"
+| #define PACKAGE_VERSION "3.22.0"
+| #define PACKAGE_STRING "sqlite 3.22.0"
+| #define PACKAGE_BUGREPORT "http://www.sqlite.org"
+| #define PACKAGE_URL ""
+| #define PACKAGE "sqlite"
+| #define VERSION "3.22.0"
+| #define _FILE_OFFSET_BITS 64
+| /* end confdefs.h.  */
+| #include <ac_nonexistent.h>
+configure:8431: result: i686-w64-mingw32.static-gcc -E
+configure:8451: i686-w64-mingw32.static-gcc -E  conftest.c
+configure:8451: $? = 0
+configure:8465: i686-w64-mingw32.static-gcc -E  conftest.c
+conftest.c:12:28: fatal error: ac_nonexistent.h: No such file or directory
+compilation terminated.
+configure:8465: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "sqlite"
+| #define PACKAGE_TARNAME "sqlite"
+| #define PACKAGE_VERSION "3.22.0"
+| #define PACKAGE_STRING "sqlite 3.22.0"
+| #define PACKAGE_BUGREPORT "http://www.sqlite.org"
+| #define PACKAGE_URL ""
+| #define PACKAGE "sqlite"
+| #define VERSION "3.22.0"
+| #define _FILE_OFFSET_BITS 64
+| /* end confdefs.h.  */
+| #include <ac_nonexistent.h>
+configure:8494: checking for ANSI C header files
+configure:8514: i686-w64-mingw32.static-gcc -c -Os -DSQLITE_ENABLE_COLUMN_METADATA  conftest.c >&5
+configure:8514: $? = 0
+configure:8598: result: yes
+configure:8611: checking for sys/types.h
+configure:8611: i686-w64-mingw32.static-gcc -c -Os -DSQLITE_ENABLE_COLUMN_METADATA  conftest.c >&5
+configure:8611: $? = 0
+configure:8611: result: yes
+configure:8611: checking for sys/stat.h
+configure:8611: i686-w64-mingw32.static-gcc -c -Os -DSQLITE_ENABLE_COLUMN_METADATA  conftest.c >&5
+configure:8611: $? = 0
+configure:8611: result: yes
+configure:8611: checking for stdlib.h
+configure:8611: i686-w64-mingw32.static-gcc -c -Os -DSQLITE_ENABLE_COLUMN_METADATA  conftest.c >&5
+configure:8611: $? = 0
+configure:8611: result: yes
+configure:8611: checking for string.h
+configure:8611: i686-w64-mingw32.static-gcc -c -Os -DSQLITE_ENABLE_COLUMN_METADATA  conftest.c >&5
+configure:8611: $? = 0
+configure:8611: result: yes
+configure:8611: checking for memory.h
+configure:8611: i686-w64-mingw32.static-gcc -c -Os -DSQLITE_ENABLE_COLUMN_METADATA  conftest.c >&5
+configure:8611: $? = 0
+configure:8611: result: yes
+configure:8611: checking for strings.h
+configure:8611: i686-w64-mingw32.static-gcc -c -Os -DSQLITE_ENABLE_COLUMN_METADATA  conftest.c >&5
+configure:8611: $? = 0
+configure:8611: result: yes
+configure:8611: checking for inttypes.h
+configure:8611: i686-w64-mingw32.static-gcc -c -Os -DSQLITE_ENABLE_COLUMN_METADATA  conftest.c >&5
+configure:8611: $? = 0
+configure:8611: result: yes
+configure:8611: checking for stdint.h
+configure:8611: i686-w64-mingw32.static-gcc -c -Os -DSQLITE_ENABLE_COLUMN_METADATA  conftest.c >&5
+configure:8611: $? = 0
+configure:8611: result: yes
+configure:8611: checking for unistd.h
+configure:8611: i686-w64-mingw32.static-gcc -c -Os -DSQLITE_ENABLE_COLUMN_METADATA  conftest.c >&5
+configure:8611: $? = 0
+configure:8611: result: yes
+configure:8625: checking for dlfcn.h
+configure:8625: i686-w64-mingw32.static-gcc -c -Os -DSQLITE_ENABLE_COLUMN_METADATA  conftest.c >&5
+conftest.c:56:19: fatal error: dlfcn.h: No such file or directory
+compilation terminated.
+configure:8625: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "sqlite"
+| #define PACKAGE_TARNAME "sqlite"
+| #define PACKAGE_VERSION "3.22.0"
+| #define PACKAGE_STRING "sqlite 3.22.0"
+| #define PACKAGE_BUGREPORT "http://www.sqlite.org"
+| #define PACKAGE_URL ""
+| #define PACKAGE "sqlite"
+| #define VERSION "3.22.0"
+| #define _FILE_OFFSET_BITS 64
+| #define STDC_HEADERS 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_MEMORY_H 1
+| #define HAVE_STRINGS_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_UNISTD_H 1
+| /* end confdefs.h.  */
+| #include <stdio.h>
+| #ifdef HAVE_SYS_TYPES_H
+| # include <sys/types.h>
+| #endif
+| #ifdef HAVE_SYS_STAT_H
+| # include <sys/stat.h>
+| #endif
+| #ifdef STDC_HEADERS
+| # include <stdlib.h>
+| # include <stddef.h>
+| #else
+| # ifdef HAVE_STDLIB_H
+| #  include <stdlib.h>
+| # endif
+| #endif
+| #ifdef HAVE_STRING_H
+| # if !defined STDC_HEADERS && defined HAVE_MEMORY_H
+| #  include <memory.h>
+| # endif
+| # include <string.h>
+| #endif
+| #ifdef HAVE_STRINGS_H
+| # include <strings.h>
+| #endif
+| #ifdef HAVE_INTTYPES_H
+| # include <inttypes.h>
+| #endif
+| #ifdef HAVE_STDINT_H
+| # include <stdint.h>
+| #endif
+| #ifdef HAVE_UNISTD_H
+| # include <unistd.h>
+| #endif
+| 
+| #include <dlfcn.h>
+configure:8625: result: no
+configure:8881: checking for objdir
+configure:8896: result: .libs
+configure:9156: checking if i686-w64-mingw32.static-gcc supports -fno-rtti -fno-exceptions
+configure:9174: i686-w64-mingw32.static-gcc -c -Os -DSQLITE_ENABLE_COLUMN_METADATA  -fno-rtti -fno-exceptions conftest.c >&5
+cc1: warning: command line option '-fno-rtti' is valid for C++/ObjC++ but not for C
+configure:9178: $? = 0
+configure:9191: result: no
+configure:9549: checking for i686-w64-mingw32.static-gcc option to produce PIC
+configure:9556: result: -DDLL_EXPORT -DPIC
+configure:9564: checking if i686-w64-mingw32.static-gcc PIC flag -DDLL_EXPORT -DPIC works
+configure:9582: i686-w64-mingw32.static-gcc -c -Os -DSQLITE_ENABLE_COLUMN_METADATA  -DDLL_EXPORT -DPIC -DPIC conftest.c >&5
+configure:9586: $? = 0
+configure:9599: result: yes
+configure:9628: checking if i686-w64-mingw32.static-gcc static flag -static works
+configure:9656: result: yes
+configure:9671: checking if i686-w64-mingw32.static-gcc supports -c -o file.o
+configure:9692: i686-w64-mingw32.static-gcc -c -Os -DSQLITE_ENABLE_COLUMN_METADATA  -o out/conftest2.o conftest.c >&5
+configure:9696: $? = 0
+configure:9718: result: yes
+configure:9726: checking if i686-w64-mingw32.static-gcc supports -c -o file.o
+configure:9773: result: yes
+configure:9806: checking whether the i686-w64-mingw32.static-gcc linker (/home/user/mxe/usr/bin/i686-w64-mingw32.static-ld) supports shared libraries
+configure:11065: result: yes
+configure:11305: checking dynamic linker characteristics
+configure:12123: result: Win32 ld.exe
+configure:12245: checking how to hardcode library paths into programs
+configure:12270: result: immediate
+configure:12818: checking whether stripping libraries is possible
+configure:12823: result: yes
+configure:12858: checking if libtool supports shared libraries
+configure:12860: result: yes
+configure:12863: checking whether to build shared libraries
+configure:12888: result: no
+configure:12891: checking whether to build static libraries
+configure:12895: result: yes
+configure:12938: checking for fdatasync
+configure:12938: i686-w64-mingw32.static-gcc -o conftest.exe -Os -DSQLITE_ENABLE_COLUMN_METADATA   conftest.c  >&5
+/tmp/ccRRopxv.o:conftest.c:(.text.startup+0xc): undefined reference to `fdatasync'
+collect2: error: ld returned 1 exit status
+configure:12938: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "sqlite"
+| #define PACKAGE_TARNAME "sqlite"
+| #define PACKAGE_VERSION "3.22.0"
+| #define PACKAGE_STRING "sqlite 3.22.0"
+| #define PACKAGE_BUGREPORT "http://www.sqlite.org"
+| #define PACKAGE_URL ""
+| #define PACKAGE "sqlite"
+| #define VERSION "3.22.0"
+| #define _FILE_OFFSET_BITS 64
+| #define STDC_HEADERS 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_MEMORY_H 1
+| #define HAVE_STRINGS_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_UNISTD_H 1
+| #define LT_OBJDIR ".libs/"
+| /* end confdefs.h.  */
+| /* Define fdatasync to an innocuous variant, in case <limits.h> declares fdatasync.
+|    For example, HP-UX 11i <limits.h> declares gettimeofday.  */
+| #define fdatasync innocuous_fdatasync
+| 
+| /* System header to define __stub macros and hopefully few prototypes,
+|     which can conflict with char fdatasync (); below.
+|     Prefer <limits.h> to <assert.h> if __STDC__ is defined, since
+|     <limits.h> exists even on freestanding compilers.  */
+| 
+| #ifdef __STDC__
+| # include <limits.h>
+| #else
+| # include <assert.h>
+| #endif
+| 
+| #undef fdatasync
+| 
+| /* Override any GCC internal prototype to avoid an error.
+|    Use char because int might match the return type of a GCC
+|    builtin and then its argument prototype would still apply.  */
+| #ifdef __cplusplus
+| extern "C"
+| #endif
+| char fdatasync ();
+| /* The GNU C library defines this for functions which it implements
+|     to always fail with ENOSYS.  Some functions are actually named
+|     something starting with __ and the normal name is an alias.  */
+| #if defined __stub_fdatasync || defined __stub___fdatasync
+| choke me
+| #endif
+| 
+| int
+| main ()
+| {
+| return fdatasync ();
+|   ;
+|   return 0;
+| }
+configure:12938: result: no
+configure:12938: checking for usleep
+configure:12938: i686-w64-mingw32.static-gcc -o conftest.exe -Os -DSQLITE_ENABLE_COLUMN_METADATA   conftest.c  >&5
+configure:12938: $? = 0
+configure:12938: result: yes
+configure:12938: checking for fullfsync
+configure:12938: i686-w64-mingw32.static-gcc -o conftest.exe -Os -DSQLITE_ENABLE_COLUMN_METADATA   conftest.c  >&5
+/tmp/ccCAv9f6.o:conftest.c:(.text.startup+0xc): undefined reference to `fullfsync'
+collect2: error: ld returned 1 exit status
+configure:12938: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "sqlite"
+| #define PACKAGE_TARNAME "sqlite"
+| #define PACKAGE_VERSION "3.22.0"
+| #define PACKAGE_STRING "sqlite 3.22.0"
+| #define PACKAGE_BUGREPORT "http://www.sqlite.org"
+| #define PACKAGE_URL ""
+| #define PACKAGE "sqlite"
+| #define VERSION "3.22.0"
+| #define _FILE_OFFSET_BITS 64
+| #define STDC_HEADERS 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_MEMORY_H 1
+| #define HAVE_STRINGS_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_UNISTD_H 1
+| #define LT_OBJDIR ".libs/"
+| #define HAVE_USLEEP 1
+| /* end confdefs.h.  */
+| /* Define fullfsync to an innocuous variant, in case <limits.h> declares fullfsync.
+|    For example, HP-UX 11i <limits.h> declares gettimeofday.  */
+| #define fullfsync innocuous_fullfsync
+| 
+| /* System header to define __stub macros and hopefully few prototypes,
+|     which can conflict with char fullfsync (); below.
+|     Prefer <limits.h> to <assert.h> if __STDC__ is defined, since
+|     <limits.h> exists even on freestanding compilers.  */
+| 
+| #ifdef __STDC__
+| # include <limits.h>
+| #else
+| # include <assert.h>
+| #endif
+| 
+| #undef fullfsync
+| 
+| /* Override any GCC internal prototype to avoid an error.
+|    Use char because int might match the return type of a GCC
+|    builtin and then its argument prototype would still apply.  */
+| #ifdef __cplusplus
+| extern "C"
+| #endif
+| char fullfsync ();
+| /* The GNU C library defines this for functions which it implements
+|     to always fail with ENOSYS.  Some functions are actually named
+|     something starting with __ and the normal name is an alias.  */
+| #if defined __stub_fullfsync || defined __stub___fullfsync
+| choke me
+| #endif
+| 
+| int
+| main ()
+| {
+| return fullfsync ();
+|   ;
+|   return 0;
+| }
+configure:12938: result: no
+configure:12938: checking for localtime_r
+configure:12938: i686-w64-mingw32.static-gcc -o conftest.exe -Os -DSQLITE_ENABLE_COLUMN_METADATA   conftest.c  >&5
+/tmp/ccxn41zf.o:conftest.c:(.text.startup+0xc): undefined reference to `localtime_r'
+collect2: error: ld returned 1 exit status
+configure:12938: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "sqlite"
+| #define PACKAGE_TARNAME "sqlite"
+| #define PACKAGE_VERSION "3.22.0"
+| #define PACKAGE_STRING "sqlite 3.22.0"
+| #define PACKAGE_BUGREPORT "http://www.sqlite.org"
+| #define PACKAGE_URL ""
+| #define PACKAGE "sqlite"
+| #define VERSION "3.22.0"
+| #define _FILE_OFFSET_BITS 64
+| #define STDC_HEADERS 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_MEMORY_H 1
+| #define HAVE_STRINGS_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_UNISTD_H 1
+| #define LT_OBJDIR ".libs/"
+| #define HAVE_USLEEP 1
+| /* end confdefs.h.  */
+| /* Define localtime_r to an innocuous variant, in case <limits.h> declares localtime_r.
+|    For example, HP-UX 11i <limits.h> declares gettimeofday.  */
+| #define localtime_r innocuous_localtime_r
+| 
+| /* System header to define __stub macros and hopefully few prototypes,
+|     which can conflict with char localtime_r (); below.
+|     Prefer <limits.h> to <assert.h> if __STDC__ is defined, since
+|     <limits.h> exists even on freestanding compilers.  */
+| 
+| #ifdef __STDC__
+| # include <limits.h>
+| #else
+| # include <assert.h>
+| #endif
+| 
+| #undef localtime_r
+| 
+| /* Override any GCC internal prototype to avoid an error.
+|    Use char because int might match the return type of a GCC
+|    builtin and then its argument prototype would still apply.  */
+| #ifdef __cplusplus
+| extern "C"
+| #endif
+| char localtime_r ();
+| /* The GNU C library defines this for functions which it implements
+|     to always fail with ENOSYS.  Some functions are actually named
+|     something starting with __ and the normal name is an alias.  */
+| #if defined __stub_localtime_r || defined __stub___localtime_r
+| choke me
+| #endif
+| 
+| int
+| main ()
+| {
+| return localtime_r ();
+|   ;
+|   return 0;
+| }
+configure:12938: result: no
+configure:12938: checking for gmtime_r
+configure:12938: i686-w64-mingw32.static-gcc -o conftest.exe -Os -DSQLITE_ENABLE_COLUMN_METADATA   conftest.c  >&5
+/tmp/ccOPVX7A.o:conftest.c:(.text.startup+0xc): undefined reference to `gmtime_r'
+collect2: error: ld returned 1 exit status
+configure:12938: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "sqlite"
+| #define PACKAGE_TARNAME "sqlite"
+| #define PACKAGE_VERSION "3.22.0"
+| #define PACKAGE_STRING "sqlite 3.22.0"
+| #define PACKAGE_BUGREPORT "http://www.sqlite.org"
+| #define PACKAGE_URL ""
+| #define PACKAGE "sqlite"
+| #define VERSION "3.22.0"
+| #define _FILE_OFFSET_BITS 64
+| #define STDC_HEADERS 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_MEMORY_H 1
+| #define HAVE_STRINGS_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_UNISTD_H 1
+| #define LT_OBJDIR ".libs/"
+| #define HAVE_USLEEP 1
+| /* end confdefs.h.  */
+| /* Define gmtime_r to an innocuous variant, in case <limits.h> declares gmtime_r.
+|    For example, HP-UX 11i <limits.h> declares gettimeofday.  */
+| #define gmtime_r innocuous_gmtime_r
+| 
+| /* System header to define __stub macros and hopefully few prototypes,
+|     which can conflict with char gmtime_r (); below.
+|     Prefer <limits.h> to <assert.h> if __STDC__ is defined, since
+|     <limits.h> exists even on freestanding compilers.  */
+| 
+| #ifdef __STDC__
+| # include <limits.h>
+| #else
+| # include <assert.h>
+| #endif
+| 
+| #undef gmtime_r
+| 
+| /* Override any GCC internal prototype to avoid an error.
+|    Use char because int might match the return type of a GCC
+|    builtin and then its argument prototype would still apply.  */
+| #ifdef __cplusplus
+| extern "C"
+| #endif
+| char gmtime_r ();
+| /* The GNU C library defines this for functions which it implements
+|     to always fail with ENOSYS.  Some functions are actually named
+|     something starting with __ and the normal name is an alias.  */
+| #if defined __stub_gmtime_r || defined __stub___gmtime_r
+| choke me
+| #endif
+| 
+| int
+| main ()
+| {
+| return gmtime_r ();
+|   ;
+|   return 0;
+| }
+configure:12938: result: no
+configure:12947: checking whether strerror_r is declared
+configure:12947: i686-w64-mingw32.static-gcc -c -Os -DSQLITE_ENABLE_COLUMN_METADATA  conftest.c >&5
+conftest.c: In function 'main':
+conftest.c:64:10: error: 'strerror_r' undeclared (first use in this function)
+   (void) strerror_r;
+          ^
+conftest.c:64:10: note: each undeclared identifier is reported only once for each function it appears in
+configure:12947: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "sqlite"
+| #define PACKAGE_TARNAME "sqlite"
+| #define PACKAGE_VERSION "3.22.0"
+| #define PACKAGE_STRING "sqlite 3.22.0"
+| #define PACKAGE_BUGREPORT "http://www.sqlite.org"
+| #define PACKAGE_URL ""
+| #define PACKAGE "sqlite"
+| #define VERSION "3.22.0"
+| #define _FILE_OFFSET_BITS 64
+| #define STDC_HEADERS 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_MEMORY_H 1
+| #define HAVE_STRINGS_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_UNISTD_H 1
+| #define LT_OBJDIR ".libs/"
+| #define HAVE_USLEEP 1
+| /* end confdefs.h.  */
+| #include <stdio.h>
+| #ifdef HAVE_SYS_TYPES_H
+| # include <sys/types.h>
+| #endif
+| #ifdef HAVE_SYS_STAT_H
+| # include <sys/stat.h>
+| #endif
+| #ifdef STDC_HEADERS
+| # include <stdlib.h>
+| # include <stddef.h>
+| #else
+| # ifdef HAVE_STDLIB_H
+| #  include <stdlib.h>
+| # endif
+| #endif
+| #ifdef HAVE_STRING_H
+| # if !defined STDC_HEADERS && defined HAVE_MEMORY_H
+| #  include <memory.h>
+| # endif
+| # include <string.h>
+| #endif
+| #ifdef HAVE_STRINGS_H
+| # include <strings.h>
+| #endif
+| #ifdef HAVE_INTTYPES_H
+| # include <inttypes.h>
+| #endif
+| #ifdef HAVE_STDINT_H
+| # include <stdint.h>
+| #endif
+| #ifdef HAVE_UNISTD_H
+| # include <unistd.h>
+| #endif
+| int
+| main ()
+| {
+| #ifndef strerror_r
+| #ifdef __cplusplus
+|   (void) strerror_r;
+| #else
+|   (void) strerror_r;
+| #endif
+| #endif
+| 
+|   ;
+|   return 0;
+| }
+configure:12947: result: no
+configure:12960: checking for strerror_r
+configure:12960: i686-w64-mingw32.static-gcc -o conftest.exe -Os -DSQLITE_ENABLE_COLUMN_METADATA   conftest.c  >&5
+/tmp/ccVXnvDH.o:conftest.c:(.text.startup+0xc): undefined reference to `strerror_r'
+collect2: error: ld returned 1 exit status
+configure:12960: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "sqlite"
+| #define PACKAGE_TARNAME "sqlite"
+| #define PACKAGE_VERSION "3.22.0"
+| #define PACKAGE_STRING "sqlite 3.22.0"
+| #define PACKAGE_BUGREPORT "http://www.sqlite.org"
+| #define PACKAGE_URL ""
+| #define PACKAGE "sqlite"
+| #define VERSION "3.22.0"
+| #define _FILE_OFFSET_BITS 64
+| #define STDC_HEADERS 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_MEMORY_H 1
+| #define HAVE_STRINGS_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_UNISTD_H 1
+| #define LT_OBJDIR ".libs/"
+| #define HAVE_USLEEP 1
+| #define HAVE_DECL_STRERROR_R 0
+| /* end confdefs.h.  */
+| /* Define strerror_r to an innocuous variant, in case <limits.h> declares strerror_r.
+|    For example, HP-UX 11i <limits.h> declares gettimeofday.  */
+| #define strerror_r innocuous_strerror_r
+| 
+| /* System header to define __stub macros and hopefully few prototypes,
+|     which can conflict with char strerror_r (); below.
+|     Prefer <limits.h> to <assert.h> if __STDC__ is defined, since
+|     <limits.h> exists even on freestanding compilers.  */
+| 
+| #ifdef __STDC__
+| # include <limits.h>
+| #else
+| # include <assert.h>
+| #endif
+| 
+| #undef strerror_r
+| 
+| /* Override any GCC internal prototype to avoid an error.
+|    Use char because int might match the return type of a GCC
+|    builtin and then its argument prototype would still apply.  */
+| #ifdef __cplusplus
+| extern "C"
+| #endif
+| char strerror_r ();
+| /* The GNU C library defines this for functions which it implements
+|     to always fail with ENOSYS.  Some functions are actually named
+|     something starting with __ and the normal name is an alias.  */
+| #if defined __stub_strerror_r || defined __stub___strerror_r
+| choke me
+| #endif
+| 
+| int
+| main ()
+| {
+| return strerror_r ();
+|   ;
+|   return 0;
+| }
+configure:12960: result: no
+configure:12969: checking whether strerror_r returns char *
+configure:13031: result: no
+configure:13075: checking editline/readline.h usability
+configure:13075: i686-w64-mingw32.static-gcc -c -Os -DSQLITE_ENABLE_COLUMN_METADATA  conftest.c >&5
+conftest.c:58:31: fatal error: editline/readline.h: No such file or directory
+compilation terminated.
+configure:13075: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "sqlite"
+| #define PACKAGE_TARNAME "sqlite"
+| #define PACKAGE_VERSION "3.22.0"
+| #define PACKAGE_STRING "sqlite 3.22.0"
+| #define PACKAGE_BUGREPORT "http://www.sqlite.org"
+| #define PACKAGE_URL ""
+| #define PACKAGE "sqlite"
+| #define VERSION "3.22.0"
+| #define _FILE_OFFSET_BITS 64
+| #define STDC_HEADERS 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_MEMORY_H 1
+| #define HAVE_STRINGS_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_UNISTD_H 1
+| #define LT_OBJDIR ".libs/"
+| #define HAVE_USLEEP 1
+| #define HAVE_DECL_STRERROR_R 0
+| /* end confdefs.h.  */
+| #include <stdio.h>
+| #ifdef HAVE_SYS_TYPES_H
+| # include <sys/types.h>
+| #endif
+| #ifdef HAVE_SYS_STAT_H
+| # include <sys/stat.h>
+| #endif
+| #ifdef STDC_HEADERS
+| # include <stdlib.h>
+| # include <stddef.h>
+| #else
+| # ifdef HAVE_STDLIB_H
+| #  include <stdlib.h>
+| # endif
+| #endif
+| #ifdef HAVE_STRING_H
+| # if !defined STDC_HEADERS && defined HAVE_MEMORY_H
+| #  include <memory.h>
+| # endif
+| # include <string.h>
+| #endif
+| #ifdef HAVE_STRINGS_H
+| # include <strings.h>
+| #endif
+| #ifdef HAVE_INTTYPES_H
+| # include <inttypes.h>
+| #endif
+| #ifdef HAVE_STDINT_H
+| # include <stdint.h>
+| #endif
+| #ifdef HAVE_UNISTD_H
+| # include <unistd.h>
+| #endif
+| #include <editline/readline.h>
+configure:13075: result: no
+configure:13075: checking editline/readline.h presence
+configure:13075: i686-w64-mingw32.static-gcc -E  conftest.c
+conftest.c:25:31: fatal error: editline/readline.h: No such file or directory
+compilation terminated.
+configure:13075: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "sqlite"
+| #define PACKAGE_TARNAME "sqlite"
+| #define PACKAGE_VERSION "3.22.0"
+| #define PACKAGE_STRING "sqlite 3.22.0"
+| #define PACKAGE_BUGREPORT "http://www.sqlite.org"
+| #define PACKAGE_URL ""
+| #define PACKAGE "sqlite"
+| #define VERSION "3.22.0"
+| #define _FILE_OFFSET_BITS 64
+| #define STDC_HEADERS 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_MEMORY_H 1
+| #define HAVE_STRINGS_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_UNISTD_H 1
+| #define LT_OBJDIR ".libs/"
+| #define HAVE_USLEEP 1
+| #define HAVE_DECL_STRERROR_R 0
+| /* end confdefs.h.  */
+| #include <editline/readline.h>
+configure:13075: result: no
+configure:13075: checking for editline/readline.h
+configure:13075: result: no
+configure:13309: checking for library containing pthread_create
+configure:13340: i686-w64-mingw32.static-gcc -o conftest.exe -Os -DSQLITE_ENABLE_COLUMN_METADATA   conftest.c  >&5
+/tmp/ccjdzdw1.o:conftest.c:(.text.startup+0xc): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+configure:13340: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "sqlite"
+| #define PACKAGE_TARNAME "sqlite"
+| #define PACKAGE_VERSION "3.22.0"
+| #define PACKAGE_STRING "sqlite 3.22.0"
+| #define PACKAGE_BUGREPORT "http://www.sqlite.org"
+| #define PACKAGE_URL ""
+| #define PACKAGE "sqlite"
+| #define VERSION "3.22.0"
+| #define _FILE_OFFSET_BITS 64
+| #define STDC_HEADERS 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_MEMORY_H 1
+| #define HAVE_STRINGS_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_UNISTD_H 1
+| #define LT_OBJDIR ".libs/"
+| #define HAVE_USLEEP 1
+| #define HAVE_DECL_STRERROR_R 0
+| /* end confdefs.h.  */
+| 
+| /* Override any GCC internal prototype to avoid an error.
+|    Use char because int might match the return type of a GCC
+|    builtin and then its argument prototype would still apply.  */
+| #ifdef __cplusplus
+| extern "C"
+| #endif
+| char pthread_create ();
+| int
+| main ()
+| {
+| return pthread_create ();
+|   ;
+|   return 0;
+| }
+configure:13340: i686-w64-mingw32.static-gcc -o conftest.exe -Os -DSQLITE_ENABLE_COLUMN_METADATA   conftest.c -lpthread   >&5
+configure:13340: $? = 0
+configure:13357: result: -lpthread
+configure:13365: checking for library containing pthread_mutexattr_init
+configure:13396: i686-w64-mingw32.static-gcc -o conftest.exe -Os -DSQLITE_ENABLE_COLUMN_METADATA   conftest.c -lpthread  >&5
+configure:13396: $? = 0
+configure:13413: result: none required
+configure:13436: checking for library containing dlopen
+configure:13467: i686-w64-mingw32.static-gcc -o conftest.exe -Os -DSQLITE_ENABLE_COLUMN_METADATA   conftest.c -lpthread  >&5
+/tmp/cckLGRhh.o:conftest.c:(.text.startup+0xc): undefined reference to `dlopen'
+collect2: error: ld returned 1 exit status
+configure:13467: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "sqlite"
+| #define PACKAGE_TARNAME "sqlite"
+| #define PACKAGE_VERSION "3.22.0"
+| #define PACKAGE_STRING "sqlite 3.22.0"
+| #define PACKAGE_BUGREPORT "http://www.sqlite.org"
+| #define PACKAGE_URL ""
+| #define PACKAGE "sqlite"
+| #define VERSION "3.22.0"
+| #define _FILE_OFFSET_BITS 64
+| #define STDC_HEADERS 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_MEMORY_H 1
+| #define HAVE_STRINGS_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_UNISTD_H 1
+| #define LT_OBJDIR ".libs/"
+| #define HAVE_USLEEP 1
+| #define HAVE_DECL_STRERROR_R 0
+| /* end confdefs.h.  */
+| 
+| /* Override any GCC internal prototype to avoid an error.
+|    Use char because int might match the return type of a GCC
+|    builtin and then its argument prototype would still apply.  */
+| #ifdef __cplusplus
+| extern "C"
+| #endif
+| char dlopen ();
+| int
+| main ()
+| {
+| return dlopen ();
+|   ;
+|   return 0;
+| }
+configure:13467: i686-w64-mingw32.static-gcc -o conftest.exe -Os -DSQLITE_ENABLE_COLUMN_METADATA   conftest.c -ldl  -lpthread  >&5
+/home/user/mxe/usr/bin/i686-w64-mingw32.static-ld: cannot find -ldl
+collect2: error: ld returned 1 exit status
+configure:13467: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "sqlite"
+| #define PACKAGE_TARNAME "sqlite"
+| #define PACKAGE_VERSION "3.22.0"
+| #define PACKAGE_STRING "sqlite 3.22.0"
+| #define PACKAGE_BUGREPORT "http://www.sqlite.org"
+| #define PACKAGE_URL ""
+| #define PACKAGE "sqlite"
+| #define VERSION "3.22.0"
+| #define _FILE_OFFSET_BITS 64
+| #define STDC_HEADERS 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_MEMORY_H 1
+| #define HAVE_STRINGS_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_UNISTD_H 1
+| #define LT_OBJDIR ".libs/"
+| #define HAVE_USLEEP 1
+| #define HAVE_DECL_STRERROR_R 0
+| /* end confdefs.h.  */
+| 
+| /* Override any GCC internal prototype to avoid an error.
+|    Use char because int might match the return type of a GCC
+|    builtin and then its argument prototype would still apply.  */
+| #ifdef __cplusplus
+| extern "C"
+| #endif
+| char dlopen ();
+| int
+| main ()
+| {
+| return dlopen ();
+|   ;
+|   return 0;
+| }
+configure:13484: result: no
+configure:13495: checking for whether to support dynamic extensions
+configure:13497: result: yes
+configure:13626: checking for posix_fallocate
+configure:13626: i686-w64-mingw32.static-gcc -o conftest.exe -Os -DSQLITE_ENABLE_COLUMN_METADATA   conftest.c -lpthread  >&5
+/tmp/ccQhBL1q.o:conftest.c:(.text.startup+0xc): undefined reference to `posix_fallocate'
+collect2: error: ld returned 1 exit status
+configure:13626: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "sqlite"
+| #define PACKAGE_TARNAME "sqlite"
+| #define PACKAGE_VERSION "3.22.0"
+| #define PACKAGE_STRING "sqlite 3.22.0"
+| #define PACKAGE_BUGREPORT "http://www.sqlite.org"
+| #define PACKAGE_URL ""
+| #define PACKAGE "sqlite"
+| #define VERSION "3.22.0"
+| #define _FILE_OFFSET_BITS 64
+| #define STDC_HEADERS 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_MEMORY_H 1
+| #define HAVE_STRINGS_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_UNISTD_H 1
+| #define LT_OBJDIR ".libs/"
+| #define HAVE_USLEEP 1
+| #define HAVE_DECL_STRERROR_R 0
+| /* end confdefs.h.  */
+| /* Define posix_fallocate to an innocuous variant, in case <limits.h> declares posix_fallocate.
+|    For example, HP-UX 11i <limits.h> declares gettimeofday.  */
+| #define posix_fallocate innocuous_posix_fallocate
+| 
+| /* System header to define __stub macros and hopefully few prototypes,
+|     which can conflict with char posix_fallocate (); below.
+|     Prefer <limits.h> to <assert.h> if __STDC__ is defined, since
+|     <limits.h> exists even on freestanding compilers.  */
+| 
+| #ifdef __STDC__
+| # include <limits.h>
+| #else
+| # include <assert.h>
+| #endif
+| 
+| #undef posix_fallocate
+| 
+| /* Override any GCC internal prototype to avoid an error.
+|    Use char because int might match the return type of a GCC
+|    builtin and then its argument prototype would still apply.  */
+| #ifdef __cplusplus
+| extern "C"
+| #endif
+| char posix_fallocate ();
+| /* The GNU C library defines this for functions which it implements
+|     to always fail with ENOSYS.  Some functions are actually named
+|     something starting with __ and the normal name is an alias.  */
+| #if defined __stub_posix_fallocate || defined __stub___posix_fallocate
+| choke me
+| #endif
+| 
+| int
+| main ()
+| {
+| return posix_fallocate ();
+|   ;
+|   return 0;
+| }
+configure:13626: result: no
+configure:13637: checking zlib.h usability
+configure:13637: i686-w64-mingw32.static-gcc -c -Os -DSQLITE_ENABLE_COLUMN_METADATA  conftest.c >&5
+configure:13637: $? = 0
+configure:13637: result: yes
+configure:13637: checking zlib.h presence
+configure:13637: i686-w64-mingw32.static-gcc -E  conftest.c
+configure:13637: $? = 0
+configure:13637: result: yes
+configure:13637: checking for zlib.h
+configure:13637: result: yes
+configure:13643: checking for library containing deflate
+configure:13674: i686-w64-mingw32.static-gcc -o conftest.exe -Os -DSQLITE_ENABLE_COLUMN_METADATA   conftest.c -lpthread  >&5
+/tmp/ccjzpwZL.o:conftest.c:(.text.startup+0xc): undefined reference to `deflate'
+collect2: error: ld returned 1 exit status
+configure:13674: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "sqlite"
+| #define PACKAGE_TARNAME "sqlite"
+| #define PACKAGE_VERSION "3.22.0"
+| #define PACKAGE_STRING "sqlite 3.22.0"
+| #define PACKAGE_BUGREPORT "http://www.sqlite.org"
+| #define PACKAGE_URL ""
+| #define PACKAGE "sqlite"
+| #define VERSION "3.22.0"
+| #define _FILE_OFFSET_BITS 64
+| #define STDC_HEADERS 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_MEMORY_H 1
+| #define HAVE_STRINGS_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_UNISTD_H 1
+| #define LT_OBJDIR ".libs/"
+| #define HAVE_USLEEP 1
+| #define HAVE_DECL_STRERROR_R 0
+| #define HAVE_ZLIB_H 1
+| /* end confdefs.h.  */
+| 
+| /* Override any GCC internal prototype to avoid an error.
+|    Use char because int might match the return type of a GCC
+|    builtin and then its argument prototype would still apply.  */
+| #ifdef __cplusplus
+| extern "C"
+| #endif
+| char deflate ();
+| int
+| main ()
+| {
+| return deflate ();
+|   ;
+|   return 0;
+| }
+configure:13674: i686-w64-mingw32.static-gcc -o conftest.exe -Os -DSQLITE_ENABLE_COLUMN_METADATA   conftest.c -lz  -lpthread  >&5
+configure:13674: $? = 0
+configure:13691: result: -lz
+configure:13876: checking that generated files are newer than configure
+configure:13882: result: done
+configure:13909: creating ./config.status
+
+## ---------------------- ##
+## Running config.status. ##
+## ---------------------- ##
+
+This file was extended by sqlite config.status 3.22.0, which was
+generated by GNU Autoconf 2.69.  Invocation command line was
+
+  CONFIG_FILES    = 
+  CONFIG_HEADERS  = 
+  CONFIG_LINKS    = 
+  CONFIG_COMMANDS = 
+  $ ./config.status 
+
+on user-VirtualBox
+
+config.status:1029: creating Makefile
+config.status:1029: creating sqlite3.pc
+config.status:1201: executing depfiles commands
+config.status:1201: executing libtool commands
+configure:15862: WARNING: unrecognized options: --enable-doc, --enable-gtk-doc, --enable-gtk-doc-html, --enable-gtk-doc-pdf, --with-html-dir, --disable-doxygen
+
+## ---------------- ##
+## Cache variables. ##
+## ---------------- ##
+
+ac_cv_build=i686-pc-linux-gnu
+ac_cv_c_compiler_gnu=yes
+ac_cv_env_CC_set=
+ac_cv_env_CC_value=
+ac_cv_env_CFLAGS_set=set
+ac_cv_env_CFLAGS_value='-Os -DSQLITE_ENABLE_COLUMN_METADATA'
+ac_cv_env_CPPFLAGS_set=
+ac_cv_env_CPPFLAGS_value=
+ac_cv_env_CPP_set=
+ac_cv_env_CPP_value=
+ac_cv_env_LDFLAGS_set=
+ac_cv_env_LDFLAGS_value=
+ac_cv_env_LIBS_set=
+ac_cv_env_LIBS_value=
+ac_cv_env_LT_SYS_LIBRARY_PATH_set=
+ac_cv_env_LT_SYS_LIBRARY_PATH_value=
+ac_cv_env_build_alias_set=set
+ac_cv_env_build_alias_value=i686-pc-linux-gnu
+ac_cv_env_host_alias_set=set
+ac_cv_env_host_alias_value=i686-w64-mingw32.static
+ac_cv_env_target_alias_set=
+ac_cv_env_target_alias_value=
+ac_cv_exeext=.exe
+ac_cv_func_fdatasync=no
+ac_cv_func_fullfsync=no
+ac_cv_func_gmtime_r=no
+ac_cv_func_localtime_r=no
+ac_cv_func_posix_fallocate=no
+ac_cv_func_strerror_r=no
+ac_cv_func_strerror_r_char_p=no
+ac_cv_func_usleep=yes
+ac_cv_have_decl_strerror_r=no
+ac_cv_header_dlfcn_h=no
+ac_cv_header_editline_readline_h=no
+ac_cv_header_inttypes_h=yes
+ac_cv_header_memory_h=yes
+ac_cv_header_stdc=yes
+ac_cv_header_stdint_h=yes
+ac_cv_header_stdlib_h=yes
+ac_cv_header_string_h=yes
+ac_cv_header_strings_h=yes
+ac_cv_header_sys_stat_h=yes
+ac_cv_header_sys_types_h=yes
+ac_cv_header_unistd_h=yes
+ac_cv_header_zlib_h=yes
+ac_cv_host=i686-w64-mingw32.static
+ac_cv_objext=o
+ac_cv_path_EGREP='/bin/grep -E'
+ac_cv_path_FGREP='/bin/grep -F'
+ac_cv_path_GREP=/bin/grep
+ac_cv_path_SED=/bin/sed
+ac_cv_path_install='/usr/bin/install -c'
+ac_cv_path_lt_DD=/bin/dd
+ac_cv_path_mkdir=/bin/mkdir
+ac_cv_prog_AR=i686-w64-mingw32.static-ar
+ac_cv_prog_AWK=mawk
+ac_cv_prog_CC=i686-w64-mingw32.static-gcc
+ac_cv_prog_CPP='i686-w64-mingw32.static-gcc -E'
+ac_cv_prog_DLLTOOL=i686-w64-mingw32.static-dlltool
+ac_cv_prog_HAVE_DOXYGEN=false
+ac_cv_prog_OBJDUMP=i686-w64-mingw32.static-objdump
+ac_cv_prog_RANLIB=i686-w64-mingw32.static-ranlib
+ac_cv_prog_STRIP=i686-w64-mingw32.static-strip
+ac_cv_prog_ac_ct_MANIFEST_TOOL=mt
+ac_cv_prog_cc_c89=
+ac_cv_prog_cc_g=yes
+ac_cv_prog_make_make_set=yes
+ac_cv_search_deflate=-lz
+ac_cv_search_dlopen=no
+ac_cv_search_pthread_create=-lpthread
+ac_cv_search_pthread_mutexattr_init='none required'
+ac_cv_sys_file_offset_bits=64
+ac_cv_sys_largefile_CC=no
+am_cv_CC_dependencies_compiler_type=gcc3
+am_cv_make_support_nested_variables=yes
+am_cv_prog_cc_c_o=yes
+lt_cv_ar_at_file=@
+lt_cv_deplibs_check_method='file_magic ^x86 archive import|^x86 DLL'
+lt_cv_file_magic_cmd=func_win32_libid
+lt_cv_file_magic_test_file=
+lt_cv_ld_reload_flag=-r
+lt_cv_nm_interface='BSD nm'
+lt_cv_objdir=.libs
+lt_cv_path_LD=/home/user/mxe/usr/bin/i686-w64-mingw32.static-ld
+lt_cv_path_NM='/home/user/mxe/usr/bin/i686-w64-mingw32.static-nm -B'
+lt_cv_path_mainfest_tool=no
+lt_cv_prog_compiler_c_o=yes
+lt_cv_prog_compiler_pic='-DDLL_EXPORT -DPIC'
+lt_cv_prog_compiler_pic_works=yes
+lt_cv_prog_compiler_rtti_exceptions=no
+lt_cv_prog_compiler_static_works=yes
+lt_cv_prog_gnu_ld=yes
+lt_cv_sharedlib_from_linklib_cmd=func_cygming_dll_for_implib
+lt_cv_sys_global_symbol_pipe='sed -n -e '\''s/^.*[	 ]\([ABCDGIRSTW][ABCDGIRSTW]*\)[	 ][	 ]*_\([_A-Za-z][_A-Za-z0-9]*\)$/\1 _\2 \2/p'\'' | sed '\''/ __gnu_lto/d'\'''
+lt_cv_sys_global_symbol_to_c_name_address='sed -n -e '\''s/^: \(.*\) .*$/  {"\1", (void *) 0},/p'\'' -e '\''s/^[ABCDGIRSTW][ABCDGIRSTW]* .* \(.*\)$/  {"\1", (void *) \&\1},/p'\'''
+lt_cv_sys_global_symbol_to_c_name_address_lib_prefix='sed -n -e '\''s/^: \(.*\) .*$/  {"\1", (void *) 0},/p'\'' -e '\''s/^[ABCDGIRSTW][ABCDGIRSTW]* .* \(lib.*\)$/  {"\1", (void *) \&\1},/p'\'' -e '\''s/^[ABCDGIRSTW][ABCDGIRSTW]* .* \(.*\)$/  {"lib\1", (void *) \&\1},/p'\'''
+lt_cv_sys_global_symbol_to_cdecl='sed -n -e '\''s/^T .* \(.*\)$/extern int \1();/p'\'' -e '\''s/^[ABCDGIRSTW][ABCDGIRSTW]* .* \(.*\)$/extern char \1;/p'\'''
+lt_cv_sys_global_symbol_to_import=
+lt_cv_sys_max_cmd_len=1572864
+lt_cv_to_host_file_cmd=func_convert_file_nix_to_w32
+lt_cv_to_tool_file_cmd=func_convert_file_noop
+lt_cv_truncate_bin='/bin/dd bs=4096 count=1'
+
+## ----------------- ##
+## Output variables. ##
+## ----------------- ##
+
+ACLOCAL='${SHELL} /home/user/mxe/tmp-sqlite-i686-w64-mingw32.static/sqlite-autoconf-3220000/missing aclocal-1.15'
+AMDEPBACKSLASH='\'
+AMDEP_FALSE='#'
+AMDEP_TRUE=''
+AMTAR='$${TAR-tar}'
+AM_BACKSLASH='\'
+AM_DEFAULT_V='$(AM_DEFAULT_VERBOSITY)'
+AM_DEFAULT_VERBOSITY='1'
+AM_V='$(V)'
+AR='i686-w64-mingw32.static-ar'
+AUTOCONF='${SHELL} /home/user/mxe/tmp-sqlite-i686-w64-mingw32.static/sqlite-autoconf-3220000/missing autoconf'
+AUTOHEADER='${SHELL} /home/user/mxe/tmp-sqlite-i686-w64-mingw32.static/sqlite-autoconf-3220000/missing autoheader'
+AUTOMAKE='${SHELL} /home/user/mxe/tmp-sqlite-i686-w64-mingw32.static/sqlite-autoconf-3220000/missing automake-1.15'
+AWK='mawk'
+BUILD_CFLAGS=''
+CC='i686-w64-mingw32.static-gcc'
+CCDEPMODE='depmode=gcc3'
+CFLAGS='-Os -DSQLITE_ENABLE_COLUMN_METADATA'
+CPP='i686-w64-mingw32.static-gcc -E'
+CPPFLAGS=''
+CYGPATH_W='echo'
+DEFS='-DPACKAGE_NAME=\"sqlite\" -DPACKAGE_TARNAME=\"sqlite\" -DPACKAGE_VERSION=\"3.22.0\" -DPACKAGE_STRING=\"sqlite\ 3.22.0\" -DPACKAGE_BUGREPORT=\"http://www.sqlite.org\" -DPACKAGE_URL=\"\" -DPACKAGE=\"sqlite\" -DVERSION=\"3.22.0\" -D_FILE_OFFSET_BITS=64 -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DLT_OBJDIR=\".libs/\" -DHAVE_USLEEP=1 -DHAVE_DECL_STRERROR_R=0 -DHAVE_ZLIB_H=1'
+DEPDIR='.deps'
+DLLTOOL='i686-w64-mingw32.static-dlltool'
+DSYMUTIL=''
+DUMPBIN=''
+DYNAMIC_EXTENSION_FLAGS=''
+ECHO_C=''
+ECHO_N='-n'
+ECHO_T=''
+EGREP='/bin/grep -E'
+EXEEXT='.exe'
+EXTRA_SHELL_OBJ='sqlite3-sqlite3.o'
+FGREP='/bin/grep -F'
+FTS5_FLAGS=''
+GREP='/bin/grep'
+INSTALL_DATA='${INSTALL} -m 644'
+INSTALL_PROGRAM='${INSTALL}'
+INSTALL_SCRIPT='${INSTALL}'
+INSTALL_STRIP_PROGRAM='$(install_sh) -c -s'
+JSON1_FLAGS=''
+LD='/home/user/mxe/usr/bin/i686-w64-mingw32.static-ld'
+LDFLAGS=''
+LIBOBJS=''
+LIBS='-lz -lpthread '
+LIBTOOL='$(SHELL) $(top_builddir)/libtool'
+LIPO=''
+LN_S='ln -s'
+LTLIBOBJS=''
+LT_SYS_LIBRARY_PATH=''
+MAKEINFO='${SHELL} /home/user/mxe/tmp-sqlite-i686-w64-mingw32.static/sqlite-autoconf-3220000/missing makeinfo'
+MANIFEST_TOOL=':'
+MKDIR_P='/bin/mkdir -p'
+NM='/home/user/mxe/usr/bin/i686-w64-mingw32.static-nm -B'
+NMEDIT=''
+OBJDUMP='i686-w64-mingw32.static-objdump'
+OBJEXT='o'
+OTOOL64=''
+OTOOL=''
+PACKAGE='sqlite'
+PACKAGE_BUGREPORT='http://www.sqlite.org'
+PACKAGE_NAME='sqlite'
+PACKAGE_STRING='sqlite 3.22.0'
+PACKAGE_TARNAME='sqlite'
+PACKAGE_URL=''
+PACKAGE_VERSION='3.22.0'
+PATH_SEPARATOR=':'
+RANLIB='i686-w64-mingw32.static-ranlib'
+READLINE_LIBS=''
+SED='/bin/sed'
+SESSION_FLAGS=''
+SET_MAKE=''
+SHELL='/bin/bash'
+STRIP='i686-w64-mingw32.static-strip'
+THREADSAFE_FLAGS='-D_REENTRANT=1 -DSQLITE_THREADSAFE=1'
+VERSION='3.22.0'
+ZLIB_FLAGS='-DSQLITE_HAVE_ZLIB'
+ac_ct_AR=''
+ac_ct_CC=''
+ac_ct_DUMPBIN=''
+am__EXEEXT_FALSE='#'
+am__EXEEXT_TRUE=''
+am__fastdepCC_FALSE='#'
+am__fastdepCC_TRUE=''
+am__include='include'
+am__isrc=''
+am__leading_dot='.'
+am__nodep='_no'
+am__quote=''
+am__tar='$${TAR-tar} chof - "$$tardir"'
+am__untar='$${TAR-tar} xf -'
+bindir='${exec_prefix}/bin'
+build='i686-pc-linux-gnu'
+build_alias='i686-pc-linux-gnu'
+build_cpu='i686'
+build_os='linux-gnu'
+build_vendor='pc'
+datadir='${datarootdir}'
+datarootdir='${prefix}/share'
+docdir='/home/user/mxe/tmp-sqlite-i686-w64-mingw32.static/sqlite-autoconf-3220000.build_.sink'
+dvidir='${docdir}'
+exec_prefix='${prefix}'
+host='i686-w64-mingw32.static'
+host_alias='i686-w64-mingw32.static'
+host_cpu='i686'
+host_os='mingw32.static'
+host_vendor='w64'
+htmldir='${docdir}'
+includedir='${prefix}/include'
+infodir='/home/user/mxe/tmp-sqlite-i686-w64-mingw32.static/sqlite-autoconf-3220000.build_.sink'
+install_sh='${SHELL} /home/user/mxe/tmp-sqlite-i686-w64-mingw32.static/sqlite-autoconf-3220000/install-sh'
+libdir='${exec_prefix}/lib'
+libexecdir='${exec_prefix}/libexec'
+localedir='${datarootdir}/locale'
+localstatedir='${prefix}/var'
+mandir='/home/user/mxe/tmp-sqlite-i686-w64-mingw32.static/sqlite-autoconf-3220000.build_.sink'
+mkdir_p='$(MKDIR_P)'
+oldincludedir='/usr/include'
+pdfdir='${docdir}'
+prefix='/home/user/mxe/usr/i686-w64-mingw32.static'
+program_transform_name='s,x,x,'
+psdir='${docdir}'
+sbindir='${exec_prefix}/sbin'
+sharedstatedir='${prefix}/com'
+sysconfdir='${prefix}/etc'
+target_alias=''
+
+## ----------- ##
+## confdefs.h. ##
+## ----------- ##
+
+/* confdefs.h */
+#define PACKAGE_NAME "sqlite"
+#define PACKAGE_TARNAME "sqlite"
+#define PACKAGE_VERSION "3.22.0"
+#define PACKAGE_STRING "sqlite 3.22.0"
+#define PACKAGE_BUGREPORT "http://www.sqlite.org"
+#define PACKAGE_URL ""
+#define PACKAGE "sqlite"
+#define VERSION "3.22.0"
+#define _FILE_OFFSET_BITS 64
+#define STDC_HEADERS 1
+#define HAVE_SYS_TYPES_H 1
+#define HAVE_SYS_STAT_H 1
+#define HAVE_STDLIB_H 1
+#define HAVE_STRING_H 1
+#define HAVE_MEMORY_H 1
+#define HAVE_STRINGS_H 1
+#define HAVE_INTTYPES_H 1
+#define HAVE_STDINT_H 1
+#define HAVE_UNISTD_H 1
+#define LT_OBJDIR ".libs/"
+#define HAVE_USLEEP 1
+#define HAVE_DECL_STRERROR_R 0
+#define HAVE_ZLIB_H 1
+
+configure: exit 0
+
+settings.mk
+# This is a template of configuration file for MXE. See
+# docs/index.html for more extensive documentations.
+
+# This variable controls the number of compilation processes
+# within one package ("intra-package parallelism").
+#JOBS := 
+
+# This variable controls where intermediate files are created
+# this is necessary when compiling inside a virtualbox shared
+# directory. Some commands like strip fail in there with Protocol error
+# default is the current directory
+#MXE_TMP := /tmp
+
+# This variable controls the targets that will build.
+#MXE_TARGETS := i686-w64-mingw32.static i686-w64-mingw32.shared x86_64-w64-mingw32.static x86_64-w64-mingw32.shared
+
+# This variable controls which plugins are in use.
+# See plugins/README.md for further information.
+#override MXE_PLUGIN_DIRS += plugins/apps plugins/native
+
+# This variable controls the download mirror for SourceForge,
+# when it is used. Enabling the value below means auto.
+#SOURCEFORGE_MIRROR := downloads.sourceforge.net
+
+# The three lines below makes `make` build these "local
+# packages" instead of all packages.
+#LOCAL_PKG_LIST := boost curl file flac lzo pthreads vorbis wxwidgets
+#.DEFAULT_GOAL  := local-pkg-list
+#local-pkg-list: $(LOCAL_PKG_LIST)
+i686-w64-mingw32.static-strip '/home/user/mxe/usr/i686-w64-mingw32.static/bin/test-sqlite.exe'
+i686-w64-mingw32.static-strip: '/home/user/mxe/usr/i686-w64-mingw32.static/bin/test-sqlite.exe': No such file
+Makefile:786: recipe for target 'build-only-sqlite_i686-w64-mingw32.static' failed
+make[1]: [build-only-sqlite_i686-w64-mingw32.static] Error 1 (ignored)
+(du -k -d 0 '/home/user/mxe/tmp-sqlite-i686-w64-mingw32.static' 2>/dev/null || du -k --max-depth 0 '/home/user/mxe/tmp-sqlite-i686-w64-mingw32.static') | sed -n 's/^\(\S*\).*/du: \1 KiB/p'
+du: 13912 KiB
+rm -rfv  '/home/user/mxe/tmp-sqlite-i686-w64-mingw32.static'
+removed '/home/user/mxe/tmp-sqlite-i686-w64-mingw32.static/sqlite-autoconf-3220000/sqlite3.1'
+removed '/home/user/mxe/tmp-sqlite-i686-w64-mingw32.static/sqlite-autoconf-3220000/sqlite3.h'
+removed '/home/user/mxe/tmp-sqlite-i686-w64-mingw32.static/sqlite-autoconf-3220000/configure.ac'
+removed '/home/user/mxe/tmp-sqlite-i686-w64-mingw32.static/sqlite-autoconf-3220000/config.sub'
+removed '/home/user/mxe/tmp-sqlite-i686-w64-mingw32.static/sqlite-autoconf-3220000/Makefile.in'
+removed '/home/user/mxe/tmp-sqlite-i686-w64-mingw32.static/sqlite-autoconf-3220000/shell.c'
+removed '/home/user/mxe/tmp-sqlite-i686-w64-mingw32.static/sqlite-autoconf-3220000/sqlite3.lo'
+removed '/home/user/mxe/tmp-sqlite-i686-w64-mingw32.static/sqlite-autoconf-3220000/.libs/libsqlite3.a'
+removed '/home/user/mxe/tmp-sqlite-i686-w64-mingw32.static/sqlite-autoconf-3220000/.libs/libsqlite3.lai'
+removed '/home/user/mxe/tmp-sqlite-i686-w64-mingw32.static/sqlite-autoconf-3220000/.libs/libsqlite3.la'
+removed directory '/home/user/mxe/tmp-sqlite-i686-w64-mingw32.static/sqlite-autoconf-3220000/.libs'
+removed '/home/user/mxe/tmp-sqlite-i686-w64-mingw32.static/sqlite-autoconf-3220000/sqlite3-shell.o'
+removed '/home/user/mxe/tmp-sqlite-i686-w64-mingw32.static/sqlite-autoconf-3220000/sqlite3ext.h'
+removed '/home/user/mxe/tmp-sqlite-i686-w64-mingw32.static/sqlite-autoconf-3220000/aclocal.m4'
+removed '/home/user/mxe/tmp-sqlite-i686-w64-mingw32.static/sqlite-autoconf-3220000/.deps/sqlite3-shell.Po'
+removed '/home/user/mxe/tmp-sqlite-i686-w64-mingw32.static/sqlite-autoconf-3220000/.deps/sqlite3-sqlite3.Po'
+removed '/home/user/mxe/tmp-sqlite-i686-w64-mingw32.static/sqlite-autoconf-3220000/.deps/sqlite3.Plo'
+removed directory '/home/user/mxe/tmp-sqlite-i686-w64-mingw32.static/sqlite-autoconf-3220000/.deps'
+removed '/home/user/mxe/tmp-sqlite-i686-w64-mingw32.static/sqlite-autoconf-3220000/depcomp'
+removed '/home/user/mxe/tmp-sqlite-i686-w64-mingw32.static/sqlite-autoconf-3220000/sqlite3.rc'
+removed '/home/user/mxe/tmp-sqlite-i686-w64-mingw32.static/sqlite-autoconf-3220000/ltmain.sh'
+removed '/home/user/mxe/tmp-sqlite-i686-w64-mingw32.static/sqlite-autoconf-3220000/install-sh'
+removed '/home/user/mxe/tmp-sqlite-i686-w64-mingw32.static/sqlite-autoconf-3220000/Replace.cs'
+removed '/home/user/mxe/tmp-sqlite-i686-w64-mingw32.static/sqlite-autoconf-3220000/Makefile'
+removed '/home/user/mxe/tmp-sqlite-i686-w64-mingw32.static/sqlite-autoconf-3220000/sqlite3.exe'
+removed '/home/user/mxe/tmp-sqlite-i686-w64-mingw32.static/sqlite-autoconf-3220000/sqlite3.pc'
+removed '/home/user/mxe/tmp-sqlite-i686-w64-mingw32.static/sqlite-autoconf-3220000/config.guess'
+removed '/home/user/mxe/tmp-sqlite-i686-w64-mingw32.static/sqlite-autoconf-3220000/tea/configure.ac'
+removed '/home/user/mxe/tmp-sqlite-i686-w64-mingw32.static/sqlite-autoconf-3220000/tea/README'
+removed '/home/user/mxe/tmp-sqlite-i686-w64-mingw32.static/sqlite-autoconf-3220000/tea/Makefile.in'
+removed '/home/user/mxe/tmp-sqlite-i686-w64-mingw32.static/sqlite-autoconf-3220000/tea/aclocal.m4'
+removed '/home/user/mxe/tmp-sqlite-i686-w64-mingw32.static/sqlite-autoconf-3220000/tea/pkgIndex.tcl.in'
+removed '/home/user/mxe/tmp-sqlite-i686-w64-mingw32.static/sqlite-autoconf-3220000/tea/win/makefile.vc'
+removed '/home/user/mxe/tmp-sqlite-i686-w64-mingw32.static/sqlite-autoconf-3220000/tea/win/rules.vc'
+removed '/home/user/mxe/tmp-sqlite-i686-w64-mingw32.static/sqlite-autoconf-3220000/tea/win/nmakehlp.c'
+removed directory '/home/user/mxe/tmp-sqlite-i686-w64-mingw32.static/sqlite-autoconf-3220000/tea/win'
+removed '/home/user/mxe/tmp-sqlite-i686-w64-mingw32.static/sqlite-autoconf-3220000/tea/doc/sqlite3.n'
+removed directory '/home/user/mxe/tmp-sqlite-i686-w64-mingw32.static/sqlite-autoconf-3220000/tea/doc'
+removed '/home/user/mxe/tmp-sqlite-i686-w64-mingw32.static/sqlite-autoconf-3220000/tea/generic/tclsqlite3.c'
+removed directory '/home/user/mxe/tmp-sqlite-i686-w64-mingw32.static/sqlite-autoconf-3220000/tea/generic'
+removed '/home/user/mxe/tmp-sqlite-i686-w64-mingw32.static/sqlite-autoconf-3220000/tea/configure'
+removed '/home/user/mxe/tmp-sqlite-i686-w64-mingw32.static/sqlite-autoconf-3220000/tea/tclconfig/install-sh'
+removed '/home/user/mxe/tmp-sqlite-i686-w64-mingw32.static/sqlite-autoconf-3220000/tea/tclconfig/tcl.m4'
+removed directory '/home/user/mxe/tmp-sqlite-i686-w64-mingw32.static/sqlite-autoconf-3220000/tea/tclconfig'
+removed '/home/user/mxe/tmp-sqlite-i686-w64-mingw32.static/sqlite-autoconf-3220000/tea/license.terms'
+removed directory '/home/user/mxe/tmp-sqlite-i686-w64-mingw32.static/sqlite-autoconf-3220000/tea'
+removed '/home/user/mxe/tmp-sqlite-i686-w64-mingw32.static/sqlite-autoconf-3220000/INSTALL'
+removed '/home/user/mxe/tmp-sqlite-i686-w64-mingw32.static/sqlite-autoconf-3220000/compile'
+removed '/home/user/mxe/tmp-sqlite-i686-w64-mingw32.static/sqlite-autoconf-3220000/Makefile.msc'
+removed '/home/user/mxe/tmp-sqlite-i686-w64-mingw32.static/sqlite-autoconf-3220000/libsqlite3.la'
+removed '/home/user/mxe/tmp-sqlite-i686-w64-mingw32.static/sqlite-autoconf-3220000/sqlite3.c'
+removed '/home/user/mxe/tmp-sqlite-i686-w64-mingw32.static/sqlite-autoconf-3220000/sqlite3.pc.in'
+removed '/home/user/mxe/tmp-sqlite-i686-w64-mingw32.static/sqlite-autoconf-3220000/config.log'
+removed '/home/user/mxe/tmp-sqlite-i686-w64-mingw32.static/sqlite-autoconf-3220000/sqlite3-sqlite3.o'
+removed '/home/user/mxe/tmp-sqlite-i686-w64-mingw32.static/sqlite-autoconf-3220000/configure'
+removed '/home/user/mxe/tmp-sqlite-i686-w64-mingw32.static/sqlite-autoconf-3220000/missing'
+removed '/home/user/mxe/tmp-sqlite-i686-w64-mingw32.static/sqlite-autoconf-3220000/sqlite3.o'
+removed '/home/user/mxe/tmp-sqlite-i686-w64-mingw32.static/sqlite-autoconf-3220000/config.status'
+removed '/home/user/mxe/tmp-sqlite-i686-w64-mingw32.static/sqlite-autoconf-3220000/Makefile.am'
+removed '/home/user/mxe/tmp-sqlite-i686-w64-mingw32.static/sqlite-autoconf-3220000/libtool'
+removed '/home/user/mxe/tmp-sqlite-i686-w64-mingw32.static/sqlite-autoconf-3220000/README.txt'
+removed directory '/home/user/mxe/tmp-sqlite-i686-w64-mingw32.static/sqlite-autoconf-3220000'
+removed directory '/home/user/mxe/tmp-sqlite-i686-w64-mingw32.static/readonly'
+removed '/home/user/mxe/tmp-sqlite-i686-w64-mingw32.static/sqlite-autoconf-3220000.build_.sink/man1/sqlite3.1'
+removed directory '/home/user/mxe/tmp-sqlite-i686-w64-mingw32.static/sqlite-autoconf-3220000.build_.sink/man1'
+removed directory '/home/user/mxe/tmp-sqlite-i686-w64-mingw32.static/sqlite-autoconf-3220000.build_.sink'
+removed directory '/home/user/mxe/tmp-sqlite-i686-w64-mingw32.static/sqlite-autoconf-3220000.build_'
+removed directory '/home/user/mxe/tmp-sqlite-i686-w64-mingw32.static'
+touch '/home/user/mxe/usr/i686-w64-mingw32.static/installed/sqlite'
+make[1]: Leaving directory '/home/user/mxe'
+
+real	3m32.431s
+user	1m41.487s
+sys	1m47.181s

@@ -1,0 +1,3007 @@
+make[1]: Entering directory '/home/user/mxe'
+uname -a
+Linux user-VirtualBox 4.13.0-21-generic #24-Ubuntu SMP Mon Dec 18 17:29:35 UTC 2017 i686 i686 i686 GNU/Linux
+git log --pretty=tformat:"%H - %s [%ar] [%d]" -1
+1b7d2e0562f2ec93848f536d2a9d4cd414356d9e - Update packages.json & build-matrix.html [4 days ago] [ (HEAD -> master, origin/master, origin/HEAD)]
+lsb_release -a 2>/dev/null || sw_vers 2>/dev/null || true
+Distributor ID:	Ubuntu
+Description:	Ubuntu 17.10
+Release:	17.10
+Codename:	artful
+autoconf --version 2>/dev/null | head -1
+autoconf (GNU Autoconf) 2.69
+automake --version 2>/dev/null | head -1
+automake (GNU automake) 1.15
+gcc --version
+gcc (Ubuntu 7.2.0-8ubuntu3) 7.2.0
+Copyright (C) 2017 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+g++ --version
+g++ (Ubuntu 7.2.0-8ubuntu3) 7.2.0
+Copyright (C) 2017 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+python --version
+Python 2.7.14
+perl --version 2>&1 | head -3
+
+This is perl 5, version 26, subversion 0 (v5.26.0) built for i686-linux-gnu-thread-multi-64int
+(with 56 registered patches, see perl -V for more detail)
+rm -rf   '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static'
+mkdir -p '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static'
+mkdir -p '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6'
+mkdir -p '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6.build_'
+# disable wine with readonly directory
+# see https://github.com/mxe/mxe/issues/841
+mkdir -p '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/readonly'
+chmod 0555 '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/readonly'
+cd '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static' &&  tar xzf '/home/user/mxe/pkg/pixman-0.33.6.tar.gz'
+cd '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6'
+cd '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6' && ./configure --host='i686-w64-mingw32.static' --build='i686-pc-linux-gnu' --prefix='/home/user/mxe/usr/i686-w64-mingw32.static'  --enable-static --disable-shared  ac_cv_prog_HAVE_DOXYGEN="false" --enable-doc=no --enable-gtk-doc=no --enable-gtk-doc-html=no --enable-gtk-doc-pdf=no --{docdir,infodir,mandir,with-html-dir}='/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6.build_.sink' --disable-doxygen
+configure: WARNING: unrecognized options: --enable-doc, --enable-gtk-doc, --enable-gtk-doc-html, --enable-gtk-doc-pdf, --with-html-dir, --disable-doxygen
+configure: loading site script /home/user/mxe/usr/i686-w64-mingw32.static/share/config.site
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for i686-w64-mingw32.static-strip... i686-w64-mingw32.static-strip
+checking for a thread-safe mkdir -p... /bin/mkdir -p
+checking for gawk... no
+checking for mawk... mawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking whether make supports nested variables... (cached) yes
+checking build system type... (cached) i686-pc-linux-gnu
+checking host system type... i686-w64-mingw32.static
+checking for i686-w64-mingw32.static-gcc... i686-w64-mingw32.static-gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.exe
+checking for suffix of executables... .exe
+checking whether we are cross compiling... yes
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether i686-w64-mingw32.static-gcc accepts -g... yes
+checking for i686-w64-mingw32.static-gcc option to accept ISO C89... none needed
+checking whether i686-w64-mingw32.static-gcc understands -c and -o together... yes
+checking for style of include used by make... GNU
+checking dependency style of i686-w64-mingw32.static-gcc... gcc3
+checking dependency style of i686-w64-mingw32.static-gcc... gcc3
+checking how to print strings... printf
+checking for a sed that does not truncate output... /bin/sed
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for fgrep... /bin/grep -F
+checking for ld used by i686-w64-mingw32.static-gcc... /home/user/mxe/usr/bin/i686-w64-mingw32.static-ld
+checking if the linker (/home/user/mxe/usr/bin/i686-w64-mingw32.static-ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /home/user/mxe/usr/bin/i686-w64-mingw32.static-nm -B
+checking the name lister (/home/user/mxe/usr/bin/i686-w64-mingw32.static-nm -B) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 1572864
+checking how to convert i686-pc-linux-gnu file names to i686-w64-mingw32.static format... func_convert_file_nix_to_w32
+checking how to convert i686-pc-linux-gnu file names to toolchain format... func_convert_file_noop
+checking for /home/user/mxe/usr/bin/i686-w64-mingw32.static-ld option to reload object files... -r
+checking for i686-w64-mingw32.static-objdump... i686-w64-mingw32.static-objdump
+checking how to recognize dependent libraries... file_magic ^x86 archive import|^x86 DLL
+checking for i686-w64-mingw32.static-dlltool... i686-w64-mingw32.static-dlltool
+checking how to associate runtime and link libraries... func_cygming_dll_for_implib
+checking for i686-w64-mingw32.static-ar... i686-w64-mingw32.static-ar
+checking for archiver @FILE support... @
+checking for i686-w64-mingw32.static-strip... (cached) i686-w64-mingw32.static-strip
+checking for i686-w64-mingw32.static-ranlib... i686-w64-mingw32.static-ranlib
+checking command to parse /home/user/mxe/usr/bin/i686-w64-mingw32.static-nm -B output from i686-w64-mingw32.static-gcc object... ok
+checking for sysroot... no
+checking for a working dd... /bin/dd
+checking how to truncate binary pipes... /bin/dd bs=4096 count=1
+checking for i686-w64-mingw32.static-mt... no
+checking for mt... mt
+configure: WARNING: using cross tools not prefixed with host triplet
+checking if mt is a manifest tool... no
+checking how to run the C preprocessor... i686-w64-mingw32.static-gcc -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking for dlfcn.h... no
+checking for objdir... .libs
+checking if i686-w64-mingw32.static-gcc supports -fno-rtti -fno-exceptions... no
+checking for i686-w64-mingw32.static-gcc option to produce PIC... -DDLL_EXPORT -DPIC
+checking if i686-w64-mingw32.static-gcc PIC flag -DDLL_EXPORT -DPIC works... yes
+checking if i686-w64-mingw32.static-gcc static flag -static works... yes
+checking if i686-w64-mingw32.static-gcc supports -c -o file.o... yes
+checking if i686-w64-mingw32.static-gcc supports -c -o file.o... (cached) yes
+checking whether the i686-w64-mingw32.static-gcc linker (/home/user/mxe/usr/bin/i686-w64-mingw32.static-ld) supports shared libraries... yes
+checking dynamic linker characteristics... Win32 ld.exe
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... no
+checking whether to build static libraries... yes
+checking for getisax... no
+checking whether byte ordering is bigendian... no
+checking for inline... inline
+checking whether the compiler supports -Werror... yes
+checking size of long... 4
+checking whether __SUNPRO_C is declared... no
+checking whether __amd64 is declared... no
+checking whether the compiler supports -Wall... yes
+checking whether the compiler supports -Wdeclaration-after-statement... yes
+checking whether the compiler supports -Wno-unused-local-typedefs... yes
+checking whether the compiler supports -fno-strict-aliasing... yes
+checking for i686-w64-mingw32.static-gcc option to support OpenMP... -fopenmp
+checking whether the compiler supports -fvisibility=hidden... no
+checking whether the compiler supports -xldscope=hidden... no
+checking whether to use Loongson MMI assembler... no
+checking whether to use MMX intrinsics... yes
+checking whether to use SSE2 intrinsics... yes
+checking whether to use SSSE3 intrinsics... yes
+checking whether to use VMX/Altivec intrinsics... no
+checking whether to use ARM SIMD assembler... no
+checking whether to use ARM NEON assembler... no
+checking whether to use ARM IWMMXT intrinsics... no
+checking whether to use MIPS DSPr2 assembler... no
+checking whether to use GNU-style inline assembler... yes
+checking for i686-w64-mingw32.static-pkg-config... /home/user/mxe/usr/bin/i686-w64-mingw32.static-pkg-config
+checking pkg-config is at least version 0.9.0... yes
+checking for pixman_version_string in -lpixman-1... no
+checking for posix_memalign... no
+checking for sigaction... no
+checking for alarm... yes
+checking sys/mman.h usability... no
+checking sys/mman.h presence... no
+checking for sys/mman.h... no
+checking for mmap... no
+checking for mprotect... yes
+checking for getpagesize... yes
+checking fenv.h usability... yes
+checking fenv.h presence... yes
+checking for fenv.h... yes
+checking for feenableexcept in -lm... no
+checking whether FE_DIVBYZERO is declared... yes
+checking for gettimeofday... yes
+checking sys/time.h usability... yes
+checking sys/time.h presence... yes
+checking for sys/time.h... yes
+checking for library containing sqrtf... none required
+checking for thread local storage (TLS) support... __thread
+checking for pthreads... yes
+checking for __attribute__((constructor))... yes
+checking for __float128... yes
+checking for __builtin_clz... yes
+checking for GCC vector extensions... yes
+checking for PNG... yes
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating pixman-1.pc
+config.status: creating pixman-1-uninstalled.pc
+config.status: creating Makefile
+config.status: creating pixman/Makefile
+config.status: creating pixman/pixman-version.h
+config.status: creating demos/Makefile
+config.status: creating test/Makefile
+config.status: creating config.h
+config.status: executing depfiles commands
+config.status: executing libtool commands
+configure: WARNING: unrecognized options: --enable-doc, --enable-gtk-doc, --enable-gtk-doc-html, --enable-gtk-doc-pdf, --with-html-dir, --disable-doxygen
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+      Thanks for testing this development snapshot of pixman. Please
+      report any problems you find, either by sending email to 
+
+          pixman@lists.freedesktop.org
+
+      or by filing a bug at 
+
+          https://bugs.freedesktop.org/enter_bug.cgi?product=pixman 
+
+      If you are looking for a stable release of pixman, please note 
+      that stable releases have _even_ minor version numbers. Ie., 
+      pixman-0.32.x are stable releases, whereas pixman-0.33.6 is a 
+      development snapshot that may contain bugs and experimental 
+      features. 
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+make -C '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6' -j '1' install bin_PROGRAMS= sbin_PROGRAMS= noinst_PROGRAMS=
+make[2]: Entering directory '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6'
+Making install in pixman
+make[3]: Entering directory '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman'
+  CC       pixman.lo
+  CC       pixman-access.lo
+  CC       pixman-access-accessors.lo
+  CC       pixman-bits-image.lo
+  CC       pixman-combine32.lo
+  CC       pixman-combine-float.lo
+  CC       pixman-conical-gradient.lo
+  CC       pixman-filter.lo
+  CC       pixman-x86.lo
+  CC       pixman-mips.lo
+  CC       pixman-arm.lo
+  CC       pixman-ppc.lo
+  CC       pixman-edge.lo
+  CC       pixman-edge-accessors.lo
+  CC       pixman-fast-path.lo
+  CC       pixman-glyph.lo
+  CC       pixman-general.lo
+  CC       pixman-gradient-walker.lo
+  CC       pixman-image.lo
+  CC       pixman-implementation.lo
+  CC       pixman-linear-gradient.lo
+  CC       pixman-matrix.lo
+  CC       pixman-noop.lo
+  CC       pixman-radial-gradient.lo
+  CC       pixman-region16.lo
+  CC       pixman-region32.lo
+  CC       pixman-solid-fill.lo
+  CC       pixman-timer.lo
+  CC       pixman-trap.lo
+  CC       pixman-utils.lo
+  CC       libpixman_mmx_la-pixman-mmx.lo
+  CCLD     libpixman-mmx.la
+i686-w64-mingw32.static-ar: `u' modifier ignored since `D' is the default (see `U')
+  CC       libpixman_sse2_la-pixman-sse2.lo
+  CCLD     libpixman-sse2.la
+i686-w64-mingw32.static-ar: `u' modifier ignored since `D' is the default (see `U')
+  CC       libpixman_ssse3_la-pixman-ssse3.lo
+  CCLD     libpixman-ssse3.la
+i686-w64-mingw32.static-ar: `u' modifier ignored since `D' is the default (see `U')
+  CCLD     libpixman-1.la
+i686-w64-mingw32.static-ar: `u' modifier ignored since `D' is the default (see `U')
+make[4]: Entering directory '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman'
+ /bin/mkdir -p '/home/user/mxe/usr/i686-w64-mingw32.static/lib'
+ /bin/bash ../libtool   --mode=install /usr/bin/install -c   libpixman-1.la '/home/user/mxe/usr/i686-w64-mingw32.static/lib'
+libtool: install: /usr/bin/install -c .libs/libpixman-1.lai /home/user/mxe/usr/i686-w64-mingw32.static/lib/libpixman-1.la
+libtool: install: /usr/bin/install -c .libs/libpixman-1.a /home/user/mxe/usr/i686-w64-mingw32.static/lib/libpixman-1.a
+libtool: install: chmod 644 /home/user/mxe/usr/i686-w64-mingw32.static/lib/libpixman-1.a
+libtool: install: i686-w64-mingw32.static-ranlib /home/user/mxe/usr/i686-w64-mingw32.static/lib/libpixman-1.a
+ /bin/mkdir -p '/home/user/mxe/usr/i686-w64-mingw32.static/include/pixman-1'
+ /usr/bin/install -c -m 644 pixman.h pixman-version.h '/home/user/mxe/usr/i686-w64-mingw32.static/include/pixman-1'
+make[4]: Leaving directory '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman'
+make[3]: Leaving directory '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman'
+Making install in demos
+make[3]: Entering directory '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/demos'
+make[4]: Entering directory '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/demos'
+make[4]: Nothing to be done for 'install-exec-am'.
+make[4]: Nothing to be done for 'install-data-am'.
+make[4]: Leaving directory '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/demos'
+make[3]: Leaving directory '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/demos'
+Making install in test
+make[3]: Entering directory '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/test'
+  CC       utils.lo
+  CC       utils-prng.lo
+  CCLD     libutils.la
+i686-w64-mingw32.static-ar: `u' modifier ignored since `D' is the default (see `U')
+make[4]: Entering directory '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/test'
+make[4]: Nothing to be done for 'install-exec-am'.
+make[4]: Nothing to be done for 'install-data-am'.
+make[4]: Leaving directory '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/test'
+make[3]: Leaving directory '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/test'
+make[3]: Entering directory '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6'
+make[4]: Entering directory '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6'
+make[4]: Nothing to be done for 'install-exec-am'.
+ /bin/mkdir -p '/home/user/mxe/usr/i686-w64-mingw32.static/lib/pkgconfig'
+ /usr/bin/install -c -m 644 pixman-1.pc '/home/user/mxe/usr/i686-w64-mingw32.static/lib/pkgconfig'
+make[4]: Leaving directory '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6'
+make[3]: Leaving directory '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6'
+make[2]: Leaving directory '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6'
+
+/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/config.log
+This file contains any messages produced by compilers while
+running configure, to aid debugging if configure makes a mistake.
+
+It was created by pixman configure 0.33.6, which was
+generated by GNU Autoconf 2.69.  Invocation command line was
+
+  $ ./configure --host=i686-w64-mingw32.static --build=i686-pc-linux-gnu --prefix=/home/user/mxe/usr/i686-w64-mingw32.static --enable-static --disable-shared ac_cv_prog_HAVE_DOXYGEN=false --enable-doc=no --enable-gtk-doc=no --enable-gtk-doc-html=no --enable-gtk-doc-pdf=no --docdir=/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6.build_.sink --infodir=/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6.build_.sink --mandir=/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6.build_.sink --with-html-dir=/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6.build_.sink --disable-doxygen
+
+## --------- ##
+## Platform. ##
+## --------- ##
+
+hostname = user-VirtualBox
+uname -m = i686
+uname -r = 4.13.0-21-generic
+uname -s = Linux
+uname -v = #24-Ubuntu SMP Mon Dec 18 17:29:35 UTC 2017
+
+/usr/bin/uname -p = unknown
+/bin/uname -X     = unknown
+
+/bin/arch              = unknown
+/usr/bin/arch -k       = unknown
+/usr/convex/getsysinfo = unknown
+/usr/bin/hostinfo      = unknown
+/bin/machine           = unknown
+/usr/bin/oslevel       = unknown
+/bin/universe          = unknown
+
+PATH: /home/user/mxe/usr/i686-pc-linux-gnu/bin
+PATH: /home/user/mxe/usr/bin
+PATH: /home/user/mxe/usr/i686-pc-linux-gnu/bin
+PATH: /home/user/mxe/usr/bin
+PATH: /usr/local/sbin
+PATH: /usr/local/bin
+PATH: /usr/sbin
+PATH: /usr/bin
+PATH: /sbin
+PATH: /bin
+PATH: /usr/games
+PATH: /usr/local/games
+PATH: /snap/bin
+
+
+## ----------- ##
+## Core tests. ##
+## ----------- ##
+
+configure:2456: loading site script /home/user/mxe/usr/i686-w64-mingw32.static/share/config.site
+| ac_cv_build=i686-pc-linux-gnu
+configure:2597: checking for a BSD-compatible install
+configure:2665: result: /usr/bin/install -c
+configure:2676: checking whether build environment is sane
+configure:2731: result: yes
+configure:2790: checking for i686-w64-mingw32.static-strip
+configure:2806: found /home/user/mxe/usr/bin/i686-w64-mingw32.static-strip
+configure:2817: result: i686-w64-mingw32.static-strip
+configure:2882: checking for a thread-safe mkdir -p
+configure:2921: result: /bin/mkdir -p
+configure:2928: checking for gawk
+configure:2958: result: no
+configure:2928: checking for mawk
+configure:2944: found /usr/bin/mawk
+configure:2955: result: mawk
+configure:2966: checking whether make sets $(MAKE)
+configure:2988: result: yes
+configure:3017: checking whether make supports nested variables
+configure:3034: result: yes
+configure:3173: checking whether make supports nested variables
+configure:3190: result: yes
+configure:3209: checking build system type
+configure:3223: result: i686-pc-linux-gnu
+configure:3243: checking host system type
+configure:3256: result: i686-w64-mingw32.static
+configure:3287: checking for i686-w64-mingw32.static-gcc
+configure:3303: found /home/user/mxe/usr/bin/i686-w64-mingw32.static-gcc
+configure:3314: result: i686-w64-mingw32.static-gcc
+configure:3583: checking for C compiler version
+configure:3592: i686-w64-mingw32.static-gcc --version >&5
+i686-w64-mingw32.static-gcc (GCC) 5.4.0
+Copyright (C) 2015 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+configure:3603: $? = 0
+configure:3592: i686-w64-mingw32.static-gcc -v >&5
+Using built-in specs.
+COLLECT_GCC=i686-w64-mingw32.static-gcc
+COLLECT_LTO_WRAPPER=/home/user/mxe/usr/libexec/gcc/i686-w64-mingw32.static/5.4.0/lto-wrapper
+Target: i686-w64-mingw32.static
+Configured with: /home/user/mxe/tmp-gcc-i686-w64-mingw32.static/gcc-5.4.0/configure ac_cv_prog_HAVE_DOXYGEN=false --enable-doc=no --enable-gtk-doc=no --enable-gtk-doc-html=no --enable-gtk-doc-pdf=no --docdir=/home/user/mxe/tmp-gcc-i686-w64-mingw32.static/gcc-5.4.0.build_.sink --infodir=/home/user/mxe/tmp-gcc-i686-w64-mingw32.static/gcc-5.4.0.build_.sink --mandir=/home/user/mxe/tmp-gcc-i686-w64-mingw32.static/gcc-5.4.0.build_.sink --with-html-dir=/home/user/mxe/tmp-gcc-i686-w64-mingw32.static/gcc-5.4.0.build_.sink --disable-doxygen --target=i686-w64-mingw32.static --build=i686-pc-linux-gnu --prefix=/home/user/mxe/usr --libdir=/home/user/mxe/usr/lib --enable-languages=c,c++,objc,fortran --enable-version-specific-runtime-libs --with-gcc --with-gnu-ld --with-gnu-as --disable-nls --disable-shared --disable-multilib --without-x --disable-win32-registry --enable-threads=win32 --enable-sjlj-exceptions --enable-libgomp --with-gmp=/home/user/mxe/usr/i686-pc-linux-gnu --with-isl=/home/user/mxe/usr/i686-pc-linux-gnu --with-mpc=/home/user/mxe/usr/i686-pc-linux-gnu --with-mpfr=/home/user/mxe/usr/i686-pc-linux-gnu --with-as=/home/user/mxe/usr/bin/i686-w64-mingw32.static-as --with-ld=/home/user/mxe/usr/bin/i686-w64-mingw32.static-ld --with-nm=/home/user/mxe/usr/bin/i686-w64-mingw32.static-nm
+Thread model: win32
+gcc version 5.4.0 (GCC) 
+configure:3603: $? = 0
+configure:3592: i686-w64-mingw32.static-gcc -V >&5
+i686-w64-mingw32.static-gcc: error: unrecognized command line option '-V'
+i686-w64-mingw32.static-gcc: fatal error: no input files
+compilation terminated.
+configure:3603: $? = 1
+configure:3592: i686-w64-mingw32.static-gcc -qversion >&5
+i686-w64-mingw32.static-gcc: error: unrecognized command line option '-qversion'
+i686-w64-mingw32.static-gcc: fatal error: no input files
+compilation terminated.
+configure:3603: $? = 1
+configure:3623: checking whether the C compiler works
+configure:3645: i686-w64-mingw32.static-gcc    conftest.c  >&5
+configure:3649: $? = 0
+configure:3697: result: yes
+configure:3700: checking for C compiler default output file name
+configure:3702: result: a.exe
+configure:3708: checking for suffix of executables
+configure:3715: i686-w64-mingw32.static-gcc -o conftest.exe    conftest.c  >&5
+configure:3719: $? = 0
+configure:3741: result: .exe
+configure:3763: checking whether we are cross compiling
+configure:3801: result: yes
+configure:3806: checking for suffix of object files
+configure:3828: i686-w64-mingw32.static-gcc -c   conftest.c >&5
+configure:3832: $? = 0
+configure:3853: result: o
+configure:3857: checking whether we are using the GNU C compiler
+configure:3876: i686-w64-mingw32.static-gcc -c   conftest.c >&5
+configure:3876: $? = 0
+configure:3885: result: yes
+configure:3894: checking whether i686-w64-mingw32.static-gcc accepts -g
+configure:3914: i686-w64-mingw32.static-gcc -c -g  conftest.c >&5
+configure:3914: $? = 0
+configure:3955: result: yes
+configure:3972: checking for i686-w64-mingw32.static-gcc option to accept ISO C89
+configure:4035: i686-w64-mingw32.static-gcc  -c -g -O2  conftest.c >&5
+configure:4035: $? = 0
+configure:4048: result: none needed
+configure:4073: checking whether i686-w64-mingw32.static-gcc understands -c and -o together
+configure:4095: i686-w64-mingw32.static-gcc -c conftest.c -o conftest2.o
+configure:4098: $? = 0
+configure:4095: i686-w64-mingw32.static-gcc -c conftest.c -o conftest2.o
+configure:4098: $? = 0
+configure:4110: result: yes
+configure:4138: checking for style of include used by make
+configure:4166: result: GNU
+configure:4192: checking dependency style of i686-w64-mingw32.static-gcc
+configure:4303: result: gcc3
+configure:4327: checking dependency style of i686-w64-mingw32.static-gcc
+configure:4436: result: gcc3
+configure:4497: checking how to print strings
+configure:4524: result: printf
+configure:4545: checking for a sed that does not truncate output
+configure:4609: result: /bin/sed
+configure:4627: checking for grep that handles long lines and -e
+configure:4685: result: /bin/grep
+configure:4690: checking for egrep
+configure:4752: result: /bin/grep -E
+configure:4757: checking for fgrep
+configure:4819: result: /bin/grep -F
+configure:4854: checking for ld used by i686-w64-mingw32.static-gcc
+configure:4921: result: /home/user/mxe/usr/bin/i686-w64-mingw32.static-ld
+configure:4928: checking if the linker (/home/user/mxe/usr/bin/i686-w64-mingw32.static-ld) is GNU ld
+configure:4943: result: yes
+configure:4955: checking for BSD- or MS-compatible name lister (nm)
+configure:5009: result: /home/user/mxe/usr/bin/i686-w64-mingw32.static-nm -B
+configure:5139: checking the name lister (/home/user/mxe/usr/bin/i686-w64-mingw32.static-nm -B) interface
+configure:5146: i686-w64-mingw32.static-gcc -c -g -O2  conftest.c >&5
+configure:5149: /home/user/mxe/usr/bin/i686-w64-mingw32.static-nm -B "conftest.o"
+configure:5152: output
+00000000 b .bss
+00000000 d .data
+00000000 N .debug_abbrev
+00000000 N .debug_aranges
+00000000 N .debug_info
+00000000 N .debug_line
+00000000 r .rdata$zzz
+00000000 t .text
+00000000 B _some_variable
+configure:5159: result: BSD nm
+configure:5162: checking whether ln -s works
+configure:5166: result: yes
+configure:5174: checking the maximum length of command line arguments
+configure:5305: result: 1572864
+configure:5353: checking how to convert i686-pc-linux-gnu file names to i686-w64-mingw32.static format
+configure:5393: result: func_convert_file_nix_to_w32
+configure:5400: checking how to convert i686-pc-linux-gnu file names to toolchain format
+configure:5420: result: func_convert_file_noop
+configure:5427: checking for /home/user/mxe/usr/bin/i686-w64-mingw32.static-ld option to reload object files
+configure:5434: result: -r
+configure:5468: checking for i686-w64-mingw32.static-objdump
+configure:5484: found /home/user/mxe/usr/bin/i686-w64-mingw32.static-objdump
+configure:5495: result: i686-w64-mingw32.static-objdump
+configure:5567: checking how to recognize dependent libraries
+configure:5767: result: file_magic ^x86 archive import|^x86 DLL
+configure:5812: checking for i686-w64-mingw32.static-dlltool
+configure:5828: found /home/user/mxe/usr/bin/i686-w64-mingw32.static-dlltool
+configure:5839: result: i686-w64-mingw32.static-dlltool
+configure:5912: checking how to associate runtime and link libraries
+configure:5939: result: func_cygming_dll_for_implib
+configure:5956: checking for i686-w64-mingw32.static-ar
+configure:5972: found /home/user/mxe/usr/bin/i686-w64-mingw32.static-ar
+configure:5983: result: i686-w64-mingw32.static-ar
+configure:6064: checking for archiver @FILE support
+configure:6081: i686-w64-mingw32.static-gcc -c -g -O2  conftest.c >&5
+configure:6081: $? = 0
+configure:6084: i686-w64-mingw32.static-ar cru libconftest.a @conftest.lst >&5
+i686-w64-mingw32.static-ar: `u' modifier ignored since `D' is the default (see `U')
+configure:6087: $? = 0
+configure:6092: i686-w64-mingw32.static-ar cru libconftest.a @conftest.lst >&5
+i686-w64-mingw32.static-ar: `u' modifier ignored since `D' is the default (see `U')
+i686-w64-mingw32.static-ar: conftest.o: No such file or directory
+configure:6095: $? = 1
+configure:6107: result: @
+configure:6125: checking for i686-w64-mingw32.static-strip
+configure:6152: result: i686-w64-mingw32.static-strip
+configure:6224: checking for i686-w64-mingw32.static-ranlib
+configure:6240: found /home/user/mxe/usr/bin/i686-w64-mingw32.static-ranlib
+configure:6251: result: i686-w64-mingw32.static-ranlib
+configure:6393: checking command to parse /home/user/mxe/usr/bin/i686-w64-mingw32.static-nm -B output from i686-w64-mingw32.static-gcc object
+configure:6546: i686-w64-mingw32.static-gcc -c -g -O2  conftest.c >&5
+configure:6549: $? = 0
+configure:6553: /home/user/mxe/usr/bin/i686-w64-mingw32.static-nm -B conftest.o \| sed -n -e 's/^.*[ ]\([ABCDGIRSTW][ABCDGIRSTW]*\)[ ][ ]*\([_A-Za-z][_A-Za-z0-9]*\)$/\1 \2 \2/p' | sed '/ __gnu_lto/d' \> conftest.nm
+configure:6556: $? = 0
+cannot find nm_test_var in conftest.nm
+configure:6546: i686-w64-mingw32.static-gcc -c -g -O2  conftest.c >&5
+configure:6549: $? = 0
+configure:6553: /home/user/mxe/usr/bin/i686-w64-mingw32.static-nm -B conftest.o \| sed -n -e 's/^.*[ ]\([ABCDGIRSTW][ABCDGIRSTW]*\)[ ][ ]*_\([_A-Za-z][_A-Za-z0-9]*\)$/\1 _\2 \2/p' | sed '/ __gnu_lto/d' \> conftest.nm
+configure:6556: $? = 0
+configure:6622: i686-w64-mingw32.static-gcc -o conftest.exe -g -O2   conftest.c conftstm.o >&5
+configure:6625: $? = 0
+configure:6663: result: ok
+configure:6710: checking for sysroot
+configure:6740: result: no
+configure:6747: checking for a working dd
+configure:6785: result: /bin/dd
+configure:6789: checking how to truncate binary pipes
+configure:6804: result: /bin/dd bs=4096 count=1
+configure:7093: checking for i686-w64-mingw32.static-mt
+configure:7123: result: no
+configure:7133: checking for mt
+configure:7149: found /bin/mt
+configure:7160: result: mt
+configure:7172: WARNING: using cross tools not prefixed with host triplet
+configure:7183: checking if mt is a manifest tool
+configure:7189: mt '-?'
+configure:7197: result: no
+configure:7874: checking how to run the C preprocessor
+configure:7905: i686-w64-mingw32.static-gcc -E  conftest.c
+configure:7905: $? = 0
+configure:7919: i686-w64-mingw32.static-gcc -E  conftest.c
+conftest.c:11:28: fatal error: ac_nonexistent.h: No such file or directory
+compilation terminated.
+configure:7919: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "pixman"
+| #define PACKAGE_TARNAME "pixman"
+| #define PACKAGE_VERSION "0.33.6"
+| #define PACKAGE_STRING "pixman 0.33.6"
+| #define PACKAGE_BUGREPORT "pixman@lists.freedesktop.org"
+| #define PACKAGE_URL ""
+| #define PACKAGE "pixman"
+| #define VERSION "0.33.6"
+| /* end confdefs.h.  */
+| #include <ac_nonexistent.h>
+configure:7944: result: i686-w64-mingw32.static-gcc -E
+configure:7964: i686-w64-mingw32.static-gcc -E  conftest.c
+configure:7964: $? = 0
+configure:7978: i686-w64-mingw32.static-gcc -E  conftest.c
+conftest.c:11:28: fatal error: ac_nonexistent.h: No such file or directory
+compilation terminated.
+configure:7978: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "pixman"
+| #define PACKAGE_TARNAME "pixman"
+| #define PACKAGE_VERSION "0.33.6"
+| #define PACKAGE_STRING "pixman 0.33.6"
+| #define PACKAGE_BUGREPORT "pixman@lists.freedesktop.org"
+| #define PACKAGE_URL ""
+| #define PACKAGE "pixman"
+| #define VERSION "0.33.6"
+| /* end confdefs.h.  */
+| #include <ac_nonexistent.h>
+configure:8007: checking for ANSI C header files
+configure:8027: i686-w64-mingw32.static-gcc -c -g -O2  conftest.c >&5
+configure:8027: $? = 0
+configure:8111: result: yes
+configure:8124: checking for sys/types.h
+configure:8124: i686-w64-mingw32.static-gcc -c -g -O2  conftest.c >&5
+configure:8124: $? = 0
+configure:8124: result: yes
+configure:8124: checking for sys/stat.h
+configure:8124: i686-w64-mingw32.static-gcc -c -g -O2  conftest.c >&5
+configure:8124: $? = 0
+configure:8124: result: yes
+configure:8124: checking for stdlib.h
+configure:8124: i686-w64-mingw32.static-gcc -c -g -O2  conftest.c >&5
+configure:8124: $? = 0
+configure:8124: result: yes
+configure:8124: checking for string.h
+configure:8124: i686-w64-mingw32.static-gcc -c -g -O2  conftest.c >&5
+configure:8124: $? = 0
+configure:8124: result: yes
+configure:8124: checking for memory.h
+configure:8124: i686-w64-mingw32.static-gcc -c -g -O2  conftest.c >&5
+configure:8124: $? = 0
+configure:8124: result: yes
+configure:8124: checking for strings.h
+configure:8124: i686-w64-mingw32.static-gcc -c -g -O2  conftest.c >&5
+configure:8124: $? = 0
+configure:8124: result: yes
+configure:8124: checking for inttypes.h
+configure:8124: i686-w64-mingw32.static-gcc -c -g -O2  conftest.c >&5
+configure:8124: $? = 0
+configure:8124: result: yes
+configure:8124: checking for stdint.h
+configure:8124: i686-w64-mingw32.static-gcc -c -g -O2  conftest.c >&5
+configure:8124: $? = 0
+configure:8124: result: yes
+configure:8124: checking for unistd.h
+configure:8124: i686-w64-mingw32.static-gcc -c -g -O2  conftest.c >&5
+configure:8124: $? = 0
+configure:8124: result: yes
+configure:8138: checking for dlfcn.h
+configure:8138: i686-w64-mingw32.static-gcc -c -g -O2  conftest.c >&5
+conftest.c:55:19: fatal error: dlfcn.h: No such file or directory
+compilation terminated.
+configure:8138: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "pixman"
+| #define PACKAGE_TARNAME "pixman"
+| #define PACKAGE_VERSION "0.33.6"
+| #define PACKAGE_STRING "pixman 0.33.6"
+| #define PACKAGE_BUGREPORT "pixman@lists.freedesktop.org"
+| #define PACKAGE_URL ""
+| #define PACKAGE "pixman"
+| #define VERSION "0.33.6"
+| #define STDC_HEADERS 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_MEMORY_H 1
+| #define HAVE_STRINGS_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_UNISTD_H 1
+| /* end confdefs.h.  */
+| #include <stdio.h>
+| #ifdef HAVE_SYS_TYPES_H
+| # include <sys/types.h>
+| #endif
+| #ifdef HAVE_SYS_STAT_H
+| # include <sys/stat.h>
+| #endif
+| #ifdef STDC_HEADERS
+| # include <stdlib.h>
+| # include <stddef.h>
+| #else
+| # ifdef HAVE_STDLIB_H
+| #  include <stdlib.h>
+| # endif
+| #endif
+| #ifdef HAVE_STRING_H
+| # if !defined STDC_HEADERS && defined HAVE_MEMORY_H
+| #  include <memory.h>
+| # endif
+| # include <string.h>
+| #endif
+| #ifdef HAVE_STRINGS_H
+| # include <strings.h>
+| #endif
+| #ifdef HAVE_INTTYPES_H
+| # include <inttypes.h>
+| #endif
+| #ifdef HAVE_STDINT_H
+| # include <stdint.h>
+| #endif
+| #ifdef HAVE_UNISTD_H
+| # include <unistd.h>
+| #endif
+| 
+| #include <dlfcn.h>
+configure:8138: result: no
+configure:8394: checking for objdir
+configure:8409: result: .libs
+configure:8669: checking if i686-w64-mingw32.static-gcc supports -fno-rtti -fno-exceptions
+configure:8687: i686-w64-mingw32.static-gcc -c -g -O2  -fno-rtti -fno-exceptions conftest.c >&5
+cc1: warning: command line option '-fno-rtti' is valid for C++/ObjC++ but not for C
+configure:8691: $? = 0
+configure:8704: result: no
+configure:9062: checking for i686-w64-mingw32.static-gcc option to produce PIC
+configure:9069: result: -DDLL_EXPORT -DPIC
+configure:9077: checking if i686-w64-mingw32.static-gcc PIC flag -DDLL_EXPORT -DPIC works
+configure:9095: i686-w64-mingw32.static-gcc -c -g -O2  -DDLL_EXPORT -DPIC -DPIC conftest.c >&5
+configure:9099: $? = 0
+configure:9112: result: yes
+configure:9141: checking if i686-w64-mingw32.static-gcc static flag -static works
+configure:9169: result: yes
+configure:9184: checking if i686-w64-mingw32.static-gcc supports -c -o file.o
+configure:9205: i686-w64-mingw32.static-gcc -c -g -O2  -o out/conftest2.o conftest.c >&5
+configure:9209: $? = 0
+configure:9231: result: yes
+configure:9239: checking if i686-w64-mingw32.static-gcc supports -c -o file.o
+configure:9286: result: yes
+configure:9319: checking whether the i686-w64-mingw32.static-gcc linker (/home/user/mxe/usr/bin/i686-w64-mingw32.static-ld) supports shared libraries
+configure:10578: result: yes
+configure:10818: checking dynamic linker characteristics
+configure:11639: result: Win32 ld.exe
+configure:11761: checking how to hardcode library paths into programs
+configure:11786: result: immediate
+configure:12334: checking whether stripping libraries is possible
+configure:12339: result: yes
+configure:12374: checking if libtool supports shared libraries
+configure:12376: result: yes
+configure:12379: checking whether to build shared libraries
+configure:12404: result: no
+configure:12407: checking whether to build static libraries
+configure:12411: result: yes
+configure:12450: checking for getisax
+configure:12450: i686-w64-mingw32.static-gcc -o conftest.exe -g -O2   conftest.c  >&5
+/tmp/ccvYLzPR.o: In function `main':
+/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/conftest.c:56: undefined reference to `getisax'
+collect2: error: ld returned 1 exit status
+configure:12450: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "pixman"
+| #define PACKAGE_TARNAME "pixman"
+| #define PACKAGE_VERSION "0.33.6"
+| #define PACKAGE_STRING "pixman 0.33.6"
+| #define PACKAGE_BUGREPORT "pixman@lists.freedesktop.org"
+| #define PACKAGE_URL ""
+| #define PACKAGE "pixman"
+| #define VERSION "0.33.6"
+| #define STDC_HEADERS 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_MEMORY_H 1
+| #define HAVE_STRINGS_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_UNISTD_H 1
+| #define LT_OBJDIR ".libs/"
+| /* end confdefs.h.  */
+| /* Define getisax to an innocuous variant, in case <limits.h> declares getisax.
+|    For example, HP-UX 11i <limits.h> declares gettimeofday.  */
+| #define getisax innocuous_getisax
+| 
+| /* System header to define __stub macros and hopefully few prototypes,
+|     which can conflict with char getisax (); below.
+|     Prefer <limits.h> to <assert.h> if __STDC__ is defined, since
+|     <limits.h> exists even on freestanding compilers.  */
+| 
+| #ifdef __STDC__
+| # include <limits.h>
+| #else
+| # include <assert.h>
+| #endif
+| 
+| #undef getisax
+| 
+| /* Override any GCC internal prototype to avoid an error.
+|    Use char because int might match the return type of a GCC
+|    builtin and then its argument prototype would still apply.  */
+| #ifdef __cplusplus
+| extern "C"
+| #endif
+| char getisax ();
+| /* The GNU C library defines this for functions which it implements
+|     to always fail with ENOSYS.  Some functions are actually named
+|     something starting with __ and the normal name is an alias.  */
+| #if defined __stub_getisax || defined __stub___getisax
+| choke me
+| #endif
+| 
+| int
+| main ()
+| {
+| return getisax ();
+|   ;
+|   return 0;
+| }
+configure:12450: result: no
+configure:12459: checking whether byte ordering is bigendian
+configure:12474: i686-w64-mingw32.static-gcc -c -g -O2  conftest.c >&5
+conftest.c:23:9: error: unknown type name 'not'
+         not a universal capable compiler
+         ^
+conftest.c:23:15: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'universal'
+         not a universal capable compiler
+               ^
+conftest.c:23:15: error: unknown type name 'universal'
+configure:12474: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "pixman"
+| #define PACKAGE_TARNAME "pixman"
+| #define PACKAGE_VERSION "0.33.6"
+| #define PACKAGE_STRING "pixman 0.33.6"
+| #define PACKAGE_BUGREPORT "pixman@lists.freedesktop.org"
+| #define PACKAGE_URL ""
+| #define PACKAGE "pixman"
+| #define VERSION "0.33.6"
+| #define STDC_HEADERS 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_MEMORY_H 1
+| #define HAVE_STRINGS_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_UNISTD_H 1
+| #define LT_OBJDIR ".libs/"
+| /* end confdefs.h.  */
+| #ifndef __APPLE_CC__
+| 	       not a universal capable compiler
+| 	     #endif
+| 	     typedef int dummy;
+| 
+configure:12519: i686-w64-mingw32.static-gcc -c -g -O2  conftest.c >&5
+configure:12519: $? = 0
+configure:12537: i686-w64-mingw32.static-gcc -c -g -O2  conftest.c >&5
+conftest.c: In function 'main':
+conftest.c:29:4: error: unknown type name 'not'
+    not big endian
+    ^
+conftest.c:29:12: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'endian'
+    not big endian
+            ^
+configure:12537: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "pixman"
+| #define PACKAGE_TARNAME "pixman"
+| #define PACKAGE_VERSION "0.33.6"
+| #define PACKAGE_STRING "pixman 0.33.6"
+| #define PACKAGE_BUGREPORT "pixman@lists.freedesktop.org"
+| #define PACKAGE_URL ""
+| #define PACKAGE "pixman"
+| #define VERSION "0.33.6"
+| #define STDC_HEADERS 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_MEMORY_H 1
+| #define HAVE_STRINGS_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_UNISTD_H 1
+| #define LT_OBJDIR ".libs/"
+| /* end confdefs.h.  */
+| #include <sys/types.h>
+| 		#include <sys/param.h>
+| 
+| int
+| main ()
+| {
+| #if BYTE_ORDER != BIG_ENDIAN
+| 		 not big endian
+| 		#endif
+| 
+|   ;
+|   return 0;
+| }
+configure:12665: result: no
+configure:12683: checking for inline
+configure:12699: i686-w64-mingw32.static-gcc -c -g -O2  conftest.c >&5
+configure:12699: $? = 0
+configure:12707: result: inline
+configure:12731: checking whether the compiler supports -Werror
+configure:12747: i686-w64-mingw32.static-gcc -o conftest.exe -g -O2 -Werror    conftest.c   >&5
+configure:12747: $? = 0
+configure:12770: result: yes
+configure:12781: checking size of long
+configure:12786: i686-w64-mingw32.static-gcc -c -g -O2  conftest.c >&5
+configure:12786: $? = 0
+configure:12786: i686-w64-mingw32.static-gcc -c -g -O2  conftest.c >&5
+conftest.c: In function 'main':
+conftest.c:58:12: error: size of array 'test_array' is negative
+ static int test_array [1 - 2 * !(((long int) (sizeof (long))) <= 0)];
+            ^
+configure:12786: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "pixman"
+| #define PACKAGE_TARNAME "pixman"
+| #define PACKAGE_VERSION "0.33.6"
+| #define PACKAGE_STRING "pixman 0.33.6"
+| #define PACKAGE_BUGREPORT "pixman@lists.freedesktop.org"
+| #define PACKAGE_URL ""
+| #define PACKAGE "pixman"
+| #define VERSION "0.33.6"
+| #define STDC_HEADERS 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_MEMORY_H 1
+| #define HAVE_STRINGS_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_UNISTD_H 1
+| #define LT_OBJDIR ".libs/"
+| /* end confdefs.h.  */
+| #include <stdio.h>
+| #ifdef HAVE_SYS_TYPES_H
+| # include <sys/types.h>
+| #endif
+| #ifdef HAVE_SYS_STAT_H
+| # include <sys/stat.h>
+| #endif
+| #ifdef STDC_HEADERS
+| # include <stdlib.h>
+| # include <stddef.h>
+| #else
+| # ifdef HAVE_STDLIB_H
+| #  include <stdlib.h>
+| # endif
+| #endif
+| #ifdef HAVE_STRING_H
+| # if !defined STDC_HEADERS && defined HAVE_MEMORY_H
+| #  include <memory.h>
+| # endif
+| # include <string.h>
+| #endif
+| #ifdef HAVE_STRINGS_H
+| # include <strings.h>
+| #endif
+| #ifdef HAVE_INTTYPES_H
+| # include <inttypes.h>
+| #endif
+| #ifdef HAVE_STDINT_H
+| # include <stdint.h>
+| #endif
+| #ifdef HAVE_UNISTD_H
+| # include <unistd.h>
+| #endif
+| int
+| main ()
+| {
+| static int test_array [1 - 2 * !(((long int) (sizeof (long))) <= 0)];
+| test_array [0] = 0;
+| return test_array [0];
+| 
+|   ;
+|   return 0;
+| }
+configure:12786: i686-w64-mingw32.static-gcc -c -g -O2  conftest.c >&5
+conftest.c: In function 'main':
+conftest.c:58:12: error: size of array 'test_array' is negative
+ static int test_array [1 - 2 * !(((long int) (sizeof (long))) <= 1)];
+            ^
+configure:12786: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "pixman"
+| #define PACKAGE_TARNAME "pixman"
+| #define PACKAGE_VERSION "0.33.6"
+| #define PACKAGE_STRING "pixman 0.33.6"
+| #define PACKAGE_BUGREPORT "pixman@lists.freedesktop.org"
+| #define PACKAGE_URL ""
+| #define PACKAGE "pixman"
+| #define VERSION "0.33.6"
+| #define STDC_HEADERS 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_MEMORY_H 1
+| #define HAVE_STRINGS_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_UNISTD_H 1
+| #define LT_OBJDIR ".libs/"
+| /* end confdefs.h.  */
+| #include <stdio.h>
+| #ifdef HAVE_SYS_TYPES_H
+| # include <sys/types.h>
+| #endif
+| #ifdef HAVE_SYS_STAT_H
+| # include <sys/stat.h>
+| #endif
+| #ifdef STDC_HEADERS
+| # include <stdlib.h>
+| # include <stddef.h>
+| #else
+| # ifdef HAVE_STDLIB_H
+| #  include <stdlib.h>
+| # endif
+| #endif
+| #ifdef HAVE_STRING_H
+| # if !defined STDC_HEADERS && defined HAVE_MEMORY_H
+| #  include <memory.h>
+| # endif
+| # include <string.h>
+| #endif
+| #ifdef HAVE_STRINGS_H
+| # include <strings.h>
+| #endif
+| #ifdef HAVE_INTTYPES_H
+| # include <inttypes.h>
+| #endif
+| #ifdef HAVE_STDINT_H
+| # include <stdint.h>
+| #endif
+| #ifdef HAVE_UNISTD_H
+| # include <unistd.h>
+| #endif
+| int
+| main ()
+| {
+| static int test_array [1 - 2 * !(((long int) (sizeof (long))) <= 1)];
+| test_array [0] = 0;
+| return test_array [0];
+| 
+|   ;
+|   return 0;
+| }
+configure:12786: i686-w64-mingw32.static-gcc -c -g -O2  conftest.c >&5
+conftest.c: In function 'main':
+conftest.c:58:12: error: size of array 'test_array' is negative
+ static int test_array [1 - 2 * !(((long int) (sizeof (long))) <= 3)];
+            ^
+configure:12786: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "pixman"
+| #define PACKAGE_TARNAME "pixman"
+| #define PACKAGE_VERSION "0.33.6"
+| #define PACKAGE_STRING "pixman 0.33.6"
+| #define PACKAGE_BUGREPORT "pixman@lists.freedesktop.org"
+| #define PACKAGE_URL ""
+| #define PACKAGE "pixman"
+| #define VERSION "0.33.6"
+| #define STDC_HEADERS 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_MEMORY_H 1
+| #define HAVE_STRINGS_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_UNISTD_H 1
+| #define LT_OBJDIR ".libs/"
+| /* end confdefs.h.  */
+| #include <stdio.h>
+| #ifdef HAVE_SYS_TYPES_H
+| # include <sys/types.h>
+| #endif
+| #ifdef HAVE_SYS_STAT_H
+| # include <sys/stat.h>
+| #endif
+| #ifdef STDC_HEADERS
+| # include <stdlib.h>
+| # include <stddef.h>
+| #else
+| # ifdef HAVE_STDLIB_H
+| #  include <stdlib.h>
+| # endif
+| #endif
+| #ifdef HAVE_STRING_H
+| # if !defined STDC_HEADERS && defined HAVE_MEMORY_H
+| #  include <memory.h>
+| # endif
+| # include <string.h>
+| #endif
+| #ifdef HAVE_STRINGS_H
+| # include <strings.h>
+| #endif
+| #ifdef HAVE_INTTYPES_H
+| # include <inttypes.h>
+| #endif
+| #ifdef HAVE_STDINT_H
+| # include <stdint.h>
+| #endif
+| #ifdef HAVE_UNISTD_H
+| # include <unistd.h>
+| #endif
+| int
+| main ()
+| {
+| static int test_array [1 - 2 * !(((long int) (sizeof (long))) <= 3)];
+| test_array [0] = 0;
+| return test_array [0];
+| 
+|   ;
+|   return 0;
+| }
+configure:12786: i686-w64-mingw32.static-gcc -c -g -O2  conftest.c >&5
+configure:12786: $? = 0
+configure:12786: i686-w64-mingw32.static-gcc -c -g -O2  conftest.c >&5
+configure:12786: $? = 0
+configure:12786: i686-w64-mingw32.static-gcc -c -g -O2  conftest.c >&5
+configure:12786: $? = 0
+configure:12800: result: 4
+configure:12812: checking whether __SUNPRO_C is declared
+configure:12812: i686-w64-mingw32.static-gcc -c -g -O2  conftest.c >&5
+conftest.c: In function 'main':
+conftest.c:63:10: error: '__SUNPRO_C' undeclared (first use in this function)
+   (void) __SUNPRO_C;
+          ^
+conftest.c:63:10: note: each undeclared identifier is reported only once for each function it appears in
+configure:12812: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "pixman"
+| #define PACKAGE_TARNAME "pixman"
+| #define PACKAGE_VERSION "0.33.6"
+| #define PACKAGE_STRING "pixman 0.33.6"
+| #define PACKAGE_BUGREPORT "pixman@lists.freedesktop.org"
+| #define PACKAGE_URL ""
+| #define PACKAGE "pixman"
+| #define VERSION "0.33.6"
+| #define STDC_HEADERS 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_MEMORY_H 1
+| #define HAVE_STRINGS_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_UNISTD_H 1
+| #define LT_OBJDIR ".libs/"
+| #define SIZEOF_LONG 4
+| /* end confdefs.h.  */
+| #include <stdio.h>
+| #ifdef HAVE_SYS_TYPES_H
+| # include <sys/types.h>
+| #endif
+| #ifdef HAVE_SYS_STAT_H
+| # include <sys/stat.h>
+| #endif
+| #ifdef STDC_HEADERS
+| # include <stdlib.h>
+| # include <stddef.h>
+| #else
+| # ifdef HAVE_STDLIB_H
+| #  include <stdlib.h>
+| # endif
+| #endif
+| #ifdef HAVE_STRING_H
+| # if !defined STDC_HEADERS && defined HAVE_MEMORY_H
+| #  include <memory.h>
+| # endif
+| # include <string.h>
+| #endif
+| #ifdef HAVE_STRINGS_H
+| # include <strings.h>
+| #endif
+| #ifdef HAVE_INTTYPES_H
+| # include <inttypes.h>
+| #endif
+| #ifdef HAVE_STDINT_H
+| # include <stdint.h>
+| #endif
+| #ifdef HAVE_UNISTD_H
+| # include <unistd.h>
+| #endif
+| int
+| main ()
+| {
+| #ifndef __SUNPRO_C
+| #ifdef __cplusplus
+|   (void) __SUNPRO_C;
+| #else
+|   (void) __SUNPRO_C;
+| #endif
+| #endif
+| 
+|   ;
+|   return 0;
+| }
+configure:12812: result: no
+configure:12819: checking whether __amd64 is declared
+configure:12819: i686-w64-mingw32.static-gcc -c -g -O2  conftest.c >&5
+conftest.c: In function 'main':
+conftest.c:63:10: error: '__amd64' undeclared (first use in this function)
+   (void) __amd64;
+          ^
+conftest.c:63:10: note: each undeclared identifier is reported only once for each function it appears in
+configure:12819: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "pixman"
+| #define PACKAGE_TARNAME "pixman"
+| #define PACKAGE_VERSION "0.33.6"
+| #define PACKAGE_STRING "pixman 0.33.6"
+| #define PACKAGE_BUGREPORT "pixman@lists.freedesktop.org"
+| #define PACKAGE_URL ""
+| #define PACKAGE "pixman"
+| #define VERSION "0.33.6"
+| #define STDC_HEADERS 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_MEMORY_H 1
+| #define HAVE_STRINGS_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_UNISTD_H 1
+| #define LT_OBJDIR ".libs/"
+| #define SIZEOF_LONG 4
+| /* end confdefs.h.  */
+| #include <stdio.h>
+| #ifdef HAVE_SYS_TYPES_H
+| # include <sys/types.h>
+| #endif
+| #ifdef HAVE_SYS_STAT_H
+| # include <sys/stat.h>
+| #endif
+| #ifdef STDC_HEADERS
+| # include <stdlib.h>
+| # include <stddef.h>
+| #else
+| # ifdef HAVE_STDLIB_H
+| #  include <stdlib.h>
+| # endif
+| #endif
+| #ifdef HAVE_STRING_H
+| # if !defined STDC_HEADERS && defined HAVE_MEMORY_H
+| #  include <memory.h>
+| # endif
+| # include <string.h>
+| #endif
+| #ifdef HAVE_STRINGS_H
+| # include <strings.h>
+| #endif
+| #ifdef HAVE_INTTYPES_H
+| # include <inttypes.h>
+| #endif
+| #ifdef HAVE_STDINT_H
+| # include <stdint.h>
+| #endif
+| #ifdef HAVE_UNISTD_H
+| # include <unistd.h>
+| #endif
+| int
+| main ()
+| {
+| #ifndef __amd64
+| #ifdef __cplusplus
+|   (void) __amd64;
+| #else
+|   (void) __amd64;
+| #endif
+| #endif
+| 
+|   ;
+|   return 0;
+| }
+configure:12819: result: no
+configure:12860: checking whether the compiler supports -Wall
+configure:12878: i686-w64-mingw32.static-gcc -o conftest.exe -g -O2 -Werror -Wall    conftest.c   >&5
+configure:12878: $? = 0
+configure:12904: result: yes
+configure:12907: checking whether the compiler supports -Wdeclaration-after-statement
+configure:12925: i686-w64-mingw32.static-gcc -o conftest.exe -g -O2 -Wall -Werror -Wdeclaration-after-statement    conftest.c   >&5
+configure:12925: $? = 0
+configure:12951: result: yes
+configure:12954: checking whether the compiler supports -Wno-unused-local-typedefs
+configure:12972: i686-w64-mingw32.static-gcc -o conftest.exe -g -O2 -Wall -Wdeclaration-after-statement -Werror -Wno-unused-local-typedefs    conftest.c   >&5
+configure:12972: $? = 0
+configure:12998: result: yes
+configure:13001: checking whether the compiler supports -fno-strict-aliasing
+configure:13019: i686-w64-mingw32.static-gcc -o conftest.exe -g -O2 -Wall -Wdeclaration-after-statement -Wno-unused-local-typedefs -Werror -fno-strict-aliasing    conftest.c   >&5
+configure:13019: $? = 0
+configure:13045: result: yes
+configure:13060: checking for i686-w64-mingw32.static-gcc option to support OpenMP
+configure:13075: i686-w64-mingw32.static-gcc -o conftest.exe -g -O2 -Wall -Wdeclaration-after-statement -Wno-unused-local-typedefs -fno-strict-aliasing   conftest.c  >&5
+conftest.c:25:2: error: unknown type name 'choke'
+  choke me
+  ^
+In file included from conftest.c:27:0:
+/home/user/mxe/usr/lib/gcc/i686-w64-mingw32.static/5.4.0/include/omp.h:35:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'typedef'
+ typedef struct
+ ^
+configure:13075: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "pixman"
+| #define PACKAGE_TARNAME "pixman"
+| #define PACKAGE_VERSION "0.33.6"
+| #define PACKAGE_STRING "pixman 0.33.6"
+| #define PACKAGE_BUGREPORT "pixman@lists.freedesktop.org"
+| #define PACKAGE_URL ""
+| #define PACKAGE "pixman"
+| #define VERSION "0.33.6"
+| #define STDC_HEADERS 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_MEMORY_H 1
+| #define HAVE_STRINGS_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_UNISTD_H 1
+| #define LT_OBJDIR ".libs/"
+| #define SIZEOF_LONG 4
+| /* end confdefs.h.  */
+| 
+| #ifndef _OPENMP
+|  choke me
+| #endif
+| #include <omp.h>
+| int main () { return omp_get_num_threads (); }
+| 
+configure:13093: i686-w64-mingw32.static-gcc -o conftest.exe -g -O2 -Wall -Wdeclaration-after-statement -Wno-unused-local-typedefs -fno-strict-aliasing -fopenmp   conftest.c  >&5
+configure:13093: $? = 0
+configure:13107: result: -fopenmp
+configure:13173: i686-w64-mingw32.static-gcc -o conftest.exe -g -O2 -Wall -Wdeclaration-after-statement -Wno-unused-local-typedefs -fno-strict-aliasing -fopenmp   -fopenmp conftest.c   >&5
+configure:13173: $? = 0
+configure:13205: checking whether the compiler supports -fvisibility=hidden
+configure:13230: i686-w64-mingw32.static-gcc -o conftest.exe -g -O2 -Wall -Wdeclaration-after-statement -Wno-unused-local-typedefs -fno-strict-aliasing -Werror -fvisibility=hidden    conftest.c   >&5
+conftest.c:26:2: error: #error Have -fvisibility but it is ignored and generates a warning
+ #error Have -fvisibility but it is ignored and generates a warning
+  ^
+configure:13230: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "pixman"
+| #define PACKAGE_TARNAME "pixman"
+| #define PACKAGE_VERSION "0.33.6"
+| #define PACKAGE_STRING "pixman 0.33.6"
+| #define PACKAGE_BUGREPORT "pixman@lists.freedesktop.org"
+| #define PACKAGE_URL ""
+| #define PACKAGE "pixman"
+| #define VERSION "0.33.6"
+| #define STDC_HEADERS 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_MEMORY_H 1
+| #define HAVE_STRINGS_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_UNISTD_H 1
+| #define LT_OBJDIR ".libs/"
+| #define SIZEOF_LONG 4
+| #define USE_OPENMP 1
+| /* end confdefs.h.  */
+| #if defined(__GNUC__) && (__GNUC__ >= 4)
+| #ifdef _WIN32
+| #error Have -fvisibility but it is ignored and generates a warning
+| #endif
+| #else
+| #error Need GCC 4.0 for visibility
+| #endif
+| 
+| 		 int main(int c, char **v) { (void)c; (void)v; return 0; }
+| 
+configure:13256: result: no
+configure:13260: checking whether the compiler supports -xldscope=hidden
+configure:13282: i686-w64-mingw32.static-gcc -o conftest.exe -g -O2 -Wall -Wdeclaration-after-statement -Wno-unused-local-typedefs -fno-strict-aliasing -Werror -xldscope=hidden    conftest.c   >&5
+i686-w64-mingw32.static-gcc: error: language ldscope=hidden not recognized
+i686-w64-mingw32.static-gcc: error: language ldscope=hidden not recognized
+configure:13282: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "pixman"
+| #define PACKAGE_TARNAME "pixman"
+| #define PACKAGE_VERSION "0.33.6"
+| #define PACKAGE_STRING "pixman 0.33.6"
+| #define PACKAGE_BUGREPORT "pixman@lists.freedesktop.org"
+| #define PACKAGE_URL ""
+| #define PACKAGE "pixman"
+| #define VERSION "0.33.6"
+| #define STDC_HEADERS 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_MEMORY_H 1
+| #define HAVE_STRINGS_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_UNISTD_H 1
+| #define LT_OBJDIR ".libs/"
+| #define SIZEOF_LONG 4
+| #define USE_OPENMP 1
+| /* end confdefs.h.  */
+| #if defined(__SUNPRO_C) && (__SUNPRO_C >= 0x550)
+| #else
+| #error Need Sun Studio 8 for visibility
+| #endif
+| 
+| 		 int main(int c, char **v) { (void)c; (void)v; return 0; }
+| 
+configure:13308: result: no
+configure:13318: checking whether to use Loongson MMI assembler
+configure:13343: i686-w64-mingw32.static-gcc -o conftest.exe  -march=loongson2f -g -O2 -Wall -Wdeclaration-after-statement -Wno-unused-local-typedefs -fno-strict-aliasing -I.   conftest.c  >&5
+conftest.c:1:0: error: bad value (loongson2f) for -march= switch
+ /* confdefs.h */
+ ^
+configure:13343: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "pixman"
+| #define PACKAGE_TARNAME "pixman"
+| #define PACKAGE_VERSION "0.33.6"
+| #define PACKAGE_STRING "pixman 0.33.6"
+| #define PACKAGE_BUGREPORT "pixman@lists.freedesktop.org"
+| #define PACKAGE_URL ""
+| #define PACKAGE "pixman"
+| #define VERSION "0.33.6"
+| #define STDC_HEADERS 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_MEMORY_H 1
+| #define HAVE_STRINGS_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_UNISTD_H 1
+| #define LT_OBJDIR ".libs/"
+| #define SIZEOF_LONG 4
+| #define USE_OPENMP 1
+| /* end confdefs.h.  */
+| 
+| #ifndef __mips_loongson_vector_rev
+| #error "Loongson Multimedia Instructions are only available on Loongson"
+| #endif
+| #if defined(__GNUC__) && (__GNUC__ < 4 || (__GNUC__ == 4 && __GNUC_MINOR__ < 4))
+| #error "Need GCC >= 4.4 for Loongson MMI compilation"
+| #endif
+| #include "pixman/loongson-mmintrin.h"
+| int main () {
+|     union {
+|         __m64 v;
+|         char c[8];
+|     } a = { .c = {1, 2, 3, 4, 5, 6, 7, 8} };
+|     int b = 4;
+|     __m64 c = _mm_srli_pi16 (a.v, b);
+|     return 0;
+| }
+configure:13370: result: no
+configure:13400: checking whether to use MMX intrinsics
+configure:13442: i686-w64-mingw32.static-gcc -c -mmmx -Winline -g -O2 -Wall -Wdeclaration-after-statement -Wno-unused-local-typedefs -fno-strict-aliasing  conftest.c >&5
+configure:13442: $? = 0
+configure:13468: result: yes
+configure:13496: checking whether to use SSE2 intrinsics
+configure:13519: i686-w64-mingw32.static-gcc -c -msse2 -Winline -g -O2 -Wall -Wdeclaration-after-statement -Wno-unused-local-typedefs -fno-strict-aliasing  conftest.c >&5
+configure:13519: $? = 0
+configure:13543: result: yes
+configure:13564: checking whether to use SSSE3 intrinsics
+configure:13583: i686-w64-mingw32.static-gcc -c -mssse3 -Winline -g -O2 -Wall -Wdeclaration-after-statement -Wno-unused-local-typedefs -fno-strict-aliasing  conftest.c >&5
+configure:13583: $? = 0
+configure:13607: result: yes
+configure:13674: checking whether to use VMX/Altivec intrinsics
+configure:13691: i686-w64-mingw32.static-gcc -c -maltivec -mabi=altivec -g -O2 -Wall -Wdeclaration-after-statement -Wno-unused-local-typedefs -fno-strict-aliasing  conftest.c >&5
+i686-w64-mingw32.static-gcc: error: unrecognized argument in option '-mabi=altivec'
+i686-w64-mingw32.static-gcc: note: valid arguments to '-mabi=' are: ms sysv
+i686-w64-mingw32.static-gcc: error: unrecognized command line option '-maltivec'
+configure:13691: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "pixman"
+| #define PACKAGE_TARNAME "pixman"
+| #define PACKAGE_VERSION "0.33.6"
+| #define PACKAGE_STRING "pixman 0.33.6"
+| #define PACKAGE_BUGREPORT "pixman@lists.freedesktop.org"
+| #define PACKAGE_URL ""
+| #define PACKAGE "pixman"
+| #define VERSION "0.33.6"
+| #define STDC_HEADERS 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_MEMORY_H 1
+| #define HAVE_STRINGS_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_UNISTD_H 1
+| #define LT_OBJDIR ".libs/"
+| #define SIZEOF_LONG 4
+| #define USE_OPENMP 1
+| #define USE_X86_MMX 1
+| #define USE_SSE2 1
+| #define USE_SSSE3 1
+| /* end confdefs.h.  */
+| 
+| #if defined(__GNUC__) && (__GNUC__ < 3 || (__GNUC__ == 3 && __GNUC_MINOR__ < 4))
+| #error "Need GCC >= 3.4 for sane altivec support"
+| #endif
+| #include <altivec.h>
+| int main () {
+|     vector unsigned int v = vec_splat_u32 (1);
+|     v = vec_sub (v, v);
+|     return 0;
+| }
+configure:13717: result: no
+configure:13735: checking whether to use ARM SIMD assembler
+configure:13753: i686-w64-mingw32.static-gcc -c -x assembler-with-cpp -g -O2 -Wall -Wdeclaration-after-statement -Wno-unused-local-typedefs -fno-strict-aliasing  conftest.c >&5
+conftest.c:34:2: error: #error EABI is required (to be sure that calling conventions are compatible)
+ #error EABI is required (to be sure that calling conventions are compatible)
+  ^
+configure:13753: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "pixman"
+| #define PACKAGE_TARNAME "pixman"
+| #define PACKAGE_VERSION "0.33.6"
+| #define PACKAGE_STRING "pixman 0.33.6"
+| #define PACKAGE_BUGREPORT "pixman@lists.freedesktop.org"
+| #define PACKAGE_URL ""
+| #define PACKAGE "pixman"
+| #define VERSION "0.33.6"
+| #define STDC_HEADERS 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_MEMORY_H 1
+| #define HAVE_STRINGS_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_UNISTD_H 1
+| #define LT_OBJDIR ".libs/"
+| #define SIZEOF_LONG 4
+| #define USE_OPENMP 1
+| #define USE_X86_MMX 1
+| #define USE_SSE2 1
+| #define USE_SSSE3 1
+| /* end confdefs.h.  */
+| 
+| .text
+| .arch armv6
+| .object_arch armv4
+| .arm
+| .altmacro
+| #ifndef __ARM_EABI__
+| #error EABI is required (to be sure that calling conventions are compatible)
+| #endif
+| pld [r0]
+| uqadd8 r0, r0, r0
+configure:13786: result: no
+configure:13793: checking whether to use ARM NEON assembler
+configure:13813: i686-w64-mingw32.static-gcc -c -x assembler-with-cpp -g -O2 -Wall -Wdeclaration-after-statement -Wno-unused-local-typedefs -fno-strict-aliasing  conftest.c >&5
+conftest.c:36:2: error: #error EABI is required (to be sure that calling conventions are compatible)
+ #error EABI is required (to be sure that calling conventions are compatible)
+  ^
+configure:13813: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "pixman"
+| #define PACKAGE_TARNAME "pixman"
+| #define PACKAGE_VERSION "0.33.6"
+| #define PACKAGE_STRING "pixman 0.33.6"
+| #define PACKAGE_BUGREPORT "pixman@lists.freedesktop.org"
+| #define PACKAGE_URL ""
+| #define PACKAGE "pixman"
+| #define VERSION "0.33.6"
+| #define STDC_HEADERS 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_MEMORY_H 1
+| #define HAVE_STRINGS_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_UNISTD_H 1
+| #define LT_OBJDIR ".libs/"
+| #define SIZEOF_LONG 4
+| #define USE_OPENMP 1
+| #define USE_X86_MMX 1
+| #define USE_SSE2 1
+| #define USE_SSSE3 1
+| /* end confdefs.h.  */
+| 
+| .text
+| .fpu neon
+| .arch armv7a
+| .object_arch armv4
+| .eabi_attribute 10, 0
+| .arm
+| .altmacro
+| #ifndef __ARM_EABI__
+| #error EABI is required (to be sure that calling conventions are compatible)
+| #endif
+| pld [r0]
+| vmovn.u16 d0, q0
+configure:13846: result: no
+configure:13877: checking whether to use ARM IWMMXT intrinsics
+configure:13903: i686-w64-mingw32.static-gcc -c -g -O2 -Wall -Wdeclaration-after-statement -Wno-unused-local-typedefs -fno-strict-aliasing -flax-vector-conversions -Winline -march=iwmmxt2  conftest.c >&5
+conftest.c:1:0: error: bad value (iwmmxt2) for -march= switch
+ /* confdefs.h */
+ ^
+configure:13903: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "pixman"
+| #define PACKAGE_TARNAME "pixman"
+| #define PACKAGE_VERSION "0.33.6"
+| #define PACKAGE_STRING "pixman 0.33.6"
+| #define PACKAGE_BUGREPORT "pixman@lists.freedesktop.org"
+| #define PACKAGE_URL ""
+| #define PACKAGE "pixman"
+| #define VERSION "0.33.6"
+| #define STDC_HEADERS 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_MEMORY_H 1
+| #define HAVE_STRINGS_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_UNISTD_H 1
+| #define LT_OBJDIR ".libs/"
+| #define SIZEOF_LONG 4
+| #define USE_OPENMP 1
+| #define USE_X86_MMX 1
+| #define USE_SSE2 1
+| #define USE_SSSE3 1
+| /* end confdefs.h.  */
+| 
+| #ifndef __arm__
+| #error "IWMMXT is only available on ARM"
+| #endif
+| #ifndef __IWMMXT__
+| #error "IWMMXT not enabled (with -march=iwmmxt)"
+| #endif
+| #if defined(__GNUC__) && (__GNUC__ < 4 || (__GNUC__ == 4 && __GNUC_MINOR__ < 8))
+| #error "Need GCC >= 4.8 for IWMMXT intrinsics"
+| #endif
+| #include <mmintrin.h>
+| int main () {
+| 	union {
+| 		__m64 v;
+| 		char c[8];
+| 	} a = { .c = {1, 2, 3, 4, 5, 6, 7, 8} };
+| 	int b = 4;
+| 	__m64 c = _mm_srli_si64 (a.v, b);
+| }
+configure:13921: result: no
+configure:13938: checking whether to use MIPS DSPr2 assembler
+configure:13961: i686-w64-mingw32.static-gcc -c -mdspr2 -g -O2 -Wall -Wdeclaration-after-statement -Wno-unused-local-typedefs -fno-strict-aliasing  conftest.c >&5
+i686-w64-mingw32.static-gcc: error: unrecognized command line option '-mdspr2'
+configure:13961: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "pixman"
+| #define PACKAGE_TARNAME "pixman"
+| #define PACKAGE_VERSION "0.33.6"
+| #define PACKAGE_STRING "pixman 0.33.6"
+| #define PACKAGE_BUGREPORT "pixman@lists.freedesktop.org"
+| #define PACKAGE_URL ""
+| #define PACKAGE "pixman"
+| #define VERSION "0.33.6"
+| #define STDC_HEADERS 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_MEMORY_H 1
+| #define HAVE_STRINGS_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_UNISTD_H 1
+| #define LT_OBJDIR ".libs/"
+| #define SIZEOF_LONG 4
+| #define USE_OPENMP 1
+| #define USE_X86_MMX 1
+| #define USE_SSE2 1
+| #define USE_SSSE3 1
+| /* end confdefs.h.  */
+| 
+| #if !(defined(__mips__) &&  __mips_isa_rev >= 2)
+| #error MIPS DSPr2 is currently only available on MIPS32r2 platforms.
+| #endif
+| int
+| main ()
+| {
+|     int c = 0, a = 0, b = 0;
+|     __asm__ __volatile__ (
+|         "precr.qb.ph %[c], %[a], %[b]          \n\t"
+|         : [c] "=r" (c)
+|         : [a] "r" (a), [b] "r" (b)
+|     );
+|     return c;
+| }
+configure:13994: result: no
+configure:14002: checking whether to use GNU-style inline assembler
+configure:14013: i686-w64-mingw32.static-gcc -c -g -O2 -Wall -Wdeclaration-after-statement -Wno-unused-local-typedefs -fno-strict-aliasing  conftest.c >&5
+configure:14013: $? = 0
+configure:14036: result: yes
+configure:14102: checking for i686-w64-mingw32.static-pkg-config
+configure:14120: found /home/user/mxe/usr/bin/i686-w64-mingw32.static-pkg-config
+configure:14132: result: /home/user/mxe/usr/bin/i686-w64-mingw32.static-pkg-config
+configure:14200: checking pkg-config is at least version 0.9.0
+configure:14203: result: yes
+configure:14352: checking for pixman_version_string in -lpixman-1
+configure:14377: i686-w64-mingw32.static-gcc -o conftest.exe -g -O2 -Wall -Wdeclaration-after-statement -Wno-unused-local-typedefs -fno-strict-aliasing   conftest.c -lpixman-1   >&5
+/home/user/mxe/usr/bin/i686-w64-mingw32.static-ld: cannot find -lpixman-1
+collect2: error: ld returned 1 exit status
+configure:14377: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "pixman"
+| #define PACKAGE_TARNAME "pixman"
+| #define PACKAGE_VERSION "0.33.6"
+| #define PACKAGE_STRING "pixman 0.33.6"
+| #define PACKAGE_BUGREPORT "pixman@lists.freedesktop.org"
+| #define PACKAGE_URL ""
+| #define PACKAGE "pixman"
+| #define VERSION "0.33.6"
+| #define STDC_HEADERS 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_MEMORY_H 1
+| #define HAVE_STRINGS_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_UNISTD_H 1
+| #define LT_OBJDIR ".libs/"
+| #define SIZEOF_LONG 4
+| #define USE_OPENMP 1
+| #define USE_X86_MMX 1
+| #define USE_SSE2 1
+| #define USE_SSSE3 1
+| #define USE_GCC_INLINE_ASM 1
+| /* end confdefs.h.  */
+| 
+| /* Override any GCC internal prototype to avoid an error.
+|    Use char because int might match the return type of a GCC
+|    builtin and then its argument prototype would still apply.  */
+| #ifdef __cplusplus
+| extern "C"
+| #endif
+| char pixman_version_string ();
+| int
+| main ()
+| {
+| return pixman_version_string ();
+|   ;
+|   return 0;
+| }
+configure:14386: result: no
+configure:14483: checking for posix_memalign
+configure:14483: i686-w64-mingw32.static-gcc -o conftest.exe -g -O2 -Wall -Wdeclaration-after-statement -Wno-unused-local-typedefs -fno-strict-aliasing   conftest.c  >&5
+conftest.c:51:6: warning: conflicting types for built-in function 'posix_memalign'
+ char posix_memalign ();
+      ^
+/tmp/ccvdHdHh.o: In function `main':
+/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/conftest.c:62: undefined reference to `posix_memalign'
+collect2: error: ld returned 1 exit status
+configure:14483: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "pixman"
+| #define PACKAGE_TARNAME "pixman"
+| #define PACKAGE_VERSION "0.33.6"
+| #define PACKAGE_STRING "pixman 0.33.6"
+| #define PACKAGE_BUGREPORT "pixman@lists.freedesktop.org"
+| #define PACKAGE_URL ""
+| #define PACKAGE "pixman"
+| #define VERSION "0.33.6"
+| #define STDC_HEADERS 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_MEMORY_H 1
+| #define HAVE_STRINGS_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_UNISTD_H 1
+| #define LT_OBJDIR ".libs/"
+| #define SIZEOF_LONG 4
+| #define USE_OPENMP 1
+| #define USE_X86_MMX 1
+| #define USE_SSE2 1
+| #define USE_SSSE3 1
+| #define USE_GCC_INLINE_ASM 1
+| /* end confdefs.h.  */
+| /* Define posix_memalign to an innocuous variant, in case <limits.h> declares posix_memalign.
+|    For example, HP-UX 11i <limits.h> declares gettimeofday.  */
+| #define posix_memalign innocuous_posix_memalign
+| 
+| /* System header to define __stub macros and hopefully few prototypes,
+|     which can conflict with char posix_memalign (); below.
+|     Prefer <limits.h> to <assert.h> if __STDC__ is defined, since
+|     <limits.h> exists even on freestanding compilers.  */
+| 
+| #ifdef __STDC__
+| # include <limits.h>
+| #else
+| # include <assert.h>
+| #endif
+| 
+| #undef posix_memalign
+| 
+| /* Override any GCC internal prototype to avoid an error.
+|    Use char because int might match the return type of a GCC
+|    builtin and then its argument prototype would still apply.  */
+| #ifdef __cplusplus
+| extern "C"
+| #endif
+| char posix_memalign ();
+| /* The GNU C library defines this for functions which it implements
+|     to always fail with ENOSYS.  Some functions are actually named
+|     something starting with __ and the normal name is an alias.  */
+| #if defined __stub_posix_memalign || defined __stub___posix_memalign
+| choke me
+| #endif
+| 
+| int
+| main ()
+| {
+| return posix_memalign ();
+|   ;
+|   return 0;
+| }
+configure:14483: result: no
+configure:14496: checking for sigaction
+configure:14496: i686-w64-mingw32.static-gcc -o conftest.exe -g -O2 -Wall -Wdeclaration-after-statement -Wno-unused-local-typedefs -fno-strict-aliasing   conftest.c  >&5
+/tmp/cczngmSu.o: In function `main':
+/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/conftest.c:62: undefined reference to `sigaction'
+collect2: error: ld returned 1 exit status
+configure:14496: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "pixman"
+| #define PACKAGE_TARNAME "pixman"
+| #define PACKAGE_VERSION "0.33.6"
+| #define PACKAGE_STRING "pixman 0.33.6"
+| #define PACKAGE_BUGREPORT "pixman@lists.freedesktop.org"
+| #define PACKAGE_URL ""
+| #define PACKAGE "pixman"
+| #define VERSION "0.33.6"
+| #define STDC_HEADERS 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_MEMORY_H 1
+| #define HAVE_STRINGS_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_UNISTD_H 1
+| #define LT_OBJDIR ".libs/"
+| #define SIZEOF_LONG 4
+| #define USE_OPENMP 1
+| #define USE_X86_MMX 1
+| #define USE_SSE2 1
+| #define USE_SSSE3 1
+| #define USE_GCC_INLINE_ASM 1
+| /* end confdefs.h.  */
+| /* Define sigaction to an innocuous variant, in case <limits.h> declares sigaction.
+|    For example, HP-UX 11i <limits.h> declares gettimeofday.  */
+| #define sigaction innocuous_sigaction
+| 
+| /* System header to define __stub macros and hopefully few prototypes,
+|     which can conflict with char sigaction (); below.
+|     Prefer <limits.h> to <assert.h> if __STDC__ is defined, since
+|     <limits.h> exists even on freestanding compilers.  */
+| 
+| #ifdef __STDC__
+| # include <limits.h>
+| #else
+| # include <assert.h>
+| #endif
+| 
+| #undef sigaction
+| 
+| /* Override any GCC internal prototype to avoid an error.
+|    Use char because int might match the return type of a GCC
+|    builtin and then its argument prototype would still apply.  */
+| #ifdef __cplusplus
+| extern "C"
+| #endif
+| char sigaction ();
+| /* The GNU C library defines this for functions which it implements
+|     to always fail with ENOSYS.  Some functions are actually named
+|     something starting with __ and the normal name is an alias.  */
+| #if defined __stub_sigaction || defined __stub___sigaction
+| choke me
+| #endif
+| 
+| int
+| main ()
+| {
+| return sigaction ();
+|   ;
+|   return 0;
+| }
+configure:14496: result: no
+configure:14509: checking for alarm
+configure:14509: i686-w64-mingw32.static-gcc -o conftest.exe -g -O2 -Wall -Wdeclaration-after-statement -Wno-unused-local-typedefs -fno-strict-aliasing   conftest.c  >&5
+configure:14509: $? = 0
+configure:14509: result: yes
+configure:14522: checking sys/mman.h usability
+configure:14522: i686-w64-mingw32.static-gcc -c -g -O2 -Wall -Wdeclaration-after-statement -Wno-unused-local-typedefs -fno-strict-aliasing  conftest.c >&5
+conftest.c:62:22: fatal error: sys/mman.h: No such file or directory
+compilation terminated.
+configure:14522: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "pixman"
+| #define PACKAGE_TARNAME "pixman"
+| #define PACKAGE_VERSION "0.33.6"
+| #define PACKAGE_STRING "pixman 0.33.6"
+| #define PACKAGE_BUGREPORT "pixman@lists.freedesktop.org"
+| #define PACKAGE_URL ""
+| #define PACKAGE "pixman"
+| #define VERSION "0.33.6"
+| #define STDC_HEADERS 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_MEMORY_H 1
+| #define HAVE_STRINGS_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_UNISTD_H 1
+| #define LT_OBJDIR ".libs/"
+| #define SIZEOF_LONG 4
+| #define USE_OPENMP 1
+| #define USE_X86_MMX 1
+| #define USE_SSE2 1
+| #define USE_SSSE3 1
+| #define USE_GCC_INLINE_ASM 1
+| #define HAVE_ALARM 1
+| /* end confdefs.h.  */
+| #include <stdio.h>
+| #ifdef HAVE_SYS_TYPES_H
+| # include <sys/types.h>
+| #endif
+| #ifdef HAVE_SYS_STAT_H
+| # include <sys/stat.h>
+| #endif
+| #ifdef STDC_HEADERS
+| # include <stdlib.h>
+| # include <stddef.h>
+| #else
+| # ifdef HAVE_STDLIB_H
+| #  include <stdlib.h>
+| # endif
+| #endif
+| #ifdef HAVE_STRING_H
+| # if !defined STDC_HEADERS && defined HAVE_MEMORY_H
+| #  include <memory.h>
+| # endif
+| # include <string.h>
+| #endif
+| #ifdef HAVE_STRINGS_H
+| # include <strings.h>
+| #endif
+| #ifdef HAVE_INTTYPES_H
+| # include <inttypes.h>
+| #endif
+| #ifdef HAVE_STDINT_H
+| # include <stdint.h>
+| #endif
+| #ifdef HAVE_UNISTD_H
+| # include <unistd.h>
+| #endif
+| #include <sys/mman.h>
+configure:14522: result: no
+configure:14522: checking sys/mman.h presence
+configure:14522: i686-w64-mingw32.static-gcc -E  conftest.c
+conftest.c:29:22: fatal error: sys/mman.h: No such file or directory
+compilation terminated.
+configure:14522: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "pixman"
+| #define PACKAGE_TARNAME "pixman"
+| #define PACKAGE_VERSION "0.33.6"
+| #define PACKAGE_STRING "pixman 0.33.6"
+| #define PACKAGE_BUGREPORT "pixman@lists.freedesktop.org"
+| #define PACKAGE_URL ""
+| #define PACKAGE "pixman"
+| #define VERSION "0.33.6"
+| #define STDC_HEADERS 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_MEMORY_H 1
+| #define HAVE_STRINGS_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_UNISTD_H 1
+| #define LT_OBJDIR ".libs/"
+| #define SIZEOF_LONG 4
+| #define USE_OPENMP 1
+| #define USE_X86_MMX 1
+| #define USE_SSE2 1
+| #define USE_SSSE3 1
+| #define USE_GCC_INLINE_ASM 1
+| #define HAVE_ALARM 1
+| /* end confdefs.h.  */
+| #include <sys/mman.h>
+configure:14522: result: no
+configure:14522: checking for sys/mman.h
+configure:14522: result: no
+configure:14531: checking for mmap
+configure:14531: i686-w64-mingw32.static-gcc -o conftest.exe -g -O2 -Wall -Wdeclaration-after-statement -Wno-unused-local-typedefs -fno-strict-aliasing   conftest.c  >&5
+/tmp/ccKIoZPV.o: In function `main':
+/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/conftest.c:63: undefined reference to `mmap'
+collect2: error: ld returned 1 exit status
+configure:14531: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "pixman"
+| #define PACKAGE_TARNAME "pixman"
+| #define PACKAGE_VERSION "0.33.6"
+| #define PACKAGE_STRING "pixman 0.33.6"
+| #define PACKAGE_BUGREPORT "pixman@lists.freedesktop.org"
+| #define PACKAGE_URL ""
+| #define PACKAGE "pixman"
+| #define VERSION "0.33.6"
+| #define STDC_HEADERS 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_MEMORY_H 1
+| #define HAVE_STRINGS_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_UNISTD_H 1
+| #define LT_OBJDIR ".libs/"
+| #define SIZEOF_LONG 4
+| #define USE_OPENMP 1
+| #define USE_X86_MMX 1
+| #define USE_SSE2 1
+| #define USE_SSSE3 1
+| #define USE_GCC_INLINE_ASM 1
+| #define HAVE_ALARM 1
+| /* end confdefs.h.  */
+| /* Define mmap to an innocuous variant, in case <limits.h> declares mmap.
+|    For example, HP-UX 11i <limits.h> declares gettimeofday.  */
+| #define mmap innocuous_mmap
+| 
+| /* System header to define __stub macros and hopefully few prototypes,
+|     which can conflict with char mmap (); below.
+|     Prefer <limits.h> to <assert.h> if __STDC__ is defined, since
+|     <limits.h> exists even on freestanding compilers.  */
+| 
+| #ifdef __STDC__
+| # include <limits.h>
+| #else
+| # include <assert.h>
+| #endif
+| 
+| #undef mmap
+| 
+| /* Override any GCC internal prototype to avoid an error.
+|    Use char because int might match the return type of a GCC
+|    builtin and then its argument prototype would still apply.  */
+| #ifdef __cplusplus
+| extern "C"
+| #endif
+| char mmap ();
+| /* The GNU C library defines this for functions which it implements
+|     to always fail with ENOSYS.  Some functions are actually named
+|     something starting with __ and the normal name is an alias.  */
+| #if defined __stub_mmap || defined __stub___mmap
+| choke me
+| #endif
+| 
+| int
+| main ()
+| {
+| return mmap ();
+|   ;
+|   return 0;
+| }
+configure:14531: result: no
+configure:14544: checking for mprotect
+configure:14544: i686-w64-mingw32.static-gcc -o conftest.exe -g -O2 -Wall -Wdeclaration-after-statement -Wno-unused-local-typedefs -fno-strict-aliasing   conftest.c  >&5
+configure:14544: $? = 0
+configure:14544: result: yes
+configure:14557: checking for getpagesize
+configure:14557: i686-w64-mingw32.static-gcc -o conftest.exe -g -O2 -Wall -Wdeclaration-after-statement -Wno-unused-local-typedefs -fno-strict-aliasing   conftest.c  >&5
+configure:14557: $? = 0
+configure:14557: result: yes
+configure:14570: checking fenv.h usability
+configure:14570: i686-w64-mingw32.static-gcc -c -g -O2 -Wall -Wdeclaration-after-statement -Wno-unused-local-typedefs -fno-strict-aliasing  conftest.c >&5
+configure:14570: $? = 0
+configure:14570: result: yes
+configure:14570: checking fenv.h presence
+configure:14570: i686-w64-mingw32.static-gcc -E  conftest.c
+configure:14570: $? = 0
+configure:14570: result: yes
+configure:14570: checking for fenv.h
+configure:14570: result: yes
+configure:14579: checking for feenableexcept in -lm
+configure:14604: i686-w64-mingw32.static-gcc -o conftest.exe -g -O2 -Wall -Wdeclaration-after-statement -Wno-unused-local-typedefs -fno-strict-aliasing   conftest.c -lm   >&5
+/tmp/cclV2hGd.o: In function `main':
+/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/conftest.c:43: undefined reference to `feenableexcept'
+collect2: error: ld returned 1 exit status
+configure:14604: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "pixman"
+| #define PACKAGE_TARNAME "pixman"
+| #define PACKAGE_VERSION "0.33.6"
+| #define PACKAGE_STRING "pixman 0.33.6"
+| #define PACKAGE_BUGREPORT "pixman@lists.freedesktop.org"
+| #define PACKAGE_URL ""
+| #define PACKAGE "pixman"
+| #define VERSION "0.33.6"
+| #define STDC_HEADERS 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_MEMORY_H 1
+| #define HAVE_STRINGS_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_UNISTD_H 1
+| #define LT_OBJDIR ".libs/"
+| #define SIZEOF_LONG 4
+| #define USE_OPENMP 1
+| #define USE_X86_MMX 1
+| #define USE_SSE2 1
+| #define USE_SSSE3 1
+| #define USE_GCC_INLINE_ASM 1
+| #define HAVE_ALARM 1
+| #define HAVE_MPROTECT 1
+| #define HAVE_GETPAGESIZE 1
+| #define HAVE_FENV_H 1
+| /* end confdefs.h.  */
+| 
+| /* Override any GCC internal prototype to avoid an error.
+|    Use char because int might match the return type of a GCC
+|    builtin and then its argument prototype would still apply.  */
+| #ifdef __cplusplus
+| extern "C"
+| #endif
+| char feenableexcept ();
+| int
+| main ()
+| {
+| return feenableexcept ();
+|   ;
+|   return 0;
+| }
+configure:14613: result: no
+configure:14627: checking whether FE_DIVBYZERO is declared
+configure:14627: i686-w64-mingw32.static-gcc -c -g -O2 -Wall -Wdeclaration-after-statement -Wno-unused-local-typedefs -fno-strict-aliasing  conftest.c >&5
+configure:14627: $? = 0
+configure:14627: result: yes
+configure:14636: checking for gettimeofday
+configure:14636: i686-w64-mingw32.static-gcc -o conftest.exe -g -O2 -Wall -Wdeclaration-after-statement -Wno-unused-local-typedefs -fno-strict-aliasing   conftest.c  >&5
+configure:14636: $? = 0
+configure:14636: result: yes
+configure:14643: checking sys/time.h usability
+configure:14643: i686-w64-mingw32.static-gcc -c -g -O2 -Wall -Wdeclaration-after-statement -Wno-unused-local-typedefs -fno-strict-aliasing  conftest.c >&5
+configure:14643: $? = 0
+configure:14643: result: yes
+configure:14643: checking sys/time.h presence
+configure:14643: i686-w64-mingw32.static-gcc -E  conftest.c
+configure:14643: $? = 0
+configure:14643: result: yes
+configure:14643: checking for sys/time.h
+configure:14643: result: yes
+configure:14658: checking for library containing sqrtf
+configure:14689: i686-w64-mingw32.static-gcc -o conftest.exe -g -O2 -Wall -Wdeclaration-after-statement -Wno-unused-local-typedefs -fno-strict-aliasing   conftest.c  >&5
+conftest.c:41:6: warning: conflicting types for built-in function 'sqrtf'
+ char sqrtf ();
+      ^
+configure:14689: $? = 0
+configure:14706: result: none required
+configure:14720: checking for thread local storage (TLS) support
+configure:14748: i686-w64-mingw32.static-gcc -c -g -O2 -Wall -Wdeclaration-after-statement -Wno-unused-local-typedefs -fno-strict-aliasing  conftest.c >&5
+configure:14748: $? = 0
+configure:14756: result: __thread
+configure:14774: checking for pthreads
+configure:14824: i686-w64-mingw32.static-gcc -o conftest.exe -g -O2 -Wall -Wdeclaration-after-statement -Wno-unused-local-typedefs -fno-strict-aliasing -pthread   -pthread conftest.c   >&5
+configure:14824: $? = 0
+configure:15012: result: yes
+configure:15024: checking for __attribute__((constructor))
+configure:15041: i686-w64-mingw32.static-gcc -o conftest.exe -g -O2 -Wall -Wdeclaration-after-statement -Wno-unused-local-typedefs -fno-strict-aliasing   conftest.c  >&5
+configure:15041: $? = 0
+configure:15053: result: yes
+configure:15060: checking for __float128
+configure:15068: i686-w64-mingw32.static-gcc -o conftest.exe -g -O2 -Wall -Wdeclaration-after-statement -Wno-unused-local-typedefs -fno-strict-aliasing   conftest.c  >&5
+configure:15068: $? = 0
+configure:15080: result: yes
+configure:15086: checking for __builtin_clz
+configure:15094: i686-w64-mingw32.static-gcc -o conftest.exe -g -O2 -Wall -Wdeclaration-after-statement -Wno-unused-local-typedefs -fno-strict-aliasing   conftest.c  >&5
+configure:15094: $? = 0
+configure:15106: result: yes
+configure:15112: checking for GCC vector extensions
+configure:15121: i686-w64-mingw32.static-gcc -o conftest.exe -g -O2 -Wall -Wdeclaration-after-statement -Wno-unused-local-typedefs -fno-strict-aliasing   conftest.c  >&5
+configure:15121: $? = 0
+configure:15133: result: yes
+configure:15240: checking for PNG
+configure:15247: $PKG_CONFIG --exists --print-errors "libpng"
+configure:15250: $? = 0
+configure:15264: $PKG_CONFIG --exists --print-errors "libpng"
+configure:15267: $? = 0
+configure:15305: result: yes
+configure:15430: checking that generated files are newer than configure
+configure:15436: result: done
+configure:15508: creating ./config.status
+
+## ---------------------- ##
+## Running config.status. ##
+## ---------------------- ##
+
+This file was extended by pixman config.status 0.33.6, which was
+generated by GNU Autoconf 2.69.  Invocation command line was
+
+  CONFIG_FILES    = 
+  CONFIG_HEADERS  = 
+  CONFIG_LINKS    = 
+  CONFIG_COMMANDS = 
+  $ ./config.status 
+
+on user-VirtualBox
+
+config.status:1176: creating pixman-1.pc
+config.status:1176: creating pixman-1-uninstalled.pc
+config.status:1176: creating Makefile
+config.status:1176: creating pixman/Makefile
+config.status:1176: creating pixman/pixman-version.h
+config.status:1176: creating demos/Makefile
+config.status:1176: creating test/Makefile
+config.status:1176: creating config.h
+config.status:1405: executing depfiles commands
+config.status:1405: executing libtool commands
+configure:17653: WARNING: unrecognized options: --enable-doc, --enable-gtk-doc, --enable-gtk-doc-html, --enable-gtk-doc-pdf, --with-html-dir, --disable-doxygen
+
+## ---------------- ##
+## Cache variables. ##
+## ---------------- ##
+
+ac_cv_build=i686-pc-linux-gnu
+ac_cv_c_bigendian=no
+ac_cv_c_compiler_gnu=yes
+ac_cv_c_inline=inline
+ac_cv_env_CCASFLAGS_set=
+ac_cv_env_CCASFLAGS_value=
+ac_cv_env_CCAS_set=
+ac_cv_env_CCAS_value=
+ac_cv_env_CC_set=
+ac_cv_env_CC_value=
+ac_cv_env_CFLAGS_set=
+ac_cv_env_CFLAGS_value=
+ac_cv_env_CPPFLAGS_set=
+ac_cv_env_CPPFLAGS_value=
+ac_cv_env_CPP_set=
+ac_cv_env_CPP_value=
+ac_cv_env_GTK_CFLAGS_set=
+ac_cv_env_GTK_CFLAGS_value=
+ac_cv_env_GTK_LIBS_set=
+ac_cv_env_GTK_LIBS_value=
+ac_cv_env_LDFLAGS_set=
+ac_cv_env_LDFLAGS_value=
+ac_cv_env_LIBS_set=
+ac_cv_env_LIBS_value=
+ac_cv_env_LT_SYS_LIBRARY_PATH_set=
+ac_cv_env_LT_SYS_LIBRARY_PATH_value=
+ac_cv_env_PKG_CONFIG_LIBDIR_set=
+ac_cv_env_PKG_CONFIG_LIBDIR_value=
+ac_cv_env_PKG_CONFIG_PATH_set=
+ac_cv_env_PKG_CONFIG_PATH_value=
+ac_cv_env_PKG_CONFIG_set=
+ac_cv_env_PKG_CONFIG_value=
+ac_cv_env_PNG_CFLAGS_set=
+ac_cv_env_PNG_CFLAGS_value=
+ac_cv_env_PNG_LIBS_set=
+ac_cv_env_PNG_LIBS_value=
+ac_cv_env_build_alias_set=set
+ac_cv_env_build_alias_value=i686-pc-linux-gnu
+ac_cv_env_host_alias_set=set
+ac_cv_env_host_alias_value=i686-w64-mingw32.static
+ac_cv_env_target_alias_set=
+ac_cv_env_target_alias_value=
+ac_cv_exeext=.exe
+ac_cv_func_alarm=yes
+ac_cv_func_getisax=no
+ac_cv_func_getpagesize=yes
+ac_cv_func_gettimeofday=yes
+ac_cv_func_mmap=no
+ac_cv_func_mprotect=yes
+ac_cv_func_posix_memalign=no
+ac_cv_func_sigaction=no
+ac_cv_have_decl_FE_DIVBYZERO=yes
+ac_cv_have_decl___SUNPRO_C=no
+ac_cv_have_decl___amd64=no
+ac_cv_header_dlfcn_h=no
+ac_cv_header_fenv_h=yes
+ac_cv_header_inttypes_h=yes
+ac_cv_header_memory_h=yes
+ac_cv_header_stdc=yes
+ac_cv_header_stdint_h=yes
+ac_cv_header_stdlib_h=yes
+ac_cv_header_string_h=yes
+ac_cv_header_strings_h=yes
+ac_cv_header_sys_mman_h=no
+ac_cv_header_sys_stat_h=yes
+ac_cv_header_sys_time_h=yes
+ac_cv_header_sys_types_h=yes
+ac_cv_header_unistd_h=yes
+ac_cv_host=i686-w64-mingw32.static
+ac_cv_lib_m_feenableexcept=no
+ac_cv_lib_pixman_1_pixman_version_string=no
+ac_cv_objext=o
+ac_cv_path_EGREP='/bin/grep -E'
+ac_cv_path_FGREP='/bin/grep -F'
+ac_cv_path_GREP=/bin/grep
+ac_cv_path_PKG_CONFIG=/home/user/mxe/usr/bin/i686-w64-mingw32.static-pkg-config
+ac_cv_path_SED=/bin/sed
+ac_cv_path_install='/usr/bin/install -c'
+ac_cv_path_lt_DD=/bin/dd
+ac_cv_path_mkdir=/bin/mkdir
+ac_cv_prog_AR=i686-w64-mingw32.static-ar
+ac_cv_prog_AWK=mawk
+ac_cv_prog_CC=i686-w64-mingw32.static-gcc
+ac_cv_prog_CPP='i686-w64-mingw32.static-gcc -E'
+ac_cv_prog_DLLTOOL=i686-w64-mingw32.static-dlltool
+ac_cv_prog_HAVE_DOXYGEN=false
+ac_cv_prog_OBJDUMP=i686-w64-mingw32.static-objdump
+ac_cv_prog_RANLIB=i686-w64-mingw32.static-ranlib
+ac_cv_prog_STRIP=i686-w64-mingw32.static-strip
+ac_cv_prog_ac_ct_MANIFEST_TOOL=mt
+ac_cv_prog_c_openmp=-fopenmp
+ac_cv_prog_cc_c89=
+ac_cv_prog_cc_g=yes
+ac_cv_prog_make_make_set=yes
+ac_cv_search_sqrtf='none required'
+ac_cv_sizeof_long=4
+ac_cv_tls=__thread
+am_cv_CCAS_dependencies_compiler_type=gcc3
+am_cv_CC_dependencies_compiler_type=gcc3
+am_cv_make_support_nested_variables=yes
+am_cv_prog_cc_c_o=yes
+lt_cv_ar_at_file=@
+lt_cv_deplibs_check_method='file_magic ^x86 archive import|^x86 DLL'
+lt_cv_file_magic_cmd=func_win32_libid
+lt_cv_file_magic_test_file=
+lt_cv_ld_reload_flag=-r
+lt_cv_nm_interface='BSD nm'
+lt_cv_objdir=.libs
+lt_cv_path_LD=/home/user/mxe/usr/bin/i686-w64-mingw32.static-ld
+lt_cv_path_NM='/home/user/mxe/usr/bin/i686-w64-mingw32.static-nm -B'
+lt_cv_path_mainfest_tool=no
+lt_cv_prog_compiler_c_o=yes
+lt_cv_prog_compiler_pic='-DDLL_EXPORT -DPIC'
+lt_cv_prog_compiler_pic_works=yes
+lt_cv_prog_compiler_rtti_exceptions=no
+lt_cv_prog_compiler_static_works=yes
+lt_cv_prog_gnu_ld=yes
+lt_cv_sharedlib_from_linklib_cmd=func_cygming_dll_for_implib
+lt_cv_sys_global_symbol_pipe='sed -n -e '\''s/^.*[	 ]\([ABCDGIRSTW][ABCDGIRSTW]*\)[	 ][	 ]*_\([_A-Za-z][_A-Za-z0-9]*\)$/\1 _\2 \2/p'\'' | sed '\''/ __gnu_lto/d'\'''
+lt_cv_sys_global_symbol_to_c_name_address='sed -n -e '\''s/^: \(.*\) .*$/  {"\1", (void *) 0},/p'\'' -e '\''s/^[ABCDGIRSTW][ABCDGIRSTW]* .* \(.*\)$/  {"\1", (void *) \&\1},/p'\'''
+lt_cv_sys_global_symbol_to_c_name_address_lib_prefix='sed -n -e '\''s/^: \(.*\) .*$/  {"\1", (void *) 0},/p'\'' -e '\''s/^[ABCDGIRSTW][ABCDGIRSTW]* .* \(lib.*\)$/  {"\1", (void *) \&\1},/p'\'' -e '\''s/^[ABCDGIRSTW][ABCDGIRSTW]* .* \(.*\)$/  {"lib\1", (void *) \&\1},/p'\'''
+lt_cv_sys_global_symbol_to_cdecl='sed -n -e '\''s/^T .* \(.*\)$/extern int \1();/p'\'' -e '\''s/^[ABCDGIRSTW][ABCDGIRSTW]* .* \(.*\)$/extern char \1;/p'\'''
+lt_cv_sys_global_symbol_to_import=
+lt_cv_sys_max_cmd_len=1572864
+lt_cv_to_host_file_cmd=func_convert_file_nix_to_w32
+lt_cv_to_tool_file_cmd=func_convert_file_noop
+lt_cv_truncate_bin='/bin/dd bs=4096 count=1'
+pkg_cv_PNG_CFLAGS='-I/home/user/mxe/usr/i686-w64-mingw32.static/include/libpng16  '
+pkg_cv_PNG_LIBS='-lpng16 -lz  '
+
+## ----------------- ##
+## Output variables. ##
+## ----------------- ##
+
+ACLOCAL='${SHELL} /home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/missing aclocal-1.15'
+AMDEPBACKSLASH='\'
+AMDEP_FALSE='#'
+AMDEP_TRUE=''
+AMTAR='$${TAR-tar}'
+AM_BACKSLASH='\'
+AM_DEFAULT_V='$(AM_DEFAULT_VERBOSITY)'
+AM_DEFAULT_VERBOSITY='0'
+AM_V='$(V)'
+AR='i686-w64-mingw32.static-ar'
+AUTOCONF='${SHELL} /home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/missing autoconf'
+AUTOHEADER='${SHELL} /home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/missing autoheader'
+AUTOMAKE='${SHELL} /home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/missing automake-1.15'
+AWK='mawk'
+CC='i686-w64-mingw32.static-gcc'
+CCAS='i686-w64-mingw32.static-gcc'
+CCASDEPMODE='depmode=gcc3'
+CCASFLAGS='-g -O2'
+CCDEPMODE='depmode=gcc3'
+CFLAGS='-g -O2 -Wall -Wdeclaration-after-statement -Wno-unused-local-typedefs -fno-strict-aliasing'
+CPP='i686-w64-mingw32.static-gcc -E'
+CPPFLAGS=''
+CYGPATH_W='echo'
+DEFS='-DHAVE_CONFIG_H'
+DEPDIR='.deps'
+DLLTOOL='i686-w64-mingw32.static-dlltool'
+DSYMUTIL=''
+DUMPBIN=''
+ECHO_C=''
+ECHO_N='-n'
+ECHO_T=''
+EGREP='/bin/grep -E'
+EXEEXT='.exe'
+FGREP='/bin/grep -F'
+GREP='/bin/grep'
+GTK_CFLAGS=''
+GTK_LIBS=''
+HAVE_GTK_FALSE=''
+HAVE_GTK_TRUE='#'
+HAVE_LIBPNG=''
+HAVE_PTHREADS=''
+INSTALL_DATA='${INSTALL} -m 644'
+INSTALL_PROGRAM='${INSTALL}'
+INSTALL_SCRIPT='${INSTALL}'
+INSTALL_STRIP_PROGRAM='$(install_sh) -c -s'
+IWMMXT_CFLAGS=''
+LD='/home/user/mxe/usr/bin/i686-w64-mingw32.static-ld'
+LDFLAGS=''
+LIBOBJS=''
+LIBS=''
+LIBTOOL='$(SHELL) $(top_builddir)/libtool'
+LIPO=''
+LN_S='ln -s'
+LS_CFLAGS=''
+LTLIBOBJS=''
+LT_SYS_LIBRARY_PATH=''
+LT_VERSION_INFO='33:6:33'
+MAKEINFO='${SHELL} /home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/missing makeinfo'
+MANIFEST_TOOL=':'
+MKDIR_P='/bin/mkdir -p'
+MMX_CFLAGS='-mmmx -Winline'
+MMX_LDFLAGS=''
+NM='/home/user/mxe/usr/bin/i686-w64-mingw32.static-nm -B'
+NMEDIT=''
+OBJDUMP='i686-w64-mingw32.static-objdump'
+OBJEXT='o'
+OPENMP_CFLAGS='-fopenmp'
+OTOOL64=''
+OTOOL=''
+PACKAGE='pixman'
+PACKAGE_BUGREPORT='pixman@lists.freedesktop.org'
+PACKAGE_NAME='pixman'
+PACKAGE_STRING='pixman 0.33.6'
+PACKAGE_TARNAME='pixman'
+PACKAGE_URL=''
+PACKAGE_VERSION='0.33.6'
+PATH_SEPARATOR=':'
+PIXMAN_TIMERS=''
+PIXMAN_VERSION_MAJOR='0'
+PIXMAN_VERSION_MICRO='6'
+PIXMAN_VERSION_MINOR='33'
+PKG_CONFIG='/home/user/mxe/usr/bin/i686-w64-mingw32.static-pkg-config'
+PKG_CONFIG_LIBDIR=''
+PKG_CONFIG_PATH=''
+PNG_CFLAGS='-I/home/user/mxe/usr/i686-w64-mingw32.static/include/libpng16  '
+PNG_LIBS='-lpng16 -lz  '
+PTHREAD_CFLAGS='-g -O2 -Wall -Wdeclaration-after-statement -Wno-unused-local-typedefs -fno-strict-aliasing -pthread'
+PTHREAD_LDFLAGS=' -pthread'
+PTHREAD_LIBS=' '
+RANLIB='i686-w64-mingw32.static-ranlib'
+SED='/bin/sed'
+SET_MAKE=''
+SHELL='/bin/bash'
+SSE2_CFLAGS='-msse2 -Winline'
+SSE2_LDFLAGS=''
+SSSE3_CFLAGS='-mssse3 -Winline'
+STRIP='i686-w64-mingw32.static-strip'
+TESTPROGS_EXTRA_LDFLAGS=''
+TOOLCHAIN_SUPPORTS_ATTRIBUTE_CONSTRUCTOR=''
+TOOLCHAIN_SUPPORTS__THREAD=''
+USE_ARM_IWMMXT_FALSE=''
+USE_ARM_IWMMXT_TRUE='#'
+USE_ARM_NEON_FALSE=''
+USE_ARM_NEON_TRUE='#'
+USE_ARM_SIMD_FALSE=''
+USE_ARM_SIMD_TRUE='#'
+USE_GCC_INLINE_ASM_FALSE='#'
+USE_GCC_INLINE_ASM_TRUE=''
+USE_LOONGSON_MMI_FALSE=''
+USE_LOONGSON_MMI_TRUE='#'
+USE_MIPS_DSPR2_FALSE=''
+USE_MIPS_DSPR2_TRUE='#'
+USE_SSE2_FALSE='#'
+USE_SSE2_TRUE=''
+USE_SSSE3_FALSE='#'
+USE_SSSE3_TRUE=''
+USE_VMX_FALSE=''
+USE_VMX_TRUE='#'
+USE_X86_MMX_FALSE='#'
+USE_X86_MMX_TRUE=''
+VERSION='0.33.6'
+VMX_CFLAGS=''
+ac_ct_AR=''
+ac_ct_CC=''
+ac_ct_DUMPBIN=''
+am__EXEEXT_FALSE='#'
+am__EXEEXT_TRUE=''
+am__fastdepCCAS_FALSE='#'
+am__fastdepCCAS_TRUE=''
+am__fastdepCC_FALSE='#'
+am__fastdepCC_TRUE=''
+am__include='include'
+am__isrc=''
+am__leading_dot='.'
+am__nodep='_no'
+am__quote=''
+am__tar='$${TAR-tar} chof - "$$tardir"'
+am__untar='$${TAR-tar} xf -'
+bindir='${exec_prefix}/bin'
+build='i686-pc-linux-gnu'
+build_alias='i686-pc-linux-gnu'
+build_cpu='i686'
+build_os='linux-gnu'
+build_vendor='pc'
+datadir='${datarootdir}'
+datarootdir='${prefix}/share'
+docdir='/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6.build_.sink'
+dvidir='${docdir}'
+exec_prefix='${prefix}'
+host='i686-w64-mingw32.static'
+host_alias='i686-w64-mingw32.static'
+host_cpu='i686'
+host_os='mingw32.static'
+host_vendor='w64'
+htmldir='${docdir}'
+includedir='${prefix}/include'
+infodir='/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6.build_.sink'
+install_sh='${SHELL} /home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/install-sh'
+libdir='${exec_prefix}/lib'
+libexecdir='${exec_prefix}/libexec'
+localedir='${datarootdir}/locale'
+localstatedir='${prefix}/var'
+mandir='/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6.build_.sink'
+mkdir_p='$(MKDIR_P)'
+oldincludedir='/usr/include'
+pdfdir='${docdir}'
+prefix='/home/user/mxe/usr/i686-w64-mingw32.static'
+program_transform_name='s,x,x,'
+psdir='${docdir}'
+sbindir='${exec_prefix}/sbin'
+sharedstatedir='${prefix}/com'
+sysconfdir='${prefix}/etc'
+target_alias=''
+
+## ----------- ##
+## confdefs.h. ##
+## ----------- ##
+
+/* confdefs.h */
+#define PACKAGE_NAME "pixman"
+#define PACKAGE_TARNAME "pixman"
+#define PACKAGE_VERSION "0.33.6"
+#define PACKAGE_STRING "pixman 0.33.6"
+#define PACKAGE_BUGREPORT "pixman@lists.freedesktop.org"
+#define PACKAGE_URL ""
+#define PACKAGE "pixman"
+#define VERSION "0.33.6"
+#define STDC_HEADERS 1
+#define HAVE_SYS_TYPES_H 1
+#define HAVE_SYS_STAT_H 1
+#define HAVE_STDLIB_H 1
+#define HAVE_STRING_H 1
+#define HAVE_MEMORY_H 1
+#define HAVE_STRINGS_H 1
+#define HAVE_INTTYPES_H 1
+#define HAVE_STDINT_H 1
+#define HAVE_UNISTD_H 1
+#define LT_OBJDIR ".libs/"
+#define SIZEOF_LONG 4
+#define USE_OPENMP 1
+#define USE_X86_MMX 1
+#define USE_SSE2 1
+#define USE_SSSE3 1
+#define USE_GCC_INLINE_ASM 1
+#define HAVE_ALARM 1
+#define HAVE_MPROTECT 1
+#define HAVE_GETPAGESIZE 1
+#define HAVE_FENV_H 1
+#define HAVE_FEDIVBYZERO 1
+#define HAVE_GETTIMEOFDAY 1
+#define TLS __thread
+#define HAVE_PTHREADS /**/
+#define TOOLCHAIN_SUPPORTS_ATTRIBUTE_CONSTRUCTOR /**/
+#define HAVE_FLOAT128 /**/
+#define HAVE_BUILTIN_CLZ /**/
+#define HAVE_GCC_VECTOR_EXTENSIONS /**/
+#define HAVE_LIBPNG 1
+
+configure: exit 0
+
+settings.mk
+# This is a template of configuration file for MXE. See
+# docs/index.html for more extensive documentations.
+
+# This variable controls the number of compilation processes
+# within one package ("intra-package parallelism").
+#JOBS := 
+
+# This variable controls where intermediate files are created
+# this is necessary when compiling inside a virtualbox shared
+# directory. Some commands like strip fail in there with Protocol error
+# default is the current directory
+#MXE_TMP := /tmp
+
+# This variable controls the targets that will build.
+#MXE_TARGETS := i686-w64-mingw32.static i686-w64-mingw32.shared x86_64-w64-mingw32.static x86_64-w64-mingw32.shared
+
+# This variable controls which plugins are in use.
+# See plugins/README.md for further information.
+#override MXE_PLUGIN_DIRS += plugins/apps plugins/native
+
+# This variable controls the download mirror for SourceForge,
+# when it is used. Enabling the value below means auto.
+#SOURCEFORGE_MIRROR := downloads.sourceforge.net
+
+# The three lines below makes `make` build these "local
+# packages" instead of all packages.
+#LOCAL_PKG_LIST := boost curl file flac lzo pthreads vorbis wxwidgets
+#.DEFAULT_GOAL  := local-pkg-list
+#local-pkg-list: $(LOCAL_PKG_LIST)
+i686-w64-mingw32.static-strip '/home/user/mxe/usr/i686-w64-mingw32.static/bin/test-pixman.exe'
+i686-w64-mingw32.static-strip: '/home/user/mxe/usr/i686-w64-mingw32.static/bin/test-pixman.exe': No such file
+Makefile:786: recipe for target 'build-only-pixman_i686-w64-mingw32.static' failed
+make[1]: [build-only-pixman_i686-w64-mingw32.static] Error 1 (ignored)
+(du -k -d 0 '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static' 2>/dev/null || du -k --max-depth 0 '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static') | sed -n 's/^\(\S*\).*/du: \1 KiB/p'
+du: 18220 KiB
+rm -rfv  '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static'
+removed directory '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6.build_'
+removed directory '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/readonly'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman-1-uninstalled.pc.in'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/configure.ac'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/test/pdf-op-test.c'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/test/check-formats.c'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/test/radial-invalid.c'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/test/combiner-test.c'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/test/trap-crasher.c'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/test/solid-test.c'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/test/radial-perf-test.c'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/test/affine-test.c'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/test/region-contains-test.c'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/test/tolerance-test.c'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/test/blitters-test.c'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/test/scaling-test.c'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/test/Makefile.in'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/test/affine-bench.c'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/test/utils-prng.h'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/test/Makefile.sources'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/test/utils-prng.lo'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/test/.libs/libutils.a'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/test/.libs/libutils.la'
+removed directory '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/test/.libs'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/test/utils-prng.c'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/test/region-test.c'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/test/cover-test.c'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/test/.deps/alpha-loop.Po'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/test/.deps/prng-test.Po'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/test/.deps/pdf-op-test.Po'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/test/.deps/cover-test.Po'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/test/.deps/check-formats.Po'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/test/.deps/affine-bench.Po'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/test/.deps/pixel-test.Po'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/test/.deps/affine-test.Po'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/test/.deps/oob-test.Po'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/test/.deps/rotate-test.Po'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/test/.deps/radial-invalid.Po'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/test/.deps/infinite-loop.Po'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/test/.deps/scaling-crash-test.Po'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/test/.deps/composite-traps-test.Po'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/test/.deps/alphamap.Po'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/test/.deps/matrix-test.Po'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/test/.deps/radial-perf-test.Po'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/test/.deps/trap-crasher.Po'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/test/.deps/glyph-test.Po'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/test/.deps/region-test.Po'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/test/.deps/combiner-test.Po'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/test/.deps/blitters-test.Po'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/test/.deps/fence-image-self-test.Po'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/test/.deps/lowlevel-blt-bench.Po'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/test/.deps/region-contains-test.Po'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/test/.deps/gradient-crash-test.Po'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/test/.deps/scaling-test.Po'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/test/.deps/utils-prng.Plo'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/test/.deps/utils.Plo'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/test/.deps/scaling-bench.Po'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/test/.deps/tolerance-test.Po'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/test/.deps/thread-test.Po'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/test/.deps/stress-test.Po'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/test/.deps/region-translate-test.Po'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/test/.deps/composite.Po'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/test/.deps/fetch-test.Po'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/test/.deps/a1-trap-test.Po'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/test/.deps/solid-test.Po'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/test/.deps/scaling-helpers-test.Po'
+removed directory '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/test/.deps'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/test/scaling-bench.c'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/test/utils.lo'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/test/lowlevel-blt-bench.c'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/test/region-translate-test.c'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/test/Makefile'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/test/utils.c'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/test/oob-test.c'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/test/pixel-test.c'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/test/libutils.la'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/test/alphamap.c'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/test/composite-traps-test.c'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/test/infinite-loop.c'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/test/gradient-crash-test.c'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/test/matrix-test.c'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/test/glyph-test.c'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/test/thread-test.c'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/test/stress-test.c'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/test/utils.o'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/test/scaling-crash-test.c'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/test/fetch-test.c'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/test/utils.h'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/test/utils-prng.o'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/test/fence-image-self-test.c'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/test/prng-test.c'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/test/alpha-loop.c'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/test/scaling-helpers-test.c'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/test/Makefile.am'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/test/composite.c'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/test/rotate-test.c'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/test/a1-trap-test.c'
+removed directory '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/test'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/stamp-h1'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/COPYING'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/NEWS'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/config.sub'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/README'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/Makefile.in'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/test-driver'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/config.h'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/Makefile.win32.common'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/config.h.in'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/aclocal.m4'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/depcomp'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/ltmain.sh'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/install-sh'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/Makefile'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/Makefile.win32'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman-1.pc'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/config.guess'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/pixman-linear-gradient.lo'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/pixman-radial-gradient.lo'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/pixman-trap.c'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/pixman-region.c'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/pixman-mips.c'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/pixman-mmx.c'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/loongson-mmintrin.h'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/pixman-arm-simd-asm-scaled.S'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/pixman-gradient-walker.lo'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/pixman-region32.c'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/pixman-image.c'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/pixman-linear-gradient.o'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/pixman-version.h'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/pixman-matrix.c'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/pixman-solid-fill.o'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/pixman-bits-image.c'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/pixman-glyph.c'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/pixman-gradient-walker.o'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/pixman-conical-gradient.c'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/Makefile.in'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/pixman-mips-dspr2-asm.S'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/pixman-conical-gradient.o'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/pixman-vmx.c'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/pixman-linear-gradient.c'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/libpixman-1.la'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/pixman-mips-dspr2.h'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/pixman-combine32.o'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/Makefile.sources'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/pixman-combine-float.lo'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/pixman-fast-path.lo'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/pixman-utils.c'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/pixman-utils.lo'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/pixman-region16.c'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/pixman-implementation.c'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/libpixman_mmx_la-pixman-mmx.o'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/pixman-timer.o'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/pixman-implementation.lo'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/.libs/libpixman-1.la'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/.libs/libpixman-mmx.la'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/.libs/libpixman-sse2.la'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/.libs/libpixman-1.a'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/.libs/libpixman-ssse3.la'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/.libs/libpixman-ssse3.a'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/.libs/libpixman-mmx.a'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/.libs/libpixman-sse2.a'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/.libs/libpixman-1.lai'
+removed directory '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/.libs'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/pixman-bits-image.lo'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/pixman-x86.o'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/pixman-glyph.lo'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/pixman-region32.o'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/pixman-conical-gradient.lo'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/pixman-ssse3.c'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/pixman-arm.o'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/libpixman-mmx.la'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/pixman-access-accessors.lo'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/pixman-edge-accessors.o'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/solaris-hwcap.mapfile'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/pixman-mips-memcpy-asm.S'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/pixman-combine32.h'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/pixman-mips.lo'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/.deps/pixman-combine-float.Plo'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/.deps/pixman-linear-gradient.Plo'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/.deps/pixman-glyph.Plo'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/.deps/pixman-mips-memcpy-asm.Plo'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/.deps/libpixman_mmx_la-pixman-mmx.Plo'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/.deps/pixman-radial-gradient.Plo'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/.deps/pixman-implementation.Plo'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/.deps/pixman-ppc.Plo'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/.deps/pixman-trap.Plo'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/.deps/pixman-gradient-walker.Plo'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/.deps/libpixman_ssse3_la-pixman-ssse3.Plo'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/.deps/pixman-arm.Plo'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/.deps/libpixman_sse2_la-pixman-sse2.Plo'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/.deps/pixman-utils.Plo'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/.deps/pixman-region16.Plo'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/.deps/pixman-timer.Plo'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/.deps/pixman.Plo'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/.deps/pixman-edge.Plo'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/.deps/pixman-arm-simd-asm-scaled.Plo'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/.deps/pixman-conical-gradient.Plo'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/.deps/pixman-x86.Plo'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/.deps/pixman-image.Plo'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/.deps/pixman-mips-dspr2.Plo'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/.deps/pixman-solid-fill.Plo'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/.deps/pixman-access-accessors.Plo'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/.deps/libpixman_loongson_mmi_la-pixman-mmx.Plo'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/.deps/pixman-arm-neon-asm.Plo'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/.deps/pixman-matrix.Plo'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/.deps/pixman-edge-accessors.Plo'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/.deps/pixman-bits-image.Plo'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/.deps/pixman-mmx.Plo'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/.deps/pixman-mips-dspr2-asm.Plo'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/.deps/pixman-arm-simd.Plo'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/.deps/pixman-arm-neon-asm-bilinear.Plo'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/.deps/pixman-fast-path.Plo'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/.deps/pixman-filter.Plo'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/.deps/pixman-arm-neon.Plo'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/.deps/pixman-noop.Plo'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/.deps/pixman-access.Plo'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/.deps/pixman-region32.Plo'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/.deps/pixman-combine32.Plo'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/.deps/pixman-arm-simd-asm.Plo'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/.deps/pixman-general.Plo'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/.deps/pixman-mips.Plo'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/.deps/libpixman_vmx_la-pixman-vmx.Plo'
+removed directory '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/.deps'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/libpixman_ssse3_la-pixman-ssse3.lo'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/libpixman_mmx_la-pixman-mmx.lo'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/pixman-arm-simd-asm.S'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/pixman-noop.c'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/pixman.c'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/pixman-noop.o'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/pixman-region16.o'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/pixman-arm-neon-asm-bilinear.S'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/pixman-combine32.c'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/pixman-arm-simd.c'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/pixman.o'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/pixman-access.c'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/pixman-ppc.c'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/pixman-accessor.h'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/pixman-radial-gradient.c'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/libpixman-sse2.la'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/Makefile'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/pixman-access-accessors.o'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/pixman-x86.c'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/pixman-timer.c'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/pixman.lo'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/pixman-arm-neon.c'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/Makefile.win32'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/pixman-image.o'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/libpixman_sse2_la-pixman-sse2.lo'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/libpixman_ssse3_la-pixman-ssse3.o'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/pixman-solid-fill.lo'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/pixman-edge-accessors.lo'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/libpixman-ssse3.la'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/pixman-general.o'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/pixman-edge-imp.h'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/pixman-implementation.o'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/pixman-arm-neon-asm.S'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/pixman-timer.lo'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/pixman-private.h'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/pixman-arm-neon-asm.h'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/pixman-matrix.o'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/pixman-matrix.lo'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/pixman-gradient-walker.c'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/pixman-trap.o'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/pixman-general.c'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/libpixman_sse2_la-pixman-sse2.o'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/pixman-general.lo'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/pixman-mips-dspr2-asm.h'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/pixman-mips.o'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/pixman-noop.lo'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/pixman-radial-gradient.o'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/pixman-trap.lo'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/pixman-arm-common.h'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/pixman-region16.lo'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/pixman-utils.o'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/pixman-inlines.h'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/pixman-version.h.in'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/pixman-arm-asm.h'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/pixman-bits-image.o'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/pixman-edge-accessors.c'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/pixman-access.o'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/pixman-filter.lo'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/pixman-image.lo'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/pixman-compiler.h'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/pixman-ppc.o'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/pixman-combine-float.o'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/pixman-access-accessors.c'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/pixman-access.lo'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/pixman-sse2.c'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/pixman-arm.c'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/pixman-fast-path.c'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/pixman-edge.lo'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/pixman.h'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/pixman-mips-dspr2.c'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/pixman-region32.lo'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/pixman-edge.c'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/pixman-filter.c'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/pixman-glyph.o'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/pixman-ppc.lo'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/pixman-filter.o'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/pixman-edge.o'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/Makefile.am'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/pixman-solid-fill.c'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/pixman-combine32.lo'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/pixman-x86.lo'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/pixman-arm.lo'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/pixman-fast-path.o'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/pixman-combine-float.c'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman/pixman-arm-simd-asm.h'
+removed directory '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/demos/gtk-utils.h'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/demos/gtk-utils.c'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/demos/tri-test.c'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/demos/composite-test.c'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/demos/convolution-test.c'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/demos/conical-test.c'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/demos/parrot.c'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/demos/Makefile.in'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/demos/clip-in.c'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/demos/alpha-test.c'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/demos/quad2quad.c'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/demos/.deps/clip-in.Po'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/demos/.deps/gradient-test.Po'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/demos/.deps/trap-test.Po'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/demos/.deps/composite-test.Po'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/demos/.deps/alpha-test.Po'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/demos/.deps/utils.Po'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/demos/.deps/convolution-test.Po'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/demos/.deps/gtk-utils.Po'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/demos/.deps/srgb-test.Po'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/demos/.deps/scale.Po'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/demos/.deps/radial-test.Po'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/demos/.deps/linear-gradient.Po'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/demos/.deps/checkerboard.Po'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/demos/.deps/quad2quad.Po'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/demos/.deps/conical-test.Po'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/demos/.deps/tri-test.Po'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/demos/.deps/screen-test.Po'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/demos/.deps/utils-prng.Po'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/demos/.deps/clip-test.Po'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/demos/.deps/srgb-trap-test.Po'
+removed directory '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/demos/.deps'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/demos/trap-test.c'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/demos/scale.ui'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/demos/checkerboard.c'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/demos/Makefile'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/demos/linear-gradient.c'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/demos/clip-test.c'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/demos/scale.c'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/demos/radial-test.c'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/demos/srgb-test.c'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/demos/gradient-test.c'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/demos/parrot.jpg'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/demos/Makefile.am'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/demos/srgb-trap-test.c'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/demos/screen-test.c'
+removed directory '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/demos'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/ChangeLog'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/INSTALL'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman-1.pc.in'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/compile'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/AUTHORS'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/config.log'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/configure'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/missing'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/config.status'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/Makefile.am'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/libtool'
+removed '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6/pixman-1-uninstalled.pc'
+removed directory '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static/pixman-0.33.6'
+removed directory '/home/user/mxe/tmp-pixman-i686-w64-mingw32.static'
+touch '/home/user/mxe/usr/i686-w64-mingw32.static/installed/pixman'
+make[1]: Leaving directory '/home/user/mxe'
+
+real	4m23.191s
+user	1m33.713s
+sys	2m44.451s

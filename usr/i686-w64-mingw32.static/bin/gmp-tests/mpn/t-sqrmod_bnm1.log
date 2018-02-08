@@ -1,0 +1,2 @@
+../../test-driver: line 107: ./t-sqrmod_bnm1.exe: cannot execute binary file: Exec format error
+FAIL t-sqrmod_bnm1.exe (exit status: 126)

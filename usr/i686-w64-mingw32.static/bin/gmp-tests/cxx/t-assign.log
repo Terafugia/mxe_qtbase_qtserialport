@@ -1,0 +1,2 @@
+../../test-driver: line 107: ./t-assign.exe: cannot execute binary file: Exec format error
+FAIL t-assign.exe (exit status: 126)

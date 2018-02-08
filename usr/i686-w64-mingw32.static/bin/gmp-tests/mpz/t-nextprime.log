@@ -1,0 +1,2 @@
+../../test-driver: line 107: ./t-nextprime.exe: cannot execute binary file: Exec format error
+FAIL t-nextprime.exe (exit status: 126)

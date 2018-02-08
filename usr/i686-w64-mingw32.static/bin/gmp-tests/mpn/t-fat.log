@@ -1,0 +1,2 @@
+../../test-driver: line 107: ./t-fat.exe: cannot execute binary file: Exec format error
+FAIL t-fat.exe (exit status: 126)

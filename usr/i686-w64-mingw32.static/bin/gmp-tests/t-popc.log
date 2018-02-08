@@ -1,0 +1,2 @@
+../test-driver: line 107: ./t-popc.exe: cannot execute binary file: Exec format error
+FAIL t-popc.exe (exit status: 126)

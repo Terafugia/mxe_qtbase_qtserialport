@@ -1,0 +1,2 @@
+../../test-driver: line 107: ./t-misc.exe: cannot execute binary file: Exec format error
+FAIL t-misc.exe (exit status: 126)

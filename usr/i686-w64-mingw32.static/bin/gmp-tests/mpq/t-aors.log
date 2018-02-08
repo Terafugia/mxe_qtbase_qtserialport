@@ -1,0 +1,2 @@
+../../test-driver: line 107: ./t-aors.exe: cannot execute binary file: Exec format error
+FAIL t-aors.exe (exit status: 126)

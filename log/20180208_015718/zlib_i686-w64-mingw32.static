@@ -1,0 +1,451 @@
+make[1]: Entering directory '/home/user/mxe'
+uname -a
+Linux user-VirtualBox 4.13.0-21-generic #24-Ubuntu SMP Mon Dec 18 17:29:35 UTC 2017 i686 i686 i686 GNU/Linux
+git log --pretty=tformat:"%H - %s [%ar] [%d]" -1
+1b7d2e0562f2ec93848f536d2a9d4cd414356d9e - Update packages.json & build-matrix.html [3 days ago] [ (HEAD -> master, origin/master, origin/HEAD)]
+lsb_release -a 2>/dev/null || sw_vers 2>/dev/null || true
+Distributor ID:	Ubuntu
+Description:	Ubuntu 17.10
+Release:	17.10
+Codename:	artful
+autoconf --version 2>/dev/null | head -1
+autoconf (GNU Autoconf) 2.69
+automake --version 2>/dev/null | head -1
+automake (GNU automake) 1.15
+gcc --version
+gcc (Ubuntu 7.2.0-8ubuntu3) 7.2.0
+Copyright (C) 2017 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+g++ --version
+g++ (Ubuntu 7.2.0-8ubuntu3) 7.2.0
+Copyright (C) 2017 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+python --version
+Python 2.7.14
+perl --version 2>&1 | head -3
+
+This is perl 5, version 26, subversion 0 (v5.26.0) built for i686-linux-gnu-thread-multi-64int
+(with 56 registered patches, see perl -V for more detail)
+rm -rf   '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static'
+mkdir -p '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static'
+mkdir -p '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11'
+mkdir -p '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11.build_'
+# disable wine with readonly directory
+# see https://github.com/mxe/mxe/issues/841
+mkdir -p '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/readonly'
+chmod 0555 '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/readonly'
+cd '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static' &&        xz -dc '/home/user/mxe/pkg/zlib-1.2.11.tar.xz' | tar xf -
+cd '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11'
+(cd '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11' && patch -p1 -u) < /home/user/mxe/src/zlib-1-win32-static.patch
+patching file Makefile.in
+patching file configure
+cd '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11' && CHOST='i686-w64-mingw32.static' ./configure --prefix='/home/user/mxe/usr/i686-w64-mingw32.static' --static
+Using i686-w64-mingw32.static-ar
+Using i686-w64-mingw32.static-ranlib
+Using i686-w64-mingw32.static-nm
+Checking for i686-w64-mingw32.static-gcc...
+Building static library libz.a version 1.2.11 with i686-w64-mingw32.static-gcc.
+Checking for size_t... Yes.
+Checking for off64_t... Yes.
+Checking for fseeko... Yes.
+Checking for strerror... Yes.
+Checking for unistd.h... Yes.
+Checking for stdarg.h... Yes.
+Checking whether to use vs[n]printf() or s[n]printf()... using vs[n]printf().
+Checking for vsnprintf() in stdio.h... Yes.
+Checking for return value of vsnprintf()... Yes.
+Checking for attribute(visibility) support... No.
+make -C '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11' -j '1' install
+make[2]: Entering directory '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11'
+i686-w64-mingw32.static-gcc -O3 -D_LARGEFILE64_SOURCE=1  -c -o adler32.o adler32.c
+i686-w64-mingw32.static-gcc -O3 -D_LARGEFILE64_SOURCE=1  -c -o crc32.o crc32.c
+i686-w64-mingw32.static-gcc -O3 -D_LARGEFILE64_SOURCE=1  -c -o deflate.o deflate.c
+i686-w64-mingw32.static-gcc -O3 -D_LARGEFILE64_SOURCE=1  -c -o infback.o infback.c
+i686-w64-mingw32.static-gcc -O3 -D_LARGEFILE64_SOURCE=1  -c -o inffast.o inffast.c
+i686-w64-mingw32.static-gcc -O3 -D_LARGEFILE64_SOURCE=1  -c -o inflate.o inflate.c
+i686-w64-mingw32.static-gcc -O3 -D_LARGEFILE64_SOURCE=1  -c -o inftrees.o inftrees.c
+i686-w64-mingw32.static-gcc -O3 -D_LARGEFILE64_SOURCE=1  -c -o trees.o trees.c
+i686-w64-mingw32.static-gcc -O3 -D_LARGEFILE64_SOURCE=1  -c -o zutil.o zutil.c
+i686-w64-mingw32.static-gcc -O3 -D_LARGEFILE64_SOURCE=1  -c -o compress.o compress.c
+i686-w64-mingw32.static-gcc -O3 -D_LARGEFILE64_SOURCE=1  -c -o uncompr.o uncompr.c
+i686-w64-mingw32.static-gcc -O3 -D_LARGEFILE64_SOURCE=1  -c -o gzclose.o gzclose.c
+i686-w64-mingw32.static-gcc -O3 -D_LARGEFILE64_SOURCE=1  -c -o gzlib.o gzlib.c
+i686-w64-mingw32.static-gcc -O3 -D_LARGEFILE64_SOURCE=1  -c -o gzread.o gzread.c
+i686-w64-mingw32.static-gcc -O3 -D_LARGEFILE64_SOURCE=1  -c -o gzwrite.o gzwrite.c
+i686-w64-mingw32.static-ar rc libz.a adler32.o crc32.o deflate.o infback.o inffast.o inflate.o inftrees.o trees.o zutil.o compress.o uncompr.o gzclose.o gzlib.o gzread.o gzwrite.o 
+rm -f /home/user/mxe/usr/i686-w64-mingw32.static/lib/libz.a
+[ -z 'libz.a'  ] || cp libz.a  /home/user/mxe/usr/i686-w64-mingw32.static/lib
+chmod 644 /home/user/mxe/usr/i686-w64-mingw32.static/lib/libz.a
+rm -f /home/user/mxe/usr/i686-w64-mingw32.static/share/man/man3/zlib.3
+cp zlib.3 /home/user/mxe/usr/i686-w64-mingw32.static/share/man/man3
+chmod 644 /home/user/mxe/usr/i686-w64-mingw32.static/share/man/man3/zlib.3
+rm -f /home/user/mxe/usr/i686-w64-mingw32.static/lib/pkgconfig/zlib.pc
+cp zlib.pc /home/user/mxe/usr/i686-w64-mingw32.static/lib/pkgconfig
+chmod 644 /home/user/mxe/usr/i686-w64-mingw32.static/lib/pkgconfig/zlib.pc
+rm -f /home/user/mxe/usr/i686-w64-mingw32.static/include/zlib.h /home/user/mxe/usr/i686-w64-mingw32.static/include/zconf.h
+cp zlib.h zconf.h /home/user/mxe/usr/i686-w64-mingw32.static/include
+chmod 644 /home/user/mxe/usr/i686-w64-mingw32.static/include/zlib.h /home/user/mxe/usr/i686-w64-mingw32.static/include/zconf.h
+make[2]: Leaving directory '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11'
+
+
+settings.mk
+# This is a template of configuration file for MXE. See
+# docs/index.html for more extensive documentations.
+
+# This variable controls the number of compilation processes
+# within one package ("intra-package parallelism").
+#JOBS := 
+
+# This variable controls where intermediate files are created
+# this is necessary when compiling inside a virtualbox shared
+# directory. Some commands like strip fail in there with Protocol error
+# default is the current directory
+#MXE_TMP := /tmp
+
+# This variable controls the targets that will build.
+#MXE_TARGETS := i686-w64-mingw32.static i686-w64-mingw32.shared x86_64-w64-mingw32.static x86_64-w64-mingw32.shared
+
+# This variable controls which plugins are in use.
+# See plugins/README.md for further information.
+#override MXE_PLUGIN_DIRS += plugins/apps plugins/native
+
+# This variable controls the download mirror for SourceForge,
+# when it is used. Enabling the value below means auto.
+#SOURCEFORGE_MIRROR := downloads.sourceforge.net
+
+# The three lines below makes `make` build these "local
+# packages" instead of all packages.
+#LOCAL_PKG_LIST := boost curl file flac lzo pthreads vorbis wxwidgets
+#.DEFAULT_GOAL  := local-pkg-list
+#local-pkg-list: $(LOCAL_PKG_LIST)
+i686-w64-mingw32.static-strip '/home/user/mxe/usr/i686-w64-mingw32.static/bin/test-zlib.exe'
+i686-w64-mingw32.static-strip: '/home/user/mxe/usr/i686-w64-mingw32.static/bin/test-zlib.exe': No such file
+Makefile:786: recipe for target 'build-only-zlib_i686-w64-mingw32.static' failed
+make[1]: [build-only-zlib_i686-w64-mingw32.static] Error 1 (ignored)
+(du -k -d 0 '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static' 2>/dev/null || du -k --max-depth 0 '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static') | sed -n 's/^\(\S*\).*/du: \1 KiB/p'
+du: 3936 KiB
+rm -rfv  '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/iostream2/zstream.h'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/iostream2/zstream_test.cpp'
+removed directory '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/iostream2'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/pascal/zlibd32.mak'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/pascal/zlibpas.pas'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/pascal/example.pas'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/pascal/readme.txt'
+removed directory '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/pascal'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/gcc_gvmat64/gvmat64.S'
+removed directory '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/gcc_gvmat64'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/puff/puff.c'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/puff/README'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/puff/puff.h'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/puff/Makefile'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/puff/pufftest.c'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/puff/zeros.raw'
+removed directory '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/puff'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/masmx64/inffasx64.asm'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/masmx64/gvmat64.asm'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/masmx64/bld_ml64.bat'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/masmx64/readme.txt'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/masmx64/inffas8664.c'
+removed directory '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/masmx64'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/delphi/zlibd32.mak'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/delphi/ZLibConst.pas'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/delphi/ZLib.pas'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/delphi/readme.txt'
+removed directory '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/delphi'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/iostream/zfstream.h'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/iostream/zfstream.cpp'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/iostream/test.cpp'
+removed directory '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/iostream'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/ada/test.adb'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/ada/zlib.gpr'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/ada/zlib-streams.ads'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/ada/zlib-streams.adb'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/ada/buffer_demo.adb'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/ada/zlib.adb'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/ada/zlib-thin.ads'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/ada/readme.txt'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/ada/read.adb'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/ada/zlib.ads'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/ada/zlib-thin.adb'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/ada/mtest.adb'
+removed directory '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/ada'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/amd64/amd64-match.S'
+removed directory '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/amd64'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/untgz/Makefile'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/untgz/Makefile.msc'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/untgz/untgz.c'
+removed directory '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/untgz'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/iostream3/test.cc'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/iostream3/README'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/iostream3/zfstream.h'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/iostream3/TODO'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/iostream3/zfstream.cc'
+removed directory '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/iostream3'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/minizip/iowin32.h'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/minizip/unzip.c'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/minizip/configure.ac'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/minizip/iowin32.c'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/minizip/crypt.h'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/minizip/mztools.c'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/minizip/make_vms.com'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/minizip/ioapi.h'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/minizip/minizip.c'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/minizip/mztools.h'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/minizip/miniunzip.1'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/minizip/minizip.pc.in'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/minizip/Makefile'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/minizip/unzip.h'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/minizip/MiniZip64_info.txt'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/minizip/zip.h'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/minizip/MiniZip64_Changes.txt'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/minizip/miniunz.c'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/minizip/ioapi.c'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/minizip/minizip.1'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/minizip/zip.c'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/minizip/Makefile.am'
+removed directory '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/minizip'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/infback9/README'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/infback9/inffix9.h'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/infback9/infback9.h'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/infback9/inflate9.h'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/infback9/inftree9.h'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/infback9/infback9.c'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/infback9/inftree9.c'
+removed directory '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/infback9'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/asm686/match.S'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/asm686/README.686'
+removed directory '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/asm686'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/masmx86/inffas32.asm'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/masmx86/readme.txt'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/masmx86/match686.asm'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/masmx86/bld_ml32.bat'
+removed directory '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/masmx86'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/dotzlib/DotZLib.sln'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/dotzlib/DotZLib.chm'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/dotzlib/LICENSE_1_0.txt'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/dotzlib/DotZLib.build'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/dotzlib/readme.txt'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/dotzlib/DotZLib/GZipStream.cs'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/dotzlib/DotZLib/DotZLib.cs'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/dotzlib/DotZLib/Deflater.cs'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/dotzlib/DotZLib/ChecksumImpl.cs'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/dotzlib/DotZLib/AssemblyInfo.cs'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/dotzlib/DotZLib/DotZLib.csproj'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/dotzlib/DotZLib/Inflater.cs'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/dotzlib/DotZLib/UnitTests.cs'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/dotzlib/DotZLib/CodecBase.cs'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/dotzlib/DotZLib/CircularBuffer.cs'
+removed directory '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/dotzlib/DotZLib'
+removed directory '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/dotzlib'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/vstudio/vc14/zlib.rc'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/vstudio/vc14/testzlibdll.vcxproj'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/vstudio/vc14/zlibvc.def'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/vstudio/vc14/zlibvc.sln'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/vstudio/vc14/testzlib.vcxproj'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/vstudio/vc14/zlibvc.vcxproj'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/vstudio/vc14/miniunz.vcxproj'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/vstudio/vc14/minizip.vcxproj'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/vstudio/vc14/zlibstat.vcxproj'
+removed directory '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/vstudio/vc14'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/vstudio/vc11/zlib.rc'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/vstudio/vc11/testzlibdll.vcxproj'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/vstudio/vc11/zlibvc.def'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/vstudio/vc11/zlibvc.sln'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/vstudio/vc11/testzlib.vcxproj'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/vstudio/vc11/zlibvc.vcxproj'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/vstudio/vc11/miniunz.vcxproj'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/vstudio/vc11/minizip.vcxproj'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/vstudio/vc11/zlibstat.vcxproj'
+removed directory '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/vstudio/vc11'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/vstudio/readme.txt'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/vstudio/vc12/zlib.rc'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/vstudio/vc12/testzlibdll.vcxproj'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/vstudio/vc12/zlibvc.def'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/vstudio/vc12/zlibvc.sln'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/vstudio/vc12/testzlib.vcxproj'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/vstudio/vc12/zlibvc.vcxproj'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/vstudio/vc12/miniunz.vcxproj'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/vstudio/vc12/minizip.vcxproj'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/vstudio/vc12/zlibstat.vcxproj'
+removed directory '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/vstudio/vc12'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/vstudio/vc9/zlib.rc'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/vstudio/vc9/minizip.vcproj'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/vstudio/vc9/zlibvc.def'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/vstudio/vc9/zlibvc.sln'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/vstudio/vc9/zlibvc.vcproj'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/vstudio/vc9/miniunz.vcproj'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/vstudio/vc9/testzlibdll.vcproj'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/vstudio/vc9/testzlib.vcproj'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/vstudio/vc9/zlibstat.vcproj'
+removed directory '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/vstudio/vc9'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/vstudio/vc10/testzlibdll.vcxproj.filters'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/vstudio/vc10/minizip.vcxproj.filters'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/vstudio/vc10/zlib.rc'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/vstudio/vc10/testzlibdll.vcxproj'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/vstudio/vc10/zlibvc.def'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/vstudio/vc10/zlibvc.sln'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/vstudio/vc10/testzlib.vcxproj'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/vstudio/vc10/zlibstat.vcxproj.filters'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/vstudio/vc10/zlibvc.vcxproj'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/vstudio/vc10/miniunz.vcxproj'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/vstudio/vc10/minizip.vcxproj'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/vstudio/vc10/zlibstat.vcxproj'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/vstudio/vc10/zlibvc.vcxproj.filters'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/vstudio/vc10/testzlib.vcxproj.filters'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/vstudio/vc10/miniunz.vcxproj.filters'
+removed directory '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/vstudio/vc10'
+removed directory '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/vstudio'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/testzlib/testzlib.txt'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/testzlib/testzlib.c'
+removed directory '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/testzlib'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/README.contrib'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/blast/blast.h'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/blast/README'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/blast/test.txt'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/blast/blast.c'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/blast/Makefile'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/blast/test.pk'
+removed directory '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/blast'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/inflate86/inffas86.c'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/inflate86/inffast.S'
+removed directory '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib/inflate86'
+removed directory '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/contrib'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/compress.c'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/gzlib.c'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/trees.o'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/test/minigzip.c'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/test/example.c'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/test/infcover.c'
+removed directory '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/test'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/msdos/Makefile.tc'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/msdos/Makefile.emx'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/msdos/Makefile.bor'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/msdos/Makefile.msc'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/msdos/Makefile.dj2'
+removed directory '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/msdos'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/zutil.c'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/inftrees.o'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/gzwrite.c'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/zlib.pc'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/gzread.o'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/README'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/gzread.c'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/Makefile.in'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/configure.log'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/infback.o'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/trees.c'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/crc32.o'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/make_vms.com'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/gzclose.c'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/inflate.c'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/zlib.3'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/zlib2ansi'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/zlib.3.pdf'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/examples/zpipe.c'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/examples/zlib_how.html'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/examples/README.examples'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/examples/gzlog.c'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/examples/fitblk.c'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/examples/gzjoin.c'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/examples/gzlog.h'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/examples/enough.c'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/examples/gzappend.c'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/examples/gun.c'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/examples/zran.c'
+removed directory '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/examples'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/libz.a'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/nintendods/README'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/nintendods/Makefile'
+removed directory '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/nintendods'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/inflate.o'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/zconf.h'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/uncompr.o'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/zutil.h'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/crc32.c'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/Makefile'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/zlib.h'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/inftrees.h'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/gzguts.h'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/deflate.h'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/zlib.map'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/inffast.h'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/deflate.c'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/treebuild.xml'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/gzwrite.o'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/INDEX'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/zlib.pc.in'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/compress.o'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/adler32.c'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/CMakeLists.txt'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/gzclose.o'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/adler32.o'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/qnx/package.qpg'
+removed directory '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/qnx'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/os400/README400'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/os400/bndsrc'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/os400/zlib.inc'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/os400/make.sh'
+removed directory '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/os400'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/old/Makefile.riscos'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/old/README'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/old/os2/zlib.def'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/old/os2/Makefile.os2'
+removed directory '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/old/os2'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/old/Makefile.emx'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/old/descrip.mms'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/old/visual-basic.txt'
+removed directory '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/old'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/inflate.h'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/zlib.pc.cmakein'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/ChangeLog'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/infback.c'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/zconf.h.in'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/doc/txtvsbin.txt'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/doc/rfc1950.txt'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/doc/rfc1951.txt'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/doc/algorithm.txt'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/doc/rfc1952.txt'
+removed directory '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/doc'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/trees.h'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/zconf.h.cmakein'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/win32/DLL_FAQ.txt'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/win32/zlib.def'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/win32/README-WIN32.txt'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/win32/zlib1.rc'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/win32/Makefile.bor'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/win32/VisualC.txt'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/win32/Makefile.msc'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/win32/Makefile.gcc'
+removed directory '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/win32'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/inftrees.c'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/zutil.o'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/crc32.h'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/configure'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/watcom/watcom_f.mak'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/watcom/watcom_l.mak'
+removed directory '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/watcom'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/uncompr.c'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/gzlib.o'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/inffast.o'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/inffixed.h'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/FAQ'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/deflate.o'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/amiga/Makefile.sas'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/amiga/Makefile.pup'
+removed directory '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/amiga'
+removed '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11/inffast.c'
+removed directory '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11'
+removed directory '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/zlib-1.2.11.build_'
+removed directory '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static/readonly'
+removed directory '/home/user/mxe/tmp-zlib-i686-w64-mingw32.static'
+touch '/home/user/mxe/usr/i686-w64-mingw32.static/installed/zlib'
+make[1]: Leaving directory '/home/user/mxe'
+
+real	0m40.833s
+user	0m17.899s
+sys	0m22.042s

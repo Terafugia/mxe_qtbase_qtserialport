@@ -1,0 +1,290 @@
+============================================
+   GNU MP 6.1.2: tests/mpn/test-suite.log
+============================================
+
+# TOTAL: 46
+# PASS:  0
+# SKIP:  0
+# XFAIL: 0
+# FAIL:  46
+# XPASS: 0
+# ERROR: 0
+
+.. contents:: :depth: 2
+
+FAIL: t-asmtype
+===============
+
+../../test-driver: line 107: ./t-asmtype.exe: cannot execute binary file: Exec format error
+FAIL t-asmtype.exe (exit status: 126)
+
+FAIL: t-aors_1
+==============
+
+../../test-driver: line 107: ./t-aors_1.exe: cannot execute binary file: Exec format error
+FAIL t-aors_1.exe (exit status: 126)
+
+FAIL: t-divrem_1
+================
+
+../../test-driver: line 107: ./t-divrem_1.exe: cannot execute binary file: Exec format error
+FAIL t-divrem_1.exe (exit status: 126)
+
+FAIL: t-mod_1
+=============
+
+../../test-driver: line 107: ./t-mod_1.exe: cannot execute binary file: Exec format error
+FAIL t-mod_1.exe (exit status: 126)
+
+FAIL: t-fat
+===========
+
+../../test-driver: line 107: ./t-fat.exe: cannot execute binary file: Exec format error
+FAIL t-fat.exe (exit status: 126)
+
+FAIL: t-get_d
+=============
+
+../../test-driver: line 107: ./t-get_d.exe: cannot execute binary file: Exec format error
+FAIL t-get_d.exe (exit status: 126)
+
+FAIL: t-instrument
+==================
+
+../../test-driver: line 107: ./t-instrument.exe: cannot execute binary file: Exec format error
+FAIL t-instrument.exe (exit status: 126)
+
+FAIL: t-iord_u
+==============
+
+../../test-driver: line 107: ./t-iord_u.exe: cannot execute binary file: Exec format error
+FAIL t-iord_u.exe (exit status: 126)
+
+FAIL: t-mp_bases
+================
+
+../../test-driver: line 107: ./t-mp_bases.exe: cannot execute binary file: Exec format error
+FAIL t-mp_bases.exe (exit status: 126)
+
+FAIL: t-perfsqr
+===============
+
+../../test-driver: line 107: ./t-perfsqr.exe: cannot execute binary file: Exec format error
+FAIL t-perfsqr.exe (exit status: 126)
+
+FAIL: t-scan
+============
+
+../../test-driver: line 107: ./t-scan.exe: cannot execute binary file: Exec format error
+FAIL t-scan.exe (exit status: 126)
+
+FAIL: logic
+===========
+
+../../test-driver: line 107: ./logic.exe: cannot execute binary file: Exec format error
+FAIL logic.exe (exit status: 126)
+
+FAIL: t-toom22
+==============
+
+../../test-driver: line 107: ./t-toom22.exe: cannot execute binary file: Exec format error
+FAIL t-toom22.exe (exit status: 126)
+
+FAIL: t-toom32
+==============
+
+../../test-driver: line 107: ./t-toom32.exe: cannot execute binary file: Exec format error
+FAIL t-toom32.exe (exit status: 126)
+
+FAIL: t-toom33
+==============
+
+../../test-driver: line 107: ./t-toom33.exe: cannot execute binary file: Exec format error
+FAIL t-toom33.exe (exit status: 126)
+
+FAIL: t-toom42
+==============
+
+../../test-driver: line 107: ./t-toom42.exe: cannot execute binary file: Exec format error
+FAIL t-toom42.exe (exit status: 126)
+
+FAIL: t-toom43
+==============
+
+../../test-driver: line 107: ./t-toom43.exe: cannot execute binary file: Exec format error
+FAIL t-toom43.exe (exit status: 126)
+
+FAIL: t-toom44
+==============
+
+../../test-driver: line 107: ./t-toom44.exe: cannot execute binary file: Exec format error
+FAIL t-toom44.exe (exit status: 126)
+
+FAIL: t-toom52
+==============
+
+../../test-driver: line 107: ./t-toom52.exe: cannot execute binary file: Exec format error
+FAIL t-toom52.exe (exit status: 126)
+
+FAIL: t-toom53
+==============
+
+../../test-driver: line 107: ./t-toom53.exe: cannot execute binary file: Exec format error
+FAIL t-toom53.exe (exit status: 126)
+
+FAIL: t-toom54
+==============
+
+../../test-driver: line 107: ./t-toom54.exe: cannot execute binary file: Exec format error
+FAIL t-toom54.exe (exit status: 126)
+
+FAIL: t-toom62
+==============
+
+../../test-driver: line 107: ./t-toom62.exe: cannot execute binary file: Exec format error
+FAIL t-toom62.exe (exit status: 126)
+
+FAIL: t-toom63
+==============
+
+../../test-driver: line 107: ./t-toom63.exe: cannot execute binary file: Exec format error
+FAIL t-toom63.exe (exit status: 126)
+
+FAIL: t-toom6h
+==============
+
+../../test-driver: line 107: ./t-toom6h.exe: cannot execute binary file: Exec format error
+FAIL t-toom6h.exe (exit status: 126)
+
+FAIL: t-toom8h
+==============
+
+../../test-driver: line 107: ./t-toom8h.exe: cannot execute binary file: Exec format error
+FAIL t-toom8h.exe (exit status: 126)
+
+FAIL: t-toom2-sqr
+=================
+
+../../test-driver: line 107: ./t-toom2-sqr.exe: cannot execute binary file: Exec format error
+FAIL t-toom2-sqr.exe (exit status: 126)
+
+FAIL: t-toom3-sqr
+=================
+
+../../test-driver: line 107: ./t-toom3-sqr.exe: cannot execute binary file: Exec format error
+FAIL t-toom3-sqr.exe (exit status: 126)
+
+FAIL: t-toom4-sqr
+=================
+
+../../test-driver: line 107: ./t-toom4-sqr.exe: cannot execute binary file: Exec format error
+FAIL t-toom4-sqr.exe (exit status: 126)
+
+FAIL: t-toom6-sqr
+=================
+
+../../test-driver: line 107: ./t-toom6-sqr.exe: cannot execute binary file: Exec format error
+FAIL t-toom6-sqr.exe (exit status: 126)
+
+FAIL: t-toom8-sqr
+=================
+
+../../test-driver: line 107: ./t-toom8-sqr.exe: cannot execute binary file: Exec format error
+FAIL t-toom8-sqr.exe (exit status: 126)
+
+FAIL: t-div
+===========
+
+../../test-driver: line 107: ./t-div.exe: cannot execute binary file: Exec format error
+FAIL t-div.exe (exit status: 126)
+
+FAIL: t-mul
+===========
+
+../../test-driver: line 107: ./t-mul.exe: cannot execute binary file: Exec format error
+FAIL t-mul.exe (exit status: 126)
+
+FAIL: t-mullo
+=============
+
+../../test-driver: line 107: ./t-mullo.exe: cannot execute binary file: Exec format error
+FAIL t-mullo.exe (exit status: 126)
+
+FAIL: t-sqrlo
+=============
+
+../../test-driver: line 107: ./t-sqrlo.exe: cannot execute binary file: Exec format error
+FAIL t-sqrlo.exe (exit status: 126)
+
+FAIL: t-mulmod_bnm1
+===================
+
+../../test-driver: line 107: ./t-mulmod_bnm1.exe: cannot execute binary file: Exec format error
+FAIL t-mulmod_bnm1.exe (exit status: 126)
+
+FAIL: t-sqrmod_bnm1
+===================
+
+../../test-driver: line 107: ./t-sqrmod_bnm1.exe: cannot execute binary file: Exec format error
+FAIL t-sqrmod_bnm1.exe (exit status: 126)
+
+FAIL: t-mulmid
+==============
+
+../../test-driver: line 107: ./t-mulmid.exe: cannot execute binary file: Exec format error
+FAIL t-mulmid.exe (exit status: 126)
+
+FAIL: t-hgcd
+============
+
+../../test-driver: line 107: ./t-hgcd.exe: cannot execute binary file: Exec format error
+FAIL t-hgcd.exe (exit status: 126)
+
+FAIL: t-hgcd_appr
+=================
+
+../../test-driver: line 107: ./t-hgcd_appr.exe: cannot execute binary file: Exec format error
+FAIL t-hgcd_appr.exe (exit status: 126)
+
+FAIL: t-matrix22
+================
+
+../../test-driver: line 107: ./t-matrix22.exe: cannot execute binary file: Exec format error
+FAIL t-matrix22.exe (exit status: 126)
+
+FAIL: t-invert
+==============
+
+../../test-driver: line 107: ./t-invert.exe: cannot execute binary file: Exec format error
+FAIL t-invert.exe (exit status: 126)
+
+FAIL: t-bdiv
+============
+
+../../test-driver: line 107: ./t-bdiv.exe: cannot execute binary file: Exec format error
+FAIL t-bdiv.exe (exit status: 126)
+
+FAIL: t-broot
+=============
+
+../../test-driver: line 107: ./t-broot.exe: cannot execute binary file: Exec format error
+FAIL t-broot.exe (exit status: 126)
+
+FAIL: t-brootinv
+================
+
+../../test-driver: line 107: ./t-brootinv.exe: cannot execute binary file: Exec format error
+FAIL t-brootinv.exe (exit status: 126)
+
+FAIL: t-minvert
+===============
+
+../../test-driver: line 107: ./t-minvert.exe: cannot execute binary file: Exec format error
+FAIL t-minvert.exe (exit status: 126)
+
+FAIL: t-sizeinbase
+==================
+
+../../test-driver: line 107: ./t-sizeinbase.exe: cannot execute binary file: Exec format error
+FAIL t-sizeinbase.exe (exit status: 126)
+

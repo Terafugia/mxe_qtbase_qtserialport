@@ -1,0 +1,2 @@
+../../test-driver: line 107: ./t-bdiv.exe: cannot execute binary file: Exec format error
+FAIL t-bdiv.exe (exit status: 126)

@@ -1,0 +1,2128 @@
+make[1]: Entering directory '/home/user/mxe'
+uname -a
+Linux user-VirtualBox 4.13.0-21-generic #24-Ubuntu SMP Mon Dec 18 17:29:35 UTC 2017 i686 i686 i686 GNU/Linux
+git log --pretty=tformat:"%H - %s [%ar] [%d]" -1
+1b7d2e0562f2ec93848f536d2a9d4cd414356d9e - Update packages.json & build-matrix.html [3 days ago] [ (HEAD -> master, origin/master, origin/HEAD)]
+lsb_release -a 2>/dev/null || sw_vers 2>/dev/null || true
+Distributor ID:	Ubuntu
+Description:	Ubuntu 17.10
+Release:	17.10
+Codename:	artful
+autoconf --version 2>/dev/null | head -1
+autoconf (GNU Autoconf) 2.69
+automake --version 2>/dev/null | head -1
+automake (GNU automake) 1.15
+gcc --version
+gcc (Ubuntu 7.2.0-8ubuntu3) 7.2.0
+Copyright (C) 2017 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+g++ --version
+g++ (Ubuntu 7.2.0-8ubuntu3) 7.2.0
+Copyright (C) 2017 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+python --version
+Python 2.7.14
+perl --version 2>&1 | head -3
+
+This is perl 5, version 26, subversion 0 (v5.26.0) built for i686-linux-gnu-thread-multi-64int
+(with 56 registered patches, see perl -V for more detail)
+rm -rf   '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static'
+mkdir -p '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static'
+mkdir -p '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34'
+mkdir -p '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34.build_'
+# disable wine with readonly directory
+# see https://github.com/mxe/mxe/issues/841
+mkdir -p '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/readonly'
+chmod 0555 '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/readonly'
+cd '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static' &&        xz -dc '/home/user/mxe/pkg/libpng-1.6.34.tar.xz' | tar xf -
+cd '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34'
+cd '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34' && ./configure --host='i686-w64-mingw32.static' --build='i686-pc-linux-gnu' --prefix='/home/user/mxe/usr/i686-w64-mingw32.static'  --enable-static --disable-shared  ac_cv_prog_HAVE_DOXYGEN="false" --enable-doc=no --enable-gtk-doc=no --enable-gtk-doc-html=no --enable-gtk-doc-pdf=no --{docdir,infodir,mandir,with-html-dir}='/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34.build_.sink' --disable-doxygen
+configure: WARNING: unrecognized options: --enable-doc, --enable-gtk-doc, --enable-gtk-doc-html, --enable-gtk-doc-pdf, --with-html-dir, --disable-doxygen
+configure: loading site script /home/user/mxe/usr/i686-w64-mingw32.static/share/config.site
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for i686-w64-mingw32.static-strip... i686-w64-mingw32.static-strip
+checking for a thread-safe mkdir -p... /bin/mkdir -p
+checking for gawk... no
+checking for mawk... mawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking whether to enable maintainer-specific portions of Makefiles... no
+checking for i686-w64-mingw32.static-gcc... i686-w64-mingw32.static-gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.exe
+checking for suffix of executables... .exe
+checking whether we are cross compiling... yes
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether i686-w64-mingw32.static-gcc accepts -g... yes
+checking for i686-w64-mingw32.static-gcc option to accept ISO C89... none needed
+checking whether i686-w64-mingw32.static-gcc understands -c and -o together... yes
+checking for style of include used by make... GNU
+checking dependency style of i686-w64-mingw32.static-gcc... gcc3
+checking dependency style of i686-w64-mingw32.static-gcc... gcc3
+checking build system type... (cached) i686-pc-linux-gnu
+checking host system type... i686-w64-mingw32.static
+checking for a sed that does not truncate output... /bin/sed
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for fgrep... /bin/grep -F
+checking how to print strings... printf
+checking for ld used by i686-w64-mingw32.static-gcc... /home/user/mxe/usr/bin/i686-w64-mingw32.static-ld
+checking if the linker (/home/user/mxe/usr/bin/i686-w64-mingw32.static-ld) is GNU ld... yes
+checking how to run the C preprocessor... i686-w64-mingw32.static-gcc -E
+checking for gawk... (cached) mawk
+checking whether ln -s works... yes
+checking whether make sets $(MAKE)... (cached) yes
+checking for BSD- or MS-compatible name lister (nm)... /home/user/mxe/usr/bin/i686-w64-mingw32.static-nm -B
+checking the name lister (/home/user/mxe/usr/bin/i686-w64-mingw32.static-nm -B) interface... BSD nm
+checking the maximum length of command line arguments... 1572864
+checking how to convert i686-pc-linux-gnu file names to i686-w64-mingw32.static format... func_convert_file_nix_to_w32
+checking how to convert i686-pc-linux-gnu file names to toolchain format... func_convert_file_noop
+checking for /home/user/mxe/usr/bin/i686-w64-mingw32.static-ld option to reload object files... -r
+checking for i686-w64-mingw32.static-objdump... i686-w64-mingw32.static-objdump
+checking how to recognize dependent libraries... file_magic ^x86 archive import|^x86 DLL
+checking for i686-w64-mingw32.static-dlltool... i686-w64-mingw32.static-dlltool
+checking how to associate runtime and link libraries... func_cygming_dll_for_implib
+checking for i686-w64-mingw32.static-ar... i686-w64-mingw32.static-ar
+checking for archiver @FILE support... @
+checking for i686-w64-mingw32.static-strip... (cached) i686-w64-mingw32.static-strip
+checking for i686-w64-mingw32.static-ranlib... i686-w64-mingw32.static-ranlib
+checking command to parse /home/user/mxe/usr/bin/i686-w64-mingw32.static-nm -B output from i686-w64-mingw32.static-gcc object... ok
+checking for sysroot... no
+checking for a working dd... /bin/dd
+checking how to truncate binary pipes... /bin/dd bs=4096 count=1
+checking for i686-w64-mingw32.static-mt... no
+checking for mt... mt
+configure: WARNING: using cross tools not prefixed with host triplet
+checking if mt is a manifest tool... no
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking for dlfcn.h... no
+checking for i686-w64-mingw32.static-as... i686-w64-mingw32.static-as
+checking for i686-w64-mingw32.static-dlltool... (cached) i686-w64-mingw32.static-dlltool
+checking for i686-w64-mingw32.static-objdump... (cached) i686-w64-mingw32.static-objdump
+checking for objdir... .libs
+checking if i686-w64-mingw32.static-gcc supports -fno-rtti -fno-exceptions... no
+checking for i686-w64-mingw32.static-gcc option to produce PIC... -DDLL_EXPORT -DPIC
+checking if i686-w64-mingw32.static-gcc PIC flag -DDLL_EXPORT -DPIC works... yes
+checking if i686-w64-mingw32.static-gcc static flag -static works... yes
+checking if i686-w64-mingw32.static-gcc supports -c -o file.o... yes
+checking if i686-w64-mingw32.static-gcc supports -c -o file.o... (cached) yes
+checking whether the i686-w64-mingw32.static-gcc linker (/home/user/mxe/usr/bin/i686-w64-mingw32.static-ld) supports shared libraries... yes
+checking dynamic linker characteristics... Win32 ld.exe
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... no
+checking whether to build static libraries... yes
+checking that AWK works... ok
+checking if we need to force back C standard to C89... no
+checking for ANSI C header files... (cached) yes
+checking for an ANSI C-conforming const... yes
+checking for size_t... yes
+checking whether struct tm is in sys/time.h or time.h... time.h
+checking for C/C++ restrict keyword... __restrict
+checking for working strtod... no
+checking for pow... yes
+checking for memset... yes
+checking for pow... (cached) yes
+checking for clock_gettime... no
+configure: WARNING: not building timepng
+checking for zlibVersion in -lz... yes
+checking for feenableexcept in -lm... no
+checking for feenableexcept... no
+checking if using Solaris linker... no
+checking if libraries can be versioned... no
+configure: pkgconfig directory is ${libdir}/pkgconfig
+configure: Extra options for compiler: 
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating libpng.pc
+config.status: creating libpng-config
+config.status: creating config.h
+config.status: executing depfiles commands
+config.status: executing libtool commands
+configure: WARNING: unrecognized options: --enable-doc, --enable-gtk-doc, --enable-gtk-doc-html, --enable-gtk-doc-pdf, --with-html-dir, --disable-doxygen
+make -C '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34' -j '1' install bin_PROGRAMS= sbin_PROGRAMS= noinst_PROGRAMS=
+make[2]: Entering directory '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34'
+rm -f pnglibconf.c pnglibconf.tf[45]
+mawk -f ./scripts/options.awk out=pnglibconf.tf4 version=search\
+    ./pngconf.h ./scripts/pnglibconf.dfa\
+    ./pngusr.dfa  1>&2
+mawk -f ./scripts/options.awk out=pnglibconf.tf5 pnglibconf.tf4 1>&2
+rm pnglibconf.tf4
+mv pnglibconf.tf5 pnglibconf.c
+rm -f pnglibconf.out pnglibconf.tf[12]
+test -d scripts || mkdir scripts || test -d scripts
+i686-w64-mingw32.static-gcc -E -DHAVE_CONFIG_H -I. \
+     -DPNGLIB_LIBNAME='PNG16_0' -DPNGLIB_VERSION='1.6.34' -DSYMBOL_PREFIX='' -DPNG_NO_USE_READ_MACROS -DPNG_BUILDING_SYMBOL_TABLE  pnglibconf.c > pnglibconf.tf1
+mawk -f "./scripts/dfn.awk" out="pnglibconf.tf2" pnglibconf.tf1 1>&2
+rm -f pnglibconf.tf1
+mv pnglibconf.tf2 pnglibconf.out
+rm -f pnglibconf.h
+cp pnglibconf.out pnglibconf.h
+make  install-am
+make[3]: Entering directory '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34'
+:>pngprefix.h
+depbase=`echo png.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ./libtool  --tag=CC   --mode=compile i686-w64-mingw32.static-gcc -DHAVE_CONFIG_H -I.     -g -O2 -MT png.lo -MD -MP -MF $depbase.Tpo -c -o png.lo png.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  i686-w64-mingw32.static-gcc -DHAVE_CONFIG_H -I. -g -O2 -MT png.lo -MD -MP -MF .deps/png.Tpo -c png.c -o png.o
+depbase=`echo pngerror.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ./libtool  --tag=CC   --mode=compile i686-w64-mingw32.static-gcc -DHAVE_CONFIG_H -I.     -g -O2 -MT pngerror.lo -MD -MP -MF $depbase.Tpo -c -o pngerror.lo pngerror.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  i686-w64-mingw32.static-gcc -DHAVE_CONFIG_H -I. -g -O2 -MT pngerror.lo -MD -MP -MF .deps/pngerror.Tpo -c pngerror.c -o pngerror.o
+depbase=`echo pngget.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ./libtool  --tag=CC   --mode=compile i686-w64-mingw32.static-gcc -DHAVE_CONFIG_H -I.     -g -O2 -MT pngget.lo -MD -MP -MF $depbase.Tpo -c -o pngget.lo pngget.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  i686-w64-mingw32.static-gcc -DHAVE_CONFIG_H -I. -g -O2 -MT pngget.lo -MD -MP -MF .deps/pngget.Tpo -c pngget.c -o pngget.o
+depbase=`echo pngmem.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ./libtool  --tag=CC   --mode=compile i686-w64-mingw32.static-gcc -DHAVE_CONFIG_H -I.     -g -O2 -MT pngmem.lo -MD -MP -MF $depbase.Tpo -c -o pngmem.lo pngmem.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  i686-w64-mingw32.static-gcc -DHAVE_CONFIG_H -I. -g -O2 -MT pngmem.lo -MD -MP -MF .deps/pngmem.Tpo -c pngmem.c -o pngmem.o
+depbase=`echo pngpread.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ./libtool  --tag=CC   --mode=compile i686-w64-mingw32.static-gcc -DHAVE_CONFIG_H -I.     -g -O2 -MT pngpread.lo -MD -MP -MF $depbase.Tpo -c -o pngpread.lo pngpread.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  i686-w64-mingw32.static-gcc -DHAVE_CONFIG_H -I. -g -O2 -MT pngpread.lo -MD -MP -MF .deps/pngpread.Tpo -c pngpread.c -o pngpread.o
+depbase=`echo pngread.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ./libtool  --tag=CC   --mode=compile i686-w64-mingw32.static-gcc -DHAVE_CONFIG_H -I.     -g -O2 -MT pngread.lo -MD -MP -MF $depbase.Tpo -c -o pngread.lo pngread.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  i686-w64-mingw32.static-gcc -DHAVE_CONFIG_H -I. -g -O2 -MT pngread.lo -MD -MP -MF .deps/pngread.Tpo -c pngread.c -o pngread.o
+depbase=`echo pngrio.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ./libtool  --tag=CC   --mode=compile i686-w64-mingw32.static-gcc -DHAVE_CONFIG_H -I.     -g -O2 -MT pngrio.lo -MD -MP -MF $depbase.Tpo -c -o pngrio.lo pngrio.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  i686-w64-mingw32.static-gcc -DHAVE_CONFIG_H -I. -g -O2 -MT pngrio.lo -MD -MP -MF .deps/pngrio.Tpo -c pngrio.c -o pngrio.o
+depbase=`echo pngrtran.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ./libtool  --tag=CC   --mode=compile i686-w64-mingw32.static-gcc -DHAVE_CONFIG_H -I.     -g -O2 -MT pngrtran.lo -MD -MP -MF $depbase.Tpo -c -o pngrtran.lo pngrtran.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  i686-w64-mingw32.static-gcc -DHAVE_CONFIG_H -I. -g -O2 -MT pngrtran.lo -MD -MP -MF .deps/pngrtran.Tpo -c pngrtran.c -o pngrtran.o
+depbase=`echo pngrutil.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ./libtool  --tag=CC   --mode=compile i686-w64-mingw32.static-gcc -DHAVE_CONFIG_H -I.     -g -O2 -MT pngrutil.lo -MD -MP -MF $depbase.Tpo -c -o pngrutil.lo pngrutil.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  i686-w64-mingw32.static-gcc -DHAVE_CONFIG_H -I. -g -O2 -MT pngrutil.lo -MD -MP -MF .deps/pngrutil.Tpo -c pngrutil.c -o pngrutil.o
+depbase=`echo pngset.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ./libtool  --tag=CC   --mode=compile i686-w64-mingw32.static-gcc -DHAVE_CONFIG_H -I.     -g -O2 -MT pngset.lo -MD -MP -MF $depbase.Tpo -c -o pngset.lo pngset.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  i686-w64-mingw32.static-gcc -DHAVE_CONFIG_H -I. -g -O2 -MT pngset.lo -MD -MP -MF .deps/pngset.Tpo -c pngset.c -o pngset.o
+depbase=`echo pngtrans.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ./libtool  --tag=CC   --mode=compile i686-w64-mingw32.static-gcc -DHAVE_CONFIG_H -I.     -g -O2 -MT pngtrans.lo -MD -MP -MF $depbase.Tpo -c -o pngtrans.lo pngtrans.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  i686-w64-mingw32.static-gcc -DHAVE_CONFIG_H -I. -g -O2 -MT pngtrans.lo -MD -MP -MF .deps/pngtrans.Tpo -c pngtrans.c -o pngtrans.o
+depbase=`echo pngwio.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ./libtool  --tag=CC   --mode=compile i686-w64-mingw32.static-gcc -DHAVE_CONFIG_H -I.     -g -O2 -MT pngwio.lo -MD -MP -MF $depbase.Tpo -c -o pngwio.lo pngwio.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  i686-w64-mingw32.static-gcc -DHAVE_CONFIG_H -I. -g -O2 -MT pngwio.lo -MD -MP -MF .deps/pngwio.Tpo -c pngwio.c -o pngwio.o
+depbase=`echo pngwrite.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ./libtool  --tag=CC   --mode=compile i686-w64-mingw32.static-gcc -DHAVE_CONFIG_H -I.     -g -O2 -MT pngwrite.lo -MD -MP -MF $depbase.Tpo -c -o pngwrite.lo pngwrite.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  i686-w64-mingw32.static-gcc -DHAVE_CONFIG_H -I. -g -O2 -MT pngwrite.lo -MD -MP -MF .deps/pngwrite.Tpo -c pngwrite.c -o pngwrite.o
+depbase=`echo pngwtran.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ./libtool  --tag=CC   --mode=compile i686-w64-mingw32.static-gcc -DHAVE_CONFIG_H -I.     -g -O2 -MT pngwtran.lo -MD -MP -MF $depbase.Tpo -c -o pngwtran.lo pngwtran.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  i686-w64-mingw32.static-gcc -DHAVE_CONFIG_H -I. -g -O2 -MT pngwtran.lo -MD -MP -MF .deps/pngwtran.Tpo -c pngwtran.c -o pngwtran.o
+depbase=`echo pngwutil.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ./libtool  --tag=CC   --mode=compile i686-w64-mingw32.static-gcc -DHAVE_CONFIG_H -I.     -g -O2 -MT pngwutil.lo -MD -MP -MF $depbase.Tpo -c -o pngwutil.lo pngwutil.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  i686-w64-mingw32.static-gcc -DHAVE_CONFIG_H -I. -g -O2 -MT pngwutil.lo -MD -MP -MF .deps/pngwutil.Tpo -c pngwutil.c -o pngwutil.o
+depbase=`echo mips/mips_init.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ./libtool  --tag=CC   --mode=compile i686-w64-mingw32.static-gcc -DHAVE_CONFIG_H -I.     -g -O2 -MT mips/mips_init.lo -MD -MP -MF $depbase.Tpo -c -o mips/mips_init.lo mips/mips_init.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  i686-w64-mingw32.static-gcc -DHAVE_CONFIG_H -I. -g -O2 -MT mips/mips_init.lo -MD -MP -MF mips/.deps/mips_init.Tpo -c mips/mips_init.c -o mips/mips_init.o
+depbase=`echo mips/filter_msa_intrinsics.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ./libtool  --tag=CC   --mode=compile i686-w64-mingw32.static-gcc -DHAVE_CONFIG_H -I.     -g -O2 -MT mips/filter_msa_intrinsics.lo -MD -MP -MF $depbase.Tpo -c -o mips/filter_msa_intrinsics.lo mips/filter_msa_intrinsics.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  i686-w64-mingw32.static-gcc -DHAVE_CONFIG_H -I. -g -O2 -MT mips/filter_msa_intrinsics.lo -MD -MP -MF mips/.deps/filter_msa_intrinsics.Tpo -c mips/filter_msa_intrinsics.c -o mips/filter_msa_intrinsics.o
+depbase=`echo intel/intel_init.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ./libtool  --tag=CC   --mode=compile i686-w64-mingw32.static-gcc -DHAVE_CONFIG_H -I.     -g -O2 -MT intel/intel_init.lo -MD -MP -MF $depbase.Tpo -c -o intel/intel_init.lo intel/intel_init.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  i686-w64-mingw32.static-gcc -DHAVE_CONFIG_H -I. -g -O2 -MT intel/intel_init.lo -MD -MP -MF intel/.deps/intel_init.Tpo -c intel/intel_init.c -o intel/intel_init.o
+depbase=`echo intel/filter_sse2_intrinsics.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ./libtool  --tag=CC   --mode=compile i686-w64-mingw32.static-gcc -DHAVE_CONFIG_H -I.     -g -O2 -MT intel/filter_sse2_intrinsics.lo -MD -MP -MF $depbase.Tpo -c -o intel/filter_sse2_intrinsics.lo intel/filter_sse2_intrinsics.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  i686-w64-mingw32.static-gcc -DHAVE_CONFIG_H -I. -g -O2 -MT intel/filter_sse2_intrinsics.lo -MD -MP -MF intel/.deps/filter_sse2_intrinsics.Tpo -c intel/filter_sse2_intrinsics.c -o intel/filter_sse2_intrinsics.o
+depbase=`echo powerpc/powerpc_init.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ./libtool  --tag=CC   --mode=compile i686-w64-mingw32.static-gcc -DHAVE_CONFIG_H -I.     -g -O2 -MT powerpc/powerpc_init.lo -MD -MP -MF $depbase.Tpo -c -o powerpc/powerpc_init.lo powerpc/powerpc_init.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  i686-w64-mingw32.static-gcc -DHAVE_CONFIG_H -I. -g -O2 -MT powerpc/powerpc_init.lo -MD -MP -MF powerpc/.deps/powerpc_init.Tpo -c powerpc/powerpc_init.c -o powerpc/powerpc_init.o
+depbase=`echo powerpc/filter_vsx_intrinsics.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ./libtool  --tag=CC   --mode=compile i686-w64-mingw32.static-gcc -DHAVE_CONFIG_H -I.     -g -O2 -MT powerpc/filter_vsx_intrinsics.lo -MD -MP -MF $depbase.Tpo -c -o powerpc/filter_vsx_intrinsics.lo powerpc/filter_vsx_intrinsics.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  i686-w64-mingw32.static-gcc -DHAVE_CONFIG_H -I. -g -O2 -MT powerpc/filter_vsx_intrinsics.lo -MD -MP -MF powerpc/.deps/filter_vsx_intrinsics.Tpo -c powerpc/filter_vsx_intrinsics.c -o powerpc/filter_vsx_intrinsics.o
+rm -f scripts/sym.out scripts/sym.tf[12]
+test -d scripts || mkdir scripts || test -d scripts
+i686-w64-mingw32.static-gcc -E -DHAVE_CONFIG_H -I. \
+     -DPNGLIB_LIBNAME='PNG16_0' -DPNGLIB_VERSION='1.6.34' -DSYMBOL_PREFIX='' -DPNG_NO_USE_READ_MACROS -DPNG_BUILDING_SYMBOL_TABLE  scripts/sym.c > scripts/sym.tf1
+mawk -f "./scripts/dfn.awk" out="scripts/sym.tf2" scripts/sym.tf1 1>&2
+rm -f scripts/sym.tf1
+mv scripts/sym.tf2 scripts/sym.out
+rm -f libpng.sym
+cp scripts/sym.out libpng.sym
+/bin/bash ./libtool  --tag=CC   --mode=link i686-w64-mingw32.static-gcc  -g -O2 -no-undefined -export-dynamic -version-number 16:34:0   -export-symbols libpng.sym  -o libpng16.la -rpath /home/user/mxe/usr/i686-w64-mingw32.static/lib png.lo pngerror.lo pngget.lo pngmem.lo pngpread.lo pngread.lo pngrio.lo pngrtran.lo pngrutil.lo pngset.lo pngtrans.lo pngwio.lo pngwrite.lo pngwtran.lo pngwutil.lo  mips/mips_init.lo mips/filter_msa_intrinsics.lo intel/intel_init.lo intel/filter_sse2_intrinsics.lo powerpc/powerpc_init.lo powerpc/filter_vsx_intrinsics.lo   -lz 
+libtool: link: i686-w64-mingw32.static-ar cru .libs/libpng16.a  png.o pngerror.o pngget.o pngmem.o pngpread.o pngread.o pngrio.o pngrtran.o pngrutil.o pngset.o pngtrans.o pngwio.o pngwrite.o pngwtran.o pngwutil.o mips/mips_init.o mips/filter_msa_intrinsics.o intel/intel_init.o intel/filter_sse2_intrinsics.o powerpc/powerpc_init.o powerpc/filter_vsx_intrinsics.o
+i686-w64-mingw32.static-ar: `u' modifier ignored since `D' is the default (see `U')
+libtool: link: i686-w64-mingw32.static-ranlib .libs/libpng16.a
+libtool: link: ( cd ".libs" && rm -f "libpng16.la" && ln -s "../libpng16.la" "libpng16.la" )
+cp libpng-config libpng16-config
+cp libpng.pc libpng16.pc
+depbase=`echo pngtest.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+i686-w64-mingw32.static-gcc -DHAVE_CONFIG_H -I.     -g -O2 -MT pngtest.o -MD -MP -MF $depbase.Tpo -c -o pngtest.o pngtest.c &&\
+mv -f $depbase.Tpo $depbase.Po
+/bin/bash ./libtool  --tag=CC   --mode=link i686-w64-mingw32.static-gcc  -g -O2   -o pngtest.exe pngtest.o libpng16.la -lz 
+libtool: link: i686-w64-mingw32.static-gcc -g -O2 -o pngtest.exe pngtest.o  ./.libs/libpng16.a -lz
+depbase=`echo contrib/libtests/pngunknown.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+i686-w64-mingw32.static-gcc -DHAVE_CONFIG_H -I.     -g -O2 -MT contrib/libtests/pngunknown.o -MD -MP -MF $depbase.Tpo -c -o contrib/libtests/pngunknown.o contrib/libtests/pngunknown.c &&\
+mv -f $depbase.Tpo $depbase.Po
+/bin/bash ./libtool  --tag=CC   --mode=link i686-w64-mingw32.static-gcc  -g -O2   -o pngunknown.exe contrib/libtests/pngunknown.o libpng16.la -lz 
+libtool: link: i686-w64-mingw32.static-gcc -g -O2 -o pngunknown.exe contrib/libtests/pngunknown.o  ./.libs/libpng16.a -lz
+depbase=`echo contrib/libtests/pngstest.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+i686-w64-mingw32.static-gcc -DHAVE_CONFIG_H -I.     -g -O2 -MT contrib/libtests/pngstest.o -MD -MP -MF $depbase.Tpo -c -o contrib/libtests/pngstest.o contrib/libtests/pngstest.c &&\
+mv -f $depbase.Tpo $depbase.Po
+/bin/bash ./libtool  --tag=CC   --mode=link i686-w64-mingw32.static-gcc  -g -O2   -o pngstest.exe contrib/libtests/pngstest.o libpng16.la -lz 
+libtool: link: i686-w64-mingw32.static-gcc -g -O2 -o pngstest.exe contrib/libtests/pngstest.o  ./.libs/libpng16.a -lz
+depbase=`echo contrib/libtests/pngvalid.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+i686-w64-mingw32.static-gcc -DHAVE_CONFIG_H -I.     -g -O2 -MT contrib/libtests/pngvalid.o -MD -MP -MF $depbase.Tpo -c -o contrib/libtests/pngvalid.o contrib/libtests/pngvalid.c &&\
+mv -f $depbase.Tpo $depbase.Po
+/bin/bash ./libtool  --tag=CC   --mode=link i686-w64-mingw32.static-gcc  -g -O2   -o pngvalid.exe contrib/libtests/pngvalid.o libpng16.la -lz 
+libtool: link: i686-w64-mingw32.static-gcc -g -O2 -o pngvalid.exe contrib/libtests/pngvalid.o  ./.libs/libpng16.a -lz
+depbase=`echo contrib/libtests/pngimage.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+i686-w64-mingw32.static-gcc -DHAVE_CONFIG_H -I.     -g -O2 -MT contrib/libtests/pngimage.o -MD -MP -MF $depbase.Tpo -c -o contrib/libtests/pngimage.o contrib/libtests/pngimage.c &&\
+mv -f $depbase.Tpo $depbase.Po
+/bin/bash ./libtool  --tag=CC   --mode=link i686-w64-mingw32.static-gcc  -g -O2   -o pngimage.exe contrib/libtests/pngimage.o libpng16.la -lz 
+libtool: link: i686-w64-mingw32.static-gcc -g -O2 -o pngimage.exe contrib/libtests/pngimage.o  ./.libs/libpng16.a -lz
+depbase=`echo contrib/tools/pngcp.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+i686-w64-mingw32.static-gcc -DHAVE_CONFIG_H -I.     -g -O2 -MT contrib/tools/pngcp.o -MD -MP -MF $depbase.Tpo -c -o contrib/tools/pngcp.o contrib/tools/pngcp.c &&\
+mv -f $depbase.Tpo $depbase.Po
+/bin/bash ./libtool  --tag=CC   --mode=link i686-w64-mingw32.static-gcc  -g -O2   -o pngcp.exe contrib/tools/pngcp.o libpng16.la -lz 
+libtool: link: i686-w64-mingw32.static-gcc -g -O2 -o pngcp.exe contrib/tools/pngcp.o  ./.libs/libpng16.a -lz
+make[4]: Entering directory '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34'
+ /bin/mkdir -p '/home/user/mxe/usr/i686-w64-mingw32.static/lib'
+ /bin/bash ./libtool   --mode=install /usr/bin/install -c   libpng16.la '/home/user/mxe/usr/i686-w64-mingw32.static/lib'
+libtool: install: /usr/bin/install -c .libs/libpng16.lai /home/user/mxe/usr/i686-w64-mingw32.static/lib/libpng16.la
+libtool: install: /usr/bin/install -c .libs/libpng16.a /home/user/mxe/usr/i686-w64-mingw32.static/lib/libpng16.a
+libtool: install: chmod 644 /home/user/mxe/usr/i686-w64-mingw32.static/lib/libpng16.a
+libtool: install: i686-w64-mingw32.static-ranlib /home/user/mxe/usr/i686-w64-mingw32.static/lib/libpng16.a
+ /bin/mkdir -p '/home/user/mxe/usr/i686-w64-mingw32.static/bin'
+ /usr/bin/install -c libpng16-config '/home/user/mxe/usr/i686-w64-mingw32.static/bin'
+make  install-exec-hook
+make[5]: Entering directory '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34'
++ cd /home/user/mxe/usr/i686-w64-mingw32.static/lib
++ for ext in a dll.a so so.16.34 la sl dylib
++ rm -f libpng.a
++ test -f libpng16.a
++ ln -s libpng16.a libpng.a
++ for ext in a dll.a so so.16.34 la sl dylib
++ rm -f libpng.dll.a
++ test -f libpng16.dll.a
++ for ext in a dll.a so so.16.34 la sl dylib
++ rm -f libpng.so
++ test -f libpng16.so
++ for ext in a dll.a so so.16.34 la sl dylib
++ rm -f libpng.so.16.34
++ test -f libpng16.so.16.34
++ for ext in a dll.a so so.16.34 la sl dylib
++ rm -f libpng.la
++ test -f libpng16.la
++ ln -s libpng16.la libpng.la
++ for ext in a dll.a so so.16.34 la sl dylib
++ rm -f libpng.sl
++ test -f libpng16.sl
++ for ext in a dll.a so so.16.34 la sl dylib
++ rm -f libpng.dylib
++ test -f libpng16.dylib
++ cd /home/user/mxe/usr/i686-w64-mingw32.static/bin
++ rm -f libpng-config
++ ln -s libpng16-config libpng-config
+make[5]: Leaving directory '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34'
+ /bin/mkdir -p '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34.build_.sink/man3'
+ /usr/bin/install -c -m 644 libpng.3 libpngpf.3 '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34.build_.sink/man3'
+ /bin/mkdir -p '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34.build_.sink/man5'
+ /usr/bin/install -c -m 644 png.5 '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34.build_.sink/man5'
+ /bin/mkdir -p '/home/user/mxe/usr/i686-w64-mingw32.static/include/libpng16'
+ /usr/bin/install -c -m 644 pnglibconf.h '/home/user/mxe/usr/i686-w64-mingw32.static/include/libpng16'
+ /bin/mkdir -p '/home/user/mxe/usr/i686-w64-mingw32.static/lib/pkgconfig'
+ /usr/bin/install -c -m 644 libpng16.pc '/home/user/mxe/usr/i686-w64-mingw32.static/lib/pkgconfig'
+ /bin/mkdir -p '/home/user/mxe/usr/i686-w64-mingw32.static/include/libpng16'
+ /usr/bin/install -c -m 644 png.h pngconf.h '/home/user/mxe/usr/i686-w64-mingw32.static/include/libpng16'
+make  install-data-hook
+make[5]: Entering directory '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34'
++ cd /home/user/mxe/usr/i686-w64-mingw32.static/include
++ for f in pnglibconf.h png.h pngconf.h
++ rm -f pnglibconf.h
++ ln -s libpng16/pnglibconf.h pnglibconf.h
++ for f in pnglibconf.h png.h pngconf.h
++ rm -f png.h
++ ln -s libpng16/png.h png.h
++ for f in pnglibconf.h png.h pngconf.h
++ rm -f pngconf.h
++ ln -s libpng16/pngconf.h pngconf.h
++ cd /home/user/mxe/usr/i686-w64-mingw32.static/lib/pkgconfig
++ rm -f libpng.pc
++ ln -s libpng16.pc libpng.pc
+make[5]: Leaving directory '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34'
+make[4]: Leaving directory '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34'
+make[3]: Leaving directory '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34'
+make[2]: Leaving directory '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34'
+ln -sf '/home/user/mxe/usr/i686-w64-mingw32.static/bin/libpng-config' '/home/user/mxe/usr/bin/i686-w64-mingw32.static-libpng-config'
+'i686-w64-mingw32.static-gcc' -W -Wall -Werror -std=c99 -pedantic '/home/user/mxe/src/libpng-test.c' -o '/home/user/mxe/usr/i686-w64-mingw32.static/bin/test-libpng.exe' `'/home/user/mxe/usr/i686-w64-mingw32.static/bin/libpng-config' --static --cflags --libs`
+
+/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/config.log
+This file contains any messages produced by compilers while
+running configure, to aid debugging if configure makes a mistake.
+
+It was created by libpng configure 1.6.34, which was
+generated by GNU Autoconf 2.69.  Invocation command line was
+
+  $ ./configure --host=i686-w64-mingw32.static --build=i686-pc-linux-gnu --prefix=/home/user/mxe/usr/i686-w64-mingw32.static --enable-static --disable-shared ac_cv_prog_HAVE_DOXYGEN=false --enable-doc=no --enable-gtk-doc=no --enable-gtk-doc-html=no --enable-gtk-doc-pdf=no --docdir=/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34.build_.sink --infodir=/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34.build_.sink --mandir=/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34.build_.sink --with-html-dir=/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34.build_.sink --disable-doxygen
+
+## --------- ##
+## Platform. ##
+## --------- ##
+
+hostname = user-VirtualBox
+uname -m = i686
+uname -r = 4.13.0-21-generic
+uname -s = Linux
+uname -v = #24-Ubuntu SMP Mon Dec 18 17:29:35 UTC 2017
+
+/usr/bin/uname -p = unknown
+/bin/uname -X     = unknown
+
+/bin/arch              = unknown
+/usr/bin/arch -k       = unknown
+/usr/convex/getsysinfo = unknown
+/usr/bin/hostinfo      = unknown
+/bin/machine           = unknown
+/usr/bin/oslevel       = unknown
+/bin/universe          = unknown
+
+PATH: /home/user/mxe/usr/i686-pc-linux-gnu/bin
+PATH: /home/user/mxe/usr/bin
+PATH: /home/user/mxe/usr/i686-pc-linux-gnu/bin
+PATH: /home/user/mxe/usr/bin
+PATH: /usr/local/sbin
+PATH: /usr/local/bin
+PATH: /usr/sbin
+PATH: /usr/bin
+PATH: /sbin
+PATH: /bin
+PATH: /usr/games
+PATH: /usr/local/games
+PATH: /snap/bin
+
+
+## ----------- ##
+## Core tests. ##
+## ----------- ##
+
+configure:2209: loading site script /home/user/mxe/usr/i686-w64-mingw32.static/share/config.site
+| ac_cv_build=i686-pc-linux-gnu
+configure:2358: checking for a BSD-compatible install
+configure:2426: result: /usr/bin/install -c
+configure:2437: checking whether build environment is sane
+configure:2492: result: yes
+configure:2551: checking for i686-w64-mingw32.static-strip
+configure:2567: found /home/user/mxe/usr/bin/i686-w64-mingw32.static-strip
+configure:2578: result: i686-w64-mingw32.static-strip
+configure:2643: checking for a thread-safe mkdir -p
+configure:2682: result: /bin/mkdir -p
+configure:2689: checking for gawk
+configure:2719: result: no
+configure:2689: checking for mawk
+configure:2705: found /usr/bin/mawk
+configure:2716: result: mawk
+configure:2727: checking whether make sets $(MAKE)
+configure:2749: result: yes
+configure:2778: checking whether make supports nested variables
+configure:2795: result: yes
+configure:2925: checking whether to enable maintainer-specific portions of Makefiles
+configure:2934: result: no
+configure:2974: checking for i686-w64-mingw32.static-gcc
+configure:2990: found /home/user/mxe/usr/bin/i686-w64-mingw32.static-gcc
+configure:3001: result: i686-w64-mingw32.static-gcc
+configure:3270: checking for C compiler version
+configure:3279: i686-w64-mingw32.static-gcc --version >&5
+i686-w64-mingw32.static-gcc (GCC) 5.4.0
+Copyright (C) 2015 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+configure:3290: $? = 0
+configure:3279: i686-w64-mingw32.static-gcc -v >&5
+Using built-in specs.
+COLLECT_GCC=i686-w64-mingw32.static-gcc
+COLLECT_LTO_WRAPPER=/home/user/mxe/usr/libexec/gcc/i686-w64-mingw32.static/5.4.0/lto-wrapper
+Target: i686-w64-mingw32.static
+Configured with: /home/user/mxe/tmp-gcc-i686-w64-mingw32.static/gcc-5.4.0/configure ac_cv_prog_HAVE_DOXYGEN=false --enable-doc=no --enable-gtk-doc=no --enable-gtk-doc-html=no --enable-gtk-doc-pdf=no --docdir=/home/user/mxe/tmp-gcc-i686-w64-mingw32.static/gcc-5.4.0.build_.sink --infodir=/home/user/mxe/tmp-gcc-i686-w64-mingw32.static/gcc-5.4.0.build_.sink --mandir=/home/user/mxe/tmp-gcc-i686-w64-mingw32.static/gcc-5.4.0.build_.sink --with-html-dir=/home/user/mxe/tmp-gcc-i686-w64-mingw32.static/gcc-5.4.0.build_.sink --disable-doxygen --target=i686-w64-mingw32.static --build=i686-pc-linux-gnu --prefix=/home/user/mxe/usr --libdir=/home/user/mxe/usr/lib --enable-languages=c,c++,objc,fortran --enable-version-specific-runtime-libs --with-gcc --with-gnu-ld --with-gnu-as --disable-nls --disable-shared --disable-multilib --without-x --disable-win32-registry --enable-threads=win32 --enable-sjlj-exceptions --enable-libgomp --with-gmp=/home/user/mxe/usr/i686-pc-linux-gnu --with-isl=/home/user/mxe/usr/i686-pc-linux-gnu --with-mpc=/home/user/mxe/usr/i686-pc-linux-gnu --with-mpfr=/home/user/mxe/usr/i686-pc-linux-gnu --with-as=/home/user/mxe/usr/bin/i686-w64-mingw32.static-as --with-ld=/home/user/mxe/usr/bin/i686-w64-mingw32.static-ld --with-nm=/home/user/mxe/usr/bin/i686-w64-mingw32.static-nm
+Thread model: win32
+gcc version 5.4.0 (GCC) 
+configure:3290: $? = 0
+configure:3279: i686-w64-mingw32.static-gcc -V >&5
+i686-w64-mingw32.static-gcc: error: unrecognized command line option '-V'
+i686-w64-mingw32.static-gcc: fatal error: no input files
+compilation terminated.
+configure:3290: $? = 1
+configure:3279: i686-w64-mingw32.static-gcc -qversion >&5
+i686-w64-mingw32.static-gcc: error: unrecognized command line option '-qversion'
+i686-w64-mingw32.static-gcc: fatal error: no input files
+compilation terminated.
+configure:3290: $? = 1
+configure:3310: checking whether the C compiler works
+configure:3332: i686-w64-mingw32.static-gcc    conftest.c  >&5
+configure:3336: $? = 0
+configure:3384: result: yes
+configure:3387: checking for C compiler default output file name
+configure:3389: result: a.exe
+configure:3395: checking for suffix of executables
+configure:3402: i686-w64-mingw32.static-gcc -o conftest.exe    conftest.c  >&5
+configure:3406: $? = 0
+configure:3428: result: .exe
+configure:3450: checking whether we are cross compiling
+configure:3488: result: yes
+configure:3493: checking for suffix of object files
+configure:3515: i686-w64-mingw32.static-gcc -c   conftest.c >&5
+configure:3519: $? = 0
+configure:3540: result: o
+configure:3544: checking whether we are using the GNU C compiler
+configure:3563: i686-w64-mingw32.static-gcc -c   conftest.c >&5
+configure:3563: $? = 0
+configure:3572: result: yes
+configure:3581: checking whether i686-w64-mingw32.static-gcc accepts -g
+configure:3601: i686-w64-mingw32.static-gcc -c -g  conftest.c >&5
+configure:3601: $? = 0
+configure:3642: result: yes
+configure:3659: checking for i686-w64-mingw32.static-gcc option to accept ISO C89
+configure:3722: i686-w64-mingw32.static-gcc  -c -g -O2  conftest.c >&5
+configure:3722: $? = 0
+configure:3735: result: none needed
+configure:3760: checking whether i686-w64-mingw32.static-gcc understands -c and -o together
+configure:3782: i686-w64-mingw32.static-gcc -c conftest.c -o conftest2.o
+configure:3785: $? = 0
+configure:3782: i686-w64-mingw32.static-gcc -c conftest.c -o conftest2.o
+configure:3785: $? = 0
+configure:3797: result: yes
+configure:3825: checking for style of include used by make
+configure:3853: result: GNU
+configure:3879: checking dependency style of i686-w64-mingw32.static-gcc
+configure:3990: result: gcc3
+configure:4014: checking dependency style of i686-w64-mingw32.static-gcc
+configure:4123: result: gcc3
+configure:4142: checking build system type
+configure:4156: result: i686-pc-linux-gnu
+configure:4176: checking host system type
+configure:4189: result: i686-w64-mingw32.static
+configure:4209: checking for a sed that does not truncate output
+configure:4273: result: /bin/sed
+configure:4291: checking for grep that handles long lines and -e
+configure:4349: result: /bin/grep
+configure:4354: checking for egrep
+configure:4416: result: /bin/grep -E
+configure:4421: checking for fgrep
+configure:4483: result: /bin/grep -F
+configure:4510: checking how to print strings
+configure:4537: result: printf
+configure:4570: checking for ld used by i686-w64-mingw32.static-gcc
+configure:4637: result: /home/user/mxe/usr/bin/i686-w64-mingw32.static-ld
+configure:4644: checking if the linker (/home/user/mxe/usr/bin/i686-w64-mingw32.static-ld) is GNU ld
+configure:4659: result: yes
+configure:4676: checking how to run the C preprocessor
+configure:4707: i686-w64-mingw32.static-gcc -E  conftest.c
+configure:4707: $? = 0
+configure:4721: i686-w64-mingw32.static-gcc -E  conftest.c
+conftest.c:11:28: fatal error: ac_nonexistent.h: No such file or directory
+compilation terminated.
+configure:4721: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "libpng"
+| #define PACKAGE_TARNAME "libpng"
+| #define PACKAGE_VERSION "1.6.34"
+| #define PACKAGE_STRING "libpng 1.6.34"
+| #define PACKAGE_BUGREPORT "png-mng-implement@lists.sourceforge.net"
+| #define PACKAGE_URL ""
+| #define PACKAGE "libpng"
+| #define VERSION "1.6.34"
+| /* end confdefs.h.  */
+| #include <ac_nonexistent.h>
+configure:4746: result: i686-w64-mingw32.static-gcc -E
+configure:4766: i686-w64-mingw32.static-gcc -E  conftest.c
+configure:4766: $? = 0
+configure:4780: i686-w64-mingw32.static-gcc -E  conftest.c
+conftest.c:11:28: fatal error: ac_nonexistent.h: No such file or directory
+compilation terminated.
+configure:4780: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "libpng"
+| #define PACKAGE_TARNAME "libpng"
+| #define PACKAGE_VERSION "1.6.34"
+| #define PACKAGE_STRING "libpng 1.6.34"
+| #define PACKAGE_BUGREPORT "png-mng-implement@lists.sourceforge.net"
+| #define PACKAGE_URL ""
+| #define PACKAGE "libpng"
+| #define VERSION "1.6.34"
+| /* end confdefs.h.  */
+| #include <ac_nonexistent.h>
+configure:4812: checking for gawk
+configure:4839: result: mawk
+configure:4851: checking whether ln -s works
+configure:4855: result: yes
+configure:4862: checking whether make sets $(MAKE)
+configure:4884: result: yes
+configure:4936: checking for BSD- or MS-compatible name lister (nm)
+configure:4990: result: /home/user/mxe/usr/bin/i686-w64-mingw32.static-nm -B
+configure:5120: checking the name lister (/home/user/mxe/usr/bin/i686-w64-mingw32.static-nm -B) interface
+configure:5127: i686-w64-mingw32.static-gcc -c -g -O2  conftest.c >&5
+configure:5130: /home/user/mxe/usr/bin/i686-w64-mingw32.static-nm -B "conftest.o"
+configure:5133: output
+00000000 b .bss
+00000000 d .data
+00000000 N .debug_abbrev
+00000000 N .debug_aranges
+00000000 N .debug_info
+00000000 N .debug_line
+00000000 r .rdata$zzz
+00000000 t .text
+00000000 B _some_variable
+configure:5140: result: BSD nm
+configure:5144: checking the maximum length of command line arguments
+configure:5275: result: 1572864
+configure:5323: checking how to convert i686-pc-linux-gnu file names to i686-w64-mingw32.static format
+configure:5363: result: func_convert_file_nix_to_w32
+configure:5370: checking how to convert i686-pc-linux-gnu file names to toolchain format
+configure:5390: result: func_convert_file_noop
+configure:5397: checking for /home/user/mxe/usr/bin/i686-w64-mingw32.static-ld option to reload object files
+configure:5404: result: -r
+configure:5438: checking for i686-w64-mingw32.static-objdump
+configure:5454: found /home/user/mxe/usr/bin/i686-w64-mingw32.static-objdump
+configure:5465: result: i686-w64-mingw32.static-objdump
+configure:5534: checking how to recognize dependent libraries
+configure:5734: result: file_magic ^x86 archive import|^x86 DLL
+configure:5779: checking for i686-w64-mingw32.static-dlltool
+configure:5795: found /home/user/mxe/usr/bin/i686-w64-mingw32.static-dlltool
+configure:5806: result: i686-w64-mingw32.static-dlltool
+configure:5876: checking how to associate runtime and link libraries
+configure:5903: result: func_cygming_dll_for_implib
+configure:5920: checking for i686-w64-mingw32.static-ar
+configure:5936: found /home/user/mxe/usr/bin/i686-w64-mingw32.static-ar
+configure:5947: result: i686-w64-mingw32.static-ar
+configure:6028: checking for archiver @FILE support
+configure:6045: i686-w64-mingw32.static-gcc -c -g -O2  conftest.c >&5
+configure:6045: $? = 0
+configure:6048: i686-w64-mingw32.static-ar cru libconftest.a @conftest.lst >&5
+i686-w64-mingw32.static-ar: `u' modifier ignored since `D' is the default (see `U')
+configure:6051: $? = 0
+configure:6056: i686-w64-mingw32.static-ar cru libconftest.a @conftest.lst >&5
+i686-w64-mingw32.static-ar: `u' modifier ignored since `D' is the default (see `U')
+i686-w64-mingw32.static-ar: conftest.o: No such file or directory
+configure:6059: $? = 1
+configure:6071: result: @
+configure:6089: checking for i686-w64-mingw32.static-strip
+configure:6116: result: i686-w64-mingw32.static-strip
+configure:6188: checking for i686-w64-mingw32.static-ranlib
+configure:6204: found /home/user/mxe/usr/bin/i686-w64-mingw32.static-ranlib
+configure:6215: result: i686-w64-mingw32.static-ranlib
+configure:6357: checking command to parse /home/user/mxe/usr/bin/i686-w64-mingw32.static-nm -B output from i686-w64-mingw32.static-gcc object
+configure:6510: i686-w64-mingw32.static-gcc -c -g -O2  conftest.c >&5
+configure:6513: $? = 0
+configure:6517: /home/user/mxe/usr/bin/i686-w64-mingw32.static-nm -B conftest.o \| sed -n -e 's/^.*[ ]\([ABCDGIRSTW][ABCDGIRSTW]*\)[ ][ ]*\([_A-Za-z][_A-Za-z0-9]*\)$/\1 \2 \2/p' | sed '/ __gnu_lto/d' \> conftest.nm
+configure:6520: $? = 0
+cannot find nm_test_var in conftest.nm
+configure:6510: i686-w64-mingw32.static-gcc -c -g -O2  conftest.c >&5
+configure:6513: $? = 0
+configure:6517: /home/user/mxe/usr/bin/i686-w64-mingw32.static-nm -B conftest.o \| sed -n -e 's/^.*[ ]\([ABCDGIRSTW][ABCDGIRSTW]*\)[ ][ ]*_\([_A-Za-z][_A-Za-z0-9]*\)$/\1 _\2 \2/p' | sed '/ __gnu_lto/d' \> conftest.nm
+configure:6520: $? = 0
+configure:6586: i686-w64-mingw32.static-gcc -o conftest.exe -g -O2   conftest.c conftstm.o >&5
+configure:6589: $? = 0
+configure:6627: result: ok
+configure:6674: checking for sysroot
+configure:6704: result: no
+configure:6711: checking for a working dd
+configure:6749: result: /bin/dd
+configure:6753: checking how to truncate binary pipes
+configure:6768: result: /bin/dd bs=4096 count=1
+configure:7057: checking for i686-w64-mingw32.static-mt
+configure:7087: result: no
+configure:7097: checking for mt
+configure:7113: found /bin/mt
+configure:7124: result: mt
+configure:7136: WARNING: using cross tools not prefixed with host triplet
+configure:7147: checking if mt is a manifest tool
+configure:7153: mt '-?'
+configure:7161: result: no
+configure:7834: checking for ANSI C header files
+configure:7854: i686-w64-mingw32.static-gcc -c -g -O2  conftest.c >&5
+configure:7854: $? = 0
+configure:7938: result: yes
+configure:7951: checking for sys/types.h
+configure:7951: i686-w64-mingw32.static-gcc -c -g -O2  conftest.c >&5
+configure:7951: $? = 0
+configure:7951: result: yes
+configure:7951: checking for sys/stat.h
+configure:7951: i686-w64-mingw32.static-gcc -c -g -O2  conftest.c >&5
+configure:7951: $? = 0
+configure:7951: result: yes
+configure:7951: checking for stdlib.h
+configure:7951: i686-w64-mingw32.static-gcc -c -g -O2  conftest.c >&5
+configure:7951: $? = 0
+configure:7951: result: yes
+configure:7951: checking for string.h
+configure:7951: i686-w64-mingw32.static-gcc -c -g -O2  conftest.c >&5
+configure:7951: $? = 0
+configure:7951: result: yes
+configure:7951: checking for memory.h
+configure:7951: i686-w64-mingw32.static-gcc -c -g -O2  conftest.c >&5
+configure:7951: $? = 0
+configure:7951: result: yes
+configure:7951: checking for strings.h
+configure:7951: i686-w64-mingw32.static-gcc -c -g -O2  conftest.c >&5
+configure:7951: $? = 0
+configure:7951: result: yes
+configure:7951: checking for inttypes.h
+configure:7951: i686-w64-mingw32.static-gcc -c -g -O2  conftest.c >&5
+configure:7951: $? = 0
+configure:7951: result: yes
+configure:7951: checking for stdint.h
+configure:7951: i686-w64-mingw32.static-gcc -c -g -O2  conftest.c >&5
+configure:7951: $? = 0
+configure:7951: result: yes
+configure:7951: checking for unistd.h
+configure:7951: i686-w64-mingw32.static-gcc -c -g -O2  conftest.c >&5
+configure:7951: $? = 0
+configure:7951: result: yes
+configure:7965: checking for dlfcn.h
+configure:7965: i686-w64-mingw32.static-gcc -c -g -O2  conftest.c >&5
+conftest.c:55:19: fatal error: dlfcn.h: No such file or directory
+compilation terminated.
+configure:7965: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "libpng"
+| #define PACKAGE_TARNAME "libpng"
+| #define PACKAGE_VERSION "1.6.34"
+| #define PACKAGE_STRING "libpng 1.6.34"
+| #define PACKAGE_BUGREPORT "png-mng-implement@lists.sourceforge.net"
+| #define PACKAGE_URL ""
+| #define PACKAGE "libpng"
+| #define VERSION "1.6.34"
+| #define STDC_HEADERS 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_MEMORY_H 1
+| #define HAVE_STRINGS_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_UNISTD_H 1
+| /* end confdefs.h.  */
+| #include <stdio.h>
+| #ifdef HAVE_SYS_TYPES_H
+| # include <sys/types.h>
+| #endif
+| #ifdef HAVE_SYS_STAT_H
+| # include <sys/stat.h>
+| #endif
+| #ifdef STDC_HEADERS
+| # include <stdlib.h>
+| # include <stddef.h>
+| #else
+| # ifdef HAVE_STDLIB_H
+| #  include <stdlib.h>
+| # endif
+| #endif
+| #ifdef HAVE_STRING_H
+| # if !defined STDC_HEADERS && defined HAVE_MEMORY_H
+| #  include <memory.h>
+| # endif
+| # include <string.h>
+| #endif
+| #ifdef HAVE_STRINGS_H
+| # include <strings.h>
+| #endif
+| #ifdef HAVE_INTTYPES_H
+| # include <inttypes.h>
+| #endif
+| #ifdef HAVE_STDINT_H
+| # include <stdint.h>
+| #endif
+| #ifdef HAVE_UNISTD_H
+| # include <unistd.h>
+| #endif
+| 
+| #include <dlfcn.h>
+configure:7965: result: no
+configure:7988: checking for i686-w64-mingw32.static-as
+configure:8004: found /home/user/mxe/usr/bin/i686-w64-mingw32.static-as
+configure:8015: result: i686-w64-mingw32.static-as
+configure:8080: checking for i686-w64-mingw32.static-dlltool
+configure:8107: result: i686-w64-mingw32.static-dlltool
+configure:8172: checking for i686-w64-mingw32.static-objdump
+configure:8199: result: i686-w64-mingw32.static-objdump
+configure:8519: checking for objdir
+configure:8534: result: .libs
+configure:8798: checking if i686-w64-mingw32.static-gcc supports -fno-rtti -fno-exceptions
+configure:8816: i686-w64-mingw32.static-gcc -c -g -O2  -fno-rtti -fno-exceptions conftest.c >&5
+cc1: warning: command line option '-fno-rtti' is valid for C++/ObjC++ but not for C
+configure:8820: $? = 0
+configure:8833: result: no
+configure:9191: checking for i686-w64-mingw32.static-gcc option to produce PIC
+configure:9198: result: -DDLL_EXPORT -DPIC
+configure:9206: checking if i686-w64-mingw32.static-gcc PIC flag -DDLL_EXPORT -DPIC works
+configure:9224: i686-w64-mingw32.static-gcc -c -g -O2  -DDLL_EXPORT -DPIC -DPIC conftest.c >&5
+configure:9228: $? = 0
+configure:9241: result: yes
+configure:9270: checking if i686-w64-mingw32.static-gcc static flag -static works
+configure:9298: result: yes
+configure:9313: checking if i686-w64-mingw32.static-gcc supports -c -o file.o
+configure:9334: i686-w64-mingw32.static-gcc -c -g -O2  -o out/conftest2.o conftest.c >&5
+configure:9338: $? = 0
+configure:9360: result: yes
+configure:9368: checking if i686-w64-mingw32.static-gcc supports -c -o file.o
+configure:9415: result: yes
+configure:9448: checking whether the i686-w64-mingw32.static-gcc linker (/home/user/mxe/usr/bin/i686-w64-mingw32.static-ld) supports shared libraries
+configure:10707: result: yes
+configure:10947: checking dynamic linker characteristics
+configure:11765: result: Win32 ld.exe
+configure:11887: checking how to hardcode library paths into programs
+configure:11912: result: immediate
+configure:12460: checking whether stripping libraries is possible
+configure:12465: result: yes
+configure:12500: checking if libtool supports shared libraries
+configure:12502: result: yes
+configure:12505: checking whether to build shared libraries
+configure:12530: result: no
+configure:12533: checking whether to build static libraries
+configure:12537: result: yes
+configure:12578: checking that AWK works
+configure:12584: result: ok
+configure:12635: checking if we need to force back C standard to C89
+configure:12651: i686-w64-mingw32.static-gcc -c -g -O2  conftest.c >&5
+configure:12651: $? = 0
+configure:12652: result: no
+configure:12667: checking for ANSI C header files
+configure:12771: result: yes
+configure:12781: checking for an ANSI C-conforming const
+configure:12847: i686-w64-mingw32.static-gcc -c -g -O2  conftest.c >&5
+configure:12847: $? = 0
+configure:12854: result: yes
+configure:12862: checking for size_t
+configure:12862: i686-w64-mingw32.static-gcc -c -g -O2  conftest.c >&5
+configure:12862: $? = 0
+configure:12862: i686-w64-mingw32.static-gcc -c -g -O2  conftest.c >&5
+conftest.c: In function 'main':
+conftest.c:59:21: error: expected expression before ')' token
+ if (sizeof ((size_t)))
+                     ^
+configure:12862: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "libpng"
+| #define PACKAGE_TARNAME "libpng"
+| #define PACKAGE_VERSION "1.6.34"
+| #define PACKAGE_STRING "libpng 1.6.34"
+| #define PACKAGE_BUGREPORT "png-mng-implement@lists.sourceforge.net"
+| #define PACKAGE_URL ""
+| #define PACKAGE "libpng"
+| #define VERSION "1.6.34"
+| #define STDC_HEADERS 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_MEMORY_H 1
+| #define HAVE_STRINGS_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_UNISTD_H 1
+| #define LT_OBJDIR ".libs/"
+| #define STDC_HEADERS 1
+| /* end confdefs.h.  */
+| #include <stdio.h>
+| #ifdef HAVE_SYS_TYPES_H
+| # include <sys/types.h>
+| #endif
+| #ifdef HAVE_SYS_STAT_H
+| # include <sys/stat.h>
+| #endif
+| #ifdef STDC_HEADERS
+| # include <stdlib.h>
+| # include <stddef.h>
+| #else
+| # ifdef HAVE_STDLIB_H
+| #  include <stdlib.h>
+| # endif
+| #endif
+| #ifdef HAVE_STRING_H
+| # if !defined STDC_HEADERS && defined HAVE_MEMORY_H
+| #  include <memory.h>
+| # endif
+| # include <string.h>
+| #endif
+| #ifdef HAVE_STRINGS_H
+| # include <strings.h>
+| #endif
+| #ifdef HAVE_INTTYPES_H
+| # include <inttypes.h>
+| #endif
+| #ifdef HAVE_STDINT_H
+| # include <stdint.h>
+| #endif
+| #ifdef HAVE_UNISTD_H
+| # include <unistd.h>
+| #endif
+| int
+| main ()
+| {
+| if (sizeof ((size_t)))
+| 	    return 0;
+|   ;
+|   return 0;
+| }
+configure:12862: result: yes
+configure:12873: checking whether struct tm is in sys/time.h or time.h
+configure:12893: i686-w64-mingw32.static-gcc -c -g -O2  conftest.c >&5
+configure:12893: $? = 0
+configure:12900: result: time.h
+configure:12908: checking for C/C++ restrict keyword
+configure:12933: i686-w64-mingw32.static-gcc -c -g -O2  conftest.c >&5
+configure:12933: $? = 0
+configure:12941: result: __restrict
+configure:12956: checking for working strtod
+configure:13007: result: no
+configure:13016: checking for pow
+configure:13016: i686-w64-mingw32.static-gcc -o conftest.exe -g -O2   conftest.c  >&5
+conftest.c:47:6: warning: conflicting types for built-in function 'pow'
+ char pow ();
+      ^
+configure:13016: $? = 0
+configure:13016: result: yes
+configure:13071: checking for memset
+configure:13071: i686-w64-mingw32.static-gcc -o conftest.exe -g -O2   conftest.c  >&5
+conftest.c:47:6: warning: conflicting types for built-in function 'memset'
+ char memset ();
+      ^
+configure:13071: $? = 0
+configure:13071: result: yes
+configure:13084: checking for pow
+configure:13084: result: yes
+configure:13144: checking for clock_gettime
+configure:13144: i686-w64-mingw32.static-gcc -o conftest.exe -g -O2   conftest.c  >&5
+/tmp/ccBWd9xV.o: In function `main':
+/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/conftest.c:60: undefined reference to `clock_gettime'
+collect2: error: ld returned 1 exit status
+configure:13144: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "libpng"
+| #define PACKAGE_TARNAME "libpng"
+| #define PACKAGE_VERSION "1.6.34"
+| #define PACKAGE_STRING "libpng 1.6.34"
+| #define PACKAGE_BUGREPORT "png-mng-implement@lists.sourceforge.net"
+| #define PACKAGE_URL ""
+| #define PACKAGE "libpng"
+| #define VERSION "1.6.34"
+| #define STDC_HEADERS 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_MEMORY_H 1
+| #define HAVE_STRINGS_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_UNISTD_H 1
+| #define LT_OBJDIR ".libs/"
+| #define STDC_HEADERS 1
+| #define restrict __restrict
+| #define HAVE_MEMSET 1
+| #define HAVE_POW 1
+| /* end confdefs.h.  */
+| /* Define clock_gettime to an innocuous variant, in case <limits.h> declares clock_gettime.
+|    For example, HP-UX 11i <limits.h> declares gettimeofday.  */
+| #define clock_gettime innocuous_clock_gettime
+| 
+| /* System header to define __stub macros and hopefully few prototypes,
+|     which can conflict with char clock_gettime (); below.
+|     Prefer <limits.h> to <assert.h> if __STDC__ is defined, since
+|     <limits.h> exists even on freestanding compilers.  */
+| 
+| #ifdef __STDC__
+| # include <limits.h>
+| #else
+| # include <assert.h>
+| #endif
+| 
+| #undef clock_gettime
+| 
+| /* Override any GCC internal prototype to avoid an error.
+|    Use char because int might match the return type of a GCC
+|    builtin and then its argument prototype would still apply.  */
+| #ifdef __cplusplus
+| extern "C"
+| #endif
+| char clock_gettime ();
+| /* The GNU C library defines this for functions which it implements
+|     to always fail with ENOSYS.  Some functions are actually named
+|     something starting with __ and the normal name is an alias.  */
+| #if defined __stub_clock_gettime || defined __stub___clock_gettime
+| choke me
+| #endif
+| 
+| int
+| main ()
+| {
+| return clock_gettime ();
+|   ;
+|   return 0;
+| }
+configure:13144: result: no
+configure:13148: WARNING: not building timepng
+configure:13169: checking for zlibVersion in -lz
+configure:13194: i686-w64-mingw32.static-gcc -o conftest.exe -g -O2   conftest.c -lz   >&5
+configure:13194: $? = 0
+configure:13203: result: yes
+configure:13268: checking for feenableexcept in -lm
+configure:13293: i686-w64-mingw32.static-gcc -o conftest.exe -g -O2   conftest.c -lm  -lz  >&5
+/tmp/ccIAgkfn.o: In function `main':
+/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/conftest.c:38: undefined reference to `feenableexcept'
+collect2: error: ld returned 1 exit status
+configure:13293: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "libpng"
+| #define PACKAGE_TARNAME "libpng"
+| #define PACKAGE_VERSION "1.6.34"
+| #define PACKAGE_STRING "libpng 1.6.34"
+| #define PACKAGE_BUGREPORT "png-mng-implement@lists.sourceforge.net"
+| #define PACKAGE_URL ""
+| #define PACKAGE "libpng"
+| #define VERSION "1.6.34"
+| #define STDC_HEADERS 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_MEMORY_H 1
+| #define HAVE_STRINGS_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_UNISTD_H 1
+| #define LT_OBJDIR ".libs/"
+| #define STDC_HEADERS 1
+| #define restrict __restrict
+| #define HAVE_MEMSET 1
+| #define HAVE_POW 1
+| #define HAVE_LIBZ 1
+| /* end confdefs.h.  */
+| 
+| /* Override any GCC internal prototype to avoid an error.
+|    Use char because int might match the return type of a GCC
+|    builtin and then its argument prototype would still apply.  */
+| #ifdef __cplusplus
+| extern "C"
+| #endif
+| char feenableexcept ();
+| int
+| main ()
+| {
+| return feenableexcept ();
+|   ;
+|   return 0;
+| }
+configure:13302: result: no
+configure:13315: checking for feenableexcept
+configure:13315: i686-w64-mingw32.static-gcc -o conftest.exe -g -O2   conftest.c -lz  >&5
+/tmp/ccouvrjx.o: In function `main':
+/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/conftest.c:61: undefined reference to `feenableexcept'
+collect2: error: ld returned 1 exit status
+configure:13315: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "libpng"
+| #define PACKAGE_TARNAME "libpng"
+| #define PACKAGE_VERSION "1.6.34"
+| #define PACKAGE_STRING "libpng 1.6.34"
+| #define PACKAGE_BUGREPORT "png-mng-implement@lists.sourceforge.net"
+| #define PACKAGE_URL ""
+| #define PACKAGE "libpng"
+| #define VERSION "1.6.34"
+| #define STDC_HEADERS 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_MEMORY_H 1
+| #define HAVE_STRINGS_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_UNISTD_H 1
+| #define LT_OBJDIR ".libs/"
+| #define STDC_HEADERS 1
+| #define restrict __restrict
+| #define HAVE_MEMSET 1
+| #define HAVE_POW 1
+| #define HAVE_LIBZ 1
+| /* end confdefs.h.  */
+| /* Define feenableexcept to an innocuous variant, in case <limits.h> declares feenableexcept.
+|    For example, HP-UX 11i <limits.h> declares gettimeofday.  */
+| #define feenableexcept innocuous_feenableexcept
+| 
+| /* System header to define __stub macros and hopefully few prototypes,
+|     which can conflict with char feenableexcept (); below.
+|     Prefer <limits.h> to <assert.h> if __STDC__ is defined, since
+|     <limits.h> exists even on freestanding compilers.  */
+| 
+| #ifdef __STDC__
+| # include <limits.h>
+| #else
+| # include <assert.h>
+| #endif
+| 
+| #undef feenableexcept
+| 
+| /* Override any GCC internal prototype to avoid an error.
+|    Use char because int might match the return type of a GCC
+|    builtin and then its argument prototype would still apply.  */
+| #ifdef __cplusplus
+| extern "C"
+| #endif
+| char feenableexcept ();
+| /* The GNU C library defines this for functions which it implements
+|     to always fail with ENOSYS.  Some functions are actually named
+|     something starting with __ and the normal name is an alias.  */
+| #if defined __stub_feenableexcept || defined __stub___feenableexcept
+| choke me
+| #endif
+| 
+| int
+| main ()
+| {
+| return feenableexcept ();
+|   ;
+|   return 0;
+| }
+configure:13315: result: no
+configure:13325: checking if using Solaris linker
+configure:13334: result: no
+configure:13346: checking if libraries can be versioned
+configure:13354: result: no
+configure:13418: pkgconfig directory is ${libdir}/pkgconfig
+configure:13779: Extra options for compiler: 
+configure:13897: checking that generated files are newer than configure
+configure:13903: result: done
+configure:13978: creating ./config.status
+
+## ---------------------- ##
+## Running config.status. ##
+## ---------------------- ##
+
+This file was extended by libpng config.status 1.6.34, which was
+generated by GNU Autoconf 2.69.  Invocation command line was
+
+  CONFIG_FILES    = 
+  CONFIG_HEADERS  = 
+  CONFIG_LINKS    = 
+  CONFIG_COMMANDS = 
+  $ ./config.status 
+
+on user-VirtualBox
+
+config.status:1145: creating Makefile
+config.status:1145: creating libpng.pc
+config.status:1145: creating libpng-config
+config.status:1145: creating config.h
+config.status:1374: executing depfiles commands
+config.status:1374: executing libtool commands
+configure:16125: WARNING: unrecognized options: --enable-doc, --enable-gtk-doc, --enable-gtk-doc-html, --enable-gtk-doc-pdf, --with-html-dir, --disable-doxygen
+
+## ---------------- ##
+## Cache variables. ##
+## ---------------- ##
+
+ac_cv_build=i686-pc-linux-gnu
+ac_cv_c_compiler_gnu=yes
+ac_cv_c_const=yes
+ac_cv_c_restrict=__restrict
+ac_cv_env_CCASFLAGS_set=
+ac_cv_env_CCASFLAGS_value=
+ac_cv_env_CCAS_set=
+ac_cv_env_CCAS_value=
+ac_cv_env_CC_set=
+ac_cv_env_CC_value=
+ac_cv_env_CFLAGS_set=
+ac_cv_env_CFLAGS_value=
+ac_cv_env_CPPFLAGS_set=
+ac_cv_env_CPPFLAGS_value=
+ac_cv_env_CPP_set=
+ac_cv_env_CPP_value=
+ac_cv_env_LDFLAGS_set=
+ac_cv_env_LDFLAGS_value=
+ac_cv_env_LIBS_set=
+ac_cv_env_LIBS_value=
+ac_cv_env_LT_SYS_LIBRARY_PATH_set=
+ac_cv_env_LT_SYS_LIBRARY_PATH_value=
+ac_cv_env_PNG_COPTS_set=
+ac_cv_env_PNG_COPTS_value=
+ac_cv_env_build_alias_set=set
+ac_cv_env_build_alias_value=i686-pc-linux-gnu
+ac_cv_env_host_alias_set=set
+ac_cv_env_host_alias_value=i686-w64-mingw32.static
+ac_cv_env_target_alias_set=
+ac_cv_env_target_alias_value=
+ac_cv_exeext=.exe
+ac_cv_func_clock_gettime=no
+ac_cv_func_feenableexcept=no
+ac_cv_func_memset=yes
+ac_cv_func_pow=yes
+ac_cv_func_strtod=no
+ac_cv_header_dlfcn_h=no
+ac_cv_header_inttypes_h=yes
+ac_cv_header_memory_h=yes
+ac_cv_header_stdc=yes
+ac_cv_header_stdint_h=yes
+ac_cv_header_stdlib_h=yes
+ac_cv_header_string_h=yes
+ac_cv_header_strings_h=yes
+ac_cv_header_sys_stat_h=yes
+ac_cv_header_sys_types_h=yes
+ac_cv_header_unistd_h=yes
+ac_cv_host=i686-w64-mingw32.static
+ac_cv_lib_m_feenableexcept=no
+ac_cv_lib_z_zlibVersion=yes
+ac_cv_objext=o
+ac_cv_path_EGREP='/bin/grep -E'
+ac_cv_path_FGREP='/bin/grep -F'
+ac_cv_path_GREP=/bin/grep
+ac_cv_path_SED=/bin/sed
+ac_cv_path_install='/usr/bin/install -c'
+ac_cv_path_lt_DD=/bin/dd
+ac_cv_path_mkdir=/bin/mkdir
+ac_cv_prog_AR=i686-w64-mingw32.static-ar
+ac_cv_prog_AS=i686-w64-mingw32.static-as
+ac_cv_prog_AWK=mawk
+ac_cv_prog_CC=i686-w64-mingw32.static-gcc
+ac_cv_prog_CPP='i686-w64-mingw32.static-gcc -E'
+ac_cv_prog_DLLTOOL=i686-w64-mingw32.static-dlltool
+ac_cv_prog_HAVE_DOXYGEN=false
+ac_cv_prog_OBJDUMP=i686-w64-mingw32.static-objdump
+ac_cv_prog_RANLIB=i686-w64-mingw32.static-ranlib
+ac_cv_prog_STRIP=i686-w64-mingw32.static-strip
+ac_cv_prog_ac_ct_MANIFEST_TOOL=mt
+ac_cv_prog_cc_c89=
+ac_cv_prog_cc_g=yes
+ac_cv_prog_make_make_set=yes
+ac_cv_struct_tm=time.h
+ac_cv_type_size_t=yes
+am_cv_CCAS_dependencies_compiler_type=gcc3
+am_cv_CC_dependencies_compiler_type=gcc3
+am_cv_make_support_nested_variables=yes
+am_cv_prog_cc_c_o=yes
+lt_cv_ar_at_file=@
+lt_cv_deplibs_check_method='file_magic ^x86 archive import|^x86 DLL'
+lt_cv_file_magic_cmd=func_win32_libid
+lt_cv_file_magic_test_file=
+lt_cv_ld_reload_flag=-r
+lt_cv_nm_interface='BSD nm'
+lt_cv_objdir=.libs
+lt_cv_path_LD=/home/user/mxe/usr/bin/i686-w64-mingw32.static-ld
+lt_cv_path_NM='/home/user/mxe/usr/bin/i686-w64-mingw32.static-nm -B'
+lt_cv_path_mainfest_tool=no
+lt_cv_prog_compiler_c_o=yes
+lt_cv_prog_compiler_pic='-DDLL_EXPORT -DPIC'
+lt_cv_prog_compiler_pic_works=yes
+lt_cv_prog_compiler_rtti_exceptions=no
+lt_cv_prog_compiler_static_works=yes
+lt_cv_prog_gnu_ld=yes
+lt_cv_sharedlib_from_linklib_cmd=func_cygming_dll_for_implib
+lt_cv_sys_global_symbol_pipe='sed -n -e '\''s/^.*[	 ]\([ABCDGIRSTW][ABCDGIRSTW]*\)[	 ][	 ]*_\([_A-Za-z][_A-Za-z0-9]*\)$/\1 _\2 \2/p'\'' | sed '\''/ __gnu_lto/d'\'''
+lt_cv_sys_global_symbol_to_c_name_address='sed -n -e '\''s/^: \(.*\) .*$/  {"\1", (void *) 0},/p'\'' -e '\''s/^[ABCDGIRSTW][ABCDGIRSTW]* .* \(.*\)$/  {"\1", (void *) \&\1},/p'\'''
+lt_cv_sys_global_symbol_to_c_name_address_lib_prefix='sed -n -e '\''s/^: \(.*\) .*$/  {"\1", (void *) 0},/p'\'' -e '\''s/^[ABCDGIRSTW][ABCDGIRSTW]* .* \(lib.*\)$/  {"\1", (void *) \&\1},/p'\'' -e '\''s/^[ABCDGIRSTW][ABCDGIRSTW]* .* \(.*\)$/  {"lib\1", (void *) \&\1},/p'\'''
+lt_cv_sys_global_symbol_to_cdecl='sed -n -e '\''s/^T .* \(.*\)$/extern int \1();/p'\'' -e '\''s/^[ABCDGIRSTW][ABCDGIRSTW]* .* \(.*\)$/extern char \1;/p'\'''
+lt_cv_sys_global_symbol_to_import=
+lt_cv_sys_max_cmd_len=1572864
+lt_cv_to_host_file_cmd=func_convert_file_nix_to_w32
+lt_cv_to_tool_file_cmd=func_convert_file_noop
+lt_cv_truncate_bin='/bin/dd bs=4096 count=1'
+
+## ----------------- ##
+## Output variables. ##
+## ----------------- ##
+
+ACLOCAL='${SHELL} /home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/missing aclocal-1.15'
+AMDEPBACKSLASH='\'
+AMDEP_FALSE='#'
+AMDEP_TRUE=''
+AMTAR='$${TAR-tar}'
+AM_BACKSLASH='\'
+AM_DEFAULT_V='$(AM_DEFAULT_VERBOSITY)'
+AM_DEFAULT_VERBOSITY='1'
+AM_V='$(V)'
+AR='i686-w64-mingw32.static-ar'
+AS='i686-w64-mingw32.static-as'
+AUTOCONF='${SHELL} /home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/missing autoconf'
+AUTOHEADER='${SHELL} /home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/missing autoheader'
+AUTOMAKE='${SHELL} /home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/missing automake-1.15'
+AWK='mawk'
+CC='i686-w64-mingw32.static-gcc'
+CCAS='i686-w64-mingw32.static-gcc'
+CCASDEPMODE='depmode=gcc3'
+CCASFLAGS='-g -O2'
+CCDEPMODE='depmode=gcc3'
+CFLAGS='-g -O2'
+CPP='i686-w64-mingw32.static-gcc -E'
+CPPFLAGS=''
+CYGPATH_W='echo'
+DEFS='-DHAVE_CONFIG_H'
+DEPDIR='.deps'
+DFNCPP='i686-w64-mingw32.static-gcc -E'
+DLLTOOL='i686-w64-mingw32.static-dlltool'
+DO_INSTALL_LIBPNG_CONFIG_FALSE='#'
+DO_INSTALL_LIBPNG_CONFIG_TRUE=''
+DO_INSTALL_LIBPNG_PC_FALSE='#'
+DO_INSTALL_LIBPNG_PC_TRUE=''
+DO_INSTALL_LINKS_FALSE='#'
+DO_INSTALL_LINKS_TRUE=''
+DO_PNG_PREFIX_FALSE=''
+DO_PNG_PREFIX_TRUE='#'
+DSYMUTIL=''
+DUMPBIN=''
+ECHO_C=''
+ECHO_N='-n'
+ECHO_T=''
+EGREP='/bin/grep -E'
+EXEEXT='.exe'
+FGREP='/bin/grep -F'
+GREP='/bin/grep'
+HAVE_CLOCK_GETTIME_FALSE=''
+HAVE_CLOCK_GETTIME_TRUE='#'
+HAVE_LD_VERSION_SCRIPT_FALSE=''
+HAVE_LD_VERSION_SCRIPT_TRUE='#'
+HAVE_SOLARIS_LD_FALSE=''
+HAVE_SOLARIS_LD_TRUE='#'
+INSTALL_DATA='${INSTALL} -m 644'
+INSTALL_PROGRAM='${INSTALL}'
+INSTALL_SCRIPT='${INSTALL}'
+INSTALL_STRIP_PROGRAM='$(install_sh) -c -s'
+LD='/home/user/mxe/usr/bin/i686-w64-mingw32.static-ld'
+LDFLAGS=''
+LIBOBJS=' ${LIBOBJDIR}strtod$U.o'
+LIBS='-lz '
+LIBTOOL='$(SHELL) $(top_builddir)/libtool'
+LIPO=''
+LN_S='ln -s'
+LTLIBOBJS=' ${LIBOBJDIR}strtod$U.lo'
+LT_SYS_LIBRARY_PATH=''
+MAINT='#'
+MAINTAINER_MODE_FALSE=''
+MAINTAINER_MODE_TRUE='#'
+MAKEINFO='${SHELL} /home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/missing makeinfo'
+MANIFEST_TOOL=':'
+MKDIR_P='/bin/mkdir -p'
+NM='/home/user/mxe/usr/bin/i686-w64-mingw32.static-nm -B'
+NMEDIT=''
+OBJDUMP='i686-w64-mingw32.static-objdump'
+OBJEXT='o'
+OTOOL64=''
+OTOOL=''
+PACKAGE='libpng'
+PACKAGE_BUGREPORT='png-mng-implement@lists.sourceforge.net'
+PACKAGE_NAME='libpng'
+PACKAGE_STRING='libpng 1.6.34'
+PACKAGE_TARNAME='libpng'
+PACKAGE_URL=''
+PACKAGE_VERSION='1.6.34'
+PATH_SEPARATOR=':'
+PNGLIB_MAJOR='1'
+PNGLIB_MINOR='6'
+PNGLIB_RELEASE='34'
+PNGLIB_VERSION='1.6.34'
+PNG_ARM_NEON_FALSE=''
+PNG_ARM_NEON_TRUE='#'
+PNG_COPTS=''
+PNG_INTEL_SSE_FALSE='#'
+PNG_INTEL_SSE_TRUE=''
+PNG_MIPS_MSA_FALSE='#'
+PNG_MIPS_MSA_TRUE=''
+PNG_POWERPC_VSX_FALSE='#'
+PNG_POWERPC_VSX_TRUE=''
+PNG_PREFIX=''
+POW_LIB=''
+RANLIB='i686-w64-mingw32.static-ranlib'
+SED='/bin/sed'
+SET_MAKE=''
+SHELL='/bin/bash'
+STRIP='i686-w64-mingw32.static-strip'
+SYMBOL_PREFIX=''
+VERSION='1.6.34'
+ac_ct_AR=''
+ac_ct_CC=''
+ac_ct_DUMPBIN=''
+am__EXEEXT_FALSE='#'
+am__EXEEXT_TRUE=''
+am__fastdepCCAS_FALSE='#'
+am__fastdepCCAS_TRUE=''
+am__fastdepCC_FALSE='#'
+am__fastdepCC_TRUE=''
+am__include='include'
+am__isrc=''
+am__leading_dot='.'
+am__nodep='_no'
+am__quote=''
+am__tar='$${TAR-tar} chof - "$$tardir"'
+am__untar='$${TAR-tar} xf -'
+binconfigs='${binconfigs}'
+bindir='${exec_prefix}/bin'
+build='i686-pc-linux-gnu'
+build_alias='i686-pc-linux-gnu'
+build_cpu='i686'
+build_os='linux-gnu'
+build_vendor='pc'
+datadir='${datarootdir}'
+datarootdir='${prefix}/share'
+docdir='/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34.build_.sink'
+dvidir='${docdir}'
+exec_prefix='${prefix}'
+host='i686-w64-mingw32.static'
+host_alias='i686-w64-mingw32.static'
+host_cpu='i686'
+host_os='mingw32.static'
+host_vendor='w64'
+htmldir='${docdir}'
+includedir='${prefix}/include'
+infodir='/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34.build_.sink'
+install_sh='${SHELL} /home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/install-sh'
+libdir='${exec_prefix}/lib'
+libexecdir='${exec_prefix}/libexec'
+localedir='${datarootdir}/locale'
+localstatedir='${prefix}/var'
+mandir='/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34.build_.sink'
+mkdir_p='$(MKDIR_P)'
+oldincludedir='/usr/include'
+pdfdir='${docdir}'
+pkgconfigdir='${libdir}/pkgconfig'
+prefix='/home/user/mxe/usr/i686-w64-mingw32.static'
+program_transform_name='s,x,x,'
+psdir='${docdir}'
+sbindir='${exec_prefix}/sbin'
+sharedstatedir='${prefix}/com'
+sysconfdir='${prefix}/etc'
+target_alias=''
+
+## ----------- ##
+## confdefs.h. ##
+## ----------- ##
+
+/* confdefs.h */
+#define PACKAGE_NAME "libpng"
+#define PACKAGE_TARNAME "libpng"
+#define PACKAGE_VERSION "1.6.34"
+#define PACKAGE_STRING "libpng 1.6.34"
+#define PACKAGE_BUGREPORT "png-mng-implement@lists.sourceforge.net"
+#define PACKAGE_URL ""
+#define PACKAGE "libpng"
+#define VERSION "1.6.34"
+#define STDC_HEADERS 1
+#define HAVE_SYS_TYPES_H 1
+#define HAVE_SYS_STAT_H 1
+#define HAVE_STDLIB_H 1
+#define HAVE_STRING_H 1
+#define HAVE_MEMORY_H 1
+#define HAVE_STRINGS_H 1
+#define HAVE_INTTYPES_H 1
+#define HAVE_STDINT_H 1
+#define HAVE_UNISTD_H 1
+#define LT_OBJDIR ".libs/"
+#define STDC_HEADERS 1
+#define restrict __restrict
+#define HAVE_MEMSET 1
+#define HAVE_POW 1
+#define HAVE_LIBZ 1
+
+configure: exit 0
+
+settings.mk
+# This is a template of configuration file for MXE. See
+# docs/index.html for more extensive documentations.
+
+# This variable controls the number of compilation processes
+# within one package ("intra-package parallelism").
+#JOBS := 
+
+# This variable controls where intermediate files are created
+# this is necessary when compiling inside a virtualbox shared
+# directory. Some commands like strip fail in there with Protocol error
+# default is the current directory
+#MXE_TMP := /tmp
+
+# This variable controls the targets that will build.
+#MXE_TARGETS := i686-w64-mingw32.static i686-w64-mingw32.shared x86_64-w64-mingw32.static x86_64-w64-mingw32.shared
+
+# This variable controls which plugins are in use.
+# See plugins/README.md for further information.
+#override MXE_PLUGIN_DIRS += plugins/apps plugins/native
+
+# This variable controls the download mirror for SourceForge,
+# when it is used. Enabling the value below means auto.
+#SOURCEFORGE_MIRROR := downloads.sourceforge.net
+
+# The three lines below makes `make` build these "local
+# packages" instead of all packages.
+#LOCAL_PKG_LIST := boost curl file flac lzo pthreads vorbis wxwidgets
+#.DEFAULT_GOAL  := local-pkg-list
+#local-pkg-list: $(LOCAL_PKG_LIST)
+i686-w64-mingw32.static-strip '/home/user/mxe/usr/i686-w64-mingw32.static/bin/test-libpng.exe'
+(du -k -d 0 '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static' 2>/dev/null || du -k --max-depth 0 '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static') | sed -n 's/^\(\S*\).*/du: \1 KiB/p'
+du: 18308 KiB
+rm -rfv  '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/pngusr.dfa'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/png.h'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/libpngpf.3'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/libpng16.la'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/pngrtran.lo'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/pngrutil.o'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/pngwutil.c'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/pngwtran.lo'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/arm/filter_neon_intrinsics.c'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/arm/.deps/filter_neon.Plo'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/arm/.deps/filter_neon_intrinsics.Plo'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/arm/.deps/arm_init.Plo'
+removed directory '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/arm/.deps'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/arm/filter_neon.S'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/arm/arm_init.c'
+removed directory '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/arm'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/tools/png-fix-itxt.c'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/tools/genpng.c'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/tools/makesRGB.c'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/tools/.deps/png-fix-itxt.Po'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/tools/.deps/pngcp.Po'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/tools/.deps/.dirstamp'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/tools/.deps/pngfix.Po'
+removed directory '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/tools/.deps'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/tools/pngfix.c'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/tools/cvtcolor.c'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/tools/intgamma.sh'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/tools/checksum-icc.c'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/tools/sRGB.h'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/tools/pngcp.c'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/tools/reindent'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/tools/chkfmt'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/tools/.dirstamp'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/tools/pngcp.o'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/tools/README.txt'
+removed directory '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/tools'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/mips-msa/README'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/mips-msa/linux.c'
+removed directory '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/mips-msa'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/arm-neon/README'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/arm-neon/linux.c'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/arm-neon/linux-auxv.c'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/arm-neon/android-ndk.c'
+removed directory '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/arm-neon'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/libtests/pngimage.c'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/libtests/gentests.sh'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/libtests/fakepng.c'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/libtests/pngstest.c'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/libtests/makepng.c'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/libtests/pngunknown.o'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/libtests/pngstest.o'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/libtests/pngimage.o'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/libtests/pngvalid.c'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/libtests/pngstest-errors.h'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/libtests/pngunknown.c'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/libtests/readpng.c'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/libtests/.deps/pngimage.Po'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/libtests/.deps/pngunknown.Po'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/libtests/.deps/pngstest.Po'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/libtests/.deps/timepng.Po'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/libtests/.deps/pngvalid.Po'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/libtests/.deps/.dirstamp'
+removed directory '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/libtests/.deps'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/libtests/timepng.c'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/libtests/tarith.c'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/libtests/.dirstamp'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/libtests/pngvalid.o'
+removed directory '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/libtests'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/examples/pngpixel.c'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/examples/pngtopng.c'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/examples/iccfrompng.c'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/examples/simpleover.c'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/examples/README.txt'
+removed directory '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/examples'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/powerpc-vsx/README'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/powerpc-vsx/linux.c'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/powerpc-vsx/linux_aux.c'
+removed directory '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/powerpc-vsx'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/gregbook/rpng2-win.c'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/gregbook/readpng2.h'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/gregbook/COPYING'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/gregbook/wpng.c'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/gregbook/readpng2.c'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/gregbook/README'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/gregbook/rpng-x.c'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/gregbook/readpng.c'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/gregbook/toucan.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/gregbook/makevms.com'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/gregbook/Makefile.w32'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/gregbook/writepng.h'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/gregbook/LICENSE'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/gregbook/rpng-win.c'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/gregbook/rpng2-x.c'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/gregbook/readppm.c'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/gregbook/Makefile.unx'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/gregbook/writepng.c'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/gregbook/Makefile.sgi'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/gregbook/readpng.h'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/gregbook/Makefile.mingw32'
+removed directory '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/gregbook'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/pngminim/README'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/pngminim/preader/pngusr.dfa'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/pngminim/preader/pngusr.h'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/pngminim/preader/README'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/pngminim/preader/makefile'
+removed directory '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/pngminim/preader'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/pngminim/encoder/pngusr.dfa'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/pngminim/encoder/pngusr.h'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/pngminim/encoder/README'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/pngminim/encoder/makefile'
+removed directory '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/pngminim/encoder'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/pngminim/decoder/pngusr.dfa'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/pngminim/decoder/pngusr.h'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/pngminim/decoder/README'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/pngminim/decoder/makefile'
+removed directory '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/pngminim/decoder'
+removed directory '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/pngminim'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/visupng/VisualPng.dsw'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/visupng/resource.h'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/visupng/VisualPng.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/visupng/VisualPng.ico'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/visupng/VisualPng.dsp'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/visupng/PngFile.c'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/visupng/VisualPng.c'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/visupng/VisualPng.rc'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/visupng/PngFile.h'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/visupng/cexcept.h'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/visupng/README.txt'
+removed directory '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/visupng'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/rgb-alpha-8-sRGB.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/gray-2-1.8-tRNS.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/gray-4-linear.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/palette-8-linear.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/palette-1-sRGB-tRNS.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/gray-alpha-8.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/rgb-16-1.8.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/palette-2-linear-tRNS.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/makepngs.sh'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/gray-alpha-8-linear.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/gray-8-1.8.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/palette-4-linear.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/rgb-8-sRGB.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/gray-16-linear-tRNS.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/gray-16-tRNS.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/rgb-8-1.8-tRNS.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/gray-16-1.8.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/gray-2-tRNS.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/gray-1-sRGB-tRNS.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/gray-4-1.8.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/palette-2-1.8-tRNS.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/gray-16-1.8-tRNS.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/palette-4-sRGB.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/gray-4.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/palette-8.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/gray-alpha-8-sRGB.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/palette-1-1.8.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/gray-4-1.8-tRNS.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/gray-16-linear.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/palette-1-linear-tRNS.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/palette-8-tRNS.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/rgb-16-tRNS.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/gray-alpha-16-linear.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/rgb-alpha-16.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/palette-4-tRNS.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/palette-1-linear.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/rgb-alpha-8-linear.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/rgb-8-linear-tRNS.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/rgb-alpha-16-sRGB.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/gray-16-sRGB-tRNS.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/palette-8-linear-tRNS.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/gray-1-linear.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/crashers/huge_juNK_unsafe_to_copy.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/crashers/huge_cHRM_chunk.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/crashers/huge_tIME_chunk.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/crashers/bad_iCCP.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/crashers/badadler.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/crashers/huge_IDAT.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/crashers/huge_tEXt_chunk.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/crashers/huge_zTXt_chunk.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/crashers/huge_sTER_chunk.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/crashers/huge_bKGD_chunk.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/crashers/huge_pCAL_chunk.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/crashers/huge_gAMA_chunk.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/crashers/huge_iCCP_chunk.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/crashers/huge_sCAL_chunk.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/crashers/huge_iTXt_chunk.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/crashers/huge_sRGB_chunk.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/crashers/huge_juNk_safe_to_copy.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/crashers/huge_sPLT_chunk.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/crashers/huge_eXIf_chunk.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/crashers/badcrc.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/crashers/huge_pHYs_chunk.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/crashers/huge_hIST_chunk.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/crashers/empty_ancillary_chunks.png'
+removed directory '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/crashers'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/palette-2-linear.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/palette-4.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/gray-2-sRGB-tRNS.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/palette-2-tRNS.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/rgb-16-sRGB-tRNS.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/gray-2-sRGB.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/gray-alpha-16.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/palette-4-1.8.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/gray-8.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/gray-1-1.8-tRNS.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/gray-4-linear-tRNS.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/rgb-16-sRGB.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/gray-alpha-16-1.8.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/gray-8-linear.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/palette-8-sRGB.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/rgb-16-1.8-tRNS.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/gray-16.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/palette-2.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/gray-16-sRGB.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/gray-8-tRNS.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/gray-2-linear.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/palette-8-1.8.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/palette-1-sRGB.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/gray-2-linear-tRNS.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/rgb-8-tRNS.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/rgb-8-1.8.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/gray-8-sRGB.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/palette-4-linear-tRNS.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/gray-8-linear-tRNS.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/gray-alpha-16-sRGB.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/rgb-alpha-8.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/gray-2-1.8.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/gray-alpha-8-1.8.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/gray-2.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/gray-1.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/gray-4-sRGB.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/palette-1.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/palette-8-sRGB-tRNS.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/gray-4-tRNS.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/palette-4-1.8-tRNS.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/rgb-16.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/palette-1-tRNS.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/rgb-8-linear.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/palette-4-sRGB-tRNS.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/rgb-alpha-16-linear.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/gray-4-sRGB-tRNS.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/palette-1-1.8-tRNS.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/gray-1-linear-tRNS.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/rgb-16-linear.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/rgb-8.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/rgb-alpha-16-1.8.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/rgb-alpha-8-1.8.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/gray-8-1.8-tRNS.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/palette-2-sRGB-tRNS.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/gray-1-sRGB.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/palette-8-1.8-tRNS.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/palette-2-1.8.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/rgb-16-linear-tRNS.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/gray-8-sRGB-tRNS.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/gray-1-tRNS.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/gray-1-1.8.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/rgb-8-sRGB-tRNS.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs/palette-2-sRGB.png'
+removed directory '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/testpngs'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/conftest/read.dfa'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/conftest/README'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/conftest/simple.dfa'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/conftest/pngcp.dfa'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/conftest/write.dfa'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/conftest/s_read.dfa'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/conftest/s_write.dfa'
+removed directory '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/conftest'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/pngsuite/basn0g02.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/pngsuite/ftbbn0g02.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/pngsuite/basn2c08.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/pngsuite/ftbgn2c16.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/pngsuite/ftbyn3p08.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/pngsuite/basn2c16.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/pngsuite/README'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/pngsuite/ftbbn0g01.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/pngsuite/basn0g08.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/pngsuite/ftbbn2c16.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/pngsuite/basn6a08.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/pngsuite/basn0g04.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/pngsuite/ftbrn2c08.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/pngsuite/basn4a16.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/pngsuite/basn3p04.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/pngsuite/basn6a16.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/pngsuite/ftbwn3p08.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/pngsuite/basn0g16.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/pngsuite/basn4a08.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/pngsuite/ftp0n0g08.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/pngsuite/ftbgn3p08.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/pngsuite/basn3p08.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/pngsuite/ftbbn0g04.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/pngsuite/ftbbn3p08.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/pngsuite/basn0g01.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/pngsuite/ftp1n3p08.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/pngsuite/ftp0n2c08.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/pngsuite/basn3p01.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/pngsuite/ftp0n3p08.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/pngsuite/basn3p02.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/pngsuite/ftbwn0g16.png'
+removed directory '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/pngsuite'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/oss-fuzz/newcc'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/oss-fuzz/png.dict'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/oss-fuzz/Dockerfile'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/oss-fuzz/libpng_read_fuzzer.options'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/oss-fuzz/build.sh'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/oss-fuzz/libpng_read_fuzzer.cc'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/oss-fuzz/README.txt'
+removed directory '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/oss-fuzz'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/pngminus/png2pnm.sh'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/pngminus/README'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/pngminus/makevms.com'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/pngminus/pnm2png.bat'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/pngminus/pngminus.sh'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/pngminus/png2pnm.bat'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/pngminus/png2pnm.c'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/pngminus/pnm2png.sh'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/pngminus/makefile.std'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/pngminus/pnm2png.c'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/pngminus/makefile.tc3'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/pngminus/pngminus.bat'
+removed directory '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/pngminus'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib/README.txt'
+removed directory '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/contrib'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/pngget.c'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/configure.ac'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/pngget.lo'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/pngtest.c'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/pngvalid.exe'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/stamp-h1'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/libpng16.pc'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/libpng.pc.in'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/config.sub'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/png.lo'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/pngpread.lo'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/pngset.c'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/README'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/Makefile.in'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/pngmem.o'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/pngerror.o'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/pngpread.c'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/pngrtran.c'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/libpng.sym'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/test-driver'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/pnglibconf.out'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/pngrutil.lo'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/pnglibconf.h'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/pngread.o'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/pngmem.lo'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/png.5'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/config.h'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/.libs/libpng16.la'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/.libs/libpng16.a'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/.libs/libpng16.lai'
+removed directory '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/.libs'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/example.c'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/config.h.in'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/pnglibconf.c'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/aclocal.m4'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/libpng-config.in'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/pngset.o'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/pngwtran.c'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/.deps/pngread.Plo'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/.deps/pngtrans.Plo'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/.deps/pngrio.Plo'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/.deps/pngwtran.Plo'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/.deps/pngget.Plo'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/.deps/pngmem.Plo'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/.deps/pngpread.Plo'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/.deps/png.Plo'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/.deps/pngrutil.Plo'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/.deps/pngwio.Plo'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/.deps/pngtest.Po'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/.deps/pngwutil.Plo'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/.deps/pngrtran.Plo'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/.deps/pngset.Plo'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/.deps/pngerror.Plo'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/.deps/pngwrite.Plo'
+removed directory '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/.deps'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/pngrio.c'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/powerpc/filter_vsx_intrinsics.lo'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/powerpc/filter_vsx_intrinsics.c'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/powerpc/powerpc_init.lo'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/powerpc/.deps/filter_vsx_intrinsics.Plo'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/powerpc/.deps/powerpc_init.Plo'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/powerpc/.deps/.dirstamp'
+removed directory '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/powerpc/.deps'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/powerpc/powerpc_init.c'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/powerpc/filter_vsx_intrinsics.o'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/powerpc/.dirstamp'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/powerpc/powerpc_init.o'
+removed directory '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/powerpc'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/depcomp'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/pngwio.lo'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/TODO'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/pngread.lo'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/pnginfo.h'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/pngwtran.o'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/pngunknown.exe'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/pngread.c'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/pngbar.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/scripts/makefile.hpgcc'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/scripts/makefile.sggcc'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/scripts/def.c'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/scripts/makefile.linux-opt'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/scripts/makefile.ibmc'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/scripts/makefile.darwin'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/scripts/libtool.m4'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/scripts/libpng.pc.in'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/scripts/sym.c'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/scripts/checksym.awk'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/scripts/makefile.sgi'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/scripts/pngwin.rc'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/scripts/makefile.atari'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/scripts/makefile.msc'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/scripts/makefile.knr'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/scripts/makefile.bor'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/scripts/makefile.openbsd'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/scripts/makefile.netbsd'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/scripts/makefile.bc32'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/scripts/symbols.c'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/scripts/ltsugar.m4'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/scripts/dfn.awk'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/scripts/makefile.linux'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/scripts/makefile.32sunu'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/scripts/makefile.gcc'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/scripts/makefile.hpux'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/scripts/pnglibconf.dfa'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/scripts/makefile.amiga'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/scripts/prefix.c'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/scripts/makefile.acorn'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/scripts/smakefile.ppc'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/scripts/makevms.com'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/scripts/options.awk'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/scripts/ltoptions.m4'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/scripts/makefile.solaris-x86'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/scripts/pnglibconf.h.prebuilt'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/scripts/makefile.solaris'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/scripts/makefile.dj2'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/scripts/makefile.64sunu'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/scripts/pnglibconf.mak'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/scripts/makefile.hp64'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/scripts/makefile.sco'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/scripts/test.cmake.in'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/scripts/makefile.intel'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/scripts/gensrc.cmake.in'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/scripts/lt~obsolete.m4'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/scripts/vers.c'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/scripts/makefile.ne12bsd'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/scripts/makefile.aix'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/scripts/makefile.freebsd'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/scripts/libpng-config-head.in'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/scripts/makefile.beos'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/scripts/symbols.def'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/scripts/makefile.cegcc'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/scripts/makefile.so9'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/scripts/descrip.mms'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/scripts/genout.cmake.in'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/scripts/intprefix.c'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/scripts/makefile.sunos'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/scripts/libpng-config-body.in'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/scripts/makefile.msys'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/scripts/makefile.std'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/scripts/SCOPTIONS.ppc'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/scripts/makefile.dec'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/scripts/makefile.mips'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/scripts/ltversion.m4'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/scripts/genchk.cmake.in'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/scripts/makefile.tc3'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/scripts/macro.lst'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/scripts/makefile.vcwin32'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/scripts/sym.out'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/scripts/README.txt'
+removed directory '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/scripts'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/pngtrans.c'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/pngset.lo'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/pngconf.h'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/ltmain.sh'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/install-sh'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/intel/filter_sse2_intrinsics.c'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/intel/filter_sse2_intrinsics.o'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/intel/.deps/filter_sse2_intrinsics.Plo'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/intel/.deps/intel_init.Plo'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/intel/.deps/.dirstamp'
+removed directory '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/intel/.deps'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/intel/filter_sse2_intrinsics.lo'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/intel/intel_init.o'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/intel/intel_init.c'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/intel/.dirstamp'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/intel/intel_init.lo'
+removed directory '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/intel'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/pngrtran.o'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/pngrio.o'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/libpng.pc'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/pngpriv.h'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/pngwutil.o'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/Makefile'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/pngbar.jpg'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/png.o'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/pngcp.exe'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/pngwio.c'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/projects/owatcom/pngtest.tgt'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/projects/owatcom/libpng.wpj'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/projects/owatcom/pngstest.tgt'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/projects/owatcom/libpng.tgt'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/projects/owatcom/pngconfig.mak'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/projects/owatcom/pngvalid.tgt'
+removed directory '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/projects/owatcom'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/projects/vstudio/pngstest/pngstest.vcxproj'
+removed directory '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/projects/vstudio/pngstest'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/projects/vstudio/pngtest/pngtest.vcxproj'
+removed directory '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/projects/vstudio/pngtest'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/projects/vstudio/pngvalid/pngvalid.vcxproj'
+removed directory '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/projects/vstudio/pngvalid'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/projects/vstudio/zlib.props'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/projects/vstudio/zlib/zlib.vcxproj'
+removed directory '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/projects/vstudio/zlib'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/projects/vstudio/pnglibconf/pnglibconf.vcxproj'
+removed directory '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/projects/vstudio/pnglibconf'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/projects/vstudio/vstudio.sln'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/projects/vstudio/libpng/libpng.vcxproj'
+removed directory '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/projects/vstudio/libpng'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/projects/vstudio/pngunknown/pngunknown.vcxproj'
+removed directory '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/projects/vstudio/pngunknown'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/projects/vstudio/README.txt'
+removed directory '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/projects/vstudio'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/projects/visualc71/PRJ0041.mak'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/projects/visualc71/libpng.sln'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/projects/visualc71/zlib.vcproj'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/projects/visualc71/README_zlib.txt'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/projects/visualc71/pngtest.vcproj'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/projects/visualc71/libpng.vcproj'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/projects/visualc71/README.txt'
+removed directory '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/projects/visualc71'
+removed directory '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/projects'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/pngtest.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/pngtrans.lo'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/pngimage.exe'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/pngdebug.h'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/pngrio.lo'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/LICENSE'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/pngtest.exe'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/pngstest.exe'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/pngwrite.lo'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/pngerror.lo'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/pngerror.c'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/config.guess'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/CMakeLists.txt'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/pngwrite.c'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/pngwutil.lo'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/pngprefix.h'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/pngtest.o'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/pngtrans.o'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/pngrutil.c'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/pngnow.png'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/libpng.3'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/mips/mips_init.lo'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/mips/.deps/filter_msa_intrinsics.Plo'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/mips/.deps/mips_init.Plo'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/mips/.deps/.dirstamp'
+removed directory '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/mips/.deps'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/mips/filter_msa_intrinsics.lo'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/mips/mips_init.c'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/mips/filter_msa_intrinsics.c'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/mips/mips_init.o'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/mips/filter_msa_intrinsics.o'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/mips/.dirstamp'
+removed directory '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/mips'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/INSTALL'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/compile'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/pngwio.o'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/pngmem.c'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/ANNOUNCE'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/pngget.o'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/png.c'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/pngpread.o'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/autogen.sh'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/config.log'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/libpng-config'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/libpng-manual.txt'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/configure'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/missing'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/libpng16-config'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/config.status'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/tests/pngunknown-sTER'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/tests/pngunknown-discard'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/tests/pngvalid-standard'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/tests/pngvalid-gamma-expand16-alpha-mode'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/tests/pngunknown-if-safe'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/tests/pngvalid-gamma-transform'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/tests/pngvalid-progressive-size'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/tests/pngstest'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/tests/pngstest-1.8'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/tests/pngvalid-gamma-threshold'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/tests/pngunknown-vpAg'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/tests/pngstest-none'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/tests/pngunknown-IDAT'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/tests/pngstest-sRGB'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/tests/pngunknown-sAPI'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/tests/pngtest'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/tests/pngstest-sRGB-alpha'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/tests/pngvalid-gamma-16-to-8'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/tests/pngunknown-save'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/tests/pngvalid-gamma-sbit'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/tests/pngimage-full'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/tests/pngstest-linear-alpha'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/tests/pngvalid-gamma-alpha-mode'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/tests/pngstest-none-alpha'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/tests/pngvalid-gamma-background'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/tests/pngtest-badpngs'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/tests/pngvalid-progressive-standard'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/tests/pngvalid-gamma-expand16-transform'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/tests/pngstest-linear'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/tests/pngstest-1.8-alpha'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/tests/pngvalid-transform'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/tests/pngvalid-progressive-interlace-standard'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/tests/pngvalid-gamma-expand16-background'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/tests/pngimage-quick'
+removed directory '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/tests'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/Makefile.am'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/CHANGES'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/libtool'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/pngstruct.h'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34/pngwrite.o'
+removed directory '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34'
+removed directory '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34.build_'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34.build_.sink/man3/libpngpf.3'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34.build_.sink/man3/libpng.3'
+removed directory '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34.build_.sink/man3'
+removed '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34.build_.sink/man5/png.5'
+removed directory '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34.build_.sink/man5'
+removed directory '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/libpng-1.6.34.build_.sink'
+removed directory '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static/readonly'
+removed directory '/home/user/mxe/tmp-libpng-i686-w64-mingw32.static'
+touch '/home/user/mxe/usr/i686-w64-mingw32.static/installed/libpng'
+make[1]: Leaving directory '/home/user/mxe'
+
+real	4m9.776s
+user	1m27.430s
+sys	2m37.105s

@@ -1,0 +1,35 @@
+--2018-02-08 06:10:20--  https://downloads.sourceforge.net/project/libpng/libpng16/1.6.34/libpng-1.6.34.tar.xz
+Resolving downloads.sourceforge.net (downloads.sourceforge.net)... 216.34.181.59
+Connecting to downloads.sourceforge.net (downloads.sourceforge.net)|216.34.181.59|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://netcologne.dl.sourceforge.net/project/libpng/libpng16/1.6.34/libpng-1.6.34.tar.xz [following]
+--2018-02-08 06:10:22--  https://netcologne.dl.sourceforge.net/project/libpng/libpng16/1.6.34/libpng-1.6.34.tar.xz
+Resolving netcologne.dl.sourceforge.net (netcologne.dl.sourceforge.net)... 78.35.24.46, 2001:4dd0:1234:6::5f
+Connecting to netcologne.dl.sourceforge.net (netcologne.dl.sourceforge.net)|78.35.24.46|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 997968 (975K) [application/octet-stream]
+Saving to: ‘/home/user/mxe/pkg/.tmp-libpng-1.6.34.tar.xz’
+
+     0K .......... .......... .......... .......... ..........  5%  616K 2s
+    50K .......... .......... .......... .......... .......... 10%  681K 1s
+   100K .......... .......... .......... .......... .......... 15%  687K 1s
+   150K .......... .......... .......... .......... .......... 20% 2.97M 1s
+   200K .......... .......... .......... .......... .......... 25%  699K 1s
+   250K .......... .......... .......... .......... .......... 30% 5.13M 1s
+   300K .......... .......... .......... .......... .......... 35%  353K 1s
+   350K .......... .......... .......... .......... .......... 41% 3.74M 1s
+   400K .......... .......... .......... .......... .......... 46% 6.62M 1s
+   450K .......... .......... .......... .......... .......... 51% 6.95M 0s
+   500K .......... .......... .......... .......... .......... 56% 1.03M 0s
+   550K .......... .......... .......... .......... .......... 61%  716K 0s
+   600K .......... .......... .......... .......... .......... 66%  697K 0s
+   650K .......... .......... .......... .......... .......... 71% 5.54M 0s
+   700K .......... .......... .......... .......... .......... 76% 5.96M 0s
+   750K .......... .......... .......... .......... .......... 82% 5.29M 0s
+   800K .......... .......... .......... .......... .......... 87%  957K 0s
+   850K .......... .......... .......... .......... .......... 92% 6.77M 0s
+   900K .......... .......... .......... .......... .......... 97%  839K 0s
+   950K .......... .......... ....                            100% 5.65M=0.8s
+
+2018-02-08 06:10:23 (1.14 MB/s) - ‘/home/user/mxe/pkg/.tmp-libpng-1.6.34.tar.xz’ saved [997968/997968]
+

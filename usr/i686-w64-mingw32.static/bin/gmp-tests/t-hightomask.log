@@ -1,0 +1,2 @@
+../test-driver: line 107: ./t-hightomask.exe: cannot execute binary file: Exec format error
+FAIL t-hightomask.exe (exit status: 126)

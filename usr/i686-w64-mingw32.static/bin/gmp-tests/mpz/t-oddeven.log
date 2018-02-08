@@ -1,0 +1,2 @@
+../../test-driver: line 107: ./t-oddeven.exe: cannot execute binary file: Exec format error
+FAIL t-oddeven.exe (exit status: 126)

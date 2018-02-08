@@ -1,0 +1,2 @@
+../../test-driver: line 107: ./t-matrix22.exe: cannot execute binary file: Exec format error
+FAIL t-matrix22.exe (exit status: 126)

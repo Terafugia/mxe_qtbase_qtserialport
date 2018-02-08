@@ -1,0 +1,17 @@
+--2018-02-08 05:46:17--  https://github.com/pkgconf/pkgconf/tarball/da179fd/pkgconf-da179fd.tar.gz
+Resolving github.com (github.com)... 192.30.253.113, 192.30.253.112
+Connecting to github.com (github.com)|192.30.253.113|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://codeload.github.com/pkgconf/pkgconf/legacy.tar.gz/da179fd8cfadc2d6a64b7ef970231ce28dce741f [following]
+--2018-02-08 05:46:18--  https://codeload.github.com/pkgconf/pkgconf/legacy.tar.gz/da179fd8cfadc2d6a64b7ef970231ce28dce741f
+Resolving codeload.github.com (codeload.github.com)... 192.30.253.121, 192.30.253.120
+Connecting to codeload.github.com (codeload.github.com)|192.30.253.121|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [application/x-gzip]
+Saving to: ‘/home/user/mxe/pkg/.tmp-pkgconf-da179fd.tar.gz’
+
+     0K .......... .......... .......... .......... ..........  159K
+    50K ..........                                             5.15M=0.3s
+
+2018-02-08 05:46:19 (191 KB/s) - ‘/home/user/mxe/pkg/.tmp-pkgconf-da179fd.tar.gz’ saved [62154]
+

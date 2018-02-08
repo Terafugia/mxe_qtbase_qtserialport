@@ -1,0 +1,2 @@
+../../test-driver: line 107: ./t-fdiv.exe: cannot execute binary file: Exec format error
+FAIL t-fdiv.exe (exit status: 126)

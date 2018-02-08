@@ -1,0 +1,2646 @@
+make[1]: Entering directory '/home/user/mxe'
+uname -a
+Linux user-VirtualBox 4.13.0-21-generic #24-Ubuntu SMP Mon Dec 18 17:29:35 UTC 2017 i686 i686 i686 GNU/Linux
+git log --pretty=tformat:"%H - %s [%ar] [%d]" -1
+1b7d2e0562f2ec93848f536d2a9d4cd414356d9e - Update packages.json & build-matrix.html [4 days ago] [ (HEAD -> master, origin/master, origin/HEAD)]
+lsb_release -a 2>/dev/null || sw_vers 2>/dev/null || true
+Distributor ID:	Ubuntu
+Description:	Ubuntu 17.10
+Release:	17.10
+Codename:	artful
+autoconf --version 2>/dev/null | head -1
+autoconf (GNU Autoconf) 2.69
+automake --version 2>/dev/null | head -1
+automake (GNU automake) 1.15
+gcc --version
+gcc (Ubuntu 7.2.0-8ubuntu3) 7.2.0
+Copyright (C) 2017 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+g++ --version
+g++ (Ubuntu 7.2.0-8ubuntu3) 7.2.0
+Copyright (C) 2017 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+python --version
+Python 2.7.14
+perl --version 2>&1 | head -3
+
+This is perl 5, version 26, subversion 0 (v5.26.0) built for i686-linux-gnu-thread-multi-64int
+(with 56 registered patches, see perl -V for more detail)
+rm -rf   '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static'
+mkdir -p '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static'
+mkdir -p '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30'
+mkdir -p '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30.build_'
+# disable wine with readonly directory
+# see https://github.com/mxe/mxe/issues/841
+mkdir -p '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/readonly'
+chmod 0555 '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/readonly'
+cd '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static' &&     tar xjf '/home/user/mxe/pkg/pcre2-10.30.tar.bz2'
+cd '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30'
+sed -i 's,__declspec(dllimport),,' '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/pcre2.h.in'
+sed -i 's,__declspec(dllimport),,' '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/pcre2posix.h'
+sed -i 's,__declspec(dllimport),,' '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/pcre2.h.generic'
+cd '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30' && ./configure --host='i686-w64-mingw32.static' --build='i686-pc-linux-gnu' --prefix='/home/user/mxe/usr/i686-w64-mingw32.static'  --enable-static --disable-shared  ac_cv_prog_HAVE_DOXYGEN="false" --enable-doc=no --enable-gtk-doc=no --enable-gtk-doc-html=no --enable-gtk-doc-pdf=no --{docdir,infodir,mandir,with-html-dir}='/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30.build_.sink' --disable-doxygen --enable-pcre2-16 --enable-utf --enable-unicode-properties --enable-cpp --disable-pcre2grep-libz --disable-pcre2grep-libbz2 --disable-pcre2test-libreadline
+configure: WARNING: unrecognized options: --enable-doc, --enable-gtk-doc, --enable-gtk-doc-html, --enable-gtk-doc-pdf, --with-html-dir, --disable-doxygen, --enable-utf, --enable-unicode-properties, --enable-cpp
+configure: loading site script /home/user/mxe/usr/i686-w64-mingw32.static/share/config.site
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for i686-w64-mingw32.static-strip... i686-w64-mingw32.static-strip
+checking for a thread-safe mkdir -p... /bin/mkdir -p
+checking for gawk... no
+checking for mawk... mawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking whether make supports nested variables... (cached) yes
+checking for i686-w64-mingw32.static-gcc... i686-w64-mingw32.static-gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.exe
+checking for suffix of executables... .exe
+checking whether we are cross compiling... yes
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether i686-w64-mingw32.static-gcc accepts -g... yes
+checking for i686-w64-mingw32.static-gcc option to accept ISO C89... none needed
+checking whether i686-w64-mingw32.static-gcc understands -c and -o together... yes
+checking for style of include used by make... GNU
+checking dependency style of i686-w64-mingw32.static-gcc... gcc3
+checking how to run the C preprocessor... i686-w64-mingw32.static-gcc -E
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking minix/config.h usability... no
+checking minix/config.h presence... no
+checking for minix/config.h... no
+checking whether it is safe to define __EXTENSIONS__... yes
+checking for i686-w64-mingw32.static-ar... i686-w64-mingw32.static-ar
+checking the archiver (i686-w64-mingw32.static-ar) interface... ar
+checking for int64_t... yes
+checking build system type... (cached) i686-pc-linux-gnu
+checking host system type... i686-w64-mingw32.static
+checking for i686-w64-mingw32.static-as... i686-w64-mingw32.static-as
+checking for i686-w64-mingw32.static-dlltool... i686-w64-mingw32.static-dlltool
+checking for i686-w64-mingw32.static-objdump... i686-w64-mingw32.static-objdump
+checking how to print strings... printf
+checking for a sed that does not truncate output... /bin/sed
+checking for fgrep... /bin/grep -F
+checking for ld used by i686-w64-mingw32.static-gcc... /home/user/mxe/usr/bin/i686-w64-mingw32.static-ld
+checking if the linker (/home/user/mxe/usr/bin/i686-w64-mingw32.static-ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /home/user/mxe/usr/bin/i686-w64-mingw32.static-nm -B
+checking the name lister (/home/user/mxe/usr/bin/i686-w64-mingw32.static-nm -B) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 1572864
+checking how to convert i686-pc-linux-gnu file names to i686-w64-mingw32.static format... func_convert_file_nix_to_w32
+checking how to convert i686-pc-linux-gnu file names to toolchain format... func_convert_file_noop
+checking for /home/user/mxe/usr/bin/i686-w64-mingw32.static-ld option to reload object files... -r
+checking for i686-w64-mingw32.static-objdump... (cached) i686-w64-mingw32.static-objdump
+checking how to recognize dependent libraries... file_magic ^x86 archive import|^x86 DLL
+checking for i686-w64-mingw32.static-dlltool... (cached) i686-w64-mingw32.static-dlltool
+checking how to associate runtime and link libraries... func_cygming_dll_for_implib
+checking for i686-w64-mingw32.static-ar... (cached) i686-w64-mingw32.static-ar
+checking for archiver @FILE support... @
+checking for i686-w64-mingw32.static-strip... (cached) i686-w64-mingw32.static-strip
+checking for i686-w64-mingw32.static-ranlib... i686-w64-mingw32.static-ranlib
+checking command to parse /home/user/mxe/usr/bin/i686-w64-mingw32.static-nm -B output from i686-w64-mingw32.static-gcc object... ok
+checking for sysroot... no
+checking for a working dd... /bin/dd
+checking how to truncate binary pipes... /bin/dd bs=4096 count=1
+checking for i686-w64-mingw32.static-mt... no
+checking for mt... mt
+configure: WARNING: using cross tools not prefixed with host triplet
+checking if mt is a manifest tool... no
+checking for dlfcn.h... no
+checking for objdir... .libs
+checking if i686-w64-mingw32.static-gcc supports -fno-rtti -fno-exceptions... no
+checking for i686-w64-mingw32.static-gcc option to produce PIC... -DDLL_EXPORT -DPIC
+checking if i686-w64-mingw32.static-gcc PIC flag -DDLL_EXPORT -DPIC works... yes
+checking if i686-w64-mingw32.static-gcc static flag -static works... yes
+checking if i686-w64-mingw32.static-gcc supports -c -o file.o... yes
+checking if i686-w64-mingw32.static-gcc supports -c -o file.o... (cached) yes
+checking whether the i686-w64-mingw32.static-gcc linker (/home/user/mxe/usr/bin/i686-w64-mingw32.static-ld) supports shared libraries... yes
+checking dynamic linker characteristics... Win32 ld.exe
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... no
+checking whether to build static libraries... yes
+checking whether ln -s works... yes
+checking whether the -Werror option is usable... yes
+checking for simple visibility declarations... yes
+checking for ANSI C header files... (cached) yes
+checking limits.h usability... yes
+checking limits.h presence... yes
+checking for limits.h... yes
+checking for sys/types.h... (cached) yes
+checking for sys/stat.h... (cached) yes
+checking dirent.h usability... yes
+checking dirent.h presence... yes
+checking for dirent.h... yes
+checking windows.h usability... yes
+checking windows.h presence... yes
+checking for windows.h... yes
+checking sys/wait.h usability... no
+checking sys/wait.h presence... no
+checking for sys/wait.h... no
+checking for an ANSI C-conforming const... yes
+checking for size_t... yes
+checking for bcopy... no
+checking for memmove... yes
+checking for strerror... yes
+checking for mkostemp... no
+checking for secure_getenv... no
+checking zlib.h usability... yes
+checking zlib.h presence... yes
+checking for zlib.h... yes
+checking for gzopen in -lz... yes
+checking bzlib.h usability... yes
+checking bzlib.h presence... yes
+checking for bzlib.h... yes
+checking for libbz2... yes
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating libpcre2-8.pc
+config.status: creating libpcre2-16.pc
+config.status: creating libpcre2-32.pc
+config.status: creating libpcre2-posix.pc
+config.status: creating pcre2-config
+config.status: creating src/pcre2.h
+config.status: creating src/config.h
+config.status: executing depfiles commands
+config.status: executing libtool commands
+config.status: executing script-chmod commands
+config.status: executing delete-old-chartables commands
+configure: WARNING: unrecognized options: --enable-doc, --enable-gtk-doc, --enable-gtk-doc-html, --enable-gtk-doc-pdf, --with-html-dir, --disable-doxygen, --enable-utf, --enable-unicode-properties, --enable-cpp
+
+pcre2-10.30 configuration summary:
+
+    Install prefix ..................... : /home/user/mxe/usr/i686-w64-mingw32.static
+    C preprocessor ..................... : i686-w64-mingw32.static-gcc -E
+    C compiler ......................... : i686-w64-mingw32.static-gcc
+    Linker ............................. : /home/user/mxe/usr/bin/i686-w64-mingw32.static-ld
+    C preprocessor flags ............... : 
+    C compiler flags ................... : -O2 -fvisibility=hidden
+    Linker flags ....................... : 
+    Extra libraries .................... : 
+
+    Build 8-bit pcre2 library .......... : yes
+    Build 16-bit pcre2 library ......... : yes
+    Build 32-bit pcre2 library ......... : no
+    Include debugging code ............. : no
+    Enable JIT compiling support ....... : no
+    Use SELinux allocator in JIT ....... : no
+    Enable Unicode support ............. : yes
+    Newline char/sequence .............. : lf
+    \R matches only ANYCRLF ............ : no
+    \C is disabled ..................... : no
+    EBCDIC coding ...................... : no
+    EBCDIC code for NL ................. : n/a
+    Rebuild char tables ................ : no
+    Internal link size ................. : 2
+    Nested parentheses limit ........... : 250
+    Heap limit ......................... : 20000000 kilobytes
+    Match limit ........................ : 10000000
+    Match depth limit .................. : MATCH_LIMIT
+    Build shared libs .................. : no
+    Build static libs .................. : yes
+    Use JIT in pcre2grep ............... : no
+    Enable callouts in pcre2grep ....... : yes
+    Initial buffer size for pcre2grep .. : 20480
+    Maximum buffer size for pcre2grep .. : 1048576
+    Link pcre2grep with libz ........... : no
+    Link pcre2grep with libbz2 ......... : no
+    Link pcre2test with libedit ........ : no
+    Link pcre2test with libreadline .... : no
+    Valgrind support ................... : no
+    Code coverage ...................... : no
+    Fuzzer support ..................... : no
+
+make -C '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30' -j '1' install dist_bin_SCRIPTS= bin_PROGRAMS= sbin_PROGRAMS= noinst_PROGRAMS= check_PROGRAMS= dist_html_DATA= dist_doc_DATA=
+make[2]: Entering directory '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30'
+rm -f src/pcre2_chartables.c
+ln -s /home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/pcre2_chartables.c.dist /home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/pcre2_chartables.c
+make  install-am
+make[3]: Entering directory '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30'
+  CC       src/libpcre2_8_la-pcre2_auto_possess.lo
+  CC       src/libpcre2_8_la-pcre2_compile.lo
+  CC       src/libpcre2_8_la-pcre2_config.lo
+  CC       src/libpcre2_8_la-pcre2_context.lo
+  CC       src/libpcre2_8_la-pcre2_convert.lo
+  CC       src/libpcre2_8_la-pcre2_dfa_match.lo
+  CC       src/libpcre2_8_la-pcre2_error.lo
+  CC       src/libpcre2_8_la-pcre2_find_bracket.lo
+  CC       src/libpcre2_8_la-pcre2_jit_compile.lo
+  CC       src/libpcre2_8_la-pcre2_maketables.lo
+  CC       src/libpcre2_8_la-pcre2_match.lo
+  CC       src/libpcre2_8_la-pcre2_match_data.lo
+  CC       src/libpcre2_8_la-pcre2_newline.lo
+  CC       src/libpcre2_8_la-pcre2_ord2utf.lo
+  CC       src/libpcre2_8_la-pcre2_pattern_info.lo
+  CC       src/libpcre2_8_la-pcre2_serialize.lo
+  CC       src/libpcre2_8_la-pcre2_string_utils.lo
+  CC       src/libpcre2_8_la-pcre2_study.lo
+  CC       src/libpcre2_8_la-pcre2_substitute.lo
+  CC       src/libpcre2_8_la-pcre2_substring.lo
+  CC       src/libpcre2_8_la-pcre2_tables.lo
+  CC       src/libpcre2_8_la-pcre2_ucd.lo
+  CC       src/libpcre2_8_la-pcre2_valid_utf.lo
+  CC       src/libpcre2_8_la-pcre2_xclass.lo
+  CC       src/libpcre2_8_la-pcre2_chartables.lo
+  CCLD     libpcre2-8.la
+libtool: warning: undefined symbols not allowed in i686-w64-mingw32.static shared libraries; building static only
+i686-w64-mingw32.static-ar: `u' modifier ignored since `D' is the default (see `U')
+  CC       src/libpcre2_16_la-pcre2_auto_possess.lo
+  CC       src/libpcre2_16_la-pcre2_compile.lo
+  CC       src/libpcre2_16_la-pcre2_config.lo
+  CC       src/libpcre2_16_la-pcre2_context.lo
+  CC       src/libpcre2_16_la-pcre2_convert.lo
+  CC       src/libpcre2_16_la-pcre2_dfa_match.lo
+  CC       src/libpcre2_16_la-pcre2_error.lo
+  CC       src/libpcre2_16_la-pcre2_find_bracket.lo
+  CC       src/libpcre2_16_la-pcre2_jit_compile.lo
+  CC       src/libpcre2_16_la-pcre2_maketables.lo
+  CC       src/libpcre2_16_la-pcre2_match.lo
+  CC       src/libpcre2_16_la-pcre2_match_data.lo
+  CC       src/libpcre2_16_la-pcre2_newline.lo
+  CC       src/libpcre2_16_la-pcre2_ord2utf.lo
+  CC       src/libpcre2_16_la-pcre2_pattern_info.lo
+  CC       src/libpcre2_16_la-pcre2_serialize.lo
+  CC       src/libpcre2_16_la-pcre2_string_utils.lo
+  CC       src/libpcre2_16_la-pcre2_study.lo
+  CC       src/libpcre2_16_la-pcre2_substitute.lo
+  CC       src/libpcre2_16_la-pcre2_substring.lo
+  CC       src/libpcre2_16_la-pcre2_tables.lo
+  CC       src/libpcre2_16_la-pcre2_ucd.lo
+  CC       src/libpcre2_16_la-pcre2_valid_utf.lo
+  CC       src/libpcre2_16_la-pcre2_xclass.lo
+  CC       src/libpcre2_16_la-pcre2_chartables.lo
+  CCLD     libpcre2-16.la
+libtool: warning: undefined symbols not allowed in i686-w64-mingw32.static shared libraries; building static only
+i686-w64-mingw32.static-ar: `u' modifier ignored since `D' is the default (see `U')
+  CC       src/libpcre2_posix_la-pcre2posix.lo
+  CCLD     libpcre2-posix.la
+libtool: warning: undefined symbols not allowed in i686-w64-mingw32.static shared libraries; building static only
+i686-w64-mingw32.static-ar: `u' modifier ignored since `D' is the default (see `U')
+make[4]: Entering directory '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30'
+ /bin/mkdir -p '/home/user/mxe/usr/i686-w64-mingw32.static/lib'
+ /bin/bash ./libtool   --mode=install /usr/bin/install -c   libpcre2-8.la libpcre2-16.la libpcre2-posix.la '/home/user/mxe/usr/i686-w64-mingw32.static/lib'
+libtool: install: /usr/bin/install -c .libs/libpcre2-8.lai /home/user/mxe/usr/i686-w64-mingw32.static/lib/libpcre2-8.la
+libtool: install: /usr/bin/install -c .libs/libpcre2-16.lai /home/user/mxe/usr/i686-w64-mingw32.static/lib/libpcre2-16.la
+libtool: install: /usr/bin/install -c .libs/libpcre2-posix.lai /home/user/mxe/usr/i686-w64-mingw32.static/lib/libpcre2-posix.la
+libtool: install: /usr/bin/install -c .libs/libpcre2-8.a /home/user/mxe/usr/i686-w64-mingw32.static/lib/libpcre2-8.a
+libtool: install: chmod 644 /home/user/mxe/usr/i686-w64-mingw32.static/lib/libpcre2-8.a
+libtool: install: i686-w64-mingw32.static-ranlib /home/user/mxe/usr/i686-w64-mingw32.static/lib/libpcre2-8.a
+libtool: install: /usr/bin/install -c .libs/libpcre2-16.a /home/user/mxe/usr/i686-w64-mingw32.static/lib/libpcre2-16.a
+libtool: install: chmod 644 /home/user/mxe/usr/i686-w64-mingw32.static/lib/libpcre2-16.a
+libtool: install: i686-w64-mingw32.static-ranlib /home/user/mxe/usr/i686-w64-mingw32.static/lib/libpcre2-16.a
+libtool: install: /usr/bin/install -c .libs/libpcre2-posix.a /home/user/mxe/usr/i686-w64-mingw32.static/lib/libpcre2-posix.a
+libtool: install: chmod 644 /home/user/mxe/usr/i686-w64-mingw32.static/lib/libpcre2-posix.a
+libtool: install: i686-w64-mingw32.static-ranlib /home/user/mxe/usr/i686-w64-mingw32.static/lib/libpcre2-posix.a
+ /bin/mkdir -p '/home/user/mxe/usr/i686-w64-mingw32.static/bin'
+ /usr/bin/install -c pcre2-config '/home/user/mxe/usr/i686-w64-mingw32.static/bin'
+ /bin/mkdir -p '/home/user/mxe/usr/i686-w64-mingw32.static/include'
+ /usr/bin/install -c -m 644 src/pcre2posix.h '/home/user/mxe/usr/i686-w64-mingw32.static/include'
+ /bin/mkdir -p '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30.build_.sink/man1'
+ /usr/bin/install -c -m 644 doc/pcre2-config.1 doc/pcre2grep.1 doc/pcre2test.1 '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30.build_.sink/man1'
+ /bin/mkdir -p '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30.build_.sink/man3'
+ /usr/bin/install -c -m 644 doc/pcre2.3 doc/pcre2_callout_enumerate.3 doc/pcre2_code_copy.3 doc/pcre2_code_copy_with_tables.3 doc/pcre2_code_free.3 doc/pcre2_compile.3 doc/pcre2_compile_context_copy.3 doc/pcre2_compile_context_create.3 doc/pcre2_compile_context_free.3 doc/pcre2_config.3 doc/pcre2_convert_context_copy.3 doc/pcre2_convert_context_create.3 doc/pcre2_convert_context_free.3 doc/pcre2_converted_pattern_free.3 doc/pcre2_dfa_match.3 doc/pcre2_general_context_copy.3 doc/pcre2_general_context_create.3 doc/pcre2_general_context_free.3 doc/pcre2_get_error_message.3 doc/pcre2_get_mark.3 doc/pcre2_get_ovector_count.3 doc/pcre2_get_ovector_pointer.3 doc/pcre2_get_startchar.3 doc/pcre2_jit_compile.3 doc/pcre2_jit_free_unused_memory.3 doc/pcre2_jit_match.3 doc/pcre2_jit_stack_assign.3 doc/pcre2_jit_stack_create.3 doc/pcre2_jit_stack_free.3 doc/pcre2_maketables.3 doc/pcre2_match.3 doc/pcre2_match_context_copy.3 doc/pcre2_match_context_create.3 doc/pcre2_match_context_free.3 doc/pcre2_match_data_create.3 doc/pcre2_match_data_create_from_pattern.3 doc/pcre2_match_data_free.3 doc/pcre2_pattern_convert.3 doc/pcre2_pattern_info.3 doc/pcre2_serialize_decode.3 '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30.build_.sink/man3'
+ /usr/bin/install -c -m 644 doc/pcre2_serialize_encode.3 doc/pcre2_serialize_free.3 doc/pcre2_serialize_get_number_of_codes.3 doc/pcre2_set_bsr.3 doc/pcre2_set_callout.3 doc/pcre2_set_character_tables.3 doc/pcre2_set_compile_extra_options.3 doc/pcre2_set_compile_recursion_guard.3 doc/pcre2_set_depth_limit.3 doc/pcre2_set_glob_escape.3 doc/pcre2_set_glob_separator.3 doc/pcre2_set_heap_limit.3 doc/pcre2_set_match_limit.3 doc/pcre2_set_max_pattern_length.3 doc/pcre2_set_offset_limit.3 doc/pcre2_set_newline.3 doc/pcre2_set_parens_nest_limit.3 doc/pcre2_set_recursion_limit.3 doc/pcre2_set_recursion_memory_management.3 doc/pcre2_substitute.3 doc/pcre2_substring_copy_byname.3 doc/pcre2_substring_copy_bynumber.3 doc/pcre2_substring_free.3 doc/pcre2_substring_get_byname.3 doc/pcre2_substring_get_bynumber.3 doc/pcre2_substring_length_byname.3 doc/pcre2_substring_length_bynumber.3 doc/pcre2_substring_list_free.3 doc/pcre2_substring_list_get.3 doc/pcre2_substring_nametable_scan.3 doc/pcre2_substring_number_from_name.3 doc/pcre2api.3 doc/pcre2build.3 doc/pcre2callout.3 doc/pcre2compat.3 doc/pcre2convert.3 doc/pcre2demo.3 doc/pcre2jit.3 doc/pcre2limits.3 doc/pcre2matching.3 '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30.build_.sink/man3'
+ /usr/bin/install -c -m 644 doc/pcre2partial.3 doc/pcre2pattern.3 doc/pcre2perform.3 doc/pcre2posix.3 doc/pcre2sample.3 doc/pcre2serialize.3 doc/pcre2syntax.3 doc/pcre2unicode.3 '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30.build_.sink/man3'
+ /bin/mkdir -p '/home/user/mxe/usr/i686-w64-mingw32.static/include'
+ /usr/bin/install -c -m 644 src/pcre2.h '/home/user/mxe/usr/i686-w64-mingw32.static/include'
+ /bin/mkdir -p '/home/user/mxe/usr/i686-w64-mingw32.static/lib/pkgconfig'
+ /usr/bin/install -c -m 644 libpcre2-8.pc libpcre2-posix.pc libpcre2-16.pc '/home/user/mxe/usr/i686-w64-mingw32.static/lib/pkgconfig'
+make[4]: Leaving directory '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30'
+make[3]: Leaving directory '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30'
+make[2]: Leaving directory '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30'
+rm -f '/home/user/mxe/usr/i686-w64-mingw32.static'/share/man/man1/pcre*.1
+rm -f '/home/user/mxe/usr/i686-w64-mingw32.static'/share/man/man3/pcre*.3
+ln -sf '/home/user/mxe/usr/i686-w64-mingw32.static/bin/pcre2-config' '/home/user/mxe/usr/bin/i686-w64-mingw32.static-pcre2-config'
+
+/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/config.log
+This file contains any messages produced by compilers while
+running configure, to aid debugging if configure makes a mistake.
+
+It was created by PCRE2 configure 10.30, which was
+generated by GNU Autoconf 2.69.  Invocation command line was
+
+  $ ./configure --host=i686-w64-mingw32.static --build=i686-pc-linux-gnu --prefix=/home/user/mxe/usr/i686-w64-mingw32.static --enable-static --disable-shared ac_cv_prog_HAVE_DOXYGEN=false --enable-doc=no --enable-gtk-doc=no --enable-gtk-doc-html=no --enable-gtk-doc-pdf=no --docdir=/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30.build_.sink --infodir=/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30.build_.sink --mandir=/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30.build_.sink --with-html-dir=/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30.build_.sink --disable-doxygen --enable-pcre2-16 --enable-utf --enable-unicode-properties --enable-cpp --disable-pcre2grep-libz --disable-pcre2grep-libbz2 --disable-pcre2test-libreadline
+
+## --------- ##
+## Platform. ##
+## --------- ##
+
+hostname = user-VirtualBox
+uname -m = i686
+uname -r = 4.13.0-21-generic
+uname -s = Linux
+uname -v = #24-Ubuntu SMP Mon Dec 18 17:29:35 UTC 2017
+
+/usr/bin/uname -p = unknown
+/bin/uname -X     = unknown
+
+/bin/arch              = unknown
+/usr/bin/arch -k       = unknown
+/usr/convex/getsysinfo = unknown
+/usr/bin/hostinfo      = unknown
+/bin/machine           = unknown
+/usr/bin/oslevel       = unknown
+/bin/universe          = unknown
+
+PATH: /home/user/mxe/usr/i686-pc-linux-gnu/bin
+PATH: /home/user/mxe/usr/bin
+PATH: /home/user/mxe/usr/i686-pc-linux-gnu/bin
+PATH: /home/user/mxe/usr/bin
+PATH: /usr/local/sbin
+PATH: /usr/local/bin
+PATH: /usr/sbin
+PATH: /usr/bin
+PATH: /sbin
+PATH: /bin
+PATH: /usr/games
+PATH: /usr/local/games
+PATH: /snap/bin
+
+
+## ----------- ##
+## Core tests. ##
+## ----------- ##
+
+configure:2407: loading site script /home/user/mxe/usr/i686-w64-mingw32.static/share/config.site
+| ac_cv_build=i686-pc-linux-gnu
+configure:2549: checking for a BSD-compatible install
+configure:2617: result: /usr/bin/install -c
+configure:2628: checking whether build environment is sane
+configure:2683: result: yes
+configure:2742: checking for i686-w64-mingw32.static-strip
+configure:2758: found /home/user/mxe/usr/bin/i686-w64-mingw32.static-strip
+configure:2769: result: i686-w64-mingw32.static-strip
+configure:2834: checking for a thread-safe mkdir -p
+configure:2873: result: /bin/mkdir -p
+configure:2880: checking for gawk
+configure:2910: result: no
+configure:2880: checking for mawk
+configure:2896: found /usr/bin/mawk
+configure:2907: result: mawk
+configure:2918: checking whether make sets $(MAKE)
+configure:2940: result: yes
+configure:2969: checking whether make supports nested variables
+configure:2986: result: yes
+configure:3123: checking whether make supports nested variables
+configure:3140: result: yes
+configure:3175: checking for i686-w64-mingw32.static-gcc
+configure:3191: found /home/user/mxe/usr/bin/i686-w64-mingw32.static-gcc
+configure:3202: result: i686-w64-mingw32.static-gcc
+configure:3471: checking for C compiler version
+configure:3480: i686-w64-mingw32.static-gcc --version >&5
+i686-w64-mingw32.static-gcc (GCC) 5.4.0
+Copyright (C) 2015 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+configure:3491: $? = 0
+configure:3480: i686-w64-mingw32.static-gcc -v >&5
+Using built-in specs.
+COLLECT_GCC=i686-w64-mingw32.static-gcc
+COLLECT_LTO_WRAPPER=/home/user/mxe/usr/libexec/gcc/i686-w64-mingw32.static/5.4.0/lto-wrapper
+Target: i686-w64-mingw32.static
+Configured with: /home/user/mxe/tmp-gcc-i686-w64-mingw32.static/gcc-5.4.0/configure ac_cv_prog_HAVE_DOXYGEN=false --enable-doc=no --enable-gtk-doc=no --enable-gtk-doc-html=no --enable-gtk-doc-pdf=no --docdir=/home/user/mxe/tmp-gcc-i686-w64-mingw32.static/gcc-5.4.0.build_.sink --infodir=/home/user/mxe/tmp-gcc-i686-w64-mingw32.static/gcc-5.4.0.build_.sink --mandir=/home/user/mxe/tmp-gcc-i686-w64-mingw32.static/gcc-5.4.0.build_.sink --with-html-dir=/home/user/mxe/tmp-gcc-i686-w64-mingw32.static/gcc-5.4.0.build_.sink --disable-doxygen --target=i686-w64-mingw32.static --build=i686-pc-linux-gnu --prefix=/home/user/mxe/usr --libdir=/home/user/mxe/usr/lib --enable-languages=c,c++,objc,fortran --enable-version-specific-runtime-libs --with-gcc --with-gnu-ld --with-gnu-as --disable-nls --disable-shared --disable-multilib --without-x --disable-win32-registry --enable-threads=win32 --enable-sjlj-exceptions --enable-libgomp --with-gmp=/home/user/mxe/usr/i686-pc-linux-gnu --with-isl=/home/user/mxe/usr/i686-pc-linux-gnu --with-mpc=/home/user/mxe/usr/i686-pc-linux-gnu --with-mpfr=/home/user/mxe/usr/i686-pc-linux-gnu --with-as=/home/user/mxe/usr/bin/i686-w64-mingw32.static-as --with-ld=/home/user/mxe/usr/bin/i686-w64-mingw32.static-ld --with-nm=/home/user/mxe/usr/bin/i686-w64-mingw32.static-nm
+Thread model: win32
+gcc version 5.4.0 (GCC) 
+configure:3491: $? = 0
+configure:3480: i686-w64-mingw32.static-gcc -V >&5
+i686-w64-mingw32.static-gcc: error: unrecognized command line option '-V'
+i686-w64-mingw32.static-gcc: fatal error: no input files
+compilation terminated.
+configure:3491: $? = 1
+configure:3480: i686-w64-mingw32.static-gcc -qversion >&5
+i686-w64-mingw32.static-gcc: error: unrecognized command line option '-qversion'
+i686-w64-mingw32.static-gcc: fatal error: no input files
+compilation terminated.
+configure:3491: $? = 1
+configure:3511: checking whether the C compiler works
+configure:3533: i686-w64-mingw32.static-gcc    conftest.c  >&5
+configure:3537: $? = 0
+configure:3585: result: yes
+configure:3588: checking for C compiler default output file name
+configure:3590: result: a.exe
+configure:3596: checking for suffix of executables
+configure:3603: i686-w64-mingw32.static-gcc -o conftest.exe    conftest.c  >&5
+configure:3607: $? = 0
+configure:3629: result: .exe
+configure:3651: checking whether we are cross compiling
+configure:3689: result: yes
+configure:3694: checking for suffix of object files
+configure:3716: i686-w64-mingw32.static-gcc -c   conftest.c >&5
+configure:3720: $? = 0
+configure:3741: result: o
+configure:3745: checking whether we are using the GNU C compiler
+configure:3764: i686-w64-mingw32.static-gcc -c   conftest.c >&5
+configure:3764: $? = 0
+configure:3773: result: yes
+configure:3782: checking whether i686-w64-mingw32.static-gcc accepts -g
+configure:3802: i686-w64-mingw32.static-gcc -c -g  conftest.c >&5
+configure:3802: $? = 0
+configure:3843: result: yes
+configure:3860: checking for i686-w64-mingw32.static-gcc option to accept ISO C89
+configure:3923: i686-w64-mingw32.static-gcc  -c -g -O2  conftest.c >&5
+configure:3923: $? = 0
+configure:3936: result: none needed
+configure:3961: checking whether i686-w64-mingw32.static-gcc understands -c and -o together
+configure:3983: i686-w64-mingw32.static-gcc -c conftest.c -o conftest2.o
+configure:3986: $? = 0
+configure:3983: i686-w64-mingw32.static-gcc -c conftest.c -o conftest2.o
+configure:3986: $? = 0
+configure:3998: result: yes
+configure:4026: checking for style of include used by make
+configure:4054: result: GNU
+configure:4080: checking dependency style of i686-w64-mingw32.static-gcc
+configure:4191: result: gcc3
+configure:4213: checking how to run the C preprocessor
+configure:4244: i686-w64-mingw32.static-gcc -E  conftest.c
+configure:4244: $? = 0
+configure:4258: i686-w64-mingw32.static-gcc -E  conftest.c
+conftest.c:11:28: fatal error: ac_nonexistent.h: No such file or directory
+compilation terminated.
+configure:4258: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "PCRE2"
+| #define PACKAGE_TARNAME "pcre2"
+| #define PACKAGE_VERSION "10.30"
+| #define PACKAGE_STRING "PCRE2 10.30"
+| #define PACKAGE_BUGREPORT ""
+| #define PACKAGE_URL ""
+| #define PACKAGE "pcre2"
+| #define VERSION "10.30"
+| /* end confdefs.h.  */
+| #include <ac_nonexistent.h>
+configure:4283: result: i686-w64-mingw32.static-gcc -E
+configure:4303: i686-w64-mingw32.static-gcc -E  conftest.c
+configure:4303: $? = 0
+configure:4317: i686-w64-mingw32.static-gcc -E  conftest.c
+conftest.c:11:28: fatal error: ac_nonexistent.h: No such file or directory
+compilation terminated.
+configure:4317: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "PCRE2"
+| #define PACKAGE_TARNAME "pcre2"
+| #define PACKAGE_VERSION "10.30"
+| #define PACKAGE_STRING "PCRE2 10.30"
+| #define PACKAGE_BUGREPORT ""
+| #define PACKAGE_URL ""
+| #define PACKAGE "pcre2"
+| #define VERSION "10.30"
+| /* end confdefs.h.  */
+| #include <ac_nonexistent.h>
+configure:4346: checking for grep that handles long lines and -e
+configure:4404: result: /bin/grep
+configure:4409: checking for egrep
+configure:4471: result: /bin/grep -E
+configure:4476: checking for ANSI C header files
+configure:4496: i686-w64-mingw32.static-gcc -c -g -O2  conftest.c >&5
+configure:4496: $? = 0
+configure:4580: result: yes
+configure:4593: checking for sys/types.h
+configure:4593: i686-w64-mingw32.static-gcc -c -g -O2  conftest.c >&5
+configure:4593: $? = 0
+configure:4593: result: yes
+configure:4593: checking for sys/stat.h
+configure:4593: i686-w64-mingw32.static-gcc -c -g -O2  conftest.c >&5
+configure:4593: $? = 0
+configure:4593: result: yes
+configure:4593: checking for stdlib.h
+configure:4593: i686-w64-mingw32.static-gcc -c -g -O2  conftest.c >&5
+configure:4593: $? = 0
+configure:4593: result: yes
+configure:4593: checking for string.h
+configure:4593: i686-w64-mingw32.static-gcc -c -g -O2  conftest.c >&5
+configure:4593: $? = 0
+configure:4593: result: yes
+configure:4593: checking for memory.h
+configure:4593: i686-w64-mingw32.static-gcc -c -g -O2  conftest.c >&5
+configure:4593: $? = 0
+configure:4593: result: yes
+configure:4593: checking for strings.h
+configure:4593: i686-w64-mingw32.static-gcc -c -g -O2  conftest.c >&5
+configure:4593: $? = 0
+configure:4593: result: yes
+configure:4593: checking for inttypes.h
+configure:4593: i686-w64-mingw32.static-gcc -c -g -O2  conftest.c >&5
+configure:4593: $? = 0
+configure:4593: result: yes
+configure:4593: checking for stdint.h
+configure:4593: i686-w64-mingw32.static-gcc -c -g -O2  conftest.c >&5
+configure:4593: $? = 0
+configure:4593: result: yes
+configure:4593: checking for unistd.h
+configure:4593: i686-w64-mingw32.static-gcc -c -g -O2  conftest.c >&5
+configure:4593: $? = 0
+configure:4593: result: yes
+configure:4606: checking minix/config.h usability
+configure:4606: i686-w64-mingw32.static-gcc -c -g -O2  conftest.c >&5
+conftest.c:54:26: fatal error: minix/config.h: No such file or directory
+compilation terminated.
+configure:4606: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "PCRE2"
+| #define PACKAGE_TARNAME "pcre2"
+| #define PACKAGE_VERSION "10.30"
+| #define PACKAGE_STRING "PCRE2 10.30"
+| #define PACKAGE_BUGREPORT ""
+| #define PACKAGE_URL ""
+| #define PACKAGE "pcre2"
+| #define VERSION "10.30"
+| #define STDC_HEADERS 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_MEMORY_H 1
+| #define HAVE_STRINGS_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_UNISTD_H 1
+| /* end confdefs.h.  */
+| #include <stdio.h>
+| #ifdef HAVE_SYS_TYPES_H
+| # include <sys/types.h>
+| #endif
+| #ifdef HAVE_SYS_STAT_H
+| # include <sys/stat.h>
+| #endif
+| #ifdef STDC_HEADERS
+| # include <stdlib.h>
+| # include <stddef.h>
+| #else
+| # ifdef HAVE_STDLIB_H
+| #  include <stdlib.h>
+| # endif
+| #endif
+| #ifdef HAVE_STRING_H
+| # if !defined STDC_HEADERS && defined HAVE_MEMORY_H
+| #  include <memory.h>
+| # endif
+| # include <string.h>
+| #endif
+| #ifdef HAVE_STRINGS_H
+| # include <strings.h>
+| #endif
+| #ifdef HAVE_INTTYPES_H
+| # include <inttypes.h>
+| #endif
+| #ifdef HAVE_STDINT_H
+| # include <stdint.h>
+| #endif
+| #ifdef HAVE_UNISTD_H
+| # include <unistd.h>
+| #endif
+| #include <minix/config.h>
+configure:4606: result: no
+configure:4606: checking minix/config.h presence
+configure:4606: i686-w64-mingw32.static-gcc -E  conftest.c
+conftest.c:21:26: fatal error: minix/config.h: No such file or directory
+compilation terminated.
+configure:4606: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "PCRE2"
+| #define PACKAGE_TARNAME "pcre2"
+| #define PACKAGE_VERSION "10.30"
+| #define PACKAGE_STRING "PCRE2 10.30"
+| #define PACKAGE_BUGREPORT ""
+| #define PACKAGE_URL ""
+| #define PACKAGE "pcre2"
+| #define VERSION "10.30"
+| #define STDC_HEADERS 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_MEMORY_H 1
+| #define HAVE_STRINGS_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_UNISTD_H 1
+| /* end confdefs.h.  */
+| #include <minix/config.h>
+configure:4606: result: no
+configure:4606: checking for minix/config.h
+configure:4606: result: no
+configure:4627: checking whether it is safe to define __EXTENSIONS__
+configure:4645: i686-w64-mingw32.static-gcc -c -g -O2  conftest.c >&5
+configure:4645: $? = 0
+configure:4652: result: yes
+configure:4684: checking for i686-w64-mingw32.static-ar
+configure:4700: found /home/user/mxe/usr/bin/i686-w64-mingw32.static-ar
+configure:4711: result: i686-w64-mingw32.static-ar
+configure:4781: checking the archiver (i686-w64-mingw32.static-ar) interface
+configure:4797: i686-w64-mingw32.static-gcc -c -O2  conftest.c >&5
+configure:4797: $? = 0
+configure:4799: i686-w64-mingw32.static-ar cru libconftest.a conftest.o >&5
+i686-w64-mingw32.static-ar: `u' modifier ignored since `D' is the default (see `U')
+configure:4802: $? = 0
+configure:4830: result: ar
+configure:4852: checking for int64_t
+configure:4852: i686-w64-mingw32.static-gcc -c -O2  conftest.c >&5
+configure:4852: $? = 0
+configure:4852: i686-w64-mingw32.static-gcc -c -O2  conftest.c >&5
+conftest.c: In function 'main':
+conftest.c:64:53: warning: integer overflow in expression [-Woverflow]
+    < (int64_t) (((((int64_t) 1 << N) << N) - 1) * 2 + 2))];
+                                                     ^
+conftest.c:63:12: error: storage size of 'test_array' isn't constant
+ static int test_array [1 - 2 * !((int64_t) (((((int64_t) 1 << N) << N) - 1) * 2 + 1)
+            ^
+configure:4852: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "PCRE2"
+| #define PACKAGE_TARNAME "pcre2"
+| #define PACKAGE_VERSION "10.30"
+| #define PACKAGE_STRING "PCRE2 10.30"
+| #define PACKAGE_BUGREPORT ""
+| #define PACKAGE_URL ""
+| #define PACKAGE "pcre2"
+| #define VERSION "10.30"
+| #define STDC_HEADERS 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_MEMORY_H 1
+| #define HAVE_STRINGS_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_UNISTD_H 1
+| #define __EXTENSIONS__ 1
+| #define _ALL_SOURCE 1
+| #define _GNU_SOURCE 1
+| #define _POSIX_PTHREAD_SEMANTICS 1
+| #define _TANDEM_SOURCE 1
+| /* end confdefs.h.  */
+| #include <stdio.h>
+| #ifdef HAVE_SYS_TYPES_H
+| # include <sys/types.h>
+| #endif
+| #ifdef HAVE_SYS_STAT_H
+| # include <sys/stat.h>
+| #endif
+| #ifdef STDC_HEADERS
+| # include <stdlib.h>
+| # include <stddef.h>
+| #else
+| # ifdef HAVE_STDLIB_H
+| #  include <stdlib.h>
+| # endif
+| #endif
+| #ifdef HAVE_STRING_H
+| # if !defined STDC_HEADERS && defined HAVE_MEMORY_H
+| #  include <memory.h>
+| # endif
+| # include <string.h>
+| #endif
+| #ifdef HAVE_STRINGS_H
+| # include <strings.h>
+| #endif
+| #ifdef HAVE_INTTYPES_H
+| # include <inttypes.h>
+| #endif
+| #ifdef HAVE_STDINT_H
+| # include <stdint.h>
+| #endif
+| #ifdef HAVE_UNISTD_H
+| # include <unistd.h>
+| #endif
+| 	        enum { N = 64 / 2 - 1 };
+| int
+| main ()
+| {
+| static int test_array [1 - 2 * !((int64_t) (((((int64_t) 1 << N) << N) - 1) * 2 + 1)
+| 		 < (int64_t) (((((int64_t) 1 << N) << N) - 1) * 2 + 2))];
+| test_array [0] = 0;
+| return test_array [0];
+| 
+|   ;
+|   return 0;
+| }
+configure:4852: result: yes
+configure:4869: checking build system type
+configure:4883: result: i686-pc-linux-gnu
+configure:4903: checking host system type
+configure:4916: result: i686-w64-mingw32.static
+configure:4943: checking for i686-w64-mingw32.static-as
+configure:4959: found /home/user/mxe/usr/bin/i686-w64-mingw32.static-as
+configure:4970: result: i686-w64-mingw32.static-as
+configure:5035: checking for i686-w64-mingw32.static-dlltool
+configure:5051: found /home/user/mxe/usr/bin/i686-w64-mingw32.static-dlltool
+configure:5062: result: i686-w64-mingw32.static-dlltool
+configure:5127: checking for i686-w64-mingw32.static-objdump
+configure:5143: found /home/user/mxe/usr/bin/i686-w64-mingw32.static-objdump
+configure:5154: result: i686-w64-mingw32.static-objdump
+configure:5285: checking how to print strings
+configure:5312: result: printf
+configure:5333: checking for a sed that does not truncate output
+configure:5397: result: /bin/sed
+configure:5415: checking for fgrep
+configure:5477: result: /bin/grep -F
+configure:5512: checking for ld used by i686-w64-mingw32.static-gcc
+configure:5579: result: /home/user/mxe/usr/bin/i686-w64-mingw32.static-ld
+configure:5586: checking if the linker (/home/user/mxe/usr/bin/i686-w64-mingw32.static-ld) is GNU ld
+configure:5601: result: yes
+configure:5613: checking for BSD- or MS-compatible name lister (nm)
+configure:5667: result: /home/user/mxe/usr/bin/i686-w64-mingw32.static-nm -B
+configure:5797: checking the name lister (/home/user/mxe/usr/bin/i686-w64-mingw32.static-nm -B) interface
+configure:5804: i686-w64-mingw32.static-gcc -c -O2  conftest.c >&5
+configure:5807: /home/user/mxe/usr/bin/i686-w64-mingw32.static-nm -B "conftest.o"
+configure:5810: output
+00000000 b .bss
+00000000 d .data
+00000000 r .rdata$zzz
+00000000 t .text
+00000000 B _some_variable
+configure:5817: result: BSD nm
+configure:5820: checking whether ln -s works
+configure:5824: result: yes
+configure:5832: checking the maximum length of command line arguments
+configure:5963: result: 1572864
+configure:6011: checking how to convert i686-pc-linux-gnu file names to i686-w64-mingw32.static format
+configure:6051: result: func_convert_file_nix_to_w32
+configure:6058: checking how to convert i686-pc-linux-gnu file names to toolchain format
+configure:6078: result: func_convert_file_noop
+configure:6085: checking for /home/user/mxe/usr/bin/i686-w64-mingw32.static-ld option to reload object files
+configure:6092: result: -r
+configure:6126: checking for i686-w64-mingw32.static-objdump
+configure:6153: result: i686-w64-mingw32.static-objdump
+configure:6222: checking how to recognize dependent libraries
+configure:6422: result: file_magic ^x86 archive import|^x86 DLL
+configure:6467: checking for i686-w64-mingw32.static-dlltool
+configure:6494: result: i686-w64-mingw32.static-dlltool
+configure:6564: checking how to associate runtime and link libraries
+configure:6591: result: func_cygming_dll_for_implib
+configure:6607: checking for i686-w64-mingw32.static-ar
+configure:6634: result: i686-w64-mingw32.static-ar
+configure:6715: checking for archiver @FILE support
+configure:6732: i686-w64-mingw32.static-gcc -c -O2  conftest.c >&5
+configure:6732: $? = 0
+configure:6735: i686-w64-mingw32.static-ar cru libconftest.a @conftest.lst >&5
+i686-w64-mingw32.static-ar: `u' modifier ignored since `D' is the default (see `U')
+configure:6738: $? = 0
+configure:6743: i686-w64-mingw32.static-ar cru libconftest.a @conftest.lst >&5
+i686-w64-mingw32.static-ar: `u' modifier ignored since `D' is the default (see `U')
+i686-w64-mingw32.static-ar: conftest.o: No such file or directory
+configure:6746: $? = 1
+configure:6758: result: @
+configure:6776: checking for i686-w64-mingw32.static-strip
+configure:6803: result: i686-w64-mingw32.static-strip
+configure:6875: checking for i686-w64-mingw32.static-ranlib
+configure:6891: found /home/user/mxe/usr/bin/i686-w64-mingw32.static-ranlib
+configure:6902: result: i686-w64-mingw32.static-ranlib
+configure:7044: checking command to parse /home/user/mxe/usr/bin/i686-w64-mingw32.static-nm -B output from i686-w64-mingw32.static-gcc object
+configure:7197: i686-w64-mingw32.static-gcc -c -O2  conftest.c >&5
+configure:7200: $? = 0
+configure:7204: /home/user/mxe/usr/bin/i686-w64-mingw32.static-nm -B conftest.o \| sed -n -e 's/^.*[ ]\([ABCDGIRSTW][ABCDGIRSTW]*\)[ ][ ]*\([_A-Za-z][_A-Za-z0-9]*\)$/\1 \2 \2/p' | sed '/ __gnu_lto/d' \> conftest.nm
+configure:7207: $? = 0
+cannot find nm_test_var in conftest.nm
+configure:7197: i686-w64-mingw32.static-gcc -c -O2  conftest.c >&5
+configure:7200: $? = 0
+configure:7204: /home/user/mxe/usr/bin/i686-w64-mingw32.static-nm -B conftest.o \| sed -n -e 's/^.*[ ]\([ABCDGIRSTW][ABCDGIRSTW]*\)[ ][ ]*_\([_A-Za-z][_A-Za-z0-9]*\)$/\1 _\2 \2/p' | sed '/ __gnu_lto/d' \> conftest.nm
+configure:7207: $? = 0
+configure:7273: i686-w64-mingw32.static-gcc -o conftest.exe -O2   conftest.c conftstm.o >&5
+configure:7276: $? = 0
+configure:7314: result: ok
+configure:7361: checking for sysroot
+configure:7391: result: no
+configure:7398: checking for a working dd
+configure:7436: result: /bin/dd
+configure:7440: checking how to truncate binary pipes
+configure:7455: result: /bin/dd bs=4096 count=1
+configure:7744: checking for i686-w64-mingw32.static-mt
+configure:7774: result: no
+configure:7784: checking for mt
+configure:7800: found /bin/mt
+configure:7811: result: mt
+configure:7823: WARNING: using cross tools not prefixed with host triplet
+configure:7834: checking if mt is a manifest tool
+configure:7840: mt '-?'
+configure:7848: result: no
+configure:8522: checking for dlfcn.h
+configure:8522: i686-w64-mingw32.static-gcc -c -O2  conftest.c >&5
+conftest.c:60:19: fatal error: dlfcn.h: No such file or directory
+compilation terminated.
+configure:8522: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "PCRE2"
+| #define PACKAGE_TARNAME "pcre2"
+| #define PACKAGE_VERSION "10.30"
+| #define PACKAGE_STRING "PCRE2 10.30"
+| #define PACKAGE_BUGREPORT ""
+| #define PACKAGE_URL ""
+| #define PACKAGE "pcre2"
+| #define VERSION "10.30"
+| #define STDC_HEADERS 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_MEMORY_H 1
+| #define HAVE_STRINGS_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_UNISTD_H 1
+| #define __EXTENSIONS__ 1
+| #define _ALL_SOURCE 1
+| #define _GNU_SOURCE 1
+| #define _POSIX_PTHREAD_SEMANTICS 1
+| #define _TANDEM_SOURCE 1
+| /* end confdefs.h.  */
+| #include <stdio.h>
+| #ifdef HAVE_SYS_TYPES_H
+| # include <sys/types.h>
+| #endif
+| #ifdef HAVE_SYS_STAT_H
+| # include <sys/stat.h>
+| #endif
+| #ifdef STDC_HEADERS
+| # include <stdlib.h>
+| # include <stddef.h>
+| #else
+| # ifdef HAVE_STDLIB_H
+| #  include <stdlib.h>
+| # endif
+| #endif
+| #ifdef HAVE_STRING_H
+| # if !defined STDC_HEADERS && defined HAVE_MEMORY_H
+| #  include <memory.h>
+| # endif
+| # include <string.h>
+| #endif
+| #ifdef HAVE_STRINGS_H
+| # include <strings.h>
+| #endif
+| #ifdef HAVE_INTTYPES_H
+| # include <inttypes.h>
+| #endif
+| #ifdef HAVE_STDINT_H
+| # include <stdint.h>
+| #endif
+| #ifdef HAVE_UNISTD_H
+| # include <unistd.h>
+| #endif
+| 
+| #include <dlfcn.h>
+configure:8522: result: no
+configure:8776: checking for objdir
+configure:8791: result: .libs
+configure:9055: checking if i686-w64-mingw32.static-gcc supports -fno-rtti -fno-exceptions
+configure:9073: i686-w64-mingw32.static-gcc -c -O2  -fno-rtti -fno-exceptions conftest.c >&5
+cc1: warning: command line option '-fno-rtti' is valid for C++/ObjC++ but not for C
+configure:9077: $? = 0
+configure:9090: result: no
+configure:9448: checking for i686-w64-mingw32.static-gcc option to produce PIC
+configure:9455: result: -DDLL_EXPORT -DPIC
+configure:9463: checking if i686-w64-mingw32.static-gcc PIC flag -DDLL_EXPORT -DPIC works
+configure:9481: i686-w64-mingw32.static-gcc -c -O2  -DDLL_EXPORT -DPIC -DPIC conftest.c >&5
+configure:9485: $? = 0
+configure:9498: result: yes
+configure:9527: checking if i686-w64-mingw32.static-gcc static flag -static works
+configure:9555: result: yes
+configure:9570: checking if i686-w64-mingw32.static-gcc supports -c -o file.o
+configure:9591: i686-w64-mingw32.static-gcc -c -O2  -o out/conftest2.o conftest.c >&5
+configure:9595: $? = 0
+configure:9617: result: yes
+configure:9625: checking if i686-w64-mingw32.static-gcc supports -c -o file.o
+configure:9672: result: yes
+configure:9705: checking whether the i686-w64-mingw32.static-gcc linker (/home/user/mxe/usr/bin/i686-w64-mingw32.static-ld) supports shared libraries
+configure:10964: result: yes
+configure:11204: checking dynamic linker characteristics
+configure:12022: result: Win32 ld.exe
+configure:12144: checking how to hardcode library paths into programs
+configure:12169: result: immediate
+configure:12717: checking whether stripping libraries is possible
+configure:12722: result: yes
+configure:12757: checking if libtool supports shared libraries
+configure:12759: result: yes
+configure:12762: checking whether to build shared libraries
+configure:12787: result: no
+configure:12790: checking whether to build static libraries
+configure:12794: result: yes
+configure:12831: checking whether ln -s works
+configure:12835: result: yes
+configure:12851: checking whether the -Werror option is usable
+configure:12870: i686-w64-mingw32.static-gcc -c -O2 -Werror  conftest.c >&5
+configure:12870: $? = 0
+configure:12879: result: yes
+configure:12881: checking for simple visibility declarations
+configure:12908: i686-w64-mingw32.static-gcc -c -O2 -fvisibility=hidden -Werror  conftest.c >&5
+configure:12908: $? = 0
+configure:12917: result: yes
+configure:13409: checking for ANSI C header files
+configure:13513: result: yes
+configure:13524: checking limits.h usability
+configure:13524: i686-w64-mingw32.static-gcc -c -O2  conftest.c >&5
+configure:13524: $? = 0
+configure:13524: result: yes
+configure:13524: checking limits.h presence
+configure:13524: i686-w64-mingw32.static-gcc -E  conftest.c
+configure:13524: $? = 0
+configure:13524: result: yes
+configure:13524: checking for limits.h
+configure:13524: result: yes
+configure:13524: checking for sys/types.h
+configure:13524: result: yes
+configure:13524: checking for sys/stat.h
+configure:13524: result: yes
+configure:13524: checking dirent.h usability
+configure:13524: i686-w64-mingw32.static-gcc -c -O2  conftest.c >&5
+configure:13524: $? = 0
+configure:13524: result: yes
+configure:13524: checking dirent.h presence
+configure:13524: i686-w64-mingw32.static-gcc -E  conftest.c
+configure:13524: $? = 0
+configure:13524: result: yes
+configure:13524: checking for dirent.h
+configure:13524: result: yes
+configure:13536: checking windows.h usability
+configure:13536: i686-w64-mingw32.static-gcc -c -O2  conftest.c >&5
+configure:13536: $? = 0
+configure:13536: result: yes
+configure:13536: checking windows.h presence
+configure:13536: i686-w64-mingw32.static-gcc -E  conftest.c
+configure:13536: $? = 0
+configure:13536: result: yes
+configure:13536: checking for windows.h
+configure:13536: result: yes
+configure:13548: checking sys/wait.h usability
+configure:13548: i686-w64-mingw32.static-gcc -c -O2  conftest.c >&5
+conftest.c:71:22: fatal error: sys/wait.h: No such file or directory
+compilation terminated.
+configure:13548: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "PCRE2"
+| #define PACKAGE_TARNAME "pcre2"
+| #define PACKAGE_VERSION "10.30"
+| #define PACKAGE_STRING "PCRE2 10.30"
+| #define PACKAGE_BUGREPORT ""
+| #define PACKAGE_URL ""
+| #define PACKAGE "pcre2"
+| #define VERSION "10.30"
+| #define STDC_HEADERS 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_MEMORY_H 1
+| #define HAVE_STRINGS_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_UNISTD_H 1
+| #define __EXTENSIONS__ 1
+| #define _ALL_SOURCE 1
+| #define _GNU_SOURCE 1
+| #define _POSIX_PTHREAD_SEMANTICS 1
+| #define _TANDEM_SOURCE 1
+| #define LT_OBJDIR ".libs/"
+| #define PCRE2_EXP_DECL extern __attribute__ ((visibility ("default")))
+| #define PCRE2_EXP_DEFN __attribute__ ((visibility ("default")))
+| #define PCRE2POSIX_EXP_DECL extern __attribute__ ((visibility ("default")))
+| #define PCRE2POSIX_EXP_DEFN extern __attribute__ ((visibility ("default")))
+| #define HAVE_VISIBILITY 1
+| #define STDC_HEADERS 1
+| #define HAVE_LIMITS_H 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_DIRENT_H 1
+| #define HAVE_WINDOWS_H 1
+| /* end confdefs.h.  */
+| #include <stdio.h>
+| #ifdef HAVE_SYS_TYPES_H
+| # include <sys/types.h>
+| #endif
+| #ifdef HAVE_SYS_STAT_H
+| # include <sys/stat.h>
+| #endif
+| #ifdef STDC_HEADERS
+| # include <stdlib.h>
+| # include <stddef.h>
+| #else
+| # ifdef HAVE_STDLIB_H
+| #  include <stdlib.h>
+| # endif
+| #endif
+| #ifdef HAVE_STRING_H
+| # if !defined STDC_HEADERS && defined HAVE_MEMORY_H
+| #  include <memory.h>
+| # endif
+| # include <string.h>
+| #endif
+| #ifdef HAVE_STRINGS_H
+| # include <strings.h>
+| #endif
+| #ifdef HAVE_INTTYPES_H
+| # include <inttypes.h>
+| #endif
+| #ifdef HAVE_STDINT_H
+| # include <stdint.h>
+| #endif
+| #ifdef HAVE_UNISTD_H
+| # include <unistd.h>
+| #endif
+| #include <sys/wait.h>
+configure:13548: result: no
+configure:13548: checking sys/wait.h presence
+configure:13548: i686-w64-mingw32.static-gcc -E  conftest.c
+conftest.c:38:22: fatal error: sys/wait.h: No such file or directory
+compilation terminated.
+configure:13548: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "PCRE2"
+| #define PACKAGE_TARNAME "pcre2"
+| #define PACKAGE_VERSION "10.30"
+| #define PACKAGE_STRING "PCRE2 10.30"
+| #define PACKAGE_BUGREPORT ""
+| #define PACKAGE_URL ""
+| #define PACKAGE "pcre2"
+| #define VERSION "10.30"
+| #define STDC_HEADERS 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_MEMORY_H 1
+| #define HAVE_STRINGS_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_UNISTD_H 1
+| #define __EXTENSIONS__ 1
+| #define _ALL_SOURCE 1
+| #define _GNU_SOURCE 1
+| #define _POSIX_PTHREAD_SEMANTICS 1
+| #define _TANDEM_SOURCE 1
+| #define LT_OBJDIR ".libs/"
+| #define PCRE2_EXP_DECL extern __attribute__ ((visibility ("default")))
+| #define PCRE2_EXP_DEFN __attribute__ ((visibility ("default")))
+| #define PCRE2POSIX_EXP_DECL extern __attribute__ ((visibility ("default")))
+| #define PCRE2POSIX_EXP_DEFN extern __attribute__ ((visibility ("default")))
+| #define HAVE_VISIBILITY 1
+| #define STDC_HEADERS 1
+| #define HAVE_LIMITS_H 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_DIRENT_H 1
+| #define HAVE_WINDOWS_H 1
+| /* end confdefs.h.  */
+| #include <sys/wait.h>
+configure:13548: result: no
+configure:13548: checking for sys/wait.h
+configure:13548: result: no
+configure:13640: checking for an ANSI C-conforming const
+configure:13706: i686-w64-mingw32.static-gcc -c -O2  conftest.c >&5
+configure:13706: $? = 0
+configure:13713: result: yes
+configure:13721: checking for size_t
+configure:13721: i686-w64-mingw32.static-gcc -c -O2  conftest.c >&5
+configure:13721: $? = 0
+configure:13721: i686-w64-mingw32.static-gcc -c -O2  conftest.c >&5
+conftest.c: In function 'main':
+conftest.c:74:21: error: expected expression before ')' token
+ if (sizeof ((size_t)))
+                     ^
+configure:13721: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "PCRE2"
+| #define PACKAGE_TARNAME "pcre2"
+| #define PACKAGE_VERSION "10.30"
+| #define PACKAGE_STRING "PCRE2 10.30"
+| #define PACKAGE_BUGREPORT ""
+| #define PACKAGE_URL ""
+| #define PACKAGE "pcre2"
+| #define VERSION "10.30"
+| #define STDC_HEADERS 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_MEMORY_H 1
+| #define HAVE_STRINGS_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_UNISTD_H 1
+| #define __EXTENSIONS__ 1
+| #define _ALL_SOURCE 1
+| #define _GNU_SOURCE 1
+| #define _POSIX_PTHREAD_SEMANTICS 1
+| #define _TANDEM_SOURCE 1
+| #define LT_OBJDIR ".libs/"
+| #define PCRE2_EXP_DECL extern __attribute__ ((visibility ("default")))
+| #define PCRE2_EXP_DEFN __attribute__ ((visibility ("default")))
+| #define PCRE2POSIX_EXP_DECL extern __attribute__ ((visibility ("default")))
+| #define PCRE2POSIX_EXP_DEFN extern __attribute__ ((visibility ("default")))
+| #define HAVE_VISIBILITY 1
+| #define STDC_HEADERS 1
+| #define HAVE_LIMITS_H 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_DIRENT_H 1
+| #define HAVE_WINDOWS_H 1
+| /* end confdefs.h.  */
+| #include <stdio.h>
+| #ifdef HAVE_SYS_TYPES_H
+| # include <sys/types.h>
+| #endif
+| #ifdef HAVE_SYS_STAT_H
+| # include <sys/stat.h>
+| #endif
+| #ifdef STDC_HEADERS
+| # include <stdlib.h>
+| # include <stddef.h>
+| #else
+| # ifdef HAVE_STDLIB_H
+| #  include <stdlib.h>
+| # endif
+| #endif
+| #ifdef HAVE_STRING_H
+| # if !defined STDC_HEADERS && defined HAVE_MEMORY_H
+| #  include <memory.h>
+| # endif
+| # include <string.h>
+| #endif
+| #ifdef HAVE_STRINGS_H
+| # include <strings.h>
+| #endif
+| #ifdef HAVE_INTTYPES_H
+| # include <inttypes.h>
+| #endif
+| #ifdef HAVE_STDINT_H
+| # include <stdint.h>
+| #endif
+| #ifdef HAVE_UNISTD_H
+| # include <unistd.h>
+| #endif
+| int
+| main ()
+| {
+| if (sizeof ((size_t)))
+| 	    return 0;
+|   ;
+|   return 0;
+| }
+configure:13721: result: yes
+configure:13738: checking for bcopy
+configure:13738: i686-w64-mingw32.static-gcc -o conftest.exe -O2   conftest.c  >&5
+conftest.c:61:6: warning: conflicting types for built-in function 'bcopy'
+ char bcopy ();
+      ^
+/tmp/ccaTnCp0.o:conftest.c:(.text.startup+0xc): undefined reference to `bcopy'
+collect2: error: ld returned 1 exit status
+configure:13738: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "PCRE2"
+| #define PACKAGE_TARNAME "pcre2"
+| #define PACKAGE_VERSION "10.30"
+| #define PACKAGE_STRING "PCRE2 10.30"
+| #define PACKAGE_BUGREPORT ""
+| #define PACKAGE_URL ""
+| #define PACKAGE "pcre2"
+| #define VERSION "10.30"
+| #define STDC_HEADERS 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_MEMORY_H 1
+| #define HAVE_STRINGS_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_UNISTD_H 1
+| #define __EXTENSIONS__ 1
+| #define _ALL_SOURCE 1
+| #define _GNU_SOURCE 1
+| #define _POSIX_PTHREAD_SEMANTICS 1
+| #define _TANDEM_SOURCE 1
+| #define LT_OBJDIR ".libs/"
+| #define PCRE2_EXP_DECL extern __attribute__ ((visibility ("default")))
+| #define PCRE2_EXP_DEFN __attribute__ ((visibility ("default")))
+| #define PCRE2POSIX_EXP_DECL extern __attribute__ ((visibility ("default")))
+| #define PCRE2POSIX_EXP_DEFN extern __attribute__ ((visibility ("default")))
+| #define HAVE_VISIBILITY 1
+| #define STDC_HEADERS 1
+| #define HAVE_LIMITS_H 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_DIRENT_H 1
+| #define HAVE_WINDOWS_H 1
+| /* end confdefs.h.  */
+| /* Define bcopy to an innocuous variant, in case <limits.h> declares bcopy.
+|    For example, HP-UX 11i <limits.h> declares gettimeofday.  */
+| #define bcopy innocuous_bcopy
+| 
+| /* System header to define __stub macros and hopefully few prototypes,
+|     which can conflict with char bcopy (); below.
+|     Prefer <limits.h> to <assert.h> if __STDC__ is defined, since
+|     <limits.h> exists even on freestanding compilers.  */
+| 
+| #ifdef __STDC__
+| # include <limits.h>
+| #else
+| # include <assert.h>
+| #endif
+| 
+| #undef bcopy
+| 
+| /* Override any GCC internal prototype to avoid an error.
+|    Use char because int might match the return type of a GCC
+|    builtin and then its argument prototype would still apply.  */
+| #ifdef __cplusplus
+| extern "C"
+| #endif
+| char bcopy ();
+| /* The GNU C library defines this for functions which it implements
+|     to always fail with ENOSYS.  Some functions are actually named
+|     something starting with __ and the normal name is an alias.  */
+| #if defined __stub_bcopy || defined __stub___bcopy
+| choke me
+| #endif
+| 
+| int
+| main ()
+| {
+| return bcopy ();
+|   ;
+|   return 0;
+| }
+configure:13738: result: no
+configure:13738: checking for memmove
+configure:13738: i686-w64-mingw32.static-gcc -o conftest.exe -O2   conftest.c  >&5
+conftest.c:61:6: warning: conflicting types for built-in function 'memmove'
+ char memmove ();
+      ^
+configure:13738: $? = 0
+configure:13738: result: yes
+configure:13738: checking for strerror
+configure:13738: i686-w64-mingw32.static-gcc -o conftest.exe -O2   conftest.c  >&5
+configure:13738: $? = 0
+configure:13738: result: yes
+configure:13738: checking for mkostemp
+configure:13738: i686-w64-mingw32.static-gcc -o conftest.exe -O2   conftest.c  >&5
+/tmp/ccvPvVB6.o:conftest.c:(.text.startup+0xc): undefined reference to `mkostemp'
+collect2: error: ld returned 1 exit status
+configure:13738: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "PCRE2"
+| #define PACKAGE_TARNAME "pcre2"
+| #define PACKAGE_VERSION "10.30"
+| #define PACKAGE_STRING "PCRE2 10.30"
+| #define PACKAGE_BUGREPORT ""
+| #define PACKAGE_URL ""
+| #define PACKAGE "pcre2"
+| #define VERSION "10.30"
+| #define STDC_HEADERS 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_MEMORY_H 1
+| #define HAVE_STRINGS_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_UNISTD_H 1
+| #define __EXTENSIONS__ 1
+| #define _ALL_SOURCE 1
+| #define _GNU_SOURCE 1
+| #define _POSIX_PTHREAD_SEMANTICS 1
+| #define _TANDEM_SOURCE 1
+| #define LT_OBJDIR ".libs/"
+| #define PCRE2_EXP_DECL extern __attribute__ ((visibility ("default")))
+| #define PCRE2_EXP_DEFN __attribute__ ((visibility ("default")))
+| #define PCRE2POSIX_EXP_DECL extern __attribute__ ((visibility ("default")))
+| #define PCRE2POSIX_EXP_DEFN extern __attribute__ ((visibility ("default")))
+| #define HAVE_VISIBILITY 1
+| #define STDC_HEADERS 1
+| #define HAVE_LIMITS_H 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_DIRENT_H 1
+| #define HAVE_WINDOWS_H 1
+| #define HAVE_MEMMOVE 1
+| #define HAVE_STRERROR 1
+| /* end confdefs.h.  */
+| /* Define mkostemp to an innocuous variant, in case <limits.h> declares mkostemp.
+|    For example, HP-UX 11i <limits.h> declares gettimeofday.  */
+| #define mkostemp innocuous_mkostemp
+| 
+| /* System header to define __stub macros and hopefully few prototypes,
+|     which can conflict with char mkostemp (); below.
+|     Prefer <limits.h> to <assert.h> if __STDC__ is defined, since
+|     <limits.h> exists even on freestanding compilers.  */
+| 
+| #ifdef __STDC__
+| # include <limits.h>
+| #else
+| # include <assert.h>
+| #endif
+| 
+| #undef mkostemp
+| 
+| /* Override any GCC internal prototype to avoid an error.
+|    Use char because int might match the return type of a GCC
+|    builtin and then its argument prototype would still apply.  */
+| #ifdef __cplusplus
+| extern "C"
+| #endif
+| char mkostemp ();
+| /* The GNU C library defines this for functions which it implements
+|     to always fail with ENOSYS.  Some functions are actually named
+|     something starting with __ and the normal name is an alias.  */
+| #if defined __stub_mkostemp || defined __stub___mkostemp
+| choke me
+| #endif
+| 
+| int
+| main ()
+| {
+| return mkostemp ();
+|   ;
+|   return 0;
+| }
+configure:13738: result: no
+configure:13738: checking for secure_getenv
+configure:13738: i686-w64-mingw32.static-gcc -o conftest.exe -O2   conftest.c  >&5
+/tmp/ccKJxojq.o:conftest.c:(.text.startup+0xc): undefined reference to `secure_getenv'
+collect2: error: ld returned 1 exit status
+configure:13738: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "PCRE2"
+| #define PACKAGE_TARNAME "pcre2"
+| #define PACKAGE_VERSION "10.30"
+| #define PACKAGE_STRING "PCRE2 10.30"
+| #define PACKAGE_BUGREPORT ""
+| #define PACKAGE_URL ""
+| #define PACKAGE "pcre2"
+| #define VERSION "10.30"
+| #define STDC_HEADERS 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_MEMORY_H 1
+| #define HAVE_STRINGS_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_UNISTD_H 1
+| #define __EXTENSIONS__ 1
+| #define _ALL_SOURCE 1
+| #define _GNU_SOURCE 1
+| #define _POSIX_PTHREAD_SEMANTICS 1
+| #define _TANDEM_SOURCE 1
+| #define LT_OBJDIR ".libs/"
+| #define PCRE2_EXP_DECL extern __attribute__ ((visibility ("default")))
+| #define PCRE2_EXP_DEFN __attribute__ ((visibility ("default")))
+| #define PCRE2POSIX_EXP_DECL extern __attribute__ ((visibility ("default")))
+| #define PCRE2POSIX_EXP_DEFN extern __attribute__ ((visibility ("default")))
+| #define HAVE_VISIBILITY 1
+| #define STDC_HEADERS 1
+| #define HAVE_LIMITS_H 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_DIRENT_H 1
+| #define HAVE_WINDOWS_H 1
+| #define HAVE_MEMMOVE 1
+| #define HAVE_STRERROR 1
+| /* end confdefs.h.  */
+| /* Define secure_getenv to an innocuous variant, in case <limits.h> declares secure_getenv.
+|    For example, HP-UX 11i <limits.h> declares gettimeofday.  */
+| #define secure_getenv innocuous_secure_getenv
+| 
+| /* System header to define __stub macros and hopefully few prototypes,
+|     which can conflict with char secure_getenv (); below.
+|     Prefer <limits.h> to <assert.h> if __STDC__ is defined, since
+|     <limits.h> exists even on freestanding compilers.  */
+| 
+| #ifdef __STDC__
+| # include <limits.h>
+| #else
+| # include <assert.h>
+| #endif
+| 
+| #undef secure_getenv
+| 
+| /* Override any GCC internal prototype to avoid an error.
+|    Use char because int might match the return type of a GCC
+|    builtin and then its argument prototype would still apply.  */
+| #ifdef __cplusplus
+| extern "C"
+| #endif
+| char secure_getenv ();
+| /* The GNU C library defines this for functions which it implements
+|     to always fail with ENOSYS.  Some functions are actually named
+|     something starting with __ and the normal name is an alias.  */
+| #if defined __stub_secure_getenv || defined __stub___secure_getenv
+| choke me
+| #endif
+| 
+| int
+| main ()
+| {
+| return secure_getenv ();
+|   ;
+|   return 0;
+| }
+configure:13738: result: no
+configure:13752: checking zlib.h usability
+configure:13752: i686-w64-mingw32.static-gcc -c -O2  conftest.c >&5
+configure:13752: $? = 0
+configure:13752: result: yes
+configure:13752: checking zlib.h presence
+configure:13752: i686-w64-mingw32.static-gcc -E  conftest.c
+configure:13752: $? = 0
+configure:13752: result: yes
+configure:13752: checking for zlib.h
+configure:13752: result: yes
+configure:13762: checking for gzopen in -lz
+configure:13787: i686-w64-mingw32.static-gcc -o conftest.exe -O2   conftest.c -lz   >&5
+configure:13787: $? = 0
+configure:13796: result: yes
+configure:13821: checking bzlib.h usability
+configure:13821: i686-w64-mingw32.static-gcc -c -O2  conftest.c >&5
+configure:13821: $? = 0
+configure:13821: result: yes
+configure:13821: checking bzlib.h presence
+configure:13821: i686-w64-mingw32.static-gcc -E  conftest.c
+configure:13821: $? = 0
+configure:13821: result: yes
+configure:13821: checking for bzlib.h
+configure:13821: result: yes
+configure:13836: checking for libbz2
+configure:13854: i686-w64-mingw32.static-gcc -o conftest.exe -O2   conftest.c  -lbz2 >&5
+configure:13854: $? = 0
+configure:13855: result: yes
+configure:15470: checking that generated files are newer than configure
+configure:15476: result: done
+configure:15539: creating ./config.status
+
+## ---------------------- ##
+## Running config.status. ##
+## ---------------------- ##
+
+This file was extended by PCRE2 config.status 10.30, which was
+generated by GNU Autoconf 2.69.  Invocation command line was
+
+  CONFIG_FILES    = 
+  CONFIG_HEADERS  = 
+  CONFIG_LINKS    = 
+  CONFIG_COMMANDS = 
+  $ ./config.status 
+
+on user-VirtualBox
+
+config.status:1194: creating Makefile
+config.status:1194: creating libpcre2-8.pc
+config.status:1194: creating libpcre2-16.pc
+config.status:1194: creating libpcre2-32.pc
+config.status:1194: creating libpcre2-posix.pc
+config.status:1194: creating pcre2-config
+config.status:1194: creating src/pcre2.h
+config.status:1194: creating src/config.h
+config.status:1423: executing depfiles commands
+config.status:1423: executing libtool commands
+config.status:1423: executing script-chmod commands
+config.status:1423: executing delete-old-chartables commands
+configure:17693: WARNING: unrecognized options: --enable-doc, --enable-gtk-doc, --enable-gtk-doc-html, --enable-gtk-doc-pdf, --with-html-dir, --disable-doxygen, --enable-utf, --enable-unicode-properties, --enable-cpp
+
+## ---------------- ##
+## Cache variables. ##
+## ---------------- ##
+
+ac_cv_build=i686-pc-linux-gnu
+ac_cv_c_compiler_gnu=yes
+ac_cv_c_const=yes
+ac_cv_c_int64_t=yes
+ac_cv_env_CC_set=
+ac_cv_env_CC_value=
+ac_cv_env_CFLAGS_set=
+ac_cv_env_CFLAGS_value=
+ac_cv_env_CPPFLAGS_set=
+ac_cv_env_CPPFLAGS_value=
+ac_cv_env_CPP_set=
+ac_cv_env_CPP_value=
+ac_cv_env_GENHTML_set=
+ac_cv_env_GENHTML_value=
+ac_cv_env_LCOV_set=
+ac_cv_env_LCOV_value=
+ac_cv_env_LDFLAGS_set=
+ac_cv_env_LDFLAGS_value=
+ac_cv_env_LIBS_set=
+ac_cv_env_LIBS_value=
+ac_cv_env_LT_SYS_LIBRARY_PATH_set=
+ac_cv_env_LT_SYS_LIBRARY_PATH_value=
+ac_cv_env_PKG_CONFIG_LIBDIR_set=
+ac_cv_env_PKG_CONFIG_LIBDIR_value=
+ac_cv_env_PKG_CONFIG_PATH_set=
+ac_cv_env_PKG_CONFIG_PATH_value=
+ac_cv_env_PKG_CONFIG_set=
+ac_cv_env_PKG_CONFIG_value=
+ac_cv_env_VALGRIND_CFLAGS_set=
+ac_cv_env_VALGRIND_CFLAGS_value=
+ac_cv_env_VALGRIND_LIBS_set=
+ac_cv_env_VALGRIND_LIBS_value=
+ac_cv_env_build_alias_set=set
+ac_cv_env_build_alias_value=i686-pc-linux-gnu
+ac_cv_env_host_alias_set=set
+ac_cv_env_host_alias_value=i686-w64-mingw32.static
+ac_cv_env_target_alias_set=
+ac_cv_env_target_alias_value=
+ac_cv_exeext=.exe
+ac_cv_func_bcopy=no
+ac_cv_func_memmove=yes
+ac_cv_func_mkostemp=no
+ac_cv_func_secure_getenv=no
+ac_cv_func_strerror=yes
+ac_cv_header_bzlib_h=yes
+ac_cv_header_dirent_h=yes
+ac_cv_header_dlfcn_h=no
+ac_cv_header_inttypes_h=yes
+ac_cv_header_limits_h=yes
+ac_cv_header_memory_h=yes
+ac_cv_header_minix_config_h=no
+ac_cv_header_stdc=yes
+ac_cv_header_stdint_h=yes
+ac_cv_header_stdlib_h=yes
+ac_cv_header_string_h=yes
+ac_cv_header_strings_h=yes
+ac_cv_header_sys_stat_h=yes
+ac_cv_header_sys_types_h=yes
+ac_cv_header_sys_wait_h=no
+ac_cv_header_unistd_h=yes
+ac_cv_header_windows_h=yes
+ac_cv_header_zlib_h=yes
+ac_cv_host=i686-w64-mingw32.static
+ac_cv_lib_z_gzopen=yes
+ac_cv_objext=o
+ac_cv_path_EGREP='/bin/grep -E'
+ac_cv_path_FGREP='/bin/grep -F'
+ac_cv_path_GREP=/bin/grep
+ac_cv_path_SED=/bin/sed
+ac_cv_path_install='/usr/bin/install -c'
+ac_cv_path_lt_DD=/bin/dd
+ac_cv_path_mkdir=/bin/mkdir
+ac_cv_prog_AR=i686-w64-mingw32.static-ar
+ac_cv_prog_AS=i686-w64-mingw32.static-as
+ac_cv_prog_AWK=mawk
+ac_cv_prog_CC=i686-w64-mingw32.static-gcc
+ac_cv_prog_CPP='i686-w64-mingw32.static-gcc -E'
+ac_cv_prog_DLLTOOL=i686-w64-mingw32.static-dlltool
+ac_cv_prog_HAVE_DOXYGEN=false
+ac_cv_prog_OBJDUMP=i686-w64-mingw32.static-objdump
+ac_cv_prog_RANLIB=i686-w64-mingw32.static-ranlib
+ac_cv_prog_STRIP=i686-w64-mingw32.static-strip
+ac_cv_prog_ac_ct_MANIFEST_TOOL=mt
+ac_cv_prog_cc_c89=
+ac_cv_prog_cc_g=yes
+ac_cv_prog_make_make_set=yes
+ac_cv_safe_to_define___extensions__=yes
+ac_cv_type_size_t=yes
+am_cv_CC_dependencies_compiler_type=gcc3
+am_cv_ar_interface=ar
+am_cv_make_support_nested_variables=yes
+am_cv_prog_cc_c_o=yes
+lt_cv_ar_at_file=@
+lt_cv_deplibs_check_method='file_magic ^x86 archive import|^x86 DLL'
+lt_cv_file_magic_cmd=func_win32_libid
+lt_cv_file_magic_test_file=
+lt_cv_ld_reload_flag=-r
+lt_cv_nm_interface='BSD nm'
+lt_cv_objdir=.libs
+lt_cv_path_LD=/home/user/mxe/usr/bin/i686-w64-mingw32.static-ld
+lt_cv_path_NM='/home/user/mxe/usr/bin/i686-w64-mingw32.static-nm -B'
+lt_cv_path_mainfest_tool=no
+lt_cv_prog_compiler_c_o=yes
+lt_cv_prog_compiler_pic='-DDLL_EXPORT -DPIC'
+lt_cv_prog_compiler_pic_works=yes
+lt_cv_prog_compiler_rtti_exceptions=no
+lt_cv_prog_compiler_static_works=yes
+lt_cv_prog_gnu_ld=yes
+lt_cv_sharedlib_from_linklib_cmd=func_cygming_dll_for_implib
+lt_cv_sys_global_symbol_pipe='sed -n -e '\''s/^.*[	 ]\([ABCDGIRSTW][ABCDGIRSTW]*\)[	 ][	 ]*_\([_A-Za-z][_A-Za-z0-9]*\)$/\1 _\2 \2/p'\'' | sed '\''/ __gnu_lto/d'\'''
+lt_cv_sys_global_symbol_to_c_name_address='sed -n -e '\''s/^: \(.*\) .*$/  {"\1", (void *) 0},/p'\'' -e '\''s/^[ABCDGIRSTW][ABCDGIRSTW]* .* \(.*\)$/  {"\1", (void *) \&\1},/p'\'''
+lt_cv_sys_global_symbol_to_c_name_address_lib_prefix='sed -n -e '\''s/^: \(.*\) .*$/  {"\1", (void *) 0},/p'\'' -e '\''s/^[ABCDGIRSTW][ABCDGIRSTW]* .* \(lib.*\)$/  {"\1", (void *) \&\1},/p'\'' -e '\''s/^[ABCDGIRSTW][ABCDGIRSTW]* .* \(.*\)$/  {"lib\1", (void *) \&\1},/p'\'''
+lt_cv_sys_global_symbol_to_cdecl='sed -n -e '\''s/^T .* \(.*\)$/extern int \1();/p'\'' -e '\''s/^[ABCDGIRSTW][ABCDGIRSTW]* .* \(.*\)$/extern char \1;/p'\'''
+lt_cv_sys_global_symbol_to_import=
+lt_cv_sys_max_cmd_len=1572864
+lt_cv_to_host_file_cmd=func_convert_file_nix_to_w32
+lt_cv_to_tool_file_cmd=func_convert_file_noop
+lt_cv_truncate_bin='/bin/dd bs=4096 count=1'
+pcre2_cv_cc_vis_werror=yes
+pcre2_cv_cc_visibility=yes
+
+## ----------------- ##
+## Output variables. ##
+## ----------------- ##
+
+ACLOCAL='${SHELL} /home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/missing aclocal-1.15'
+AMDEPBACKSLASH='\'
+AMDEP_FALSE='#'
+AMDEP_TRUE=''
+AMTAR='$${TAR-tar}'
+AM_BACKSLASH='\'
+AM_DEFAULT_V='$(AM_DEFAULT_VERBOSITY)'
+AM_DEFAULT_VERBOSITY='0'
+AM_V='$(V)'
+AR='i686-w64-mingw32.static-ar'
+AS='i686-w64-mingw32.static-as'
+AUTOCONF='${SHELL} /home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/missing autoconf'
+AUTOHEADER='${SHELL} /home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/missing autoheader'
+AUTOMAKE='${SHELL} /home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/missing automake-1.15'
+AWK='mawk'
+CC='i686-w64-mingw32.static-gcc'
+CCDEPMODE='depmode=gcc3'
+CFLAGS='-O2'
+CPP='i686-w64-mingw32.static-gcc -E'
+CPPFLAGS=''
+CYGPATH_W='echo'
+DEFS='-DHAVE_CONFIG_H'
+DEPDIR='.deps'
+DISTCHECK_CONFIGURE_FLAGS='CFLAGS='\'''\'' CXXFLAGS='\'''\'' --enable-pcre2-16 --enable-pcre2-32 --enable-jit --enable-utf'
+DLLTOOL='i686-w64-mingw32.static-dlltool'
+DSYMUTIL=''
+DUMPBIN=''
+ECHO_C=''
+ECHO_N='-n'
+ECHO_T=''
+EGREP='/bin/grep -E'
+EXEEXT='.exe'
+EXTRA_LIBPCRE2_16_LDFLAGS='    -version-info 6:0:6'
+EXTRA_LIBPCRE2_32_LDFLAGS='    -version-info 6:0:6'
+EXTRA_LIBPCRE2_8_LDFLAGS='    -version-info 6:0:6'
+EXTRA_LIBPCRE2_POSIX_LDFLAGS='    -version-info 2:0:0'
+FGREP='/bin/grep -F'
+GCOV_CFLAGS=''
+GCOV_CXXFLAGS=''
+GCOV_LIBS=''
+GENHTML=''
+GREP='/bin/grep'
+HAVE_VISIBILITY='1'
+INSTALL_DATA='${INSTALL} -m 644'
+INSTALL_PROGRAM='${INSTALL}'
+INSTALL_SCRIPT='${INSTALL}'
+INSTALL_STRIP_PROGRAM='$(install_sh) -c -s'
+LCOV=''
+LD='/home/user/mxe/usr/bin/i686-w64-mingw32.static-ld'
+LDFLAGS=''
+LIBBZ2=''
+LIBOBJS=''
+LIBREADLINE=''
+LIBS=''
+LIBTOOL='$(SHELL) $(top_builddir)/libtool'
+LIBZ=''
+LIPO=''
+LN_S='ln -s'
+LTLIBOBJS=''
+LT_SYS_LIBRARY_PATH=''
+MAKEINFO='${SHELL} /home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/missing makeinfo'
+MANIFEST_TOOL=':'
+MKDIR_P='/bin/mkdir -p'
+NM='/home/user/mxe/usr/bin/i686-w64-mingw32.static-nm -B'
+NMEDIT=''
+OBJDUMP='i686-w64-mingw32.static-objdump'
+OBJEXT='o'
+OTOOL64=''
+OTOOL=''
+PACKAGE='pcre2'
+PACKAGE_BUGREPORT=''
+PACKAGE_NAME='PCRE2'
+PACKAGE_STRING='PCRE2 10.30'
+PACKAGE_TARNAME='pcre2'
+PACKAGE_URL=''
+PACKAGE_VERSION='10.30'
+PATH_SEPARATOR=':'
+PCRE2_DATE='2017-08-14'
+PCRE2_MAJOR='10'
+PCRE2_MINOR='30'
+PCRE2_PRERELEASE=''
+PCRE2_STATIC_CFLAG='-DPCRE2_STATIC'
+PKG_CONFIG=''
+PKG_CONFIG_LIBDIR=''
+PKG_CONFIG_PATH=''
+PTHREAD_CC=''
+PTHREAD_CFLAGS=''
+PTHREAD_LIBS=''
+RANLIB='i686-w64-mingw32.static-ranlib'
+SED='/bin/sed'
+SET_MAKE=''
+SHELL='/bin/bash'
+SHTOOL=''
+STRIP='i686-w64-mingw32.static-strip'
+VALGRIND_CFLAGS=''
+VALGRIND_LIBS=''
+VERSION='10.30'
+VISIBILITY_CFLAGS='-fvisibility=hidden'
+VISIBILITY_CXXFLAGS='-fvisibility=hidden -fvisibility-inlines-hidden'
+WITH_DEBUG_FALSE=''
+WITH_DEBUG_TRUE='#'
+WITH_FUZZ_SUPPORT_FALSE=''
+WITH_FUZZ_SUPPORT_TRUE='#'
+WITH_GCOV_FALSE=''
+WITH_GCOV_TRUE='#'
+WITH_JIT_FALSE=''
+WITH_JIT_TRUE='#'
+WITH_PCRE2_16_FALSE='#'
+WITH_PCRE2_16_TRUE=''
+WITH_PCRE2_32_FALSE=''
+WITH_PCRE2_32_TRUE='#'
+WITH_PCRE2_8_FALSE='#'
+WITH_PCRE2_8_TRUE=''
+WITH_REBUILD_CHARTABLES_FALSE=''
+WITH_REBUILD_CHARTABLES_TRUE='#'
+WITH_UNICODE_FALSE='#'
+WITH_UNICODE_TRUE=''
+WITH_VALGRIND_FALSE=''
+WITH_VALGRIND_TRUE='#'
+ac_ct_AR=''
+ac_ct_CC=''
+ac_ct_DUMPBIN=''
+am__EXEEXT_FALSE='#'
+am__EXEEXT_TRUE=''
+am__fastdepCC_FALSE='#'
+am__fastdepCC_TRUE=''
+am__include='include'
+am__isrc=''
+am__leading_dot='.'
+am__nodep='_no'
+am__quote=''
+am__tar='$${TAR-tar} chof - "$$tardir"'
+am__untar='$${TAR-tar} xf -'
+ax_pthread_config=''
+bindir='${exec_prefix}/bin'
+build='i686-pc-linux-gnu'
+build_alias='i686-pc-linux-gnu'
+build_cpu='i686'
+build_os='linux-gnu'
+build_vendor='pc'
+datadir='${datarootdir}'
+datarootdir='${prefix}/share'
+docdir='/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30.build_.sink'
+dvidir='${docdir}'
+enable_pcre2_16='yes'
+enable_pcre2_32='no'
+enable_pcre2_8='yes'
+exec_prefix='${prefix}'
+host='i686-w64-mingw32.static'
+host_alias='i686-w64-mingw32.static'
+host_cpu='i686'
+host_os='mingw32.static'
+host_vendor='w64'
+htmldir='${docdir}/html'
+includedir='${prefix}/include'
+infodir='/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30.build_.sink'
+install_sh='${SHELL} /home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/install-sh'
+libdir='${exec_prefix}/lib'
+libexecdir='${exec_prefix}/libexec'
+localedir='${datarootdir}/locale'
+localstatedir='${prefix}/var'
+mandir='/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30.build_.sink'
+mkdir_p='$(MKDIR_P)'
+oldincludedir='/usr/include'
+pdfdir='${docdir}'
+prefix='/home/user/mxe/usr/i686-w64-mingw32.static'
+program_transform_name='s,x,x,'
+psdir='${docdir}'
+sbindir='${exec_prefix}/sbin'
+sharedstatedir='${prefix}/com'
+sysconfdir='${prefix}/etc'
+target_alias=''
+
+## ----------- ##
+## confdefs.h. ##
+## ----------- ##
+
+/* confdefs.h */
+#define PACKAGE_NAME "PCRE2"
+#define PACKAGE_TARNAME "pcre2"
+#define PACKAGE_VERSION "10.30"
+#define PACKAGE_STRING "PCRE2 10.30"
+#define PACKAGE_BUGREPORT ""
+#define PACKAGE_URL ""
+#define PACKAGE "pcre2"
+#define VERSION "10.30"
+#define STDC_HEADERS 1
+#define HAVE_SYS_TYPES_H 1
+#define HAVE_SYS_STAT_H 1
+#define HAVE_STDLIB_H 1
+#define HAVE_STRING_H 1
+#define HAVE_MEMORY_H 1
+#define HAVE_STRINGS_H 1
+#define HAVE_INTTYPES_H 1
+#define HAVE_STDINT_H 1
+#define HAVE_UNISTD_H 1
+#define __EXTENSIONS__ 1
+#define _ALL_SOURCE 1
+#define _GNU_SOURCE 1
+#define _POSIX_PTHREAD_SEMANTICS 1
+#define _TANDEM_SOURCE 1
+#define LT_OBJDIR ".libs/"
+#define PCRE2_EXP_DECL extern __attribute__ ((visibility ("default")))
+#define PCRE2_EXP_DEFN __attribute__ ((visibility ("default")))
+#define PCRE2POSIX_EXP_DECL extern __attribute__ ((visibility ("default")))
+#define PCRE2POSIX_EXP_DEFN extern __attribute__ ((visibility ("default")))
+#define HAVE_VISIBILITY 1
+#define STDC_HEADERS 1
+#define HAVE_LIMITS_H 1
+#define HAVE_SYS_TYPES_H 1
+#define HAVE_SYS_STAT_H 1
+#define HAVE_DIRENT_H 1
+#define HAVE_WINDOWS_H 1
+#define HAVE_MEMMOVE 1
+#define HAVE_STRERROR 1
+#define HAVE_ZLIB_H 1
+#define HAVE_BZLIB_H 1
+#define PCRE2_STATIC 1
+#define SUPPORT_PCRE2_8 /**/
+#define SUPPORT_PCRE2_16 /**/
+#define SUPPORT_PCRE2GREP_CALLOUT /**/
+#define SUPPORT_UNICODE /**/
+#define PCRE2GREP_BUFSIZE 20480
+#define PCRE2GREP_MAX_BUFSIZE 1048576
+#define NEWLINE_DEFAULT 2
+#define LINK_SIZE 2
+#define PARENS_NEST_LIMIT 250
+#define MATCH_LIMIT 10000000
+#define MATCH_LIMIT_DEPTH MATCH_LIMIT
+#define HEAP_LIMIT 20000000
+#define MAX_NAME_SIZE 32
+#define MAX_NAME_COUNT 10000
+
+configure: exit 0
+
+settings.mk
+# This is a template of configuration file for MXE. See
+# docs/index.html for more extensive documentations.
+
+# This variable controls the number of compilation processes
+# within one package ("intra-package parallelism").
+#JOBS := 
+
+# This variable controls where intermediate files are created
+# this is necessary when compiling inside a virtualbox shared
+# directory. Some commands like strip fail in there with Protocol error
+# default is the current directory
+#MXE_TMP := /tmp
+
+# This variable controls the targets that will build.
+#MXE_TARGETS := i686-w64-mingw32.static i686-w64-mingw32.shared x86_64-w64-mingw32.static x86_64-w64-mingw32.shared
+
+# This variable controls which plugins are in use.
+# See plugins/README.md for further information.
+#override MXE_PLUGIN_DIRS += plugins/apps plugins/native
+
+# This variable controls the download mirror for SourceForge,
+# when it is used. Enabling the value below means auto.
+#SOURCEFORGE_MIRROR := downloads.sourceforge.net
+
+# The three lines below makes `make` build these "local
+# packages" instead of all packages.
+#LOCAL_PKG_LIST := boost curl file flac lzo pthreads vorbis wxwidgets
+#.DEFAULT_GOAL  := local-pkg-list
+#local-pkg-list: $(LOCAL_PKG_LIST)
+i686-w64-mingw32.static-strip '/home/user/mxe/usr/i686-w64-mingw32.static/bin/test-pcre2.exe'
+i686-w64-mingw32.static-strip: '/home/user/mxe/usr/i686-w64-mingw32.static/bin/test-pcre2.exe': No such file
+Makefile:786: recipe for target 'build-only-pcre2_i686-w64-mingw32.static' failed
+make[1]: [build-only-pcre2_i686-w64-mingw32.static] Error 1 (ignored)
+(du -k -d 0 '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static' 2>/dev/null || du -k --max-depth 0 '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static') | sed -n 's/^\(\S*\).*/du: \1 KiB/p'
+du: 14236 KiB
+rm -rfv  '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30.build_.sink/man3/pcre2_substring_free.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30.build_.sink/man3/pcre2_code_copy_with_tables.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30.build_.sink/man3/pcre2limits.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30.build_.sink/man3/pcre2_set_newline.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30.build_.sink/man3/pcre2_get_error_message.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30.build_.sink/man3/pcre2_dfa_match.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30.build_.sink/man3/pcre2jit.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30.build_.sink/man3/pcre2_serialize_decode.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30.build_.sink/man3/pcre2_code_free.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30.build_.sink/man3/pcre2_set_recursion_memory_management.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30.build_.sink/man3/pcre2_match_context_create.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30.build_.sink/man3/pcre2_match_data_create.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30.build_.sink/man3/pcre2_set_compile_extra_options.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30.build_.sink/man3/pcre2_set_match_limit.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30.build_.sink/man3/pcre2demo.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30.build_.sink/man3/pcre2_set_compile_recursion_guard.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30.build_.sink/man3/pcre2_jit_free_unused_memory.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30.build_.sink/man3/pcre2matching.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30.build_.sink/man3/pcre2_general_context_create.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30.build_.sink/man3/pcre2_compile_context_create.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30.build_.sink/man3/pcre2_serialize_get_number_of_codes.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30.build_.sink/man3/pcre2_get_ovector_count.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30.build_.sink/man3/pcre2_serialize_encode.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30.build_.sink/man3/pcre2_jit_match.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30.build_.sink/man3/pcre2_set_callout.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30.build_.sink/man3/pcre2pattern.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30.build_.sink/man3/pcre2_jit_stack_assign.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30.build_.sink/man3/pcre2serialize.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30.build_.sink/man3/pcre2perform.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30.build_.sink/man3/pcre2_jit_stack_free.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30.build_.sink/man3/pcre2_code_copy.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30.build_.sink/man3/pcre2_set_character_tables.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30.build_.sink/man3/pcre2.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30.build_.sink/man3/pcre2_substring_nametable_scan.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30.build_.sink/man3/pcre2_substring_length_bynumber.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30.build_.sink/man3/pcre2_substring_get_byname.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30.build_.sink/man3/pcre2_set_glob_separator.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30.build_.sink/man3/pcre2_set_bsr.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30.build_.sink/man3/pcre2_match_data_create_from_pattern.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30.build_.sink/man3/pcre2_pattern_convert.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30.build_.sink/man3/pcre2_get_ovector_pointer.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30.build_.sink/man3/pcre2_substring_copy_byname.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30.build_.sink/man3/pcre2_substring_copy_bynumber.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30.build_.sink/man3/pcre2_match.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30.build_.sink/man3/pcre2_callout_enumerate.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30.build_.sink/man3/pcre2_get_startchar.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30.build_.sink/man3/pcre2_compile_context_copy.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30.build_.sink/man3/pcre2_match_context_free.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30.build_.sink/man3/pcre2_jit_compile.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30.build_.sink/man3/pcre2sample.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30.build_.sink/man3/pcre2_pattern_info.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30.build_.sink/man3/pcre2_match_context_copy.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30.build_.sink/man3/pcre2syntax.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30.build_.sink/man3/pcre2posix.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30.build_.sink/man3/pcre2_substring_length_byname.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30.build_.sink/man3/pcre2_substitute.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30.build_.sink/man3/pcre2_serialize_free.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30.build_.sink/man3/pcre2_set_recursion_limit.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30.build_.sink/man3/pcre2_maketables.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30.build_.sink/man3/pcre2_compile_context_free.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30.build_.sink/man3/pcre2_compile.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30.build_.sink/man3/pcre2_substring_list_free.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30.build_.sink/man3/pcre2_match_data_free.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30.build_.sink/man3/pcre2_set_glob_escape.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30.build_.sink/man3/pcre2_substring_number_from_name.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30.build_.sink/man3/pcre2_set_offset_limit.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30.build_.sink/man3/pcre2convert.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30.build_.sink/man3/pcre2_get_mark.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30.build_.sink/man3/pcre2unicode.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30.build_.sink/man3/pcre2_set_heap_limit.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30.build_.sink/man3/pcre2_set_max_pattern_length.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30.build_.sink/man3/pcre2_config.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30.build_.sink/man3/pcre2_substring_list_get.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30.build_.sink/man3/pcre2api.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30.build_.sink/man3/pcre2_convert_context_create.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30.build_.sink/man3/pcre2_set_parens_nest_limit.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30.build_.sink/man3/pcre2compat.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30.build_.sink/man3/pcre2_general_context_copy.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30.build_.sink/man3/pcre2_jit_stack_create.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30.build_.sink/man3/pcre2_general_context_free.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30.build_.sink/man3/pcre2_converted_pattern_free.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30.build_.sink/man3/pcre2_convert_context_free.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30.build_.sink/man3/pcre2_substring_get_bynumber.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30.build_.sink/man3/pcre2_convert_context_copy.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30.build_.sink/man3/pcre2_set_depth_limit.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30.build_.sink/man3/pcre2build.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30.build_.sink/man3/pcre2partial.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30.build_.sink/man3/pcre2callout.3'
+removed directory '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30.build_.sink/man3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30.build_.sink/man1/pcre2test.1'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30.build_.sink/man1/pcre2grep.1'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30.build_.sink/man1/pcre2-config.1'
+removed directory '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30.build_.sink/man1'
+removed directory '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30.build_.sink'
+removed directory '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/readonly'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/libpcre2-8.pc'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/configure.ac'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/RunTest'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/RunGrepTest'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/libpcre2-32.pc'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/COPYING'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/NEWS'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/config.sub'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/README'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/Makefile.in'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/libpcre2_16_la-pcre2_pattern_info.lo'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/libpcre2_16_la-pcre2_error.o'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/pcre2_ucd.c'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/libpcre2_16_la-pcre2_chartables.o'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/libpcre2_8_la-pcre2_chartables.o'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/pcre2_config.c'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/libpcre2_16_la-pcre2_context.lo'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/libpcre2_8_la-pcre2_compile.lo'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/libpcre2_8_la-pcre2_string_utils.lo'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/pcre2_match.c'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/pcre2_ord2utf.c'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/libpcre2_16_la-pcre2_xclass.lo'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/pcre2test.c'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/libpcre2_16_la-pcre2_find_bracket.o'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/libpcre2_16_la-pcre2_match.lo'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/libpcre2_16_la-pcre2_string_utils.lo'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/pcre2_match_data.c'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/stamp-h1'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/libpcre2_8_la-pcre2_xclass.o'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/sljit/sljitNativeSPARC_common.c'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/sljit/sljitNativeSPARC_32.c'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/sljit/sljitUtils.c'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/sljit/sljitNativeX86_64.c'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/sljit/sljitNativeARM_T2_32.c'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/sljit/sljitNativeMIPS_32.c'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/sljit/sljitNativePPC_common.c'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/sljit/sljitNativeTILEGX-encoder.c'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/sljit/sljitNativeARM_32.c'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/sljit/sljitNativeARM_64.c'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/sljit/sljitConfig.h'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/sljit/sljitNativeMIPS_common.c'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/sljit/sljitNativeTILEGX_64.c'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/sljit/sljitNativePPC_32.c'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/sljit/sljitConfigInternal.h'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/sljit/sljitProtExecAllocator.c'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/sljit/sljitLir.c'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/sljit/sljitNativeX86_32.c'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/sljit/sljitNativeX86_common.c'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/sljit/sljitExecAllocator.c'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/sljit/sljitLir.h'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/sljit/sljitNativeMIPS_64.c'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/sljit/sljitNativePPC_64.c'
+removed directory '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/sljit'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/libpcre2_8_la-pcre2_match_data.o'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/libpcre2_16_la-pcre2_newline.lo'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/dftables.c'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/pcre2_jit_compile.c'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/pcre2_valid_utf.c'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/pcre2_jit_misc.c'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/libpcre2_16_la-pcre2_tables.lo'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/pcre2_string_utils.c'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/pcre2_serialize.c'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/libpcre2_16_la-pcre2_string_utils.o'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/libpcre2_8_la-pcre2_config.o'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/libpcre2_16_la-pcre2_study.o'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/libpcre2_16_la-pcre2_auto_possess.lo'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/libpcre2_16_la-pcre2_convert.lo'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/libpcre2_8_la-pcre2_serialize.lo'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/libpcre2_8_la-pcre2_compile.o'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/libpcre2_8_la-pcre2_tables.o'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/libpcre2_16_la-pcre2_xclass.o'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/libpcre2_16_la-pcre2_maketables.lo'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/libpcre2_16_la-pcre2_newline.o'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/libpcre2_8_la-pcre2_find_bracket.lo'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/libpcre2_8_la-pcre2_pattern_info.lo'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/libpcre2_8_la-pcre2_error.lo'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/libpcre2_16_la-pcre2_match_data.lo'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/config.h'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/libpcre2_8_la-pcre2_xclass.lo'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/libpcre2_8_la-pcre2_config.lo'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/pcre2_printint.c'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/pcre2_chartables.c.dist'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/libpcre2_posix_la-pcre2posix.o'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/libpcre2_8_la-pcre2_convert.o'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/libpcre2_8_la-pcre2_context.lo'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/libpcre2_8_la-pcre2_convert.lo'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/config.h.in'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/libpcre2_8_la-pcre2_substring.lo'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/pcre2_ucp.h'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/pcre2_dfa_match.c'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/libpcre2_16_la-pcre2_convert.o'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/.deps/libpcre2_32_la-pcre2_ucd.Plo'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/.deps/libpcre2_16_la-pcre2_config.Plo'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/.deps/libpcre2_16_la-pcre2_string_utils.Plo'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/.deps/libpcre2_16_la-pcre2_tables.Plo'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/.deps/libpcre2_8_la-pcre2_ord2utf.Plo'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/.deps/libpcre2_8_la-pcre2_find_bracket.Plo'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/.deps/libpcre2_8_la-pcre2_substring.Plo'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/.deps/libpcre2_8_la-pcre2_serialize.Plo'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/.deps/libpcre2_8_la-pcre2_newline.Plo'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/.deps/libpcre2_8_la-pcre2_xclass.Plo'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/.deps/libpcre2_16_la-pcre2_ucd.Plo'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/.deps/libpcre2_8_la-pcre2_substitute.Plo'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/.deps/libpcre2_32_la-pcre2_context.Plo'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/.deps/libpcre2_16_la-pcre2_match.Plo'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/.deps/libpcre2_8_la-pcre2_study.Plo'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/.deps/libpcre2_32_la-pcre2_chartables.Plo'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/.deps/libpcre2_16_la-pcre2_substitute.Plo'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/.deps/libpcre2_32_la-pcre2_study.Plo'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/.deps/libpcre2_8_la-pcre2_tables.Plo'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/.deps/libpcre2_32_la-pcre2_match.Plo'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/.deps/libpcre2_16_la-pcre2_jit_compile.Plo'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/.deps/libpcre2_16_la-pcre2_match_data.Plo'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/.deps/libpcre2_8_la-pcre2_context.Plo'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/.deps/libpcre2_16_la-pcre2_substring.Plo'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/.deps/libpcre2_16_la-pcre2_study.Plo'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/.deps/libpcre2_16_la-pcre2_valid_utf.Plo'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/.deps/libpcre2_32_la-pcre2_convert.Plo'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/.deps/libpcre2_8_la-pcre2_string_utils.Plo'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/.deps/libpcre2_16_la-pcre2_dfa_match.Plo'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/.deps/libpcre2_16_la-pcre2_pattern_info.Plo'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/.deps/libpcre2_32_la-pcre2_newline.Plo'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/.deps/libpcre2_32_la-pcre2_error.Plo'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/.deps/libpcre2_8_la-pcre2_error.Plo'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/.deps/libpcre2_32_la-pcre2_substring.Plo'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/.deps/libpcre2_8_la-pcre2_maketables.Plo'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/.deps/libpcre2_32_la-pcre2_substitute.Plo'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/.deps/libpcre2_8_la-pcre2_pattern_info.Plo'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/.deps/pcre2_jit_test-pcre2_jit_test.Po'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/.deps/pcre2fuzzcheck-pcre2_fuzzsupport.Po'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/.deps/libpcre2_32_la-pcre2_maketables.Plo'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/.deps/libpcre2_32_la-pcre2_match_data.Plo'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/.deps/libpcre2_16_la-pcre2_context.Plo'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/.deps/libpcre2_8_la-pcre2_ucd.Plo'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/.deps/libpcre2_32_la-pcre2_dfa_match.Plo'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/.deps/libpcre2_32_la-pcre2_jit_compile.Plo'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/.deps/libpcre2_8_la-pcre2_match.Plo'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/.deps/libpcre2_8_la-pcre2_dfa_match.Plo'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/.deps/libpcre2_16_la-pcre2_find_bracket.Plo'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/.deps/libpcre2_16_la-pcre2_error.Plo'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/.deps/libpcre2_32_la-pcre2_tables.Plo'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/.deps/libpcre2_16_la-pcre2_ord2utf.Plo'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/.deps/libpcre2_8_la-pcre2_chartables.Plo'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/.deps/libpcre2_32_la-pcre2_auto_possess.Plo'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/.deps/libpcre2_32_la-pcre2_pattern_info.Plo'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/.deps/libpcre2_16_la-pcre2_xclass.Plo'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/.deps/libpcre2_8_la-pcre2_valid_utf.Plo'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/.deps/libpcre2_32_la-pcre2_ord2utf.Plo'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/.deps/libpcre2_32_la-pcre2_valid_utf.Plo'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/.deps/libpcre2_16_la-pcre2_newline.Plo'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/.deps/libpcre2_8_la-pcre2_compile.Plo'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/.deps/pcre2test-pcre2test.Po'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/.deps/libpcre2_32_la-pcre2_compile.Plo'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/.deps/libpcre2_32_la-pcre2_config.Plo'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/.deps/libpcre2_posix_la-pcre2posix.Plo'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/.deps/dftables.Po'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/.deps/libpcre2_8_la-pcre2_config.Plo'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/.deps/_libs_libpcre2_fuzzsupport_a-pcre2_fuzzsupport.Po'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/.deps/libpcre2_16_la-pcre2_auto_possess.Plo'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/.deps/libpcre2_16_la-pcre2_serialize.Plo'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/.deps/libpcre2_16_la-pcre2_compile.Plo'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/.deps/libpcre2_16_la-pcre2_chartables.Plo'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/.deps/libpcre2_32_la-pcre2_string_utils.Plo'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/.deps/libpcre2_32_la-pcre2_xclass.Plo'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/.deps/.dirstamp'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/.deps/libpcre2_8_la-pcre2_auto_possess.Plo'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/.deps/pcre2grep-pcre2grep.Po'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/.deps/libpcre2_16_la-pcre2_maketables.Plo'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/.deps/libpcre2_8_la-pcre2_jit_compile.Plo'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/.deps/libpcre2_8_la-pcre2_convert.Plo'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/.deps/libpcre2_16_la-pcre2_convert.Plo'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/.deps/libpcre2_8_la-pcre2_match_data.Plo'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/.deps/libpcre2_32_la-pcre2_find_bracket.Plo'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/.deps/libpcre2_32_la-pcre2_serialize.Plo'
+removed directory '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/.deps'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/pcre2_newline.c'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/pcre2_convert.c'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/libpcre2_16_la-pcre2_maketables.o'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/libpcre2_8_la-pcre2_maketables.lo'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/libpcre2_8_la-pcre2_dfa_match.lo'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/libpcre2_8_la-pcre2_context.o'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/pcre2_compile.c'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/libpcre2_8_la-pcre2_newline.o'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/pcre2.h.generic'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/libpcre2_16_la-pcre2_match_data.o'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/libpcre2_16_la-pcre2_substring.lo'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/libpcre2_8_la-pcre2_match_data.lo'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/libpcre2_16_la-pcre2_tables.o'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/pcre2_chartables.c'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/libpcre2_16_la-pcre2_ucd.o'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/pcre2_jit_match.c'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/libpcre2_16_la-pcre2_config.o'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/libpcre2_16_la-pcre2_compile.o'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/libpcre2_16_la-pcre2_substitute.o'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/libpcre2_16_la-pcre2_dfa_match.o'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/libpcre2_8_la-pcre2_match.o'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/libpcre2_16_la-pcre2_pattern_info.o'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/libpcre2_16_la-pcre2_ord2utf.o'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/config.h.generic'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/libpcre2_16_la-pcre2_chartables.lo'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/libpcre2_8_la-pcre2_newline.lo'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/libpcre2_8_la-pcre2_ord2utf.lo'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/pcre2_intmodedep.h'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/libpcre2_8_la-pcre2_valid_utf.lo'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/pcre2_error.c'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/libpcre2_8_la-pcre2_error.o'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/libpcre2_16_la-pcre2_config.lo'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/libpcre2_16_la-pcre2_substitute.lo'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/libpcre2_8_la-pcre2_ucd.lo'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/libpcre2_16_la-pcre2_dfa_match.lo'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/libpcre2_8_la-pcre2_ucd.o'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/pcre2demo.c'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/libpcre2_16_la-pcre2_compile.lo'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/libpcre2_16_la-pcre2_error.lo'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/pcre2_substitute.c'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/libpcre2_8_la-pcre2_auto_possess.lo'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/libpcre2_8_la-pcre2_string_utils.o'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/pcre2_jit_test.c'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/pcre2_maketables.c'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/libpcre2_16_la-pcre2_serialize.o'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/libpcre2_16_la-pcre2_valid_utf.lo'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/libpcre2_8_la-pcre2_maketables.o'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/libpcre2_8_la-pcre2_jit_compile.o'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/libpcre2_16_la-pcre2_substring.o'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/libpcre2_16_la-pcre2_serialize.lo'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/pcre2_pattern_info.c'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/libpcre2_8_la-pcre2_substitute.lo'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/libpcre2_8_la-pcre2_substring.o'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/libpcre2_8_la-pcre2_match.lo'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/pcre2_context.c'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/libpcre2_16_la-pcre2_jit_compile.lo'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/libpcre2_8_la-pcre2_chartables.lo'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/libpcre2_16_la-pcre2_auto_possess.o'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/pcre2_auto_possess.c'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/pcre2_study.c'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/libpcre2_16_la-pcre2_find_bracket.lo'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/libpcre2_16_la-pcre2_study.lo'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/libpcre2_8_la-pcre2_substitute.o'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/pcre2.h.in'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/libpcre2_posix_la-pcre2posix.lo'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/libpcre2_16_la-pcre2_ord2utf.lo'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/libpcre2_8_la-pcre2_ord2utf.o'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/libpcre2_8_la-pcre2_serialize.o'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/pcre2_xclass.c'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/libpcre2_16_la-pcre2_valid_utf.o'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/libpcre2_8_la-pcre2_valid_utf.o'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/pcre2.h'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/libpcre2_16_la-pcre2_context.o'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/.dirstamp'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/pcre2_fuzzsupport.c'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/pcre2_substring.c'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/pcre2_tables.c'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/libpcre2_8_la-pcre2_tables.lo'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/libpcre2_8_la-pcre2_jit_compile.lo'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/libpcre2_8_la-pcre2_find_bracket.o'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/pcre2_find_bracket.c'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/libpcre2_8_la-pcre2_auto_possess.o'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/libpcre2_8_la-pcre2_dfa_match.o'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/pcre2_internal.h'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/pcre2posix.c'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/libpcre2_16_la-pcre2_jit_compile.o'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/libpcre2_8_la-pcre2_study.o'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/libpcre2_8_la-pcre2_study.lo'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/pcre2grep.c'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/libpcre2_16_la-pcre2_ucd.lo'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/libpcre2_8_la-pcre2_pattern_info.o'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/libpcre2_16_la-pcre2_match.o'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src/pcre2posix.h'
+removed directory '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/src'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/NON-AUTOTOOLS-BUILD'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/test-driver'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/.libs/libpcre2-16.lai'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/.libs/libpcre2-16.a'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/.libs/libpcre2-posix.lai'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/.libs/libpcre2-posix.a'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/.libs/libpcre2-16.la'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/.libs/libpcre2-8.a'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/.libs/libpcre2-8.lai'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/.libs/libpcre2-8.la'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/.libs/libpcre2-posix.la'
+removed directory '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/.libs'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/libpcre2-16.la'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/aclocal.m4'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/HACKING'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/RunTest.bat'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/depcomp'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/ltmain.sh'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/install-sh'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/CheckMan'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/PrepareRelease'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/pcre2-config'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/132html'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/config-cmake.h.in'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/Makefile'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/testdata/testoutput9'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/testdata/testinput25'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/testdata/testoutput8-32-3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/testdata/valgrind-jit.supp'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/testdata/grepinput3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/testdata/grepoutput'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/testdata/testoutput3B'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/testdata/testoutput17'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/testdata/testoutput21'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/testdata/testinput11'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/testdata/testinput23'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/testdata/testinput6'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/testdata/testoutputEBC'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/testdata/testinput2'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/testdata/greppatN4'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/testdata/testinput3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/testdata/testinput24'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/testdata/testoutput23'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/testdata/testinput1'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/testdata/testoutput10'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/testdata/grepbinary'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/testdata/greplist'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/testdata/testinput13'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/testdata/testoutput8-8-3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/testdata/testoutput20'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/testdata/testoutput6'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/testdata/testoutput5'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/testdata/testoutput8-8-4'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/testdata/testinput10'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/testdata/grepinputx'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/testdata/wintestinput3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/testdata/grepinput'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/testdata/testoutput14-32'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/testdata/testoutput12-16'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/testdata/testinput5'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/testdata/testoutput8-16-3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/testdata/testoutput3A'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/testdata/testoutput25'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/testdata/testinput15'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/testdata/grepoutput8'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/testdata/testoutput8-32-4'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/testdata/testoutput19'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/testdata/testoutput12-32'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/testdata/testoutput8-8-2'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/testdata/grepfilelist'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/testdata/testinput20'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/testdata/testoutput15'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/testdata/testoutput11-16'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/testdata/testoutput22-8'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/testdata/testinput9'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/testdata/testinput12'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/testdata/testoutput3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/testdata/testoutput16'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/testdata/testoutput22-32'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/testdata/testinput7'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/testdata/testoutput14-16'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/testdata/testoutput13'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/testdata/testinput4'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/testdata/wintestoutput3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/testdata/testoutput18'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/testdata/testoutput7'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/testdata/testinput21'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/testdata/testoutput8-16-2'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/testdata/testinputEBC'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/testdata/grepinputv'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/testdata/testinput14'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/testdata/grepoutputC'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/testdata/testoutput24'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/testdata/testoutput14-8'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/testdata/testoutput4'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/testdata/testinput22'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/testdata/testinput19'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/testdata/testoutput11-32'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/testdata/testinput8'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/testdata/testoutput22-16'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/testdata/grepinput8'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/testdata/testoutput1'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/testdata/grepoutputN'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/testdata/testinput17'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/testdata/testinput16'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/testdata/testinput18'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/testdata/testoutput2'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/testdata/testoutput8-32-2'
+removed directory '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/testdata'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/CleanTxt'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/config.guess'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/CMakeLists.txt'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/m4/libtool.m4'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/m4/pcre2_visibility.m4'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/m4/ltsugar.m4'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/m4/ltoptions.m4'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/m4/lt~obsolete.m4'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/m4/ax_pthread.m4'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/m4/ltversion.m4'
+removed directory '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/m4'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/libpcre2-16.pc.in'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/libpcre2-16.pc'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/ChangeLog'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/libpcre2-8.pc.in'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/pcre2_substring_free.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/pcre2_code_copy_with_tables.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/pcre2limits.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/pcre2_set_newline.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/pcre2_get_error_message.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/pcre2_dfa_match.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/pcre2jit.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/pcre2_serialize_decode.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/pcre2_code_free.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/pcre2_set_recursion_memory_management.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/pcre2test.1'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/pcre2_match_context_create.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/pcre2_match_data_create.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/pcre2_set_compile_extra_options.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/pcre2_set_match_limit.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/pcre2demo.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/pcre2_set_compile_recursion_guard.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/pcre2_jit_free_unused_memory.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/pcre2matching.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/pcre2_general_context_create.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/pcre2_compile_context_create.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/pcre2_serialize_get_number_of_codes.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/pcre2_get_ovector_count.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/pcre2_serialize_encode.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/pcre2grep.1'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/pcre2_jit_match.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/pcre2_set_callout.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/pcre2pattern.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/pcre2_jit_stack_assign.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/pcre2serialize.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/pcre2perform.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/pcre2_jit_stack_free.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/pcre2_code_copy.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/html/pcre2_substring_list_get.html'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/html/pcre2_set_compile_extra_options.html'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/html/pcre2_compile_context_copy.html'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/html/pcre2_serialize_encode.html'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/html/pcre2_substring_length_byname.html'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/html/pcre2sample.html'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/html/pcre2_match_data_free.html'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/html/pcre2_code_copy.html'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/html/pcre2_set_depth_limit.html'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/html/pcre2_convert_context_copy.html'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/html/pcre2_dfa_match.html'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/html/pcre2api.html'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/html/pcre2_get_mark.html'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/html/pcre2_set_parens_nest_limit.html'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/html/pcre2_compile_context_free.html'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/html/pcre2_set_glob_escape.html'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/html/pcre2limits.html'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/html/pcre2demo.html'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/html/pcre2_set_recursion_memory_management.html'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/html/pcre2_converted_pattern_free.html'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/html/index.html'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/html/pcre2_compile_context_create.html'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/html/pcre2test.html'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/html/pcre2convert.html'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/html/pcre2_jit_stack_assign.html'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/html/pcre2_pattern_info.html'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/html/pcre2_substring_get_byname.html'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/html/pcre2_convert_context_free.html'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/html/pcre2_substring_copy_bynumber.html'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/html/pcre2perform.html'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/html/pcre2_get_startchar.html'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/html/pcre2_set_offset_limit.html'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/html/pcre2_substring_number_from_name.html'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/html/pcre2_set_callout.html'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/html/pcre2_callout_enumerate.html'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/html/pcre2_config.html'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/html/pcre2-config.html'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/html/pcre2syntax.html'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/html/NON-AUTOTOOLS-BUILD.txt'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/html/pcre2_maketables.html'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/html/pcre2callout.html'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/html/pcre2partial.html'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/html/pcre2_match_context_copy.html'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/html/pcre2_pattern_convert.html'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/html/pcre2_set_recursion_limit.html'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/html/pcre2_general_context_create.html'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/html/pcre2posix.html'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/html/pcre2_code_free.html'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/html/pcre2_set_character_tables.html'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/html/pcre2_code_copy_with_tables.html'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/html/pcre2_substring_free.html'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/html/pcre2_set_glob_separator.html'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/html/pcre2serialize.html'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/html/pcre2_match.html'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/html/pcre2_general_context_copy.html'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/html/pcre2_jit_compile.html'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/html/pcre2_jit_stack_free.html'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/html/pcre2.html'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/html/pcre2compat.html'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/html/pcre2_set_heap_limit.html'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/html/pcre2_match_data_create_from_pattern.html'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/html/pcre2matching.html'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/html/pcre2_serialize_free.html'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/html/pcre2_set_max_pattern_length.html'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/html/pcre2_jit_stack_create.html'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/html/pcre2_substitute.html'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/html/pcre2_set_compile_recursion_guard.html'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/html/pcre2_serialize_decode.html'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/html/pcre2_compile.html'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/html/pcre2_general_context_free.html'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/html/pcre2_jit_free_unused_memory.html'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/html/pcre2_serialize_get_number_of_codes.html'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/html/pcre2build.html'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/html/pcre2unicode.html'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/html/pcre2_match_context_free.html'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/html/pcre2_match_data_create.html'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/html/pcre2_substring_get_bynumber.html'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/html/pcre2_substring_length_bynumber.html'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/html/pcre2_match_context_create.html'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/html/pcre2_get_error_message.html'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/html/pcre2_set_newline.html'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/html/pcre2grep.html'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/html/pcre2_substring_nametable_scan.html'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/html/pcre2_substring_copy_byname.html'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/html/pcre2_jit_match.html'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/html/pcre2_get_ovector_count.html'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/html/pcre2_substring_list_free.html'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/html/pcre2_get_ovector_pointer.html'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/html/pcre2_convert_context_create.html'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/html/pcre2jit.html'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/html/pcre2_set_bsr.html'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/html/pcre2_set_match_limit.html'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/html/pcre2pattern.html'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/html/README.txt'
+removed directory '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/html'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/pcre2-config.1'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/pcre2_set_character_tables.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/pcre2.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/pcre2_substring_nametable_scan.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/pcre2_substring_length_bynumber.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/pcre2_substring_get_byname.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/pcre2_set_glob_separator.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/pcre2test.txt'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/pcre2_set_bsr.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/pcre2_match_data_create_from_pattern.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/index.html.src'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/pcre2_pattern_convert.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/pcre2_get_ovector_pointer.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/pcre2_substring_copy_byname.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/pcre2_substring_copy_bynumber.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/pcre2grep.txt'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/pcre2_match.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/pcre2_callout_enumerate.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/pcre2_get_startchar.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/pcre2_compile_context_copy.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/pcre2_match_context_free.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/pcre2_jit_compile.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/pcre2sample.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/pcre2_pattern_info.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/pcre2_match_context_copy.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/pcre2syntax.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/pcre2posix.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/pcre2_substring_length_byname.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/pcre2_substitute.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/pcre2_serialize_free.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/pcre2_set_recursion_limit.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/pcre2_maketables.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/pcre2_compile_context_free.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/pcre2_compile.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/pcre2_substring_list_free.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/pcre2_match_data_free.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/pcre2-config.txt'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/pcre2_set_glob_escape.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/pcre2_substring_number_from_name.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/pcre2_set_offset_limit.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/pcre2convert.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/pcre2_get_mark.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/pcre2unicode.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/pcre2_set_heap_limit.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/pcre2_set_max_pattern_length.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/pcre2_config.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/pcre2_substring_list_get.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/pcre2api.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/pcre2_convert_context_create.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/pcre2_set_parens_nest_limit.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/pcre2compat.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/pcre2_general_context_copy.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/pcre2_jit_stack_create.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/pcre2_general_context_free.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/pcre2_converted_pattern_free.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/pcre2_convert_context_free.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/pcre2_substring_get_bynumber.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/pcre2_convert_context_copy.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/pcre2_set_depth_limit.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/pcre2build.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/pcre2partial.3'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/pcre2.txt'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc/pcre2callout.3'
+removed directory '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/doc'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/INSTALL'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/libpcre2-8.la'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/compile'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/libpcre2-posix.pc'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/RunGrepTest.bat'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/Detrail'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/AUTHORS'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/LICENCE'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/config.log'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/pcre2-config.in'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/ar-lib'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/libpcre2-32.pc.in'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/configure'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/missing'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/libpcre2-posix.la'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/config.status'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/cmake/FindPackageHandleStandardArgs.cmake'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/cmake/FindReadline.cmake'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/cmake/COPYING-CMAKE-SCRIPTS'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/cmake/FindEditline.cmake'
+removed directory '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/cmake'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/Makefile.am'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/perltest.sh'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/libpcre2-posix.pc.in'
+removed '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30/libtool'
+removed directory '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30'
+removed directory '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static/pcre2-10.30.build_'
+removed directory '/home/user/mxe/tmp-pcre2-i686-w64-mingw32.static'
+touch '/home/user/mxe/usr/i686-w64-mingw32.static/installed/pcre2'
+make[1]: Leaving directory '/home/user/mxe'
+
+real	4m13.736s
+user	1m19.899s
+sys	2m48.758s

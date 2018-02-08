@@ -1,0 +1,686 @@
+make[1]: Entering directory '/home/user/mxe'
+uname -a
+Linux user-VirtualBox 4.13.0-21-generic #24-Ubuntu SMP Mon Dec 18 17:29:35 UTC 2017 i686 i686 i686 GNU/Linux
+git log --pretty=tformat:"%H - %s [%ar] [%d]" -1
+1b7d2e0562f2ec93848f536d2a9d4cd414356d9e - Update packages.json & build-matrix.html [3 days ago] [ (HEAD -> master, origin/master, origin/HEAD)]
+lsb_release -a 2>/dev/null || sw_vers 2>/dev/null || true
+Distributor ID:	Ubuntu
+Description:	Ubuntu 17.10
+Release:	17.10
+Codename:	artful
+autoconf --version 2>/dev/null | head -1
+autoconf (GNU Autoconf) 2.69
+automake --version 2>/dev/null | head -1
+automake (GNU automake) 1.15
+gcc --version
+gcc (Ubuntu 7.2.0-8ubuntu3) 7.2.0
+Copyright (C) 2017 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+g++ --version
+g++ (Ubuntu 7.2.0-8ubuntu3) 7.2.0
+Copyright (C) 2017 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+python --version
+Python 2.7.14
+perl --version 2>&1 | head -3
+
+This is perl 5, version 26, subversion 0 (v5.26.0) built for i686-linux-gnu-thread-multi-64int
+(with 56 registered patches, see perl -V for more detail)
+rm -rf   '/home/user/mxe/tmp-pkgconf-i686-pc-linux-gnu'
+mkdir -p '/home/user/mxe/tmp-pkgconf-i686-pc-linux-gnu'
+mkdir -p '/home/user/mxe/tmp-pkgconf-i686-pc-linux-gnu/pkgconf-pkgconf-da179fd'
+mkdir -p '/home/user/mxe/tmp-pkgconf-i686-pc-linux-gnu/pkgconf-pkgconf-da179fd.build_'
+# disable wine with readonly directory
+# see https://github.com/mxe/mxe/issues/841
+mkdir -p '/home/user/mxe/tmp-pkgconf-i686-pc-linux-gnu/readonly'
+chmod 0555 '/home/user/mxe/tmp-pkgconf-i686-pc-linux-gnu/readonly'
+cd '/home/user/mxe/tmp-pkgconf-i686-pc-linux-gnu' &&  tar xzf '/home/user/mxe/pkg/pkgconf-da179fd.tar.gz'
+cd '/home/user/mxe/tmp-pkgconf-i686-pc-linux-gnu/pkgconf-pkgconf-da179fd'
+(cd '/home/user/mxe/tmp-pkgconf-i686-pc-linux-gnu/pkgconf-pkgconf-da179fd' && patch -p1 -u) < /home/user/mxe/src/pkgconf-1-fixes.patch
+patching file main.c
+cd '/home/user/mxe/tmp-pkgconf-i686-pc-linux-gnu/pkgconf-pkgconf-da179fd' && ./autogen.sh
+*info* running aclocal
+*info* running autoheader
+*info* running autoconf
+cd '/home/user/mxe/tmp-pkgconf-i686-pc-linux-gnu/pkgconf-pkgconf-da179fd' && ./configure --prefix='/home/user/mxe/usr/i686-pc-linux-gnu'
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking for strlcpy... no
+checking for strlcat... no
+checking for strndup... yes
+checking whether to enable strict mode... (cached) no
+checking how to run the C preprocessor... gcc -E
+checking for gcc... (cached) gcc
+checking whether we are using the GNU C compiler... (cached) yes
+checking whether gcc accepts -g... (cached) yes
+checking for gcc option to accept ISO C89... (cached) none needed
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether ln -s works... yes
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating tests/run.sh
+config.status: creating config.h
+make -C '/home/user/mxe/tmp-pkgconf-i686-pc-linux-gnu/pkgconf-pkgconf-da179fd' -j '1'
+make[2]: Entering directory '/home/user/mxe/tmp-pkgconf-i686-pc-linux-gnu/pkgconf-pkgconf-da179fd'
+gcc -c -g -O2 -DLIBDIR=\"/home/user/mxe/usr/i686-pc-linux-gnu/lib\" -DINCLUDEDIR=\"/home/user/mxe/usr/i686-pc-linux-gnu/include\" -DPKG_DEFAULT_PATH=\"/home/user/mxe/usr/i686-pc-linux-gnu/lib/pkgconfig:/home/user/mxe/usr/i686-pc-linux-gnu/share/pkgconfig\" -DSYSTEM_INCLUDEDIR=\"/home/user/mxe/usr/i686-pc-linux-gnu/include\" -DSYSTEM_LIBDIR=\"/home/user/mxe/usr/i686-pc-linux-gnu/lib\" -Wall -Wextra -Wformat=2 -std=gnu99 -D_FORTIFY_SOURCE=2 -I.  main.c -o main.o
+main.c: In function ‘fragment_has_system_dir’:
+main.c:76:6: warning: this statement may fall through [-Wimplicit-fallthrough=]
+   if ((want_flags & PKG_KEEP_SYSTEM_CFLAGS) == 0 && !strcasecmp(fallback_getenv("PKG_CONFIG_SYSTEM_LIBRARY_PATH", SYSTEM_LIBDIR), frag->data))
+      ^
+main.c:78:2: note: here
+  case 'I':
+  ^~~~
+gcc -c -g -O2 -DLIBDIR=\"/home/user/mxe/usr/i686-pc-linux-gnu/lib\" -DINCLUDEDIR=\"/home/user/mxe/usr/i686-pc-linux-gnu/include\" -DPKG_DEFAULT_PATH=\"/home/user/mxe/usr/i686-pc-linux-gnu/lib/pkgconfig:/home/user/mxe/usr/i686-pc-linux-gnu/share/pkgconfig\" -DSYSTEM_INCLUDEDIR=\"/home/user/mxe/usr/i686-pc-linux-gnu/include\" -DSYSTEM_LIBDIR=\"/home/user/mxe/usr/i686-pc-linux-gnu/lib\" -Wall -Wextra -Wformat=2 -std=gnu99 -D_FORTIFY_SOURCE=2 -I.  cache.c -o cache.o
+gcc -c -g -O2 -DLIBDIR=\"/home/user/mxe/usr/i686-pc-linux-gnu/lib\" -DINCLUDEDIR=\"/home/user/mxe/usr/i686-pc-linux-gnu/include\" -DPKG_DEFAULT_PATH=\"/home/user/mxe/usr/i686-pc-linux-gnu/lib/pkgconfig:/home/user/mxe/usr/i686-pc-linux-gnu/share/pkgconfig\" -DSYSTEM_INCLUDEDIR=\"/home/user/mxe/usr/i686-pc-linux-gnu/include\" -DSYSTEM_LIBDIR=\"/home/user/mxe/usr/i686-pc-linux-gnu/lib\" -Wall -Wextra -Wformat=2 -std=gnu99 -D_FORTIFY_SOURCE=2 -I.  pkg.c -o pkg.o
+gcc -c -g -O2 -DLIBDIR=\"/home/user/mxe/usr/i686-pc-linux-gnu/lib\" -DINCLUDEDIR=\"/home/user/mxe/usr/i686-pc-linux-gnu/include\" -DPKG_DEFAULT_PATH=\"/home/user/mxe/usr/i686-pc-linux-gnu/lib/pkgconfig:/home/user/mxe/usr/i686-pc-linux-gnu/share/pkgconfig\" -DSYSTEM_INCLUDEDIR=\"/home/user/mxe/usr/i686-pc-linux-gnu/include\" -DSYSTEM_LIBDIR=\"/home/user/mxe/usr/i686-pc-linux-gnu/lib\" -Wall -Wextra -Wformat=2 -std=gnu99 -D_FORTIFY_SOURCE=2 -I.  bsdstubs.c -o bsdstubs.o
+gcc -c -g -O2 -DLIBDIR=\"/home/user/mxe/usr/i686-pc-linux-gnu/lib\" -DINCLUDEDIR=\"/home/user/mxe/usr/i686-pc-linux-gnu/include\" -DPKG_DEFAULT_PATH=\"/home/user/mxe/usr/i686-pc-linux-gnu/lib/pkgconfig:/home/user/mxe/usr/i686-pc-linux-gnu/share/pkgconfig\" -DSYSTEM_INCLUDEDIR=\"/home/user/mxe/usr/i686-pc-linux-gnu/include\" -DSYSTEM_LIBDIR=\"/home/user/mxe/usr/i686-pc-linux-gnu/lib\" -Wall -Wextra -Wformat=2 -std=gnu99 -D_FORTIFY_SOURCE=2 -I.  getopt_long.c -o getopt_long.o
+gcc -c -g -O2 -DLIBDIR=\"/home/user/mxe/usr/i686-pc-linux-gnu/lib\" -DINCLUDEDIR=\"/home/user/mxe/usr/i686-pc-linux-gnu/include\" -DPKG_DEFAULT_PATH=\"/home/user/mxe/usr/i686-pc-linux-gnu/lib/pkgconfig:/home/user/mxe/usr/i686-pc-linux-gnu/share/pkgconfig\" -DSYSTEM_INCLUDEDIR=\"/home/user/mxe/usr/i686-pc-linux-gnu/include\" -DSYSTEM_LIBDIR=\"/home/user/mxe/usr/i686-pc-linux-gnu/lib\" -Wall -Wextra -Wformat=2 -std=gnu99 -D_FORTIFY_SOURCE=2 -I.  fragment.c -o fragment.o
+gcc -c -g -O2 -DLIBDIR=\"/home/user/mxe/usr/i686-pc-linux-gnu/lib\" -DINCLUDEDIR=\"/home/user/mxe/usr/i686-pc-linux-gnu/include\" -DPKG_DEFAULT_PATH=\"/home/user/mxe/usr/i686-pc-linux-gnu/lib/pkgconfig:/home/user/mxe/usr/i686-pc-linux-gnu/share/pkgconfig\" -DSYSTEM_INCLUDEDIR=\"/home/user/mxe/usr/i686-pc-linux-gnu/include\" -DSYSTEM_LIBDIR=\"/home/user/mxe/usr/i686-pc-linux-gnu/lib\" -Wall -Wextra -Wformat=2 -std=gnu99 -D_FORTIFY_SOURCE=2 -I.  argvsplit.c -o argvsplit.o
+argvsplit.c: In function ‘pkg_argv_split’:
+argvsplit.c:96:18: warning: this statement may fall through [-Wimplicit-fallthrough=]
+      *dst_iter++ = '\\';
+      ~~~~~~~~~~~~^~~~~~
+argvsplit.c:98:4: note: here
+    default:
+    ^~~~~~~
+gcc -c -g -O2 -DLIBDIR=\"/home/user/mxe/usr/i686-pc-linux-gnu/lib\" -DINCLUDEDIR=\"/home/user/mxe/usr/i686-pc-linux-gnu/include\" -DPKG_DEFAULT_PATH=\"/home/user/mxe/usr/i686-pc-linux-gnu/lib/pkgconfig:/home/user/mxe/usr/i686-pc-linux-gnu/share/pkgconfig\" -DSYSTEM_INCLUDEDIR=\"/home/user/mxe/usr/i686-pc-linux-gnu/include\" -DSYSTEM_LIBDIR=\"/home/user/mxe/usr/i686-pc-linux-gnu/lib\" -Wall -Wextra -Wformat=2 -std=gnu99 -D_FORTIFY_SOURCE=2 -I.  fileio.c -o fileio.o
+gcc -c -g -O2 -DLIBDIR=\"/home/user/mxe/usr/i686-pc-linux-gnu/lib\" -DINCLUDEDIR=\"/home/user/mxe/usr/i686-pc-linux-gnu/include\" -DPKG_DEFAULT_PATH=\"/home/user/mxe/usr/i686-pc-linux-gnu/lib/pkgconfig:/home/user/mxe/usr/i686-pc-linux-gnu/share/pkgconfig\" -DSYSTEM_INCLUDEDIR=\"/home/user/mxe/usr/i686-pc-linux-gnu/include\" -DSYSTEM_LIBDIR=\"/home/user/mxe/usr/i686-pc-linux-gnu/lib\" -Wall -Wextra -Wformat=2 -std=gnu99 -D_FORTIFY_SOURCE=2 -I.  tuple.c -o tuple.o
+gcc -c -g -O2 -DLIBDIR=\"/home/user/mxe/usr/i686-pc-linux-gnu/lib\" -DINCLUDEDIR=\"/home/user/mxe/usr/i686-pc-linux-gnu/include\" -DPKG_DEFAULT_PATH=\"/home/user/mxe/usr/i686-pc-linux-gnu/lib/pkgconfig:/home/user/mxe/usr/i686-pc-linux-gnu/share/pkgconfig\" -DSYSTEM_INCLUDEDIR=\"/home/user/mxe/usr/i686-pc-linux-gnu/include\" -DSYSTEM_LIBDIR=\"/home/user/mxe/usr/i686-pc-linux-gnu/lib\" -Wall -Wextra -Wformat=2 -std=gnu99 -D_FORTIFY_SOURCE=2 -I.  dependency.c -o dependency.o
+gcc -c -g -O2 -DLIBDIR=\"/home/user/mxe/usr/i686-pc-linux-gnu/lib\" -DINCLUDEDIR=\"/home/user/mxe/usr/i686-pc-linux-gnu/include\" -DPKG_DEFAULT_PATH=\"/home/user/mxe/usr/i686-pc-linux-gnu/lib/pkgconfig:/home/user/mxe/usr/i686-pc-linux-gnu/share/pkgconfig\" -DSYSTEM_INCLUDEDIR=\"/home/user/mxe/usr/i686-pc-linux-gnu/include\" -DSYSTEM_LIBDIR=\"/home/user/mxe/usr/i686-pc-linux-gnu/lib\" -Wall -Wextra -Wformat=2 -std=gnu99 -D_FORTIFY_SOURCE=2 -I.  queue.c -o queue.o
+gcc  -o pkgconf main.o cache.o pkg.o bsdstubs.o getopt_long.o fragment.o argvsplit.o fileio.o tuple.o dependency.o queue.o
+make[2]: Leaving directory '/home/user/mxe/tmp-pkgconf-i686-pc-linux-gnu/pkgconf-pkgconf-da179fd'
+make -C '/home/user/mxe/tmp-pkgconf-i686-pc-linux-gnu/pkgconf-pkgconf-da179fd' -j 1 install
+make[2]: Entering directory '/home/user/mxe/tmp-pkgconf-i686-pc-linux-gnu/pkgconf-pkgconf-da179fd'
+mkdir -p /home/user/mxe/usr/i686-pc-linux-gnu/bin
+install -c -m755 pkgconf /home/user/mxe/usr/i686-pc-linux-gnu/bin/pkgconf
+mkdir -p /home/user/mxe/usr/i686-pc-linux-gnu/share/aclocal
+install -c -m644 ./pkg.m4 /home/user/mxe/usr/i686-pc-linux-gnu/share/aclocal/pkg.m4
+make[2]: Leaving directory '/home/user/mxe/tmp-pkgconf-i686-pc-linux-gnu/pkgconf-pkgconf-da179fd'
+
+/home/user/mxe/tmp-pkgconf-i686-pc-linux-gnu/pkgconf-pkgconf-da179fd/config.log
+This file contains any messages produced by compilers while
+running configure, to aid debugging if configure makes a mistake.
+
+It was created by pkgconf configure 0.9.2, which was
+generated by GNU Autoconf 2.69.  Invocation command line was
+
+  $ ./configure --prefix=/home/user/mxe/usr/i686-pc-linux-gnu
+
+## --------- ##
+## Platform. ##
+## --------- ##
+
+hostname = user-VirtualBox
+uname -m = i686
+uname -r = 4.13.0-21-generic
+uname -s = Linux
+uname -v = #24-Ubuntu SMP Mon Dec 18 17:29:35 UTC 2017
+
+/usr/bin/uname -p = unknown
+/bin/uname -X     = unknown
+
+/bin/arch              = unknown
+/usr/bin/arch -k       = unknown
+/usr/convex/getsysinfo = unknown
+/usr/bin/hostinfo      = unknown
+/bin/machine           = unknown
+/usr/bin/oslevel       = unknown
+/bin/universe          = unknown
+
+PATH: /home/user/mxe/usr/i686-pc-linux-gnu/bin
+PATH: /home/user/mxe/usr/bin
+PATH: /home/user/mxe/usr/i686-pc-linux-gnu/bin
+PATH: /home/user/mxe/usr/bin
+PATH: /usr/local/sbin
+PATH: /usr/local/bin
+PATH: /usr/sbin
+PATH: /usr/bin
+PATH: /sbin
+PATH: /bin
+PATH: /usr/games
+PATH: /usr/local/games
+PATH: /snap/bin
+
+
+## ----------- ##
+## Core tests. ##
+## ----------- ##
+
+configure:1975: checking for gcc
+configure:1991: found /usr/bin/gcc
+configure:2002: result: gcc
+configure:2231: checking for C compiler version
+configure:2240: gcc --version >&5
+gcc (Ubuntu 7.2.0-8ubuntu3) 7.2.0
+Copyright (C) 2017 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+configure:2251: $? = 0
+configure:2240: gcc -v >&5
+Using built-in specs.
+COLLECT_GCC=gcc
+COLLECT_LTO_WRAPPER=/usr/lib/gcc/i686-linux-gnu/7/lto-wrapper
+Target: i686-linux-gnu
+Configured with: ../src/configure -v --with-pkgversion='Ubuntu 7.2.0-8ubuntu3' --with-bugurl=file:///usr/share/doc/gcc-7/README.Bugs --enable-languages=c,ada,c++,go,brig,d,fortran,objc,obj-c++ --prefix=/usr --with-gcc-major-version-only --program-suffix=-7 --program-prefix=i686-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --with-sysroot=/ --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-libmpx --enable-plugin --enable-default-pie --with-system-zlib --with-target-system-zlib --enable-objc-gc=auto --enable-targets=all --enable-multiarch --disable-werror --with-arch-32=i686 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-checking=release --build=i686-linux-gnu --host=i686-linux-gnu --target=i686-linux-gnu
+Thread model: posix
+gcc version 7.2.0 (Ubuntu 7.2.0-8ubuntu3) 
+configure:2251: $? = 0
+configure:2240: gcc -V >&5
+gcc: error: unrecognized command line option '-V'
+gcc: fatal error: no input files
+compilation terminated.
+configure:2251: $? = 1
+configure:2240: gcc -qversion >&5
+gcc: error: unrecognized command line option '-qversion'; did you mean '--version'?
+gcc: fatal error: no input files
+compilation terminated.
+configure:2251: $? = 1
+configure:2271: checking whether the C compiler works
+configure:2293: gcc    conftest.c  >&5
+configure:2297: $? = 0
+configure:2345: result: yes
+configure:2348: checking for C compiler default output file name
+configure:2350: result: a.out
+configure:2356: checking for suffix of executables
+configure:2363: gcc -o conftest    conftest.c  >&5
+configure:2367: $? = 0
+configure:2389: result: 
+configure:2411: checking whether we are cross compiling
+configure:2419: gcc -o conftest    conftest.c  >&5
+configure:2423: $? = 0
+configure:2430: ./conftest
+configure:2434: $? = 0
+configure:2449: result: no
+configure:2454: checking for suffix of object files
+configure:2476: gcc -c   conftest.c >&5
+configure:2480: $? = 0
+configure:2501: result: o
+configure:2505: checking whether we are using the GNU C compiler
+configure:2524: gcc -c   conftest.c >&5
+configure:2524: $? = 0
+configure:2533: result: yes
+configure:2542: checking whether gcc accepts -g
+configure:2562: gcc -c -g  conftest.c >&5
+configure:2562: $? = 0
+configure:2603: result: yes
+configure:2620: checking for gcc option to accept ISO C89
+configure:2683: gcc  -c -g -O2  conftest.c >&5
+configure:2683: $? = 0
+configure:2696: result: none needed
+configure:2720: checking for strlcpy
+configure:2720: gcc -o conftest -g -O2   conftest.c  >&5
+/tmp/ccn6j2rK.o: In function `main':
+/home/user/mxe/tmp-pkgconf-i686-pc-linux-gnu/pkgconf-pkgconf-da179fd/conftest.c:43: undefined reference to `strlcpy'
+collect2: error: ld returned 1 exit status
+configure:2720: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "pkgconf"
+| #define PACKAGE_TARNAME "pkgconf"
+| #define PACKAGE_VERSION "0.9.2"
+| #define PACKAGE_STRING "pkgconf 0.9.2"
+| #define PACKAGE_BUGREPORT "http://github.com/pkgconf/pkgconf/issues"
+| #define PACKAGE_URL ""
+| /* end confdefs.h.  */
+| /* Define strlcpy to an innocuous variant, in case <limits.h> declares strlcpy.
+|    For example, HP-UX 11i <limits.h> declares gettimeofday.  */
+| #define strlcpy innocuous_strlcpy
+| 
+| /* System header to define __stub macros and hopefully few prototypes,
+|     which can conflict with char strlcpy (); below.
+|     Prefer <limits.h> to <assert.h> if __STDC__ is defined, since
+|     <limits.h> exists even on freestanding compilers.  */
+| 
+| #ifdef __STDC__
+| # include <limits.h>
+| #else
+| # include <assert.h>
+| #endif
+| 
+| #undef strlcpy
+| 
+| /* Override any GCC internal prototype to avoid an error.
+|    Use char because int might match the return type of a GCC
+|    builtin and then its argument prototype would still apply.  */
+| #ifdef __cplusplus
+| extern "C"
+| #endif
+| char strlcpy ();
+| /* The GNU C library defines this for functions which it implements
+|     to always fail with ENOSYS.  Some functions are actually named
+|     something starting with __ and the normal name is an alias.  */
+| #if defined __stub_strlcpy || defined __stub___strlcpy
+| choke me
+| #endif
+| 
+| int
+| main ()
+| {
+| return strlcpy ();
+|   ;
+|   return 0;
+| }
+configure:2720: result: no
+configure:2720: checking for strlcat
+configure:2720: gcc -o conftest -g -O2   conftest.c  >&5
+/tmp/ccfHLnQ6.o: In function `main':
+/home/user/mxe/tmp-pkgconf-i686-pc-linux-gnu/pkgconf-pkgconf-da179fd/conftest.c:43: undefined reference to `strlcat'
+collect2: error: ld returned 1 exit status
+configure:2720: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "pkgconf"
+| #define PACKAGE_TARNAME "pkgconf"
+| #define PACKAGE_VERSION "0.9.2"
+| #define PACKAGE_STRING "pkgconf 0.9.2"
+| #define PACKAGE_BUGREPORT "http://github.com/pkgconf/pkgconf/issues"
+| #define PACKAGE_URL ""
+| /* end confdefs.h.  */
+| /* Define strlcat to an innocuous variant, in case <limits.h> declares strlcat.
+|    For example, HP-UX 11i <limits.h> declares gettimeofday.  */
+| #define strlcat innocuous_strlcat
+| 
+| /* System header to define __stub macros and hopefully few prototypes,
+|     which can conflict with char strlcat (); below.
+|     Prefer <limits.h> to <assert.h> if __STDC__ is defined, since
+|     <limits.h> exists even on freestanding compilers.  */
+| 
+| #ifdef __STDC__
+| # include <limits.h>
+| #else
+| # include <assert.h>
+| #endif
+| 
+| #undef strlcat
+| 
+| /* Override any GCC internal prototype to avoid an error.
+|    Use char because int might match the return type of a GCC
+|    builtin and then its argument prototype would still apply.  */
+| #ifdef __cplusplus
+| extern "C"
+| #endif
+| char strlcat ();
+| /* The GNU C library defines this for functions which it implements
+|     to always fail with ENOSYS.  Some functions are actually named
+|     something starting with __ and the normal name is an alias.  */
+| #if defined __stub_strlcat || defined __stub___strlcat
+| choke me
+| #endif
+| 
+| int
+| main ()
+| {
+| return strlcat ();
+|   ;
+|   return 0;
+| }
+configure:2720: result: no
+configure:2720: checking for strndup
+configure:2720: gcc -o conftest -g -O2   conftest.c  >&5
+conftest.c:32:6: warning: conflicting types for built-in function 'strndup' [-Wbuiltin-declaration-mismatch]
+ char strndup ();
+      ^~~~~~~
+configure:2720: $? = 0
+configure:2720: result: yes
+configure:2738: checking whether to enable strict mode
+configure:2745: result: no
+configure:2800: checking how to run the C preprocessor
+configure:2831: gcc -E  conftest.c
+configure:2831: $? = 0
+configure:2845: gcc -E  conftest.c
+conftest.c:11:10: fatal error: ac_nonexistent.h: No such file or directory
+ #include <ac_nonexistent.h>
+          ^~~~~~~~~~~~~~~~~~
+compilation terminated.
+configure:2845: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "pkgconf"
+| #define PACKAGE_TARNAME "pkgconf"
+| #define PACKAGE_VERSION "0.9.2"
+| #define PACKAGE_STRING "pkgconf 0.9.2"
+| #define PACKAGE_BUGREPORT "http://github.com/pkgconf/pkgconf/issues"
+| #define PACKAGE_URL ""
+| #define HAVE_STRNDUP 1
+| #define HAVE_STRICT_MODE 0
+| /* end confdefs.h.  */
+| #include <ac_nonexistent.h>
+configure:2870: result: gcc -E
+configure:2890: gcc -E  conftest.c
+configure:2890: $? = 0
+configure:2904: gcc -E  conftest.c
+conftest.c:11:10: fatal error: ac_nonexistent.h: No such file or directory
+ #include <ac_nonexistent.h>
+          ^~~~~~~~~~~~~~~~~~
+compilation terminated.
+configure:2904: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "pkgconf"
+| #define PACKAGE_TARNAME "pkgconf"
+| #define PACKAGE_VERSION "0.9.2"
+| #define PACKAGE_STRING "pkgconf 0.9.2"
+| #define PACKAGE_BUGREPORT "http://github.com/pkgconf/pkgconf/issues"
+| #define PACKAGE_URL ""
+| #define HAVE_STRNDUP 1
+| #define HAVE_STRICT_MODE 0
+| /* end confdefs.h.  */
+| #include <ac_nonexistent.h>
+configure:2980: checking for gcc
+configure:3007: result: gcc
+configure:3236: checking for C compiler version
+configure:3245: gcc --version >&5
+gcc (Ubuntu 7.2.0-8ubuntu3) 7.2.0
+Copyright (C) 2017 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+configure:3256: $? = 0
+configure:3245: gcc -v >&5
+Using built-in specs.
+COLLECT_GCC=gcc
+COLLECT_LTO_WRAPPER=/usr/lib/gcc/i686-linux-gnu/7/lto-wrapper
+Target: i686-linux-gnu
+Configured with: ../src/configure -v --with-pkgversion='Ubuntu 7.2.0-8ubuntu3' --with-bugurl=file:///usr/share/doc/gcc-7/README.Bugs --enable-languages=c,ada,c++,go,brig,d,fortran,objc,obj-c++ --prefix=/usr --with-gcc-major-version-only --program-suffix=-7 --program-prefix=i686-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --with-sysroot=/ --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-libmpx --enable-plugin --enable-default-pie --with-system-zlib --with-target-system-zlib --enable-objc-gc=auto --enable-targets=all --enable-multiarch --disable-werror --with-arch-32=i686 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-checking=release --build=i686-linux-gnu --host=i686-linux-gnu --target=i686-linux-gnu
+Thread model: posix
+gcc version 7.2.0 (Ubuntu 7.2.0-8ubuntu3) 
+configure:3256: $? = 0
+configure:3245: gcc -V >&5
+gcc: error: unrecognized command line option '-V'
+gcc: fatal error: no input files
+compilation terminated.
+configure:3256: $? = 1
+configure:3245: gcc -qversion >&5
+gcc: error: unrecognized command line option '-qversion'; did you mean '--version'?
+gcc: fatal error: no input files
+compilation terminated.
+configure:3256: $? = 1
+configure:3260: checking whether we are using the GNU C compiler
+configure:3288: result: yes
+configure:3297: checking whether gcc accepts -g
+configure:3358: result: yes
+configure:3375: checking for gcc option to accept ISO C89
+configure:3451: result: none needed
+configure:3514: checking for a BSD-compatible install
+configure:3582: result: /usr/bin/install -c
+configure:3593: checking whether ln -s works
+configure:3597: result: yes
+configure:3721: creating ./config.status
+
+## ---------------------- ##
+## Running config.status. ##
+## ---------------------- ##
+
+This file was extended by pkgconf config.status 0.9.2, which was
+generated by GNU Autoconf 2.69.  Invocation command line was
+
+  CONFIG_FILES    = 
+  CONFIG_HEADERS  = 
+  CONFIG_LINKS    = 
+  CONFIG_COMMANDS = 
+  $ ./config.status 
+
+on user-VirtualBox
+
+config.status:798: creating Makefile
+config.status:798: creating tests/run.sh
+config.status:798: creating config.h
+
+## ---------------- ##
+## Cache variables. ##
+## ---------------- ##
+
+ac_cv_c_compiler_gnu=yes
+ac_cv_env_CC_set=
+ac_cv_env_CC_value=
+ac_cv_env_CFLAGS_set=
+ac_cv_env_CFLAGS_value=
+ac_cv_env_CPPFLAGS_set=
+ac_cv_env_CPPFLAGS_value=
+ac_cv_env_CPP_set=
+ac_cv_env_CPP_value=
+ac_cv_env_LDFLAGS_set=
+ac_cv_env_LDFLAGS_value=
+ac_cv_env_LIBS_set=
+ac_cv_env_LIBS_value=
+ac_cv_env_build_alias_set=
+ac_cv_env_build_alias_value=
+ac_cv_env_host_alias_set=
+ac_cv_env_host_alias_value=
+ac_cv_env_target_alias_set=
+ac_cv_env_target_alias_value=
+ac_cv_func_strlcat=no
+ac_cv_func_strlcpy=no
+ac_cv_func_strndup=yes
+ac_cv_objext=o
+ac_cv_path_install='/usr/bin/install -c'
+ac_cv_prog_CPP='gcc -E'
+ac_cv_prog_ac_ct_CC=gcc
+ac_cv_prog_cc_c89=
+ac_cv_prog_cc_g=yes
+ac_cv_use_strict=no
+
+## ----------------- ##
+## Output variables. ##
+## ----------------- ##
+
+CC='gcc'
+CFLAGS='-g -O2'
+CPP='gcc -E'
+CPPFLAGS=''
+DEFS='-DHAVE_CONFIG_H'
+ECHO_C=''
+ECHO_N='-n'
+ECHO_T=''
+EXEEXT=''
+INSTALL_DATA='${INSTALL} -m 644'
+INSTALL_PROGRAM='${INSTALL}'
+INSTALL_SCRIPT='${INSTALL}'
+LDFLAGS=''
+LIBOBJS=''
+LIBS=''
+LN_S='ln -s'
+LTLIBOBJS=''
+OBJEXT='o'
+PACKAGE_BUGREPORT='http://github.com/pkgconf/pkgconf/issues'
+PACKAGE_NAME='pkgconf'
+PACKAGE_STRING='pkgconf 0.9.2'
+PACKAGE_TARNAME='pkgconf'
+PACKAGE_URL=''
+PACKAGE_VERSION='0.9.2'
+PATH_SEPARATOR=':'
+PKGCONFIGDIR='${exec_prefix}/lib/pkgconfig:${datarootdir}/pkgconfig'
+SHELL='/bin/bash'
+STRICT_MODE='no'
+SYSTEM_INCLUDEDIR='${prefix}/include'
+SYSTEM_LIBDIR='${exec_prefix}/lib'
+ac_ct_CC='gcc'
+bindir='${exec_prefix}/bin'
+build_alias=''
+datadir='${datarootdir}'
+datarootdir='${prefix}/share'
+docdir='${datarootdir}/doc/${PACKAGE_TARNAME}'
+dvidir='${docdir}'
+exec_prefix='${prefix}'
+host_alias=''
+htmldir='${docdir}'
+includedir='${prefix}/include'
+infodir='${datarootdir}/info'
+libdir='${exec_prefix}/lib'
+libexecdir='${exec_prefix}/libexec'
+localedir='${datarootdir}/locale'
+localstatedir='${prefix}/var'
+mandir='${datarootdir}/man'
+oldincludedir='/usr/include'
+pdfdir='${docdir}'
+prefix='/home/user/mxe/usr/i686-pc-linux-gnu'
+program_transform_name='s,x,x,'
+psdir='${docdir}'
+runstatedir='${localstatedir}/run'
+sbindir='${exec_prefix}/sbin'
+sharedstatedir='${prefix}/com'
+sysconfdir='${prefix}/etc'
+target_alias=''
+
+## ----------- ##
+## confdefs.h. ##
+## ----------- ##
+
+/* confdefs.h */
+#define PACKAGE_NAME "pkgconf"
+#define PACKAGE_TARNAME "pkgconf"
+#define PACKAGE_VERSION "0.9.2"
+#define PACKAGE_STRING "pkgconf 0.9.2"
+#define PACKAGE_BUGREPORT "http://github.com/pkgconf/pkgconf/issues"
+#define PACKAGE_URL ""
+#define HAVE_STRNDUP 1
+#define HAVE_STRICT_MODE 0
+
+configure: exit 0
+
+settings.mk
+# This is a template of configuration file for MXE. See
+# docs/index.html for more extensive documentations.
+
+# This variable controls the number of compilation processes
+# within one package ("intra-package parallelism").
+#JOBS := 
+
+# This variable controls where intermediate files are created
+# this is necessary when compiling inside a virtualbox shared
+# directory. Some commands like strip fail in there with Protocol error
+# default is the current directory
+#MXE_TMP := /tmp
+
+# This variable controls the targets that will build.
+#MXE_TARGETS := i686-w64-mingw32.static i686-w64-mingw32.shared x86_64-w64-mingw32.static x86_64-w64-mingw32.shared
+
+# This variable controls which plugins are in use.
+# See plugins/README.md for further information.
+#override MXE_PLUGIN_DIRS += plugins/apps plugins/native
+
+# This variable controls the download mirror for SourceForge,
+# when it is used. Enabling the value below means auto.
+#SOURCEFORGE_MIRROR := downloads.sourceforge.net
+
+# The three lines below makes `make` build these "local
+# packages" instead of all packages.
+#LOCAL_PKG_LIST := boost curl file flac lzo pthreads vorbis wxwidgets
+#.DEFAULT_GOAL  := local-pkg-list
+#local-pkg-list: $(LOCAL_PKG_LIST)
+i686-pc-linux-gnu-strip '/home/user/mxe/usr/i686-pc-linux-gnu/bin/test-pkgconf.exe'
+bash: i686-pc-linux-gnu-strip: command not found
+Makefile:786: recipe for target 'build-only-pkgconf_i686-pc-linux-gnu' failed
+make[1]: [build-only-pkgconf_i686-pc-linux-gnu] Error 127 (ignored)
+(du -k -d 0 '/home/user/mxe/tmp-pkgconf-i686-pc-linux-gnu' 2>/dev/null || du -k --max-depth 0 '/home/user/mxe/tmp-pkgconf-i686-pc-linux-gnu') | sed -n 's/^\(\S*\).*/du: \1 KiB/p'
+du: 1336 KiB
+rm -rfv  '/home/user/mxe/tmp-pkgconf-i686-pc-linux-gnu'
+removed directory '/home/user/mxe/tmp-pkgconf-i686-pc-linux-gnu/pkgconf-pkgconf-da179fd.build_'
+removed directory '/home/user/mxe/tmp-pkgconf-i686-pc-linux-gnu/readonly'
+removed '/home/user/mxe/tmp-pkgconf-i686-pc-linux-gnu/pkgconf-pkgconf-da179fd/pkg.o'
+removed '/home/user/mxe/tmp-pkgconf-i686-pc-linux-gnu/pkgconf-pkgconf-da179fd/getopt_long.h'
+removed '/home/user/mxe/tmp-pkgconf-i686-pc-linux-gnu/pkgconf-pkgconf-da179fd/configure.ac'
+removed '/home/user/mxe/tmp-pkgconf-i686-pc-linux-gnu/pkgconf-pkgconf-da179fd/cache.c'
+removed '/home/user/mxe/tmp-pkgconf-i686-pc-linux-gnu/pkgconf-pkgconf-da179fd/bsdstubs.o'
+removed '/home/user/mxe/tmp-pkgconf-i686-pc-linux-gnu/pkgconf-pkgconf-da179fd/COPYING'
+removed '/home/user/mxe/tmp-pkgconf-i686-pc-linux-gnu/pkgconf-pkgconf-da179fd/config.sub'
+removed '/home/user/mxe/tmp-pkgconf-i686-pc-linux-gnu/pkgconf-pkgconf-da179fd/Makefile.in'
+removed '/home/user/mxe/tmp-pkgconf-i686-pc-linux-gnu/pkgconf-pkgconf-da179fd/fragment.c'
+removed '/home/user/mxe/tmp-pkgconf-i686-pc-linux-gnu/pkgconf-pkgconf-da179fd/fragment.o'
+removed '/home/user/mxe/tmp-pkgconf-i686-pc-linux-gnu/pkgconf-pkgconf-da179fd/config.h'
+removed '/home/user/mxe/tmp-pkgconf-i686-pc-linux-gnu/pkgconf-pkgconf-da179fd/queue.o'
+removed '/home/user/mxe/tmp-pkgconf-i686-pc-linux-gnu/pkgconf-pkgconf-da179fd/tuple.o'
+removed '/home/user/mxe/tmp-pkgconf-i686-pc-linux-gnu/pkgconf-pkgconf-da179fd/config.h.in'
+removed '/home/user/mxe/tmp-pkgconf-i686-pc-linux-gnu/pkgconf-pkgconf-da179fd/getopt_long.o'
+removed '/home/user/mxe/tmp-pkgconf-i686-pc-linux-gnu/pkgconf-pkgconf-da179fd/argvsplit.o'
+removed '/home/user/mxe/tmp-pkgconf-i686-pc-linux-gnu/pkgconf-pkgconf-da179fd/scripts/makerelease.sh'
+removed directory '/home/user/mxe/tmp-pkgconf-i686-pc-linux-gnu/pkgconf-pkgconf-da179fd/scripts'
+removed '/home/user/mxe/tmp-pkgconf-i686-pc-linux-gnu/pkgconf-pkgconf-da179fd/install-sh'
+removed '/home/user/mxe/tmp-pkgconf-i686-pc-linux-gnu/pkgconf-pkgconf-da179fd/getopt_long.c'
+removed '/home/user/mxe/tmp-pkgconf-i686-pc-linux-gnu/pkgconf-pkgconf-da179fd/.gitattributes'
+removed '/home/user/mxe/tmp-pkgconf-i686-pc-linux-gnu/pkgconf-pkgconf-da179fd/Makefile'
+removed '/home/user/mxe/tmp-pkgconf-i686-pc-linux-gnu/pkgconf-pkgconf-da179fd/autom4te.cache/requests'
+removed '/home/user/mxe/tmp-pkgconf-i686-pc-linux-gnu/pkgconf-pkgconf-da179fd/autom4te.cache/output.1'
+removed '/home/user/mxe/tmp-pkgconf-i686-pc-linux-gnu/pkgconf-pkgconf-da179fd/autom4te.cache/traces.0'
+removed '/home/user/mxe/tmp-pkgconf-i686-pc-linux-gnu/pkgconf-pkgconf-da179fd/autom4te.cache/traces.1'
+removed '/home/user/mxe/tmp-pkgconf-i686-pc-linux-gnu/pkgconf-pkgconf-da179fd/autom4te.cache/output.0'
+removed directory '/home/user/mxe/tmp-pkgconf-i686-pc-linux-gnu/pkgconf-pkgconf-da179fd/autom4te.cache'
+removed '/home/user/mxe/tmp-pkgconf-i686-pc-linux-gnu/pkgconf-pkgconf-da179fd/bsdstubs.h'
+removed '/home/user/mxe/tmp-pkgconf-i686-pc-linux-gnu/pkgconf-pkgconf-da179fd/queue.c'
+removed '/home/user/mxe/tmp-pkgconf-i686-pc-linux-gnu/pkgconf-pkgconf-da179fd/config.guess'
+removed '/home/user/mxe/tmp-pkgconf-i686-pc-linux-gnu/pkgconf-pkgconf-da179fd/README.md'
+removed '/home/user/mxe/tmp-pkgconf-i686-pc-linux-gnu/pkgconf-pkgconf-da179fd/dependency.o'
+removed '/home/user/mxe/tmp-pkgconf-i686-pc-linux-gnu/pkgconf-pkgconf-da179fd/tuple.c'
+removed '/home/user/mxe/tmp-pkgconf-i686-pc-linux-gnu/pkgconf-pkgconf-da179fd/argvsplit.c'
+removed '/home/user/mxe/tmp-pkgconf-i686-pc-linux-gnu/pkgconf-pkgconf-da179fd/main.o'
+removed '/home/user/mxe/tmp-pkgconf-i686-pc-linux-gnu/pkgconf-pkgconf-da179fd/fileio.o'
+removed '/home/user/mxe/tmp-pkgconf-i686-pc-linux-gnu/pkgconf-pkgconf-da179fd/dependency.c'
+removed '/home/user/mxe/tmp-pkgconf-i686-pc-linux-gnu/pkgconf-pkgconf-da179fd/fileio.c'
+removed '/home/user/mxe/tmp-pkgconf-i686-pc-linux-gnu/pkgconf-pkgconf-da179fd/pkg.h'
+removed '/home/user/mxe/tmp-pkgconf-i686-pc-linux-gnu/pkgconf-pkgconf-da179fd/pkg.c'
+removed '/home/user/mxe/tmp-pkgconf-i686-pc-linux-gnu/pkgconf-pkgconf-da179fd/autogen.sh'
+removed '/home/user/mxe/tmp-pkgconf-i686-pc-linux-gnu/pkgconf-pkgconf-da179fd/AUTHORS'
+removed '/home/user/mxe/tmp-pkgconf-i686-pc-linux-gnu/pkgconf-pkgconf-da179fd/pkg.m4'
+removed '/home/user/mxe/tmp-pkgconf-i686-pc-linux-gnu/pkgconf-pkgconf-da179fd/bsdstubs.c'
+removed '/home/user/mxe/tmp-pkgconf-i686-pc-linux-gnu/pkgconf-pkgconf-da179fd/config.log'
+removed '/home/user/mxe/tmp-pkgconf-i686-pc-linux-gnu/pkgconf-pkgconf-da179fd/.gitignore'
+removed '/home/user/mxe/tmp-pkgconf-i686-pc-linux-gnu/pkgconf-pkgconf-da179fd/cache.o'
+removed '/home/user/mxe/tmp-pkgconf-i686-pc-linux-gnu/pkgconf-pkgconf-da179fd/configure'
+removed '/home/user/mxe/tmp-pkgconf-i686-pc-linux-gnu/pkgconf-pkgconf-da179fd/main.c'
+removed '/home/user/mxe/tmp-pkgconf-i686-pc-linux-gnu/pkgconf-pkgconf-da179fd/config.status'
+removed '/home/user/mxe/tmp-pkgconf-i686-pc-linux-gnu/pkgconf-pkgconf-da179fd/pkgconf'
+removed '/home/user/mxe/tmp-pkgconf-i686-pc-linux-gnu/pkgconf-pkgconf-da179fd/tests/run.sh'
+removed '/home/user/mxe/tmp-pkgconf-i686-pc-linux-gnu/pkgconf-pkgconf-da179fd/tests/lib3/bar.pc'
+removed directory '/home/user/mxe/tmp-pkgconf-i686-pc-linux-gnu/pkgconf-pkgconf-da179fd/tests/lib3'
+removed '/home/user/mxe/tmp-pkgconf-i686-pc-linux-gnu/pkgconf-pkgconf-da179fd/tests/lib1/framework-2.pc'
+removed '/home/user/mxe/tmp-pkgconf-i686-pc-linux-gnu/pkgconf-pkgconf-da179fd/tests/lib1/quotes.pc'
+removed '/home/user/mxe/tmp-pkgconf-i686-pc-linux-gnu/pkgconf-pkgconf-da179fd/tests/lib1/missing-require.pc'
+removed '/home/user/mxe/tmp-pkgconf-i686-pc-linux-gnu/pkgconf-pkgconf-da179fd/tests/lib1/argv-parse.pc'
+removed '/home/user/mxe/tmp-pkgconf-i686-pc-linux-gnu/pkgconf-pkgconf-da179fd/tests/lib1/incomplete.pc'
+removed '/home/user/mxe/tmp-pkgconf-i686-pc-linux-gnu/pkgconf-pkgconf-da179fd/tests/lib1/tilde-quoting.pc'
+removed '/home/user/mxe/tmp-pkgconf-i686-pc-linux-gnu/pkgconf-pkgconf-da179fd/tests/lib1/circular-2.pc'
+removed '/home/user/mxe/tmp-pkgconf-i686-pc-linux-gnu/pkgconf-pkgconf-da179fd/tests/lib1/cflags-libs-only.pc'
+removed '/home/user/mxe/tmp-pkgconf-i686-pc-linux-gnu/pkgconf-pkgconf-da179fd/tests/lib1/omg-uninstalled.pc'
+removed '/home/user/mxe/tmp-pkgconf-i686-pc-linux-gnu/pkgconf-pkgconf-da179fd/tests/lib1/tilde.pc'
+removed '/home/user/mxe/tmp-pkgconf-i686-pc-linux-gnu/pkgconf-pkgconf-da179fd/tests/lib1/argv-parse-3.pc'
+removed '/home/user/mxe/tmp-pkgconf-i686-pc-linux-gnu/pkgconf-pkgconf-da179fd/tests/lib1/circular-3.pc'
+removed '/home/user/mxe/tmp-pkgconf-i686-pc-linux-gnu/pkgconf-pkgconf-da179fd/tests/lib1/baz.pc'
+removed '/home/user/mxe/tmp-pkgconf-i686-pc-linux-gnu/pkgconf-pkgconf-da179fd/tests/lib1/foo.pc'
+removed '/home/user/mxe/tmp-pkgconf-i686-pc-linux-gnu/pkgconf-pkgconf-da179fd/tests/lib1/static-archive-libs.pc'
+removed '/home/user/mxe/tmp-pkgconf-i686-pc-linux-gnu/pkgconf-pkgconf-da179fd/tests/lib1/nocflag.pc'
+removed '/home/user/mxe/tmp-pkgconf-i686-pc-linux-gnu/pkgconf-pkgconf-da179fd/tests/lib1/bar.pc'
+removed '/home/user/mxe/tmp-pkgconf-i686-pc-linux-gnu/pkgconf-pkgconf-da179fd/tests/lib1/dos-lineendings.pc'
+removed '/home/user/mxe/tmp-pkgconf-i686-pc-linux-gnu/pkgconf-pkgconf-da179fd/tests/lib1/nolib.pc'
+removed '/home/user/mxe/tmp-pkgconf-i686-pc-linux-gnu/pkgconf-pkgconf-da179fd/tests/lib1/argv-parse-2.pc'
+removed '/home/user/mxe/tmp-pkgconf-i686-pc-linux-gnu/pkgconf-pkgconf-da179fd/tests/lib1/intermediary-2.pc'
+removed '/home/user/mxe/tmp-pkgconf-i686-pc-linux-gnu/pkgconf-pkgconf-da179fd/tests/lib1/intermediary-1.pc'
+removed '/home/user/mxe/tmp-pkgconf-i686-pc-linux-gnu/pkgconf-pkgconf-da179fd/tests/lib1/conflicts.pc'
+removed '/home/user/mxe/tmp-pkgconf-i686-pc-linux-gnu/pkgconf-pkgconf-da179fd/tests/lib1/circular-1.pc'
+removed '/home/user/mxe/tmp-pkgconf-i686-pc-linux-gnu/pkgconf-pkgconf-da179fd/tests/lib1/framework-1.pc'
+removed directory '/home/user/mxe/tmp-pkgconf-i686-pc-linux-gnu/pkgconf-pkgconf-da179fd/tests/lib1'
+removed '/home/user/mxe/tmp-pkgconf-i686-pc-linux-gnu/pkgconf-pkgconf-da179fd/tests/lib2/foo.pc'
+removed directory '/home/user/mxe/tmp-pkgconf-i686-pc-linux-gnu/pkgconf-pkgconf-da179fd/tests/lib2'
+removed '/home/user/mxe/tmp-pkgconf-i686-pc-linux-gnu/pkgconf-pkgconf-da179fd/tests/run.sh.in'
+removed directory '/home/user/mxe/tmp-pkgconf-i686-pc-linux-gnu/pkgconf-pkgconf-da179fd/tests'
+removed '/home/user/mxe/tmp-pkgconf-i686-pc-linux-gnu/pkgconf-pkgconf-da179fd/stdinc.h'
+removed '/home/user/mxe/tmp-pkgconf-i686-pc-linux-gnu/pkgconf-pkgconf-da179fd/iter.h'
+removed directory '/home/user/mxe/tmp-pkgconf-i686-pc-linux-gnu/pkgconf-pkgconf-da179fd'
+removed directory '/home/user/mxe/tmp-pkgconf-i686-pc-linux-gnu'
+touch '/home/user/mxe/usr/i686-pc-linux-gnu/installed/pkgconf'
+make[1]: Leaving directory '/home/user/mxe'
+
+real	1m1.074s
+user	0m17.343s
+sys	0m35.385s

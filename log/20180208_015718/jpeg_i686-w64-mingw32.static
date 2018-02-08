@@ -1,0 +1,1454 @@
+make[1]: Entering directory '/home/user/mxe'
+uname -a
+Linux user-VirtualBox 4.13.0-21-generic #24-Ubuntu SMP Mon Dec 18 17:29:35 UTC 2017 i686 i686 i686 GNU/Linux
+git log --pretty=tformat:"%H - %s [%ar] [%d]" -1
+1b7d2e0562f2ec93848f536d2a9d4cd414356d9e - Update packages.json & build-matrix.html [4 days ago] [ (HEAD -> master, origin/master, origin/HEAD)]
+lsb_release -a 2>/dev/null || sw_vers 2>/dev/null || true
+Distributor ID:	Ubuntu
+Description:	Ubuntu 17.10
+Release:	17.10
+Codename:	artful
+autoconf --version 2>/dev/null | head -1
+autoconf (GNU Autoconf) 2.69
+automake --version 2>/dev/null | head -1
+automake (GNU automake) 1.15
+gcc --version
+gcc (Ubuntu 7.2.0-8ubuntu3) 7.2.0
+Copyright (C) 2017 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+g++ --version
+g++ (Ubuntu 7.2.0-8ubuntu3) 7.2.0
+Copyright (C) 2017 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+python --version
+Python 2.7.14
+perl --version 2>&1 | head -3
+
+This is perl 5, version 26, subversion 0 (v5.26.0) built for i686-linux-gnu-thread-multi-64int
+(with 56 registered patches, see perl -V for more detail)
+rm -rf   '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static'
+mkdir -p '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static'
+mkdir -p '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c'
+mkdir -p '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c.build_'
+# disable wine with readonly directory
+# see https://github.com/mxe/mxe/issues/841
+mkdir -p '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/readonly'
+chmod 0555 '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/readonly'
+cd '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static' &&  tar xzf '/home/user/mxe/pkg/jpegsrc.v9c.tar.gz'
+cd '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c'
+(cd '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c' && patch -p1 -u) < /home/user/mxe/src/jpeg-1-fixes.patch 
+patching file jpeglib.h
+(cd '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c' && patch -p1 -u) < /home/user/mxe/src/jpeg-2-jmorecfg.patch
+patching file jmorecfg.h
+cd '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c' && ./configure --host='i686-w64-mingw32.static' --build='i686-pc-linux-gnu' --prefix='/home/user/mxe/usr/i686-w64-mingw32.static'  --enable-static --disable-shared  ac_cv_prog_HAVE_DOXYGEN="false" --enable-doc=no --enable-gtk-doc=no --enable-gtk-doc-html=no --enable-gtk-doc-pdf=no --{docdir,infodir,mandir,with-html-dir}='/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c.build_.sink' --disable-doxygen
+configure: WARNING: unrecognized options: --enable-doc, --enable-gtk-doc, --enable-gtk-doc-html, --enable-gtk-doc-pdf, --with-html-dir, --disable-doxygen
+configure: loading site script /home/user/mxe/usr/i686-w64-mingw32.static/share/config.site
+checking build system type... (cached) i686-pc-linux-gnu
+checking host system type... i686-w64-mingw32.static
+checking target system type... i686-w64-mingw32.static
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for i686-w64-mingw32.static-strip... i686-w64-mingw32.static-strip
+checking for a thread-safe mkdir -p... /bin/mkdir -p
+checking for gawk... no
+checking for mawk... mawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking whether make supports nested variables... (cached) yes
+checking whether to enable maintainer-specific portions of Makefiles... no
+checking for i686-w64-mingw32.static-gcc... i686-w64-mingw32.static-gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.exe
+checking for suffix of executables... .exe
+checking whether we are cross compiling... yes
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether i686-w64-mingw32.static-gcc accepts -g... yes
+checking for i686-w64-mingw32.static-gcc option to accept ISO C89... none needed
+checking whether i686-w64-mingw32.static-gcc understands -c and -o together... yes
+checking for style of include used by make... GNU
+checking dependency style of i686-w64-mingw32.static-gcc... gcc3
+checking for i686-w64-mingw32.static-gcc option to accept ISO C99... none needed
+checking for i686-w64-mingw32.static-gcc option to accept ISO Standard C... (cached) none needed
+checking how to run the C preprocessor... i686-w64-mingw32.static-gcc -E
+checking whether make sets $(MAKE)... (cached) yes
+checking whether ln -s works... yes
+checking for i686-w64-mingw32.static-ar... i686-w64-mingw32.static-ar
+checking the archiver (i686-w64-mingw32.static-ar) interface... ar
+checking if LD -Wl,--version-script works... yes
+checking for function prototypes... yes
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking stddef.h usability... yes
+checking stddef.h presence... yes
+checking for stddef.h... yes
+checking for stdlib.h... (cached) yes
+checking locale.h usability... yes
+checking locale.h presence... yes
+checking for locale.h... yes
+checking for string.h... (cached) yes
+checking for size_t... yes
+checking for type unsigned char... yes
+checking for type unsigned short... yes
+checking for type void... yes
+checking for an ANSI C-conforming const... yes
+checking for inline... __inline__
+checking for broken incomplete types... ok
+checking for short external names... ok
+checking to see if char is signed... configure: WARNING: Assuming that char is signed on target machine.
+    If it is unsigned, this will be a little bit inefficient.
+checking to see if right shift is signed... Assuming that right shift is signed on target machine.
+checking to see if fopen accepts b spec... Assuming that it does.
+checking for i686-w64-mingw32.static-as... i686-w64-mingw32.static-as
+checking for i686-w64-mingw32.static-dlltool... i686-w64-mingw32.static-dlltool
+checking for i686-w64-mingw32.static-objdump... i686-w64-mingw32.static-objdump
+checking how to print strings... printf
+checking for a sed that does not truncate output... /bin/sed
+checking for fgrep... /bin/grep -F
+checking for ld used by i686-w64-mingw32.static-gcc... /home/user/mxe/usr/bin/i686-w64-mingw32.static-ld
+checking if the linker (/home/user/mxe/usr/bin/i686-w64-mingw32.static-ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /home/user/mxe/usr/bin/i686-w64-mingw32.static-nm -B
+checking the name lister (/home/user/mxe/usr/bin/i686-w64-mingw32.static-nm -B) interface... BSD nm
+checking the maximum length of command line arguments... 1572864
+checking how to convert i686-pc-linux-gnu file names to i686-w64-mingw32.static format... func_convert_file_nix_to_w32
+checking how to convert i686-pc-linux-gnu file names to toolchain format... func_convert_file_noop
+checking for /home/user/mxe/usr/bin/i686-w64-mingw32.static-ld option to reload object files... -r
+checking for i686-w64-mingw32.static-objdump... (cached) i686-w64-mingw32.static-objdump
+checking how to recognize dependent libraries... file_magic ^x86 archive import|^x86 DLL
+checking for i686-w64-mingw32.static-dlltool... (cached) i686-w64-mingw32.static-dlltool
+checking how to associate runtime and link libraries... func_cygming_dll_for_implib
+checking for i686-w64-mingw32.static-ar... (cached) i686-w64-mingw32.static-ar
+checking for archiver @FILE support... @
+checking for i686-w64-mingw32.static-strip... (cached) i686-w64-mingw32.static-strip
+checking for i686-w64-mingw32.static-ranlib... i686-w64-mingw32.static-ranlib
+checking command to parse /home/user/mxe/usr/bin/i686-w64-mingw32.static-nm -B output from i686-w64-mingw32.static-gcc object... ok
+checking for sysroot... no
+checking for a working dd... /bin/dd
+checking how to truncate binary pipes... /bin/dd bs=4096 count=1
+checking for i686-w64-mingw32.static-mt... no
+checking for mt... mt
+configure: WARNING: using cross tools not prefixed with host triplet
+checking if mt is a manifest tool... no
+checking for dlfcn.h... no
+checking for objdir... .libs
+checking if i686-w64-mingw32.static-gcc supports -fno-rtti -fno-exceptions... no
+checking for i686-w64-mingw32.static-gcc option to produce PIC... -DDLL_EXPORT -DPIC
+checking if i686-w64-mingw32.static-gcc PIC flag -DDLL_EXPORT -DPIC works... yes
+checking if i686-w64-mingw32.static-gcc static flag -static works... yes
+checking if i686-w64-mingw32.static-gcc supports -c -o file.o... yes
+checking if i686-w64-mingw32.static-gcc supports -c -o file.o... (cached) yes
+checking whether the i686-w64-mingw32.static-gcc linker (/home/user/mxe/usr/bin/i686-w64-mingw32.static-ld) supports shared libraries... yes
+checking dynamic linker characteristics... Win32 ld.exe
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... no
+checking whether to build static libraries... yes
+checking libjpeg version number... 12:0:3
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating libjpeg.pc
+config.status: creating jconfig.h
+config.status: executing depfiles commands
+config.status: executing libtool commands
+configure: WARNING: unrecognized options: --enable-doc, --enable-gtk-doc, --enable-gtk-doc-html, --enable-gtk-doc-pdf, --with-html-dir, --disable-doxygen
+make -C '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c' -j '1' install bin_PROGRAMS= sbin_PROGRAMS= noinst_PROGRAMS= man_MANS=
+make[2]: Entering directory '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c'
+  CC       jaricom.lo
+  CC       jcapimin.lo
+  CC       jcapistd.lo
+  CC       jcarith.lo
+  CC       jccoefct.lo
+  CC       jccolor.lo
+  CC       jcdctmgr.lo
+  CC       jchuff.lo
+  CC       jcinit.lo
+  CC       jcmainct.lo
+  CC       jcmarker.lo
+  CC       jcmaster.lo
+  CC       jcomapi.lo
+  CC       jcparam.lo
+  CC       jcprepct.lo
+  CC       jcsample.lo
+  CC       jctrans.lo
+  CC       jdapimin.lo
+  CC       jdapistd.lo
+  CC       jdarith.lo
+  CC       jdatadst.lo
+  CC       jdatasrc.lo
+  CC       jdcoefct.lo
+  CC       jdcolor.lo
+  CC       jddctmgr.lo
+  CC       jdhuff.lo
+  CC       jdinput.lo
+  CC       jdmainct.lo
+  CC       jdmarker.lo
+  CC       jdmaster.lo
+  CC       jdmerge.lo
+  CC       jdpostct.lo
+  CC       jdsample.lo
+  CC       jdtrans.lo
+  CC       jerror.lo
+  CC       jfdctflt.lo
+  CC       jfdctfst.lo
+  CC       jfdctint.lo
+  CC       jidctflt.lo
+  CC       jidctfst.lo
+  CC       jidctint.lo
+  CC       jquant1.lo
+  CC       jquant2.lo
+  CC       jutils.lo
+  CC       jmemmgr.lo
+  CC       jmemnobs.lo
+  CCLD     libjpeg.la
+i686-w64-mingw32.static-ar: `u' modifier ignored since `D' is the default (see `U')
+make[3]: Entering directory '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c'
+ /bin/mkdir -p '/home/user/mxe/usr/i686-w64-mingw32.static/lib'
+ /bin/bash ./libtool   --mode=install /usr/bin/install -c   libjpeg.la '/home/user/mxe/usr/i686-w64-mingw32.static/lib'
+libtool: install: /usr/bin/install -c .libs/libjpeg.lai /home/user/mxe/usr/i686-w64-mingw32.static/lib/libjpeg.la
+libtool: install: /usr/bin/install -c .libs/libjpeg.a /home/user/mxe/usr/i686-w64-mingw32.static/lib/libjpeg.a
+libtool: install: chmod 644 /home/user/mxe/usr/i686-w64-mingw32.static/lib/libjpeg.a
+libtool: install: i686-w64-mingw32.static-ranlib /home/user/mxe/usr/i686-w64-mingw32.static/lib/libjpeg.a
+/bin/bash /home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/install-sh -d /home/user/mxe/usr/i686-w64-mingw32.static/include
+/usr/bin/install -c -m 644 jconfig.h /home/user/mxe/usr/i686-w64-mingw32.static/include/jconfig.h
+ /bin/mkdir -p '/home/user/mxe/usr/i686-w64-mingw32.static/include'
+ /usr/bin/install -c -m 644 jerror.h jmorecfg.h jpeglib.h '/home/user/mxe/usr/i686-w64-mingw32.static/include'
+ /bin/mkdir -p '/home/user/mxe/usr/i686-w64-mingw32.static/lib/pkgconfig'
+ /usr/bin/install -c -m 644 libjpeg.pc '/home/user/mxe/usr/i686-w64-mingw32.static/lib/pkgconfig'
+make[3]: Leaving directory '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c'
+make[2]: Leaving directory '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c'
+# create pkg-config file
+install -d '/home/user/mxe/usr/i686-w64-mingw32.static/lib/pkgconfig'
+(echo 'Name: jpeg'; echo 'Version: 0'; echo 'Description: jpeg'; echo 'Libs: -ljpeg';) > '/home/user/mxe/usr/i686-w64-mingw32.static/lib/pkgconfig/jpeg.pc'
+'i686-w64-mingw32.static-gcc' -W -Wall -Werror -ansi -pedantic '/home/user/mxe/src/jpeg-test.c' -o '/home/user/mxe/usr/i686-w64-mingw32.static/bin/test-jpeg.exe' `'i686-w64-mingw32.static-pkg-config' jpeg --libs`
+
+/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/config.log
+This file contains any messages produced by compilers while
+running configure, to aid debugging if configure makes a mistake.
+
+It was created by libjpeg configure 9.3.0, which was
+generated by GNU Autoconf 2.69.  Invocation command line was
+
+  $ ./configure --host=i686-w64-mingw32.static --build=i686-pc-linux-gnu --prefix=/home/user/mxe/usr/i686-w64-mingw32.static --enable-static --disable-shared ac_cv_prog_HAVE_DOXYGEN=false --enable-doc=no --enable-gtk-doc=no --enable-gtk-doc-html=no --enable-gtk-doc-pdf=no --docdir=/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c.build_.sink --infodir=/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c.build_.sink --mandir=/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c.build_.sink --with-html-dir=/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c.build_.sink --disable-doxygen
+
+## --------- ##
+## Platform. ##
+## --------- ##
+
+hostname = user-VirtualBox
+uname -m = i686
+uname -r = 4.13.0-21-generic
+uname -s = Linux
+uname -v = #24-Ubuntu SMP Mon Dec 18 17:29:35 UTC 2017
+
+/usr/bin/uname -p = unknown
+/bin/uname -X     = unknown
+
+/bin/arch              = unknown
+/usr/bin/arch -k       = unknown
+/usr/convex/getsysinfo = unknown
+/usr/bin/hostinfo      = unknown
+/bin/machine           = unknown
+/usr/bin/oslevel       = unknown
+/bin/universe          = unknown
+
+PATH: /home/user/mxe/usr/i686-pc-linux-gnu/bin
+PATH: /home/user/mxe/usr/bin
+PATH: /home/user/mxe/usr/i686-pc-linux-gnu/bin
+PATH: /home/user/mxe/usr/bin
+PATH: /usr/local/sbin
+PATH: /usr/local/bin
+PATH: /usr/sbin
+PATH: /usr/bin
+PATH: /sbin
+PATH: /bin
+PATH: /usr/games
+PATH: /usr/local/games
+PATH: /snap/bin
+
+
+## ----------- ##
+## Core tests. ##
+## ----------- ##
+
+configure:2132: loading site script /home/user/mxe/usr/i686-w64-mingw32.static/share/config.site
+| ac_cv_build=i686-pc-linux-gnu
+configure:2272: checking build system type
+configure:2286: result: i686-pc-linux-gnu
+configure:2306: checking host system type
+configure:2319: result: i686-w64-mingw32.static
+configure:2339: checking target system type
+configure:2352: result: i686-w64-mingw32.static
+configure:2397: checking for a BSD-compatible install
+configure:2465: result: /usr/bin/install -c
+configure:2476: checking whether build environment is sane
+configure:2531: result: yes
+configure:2590: checking for i686-w64-mingw32.static-strip
+configure:2606: found /home/user/mxe/usr/bin/i686-w64-mingw32.static-strip
+configure:2617: result: i686-w64-mingw32.static-strip
+configure:2682: checking for a thread-safe mkdir -p
+configure:2721: result: /bin/mkdir -p
+configure:2728: checking for gawk
+configure:2758: result: no
+configure:2728: checking for mawk
+configure:2744: found /usr/bin/mawk
+configure:2755: result: mawk
+configure:2766: checking whether make sets $(MAKE)
+configure:2788: result: yes
+configure:2817: checking whether make supports nested variables
+configure:2834: result: yes
+configure:2975: checking whether make supports nested variables
+configure:2992: result: yes
+configure:3008: checking whether to enable maintainer-specific portions of Makefiles
+configure:3017: result: no
+configure:3040: checking for i686-w64-mingw32.static-gcc
+configure:3056: found /home/user/mxe/usr/bin/i686-w64-mingw32.static-gcc
+configure:3067: result: i686-w64-mingw32.static-gcc
+configure:3336: checking for C compiler version
+configure:3345: i686-w64-mingw32.static-gcc --version >&5
+i686-w64-mingw32.static-gcc (GCC) 5.4.0
+Copyright (C) 2015 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+configure:3356: $? = 0
+configure:3345: i686-w64-mingw32.static-gcc -v >&5
+Using built-in specs.
+COLLECT_GCC=i686-w64-mingw32.static-gcc
+COLLECT_LTO_WRAPPER=/home/user/mxe/usr/libexec/gcc/i686-w64-mingw32.static/5.4.0/lto-wrapper
+Target: i686-w64-mingw32.static
+Configured with: /home/user/mxe/tmp-gcc-i686-w64-mingw32.static/gcc-5.4.0/configure ac_cv_prog_HAVE_DOXYGEN=false --enable-doc=no --enable-gtk-doc=no --enable-gtk-doc-html=no --enable-gtk-doc-pdf=no --docdir=/home/user/mxe/tmp-gcc-i686-w64-mingw32.static/gcc-5.4.0.build_.sink --infodir=/home/user/mxe/tmp-gcc-i686-w64-mingw32.static/gcc-5.4.0.build_.sink --mandir=/home/user/mxe/tmp-gcc-i686-w64-mingw32.static/gcc-5.4.0.build_.sink --with-html-dir=/home/user/mxe/tmp-gcc-i686-w64-mingw32.static/gcc-5.4.0.build_.sink --disable-doxygen --target=i686-w64-mingw32.static --build=i686-pc-linux-gnu --prefix=/home/user/mxe/usr --libdir=/home/user/mxe/usr/lib --enable-languages=c,c++,objc,fortran --enable-version-specific-runtime-libs --with-gcc --with-gnu-ld --with-gnu-as --disable-nls --disable-shared --disable-multilib --without-x --disable-win32-registry --enable-threads=win32 --enable-sjlj-exceptions --enable-libgomp --with-gmp=/home/user/mxe/usr/i686-pc-linux-gnu --with-isl=/home/user/mxe/usr/i686-pc-linux-gnu --with-mpc=/home/user/mxe/usr/i686-pc-linux-gnu --with-mpfr=/home/user/mxe/usr/i686-pc-linux-gnu --with-as=/home/user/mxe/usr/bin/i686-w64-mingw32.static-as --with-ld=/home/user/mxe/usr/bin/i686-w64-mingw32.static-ld --with-nm=/home/user/mxe/usr/bin/i686-w64-mingw32.static-nm
+Thread model: win32
+gcc version 5.4.0 (GCC) 
+configure:3356: $? = 0
+configure:3345: i686-w64-mingw32.static-gcc -V >&5
+i686-w64-mingw32.static-gcc: error: unrecognized command line option '-V'
+i686-w64-mingw32.static-gcc: fatal error: no input files
+compilation terminated.
+configure:3356: $? = 1
+configure:3345: i686-w64-mingw32.static-gcc -qversion >&5
+i686-w64-mingw32.static-gcc: error: unrecognized command line option '-qversion'
+i686-w64-mingw32.static-gcc: fatal error: no input files
+compilation terminated.
+configure:3356: $? = 1
+configure:3376: checking whether the C compiler works
+configure:3398: i686-w64-mingw32.static-gcc    conftest.c  >&5
+configure:3402: $? = 0
+configure:3450: result: yes
+configure:3453: checking for C compiler default output file name
+configure:3455: result: a.exe
+configure:3461: checking for suffix of executables
+configure:3468: i686-w64-mingw32.static-gcc -o conftest.exe    conftest.c  >&5
+configure:3472: $? = 0
+configure:3494: result: .exe
+configure:3516: checking whether we are cross compiling
+configure:3554: result: yes
+configure:3559: checking for suffix of object files
+configure:3581: i686-w64-mingw32.static-gcc -c   conftest.c >&5
+configure:3585: $? = 0
+configure:3606: result: o
+configure:3610: checking whether we are using the GNU C compiler
+configure:3629: i686-w64-mingw32.static-gcc -c   conftest.c >&5
+configure:3629: $? = 0
+configure:3638: result: yes
+configure:3647: checking whether i686-w64-mingw32.static-gcc accepts -g
+configure:3667: i686-w64-mingw32.static-gcc -c -g  conftest.c >&5
+configure:3667: $? = 0
+configure:3708: result: yes
+configure:3725: checking for i686-w64-mingw32.static-gcc option to accept ISO C89
+configure:3788: i686-w64-mingw32.static-gcc  -c -g -O2  conftest.c >&5
+configure:3788: $? = 0
+configure:3801: result: none needed
+configure:3826: checking whether i686-w64-mingw32.static-gcc understands -c and -o together
+configure:3848: i686-w64-mingw32.static-gcc -c conftest.c -o conftest2.o
+configure:3851: $? = 0
+configure:3848: i686-w64-mingw32.static-gcc -c conftest.c -o conftest2.o
+configure:3851: $? = 0
+configure:3863: result: yes
+configure:3891: checking for style of include used by make
+configure:3919: result: GNU
+configure:3945: checking dependency style of i686-w64-mingw32.static-gcc
+configure:4056: result: gcc3
+configure:4075: checking for i686-w64-mingw32.static-gcc option to accept ISO C99
+configure:4224: i686-w64-mingw32.static-gcc  -c -g -O2  conftest.c >&5
+configure:4224: $? = 0
+configure:4237: result: none needed
+configure:4345: checking for i686-w64-mingw32.static-gcc option to accept ISO Standard C
+configure:4356: result: none needed
+configure:4368: checking how to run the C preprocessor
+configure:4399: i686-w64-mingw32.static-gcc -E  conftest.c
+configure:4399: $? = 0
+configure:4413: i686-w64-mingw32.static-gcc -E  conftest.c
+conftest.c:11:28: fatal error: ac_nonexistent.h: No such file or directory
+compilation terminated.
+configure:4413: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "libjpeg"
+| #define PACKAGE_TARNAME "libjpeg"
+| #define PACKAGE_VERSION "9.3.0"
+| #define PACKAGE_STRING "libjpeg 9.3.0"
+| #define PACKAGE_BUGREPORT ""
+| #define PACKAGE_URL ""
+| #define PACKAGE "libjpeg"
+| #define VERSION "9.3.0"
+| /* end confdefs.h.  */
+| #include <ac_nonexistent.h>
+configure:4438: result: i686-w64-mingw32.static-gcc -E
+configure:4458: i686-w64-mingw32.static-gcc -E  conftest.c
+configure:4458: $? = 0
+configure:4472: i686-w64-mingw32.static-gcc -E  conftest.c
+conftest.c:11:28: fatal error: ac_nonexistent.h: No such file or directory
+compilation terminated.
+configure:4472: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "libjpeg"
+| #define PACKAGE_TARNAME "libjpeg"
+| #define PACKAGE_VERSION "9.3.0"
+| #define PACKAGE_STRING "libjpeg 9.3.0"
+| #define PACKAGE_BUGREPORT ""
+| #define PACKAGE_URL ""
+| #define PACKAGE "libjpeg"
+| #define VERSION "9.3.0"
+| /* end confdefs.h.  */
+| #include <ac_nonexistent.h>
+configure:4501: checking whether make sets $(MAKE)
+configure:4523: result: yes
+configure:4532: checking whether ln -s works
+configure:4536: result: yes
+configure:4549: checking for i686-w64-mingw32.static-ar
+configure:4565: found /home/user/mxe/usr/bin/i686-w64-mingw32.static-ar
+configure:4576: result: i686-w64-mingw32.static-ar
+configure:4646: checking the archiver (i686-w64-mingw32.static-ar) interface
+configure:4662: i686-w64-mingw32.static-gcc -c -g -O2  conftest.c >&5
+configure:4662: $? = 0
+configure:4664: i686-w64-mingw32.static-ar cru libconftest.a conftest.o >&5
+i686-w64-mingw32.static-ar: `u' modifier ignored since `D' is the default (see `U')
+configure:4667: $? = 0
+configure:4695: result: ar
+configure:4724: checking if LD -Wl,--version-script works
+configure:4748: i686-w64-mingw32.static-gcc -o conftest.exe -g -O2   -Wl,--version-script=conftest.map conftest.c  >&5
+configure:4748: $? = 0
+configure:4757: result: yes
+configure:4770: checking for function prototypes
+configure:4790: i686-w64-mingw32.static-gcc -c -g -O2  conftest.c >&5
+configure:4790: $? = 0
+configure:4798: result: yes
+configure:4819: checking for grep that handles long lines and -e
+configure:4877: result: /bin/grep
+configure:4882: checking for egrep
+configure:4944: result: /bin/grep -E
+configure:4949: checking for ANSI C header files
+configure:4969: i686-w64-mingw32.static-gcc -c -g -O2  conftest.c >&5
+configure:4969: $? = 0
+configure:5053: result: yes
+configure:5066: checking for sys/types.h
+configure:5066: i686-w64-mingw32.static-gcc -c -g -O2  conftest.c >&5
+configure:5066: $? = 0
+configure:5066: result: yes
+configure:5066: checking for sys/stat.h
+configure:5066: i686-w64-mingw32.static-gcc -c -g -O2  conftest.c >&5
+configure:5066: $? = 0
+configure:5066: result: yes
+configure:5066: checking for stdlib.h
+configure:5066: i686-w64-mingw32.static-gcc -c -g -O2  conftest.c >&5
+configure:5066: $? = 0
+configure:5066: result: yes
+configure:5066: checking for string.h
+configure:5066: i686-w64-mingw32.static-gcc -c -g -O2  conftest.c >&5
+configure:5066: $? = 0
+configure:5066: result: yes
+configure:5066: checking for memory.h
+configure:5066: i686-w64-mingw32.static-gcc -c -g -O2  conftest.c >&5
+configure:5066: $? = 0
+configure:5066: result: yes
+configure:5066: checking for strings.h
+configure:5066: i686-w64-mingw32.static-gcc -c -g -O2  conftest.c >&5
+configure:5066: $? = 0
+configure:5066: result: yes
+configure:5066: checking for inttypes.h
+configure:5066: i686-w64-mingw32.static-gcc -c -g -O2  conftest.c >&5
+configure:5066: $? = 0
+configure:5066: result: yes
+configure:5066: checking for stdint.h
+configure:5066: i686-w64-mingw32.static-gcc -c -g -O2  conftest.c >&5
+configure:5066: $? = 0
+configure:5066: result: yes
+configure:5066: checking for unistd.h
+configure:5066: i686-w64-mingw32.static-gcc -c -g -O2  conftest.c >&5
+configure:5066: $? = 0
+configure:5066: result: yes
+configure:5081: checking stddef.h usability
+configure:5081: i686-w64-mingw32.static-gcc -c -g -O2  conftest.c >&5
+configure:5081: $? = 0
+configure:5081: result: yes
+configure:5081: checking stddef.h presence
+configure:5081: i686-w64-mingw32.static-gcc -E  conftest.c
+configure:5081: $? = 0
+configure:5081: result: yes
+configure:5081: checking for stddef.h
+configure:5081: result: yes
+configure:5081: checking for stdlib.h
+configure:5081: result: yes
+configure:5081: checking locale.h usability
+configure:5081: i686-w64-mingw32.static-gcc -c -g -O2  conftest.c >&5
+configure:5081: $? = 0
+configure:5081: result: yes
+configure:5081: checking locale.h presence
+configure:5081: i686-w64-mingw32.static-gcc -E  conftest.c
+configure:5081: $? = 0
+configure:5081: result: yes
+configure:5081: checking for locale.h
+configure:5081: result: yes
+configure:5091: checking for string.h
+configure:5091: result: yes
+configure:5104: checking for size_t
+configure:5131: i686-w64-mingw32.static-gcc -c -g -O2  conftest.c >&5
+configure:5131: $? = 0
+configure:5137: result: yes
+configure:5173: checking for type unsigned char
+configure:5186: i686-w64-mingw32.static-gcc -c -g -O2  conftest.c >&5
+configure:5186: $? = 0
+configure:5187: result: yes
+configure:5198: checking for type unsigned short
+configure:5211: i686-w64-mingw32.static-gcc -c -g -O2  conftest.c >&5
+configure:5211: $? = 0
+configure:5212: result: yes
+configure:5223: checking for type void
+configure:5257: i686-w64-mingw32.static-gcc -c -g -O2  conftest.c >&5
+configure:5257: $? = 0
+configure:5258: result: yes
+configure:5268: checking for an ANSI C-conforming const
+configure:5334: i686-w64-mingw32.static-gcc -c -g -O2  conftest.c >&5
+configure:5334: $? = 0
+configure:5341: result: yes
+configure:5351: checking for inline
+configure:5366: i686-w64-mingw32.static-gcc -c -g -O2  conftest.c >&5
+configure:5366: $? = 0
+configure:5404: result: __inline__
+configure:5413: checking for broken incomplete types
+configure:5426: i686-w64-mingw32.static-gcc -c -g -O2  conftest.c >&5
+configure:5426: $? = 0
+configure:5427: result: ok
+configure:5439: checking for short external names
+configure:5455: i686-w64-mingw32.static-gcc -o conftest.exe -g -O2   conftest.c  >&5
+configure:5455: $? = 0
+configure:5456: result: ok
+configure:5469: checking to see if char is signed
+configure:5473: WARNING: Assuming that char is signed on target machine.
+    If it is unsigned, this will be a little bit inefficient.
+configure:5521: checking to see if right shift is signed
+configure:5524: result: Assuming that right shift is signed on target machine.
+configure:5576: checking to see if fopen accepts b spec
+configure:5579: result: Assuming that it does.
+configure:5618: checking for i686-w64-mingw32.static-as
+configure:5634: found /home/user/mxe/usr/bin/i686-w64-mingw32.static-as
+configure:5645: result: i686-w64-mingw32.static-as
+configure:5710: checking for i686-w64-mingw32.static-dlltool
+configure:5726: found /home/user/mxe/usr/bin/i686-w64-mingw32.static-dlltool
+configure:5737: result: i686-w64-mingw32.static-dlltool
+configure:5802: checking for i686-w64-mingw32.static-objdump
+configure:5818: found /home/user/mxe/usr/bin/i686-w64-mingw32.static-objdump
+configure:5829: result: i686-w64-mingw32.static-objdump
+configure:5960: checking how to print strings
+configure:5987: result: printf
+configure:6008: checking for a sed that does not truncate output
+configure:6072: result: /bin/sed
+configure:6090: checking for fgrep
+configure:6152: result: /bin/grep -F
+configure:6187: checking for ld used by i686-w64-mingw32.static-gcc
+configure:6254: result: /home/user/mxe/usr/bin/i686-w64-mingw32.static-ld
+configure:6261: checking if the linker (/home/user/mxe/usr/bin/i686-w64-mingw32.static-ld) is GNU ld
+configure:6276: result: yes
+configure:6288: checking for BSD- or MS-compatible name lister (nm)
+configure:6342: result: /home/user/mxe/usr/bin/i686-w64-mingw32.static-nm -B
+configure:6472: checking the name lister (/home/user/mxe/usr/bin/i686-w64-mingw32.static-nm -B) interface
+configure:6479: i686-w64-mingw32.static-gcc -c -g -O2  conftest.c >&5
+configure:6482: /home/user/mxe/usr/bin/i686-w64-mingw32.static-nm -B "conftest.o"
+configure:6485: output
+00000000 b .bss
+00000000 d .data
+00000000 N .debug_abbrev
+00000000 N .debug_aranges
+00000000 N .debug_info
+00000000 N .debug_line
+00000000 r .rdata$zzz
+00000000 t .text
+00000000 B _some_variable
+configure:6492: result: BSD nm
+configure:6496: checking the maximum length of command line arguments
+configure:6627: result: 1572864
+configure:6675: checking how to convert i686-pc-linux-gnu file names to i686-w64-mingw32.static format
+configure:6715: result: func_convert_file_nix_to_w32
+configure:6722: checking how to convert i686-pc-linux-gnu file names to toolchain format
+configure:6742: result: func_convert_file_noop
+configure:6749: checking for /home/user/mxe/usr/bin/i686-w64-mingw32.static-ld option to reload object files
+configure:6756: result: -r
+configure:6790: checking for i686-w64-mingw32.static-objdump
+configure:6817: result: i686-w64-mingw32.static-objdump
+configure:6886: checking how to recognize dependent libraries
+configure:7086: result: file_magic ^x86 archive import|^x86 DLL
+configure:7131: checking for i686-w64-mingw32.static-dlltool
+configure:7158: result: i686-w64-mingw32.static-dlltool
+configure:7228: checking how to associate runtime and link libraries
+configure:7255: result: func_cygming_dll_for_implib
+configure:7271: checking for i686-w64-mingw32.static-ar
+configure:7298: result: i686-w64-mingw32.static-ar
+configure:7379: checking for archiver @FILE support
+configure:7396: i686-w64-mingw32.static-gcc -c -g -O2  conftest.c >&5
+configure:7396: $? = 0
+configure:7399: i686-w64-mingw32.static-ar cru libconftest.a @conftest.lst >&5
+i686-w64-mingw32.static-ar: `u' modifier ignored since `D' is the default (see `U')
+configure:7402: $? = 0
+configure:7407: i686-w64-mingw32.static-ar cru libconftest.a @conftest.lst >&5
+i686-w64-mingw32.static-ar: `u' modifier ignored since `D' is the default (see `U')
+i686-w64-mingw32.static-ar: conftest.o: No such file or directory
+configure:7410: $? = 1
+configure:7422: result: @
+configure:7440: checking for i686-w64-mingw32.static-strip
+configure:7467: result: i686-w64-mingw32.static-strip
+configure:7539: checking for i686-w64-mingw32.static-ranlib
+configure:7555: found /home/user/mxe/usr/bin/i686-w64-mingw32.static-ranlib
+configure:7566: result: i686-w64-mingw32.static-ranlib
+configure:7708: checking command to parse /home/user/mxe/usr/bin/i686-w64-mingw32.static-nm -B output from i686-w64-mingw32.static-gcc object
+configure:7861: i686-w64-mingw32.static-gcc -c -g -O2  conftest.c >&5
+configure:7864: $? = 0
+configure:7868: /home/user/mxe/usr/bin/i686-w64-mingw32.static-nm -B conftest.o \| sed -n -e 's/^.*[ ]\([ABCDGIRSTW][ABCDGIRSTW]*\)[ ][ ]*\([_A-Za-z][_A-Za-z0-9]*\)$/\1 \2 \2/p' | sed '/ __gnu_lto/d' \> conftest.nm
+configure:7871: $? = 0
+cannot find nm_test_var in conftest.nm
+configure:7861: i686-w64-mingw32.static-gcc -c -g -O2  conftest.c >&5
+configure:7864: $? = 0
+configure:7868: /home/user/mxe/usr/bin/i686-w64-mingw32.static-nm -B conftest.o \| sed -n -e 's/^.*[ ]\([ABCDGIRSTW][ABCDGIRSTW]*\)[ ][ ]*_\([_A-Za-z][_A-Za-z0-9]*\)$/\1 _\2 \2/p' | sed '/ __gnu_lto/d' \> conftest.nm
+configure:7871: $? = 0
+configure:7937: i686-w64-mingw32.static-gcc -o conftest.exe -g -O2   conftest.c conftstm.o >&5
+configure:7940: $? = 0
+configure:7978: result: ok
+configure:8025: checking for sysroot
+configure:8055: result: no
+configure:8062: checking for a working dd
+configure:8100: result: /bin/dd
+configure:8104: checking how to truncate binary pipes
+configure:8119: result: /bin/dd bs=4096 count=1
+configure:8408: checking for i686-w64-mingw32.static-mt
+configure:8438: result: no
+configure:8448: checking for mt
+configure:8464: found /bin/mt
+configure:8475: result: mt
+configure:8487: WARNING: using cross tools not prefixed with host triplet
+configure:8498: checking if mt is a manifest tool
+configure:8504: mt '-?'
+configure:8512: result: no
+configure:9186: checking for dlfcn.h
+configure:9186: i686-w64-mingw32.static-gcc -c -g -O2  conftest.c >&5
+conftest.c:62:19: fatal error: dlfcn.h: No such file or directory
+compilation terminated.
+configure:9186: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "libjpeg"
+| #define PACKAGE_TARNAME "libjpeg"
+| #define PACKAGE_VERSION "9.3.0"
+| #define PACKAGE_STRING "libjpeg 9.3.0"
+| #define PACKAGE_BUGREPORT ""
+| #define PACKAGE_URL ""
+| #define PACKAGE "libjpeg"
+| #define VERSION "9.3.0"
+| #define HAVE_PROTOTYPES 1
+| #define STDC_HEADERS 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_MEMORY_H 1
+| #define HAVE_STRINGS_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_UNISTD_H 1
+| #define HAVE_STDDEF_H 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_LOCALE_H 1
+| #define HAVE_UNSIGNED_CHAR 1
+| #define HAVE_UNSIGNED_SHORT 1
+| #define INLINE __inline__
+| /* end confdefs.h.  */
+| #include <stdio.h>
+| #ifdef HAVE_SYS_TYPES_H
+| # include <sys/types.h>
+| #endif
+| #ifdef HAVE_SYS_STAT_H
+| # include <sys/stat.h>
+| #endif
+| #ifdef STDC_HEADERS
+| # include <stdlib.h>
+| # include <stddef.h>
+| #else
+| # ifdef HAVE_STDLIB_H
+| #  include <stdlib.h>
+| # endif
+| #endif
+| #ifdef HAVE_STRING_H
+| # if !defined STDC_HEADERS && defined HAVE_MEMORY_H
+| #  include <memory.h>
+| # endif
+| # include <string.h>
+| #endif
+| #ifdef HAVE_STRINGS_H
+| # include <strings.h>
+| #endif
+| #ifdef HAVE_INTTYPES_H
+| # include <inttypes.h>
+| #endif
+| #ifdef HAVE_STDINT_H
+| # include <stdint.h>
+| #endif
+| #ifdef HAVE_UNISTD_H
+| # include <unistd.h>
+| #endif
+| 
+| #include <dlfcn.h>
+configure:9186: result: no
+configure:9440: checking for objdir
+configure:9455: result: .libs
+configure:9715: checking if i686-w64-mingw32.static-gcc supports -fno-rtti -fno-exceptions
+configure:9733: i686-w64-mingw32.static-gcc -c -g -O2  -fno-rtti -fno-exceptions conftest.c >&5
+cc1: warning: command line option '-fno-rtti' is valid for C++/ObjC++ but not for C
+configure:9737: $? = 0
+configure:9750: result: no
+configure:10108: checking for i686-w64-mingw32.static-gcc option to produce PIC
+configure:10115: result: -DDLL_EXPORT -DPIC
+configure:10123: checking if i686-w64-mingw32.static-gcc PIC flag -DDLL_EXPORT -DPIC works
+configure:10141: i686-w64-mingw32.static-gcc -c -g -O2  -DDLL_EXPORT -DPIC -DPIC conftest.c >&5
+configure:10145: $? = 0
+configure:10158: result: yes
+configure:10187: checking if i686-w64-mingw32.static-gcc static flag -static works
+configure:10215: result: yes
+configure:10230: checking if i686-w64-mingw32.static-gcc supports -c -o file.o
+configure:10251: i686-w64-mingw32.static-gcc -c -g -O2  -o out/conftest2.o conftest.c >&5
+configure:10255: $? = 0
+configure:10277: result: yes
+configure:10285: checking if i686-w64-mingw32.static-gcc supports -c -o file.o
+configure:10332: result: yes
+configure:10365: checking whether the i686-w64-mingw32.static-gcc linker (/home/user/mxe/usr/bin/i686-w64-mingw32.static-ld) supports shared libraries
+configure:11624: result: yes
+configure:11864: checking dynamic linker characteristics
+configure:12682: result: Win32 ld.exe
+configure:12804: checking how to hardcode library paths into programs
+configure:12829: result: immediate
+configure:13377: checking whether stripping libraries is possible
+configure:13382: result: yes
+configure:13417: checking if libtool supports shared libraries
+configure:13419: result: yes
+configure:13422: checking whether to build shared libraries
+configure:13447: result: no
+configure:13450: checking whether to build static libraries
+configure:13454: result: yes
+configure:13573: checking libjpeg version number
+configure:13579: result: 12:0:3
+configure:13693: checking that generated files are newer than configure
+configure:13699: result: done
+configure:13730: creating ./config.status
+
+## ---------------------- ##
+## Running config.status. ##
+## ---------------------- ##
+
+This file was extended by libjpeg config.status 9.3.0, which was
+generated by GNU Autoconf 2.69.  Invocation command line was
+
+  CONFIG_FILES    = 
+  CONFIG_HEADERS  = 
+  CONFIG_LINKS    = 
+  CONFIG_COMMANDS = 
+  $ ./config.status 
+
+on user-VirtualBox
+
+config.status:1116: creating Makefile
+config.status:1116: creating libjpeg.pc
+config.status:1116: creating jconfig.h
+config.status:1345: executing depfiles commands
+config.status:1345: executing libtool commands
+configure:15875: WARNING: unrecognized options: --enable-doc, --enable-gtk-doc, --enable-gtk-doc-html, --enable-gtk-doc-pdf, --with-html-dir, --disable-doxygen
+
+## ---------------- ##
+## Cache variables. ##
+## ---------------- ##
+
+ac_cv_build=i686-pc-linux-gnu
+ac_cv_c_compiler_gnu=yes
+ac_cv_c_const=yes
+ac_cv_env_CC_set=
+ac_cv_env_CC_value=
+ac_cv_env_CFLAGS_set=
+ac_cv_env_CFLAGS_value=
+ac_cv_env_CPPFLAGS_set=
+ac_cv_env_CPPFLAGS_value=
+ac_cv_env_CPP_set=
+ac_cv_env_CPP_value=
+ac_cv_env_LDFLAGS_set=
+ac_cv_env_LDFLAGS_value=
+ac_cv_env_LIBS_set=
+ac_cv_env_LIBS_value=
+ac_cv_env_LT_SYS_LIBRARY_PATH_set=
+ac_cv_env_LT_SYS_LIBRARY_PATH_value=
+ac_cv_env_build_alias_set=set
+ac_cv_env_build_alias_value=i686-pc-linux-gnu
+ac_cv_env_host_alias_set=set
+ac_cv_env_host_alias_value=i686-w64-mingw32.static
+ac_cv_env_target_alias_set=
+ac_cv_env_target_alias_value=
+ac_cv_exeext=.exe
+ac_cv_header_dlfcn_h=no
+ac_cv_header_inttypes_h=yes
+ac_cv_header_locale_h=yes
+ac_cv_header_memory_h=yes
+ac_cv_header_stdc=yes
+ac_cv_header_stddef_h=yes
+ac_cv_header_stdint_h=yes
+ac_cv_header_stdlib_h=yes
+ac_cv_header_string_h=yes
+ac_cv_header_strings_h=yes
+ac_cv_header_sys_stat_h=yes
+ac_cv_header_sys_types_h=yes
+ac_cv_header_unistd_h=yes
+ac_cv_host=i686-w64-mingw32.static
+ac_cv_objext=o
+ac_cv_path_EGREP='/bin/grep -E'
+ac_cv_path_FGREP='/bin/grep -F'
+ac_cv_path_GREP=/bin/grep
+ac_cv_path_SED=/bin/sed
+ac_cv_path_install='/usr/bin/install -c'
+ac_cv_path_lt_DD=/bin/dd
+ac_cv_path_mkdir=/bin/mkdir
+ac_cv_prog_AR=i686-w64-mingw32.static-ar
+ac_cv_prog_AS=i686-w64-mingw32.static-as
+ac_cv_prog_AWK=mawk
+ac_cv_prog_CC=i686-w64-mingw32.static-gcc
+ac_cv_prog_CPP='i686-w64-mingw32.static-gcc -E'
+ac_cv_prog_DLLTOOL=i686-w64-mingw32.static-dlltool
+ac_cv_prog_HAVE_DOXYGEN=false
+ac_cv_prog_OBJDUMP=i686-w64-mingw32.static-objdump
+ac_cv_prog_RANLIB=i686-w64-mingw32.static-ranlib
+ac_cv_prog_STRIP=i686-w64-mingw32.static-strip
+ac_cv_prog_ac_ct_MANIFEST_TOOL=mt
+ac_cv_prog_cc_c89=
+ac_cv_prog_cc_c99=
+ac_cv_prog_cc_g=yes
+ac_cv_prog_cc_stdc=
+ac_cv_prog_make_make_set=yes
+ac_cv_target=i686-w64-mingw32.static
+am_cv_CC_dependencies_compiler_type=gcc3
+am_cv_ar_interface=ar
+am_cv_make_support_nested_variables=yes
+am_cv_prog_cc_c_o=yes
+ijg_cv_have_prototypes=yes
+ijg_cv_inline=__inline__
+lt_cv_ar_at_file=@
+lt_cv_deplibs_check_method='file_magic ^x86 archive import|^x86 DLL'
+lt_cv_file_magic_cmd=func_win32_libid
+lt_cv_file_magic_test_file=
+lt_cv_ld_reload_flag=-r
+lt_cv_nm_interface='BSD nm'
+lt_cv_objdir=.libs
+lt_cv_path_LD=/home/user/mxe/usr/bin/i686-w64-mingw32.static-ld
+lt_cv_path_NM='/home/user/mxe/usr/bin/i686-w64-mingw32.static-nm -B'
+lt_cv_path_mainfest_tool=no
+lt_cv_prog_compiler_c_o=yes
+lt_cv_prog_compiler_pic='-DDLL_EXPORT -DPIC'
+lt_cv_prog_compiler_pic_works=yes
+lt_cv_prog_compiler_rtti_exceptions=no
+lt_cv_prog_compiler_static_works=yes
+lt_cv_prog_gnu_ld=yes
+lt_cv_sharedlib_from_linklib_cmd=func_cygming_dll_for_implib
+lt_cv_sys_global_symbol_pipe='sed -n -e '\''s/^.*[	 ]\([ABCDGIRSTW][ABCDGIRSTW]*\)[	 ][	 ]*_\([_A-Za-z][_A-Za-z0-9]*\)$/\1 _\2 \2/p'\'' | sed '\''/ __gnu_lto/d'\'''
+lt_cv_sys_global_symbol_to_c_name_address='sed -n -e '\''s/^: \(.*\) .*$/  {"\1", (void *) 0},/p'\'' -e '\''s/^[ABCDGIRSTW][ABCDGIRSTW]* .* \(.*\)$/  {"\1", (void *) \&\1},/p'\'''
+lt_cv_sys_global_symbol_to_c_name_address_lib_prefix='sed -n -e '\''s/^: \(.*\) .*$/  {"\1", (void *) 0},/p'\'' -e '\''s/^[ABCDGIRSTW][ABCDGIRSTW]* .* \(lib.*\)$/  {"\1", (void *) \&\1},/p'\'' -e '\''s/^[ABCDGIRSTW][ABCDGIRSTW]* .* \(.*\)$/  {"lib\1", (void *) \&\1},/p'\'''
+lt_cv_sys_global_symbol_to_cdecl='sed -n -e '\''s/^T .* \(.*\)$/extern int \1();/p'\'' -e '\''s/^[ABCDGIRSTW][ABCDGIRSTW]* .* \(.*\)$/extern char \1;/p'\'''
+lt_cv_sys_global_symbol_to_import=
+lt_cv_sys_max_cmd_len=1572864
+lt_cv_to_host_file_cmd=func_convert_file_nix_to_w32
+lt_cv_to_tool_file_cmd=func_convert_file_noop
+lt_cv_truncate_bin='/bin/dd bs=4096 count=1'
+
+## ----------------- ##
+## Output variables. ##
+## ----------------- ##
+
+ACLOCAL='${SHELL} /home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/missing aclocal-1.15'
+AMDEPBACKSLASH='\'
+AMDEP_FALSE='#'
+AMDEP_TRUE=''
+AMTAR='$${TAR-tar}'
+AM_BACKSLASH='\'
+AM_DEFAULT_V='$(AM_DEFAULT_VERBOSITY)'
+AM_DEFAULT_VERBOSITY='0'
+AM_V='$(V)'
+AR='i686-w64-mingw32.static-ar'
+AS='i686-w64-mingw32.static-as'
+AUTOCONF='${SHELL} /home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/missing autoconf'
+AUTOHEADER='echo autoheader ignored'
+AUTOMAKE='${SHELL} /home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/missing automake-1.15'
+AWK='mawk'
+CC='i686-w64-mingw32.static-gcc'
+CCDEPMODE='depmode=gcc3'
+CFLAGS='-g -O2'
+CPP='i686-w64-mingw32.static-gcc -E'
+CPPFLAGS=''
+CYGPATH_W='echo'
+DEFS='-DHAVE_CONFIG_H'
+DEPDIR='.deps'
+DLLTOOL='i686-w64-mingw32.static-dlltool'
+DSYMUTIL=''
+DUMPBIN=''
+ECHO_C=''
+ECHO_N='-n'
+ECHO_T=''
+EGREP='/bin/grep -E'
+EXEEXT='.exe'
+FGREP='/bin/grep -F'
+GREP='/bin/grep'
+HAVE_LD_VERSION_SCRIPT_FALSE='#'
+HAVE_LD_VERSION_SCRIPT_TRUE=''
+INSTALL_DATA='${INSTALL} -m 644'
+INSTALL_PROGRAM='${INSTALL}'
+INSTALL_SCRIPT='${INSTALL}'
+INSTALL_STRIP_PROGRAM='$(install_sh) -c -s'
+JPEG_LIB_VERSION='12:0:3'
+LD='/home/user/mxe/usr/bin/i686-w64-mingw32.static-ld'
+LDFLAGS=''
+LIBOBJS=''
+LIBS=''
+LIBTOOL='$(SHELL) $(top_builddir)/libtool'
+LIPO=''
+LN_S='ln -s'
+LTLIBOBJS=''
+LT_SYS_LIBRARY_PATH=''
+MAINT='#'
+MAINTAINER_MODE_FALSE=''
+MAINTAINER_MODE_TRUE='#'
+MAKEINFO='${SHELL} /home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/missing makeinfo'
+MANIFEST_TOOL=':'
+MEMORYMGR='jmemnobs'
+MKDIR_P='/bin/mkdir -p'
+NM='/home/user/mxe/usr/bin/i686-w64-mingw32.static-nm -B'
+NMEDIT=''
+OBJDUMP='i686-w64-mingw32.static-objdump'
+OBJEXT='o'
+OTOOL64=''
+OTOOL=''
+PACKAGE='libjpeg'
+PACKAGE_BUGREPORT=''
+PACKAGE_NAME='libjpeg'
+PACKAGE_STRING='libjpeg 9.3.0'
+PACKAGE_TARNAME='libjpeg'
+PACKAGE_URL=''
+PACKAGE_VERSION='9.3.0'
+PATH_SEPARATOR=':'
+RANLIB='i686-w64-mingw32.static-ranlib'
+SED='/bin/sed'
+SET_MAKE=''
+SHELL='/bin/bash'
+STRIP='i686-w64-mingw32.static-strip'
+VERSION='9.3.0'
+ac_ct_AR=''
+ac_ct_CC=''
+ac_ct_DUMPBIN=''
+am__EXEEXT_FALSE='#'
+am__EXEEXT_TRUE=''
+am__fastdepCC_FALSE='#'
+am__fastdepCC_TRUE=''
+am__include='include'
+am__isrc=''
+am__leading_dot='.'
+am__nodep='_no'
+am__quote=''
+am__tar='$${TAR-tar} chof - "$$tardir"'
+am__untar='$${TAR-tar} xf -'
+bindir='${exec_prefix}/bin'
+build='i686-pc-linux-gnu'
+build_alias='i686-pc-linux-gnu'
+build_cpu='i686'
+build_os='linux-gnu'
+build_vendor='pc'
+datadir='${datarootdir}'
+datarootdir='${prefix}/share'
+docdir='/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c.build_.sink'
+dvidir='${docdir}'
+exec_prefix='${prefix}'
+host='i686-w64-mingw32.static'
+host_alias='i686-w64-mingw32.static'
+host_cpu='i686'
+host_os='mingw32.static'
+host_vendor='w64'
+htmldir='${docdir}'
+includedir='${prefix}/include'
+infodir='/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c.build_.sink'
+install_sh='${SHELL} /home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/install-sh'
+libdir='${exec_prefix}/lib'
+libexecdir='${exec_prefix}/libexec'
+localedir='${datarootdir}/locale'
+localstatedir='${prefix}/var'
+mandir='/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c.build_.sink'
+mkdir_p='$(MKDIR_P)'
+oldincludedir='/usr/include'
+pdfdir='${docdir}'
+prefix='/home/user/mxe/usr/i686-w64-mingw32.static'
+program_transform_name='s,x,x,'
+psdir='${docdir}'
+sbindir='${exec_prefix}/sbin'
+sharedstatedir='${prefix}/com'
+sysconfdir='${prefix}/etc'
+target='i686-w64-mingw32.static'
+target_alias=''
+target_cpu='i686'
+target_os='mingw32.static'
+target_vendor='w64'
+
+## ----------- ##
+## confdefs.h. ##
+## ----------- ##
+
+/* confdefs.h */
+#define PACKAGE_NAME "libjpeg"
+#define PACKAGE_TARNAME "libjpeg"
+#define PACKAGE_VERSION "9.3.0"
+#define PACKAGE_STRING "libjpeg 9.3.0"
+#define PACKAGE_BUGREPORT ""
+#define PACKAGE_URL ""
+#define PACKAGE "libjpeg"
+#define VERSION "9.3.0"
+#define HAVE_PROTOTYPES 1
+#define STDC_HEADERS 1
+#define HAVE_SYS_TYPES_H 1
+#define HAVE_SYS_STAT_H 1
+#define HAVE_STDLIB_H 1
+#define HAVE_STRING_H 1
+#define HAVE_MEMORY_H 1
+#define HAVE_STRINGS_H 1
+#define HAVE_INTTYPES_H 1
+#define HAVE_STDINT_H 1
+#define HAVE_UNISTD_H 1
+#define HAVE_STDDEF_H 1
+#define HAVE_STDLIB_H 1
+#define HAVE_LOCALE_H 1
+#define HAVE_UNSIGNED_CHAR 1
+#define HAVE_UNSIGNED_SHORT 1
+#define INLINE __inline__
+#define LT_OBJDIR ".libs/"
+
+configure: exit 0
+
+settings.mk
+# This is a template of configuration file for MXE. See
+# docs/index.html for more extensive documentations.
+
+# This variable controls the number of compilation processes
+# within one package ("intra-package parallelism").
+#JOBS := 
+
+# This variable controls where intermediate files are created
+# this is necessary when compiling inside a virtualbox shared
+# directory. Some commands like strip fail in there with Protocol error
+# default is the current directory
+#MXE_TMP := /tmp
+
+# This variable controls the targets that will build.
+#MXE_TARGETS := i686-w64-mingw32.static i686-w64-mingw32.shared x86_64-w64-mingw32.static x86_64-w64-mingw32.shared
+
+# This variable controls which plugins are in use.
+# See plugins/README.md for further information.
+#override MXE_PLUGIN_DIRS += plugins/apps plugins/native
+
+# This variable controls the download mirror for SourceForge,
+# when it is used. Enabling the value below means auto.
+#SOURCEFORGE_MIRROR := downloads.sourceforge.net
+
+# The three lines below makes `make` build these "local
+# packages" instead of all packages.
+#LOCAL_PKG_LIST := boost curl file flac lzo pthreads vorbis wxwidgets
+#.DEFAULT_GOAL  := local-pkg-list
+#local-pkg-list: $(LOCAL_PKG_LIST)
+i686-w64-mingw32.static-strip '/home/user/mxe/usr/i686-w64-mingw32.static/bin/test-jpeg.exe'
+(du -k -d 0 '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static' 2>/dev/null || du -k --max-depth 0 '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static') | sed -n 's/^\(\S*\).*/du: \1 KiB/p'
+du: 7708 KiB
+rm -rfv  '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static'
+removed directory '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c.build_'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jcprepct.lo'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jconfig.sas'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jdmarker.lo'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jidctfst.lo'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jdatadst.c'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/wrtarga.c'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jdarith.o'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jcmaster.o'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jmorecfg.h'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/makejdsp.vc6'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jdatasrc.o'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jchuff.lo'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jdsample.lo'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jdmarker.c'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jcomapi.c'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/wrppm.c'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/libjpeg.pc.in'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jquant2.o'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jmemansi.c'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jcapimin.o'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/cdjpeg.c'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jccolor.o'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jdarith.lo'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/makefile.vms'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/configure.ac'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/wrbmp.c'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/makefile.mc6'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jdpostct.c'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/makewdsp.vc6'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/makejvcx.v15'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/rdtarga.c'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/cjpeg.1'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/makefile.vc'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jdsample.o'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jdmerge.lo'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jaricom.o'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jutils.lo'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/stamp-h1'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jerror.lo'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/rdbmp.c'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jdarith.c'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/testimg.bmp'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jdmerge.o'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jcmainct.c'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/config.sub'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jcarith.c'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/makerdsp.vc6'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jmemmgr.lo'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jaricom.lo'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/makefile.sas'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jchuff.c'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jpegtran.c'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/README'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jcmarker.c'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jversion.h'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jccoefct.c'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jcinit.lo'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/install.txt'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jpegtran.1'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jconfig.bcc'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/wrgif.c'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/Makefile.in'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jidctint.lo'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/transupp.h'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/rdjpgcom.c'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jdpostct.lo'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jutils.c'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/maketvcx.v15'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jfdctflt.lo'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jinclude.h'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/makeadsw.vc6'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jquant2.c'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jfdctflt.c'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jpeglib.h'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jdcolor.o'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jerror.h'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/djpeg.1'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jerror.c'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/maketmak.vc6'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jchuff.o'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jdapistd.lo'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jdsample.c'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/libjpeg.map'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/makvms.opt'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jdcolor.c'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jdatadst.lo'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jidctflt.lo'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/cderror.h'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/maktjpeg.st'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/.libs/libjpeg.a'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/.libs/libjpeg.lai'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/.libs/libjpeg.la'
+removed directory '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/.libs'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jconfig.st'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jdapistd.c'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jdmaster.o'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jidctint.o'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/example.c'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jquant1.o'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/rdgif.c'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jquant1.lo'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/aclocal.m4'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/cdjpeg.h'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jcapimin.c'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jdct.h'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jccolor.lo'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/maketdep.vc6'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/ckconfig.c'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/makefile.mms'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/.deps/jdmaster.Plo'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/.deps/jdatadst.Plo'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/.deps/wrgif.Po'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/.deps/jcsample.Plo'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/.deps/jcarith.Plo'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/.deps/jdhuff.Plo'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/.deps/jdcolor.Plo'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/.deps/jcmarker.Plo'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/.deps/wrtarga.Po'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/.deps/jaricom.Plo'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/.deps/jddctmgr.Plo'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/.deps/rdppm.Po'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/.deps/jdapistd.Plo'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/.deps/cjpeg.Po'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/.deps/jdsample.Plo'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/.deps/jcdctmgr.Plo'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/.deps/jdpostct.Plo'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/.deps/jfdctflt.Plo'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/.deps/wrppm.Po'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/.deps/jchuff.Plo'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/.deps/rdrle.Po'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/.deps/jmemnobs.Plo'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/.deps/jfdctint.Plo'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/.deps/jdtrans.Plo'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/.deps/jcparam.Plo'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/.deps/jcmaster.Plo'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/.deps/jcapimin.Plo'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/.deps/jidctfst.Plo'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/.deps/jdmainct.Plo'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/.deps/rdgif.Po'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/.deps/jdinput.Plo'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/.deps/jcprepct.Plo'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/.deps/jquant1.Plo'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/.deps/rdswitch.Po'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/.deps/jdmerge.Plo'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/.deps/jdmarker.Plo'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/.deps/jdapimin.Plo'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/.deps/jdarith.Plo'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/.deps/jutils.Plo'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/.deps/wrrle.Po'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/.deps/jcapistd.Plo'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/.deps/jquant2.Plo'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/.deps/jfdctfst.Plo'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/.deps/rdjpgcom.Po'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/.deps/jerror.Plo'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/.deps/rdcolmap.Po'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/.deps/jcomapi.Plo'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/.deps/djpeg.Po'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/.deps/jidctflt.Plo'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/.deps/jcinit.Plo'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/.deps/wrbmp.Po'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/.deps/rdtarga.Po'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/.deps/jdcoefct.Plo'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/.deps/rdbmp.Po'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/.deps/jccolor.Plo'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/.deps/jpegtran.Po'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/.deps/jccoefct.Plo'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/.deps/jmemmgr.Plo'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/.deps/wrjpgcom.Po'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/.deps/cdjpeg.Po'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/.deps/jcmainct.Plo'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/.deps/jdatasrc.Plo'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/.deps/jctrans.Plo'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/.deps/transupp.Po'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/.deps/jidctint.Plo'
+removed directory '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/.deps'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jconfig.cfg'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jcparam.lo'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jcparam.o'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jerror.o'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jmemmgr.c'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/makedvcx.v15'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/filelist.txt'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/depcomp'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/rdrle.c'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/maketfil.v15'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jdpostct.o'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jctrans.o'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jfdctint.c'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/wrjpgcom.1'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/makeddep.vc6'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/cjpeg.c'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/ltmain.sh'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/testimg.jpg'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/install-sh'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jdatasrc.c'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jconfig.txt'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/usage.txt'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jutils.o'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jidctflt.c'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/rdjpgcom.1'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jdapimin.c'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jconfig.dj'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jdapimin.o'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/makervcx.v15'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jcsample.o'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jcomapi.o'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/makecvcx.v15'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jdinput.lo'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jdcoefct.o'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/makecdsp.vc6'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jdmarker.o'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/makeddsp.vc6'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/.directory'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jcsample.lo'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jdhuff.lo'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/Makefile'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jcomapi.lo'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/coderules.txt'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jfdctfst.c'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/rdppm.c'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jconfig.vc'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jidctint.c'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jcdctmgr.c'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/makedmak.vc6'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jddctmgr.lo'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jcapimin.lo'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/makedfil.v15'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jdmaster.lo'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jidctflt.o'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jcmaster.lo'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jctrans.lo'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jcarith.o'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/maketdsp.vc6'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/makejfil.v15'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jquant2.lo'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/makecfil.v15'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/config.guess'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/transupp.c'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/makefile.bcc'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jcdctmgr.lo'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jcmainct.lo'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jconfig.h'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/testorig.jpg'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/makcjpeg.st'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jctrans.c'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jmemsys.h'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jdinput.c'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jconfig.mac'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jidctfst.c'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jdtrans.c'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jconfig.manx'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jcprepct.c'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/testimgp.jpg'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/change.log'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jccoefct.lo'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/makejsln.v15'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jdcolor.lo'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jmemnobs.c'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jdtrans.o'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/makewdep.vc6'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jcarith.lo'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/libjpeg.pc'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jfdctfst.lo'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/makeproj.mac'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/rdswitch.c'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jconfig.vms'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/makefile.wat'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jcapistd.o'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jcapistd.c'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/makefile.manx'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jcmainct.o'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/testprog.jpg'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/makefile.ansi'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/makewfil.v15'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/makecdep.vc6'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/rdcolmap.c'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jdhuff.o'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jmemdos.c'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jconfig.wat'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jquant1.c'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jcmarker.lo'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jcinit.c'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jddctmgr.c'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jcapistd.lo'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/makejmak.vc6'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/compile'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jmemname.c'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jdapistd.o'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/makejdsw.vc6'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jcmarker.o'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jmemnobs.o'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jdhuff.c'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/wrjpgcom.c'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/makewmak.vc6'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jfdctfst.o'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/makewvcx.v15'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/makefile.unix'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jdinput.o'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jdapimin.lo'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/makefile.b32'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jmemmac.c'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jaricom.c'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/wrrle.c'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jcinit.o'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jddctmgr.o'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/makerfil.v15'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jcprepct.o'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jfdctint.o'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jcdctmgr.o'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/makermak.vc6'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jdtrans.lo'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/config.log'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jfdctint.lo'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jccolor.c'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/makljpeg.st'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jconfig.mc6'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/djpeg.c'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jcmaster.c'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/makecmak.vc6'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jfdctflt.o'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jccoefct.o'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/ar-lib'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jmemnobs.lo'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/configure'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jdcoefct.lo'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jidctfst.o'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/wizard.txt'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jdmerge.c'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/makeasln.v15'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/missing'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/makejdep.vc6'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jdmaster.c'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/libjpeg.txt'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/makefile.vs'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/testimg.ppm'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/config.status'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jdmainct.o'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/structure.txt'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/makdjpeg.st'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jcsample.c'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/makerdep.vc6'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jdatasrc.lo'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jmemmgr.o'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/libjpeg.la'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/makefile.dj'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/Makefile.am'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jpegint.h'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jmemdosa.asm'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jdmainct.lo'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jcparam.c'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jdmainct.c'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jdatadst.o'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/jdcoefct.c'
+removed '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c/libtool'
+removed directory '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/jpeg-9c'
+removed directory '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static/readonly'
+removed directory '/home/user/mxe/tmp-jpeg-i686-w64-mingw32.static'
+touch '/home/user/mxe/usr/i686-w64-mingw32.static/installed/jpeg'
+make[1]: Leaving directory '/home/user/mxe'
+
+real	3m4.384s
+user	0m50.232s
+sys	2m9.742s

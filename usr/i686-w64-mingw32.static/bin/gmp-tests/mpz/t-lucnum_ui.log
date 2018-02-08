@@ -1,0 +1,2 @@
+../../test-driver: line 107: ./t-lucnum_ui.exe: cannot execute binary file: Exec format error
+FAIL t-lucnum_ui.exe (exit status: 126)

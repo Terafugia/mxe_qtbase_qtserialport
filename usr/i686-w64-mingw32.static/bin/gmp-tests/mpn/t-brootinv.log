@@ -1,0 +1,2 @@
+../../test-driver: line 107: ./t-brootinv.exe: cannot execute binary file: Exec format error
+FAIL t-brootinv.exe (exit status: 126)

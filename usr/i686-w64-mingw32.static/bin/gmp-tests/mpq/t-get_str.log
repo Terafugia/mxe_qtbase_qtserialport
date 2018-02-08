@@ -1,0 +1,2 @@
+../../test-driver: line 107: ./t-get_str.exe: cannot execute binary file: Exec format error
+FAIL t-get_str.exe (exit status: 126)

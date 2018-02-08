@@ -1,0 +1,2 @@
+../../test-driver: line 107: ./t-pprime_p.exe: cannot execute binary file: Exec format error
+FAIL t-pprime_p.exe (exit status: 126)

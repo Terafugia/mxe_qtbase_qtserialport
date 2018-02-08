@@ -1,0 +1,2 @@
+../../test-driver: line 107: ./t-cast.exe: cannot execute binary file: Exec format error
+FAIL t-cast.exe (exit status: 126)

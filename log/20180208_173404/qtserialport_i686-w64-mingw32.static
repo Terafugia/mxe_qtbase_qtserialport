@@ -1,0 +1,429 @@
+make[1]: Entering directory '/home/user/mxe'
+uname -a
+Linux user-VirtualBox 4.13.0-21-generic #24-Ubuntu SMP Mon Dec 18 17:29:35 UTC 2017 i686 i686 i686 GNU/Linux
+git log --pretty=tformat:"%H - %s [%ar] [%d]" -1
+1b7d2e0562f2ec93848f536d2a9d4cd414356d9e - Update packages.json & build-matrix.html [4 days ago] [ (HEAD -> master, origin/master, origin/HEAD)]
+lsb_release -a 2>/dev/null || sw_vers 2>/dev/null || true
+Distributor ID:	Ubuntu
+Description:	Ubuntu 17.10
+Release:	17.10
+Codename:	artful
+autoconf --version 2>/dev/null | head -1
+autoconf (GNU Autoconf) 2.69
+automake --version 2>/dev/null | head -1
+automake (GNU automake) 1.15
+gcc --version
+gcc (Ubuntu 7.2.0-8ubuntu3) 7.2.0
+Copyright (C) 2017 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+g++ --version
+g++ (Ubuntu 7.2.0-8ubuntu3) 7.2.0
+Copyright (C) 2017 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+python --version
+Python 2.7.14
+perl --version 2>&1 | head -3
+
+This is perl 5, version 26, subversion 0 (v5.26.0) built for i686-linux-gnu-thread-multi-64int
+(with 56 registered patches, see perl -V for more detail)
+rm -rf   '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static'
+mkdir -p '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static'
+mkdir -p '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0'
+mkdir -p '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0.build_'
+# disable wine with readonly directory
+# see https://github.com/mxe/mxe/issues/841
+mkdir -p '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/readonly'
+chmod 0555 '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/readonly'
+cd '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static' &&        xz -dc '/home/user/mxe/pkg/qtserialport-everywhere-src-5.10.0.tar.xz' | tar xf -
+cd '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0'
+cd '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0' && '/home/user/mxe/usr/i686-w64-mingw32.static/qt5/bin/qmake'
+Info: creating stash file /home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/.qmake.stash
+Info: creating cache file /home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/.qmake.cache
+Checking for ntddmodm... yes
+make -C '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0' -j '1'
+make[2]: Entering directory '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0'
+cd src/ && ( test -e Makefile || /home/user/mxe/usr/i686-w64-mingw32.static/qt5/bin/qmake -o Makefile /home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/src/src.pro ) && make -f Makefile 
+make[3]: Entering directory '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/src'
+cd serialport/ && ( test -e Makefile || /home/user/mxe/usr/i686-w64-mingw32.static/qt5/bin/qmake -o Makefile /home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/src/serialport/serialport.pro ) && make -f Makefile 
+make[4]: Entering directory '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/src/serialport'
+make -f Makefile.Release
+make[5]: Entering directory '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/src/serialport'
+i686-w64-mingw32.static-g++ -fno-keep-inline-dllexport -pipe -mstackrealign -msse2 -mfpmath=sse -O2 -std=c++1z -fno-exceptions -Wextra -Wall -W -Wvla -Wdate-time -dM -E -o .moc/release/moc_predefs.h /home/user/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/features/data/dummy.cpp
+/home/user/mxe/usr/i686-w64-mingw32.static/qt5/bin/moc -DUNICODE -D_UNICODE -DWINVER=0x0601 -D_WIN32_WINNT=0x0601 -DQT_NO_REDEFINE_GUID_DEVINTERFACE_MODEM -DQT_NO_NARROWING_CONVERSIONS_IN_CONNECT -DQT_BUILD_SERIALPORT_LIB -DQT_BUILDING_QT -D_CRT_SECURE_NO_WARNINGS -D_USE_MATH_DEFINES -DQT_NO_CAST_TO_ASCII -DQT_ASCII_CAST_WARNINGS -DQT_MOC_COMPAT -DQT_USE_QSTRINGBUILDER -DQT_DEPRECATED_WARNINGS -DQT_DISABLE_DEPRECATED_BEFORE=0x040800 -DQT_NO_EXCEPTIONS -DQT_NO_DEBUG -DQT_CORE_LIB -DQ_USE_SYBASE --include .moc/release/moc_predefs.h -I/home/user/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/win32-g++ -I/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/src/serialport -I/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/src/serialport -I/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/include -I/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/include/QtSerialPort -I/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/include/QtSerialPort/5.10.0 -I/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/include/QtSerialPort/5.10.0/QtSerialPort -I/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/src/serialport/tmp -I/home/user/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/5.10.0 -I/home/user/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/5.10.0/QtCore -I/home/user/mxe/usr/i686-w64-mingw32.static/qt5/include -I/home/user/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore -I/home/user/mxe/usr/lib/gcc/i686-w64-mingw32.static/5.4.0/include/c++ -I/home/user/mxe/usr/lib/gcc/i686-w64-mingw32.static/5.4.0/include/c++/i686-w64-mingw32.static -I/home/user/mxe/usr/lib/gcc/i686-w64-mingw32.static/5.4.0/include/c++/backward -I/home/user/mxe/usr/lib/gcc/i686-w64-mingw32.static/5.4.0/include -I/home/user/mxe/usr/lib/gcc/i686-w64-mingw32.static/5.4.0/include-fixed -I/home/user/mxe/usr/i686-w64-mingw32.static/include qserialport.h -o .moc/release/moc_qserialport.cpp
+i686-w64-mingw32.static-g++ -c -fno-keep-inline-dllexport -pipe -mstackrealign -msse2 -mfpmath=sse -O2 -std=c++1z -fno-exceptions -Wextra -Wall -W -Wvla -Wdate-time -DUNICODE -D_UNICODE -DWINVER=0x0601 -D_WIN32_WINNT=0x0601 -DQT_NO_REDEFINE_GUID_DEVINTERFACE_MODEM -DQT_NO_NARROWING_CONVERSIONS_IN_CONNECT -DQT_BUILD_SERIALPORT_LIB -DQT_BUILDING_QT -D_CRT_SECURE_NO_WARNINGS -D_USE_MATH_DEFINES -DQT_NO_CAST_TO_ASCII -DQT_ASCII_CAST_WARNINGS -DQT_MOC_COMPAT -DQT_USE_QSTRINGBUILDER -DQT_DEPRECATED_WARNINGS -DQT_DISABLE_DEPRECATED_BEFORE=0x040800 -DQT_NO_EXCEPTIONS -DQT_NO_DEBUG -DQT_CORE_LIB -DQ_USE_SYBASE -I. -I. -I../../include -I../../include/QtSerialPort -I../../include/QtSerialPort/5.10.0 -I../../include/QtSerialPort/5.10.0/QtSerialPort -Itmp -I/home/user/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/5.10.0 -I/home/user/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/5.10.0/QtCore -I/home/user/mxe/usr/i686-w64-mingw32.static/qt5/include -I/home/user/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore -I.moc/release -I/home/user/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/win32-g++  -o .obj/release/qserialport.o qserialport.cpp
+i686-w64-mingw32.static-g++ -c -fno-keep-inline-dllexport -pipe -mstackrealign -msse2 -mfpmath=sse -O2 -std=c++1z -fno-exceptions -Wextra -Wall -W -Wvla -Wdate-time -DUNICODE -D_UNICODE -DWINVER=0x0601 -D_WIN32_WINNT=0x0601 -DQT_NO_REDEFINE_GUID_DEVINTERFACE_MODEM -DQT_NO_NARROWING_CONVERSIONS_IN_CONNECT -DQT_BUILD_SERIALPORT_LIB -DQT_BUILDING_QT -D_CRT_SECURE_NO_WARNINGS -D_USE_MATH_DEFINES -DQT_NO_CAST_TO_ASCII -DQT_ASCII_CAST_WARNINGS -DQT_MOC_COMPAT -DQT_USE_QSTRINGBUILDER -DQT_DEPRECATED_WARNINGS -DQT_DISABLE_DEPRECATED_BEFORE=0x040800 -DQT_NO_EXCEPTIONS -DQT_NO_DEBUG -DQT_CORE_LIB -DQ_USE_SYBASE -I. -I. -I../../include -I../../include/QtSerialPort -I../../include/QtSerialPort/5.10.0 -I../../include/QtSerialPort/5.10.0/QtSerialPort -Itmp -I/home/user/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/5.10.0 -I/home/user/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/5.10.0/QtCore -I/home/user/mxe/usr/i686-w64-mingw32.static/qt5/include -I/home/user/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore -I.moc/release -I/home/user/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/win32-g++  -o .obj/release/qserialportinfo.o qserialportinfo.cpp
+i686-w64-mingw32.static-g++ -c -fno-keep-inline-dllexport -pipe -mstackrealign -msse2 -mfpmath=sse -O2 -std=c++1z -fno-exceptions -Wextra -Wall -W -Wvla -Wdate-time -DUNICODE -D_UNICODE -DWINVER=0x0601 -D_WIN32_WINNT=0x0601 -DQT_NO_REDEFINE_GUID_DEVINTERFACE_MODEM -DQT_NO_NARROWING_CONVERSIONS_IN_CONNECT -DQT_BUILD_SERIALPORT_LIB -DQT_BUILDING_QT -D_CRT_SECURE_NO_WARNINGS -D_USE_MATH_DEFINES -DQT_NO_CAST_TO_ASCII -DQT_ASCII_CAST_WARNINGS -DQT_MOC_COMPAT -DQT_USE_QSTRINGBUILDER -DQT_DEPRECATED_WARNINGS -DQT_DISABLE_DEPRECATED_BEFORE=0x040800 -DQT_NO_EXCEPTIONS -DQT_NO_DEBUG -DQT_CORE_LIB -DQ_USE_SYBASE -I. -I. -I../../include -I../../include/QtSerialPort -I../../include/QtSerialPort/5.10.0 -I../../include/QtSerialPort/5.10.0/QtSerialPort -Itmp -I/home/user/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/5.10.0 -I/home/user/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/5.10.0/QtCore -I/home/user/mxe/usr/i686-w64-mingw32.static/qt5/include -I/home/user/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore -I.moc/release -I/home/user/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/win32-g++  -o .obj/release/qserialport_win.o qserialport_win.cpp
+i686-w64-mingw32.static-g++ -c -fno-keep-inline-dllexport -pipe -mstackrealign -msse2 -mfpmath=sse -O2 -std=c++1z -fno-exceptions -Wextra -Wall -W -Wvla -Wdate-time -DUNICODE -D_UNICODE -DWINVER=0x0601 -D_WIN32_WINNT=0x0601 -DQT_NO_REDEFINE_GUID_DEVINTERFACE_MODEM -DQT_NO_NARROWING_CONVERSIONS_IN_CONNECT -DQT_BUILD_SERIALPORT_LIB -DQT_BUILDING_QT -D_CRT_SECURE_NO_WARNINGS -D_USE_MATH_DEFINES -DQT_NO_CAST_TO_ASCII -DQT_ASCII_CAST_WARNINGS -DQT_MOC_COMPAT -DQT_USE_QSTRINGBUILDER -DQT_DEPRECATED_WARNINGS -DQT_DISABLE_DEPRECATED_BEFORE=0x040800 -DQT_NO_EXCEPTIONS -DQT_NO_DEBUG -DQT_CORE_LIB -DQ_USE_SYBASE -I. -I. -I../../include -I../../include/QtSerialPort -I../../include/QtSerialPort/5.10.0 -I../../include/QtSerialPort/5.10.0/QtSerialPort -Itmp -I/home/user/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/5.10.0 -I/home/user/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/5.10.0/QtCore -I/home/user/mxe/usr/i686-w64-mingw32.static/qt5/include -I/home/user/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore -I.moc/release -I/home/user/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/win32-g++  -o .obj/release/qserialportinfo_win.o qserialportinfo_win.cpp
+/home/user/mxe/usr/i686-w64-mingw32.static/qt5/bin/moc -DUNICODE -D_UNICODE -DWINVER=0x0601 -D_WIN32_WINNT=0x0601 -DQT_NO_REDEFINE_GUID_DEVINTERFACE_MODEM -DQT_NO_NARROWING_CONVERSIONS_IN_CONNECT -DQT_BUILD_SERIALPORT_LIB -DQT_BUILDING_QT -D_CRT_SECURE_NO_WARNINGS -D_USE_MATH_DEFINES -DQT_NO_CAST_TO_ASCII -DQT_ASCII_CAST_WARNINGS -DQT_MOC_COMPAT -DQT_USE_QSTRINGBUILDER -DQT_DEPRECATED_WARNINGS -DQT_DISABLE_DEPRECATED_BEFORE=0x040800 -DQT_NO_EXCEPTIONS -DQT_NO_DEBUG -DQT_CORE_LIB -DQ_USE_SYBASE --include .moc/release/moc_predefs.h -I/home/user/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/win32-g++ -I/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/src/serialport -I/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/src/serialport -I/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/include -I/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/include/QtSerialPort -I/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/include/QtSerialPort/5.10.0 -I/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/include/QtSerialPort/5.10.0/QtSerialPort -I/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/src/serialport/tmp -I/home/user/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/5.10.0 -I/home/user/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/5.10.0/QtCore -I/home/user/mxe/usr/i686-w64-mingw32.static/qt5/include -I/home/user/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore -I/home/user/mxe/usr/lib/gcc/i686-w64-mingw32.static/5.4.0/include/c++ -I/home/user/mxe/usr/lib/gcc/i686-w64-mingw32.static/5.4.0/include/c++/i686-w64-mingw32.static -I/home/user/mxe/usr/lib/gcc/i686-w64-mingw32.static/5.4.0/include/c++/backward -I/home/user/mxe/usr/lib/gcc/i686-w64-mingw32.static/5.4.0/include -I/home/user/mxe/usr/lib/gcc/i686-w64-mingw32.static/5.4.0/include-fixed -I/home/user/mxe/usr/i686-w64-mingw32.static/include qwinoverlappedionotifier_p.h -o .moc/release/moc_qwinoverlappedionotifier_p.cpp
+i686-w64-mingw32.static-g++ -c -fno-keep-inline-dllexport -pipe -mstackrealign -msse2 -mfpmath=sse -O2 -std=c++1z -fno-exceptions -Wextra -Wall -W -Wvla -Wdate-time -DUNICODE -D_UNICODE -DWINVER=0x0601 -D_WIN32_WINNT=0x0601 -DQT_NO_REDEFINE_GUID_DEVINTERFACE_MODEM -DQT_NO_NARROWING_CONVERSIONS_IN_CONNECT -DQT_BUILD_SERIALPORT_LIB -DQT_BUILDING_QT -D_CRT_SECURE_NO_WARNINGS -D_USE_MATH_DEFINES -DQT_NO_CAST_TO_ASCII -DQT_ASCII_CAST_WARNINGS -DQT_MOC_COMPAT -DQT_USE_QSTRINGBUILDER -DQT_DEPRECATED_WARNINGS -DQT_DISABLE_DEPRECATED_BEFORE=0x040800 -DQT_NO_EXCEPTIONS -DQT_NO_DEBUG -DQT_CORE_LIB -DQ_USE_SYBASE -I. -I. -I../../include -I../../include/QtSerialPort -I../../include/QtSerialPort/5.10.0 -I../../include/QtSerialPort/5.10.0/QtSerialPort -Itmp -I/home/user/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/5.10.0 -I/home/user/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/5.10.0/QtCore -I/home/user/mxe/usr/i686-w64-mingw32.static/qt5/include -I/home/user/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore -I.moc/release -I/home/user/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/win32-g++  -o .obj/release/qwinoverlappedionotifier.o qwinoverlappedionotifier.cpp
+qwinoverlappedionotifier.cpp: In member function 'OVERLAPPED* QWinOverlappedIoNotifierPrivate::waitForAnyNotified(QDeadlineTimer)':
+qwinoverlappedionotifier.cpp:319:15: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     if (msecs == -1)
+               ^
+rm -f ../../lib/libQt5SerialPort.a 2>/dev/null
+i686-w64-mingw32.static-ar -rc ../../lib/libQt5SerialPort.a .obj/release/qserialport.o .obj/release/qserialportinfo.o .obj/release/qserialport_win.o .obj/release/qserialportinfo_win.o .obj/release/qwinoverlappedionotifier.o 
+make[5]: Leaving directory '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/src/serialport'
+make[4]: Leaving directory '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/src/serialport'
+make[3]: Leaving directory '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/src'
+make[2]: Leaving directory '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0'
+make -C '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0' -j 1 install
+make[2]: Entering directory '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0'
+cd src/ && ( test -e Makefile || /home/user/mxe/usr/i686-w64-mingw32.static/qt5/bin/qmake -o Makefile /home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/src/src.pro ) && make -f Makefile install
+make[3]: Entering directory '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/src'
+cd serialport/ && ( test -e Makefile || /home/user/mxe/usr/i686-w64-mingw32.static/qt5/bin/qmake -o Makefile /home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/src/serialport/serialport.pro ) && make -f Makefile install
+make[4]: Entering directory '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/src/serialport'
+make -f Makefile.Release install
+make[5]: Entering directory '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/src/serialport'
+sed -e 's,/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/lib,$$[QT_INSTALL_LIBS],g' ../../lib/Qt5SerialPort.prl > /home/user/mxe/usr/i686-w64-mingw32.static/qt5/lib/Qt5SerialPort.prl
+sed -e s,/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/lib,/home/user/mxe/usr/i686-w64-mingw32.static/qt5/lib,g ../../lib/pkgconfig/Qt5SerialPort.pc > /home/user/mxe/usr/i686-w64-mingw32.static/qt5/lib/pkgconfig/Qt5SerialPort.pc
+install -m 644 -p ../../lib/libQt5SerialPort.a /home/user/mxe/usr/i686-w64-mingw32.static/qt5/lib/libQt5SerialPort.a
+/home/user/mxe/usr/i686-w64-mingw32.static/qt5/bin/qmake -install qinstall /home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/include/QtSerialPort/QSerialPort /home/user/mxe/usr/i686-w64-mingw32.static/qt5/include/QtSerialPort/QSerialPort
+/home/user/mxe/usr/i686-w64-mingw32.static/qt5/bin/qmake -install qinstall /home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/include/QtSerialPort/QSerialPortInfo /home/user/mxe/usr/i686-w64-mingw32.static/qt5/include/QtSerialPort/QSerialPortInfo
+/home/user/mxe/usr/i686-w64-mingw32.static/qt5/bin/qmake -install qinstall /home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/include/QtSerialPort/QtSerialPortVersion /home/user/mxe/usr/i686-w64-mingw32.static/qt5/include/QtSerialPort/QtSerialPortVersion
+/home/user/mxe/usr/i686-w64-mingw32.static/qt5/bin/qmake -install qinstall /home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/src/serialport/qserialport.h /home/user/mxe/usr/i686-w64-mingw32.static/qt5/include/QtSerialPort/qserialport.h
+/home/user/mxe/usr/i686-w64-mingw32.static/qt5/bin/qmake -install qinstall /home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/src/serialport/qserialportglobal.h /home/user/mxe/usr/i686-w64-mingw32.static/qt5/include/QtSerialPort/qserialportglobal.h
+/home/user/mxe/usr/i686-w64-mingw32.static/qt5/bin/qmake -install qinstall /home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/src/serialport/qserialportinfo.h /home/user/mxe/usr/i686-w64-mingw32.static/qt5/include/QtSerialPort/qserialportinfo.h
+/home/user/mxe/usr/i686-w64-mingw32.static/qt5/bin/qmake -install qinstall /home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/include/QtSerialPort/qtserialportversion.h /home/user/mxe/usr/i686-w64-mingw32.static/qt5/include/QtSerialPort/qtserialportversion.h
+/home/user/mxe/usr/i686-w64-mingw32.static/qt5/bin/qmake -install qinstall /home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/include/QtSerialPort/QtSerialPort /home/user/mxe/usr/i686-w64-mingw32.static/qt5/include/QtSerialPort/QtSerialPort
+/home/user/mxe/usr/i686-w64-mingw32.static/qt5/bin/qmake -install qinstall /home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/include/QtSerialPort/QtSerialPortDepends /home/user/mxe/usr/i686-w64-mingw32.static/qt5/include/QtSerialPort/QtSerialPortDepends
+/home/user/mxe/usr/i686-w64-mingw32.static/qt5/bin/qmake -install qinstall /home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/src/serialport/qserialport_p.h /home/user/mxe/usr/i686-w64-mingw32.static/qt5/include/QtSerialPort/5.10.0/QtSerialPort/private/qserialport_p.h
+/home/user/mxe/usr/i686-w64-mingw32.static/qt5/bin/qmake -install qinstall /home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/src/serialport/qserialportinfo_p.h /home/user/mxe/usr/i686-w64-mingw32.static/qt5/include/QtSerialPort/5.10.0/QtSerialPort/private/qserialportinfo_p.h
+/home/user/mxe/usr/i686-w64-mingw32.static/qt5/bin/qmake -install qinstall /home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/src/serialport/qtudev_p.h /home/user/mxe/usr/i686-w64-mingw32.static/qt5/include/QtSerialPort/5.10.0/QtSerialPort/private/qtudev_p.h
+/home/user/mxe/usr/i686-w64-mingw32.static/qt5/bin/qmake -install qinstall /home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/src/serialport/qwinoverlappedionotifier_p.h /home/user/mxe/usr/i686-w64-mingw32.static/qt5/include/QtSerialPort/5.10.0/QtSerialPort/private/qwinoverlappedionotifier_p.h
+/home/user/mxe/usr/i686-w64-mingw32.static/qt5/bin/qmake -install qinstall /home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/mkspecs/modules-inst/qt_lib_serialport.pri /home/user/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_serialport.pri
+/home/user/mxe/usr/i686-w64-mingw32.static/qt5/bin/qmake -install qinstall /home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/mkspecs/modules-inst/qt_lib_serialport_private.pri /home/user/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_serialport_private.pri
+/home/user/mxe/usr/i686-w64-mingw32.static/qt5/bin/qmake -install qinstall /home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/lib/cmake/Qt5SerialPort/Qt5SerialPortConfig.cmake /home/user/mxe/usr/i686-w64-mingw32.static/qt5/lib/cmake/Qt5SerialPort/Qt5SerialPortConfig.cmake
+/home/user/mxe/usr/i686-w64-mingw32.static/qt5/bin/qmake -install qinstall /home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/lib/cmake/Qt5SerialPort/Qt5SerialPortConfigVersion.cmake /home/user/mxe/usr/i686-w64-mingw32.static/qt5/lib/cmake/Qt5SerialPort/Qt5SerialPortConfigVersion.cmake
+make[5]: Leaving directory '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/src/serialport'
+make[4]: Leaving directory '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/src/serialport'
+make[3]: Leaving directory '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/src'
+make[2]: Leaving directory '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0'
+
+/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/config.log
+executing config test ntddmodm
++ cd /home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/config.tests/ntddmodm && /home/user/mxe/usr/i686-w64-mingw32.static/qt5/bin/qmake  -spec /home/user/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/win32-g++ "CONFIG -= qt debug_and_release app_bundle lib_bundle" /home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/config.tests/ntddmodm
++ cd /home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/config.tests/ntddmodm && MAKEFLAGS= make
+> make[2]: Entering directory '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/config.tests/ntddmodm'
+> i686-w64-mingw32.static-g++ -c -fno-keep-inline-dllexport -pipe -O2 -std=gnu++11 -fno-exceptions -Wextra -Wall -W -DUNICODE -D_UNICODE -DWINVER=0x0601 -D_WIN32_WINNT=0x0601 -DQT_NO_EXCEPTIONS -DQ_USE_SYBASE -I. -I/home/user/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/win32-g++  -o .obj/main.o main.cpp
+> main.cpp: In function 'int main(int, char**)':
+> main.cpp:39:10: warning: variable 'guid' set but not used [-Wunused-but-set-variable]
+>      GUID guid = GUID_DEVINTERFACE_MODEM;
+>           ^
+> i686-w64-mingw32.static-g++ -Wl,-s -Wl,-subsystem,console -o ntddmodm.exe .obj/main.o  
+> make[2]: Leaving directory '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/config.tests/ntddmodm'
+test ntddmodm succeeded
+
+settings.mk
+# This is a template of configuration file for MXE. See
+# docs/index.html for more extensive documentations.
+
+# This variable controls the number of compilation processes
+# within one package ("intra-package parallelism").
+#JOBS := 
+
+# This variable controls where intermediate files are created
+# this is necessary when compiling inside a virtualbox shared
+# directory. Some commands like strip fail in there with Protocol error
+# default is the current directory
+#MXE_TMP := /tmp
+
+# This variable controls the targets that will build.
+#MXE_TARGETS := i686-w64-mingw32.static i686-w64-mingw32.shared x86_64-w64-mingw32.static x86_64-w64-mingw32.shared
+
+# This variable controls which plugins are in use.
+# See plugins/README.md for further information.
+#override MXE_PLUGIN_DIRS += plugins/apps plugins/native
+
+# This variable controls the download mirror for SourceForge,
+# when it is used. Enabling the value below means auto.
+#SOURCEFORGE_MIRROR := downloads.sourceforge.net
+
+# The three lines below makes `make` build these "local
+# packages" instead of all packages.
+#LOCAL_PKG_LIST := boost curl file flac lzo pthreads vorbis wxwidgets
+#.DEFAULT_GOAL  := local-pkg-list
+#local-pkg-list: $(LOCAL_PKG_LIST)
+i686-w64-mingw32.static-strip '/home/user/mxe/usr/i686-w64-mingw32.static/bin/test-qtserialport.exe'
+i686-w64-mingw32.static-strip: '/home/user/mxe/usr/i686-w64-mingw32.static/bin/test-qtserialport.exe': No such file
+Makefile:786: recipe for target 'build-only-qtserialport_i686-w64-mingw32.static' failed
+make[1]: [build-only-qtserialport_i686-w64-mingw32.static] Error 1 (ignored)
+(du -k -d 0 '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static' 2>/dev/null || du -k --max-depth 0 '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static') | sed -n 's/^\(\S*\).*/du: \1 KiB/p'
+du: 3472 KiB
+rm -rfv  '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static'
+removed directory '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0.build_'
+removed directory '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/readonly'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/sync.profile'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/LICENSE.FDL'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/qtserialport.pro'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/.QT-FOR-AUTOMOTIVE-LICENSE-AGREEMENT'
+removed directory '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/bin'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/src/Makefile'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/src/src.pro'
+removed directory '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/src/serialport/.obj/debug'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/src/serialport/.obj/release/qserialportinfo.o'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/src/serialport/.obj/release/qserialport.o'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/src/serialport/.obj/release/qwinoverlappedionotifier.o'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/src/serialport/.obj/release/qserialportinfo_win.o'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/src/serialport/.obj/release/qserialport_win.o'
+removed directory '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/src/serialport/.obj/release'
+removed directory '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/src/serialport/.obj'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/src/serialport/Makefile.Debug'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/src/serialport/serialport-lib.pri'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/src/serialport/Makefile.Release'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/src/serialport/qserialportinfo.h'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/src/serialport/qserialportinfo_osx.cpp'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/src/serialport/qserialportglobal.h'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/src/serialport/serialport.pro'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/src/serialport/qdoc_wrapper.sh'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/src/serialport/qwinoverlappedionotifier.cpp'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/src/serialport/qserialportinfo_p.h'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/src/serialport/Makefile'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/src/serialport/qserialport_p.h'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/src/serialport/qserialportinfo_unix.cpp'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/src/serialport/qserialportinfo.cpp'
+removed directory '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/src/serialport/.pch/debug'
+removed directory '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/src/serialport/.pch/release'
+removed directory '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/src/serialport/.pch'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/src/serialport/qserialport.cpp'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/src/serialport/qserialport.h'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/src/serialport/doc/style/style.css'
+removed directory '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/src/serialport/doc/style'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/src/serialport/doc/src/qtserialport-module.qdoc'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/src/serialport/doc/src/qtserialport-examples.qdoc'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/src/serialport/doc/src/index.qdoc'
+removed directory '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/src/serialport/doc/src'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/src/serialport/doc/images/blockingslave-example.png'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/src/serialport/doc/images/creaderasync-example.png'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/src/serialport/doc/images/terminal-example.png'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/src/serialport/doc/images/cwritersync-example.png'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/src/serialport/doc/images/creadersync-example.png'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/src/serialport/doc/images/blockingmaster-example.png'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/src/serialport/doc/images/cwriterasync-example.png'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/src/serialport/doc/images/enumerator-example.png'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/src/serialport/doc/images/cenumerator-example.png'
+removed directory '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/src/serialport/doc/images'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/src/serialport/doc/qtserialport.qdocconf'
+removed directory '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/src/serialport/doc'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/src/serialport/qserialportinfo_win.cpp'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/src/serialport/qserialport_unix.cpp'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/src/serialport/qserialport_win.cpp'
+removed directory '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/src/serialport/.moc/debug'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/src/serialport/.moc/release/moc_qwinoverlappedionotifier_p.cpp'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/src/serialport/.moc/release/moc_predefs.h'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/src/serialport/.moc/release/moc_qserialport.cpp'
+removed directory '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/src/serialport/.moc/release'
+removed directory '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/src/serialport/.moc'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/src/serialport/qserialportinfo_freebsd.cpp'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/src/serialport/qtudev_p.h'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/src/serialport/qwinoverlappedionotifier_p.h'
+removed directory '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/src/serialport'
+removed directory '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/src'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/LICENSE.LGPLv21'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/.QT-ENTERPRISE-LICENSE-AGREEMENT'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/LICENSE.LGPL3'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/examples/examples.pro'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/examples/serialport/enumerator/enumerator.pro'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/examples/serialport/enumerator/main.cpp'
+removed directory '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/examples/serialport/enumerator'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/examples/serialport/terminal/terminal.pro'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/examples/serialport/terminal/settingsdialog.cpp'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/examples/serialport/terminal/images/clear.png'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/examples/serialport/terminal/images/connect.png'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/examples/serialport/terminal/images/disconnect.png'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/examples/serialport/terminal/images/application-exit.png'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/examples/serialport/terminal/images/settings.png'
+removed directory '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/examples/serialport/terminal/images'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/examples/serialport/terminal/settingsdialog.ui'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/examples/serialport/terminal/mainwindow.h'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/examples/serialport/terminal/settingsdialog.h'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/examples/serialport/terminal/console.cpp'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/examples/serialport/terminal/mainwindow.ui'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/examples/serialport/terminal/mainwindow.cpp'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/examples/serialport/terminal/terminal.qrc'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/examples/serialport/terminal/console.h'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/examples/serialport/terminal/main.cpp'
+removed directory '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/examples/serialport/terminal'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/examples/serialport/serialport.pro'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/examples/serialport/slave/dialog.cpp'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/examples/serialport/slave/dialog.h'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/examples/serialport/slave/slavethread.cpp'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/examples/serialport/slave/slavethread.h'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/examples/serialport/slave/slave.pro'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/examples/serialport/slave/main.cpp'
+removed directory '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/examples/serialport/slave'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/examples/serialport/blockingmaster/masterthread.cpp'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/examples/serialport/blockingmaster/dialog.cpp'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/examples/serialport/blockingmaster/dialog.h'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/examples/serialport/blockingmaster/blockingmaster.pro'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/examples/serialport/blockingmaster/masterthread.h'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/examples/serialport/blockingmaster/main.cpp'
+removed directory '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/examples/serialport/blockingmaster'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/examples/serialport/creadersync/creadersync.pro'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/examples/serialport/creadersync/main.cpp'
+removed directory '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/examples/serialport/creadersync'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/examples/serialport/cwritersync/cwritersync.pro'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/examples/serialport/cwritersync/main.cpp'
+removed directory '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/examples/serialport/cwritersync'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/examples/serialport/cenumerator/cenumerator.pro'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/examples/serialport/cenumerator/main.cpp'
+removed directory '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/examples/serialport/cenumerator'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/examples/serialport/master/dialog.cpp'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/examples/serialport/master/dialog.h'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/examples/serialport/master/master.pro'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/examples/serialport/master/main.cpp'
+removed directory '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/examples/serialport/master'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/examples/serialport/cwriterasync/serialportwriter.h'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/examples/serialport/cwriterasync/serialportwriter.cpp'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/examples/serialport/cwriterasync/cwriterasync.pro'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/examples/serialport/cwriterasync/main.cpp'
+removed directory '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/examples/serialport/cwriterasync'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/examples/serialport/blockingslave/dialog.cpp'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/examples/serialport/blockingslave/dialog.h'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/examples/serialport/blockingslave/slavethread.cpp'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/examples/serialport/blockingslave/blockingslave.pro'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/examples/serialport/blockingslave/slavethread.h'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/examples/serialport/blockingslave/main.cpp'
+removed directory '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/examples/serialport/blockingslave'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/examples/serialport/creaderasync/serialportreader.cpp'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/examples/serialport/creaderasync/serialportreader.h'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/examples/serialport/creaderasync/creaderasync.pro'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/examples/serialport/creaderasync/main.cpp'
+removed directory '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/examples/serialport/creaderasync'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/examples/serialport/doc/enumerator.qdoc'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/examples/serialport/doc/creadersync.qdoc'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/examples/serialport/doc/cwritersync.qdoc'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/examples/serialport/doc/cenumerator.qdoc'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/examples/serialport/doc/cwriterasync.qdoc'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/examples/serialport/doc/blockingslave.qdoc'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/examples/serialport/doc/terminal.qdoc'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/examples/serialport/doc/creaderasync.qdoc'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/examples/serialport/doc/blockingmaster.qdoc'
+removed directory '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/examples/serialport/doc'
+removed directory '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/examples/serialport'
+removed directory '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/examples'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/.qmake.cache'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/.QT-FOR-APPLICATION-DEVELOPMENT-LICENSE-AGREEMENT'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/.tag'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/lib/Qt5SerialPort.prl'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/lib/pkgconfig/Qt5SerialPort.pc'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/lib/pkgconfig/Qt5SerialPortd.pc'
+removed directory '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/lib/pkgconfig'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/lib/Qt5SerialPortd.prl'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/lib/cmake/Qt5SerialPort/Qt5SerialPortConfig.cmake'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/lib/cmake/Qt5SerialPort/Qt5SerialPortConfigVersion.cmake'
+removed directory '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/lib/cmake/Qt5SerialPort'
+removed directory '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/lib/cmake'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/lib/libQt5SerialPort.a'
+removed directory '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/lib'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/include/QtSerialPort/QtSerialPortVersion'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/include/QtSerialPort/qserialportinfo.h'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/include/QtSerialPort/qserialportglobal.h'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/include/QtSerialPort/QSerialPortInfo'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/include/QtSerialPort/headers.pri'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/include/QtSerialPort/QSerialPort'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/include/QtSerialPort/QtSerialPort'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/include/QtSerialPort/5.10.0/QtSerialPort/private/qserialportinfo_p.h'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/include/QtSerialPort/5.10.0/QtSerialPort/private/qserialport_p.h'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/include/QtSerialPort/5.10.0/QtSerialPort/private/qtudev_p.h'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/include/QtSerialPort/5.10.0/QtSerialPort/private/qwinoverlappedionotifier_p.h'
+removed directory '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/include/QtSerialPort/5.10.0/QtSerialPort/private'
+removed directory '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/include/QtSerialPort/5.10.0/QtSerialPort'
+removed directory '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/include/QtSerialPort/5.10.0'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/include/QtSerialPort/qserialport.h'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/include/QtSerialPort/QtSerialPortDepends'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/include/QtSerialPort/qtserialportversion.h'
+removed directory '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/include/QtSerialPort'
+removed directory '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/include'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/Makefile'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/LICENSE.GPL2'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/LICENSE.LGPLv3'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/.qmake.conf'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/.QT-FOR-AUTOMATION-LICENSE-AGREEMENT'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/LICENSE.GPL3-EXCEPT'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/config.tests/ntddmodm/.obj/main.o'
+removed directory '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/config.tests/ntddmodm/.obj'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/config.tests/ntddmodm/ntddmodm.pro'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/config.tests/ntddmodm/ntddmodm.exe'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/config.tests/ntddmodm/Makefile'
+removed directory '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/config.tests/ntddmodm/.pch'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/config.tests/ntddmodm/main.cpp'
+removed directory '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/config.tests/ntddmodm'
+removed directory '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/config.tests'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/LICENSE.GPLv3'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/.qmake.stash'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/.QT-INDIE-LICENSE-AGREEMENT'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/LICENSE.GPLv2'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/.QT-FOR-DEVICE-CREATION-LICENSE-AGREEMENT'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/dist/changes-5.5.0'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/dist/changes-5.6.2'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/dist/changes-5.4.0'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/dist/changes-5.3.1'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/dist/changes-5.10.0'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/dist/changes-5.3.2'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/dist/changes-5.9.1'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/dist/changes-5.7.1'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/dist/changes-5.9.3'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/dist/changes-5.7.0'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/dist/changes-5.6.0'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/dist/changes-5.1.1'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/dist/changes-5.6.1'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/dist/changes-5.8.0'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/dist/changes-5.9.0'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/dist/changes-5.2.1'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/dist/changes-5.2.0'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/dist/changes-5.9.2'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/dist/changes-5.6.3'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/dist/changes-5.3.0'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/dist/changes-5.5.1'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/dist/changes-5.4.1'
+removed directory '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/dist'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/.QT-PROFESSIONAL-LICENSE-AGREEMENT'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/config.log'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/mkspecs/modules-inst/qt_lib_serialport_private.pri'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/mkspecs/modules-inst/qt_lib_serialport.pri'
+removed directory '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/mkspecs/modules-inst'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/mkspecs/modules/qt_lib_serialport.pri'
+removed directory '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/mkspecs/modules'
+removed directory '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/mkspecs'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/tests/global/global.cfg'
+removed directory '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/tests/global'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/tests/tests.pro'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/tests/auto/auto.pro'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/tests/auto/qserialportinfo/tst_qserialportinfo.cpp'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/tests/auto/qserialportinfo/qserialportinfo.pro'
+removed directory '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/tests/auto/qserialportinfo'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/tests/auto/qserialport/qserialport.pro'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/tests/auto/qserialport/tst_qserialport.cpp'
+removed directory '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/tests/auto/qserialport'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/tests/auto/qserialportinfoprivate/qserialportinfoprivate.pro'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/tests/auto/qserialportinfoprivate/tst_qserialportinfoprivate.cpp'
+removed directory '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/tests/auto/qserialportinfoprivate'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/tests/auto/bic/data/QtSerialPort.5.4.0.linux-gcc-amd64.txt'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/tests/auto/bic/data/QtSerialPort.5.9.0.linux-gcc-amd64.txt'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/tests/auto/bic/data/QtSerialPort.5.6.0.linux-gcc-amd64.txt'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/tests/auto/bic/data/QtSerialPort.5.2.0.linux-gcc-amd64.txt'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/tests/auto/bic/data/QtSerialPort.5.7.0.linux-gcc-amd64.txt'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/tests/auto/bic/data/QtSerialPort.5.8.0.linux-gcc-amd64.txt'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/tests/auto/bic/data/QtSerialPort.5.1.0.linux-gcc-amd64.txt'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/tests/auto/bic/data/QtSerialPort.5.3.0.linux-gcc-amd64.txt'
+removed directory '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/tests/auto/bic/data'
+removed directory '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/tests/auto/bic'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/tests/auto/cmake/cmake.pro'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/tests/auto/cmake/CMakeLists.txt'
+removed directory '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/tests/auto/cmake'
+removed directory '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/tests/auto'
+removed directory '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/tests'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/LICENSE.GPL3'
+removed '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0/LGPL_EXCEPTION.txt'
+removed directory '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static/qtserialport-everywhere-src-5.10.0'
+removed directory '/home/user/mxe/tmp-qtserialport-i686-w64-mingw32.static'
+touch '/home/user/mxe/usr/i686-w64-mingw32.static/installed/qtserialport'
+make[1]: Leaving directory '/home/user/mxe'
+
+real	0m43.293s
+user	0m30.729s
+sys	0m10.846s

@@ -1,0 +1,2 @@
+../../test-driver: line 107: ./t-sqrlo.exe: cannot execute binary file: Exec format error
+FAIL t-sqrlo.exe (exit status: 126)

@@ -1,0 +1,2 @@
+../../test-driver: line 107: ./t-bin.exe: cannot execute binary file: Exec format error
+FAIL t-bin.exe (exit status: 126)

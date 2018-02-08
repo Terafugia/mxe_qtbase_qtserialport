@@ -1,0 +1,21 @@
+--2018-02-08 17:34:37--  https://download.qt.io/official_releases/qt/5.10/5.10.0/submodules/qtserialport-everywhere-src-5.10.0.tar.xz
+Resolving download.qt.io (download.qt.io)... 77.86.229.90
+Connecting to download.qt.io (download.qt.io)|77.86.229.90|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: http://master.qt.io/archive/qt/5.10/5.10.0/submodules/qtserialport-everywhere-src-5.10.0.tar.xz [following]
+--2018-02-08 17:34:38--  http://master.qt.io/archive/qt/5.10/5.10.0/submodules/qtserialport-everywhere-src-5.10.0.tar.xz
+Resolving master.qt.io (master.qt.io)... 77.86.229.89
+Connecting to master.qt.io (master.qt.io)|77.86.229.89|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 296036 (289K) [application/x-xz]
+Saving to: ‘/home/user/mxe/pkg/.tmp-qtserialport-everywhere-src-5.10.0.tar.xz’
+
+     0K .......... .......... .......... .......... .......... 17%  279K 1s
+    50K .......... .......... .......... .......... .......... 34%  292K 1s
+   100K .......... .......... .......... .......... .......... 51% 9.13M 0s
+   150K .......... .......... .......... .......... .......... 69%  567K 0s
+   200K .......... .......... .......... .......... .......... 86%  610K 0s
+   250K .......... .......... .......... .........            100% 11.2M=0.5s
+
+2018-02-08 17:34:40 (546 KB/s) - ‘/home/user/mxe/pkg/.tmp-qtserialport-everywhere-src-5.10.0.tar.xz’ saved [296036/296036]
+

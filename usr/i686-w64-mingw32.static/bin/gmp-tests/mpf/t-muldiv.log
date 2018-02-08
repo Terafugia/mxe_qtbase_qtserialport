@@ -1,0 +1,2 @@
+../../test-driver: line 107: ./t-muldiv.exe: cannot execute binary file: Exec format error
+FAIL t-muldiv.exe (exit status: 126)

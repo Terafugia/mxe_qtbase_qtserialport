@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+exec "/home/user/mxe/usr/i686-pc-linux-gnu/bin/cmake" "$@" -P "/home/user/mxe/usr/share/cmake/modules/configure_file.cmake"

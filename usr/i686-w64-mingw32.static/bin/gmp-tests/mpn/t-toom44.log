@@ -1,0 +1,2 @@
+../../test-driver: line 107: ./t-toom44.exe: cannot execute binary file: Exec format error
+FAIL t-toom44.exe (exit status: 126)

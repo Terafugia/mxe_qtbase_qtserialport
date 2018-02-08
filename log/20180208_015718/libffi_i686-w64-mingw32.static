@@ -1,0 +1,3803 @@
+make[1]: Entering directory '/home/user/mxe'
+uname -a
+Linux user-VirtualBox 4.13.0-21-generic #24-Ubuntu SMP Mon Dec 18 17:29:35 UTC 2017 i686 i686 i686 GNU/Linux
+git log --pretty=tformat:"%H - %s [%ar] [%d]" -1
+1b7d2e0562f2ec93848f536d2a9d4cd414356d9e - Update packages.json & build-matrix.html [3 days ago] [ (HEAD -> master, origin/master, origin/HEAD)]
+lsb_release -a 2>/dev/null || sw_vers 2>/dev/null || true
+Distributor ID:	Ubuntu
+Description:	Ubuntu 17.10
+Release:	17.10
+Codename:	artful
+autoconf --version 2>/dev/null | head -1
+autoconf (GNU Autoconf) 2.69
+automake --version 2>/dev/null | head -1
+automake (GNU automake) 1.15
+gcc --version
+gcc (Ubuntu 7.2.0-8ubuntu3) 7.2.0
+Copyright (C) 2017 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+g++ --version
+g++ (Ubuntu 7.2.0-8ubuntu3) 7.2.0
+Copyright (C) 2017 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+python --version
+Python 2.7.14
+perl --version 2>&1 | head -3
+
+This is perl 5, version 26, subversion 0 (v5.26.0) built for i686-linux-gnu-thread-multi-64int
+(with 56 registered patches, see perl -V for more detail)
+rm -rf   '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static'
+mkdir -p '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static'
+mkdir -p '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1'
+mkdir -p '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1.build_'
+# disable wine with readonly directory
+# see https://github.com/mxe/mxe/issues/841
+mkdir -p '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/readonly'
+chmod 0555 '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/readonly'
+cd '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static' &&  tar xzf '/home/user/mxe/pkg/libffi-3.2.1.tar.gz'
+cd '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1'
+cd '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1' && ./configure --host='i686-w64-mingw32.static' --build='i686-pc-linux-gnu' --prefix='/home/user/mxe/usr/i686-w64-mingw32.static'  --enable-static --disable-shared  ac_cv_prog_HAVE_DOXYGEN="false" --enable-doc=no --enable-gtk-doc=no --enable-gtk-doc-html=no --enable-gtk-doc-pdf=no --{docdir,infodir,mandir,with-html-dir}='/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1.build_.sink' --disable-doxygen
+configure: WARNING: unrecognized options: --enable-doc, --enable-gtk-doc, --enable-gtk-doc-html, --enable-gtk-doc-pdf, --with-html-dir, --disable-doxygen
+configure: loading site script /home/user/mxe/usr/i686-w64-mingw32.static/share/config.site
+checking build system type... (cached) i686-pc-linux-gnu
+checking host system type... i686-w64-mingw32.static
+checking target system type... i686-w64-mingw32.static
+continue configure in default builddir "./i686-w64-mingw32.static"
+....exec /bin/bash .././configure "--srcdir=.." "--enable-builddir=i686-w64-mingw32.static" "mingw32.static"
+configure: WARNING: unrecognized options: --enable-doc, --enable-gtk-doc, --enable-gtk-doc-html, --enable-gtk-doc-pdf, --with-html-dir, --disable-doxygen
+configure: loading site script /home/user/mxe/usr/i686-w64-mingw32.static/share/config.site
+checking build system type... (cached) i686-pc-linux-gnu
+checking host system type... i686-w64-mingw32.static
+checking target system type... i686-w64-mingw32.static
+checking for gsed... sed
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for i686-w64-mingw32.static-strip... i686-w64-mingw32.static-strip
+checking for a thread-safe mkdir -p... /bin/mkdir -p
+checking for gawk... no
+checking for mawk... mawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking for i686-w64-mingw32.static-gcc... i686-w64-mingw32.static-gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.exe
+checking for suffix of executables... .exe
+checking whether we are cross compiling... yes
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether i686-w64-mingw32.static-gcc accepts -g... yes
+checking for i686-w64-mingw32.static-gcc option to accept ISO C89... none needed
+checking for style of include used by make... GNU
+checking dependency style of i686-w64-mingw32.static-gcc... gcc3
+checking for i686-w64-mingw32.static-g++... i686-w64-mingw32.static-g++
+checking whether we are using the GNU C++ compiler... yes
+checking whether i686-w64-mingw32.static-g++ accepts -g... yes
+checking dependency style of i686-w64-mingw32.static-g++... gcc3
+checking dependency style of i686-w64-mingw32.static-gcc... gcc3
+checking whether i686-w64-mingw32.static-gcc and cc understand -c and -o together... yes
+checking how to print strings... printf
+checking for a sed that does not truncate output... /bin/sed
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for fgrep... /bin/grep -F
+checking for ld used by i686-w64-mingw32.static-gcc... /home/user/mxe/usr/bin/i686-w64-mingw32.static-ld
+checking if the linker (/home/user/mxe/usr/bin/i686-w64-mingw32.static-ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /home/user/mxe/usr/bin/i686-w64-mingw32.static-nm -B
+checking the name lister (/home/user/mxe/usr/bin/i686-w64-mingw32.static-nm -B) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 1572864
+checking whether the shell understands some XSI constructs... yes
+checking whether the shell understands "+="... yes
+checking how to convert i686-pc-linux-gnu file names to i686-w64-mingw32.static format... func_convert_file_nix_to_w32
+checking how to convert i686-pc-linux-gnu file names to toolchain format... func_convert_file_noop
+checking for /home/user/mxe/usr/bin/i686-w64-mingw32.static-ld option to reload object files... -r
+checking for i686-w64-mingw32.static-objdump... i686-w64-mingw32.static-objdump
+checking how to recognize dependent libraries... file_magic ^x86 archive import|^x86 DLL
+checking for i686-w64-mingw32.static-dlltool... i686-w64-mingw32.static-dlltool
+checking how to associate runtime and link libraries... func_cygming_dll_for_implib
+checking for i686-w64-mingw32.static-ar... i686-w64-mingw32.static-ar
+checking for archiver @FILE support... @
+checking for i686-w64-mingw32.static-strip... (cached) i686-w64-mingw32.static-strip
+checking for i686-w64-mingw32.static-ranlib... i686-w64-mingw32.static-ranlib
+checking command to parse /home/user/mxe/usr/bin/i686-w64-mingw32.static-nm -B output from i686-w64-mingw32.static-gcc object... ok
+checking for sysroot... no
+checking for i686-w64-mingw32.static-mt... no
+checking for mt... mt
+configure: WARNING: using cross tools not prefixed with host triplet
+checking if mt is a manifest tool... no
+checking how to run the C preprocessor... i686-w64-mingw32.static-gcc -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking for dlfcn.h... no
+checking for objdir... .libs
+checking if i686-w64-mingw32.static-gcc supports -fno-rtti -fno-exceptions... no
+checking for i686-w64-mingw32.static-gcc option to produce PIC... -DDLL_EXPORT -DPIC
+checking if i686-w64-mingw32.static-gcc PIC flag -DDLL_EXPORT -DPIC works... yes
+checking if i686-w64-mingw32.static-gcc static flag -static works... yes
+checking if i686-w64-mingw32.static-gcc supports -c -o file.o... yes
+checking if i686-w64-mingw32.static-gcc supports -c -o file.o... (cached) yes
+checking whether the i686-w64-mingw32.static-gcc linker (/home/user/mxe/usr/bin/i686-w64-mingw32.static-ld) supports shared libraries... yes
+checking dynamic linker characteristics... Win32 ld.exe
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... no
+checking whether to build static libraries... yes
+checking how to run the C++ preprocessor... i686-w64-mingw32.static-g++ -E
+checking for ld used by i686-w64-mingw32.static-g++... /home/user/mxe/usr/bin/i686-w64-mingw32.static-ld
+checking if the linker (/home/user/mxe/usr/bin/i686-w64-mingw32.static-ld) is GNU ld... yes
+checking whether the i686-w64-mingw32.static-g++ linker (/home/user/mxe/usr/bin/i686-w64-mingw32.static-ld) supports shared libraries... yes
+checking for i686-w64-mingw32.static-g++ option to produce PIC... -DDLL_EXPORT -DPIC
+checking if i686-w64-mingw32.static-g++ PIC flag -DDLL_EXPORT -DPIC works... yes
+checking if i686-w64-mingw32.static-g++ static flag -static works... yes
+checking if i686-w64-mingw32.static-g++ supports -c -o file.o... yes
+checking if i686-w64-mingw32.static-g++ supports -c -o file.o... (cached) yes
+checking whether the i686-w64-mingw32.static-g++ linker (/home/user/mxe/usr/bin/i686-w64-mingw32.static-ld) supports shared libraries... yes
+checking dynamic linker characteristics... Win32 ld.exe
+checking how to hardcode library paths into programs... immediate
+checking size of size_t... 4
+checking for C compiler vendor... gnu
+checking whether C compiler accepts -fstrict-aliasing... yes
+checking whether C compiler accepts -ffast-math... yes
+checking for gcc architecture flag... 
+checking for gcc architecture flag... unknown
+checking whether C compiler accepts -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math... yes
+checking CFLAGS for maximum warnings... -Wall
+checking whether to enable maintainer-specific portions of Makefiles... no
+checking sys/mman.h usability... no
+checking sys/mman.h presence... no
+checking for sys/mman.h... no
+checking for mmap... no
+checking for mkostemp... no
+checking for sys/mman.h... (cached) no
+checking for mmap... (cached) no
+checking for ANSI C header files... (cached) yes
+checking for memcpy... yes
+checking for size_t... yes
+checking for working alloca.h... no
+checking for alloca... yes
+checking size of double... 8
+checking size of long double... 12
+checking whether byte ordering is bigendian... no
+checking assembler .cfi pseudo-op support... yes
+checking assembler supports pc related relocs... yes
+checking assembler .ascii pseudo-op support... yes
+checking assembler .string pseudo-op support... yes
+checking for _ prefix in compiled symbols... yes
+checking whether .eh_frame section should be read-only... no
+checking for __attribute__((visibility("hidden")))... no
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating include/Makefile
+config.status: creating include/ffi.h
+config.status: creating Makefile
+config.status: creating testsuite/Makefile
+config.status: creating man/Makefile
+config.status: creating libffi.pc
+config.status: creating fficonfig.h
+config.status: linking ../src/x86/ffitarget.h to include/ffitarget.h
+config.status: executing buildir commands
+config.status: create top_srcdir/Makefile guessed from local Makefile
+config.status: build in i686-w64-mingw32.static (HOST=)
+config.status: executing depfiles commands
+config.status: executing libtool commands
+config.status: executing include commands
+config.status: executing src commands
+configure: WARNING: unrecognized options: --enable-doc, --enable-gtk-doc, --enable-gtk-doc-html, --enable-gtk-doc-pdf, --with-html-dir, --disable-doxygen
+make -C '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static' -j '1'
+make[2]: Entering directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static'
+make 'AR_FLAGS=' 'CC_FOR_BUILD=' 'CFLAGS=-O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math  -Wall -fexceptions' 'CXXFLAGS=-g -O2' 'CFLAGS_FOR_BUILD=' 'CFLAGS_FOR_TARGET=' 'INSTALL=/usr/bin/install -c' 'INSTALL_DATA=/usr/bin/install -c -m 644' 'INSTALL_PROGRAM=/usr/bin/install -c' 'INSTALL_SCRIPT=/usr/bin/install -c' 'JC1FLAGS=' 'LDFLAGS=' 'LIBCFLAGS=' 'LIBCFLAGS_FOR_TARGET=' 'MAKE=make' 'MAKEINFO=/bin/bash /home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/missing makeinfo ' 'PICFLAG=' 'PICFLAG_FOR_TARGET=' 'RUNTESTFLAGS=' 'SHELL=/bin/bash' 'exec_prefix=/home/user/mxe/usr/i686-w64-mingw32.static' 'infodir=/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1.build_.sink' 'libdir=/home/user/mxe/usr/i686-w64-mingw32.static/lib' 'mandir=/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1.build_.sink' 'prefix=/home/user/mxe/usr/i686-w64-mingw32.static' 'AR=i686-w64-mingw32.static-ar' 'AS=as' 'CC=i686-w64-mingw32.static-gcc' 'CXX=i686-w64-mingw32.static-g++' 'LD=/home/user/mxe/usr/bin/i686-w64-mingw32.static-ld' 'NM=/home/user/mxe/usr/bin/i686-w64-mingw32.static-nm -B' 'RANLIB=i686-w64-mingw32.static-ranlib' 'DESTDIR=' all-recursive
+make[3]: Entering directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static'
+Making all in include
+make[4]: Entering directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/include'
+make[4]: Nothing to be done for 'all'.
+make[4]: Leaving directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/include'
+Making all in testsuite
+make[4]: Entering directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/testsuite'
+make[4]: Nothing to be done for 'all'.
+make[4]: Leaving directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/testsuite'
+Making all in man
+make[4]: Entering directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/man'
+make[4]: Nothing to be done for 'all'.
+make[4]: Leaving directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/man'
+make[4]: Entering directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static'
+depbase=`echo src/prep_cif.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ./libtool  --tag=CC   --mode=compile i686-w64-mingw32.static-gcc -DHAVE_CONFIG_H -I. -I..  -I. -I../include -Iinclude -I../src   -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math  -Wall -fexceptions -MT src/prep_cif.lo -MD -MP -MF $depbase.Tpo -c -o src/prep_cif.lo ../src/prep_cif.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  i686-w64-mingw32.static-gcc -DHAVE_CONFIG_H -I. -I.. -I. -I../include -Iinclude -I../src -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -Wall -fexceptions -MT src/prep_cif.lo -MD -MP -MF src/.deps/prep_cif.Tpo -c ../src/prep_cif.c -o src/prep_cif.o
+depbase=`echo src/types.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ./libtool  --tag=CC   --mode=compile i686-w64-mingw32.static-gcc -DHAVE_CONFIG_H -I. -I..  -I. -I../include -Iinclude -I../src   -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math  -Wall -fexceptions -MT src/types.lo -MD -MP -MF $depbase.Tpo -c -o src/types.lo ../src/types.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  i686-w64-mingw32.static-gcc -DHAVE_CONFIG_H -I. -I.. -I. -I../include -Iinclude -I../src -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -Wall -fexceptions -MT src/types.lo -MD -MP -MF src/.deps/types.Tpo -c ../src/types.c -o src/types.o
+depbase=`echo src/raw_api.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ./libtool  --tag=CC   --mode=compile i686-w64-mingw32.static-gcc -DHAVE_CONFIG_H -I. -I..  -I. -I../include -Iinclude -I../src   -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math  -Wall -fexceptions -MT src/raw_api.lo -MD -MP -MF $depbase.Tpo -c -o src/raw_api.lo ../src/raw_api.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  i686-w64-mingw32.static-gcc -DHAVE_CONFIG_H -I. -I.. -I. -I../include -Iinclude -I../src -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -Wall -fexceptions -MT src/raw_api.lo -MD -MP -MF src/.deps/raw_api.Tpo -c ../src/raw_api.c -o src/raw_api.o
+depbase=`echo src/java_raw_api.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ./libtool  --tag=CC   --mode=compile i686-w64-mingw32.static-gcc -DHAVE_CONFIG_H -I. -I..  -I. -I../include -Iinclude -I../src   -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math  -Wall -fexceptions -MT src/java_raw_api.lo -MD -MP -MF $depbase.Tpo -c -o src/java_raw_api.lo ../src/java_raw_api.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  i686-w64-mingw32.static-gcc -DHAVE_CONFIG_H -I. -I.. -I. -I../include -Iinclude -I../src -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -Wall -fexceptions -MT src/java_raw_api.lo -MD -MP -MF src/.deps/java_raw_api.Tpo -c ../src/java_raw_api.c -o src/java_raw_api.o
+depbase=`echo src/closures.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ./libtool  --tag=CC   --mode=compile i686-w64-mingw32.static-gcc -DHAVE_CONFIG_H -I. -I..  -I. -I../include -Iinclude -I../src   -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math  -Wall -fexceptions -MT src/closures.lo -MD -MP -MF $depbase.Tpo -c -o src/closures.lo ../src/closures.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  i686-w64-mingw32.static-gcc -DHAVE_CONFIG_H -I. -I.. -I. -I../include -Iinclude -I../src -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -Wall -fexceptions -MT src/closures.lo -MD -MP -MF src/.deps/closures.Tpo -c ../src/closures.c -o src/closures.o
+depbase=`echo src/x86/ffi.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ./libtool  --tag=CC   --mode=compile i686-w64-mingw32.static-gcc -DHAVE_CONFIG_H -I. -I..  -I. -I../include -Iinclude -I../src   -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math  -Wall -fexceptions -MT src/x86/ffi.lo -MD -MP -MF $depbase.Tpo -c -o src/x86/ffi.lo ../src/x86/ffi.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  i686-w64-mingw32.static-gcc -DHAVE_CONFIG_H -I. -I.. -I. -I../include -Iinclude -I../src -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -Wall -fexceptions -MT src/x86/ffi.lo -MD -MP -MF src/x86/.deps/ffi.Tpo -c ../src/x86/ffi.c -o src/x86/ffi.o
+depbase=`echo src/x86/win32.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ./libtool    --mode=compile i686-w64-mingw32.static-gcc -DHAVE_CONFIG_H -I. -I..  -I. -I../include -Iinclude -I../src  -I. -I../include -Iinclude -I../src  -MT src/x86/win32.lo -MD -MP -MF $depbase.Tpo -c -o src/x86/win32.lo ../src/x86/win32.S &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  i686-w64-mingw32.static-gcc -DHAVE_CONFIG_H -I. -I.. -I. -I../include -Iinclude -I../src -I. -I../include -Iinclude -I../src -MT src/x86/win32.lo -MD -MP -MF src/x86/.deps/win32.Tpo -c ../src/x86/win32.S -o src/x86/win32.o
+/bin/bash ./libtool  --tag=CC   --mode=link i686-w64-mingw32.static-gcc  -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math  -Wall -fexceptions   -o libffi_convenience.la  src/prep_cif.lo src/types.lo src/raw_api.lo src/java_raw_api.lo src/closures.lo      src/x86/ffi.lo src/x86/win32.lo                                    
+libtool: link: i686-w64-mingw32.static-ar cru .libs/libffi_convenience.a  src/prep_cif.o src/types.o src/raw_api.o src/java_raw_api.o src/closures.o src/x86/ffi.o src/x86/win32.o
+i686-w64-mingw32.static-ar: `u' modifier ignored since `D' is the default (see `U')
+libtool: link: i686-w64-mingw32.static-ranlib .libs/libffi_convenience.a
+libtool: link: ( cd ".libs" && rm -f "libffi_convenience.la" && ln -s "../libffi_convenience.la" "libffi_convenience.la" )
+/bin/bash ./libtool  --tag=CC   --mode=link i686-w64-mingw32.static-gcc  -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math  -Wall -fexceptions -no-undefined -version-info `grep -v '^#' ../libtool-version`  -no-undefined -bindir "/home/user/mxe/usr/i686-w64-mingw32.static/bin"  -o libffi.la -rpath /home/user/mxe/usr/i686-w64-mingw32.static/lib/../lib src/prep_cif.lo src/types.lo src/raw_api.lo src/java_raw_api.lo src/closures.lo      src/x86/ffi.lo src/x86/win32.lo                                    
+libtool: link: i686-w64-mingw32.static-ar cru .libs/libffi.a  src/prep_cif.o src/types.o src/raw_api.o src/java_raw_api.o src/closures.o src/x86/ffi.o src/x86/win32.o
+i686-w64-mingw32.static-ar: `u' modifier ignored since `D' is the default (see `U')
+libtool: link: i686-w64-mingw32.static-ranlib .libs/libffi.a
+libtool: link: ( cd ".libs" && rm -f "libffi.la" && ln -s "../libffi.la" "libffi.la" )
+make[4]: Leaving directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static'
+make[3]: Leaving directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static'
+make[2]: Leaving directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static'
+make -C '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static' -j 1 install
+make[2]: Entering directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static'
+Making install in include
+make[3]: Entering directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/include'
+make[4]: Entering directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/include'
+make[4]: Nothing to be done for 'install-exec-am'.
+ /bin/mkdir -p '/home/user/mxe/usr/i686-w64-mingw32.static/lib/libffi-3.2.1/include'
+ /usr/bin/install -c -m 644 ffi.h ffitarget.h '/home/user/mxe/usr/i686-w64-mingw32.static/lib/libffi-3.2.1/include'
+make[4]: Leaving directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/include'
+make[3]: Leaving directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/include'
+Making install in testsuite
+make[3]: Entering directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/testsuite'
+make[4]: Entering directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/testsuite'
+make[4]: Nothing to be done for 'install-exec-am'.
+make[4]: Nothing to be done for 'install-data-am'.
+make[4]: Leaving directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/testsuite'
+make[3]: Leaving directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/testsuite'
+Making install in man
+make[3]: Entering directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/man'
+make[4]: Entering directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/man'
+make[4]: Nothing to be done for 'install-exec-am'.
+ /bin/mkdir -p '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1.build_.sink/man3'
+ /usr/bin/install -c -m 644 ../../man/ffi.3 ../../man/ffi_call.3 ../../man/ffi_prep_cif.3 ../../man/ffi_prep_cif_var.3 '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1.build_.sink/man3'
+make[4]: Leaving directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/man'
+make[3]: Leaving directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/man'
+make[3]: Entering directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static'
+make[4]: Entering directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static'
+ /bin/mkdir -p '/home/user/mxe/usr/i686-w64-mingw32.static/lib/../lib'
+ /bin/bash ./libtool   --mode=install /usr/bin/install -c   libffi.la '/home/user/mxe/usr/i686-w64-mingw32.static/lib/../lib'
+libtool: install: /usr/bin/install -c .libs/libffi.lai /home/user/mxe/usr/i686-w64-mingw32.static/lib/../lib/libffi.la
+libtool: install: /usr/bin/install -c .libs/libffi.a /home/user/mxe/usr/i686-w64-mingw32.static/lib/../lib/libffi.a
+libtool: install: chmod 644 /home/user/mxe/usr/i686-w64-mingw32.static/lib/../lib/libffi.a
+libtool: install: i686-w64-mingw32.static-ranlib /home/user/mxe/usr/i686-w64-mingw32.static/lib/../lib/libffi.a
+ /bin/mkdir -p '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1.build_.sink'
+ /usr/bin/install -c -m 644 ../doc/libffi.info '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1.build_.sink'
+ install-info --info-dir='/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1.build_.sink' '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1.build_.sink/libffi.info'
+ /bin/mkdir -p '/home/user/mxe/usr/i686-w64-mingw32.static/lib/pkgconfig'
+ /usr/bin/install -c -m 644 libffi.pc '/home/user/mxe/usr/i686-w64-mingw32.static/lib/pkgconfig'
+make[4]: Leaving directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static'
+make[3]: Leaving directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static'
+make[2]: Leaving directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static'
+'i686-w64-mingw32.static-gcc' -W -Wall -Werror -std=c99 -pedantic '/home/user/mxe/src/libffi-test.c' -o '/home/user/mxe/usr/i686-w64-mingw32.static/bin/test-libffi.exe' `'i686-w64-mingw32.static-pkg-config' libffi --cflags --libs`
+
+/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/config.log
+This file contains any messages produced by compilers while
+running configure, to aid debugging if configure makes a mistake.
+
+It was created by libffi configure 3.2.1, which was
+generated by GNU Autoconf 2.69.  Invocation command line was
+
+  $ .././configure --srcdir=.. --enable-builddir=i686-w64-mingw32.static --host=i686-w64-mingw32.static --build=i686-pc-linux-gnu --prefix=/home/user/mxe/usr/i686-w64-mingw32.static --enable-static --disable-shared ac_cv_prog_HAVE_DOXYGEN=false --enable-doc=no --enable-gtk-doc=no --enable-gtk-doc-html=no --enable-gtk-doc-pdf=no --docdir=/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1.build_.sink --infodir=/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1.build_.sink --mandir=/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1.build_.sink --with-html-dir=/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1.build_.sink --disable-doxygen build_alias=i686-pc-linux-gnu host_alias=i686-w64-mingw32.static
+
+## --------- ##
+## Platform. ##
+## --------- ##
+
+hostname = user-VirtualBox
+uname -m = i686
+uname -r = 4.13.0-21-generic
+uname -s = Linux
+uname -v = #24-Ubuntu SMP Mon Dec 18 17:29:35 UTC 2017
+
+/usr/bin/uname -p = unknown
+/bin/uname -X     = unknown
+
+/bin/arch              = unknown
+/usr/bin/arch -k       = unknown
+/usr/convex/getsysinfo = unknown
+/usr/bin/hostinfo      = unknown
+/bin/machine           = unknown
+/usr/bin/oslevel       = unknown
+/bin/universe          = unknown
+
+PATH: /home/user/mxe/usr/i686-pc-linux-gnu/bin
+PATH: /home/user/mxe/usr/bin
+PATH: /home/user/mxe/usr/i686-pc-linux-gnu/bin
+PATH: /home/user/mxe/usr/bin
+PATH: /usr/local/sbin
+PATH: /usr/local/bin
+PATH: /usr/sbin
+PATH: /usr/bin
+PATH: /sbin
+PATH: /bin
+PATH: /usr/games
+PATH: /usr/local/games
+PATH: /snap/bin
+
+
+## ----------- ##
+## Core tests. ##
+## ----------- ##
+
+configure:2613: loading site script /home/user/mxe/usr/i686-w64-mingw32.static/share/config.site
+| ac_cv_build=i686-pc-linux-gnu
+configure:2745: checking build system type
+configure:2759: result: i686-pc-linux-gnu
+configure:2779: checking host system type
+configure:2792: result: i686-w64-mingw32.static
+configure:2812: checking target system type
+configure:2825: result: i686-w64-mingw32.static
+configure:2922: checking for gsed
+configure:2953: result: sed
+configure:2981: checking for a BSD-compatible install
+configure:3049: result: /usr/bin/install -c
+configure:3060: checking whether build environment is sane
+configure:3115: result: yes
+configure:3171: checking for i686-w64-mingw32.static-strip
+configure:3187: found /home/user/mxe/usr/bin/i686-w64-mingw32.static-strip
+configure:3198: result: i686-w64-mingw32.static-strip
+configure:3263: checking for a thread-safe mkdir -p
+configure:3302: result: /bin/mkdir -p
+configure:3309: checking for gawk
+configure:3339: result: no
+configure:3309: checking for mawk
+configure:3325: found /usr/bin/mawk
+configure:3336: result: mawk
+configure:3347: checking whether make sets $(MAKE)
+configure:3369: result: yes
+configure:3398: checking whether make supports nested variables
+configure:3415: result: yes
+configure:3518: checking for i686-w64-mingw32.static-gcc
+configure:3534: found /home/user/mxe/usr/bin/i686-w64-mingw32.static-gcc
+configure:3545: result: i686-w64-mingw32.static-gcc
+configure:3814: checking for C compiler version
+configure:3823: i686-w64-mingw32.static-gcc --version >&5
+i686-w64-mingw32.static-gcc (GCC) 5.4.0
+Copyright (C) 2015 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+configure:3834: $? = 0
+configure:3823: i686-w64-mingw32.static-gcc -v >&5
+Using built-in specs.
+COLLECT_GCC=i686-w64-mingw32.static-gcc
+COLLECT_LTO_WRAPPER=/home/user/mxe/usr/libexec/gcc/i686-w64-mingw32.static/5.4.0/lto-wrapper
+Target: i686-w64-mingw32.static
+Configured with: /home/user/mxe/tmp-gcc-i686-w64-mingw32.static/gcc-5.4.0/configure ac_cv_prog_HAVE_DOXYGEN=false --enable-doc=no --enable-gtk-doc=no --enable-gtk-doc-html=no --enable-gtk-doc-pdf=no --docdir=/home/user/mxe/tmp-gcc-i686-w64-mingw32.static/gcc-5.4.0.build_.sink --infodir=/home/user/mxe/tmp-gcc-i686-w64-mingw32.static/gcc-5.4.0.build_.sink --mandir=/home/user/mxe/tmp-gcc-i686-w64-mingw32.static/gcc-5.4.0.build_.sink --with-html-dir=/home/user/mxe/tmp-gcc-i686-w64-mingw32.static/gcc-5.4.0.build_.sink --disable-doxygen --target=i686-w64-mingw32.static --build=i686-pc-linux-gnu --prefix=/home/user/mxe/usr --libdir=/home/user/mxe/usr/lib --enable-languages=c,c++,objc,fortran --enable-version-specific-runtime-libs --with-gcc --with-gnu-ld --with-gnu-as --disable-nls --disable-shared --disable-multilib --without-x --disable-win32-registry --enable-threads=win32 --enable-sjlj-exceptions --enable-libgomp --with-gmp=/home/user/mxe/usr/i686-pc-linux-gnu --with-isl=/home/user/mxe/usr/i686-pc-linux-gnu --with-mpc=/home/user/mxe/usr/i686-pc-linux-gnu --with-mpfr=/home/user/mxe/usr/i686-pc-linux-gnu --with-as=/home/user/mxe/usr/bin/i686-w64-mingw32.static-as --with-ld=/home/user/mxe/usr/bin/i686-w64-mingw32.static-ld --with-nm=/home/user/mxe/usr/bin/i686-w64-mingw32.static-nm
+Thread model: win32
+gcc version 5.4.0 (GCC) 
+configure:3834: $? = 0
+configure:3823: i686-w64-mingw32.static-gcc -V >&5
+i686-w64-mingw32.static-gcc: error: unrecognized command line option '-V'
+i686-w64-mingw32.static-gcc: fatal error: no input files
+compilation terminated.
+configure:3834: $? = 1
+configure:3823: i686-w64-mingw32.static-gcc -qversion >&5
+i686-w64-mingw32.static-gcc: error: unrecognized command line option '-qversion'
+i686-w64-mingw32.static-gcc: fatal error: no input files
+compilation terminated.
+configure:3834: $? = 1
+configure:3854: checking whether the C compiler works
+configure:3876: i686-w64-mingw32.static-gcc    conftest.c  >&5
+configure:3880: $? = 0
+configure:3928: result: yes
+configure:3931: checking for C compiler default output file name
+configure:3933: result: a.exe
+configure:3939: checking for suffix of executables
+configure:3946: i686-w64-mingw32.static-gcc -o conftest.exe    conftest.c  >&5
+configure:3950: $? = 0
+configure:3972: result: .exe
+configure:3994: checking whether we are cross compiling
+configure:4032: result: yes
+configure:4037: checking for suffix of object files
+configure:4059: i686-w64-mingw32.static-gcc -c   conftest.c >&5
+configure:4063: $? = 0
+configure:4084: result: o
+configure:4088: checking whether we are using the GNU C compiler
+configure:4107: i686-w64-mingw32.static-gcc -c   conftest.c >&5
+configure:4107: $? = 0
+configure:4116: result: yes
+configure:4125: checking whether i686-w64-mingw32.static-gcc accepts -g
+configure:4145: i686-w64-mingw32.static-gcc -c -g  conftest.c >&5
+configure:4145: $? = 0
+configure:4186: result: yes
+configure:4203: checking for i686-w64-mingw32.static-gcc option to accept ISO C89
+configure:4266: i686-w64-mingw32.static-gcc  -c -g -O2  conftest.c >&5
+configure:4266: $? = 0
+configure:4279: result: none needed
+configure:4310: checking for style of include used by make
+configure:4338: result: GNU
+configure:4364: checking dependency style of i686-w64-mingw32.static-gcc
+configure:4475: result: gcc3
+configure:4504: checking for i686-w64-mingw32.static-g++
+configure:4520: found /home/user/mxe/usr/bin/i686-w64-mingw32.static-g++
+configure:4531: result: i686-w64-mingw32.static-g++
+configure:4602: checking for C++ compiler version
+configure:4611: i686-w64-mingw32.static-g++ --version >&5
+i686-w64-mingw32.static-g++ (GCC) 5.4.0
+Copyright (C) 2015 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+configure:4622: $? = 0
+configure:4611: i686-w64-mingw32.static-g++ -v >&5
+Using built-in specs.
+COLLECT_GCC=i686-w64-mingw32.static-g++
+COLLECT_LTO_WRAPPER=/home/user/mxe/usr/libexec/gcc/i686-w64-mingw32.static/5.4.0/lto-wrapper
+Target: i686-w64-mingw32.static
+Configured with: /home/user/mxe/tmp-gcc-i686-w64-mingw32.static/gcc-5.4.0/configure ac_cv_prog_HAVE_DOXYGEN=false --enable-doc=no --enable-gtk-doc=no --enable-gtk-doc-html=no --enable-gtk-doc-pdf=no --docdir=/home/user/mxe/tmp-gcc-i686-w64-mingw32.static/gcc-5.4.0.build_.sink --infodir=/home/user/mxe/tmp-gcc-i686-w64-mingw32.static/gcc-5.4.0.build_.sink --mandir=/home/user/mxe/tmp-gcc-i686-w64-mingw32.static/gcc-5.4.0.build_.sink --with-html-dir=/home/user/mxe/tmp-gcc-i686-w64-mingw32.static/gcc-5.4.0.build_.sink --disable-doxygen --target=i686-w64-mingw32.static --build=i686-pc-linux-gnu --prefix=/home/user/mxe/usr --libdir=/home/user/mxe/usr/lib --enable-languages=c,c++,objc,fortran --enable-version-specific-runtime-libs --with-gcc --with-gnu-ld --with-gnu-as --disable-nls --disable-shared --disable-multilib --without-x --disable-win32-registry --enable-threads=win32 --enable-sjlj-exceptions --enable-libgomp --with-gmp=/home/user/mxe/usr/i686-pc-linux-gnu --with-isl=/home/user/mxe/usr/i686-pc-linux-gnu --with-mpc=/home/user/mxe/usr/i686-pc-linux-gnu --with-mpfr=/home/user/mxe/usr/i686-pc-linux-gnu --with-as=/home/user/mxe/usr/bin/i686-w64-mingw32.static-as --with-ld=/home/user/mxe/usr/bin/i686-w64-mingw32.static-ld --with-nm=/home/user/mxe/usr/bin/i686-w64-mingw32.static-nm
+Thread model: win32
+gcc version 5.4.0 (GCC) 
+configure:4622: $? = 0
+configure:4611: i686-w64-mingw32.static-g++ -V >&5
+i686-w64-mingw32.static-g++: error: unrecognized command line option '-V'
+i686-w64-mingw32.static-g++: fatal error: no input files
+compilation terminated.
+configure:4622: $? = 1
+configure:4611: i686-w64-mingw32.static-g++ -qversion >&5
+i686-w64-mingw32.static-g++: error: unrecognized command line option '-qversion'
+i686-w64-mingw32.static-g++: fatal error: no input files
+compilation terminated.
+configure:4622: $? = 1
+configure:4626: checking whether we are using the GNU C++ compiler
+configure:4645: i686-w64-mingw32.static-g++ -c   conftest.cpp >&5
+configure:4645: $? = 0
+configure:4654: result: yes
+configure:4663: checking whether i686-w64-mingw32.static-g++ accepts -g
+configure:4683: i686-w64-mingw32.static-g++ -c -g  conftest.cpp >&5
+configure:4683: $? = 0
+configure:4724: result: yes
+configure:4749: checking dependency style of i686-w64-mingw32.static-g++
+configure:4860: result: gcc3
+configure:4890: checking dependency style of i686-w64-mingw32.static-gcc
+configure:4999: result: gcc3
+configure:5015: checking whether i686-w64-mingw32.static-gcc and cc understand -c and -o together
+configure:5046: i686-w64-mingw32.static-gcc -c conftest.c -o conftest2.o >&5
+configure:5050: $? = 0
+configure:5056: i686-w64-mingw32.static-gcc -c conftest.c -o conftest2.o >&5
+configure:5060: $? = 0
+configure:5071: cc -c conftest.c >&5
+configure:5075: $? = 0
+configure:5083: cc -c conftest.c -o conftest2.o >&5
+configure:5087: $? = 0
+configure:5093: cc -c conftest.c -o conftest2.o >&5
+configure:5097: $? = 0
+configure:5115: result: yes
+configure:5186: checking how to print strings
+configure:5213: result: printf
+configure:5234: checking for a sed that does not truncate output
+configure:5298: result: /bin/sed
+configure:5316: checking for grep that handles long lines and -e
+configure:5374: result: /bin/grep
+configure:5379: checking for egrep
+configure:5441: result: /bin/grep -E
+configure:5446: checking for fgrep
+configure:5508: result: /bin/grep -F
+configure:5543: checking for ld used by i686-w64-mingw32.static-gcc
+configure:5610: result: /home/user/mxe/usr/bin/i686-w64-mingw32.static-ld
+configure:5617: checking if the linker (/home/user/mxe/usr/bin/i686-w64-mingw32.static-ld) is GNU ld
+configure:5632: result: yes
+configure:5644: checking for BSD- or MS-compatible name lister (nm)
+configure:5693: result: /home/user/mxe/usr/bin/i686-w64-mingw32.static-nm -B
+configure:5823: checking the name lister (/home/user/mxe/usr/bin/i686-w64-mingw32.static-nm -B) interface
+configure:5830: i686-w64-mingw32.static-gcc -c   conftest.c >&5
+configure:5833: /home/user/mxe/usr/bin/i686-w64-mingw32.static-nm -B "conftest.o"
+configure:5836: output
+00000000 b .bss
+00000000 d .data
+00000000 r .rdata$zzz
+00000000 t .text
+00000000 B _some_variable
+configure:5843: result: BSD nm
+configure:5846: checking whether ln -s works
+configure:5850: result: yes
+configure:5858: checking the maximum length of command line arguments
+configure:5988: result: 1572864
+configure:6005: checking whether the shell understands some XSI constructs
+configure:6015: result: yes
+configure:6019: checking whether the shell understands "+="
+configure:6025: result: yes
+configure:6060: checking how to convert i686-pc-linux-gnu file names to i686-w64-mingw32.static format
+configure:6100: result: func_convert_file_nix_to_w32
+configure:6107: checking how to convert i686-pc-linux-gnu file names to toolchain format
+configure:6127: result: func_convert_file_noop
+configure:6134: checking for /home/user/mxe/usr/bin/i686-w64-mingw32.static-ld option to reload object files
+configure:6141: result: -r
+configure:6175: checking for i686-w64-mingw32.static-objdump
+configure:6191: found /home/user/mxe/usr/bin/i686-w64-mingw32.static-objdump
+configure:6202: result: i686-w64-mingw32.static-objdump
+configure:6274: checking how to recognize dependent libraries
+configure:6476: result: file_magic ^x86 archive import|^x86 DLL
+configure:6521: checking for i686-w64-mingw32.static-dlltool
+configure:6537: found /home/user/mxe/usr/bin/i686-w64-mingw32.static-dlltool
+configure:6548: result: i686-w64-mingw32.static-dlltool
+configure:6621: checking how to associate runtime and link libraries
+configure:6648: result: func_cygming_dll_for_implib
+configure:6665: checking for i686-w64-mingw32.static-ar
+configure:6681: found /home/user/mxe/usr/bin/i686-w64-mingw32.static-ar
+configure:6692: result: i686-w64-mingw32.static-ar
+configure:6773: checking for archiver @FILE support
+configure:6790: i686-w64-mingw32.static-gcc -c   conftest.c >&5
+configure:6790: $? = 0
+configure:6793: i686-w64-mingw32.static-ar cru libconftest.a @conftest.lst >&5
+i686-w64-mingw32.static-ar: `u' modifier ignored since `D' is the default (see `U')
+configure:6796: $? = 0
+configure:6801: i686-w64-mingw32.static-ar cru libconftest.a @conftest.lst >&5
+i686-w64-mingw32.static-ar: `u' modifier ignored since `D' is the default (see `U')
+i686-w64-mingw32.static-ar: conftest.o: No such file or directory
+configure:6804: $? = 1
+configure:6816: result: @
+configure:6834: checking for i686-w64-mingw32.static-strip
+configure:6861: result: i686-w64-mingw32.static-strip
+configure:6933: checking for i686-w64-mingw32.static-ranlib
+configure:6949: found /home/user/mxe/usr/bin/i686-w64-mingw32.static-ranlib
+configure:6960: result: i686-w64-mingw32.static-ranlib
+configure:7102: checking command to parse /home/user/mxe/usr/bin/i686-w64-mingw32.static-nm -B output from i686-w64-mingw32.static-gcc object
+configure:7222: i686-w64-mingw32.static-gcc -c   conftest.c >&5
+configure:7225: $? = 0
+configure:7229: /home/user/mxe/usr/bin/i686-w64-mingw32.static-nm -B conftest.o \| sed -n -e 's/^.*[ ]\([ABCDGIRSTW][ABCDGIRSTW]*\)[ ][ ]*\([_A-Za-z][_A-Za-z0-9]*\)$/\1 \2 \2/p' | sed '/ __gnu_lto/d' \> conftest.nm
+configure:7232: $? = 0
+cannot find nm_test_var in conftest.nm
+configure:7222: i686-w64-mingw32.static-gcc -c   conftest.c >&5
+configure:7225: $? = 0
+configure:7229: /home/user/mxe/usr/bin/i686-w64-mingw32.static-nm -B conftest.o \| sed -n -e 's/^.*[ ]\([ABCDGIRSTW][ABCDGIRSTW]*\)[ ][ ]*_\([_A-Za-z][_A-Za-z0-9]*\)$/\1 _\2 \2/p' | sed '/ __gnu_lto/d' \> conftest.nm
+configure:7232: $? = 0
+configure:7298: i686-w64-mingw32.static-gcc -o conftest.exe    conftest.c conftstm.o >&5
+configure:7301: $? = 0
+configure:7339: result: ok
+configure:7376: checking for sysroot
+configure:7406: result: no
+configure:7622: checking for i686-w64-mingw32.static-mt
+configure:7652: result: no
+configure:7662: checking for mt
+configure:7678: found /bin/mt
+configure:7689: result: mt
+configure:7701: WARNING: using cross tools not prefixed with host triplet
+configure:7712: checking if mt is a manifest tool
+configure:7718: mt '-?'
+configure:7726: result: no
+configure:8368: checking how to run the C preprocessor
+configure:8399: i686-w64-mingw32.static-gcc -E  conftest.c
+configure:8399: $? = 0
+configure:8413: i686-w64-mingw32.static-gcc -E  conftest.c
+conftest.c:11:28: fatal error: ac_nonexistent.h: No such file or directory
+compilation terminated.
+configure:8413: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "libffi"
+| #define PACKAGE_TARNAME "libffi"
+| #define PACKAGE_VERSION "3.2.1"
+| #define PACKAGE_STRING "libffi 3.2.1"
+| #define PACKAGE_BUGREPORT "http://github.com/atgreen/libffi/issues"
+| #define PACKAGE_URL ""
+| #define PACKAGE "libffi"
+| #define VERSION "3.2.1"
+| /* end confdefs.h.  */
+| #include <ac_nonexistent.h>
+configure:8438: result: i686-w64-mingw32.static-gcc -E
+configure:8458: i686-w64-mingw32.static-gcc -E  conftest.c
+configure:8458: $? = 0
+configure:8472: i686-w64-mingw32.static-gcc -E  conftest.c
+conftest.c:11:28: fatal error: ac_nonexistent.h: No such file or directory
+compilation terminated.
+configure:8472: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "libffi"
+| #define PACKAGE_TARNAME "libffi"
+| #define PACKAGE_VERSION "3.2.1"
+| #define PACKAGE_STRING "libffi 3.2.1"
+| #define PACKAGE_BUGREPORT "http://github.com/atgreen/libffi/issues"
+| #define PACKAGE_URL ""
+| #define PACKAGE "libffi"
+| #define VERSION "3.2.1"
+| /* end confdefs.h.  */
+| #include <ac_nonexistent.h>
+configure:8501: checking for ANSI C header files
+configure:8521: i686-w64-mingw32.static-gcc -c   conftest.c >&5
+configure:8521: $? = 0
+configure:8605: result: yes
+configure:8618: checking for sys/types.h
+configure:8618: i686-w64-mingw32.static-gcc -c   conftest.c >&5
+configure:8618: $? = 0
+configure:8618: result: yes
+configure:8618: checking for sys/stat.h
+configure:8618: i686-w64-mingw32.static-gcc -c   conftest.c >&5
+configure:8618: $? = 0
+configure:8618: result: yes
+configure:8618: checking for stdlib.h
+configure:8618: i686-w64-mingw32.static-gcc -c   conftest.c >&5
+configure:8618: $? = 0
+configure:8618: result: yes
+configure:8618: checking for string.h
+configure:8618: i686-w64-mingw32.static-gcc -c   conftest.c >&5
+configure:8618: $? = 0
+configure:8618: result: yes
+configure:8618: checking for memory.h
+configure:8618: i686-w64-mingw32.static-gcc -c   conftest.c >&5
+configure:8618: $? = 0
+configure:8618: result: yes
+configure:8618: checking for strings.h
+configure:8618: i686-w64-mingw32.static-gcc -c   conftest.c >&5
+configure:8618: $? = 0
+configure:8618: result: yes
+configure:8618: checking for inttypes.h
+configure:8618: i686-w64-mingw32.static-gcc -c   conftest.c >&5
+configure:8618: $? = 0
+configure:8618: result: yes
+configure:8618: checking for stdint.h
+configure:8618: i686-w64-mingw32.static-gcc -c   conftest.c >&5
+configure:8618: $? = 0
+configure:8618: result: yes
+configure:8618: checking for unistd.h
+configure:8618: i686-w64-mingw32.static-gcc -c   conftest.c >&5
+configure:8618: $? = 0
+configure:8618: result: yes
+configure:8632: checking for dlfcn.h
+configure:8632: i686-w64-mingw32.static-gcc -c   conftest.c >&5
+conftest.c:55:19: fatal error: dlfcn.h: No such file or directory
+compilation terminated.
+configure:8632: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "libffi"
+| #define PACKAGE_TARNAME "libffi"
+| #define PACKAGE_VERSION "3.2.1"
+| #define PACKAGE_STRING "libffi 3.2.1"
+| #define PACKAGE_BUGREPORT "http://github.com/atgreen/libffi/issues"
+| #define PACKAGE_URL ""
+| #define PACKAGE "libffi"
+| #define VERSION "3.2.1"
+| #define STDC_HEADERS 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_MEMORY_H 1
+| #define HAVE_STRINGS_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_UNISTD_H 1
+| /* end confdefs.h.  */
+| #include <stdio.h>
+| #ifdef HAVE_SYS_TYPES_H
+| # include <sys/types.h>
+| #endif
+| #ifdef HAVE_SYS_STAT_H
+| # include <sys/stat.h>
+| #endif
+| #ifdef STDC_HEADERS
+| # include <stdlib.h>
+| # include <stddef.h>
+| #else
+| # ifdef HAVE_STDLIB_H
+| #  include <stdlib.h>
+| # endif
+| #endif
+| #ifdef HAVE_STRING_H
+| # if !defined STDC_HEADERS && defined HAVE_MEMORY_H
+| #  include <memory.h>
+| # endif
+| # include <string.h>
+| #endif
+| #ifdef HAVE_STRINGS_H
+| # include <strings.h>
+| #endif
+| #ifdef HAVE_INTTYPES_H
+| # include <inttypes.h>
+| #endif
+| #ifdef HAVE_STDINT_H
+| # include <stdint.h>
+| #endif
+| #ifdef HAVE_UNISTD_H
+| # include <unistd.h>
+| #endif
+| 
+| #include <dlfcn.h>
+configure:8632: result: no
+configure:8849: checking for objdir
+configure:8864: result: .libs
+configure:9135: checking if i686-w64-mingw32.static-gcc supports -fno-rtti -fno-exceptions
+configure:9153: i686-w64-mingw32.static-gcc -c   -fno-rtti -fno-exceptions conftest.c >&5
+cc1: warning: command line option '-fno-rtti' is valid for C++/ObjC++ but not for C
+configure:9157: $? = 0
+configure:9170: result: no
+configure:9497: checking for i686-w64-mingw32.static-gcc option to produce PIC
+configure:9504: result: -DDLL_EXPORT -DPIC
+configure:9512: checking if i686-w64-mingw32.static-gcc PIC flag -DDLL_EXPORT -DPIC works
+configure:9530: i686-w64-mingw32.static-gcc -c   -DDLL_EXPORT -DPIC -DPIC conftest.c >&5
+configure:9534: $? = 0
+configure:9547: result: yes
+configure:9576: checking if i686-w64-mingw32.static-gcc static flag -static works
+configure:9604: result: yes
+configure:9619: checking if i686-w64-mingw32.static-gcc supports -c -o file.o
+configure:9640: i686-w64-mingw32.static-gcc -c   -o out/conftest2.o conftest.c >&5
+configure:9644: $? = 0
+configure:9666: result: yes
+configure:9674: checking if i686-w64-mingw32.static-gcc supports -c -o file.o
+configure:9721: result: yes
+configure:9754: checking whether the i686-w64-mingw32.static-gcc linker (/home/user/mxe/usr/bin/i686-w64-mingw32.static-ld) supports shared libraries
+configure:10907: result: yes
+configure:11147: checking dynamic linker characteristics
+configure:11884: result: Win32 ld.exe
+configure:11991: checking how to hardcode library paths into programs
+configure:12016: result: immediate
+configure:12556: checking whether stripping libraries is possible
+configure:12561: result: yes
+configure:12596: checking if libtool supports shared libraries
+configure:12598: result: yes
+configure:12601: checking whether to build shared libraries
+configure:12622: result: no
+configure:12625: checking whether to build static libraries
+configure:12629: result: yes
+configure:12652: checking how to run the C++ preprocessor
+configure:12679: i686-w64-mingw32.static-g++ -E  conftest.cpp
+configure:12679: $? = 0
+configure:12693: i686-w64-mingw32.static-g++ -E  conftest.cpp
+conftest.cpp:22:28: fatal error: ac_nonexistent.h: No such file or directory
+compilation terminated.
+configure:12693: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "libffi"
+| #define PACKAGE_TARNAME "libffi"
+| #define PACKAGE_VERSION "3.2.1"
+| #define PACKAGE_STRING "libffi 3.2.1"
+| #define PACKAGE_BUGREPORT "http://github.com/atgreen/libffi/issues"
+| #define PACKAGE_URL ""
+| #define PACKAGE "libffi"
+| #define VERSION "3.2.1"
+| #define STDC_HEADERS 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_MEMORY_H 1
+| #define HAVE_STRINGS_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_UNISTD_H 1
+| #define LT_OBJDIR ".libs/"
+| /* end confdefs.h.  */
+| #include <ac_nonexistent.h>
+configure:12718: result: i686-w64-mingw32.static-g++ -E
+configure:12738: i686-w64-mingw32.static-g++ -E  conftest.cpp
+configure:12738: $? = 0
+configure:12752: i686-w64-mingw32.static-g++ -E  conftest.cpp
+conftest.cpp:22:28: fatal error: ac_nonexistent.h: No such file or directory
+compilation terminated.
+configure:12752: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "libffi"
+| #define PACKAGE_TARNAME "libffi"
+| #define PACKAGE_VERSION "3.2.1"
+| #define PACKAGE_STRING "libffi 3.2.1"
+| #define PACKAGE_BUGREPORT "http://github.com/atgreen/libffi/issues"
+| #define PACKAGE_URL ""
+| #define PACKAGE "libffi"
+| #define VERSION "3.2.1"
+| #define STDC_HEADERS 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_MEMORY_H 1
+| #define HAVE_STRINGS_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_UNISTD_H 1
+| #define LT_OBJDIR ".libs/"
+| /* end confdefs.h.  */
+| #include <ac_nonexistent.h>
+configure:12921: checking for ld used by i686-w64-mingw32.static-g++
+configure:12988: result: /home/user/mxe/usr/bin/i686-w64-mingw32.static-ld
+configure:12995: checking if the linker (/home/user/mxe/usr/bin/i686-w64-mingw32.static-ld) is GNU ld
+configure:13010: result: yes
+configure:13065: checking whether the i686-w64-mingw32.static-g++ linker (/home/user/mxe/usr/bin/i686-w64-mingw32.static-ld) supports shared libraries
+configure:14070: result: yes
+configure:14106: i686-w64-mingw32.static-g++ -c -g -O2  conftest.cpp >&5
+configure:14109: $? = 0
+configure:14629: checking for i686-w64-mingw32.static-g++ option to produce PIC
+configure:14636: result: -DDLL_EXPORT -DPIC
+configure:14644: checking if i686-w64-mingw32.static-g++ PIC flag -DDLL_EXPORT -DPIC works
+configure:14662: i686-w64-mingw32.static-g++ -c -g -O2  -DDLL_EXPORT -DPIC -DPIC conftest.cpp >&5
+configure:14666: $? = 0
+configure:14679: result: yes
+configure:14702: checking if i686-w64-mingw32.static-g++ static flag -static works
+configure:14730: result: yes
+configure:14742: checking if i686-w64-mingw32.static-g++ supports -c -o file.o
+configure:14763: i686-w64-mingw32.static-g++ -c -g -O2  -o out/conftest2.o conftest.cpp >&5
+configure:14767: $? = 0
+configure:14789: result: yes
+configure:14794: checking if i686-w64-mingw32.static-g++ supports -c -o file.o
+configure:14841: result: yes
+configure:14871: checking whether the i686-w64-mingw32.static-g++ linker (/home/user/mxe/usr/bin/i686-w64-mingw32.static-ld) supports shared libraries
+configure:14907: result: yes
+configure:15048: checking dynamic linker characteristics
+configure:15719: result: Win32 ld.exe
+configure:15772: checking how to hardcode library paths into programs
+configure:15797: result: immediate
+configure:15865: checking size of size_t
+configure:15870: i686-w64-mingw32.static-gcc -c   conftest.c >&5
+configure:15870: $? = 0
+configure:15870: i686-w64-mingw32.static-gcc -c   conftest.c >&5
+conftest.c: In function 'main':
+conftest.c:58:12: error: size of array 'test_array' is negative
+ static int test_array [1 - 2 * !(((long int) (sizeof (size_t))) <= 0)];
+            ^
+configure:15870: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "libffi"
+| #define PACKAGE_TARNAME "libffi"
+| #define PACKAGE_VERSION "3.2.1"
+| #define PACKAGE_STRING "libffi 3.2.1"
+| #define PACKAGE_BUGREPORT "http://github.com/atgreen/libffi/issues"
+| #define PACKAGE_URL ""
+| #define PACKAGE "libffi"
+| #define VERSION "3.2.1"
+| #define STDC_HEADERS 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_MEMORY_H 1
+| #define HAVE_STRINGS_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_UNISTD_H 1
+| #define LT_OBJDIR ".libs/"
+| /* end confdefs.h.  */
+| #include <stdio.h>
+| #ifdef HAVE_SYS_TYPES_H
+| # include <sys/types.h>
+| #endif
+| #ifdef HAVE_SYS_STAT_H
+| # include <sys/stat.h>
+| #endif
+| #ifdef STDC_HEADERS
+| # include <stdlib.h>
+| # include <stddef.h>
+| #else
+| # ifdef HAVE_STDLIB_H
+| #  include <stdlib.h>
+| # endif
+| #endif
+| #ifdef HAVE_STRING_H
+| # if !defined STDC_HEADERS && defined HAVE_MEMORY_H
+| #  include <memory.h>
+| # endif
+| # include <string.h>
+| #endif
+| #ifdef HAVE_STRINGS_H
+| # include <strings.h>
+| #endif
+| #ifdef HAVE_INTTYPES_H
+| # include <inttypes.h>
+| #endif
+| #ifdef HAVE_STDINT_H
+| # include <stdint.h>
+| #endif
+| #ifdef HAVE_UNISTD_H
+| # include <unistd.h>
+| #endif
+| int
+| main ()
+| {
+| static int test_array [1 - 2 * !(((long int) (sizeof (size_t))) <= 0)];
+| test_array [0] = 0;
+| return test_array [0];
+| 
+|   ;
+|   return 0;
+| }
+configure:15870: i686-w64-mingw32.static-gcc -c   conftest.c >&5
+conftest.c: In function 'main':
+conftest.c:58:12: error: size of array 'test_array' is negative
+ static int test_array [1 - 2 * !(((long int) (sizeof (size_t))) <= 1)];
+            ^
+configure:15870: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "libffi"
+| #define PACKAGE_TARNAME "libffi"
+| #define PACKAGE_VERSION "3.2.1"
+| #define PACKAGE_STRING "libffi 3.2.1"
+| #define PACKAGE_BUGREPORT "http://github.com/atgreen/libffi/issues"
+| #define PACKAGE_URL ""
+| #define PACKAGE "libffi"
+| #define VERSION "3.2.1"
+| #define STDC_HEADERS 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_MEMORY_H 1
+| #define HAVE_STRINGS_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_UNISTD_H 1
+| #define LT_OBJDIR ".libs/"
+| /* end confdefs.h.  */
+| #include <stdio.h>
+| #ifdef HAVE_SYS_TYPES_H
+| # include <sys/types.h>
+| #endif
+| #ifdef HAVE_SYS_STAT_H
+| # include <sys/stat.h>
+| #endif
+| #ifdef STDC_HEADERS
+| # include <stdlib.h>
+| # include <stddef.h>
+| #else
+| # ifdef HAVE_STDLIB_H
+| #  include <stdlib.h>
+| # endif
+| #endif
+| #ifdef HAVE_STRING_H
+| # if !defined STDC_HEADERS && defined HAVE_MEMORY_H
+| #  include <memory.h>
+| # endif
+| # include <string.h>
+| #endif
+| #ifdef HAVE_STRINGS_H
+| # include <strings.h>
+| #endif
+| #ifdef HAVE_INTTYPES_H
+| # include <inttypes.h>
+| #endif
+| #ifdef HAVE_STDINT_H
+| # include <stdint.h>
+| #endif
+| #ifdef HAVE_UNISTD_H
+| # include <unistd.h>
+| #endif
+| int
+| main ()
+| {
+| static int test_array [1 - 2 * !(((long int) (sizeof (size_t))) <= 1)];
+| test_array [0] = 0;
+| return test_array [0];
+| 
+|   ;
+|   return 0;
+| }
+configure:15870: i686-w64-mingw32.static-gcc -c   conftest.c >&5
+conftest.c: In function 'main':
+conftest.c:58:12: error: size of array 'test_array' is negative
+ static int test_array [1 - 2 * !(((long int) (sizeof (size_t))) <= 3)];
+            ^
+configure:15870: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "libffi"
+| #define PACKAGE_TARNAME "libffi"
+| #define PACKAGE_VERSION "3.2.1"
+| #define PACKAGE_STRING "libffi 3.2.1"
+| #define PACKAGE_BUGREPORT "http://github.com/atgreen/libffi/issues"
+| #define PACKAGE_URL ""
+| #define PACKAGE "libffi"
+| #define VERSION "3.2.1"
+| #define STDC_HEADERS 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_MEMORY_H 1
+| #define HAVE_STRINGS_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_UNISTD_H 1
+| #define LT_OBJDIR ".libs/"
+| /* end confdefs.h.  */
+| #include <stdio.h>
+| #ifdef HAVE_SYS_TYPES_H
+| # include <sys/types.h>
+| #endif
+| #ifdef HAVE_SYS_STAT_H
+| # include <sys/stat.h>
+| #endif
+| #ifdef STDC_HEADERS
+| # include <stdlib.h>
+| # include <stddef.h>
+| #else
+| # ifdef HAVE_STDLIB_H
+| #  include <stdlib.h>
+| # endif
+| #endif
+| #ifdef HAVE_STRING_H
+| # if !defined STDC_HEADERS && defined HAVE_MEMORY_H
+| #  include <memory.h>
+| # endif
+| # include <string.h>
+| #endif
+| #ifdef HAVE_STRINGS_H
+| # include <strings.h>
+| #endif
+| #ifdef HAVE_INTTYPES_H
+| # include <inttypes.h>
+| #endif
+| #ifdef HAVE_STDINT_H
+| # include <stdint.h>
+| #endif
+| #ifdef HAVE_UNISTD_H
+| # include <unistd.h>
+| #endif
+| int
+| main ()
+| {
+| static int test_array [1 - 2 * !(((long int) (sizeof (size_t))) <= 3)];
+| test_array [0] = 0;
+| return test_array [0];
+| 
+|   ;
+|   return 0;
+| }
+configure:15870: i686-w64-mingw32.static-gcc -c   conftest.c >&5
+configure:15870: $? = 0
+configure:15870: i686-w64-mingw32.static-gcc -c   conftest.c >&5
+configure:15870: $? = 0
+configure:15870: i686-w64-mingw32.static-gcc -c   conftest.c >&5
+configure:15870: $? = 0
+configure:15884: result: 4
+configure:15895: checking for C compiler vendor
+configure:15940: i686-w64-mingw32.static-gcc -c   conftest.c >&5
+conftest.c: In function 'main':
+conftest.c:29:9: error: 'thisisanerror' undeclared (first use in this function)
+         thisisanerror;
+         ^
+conftest.c:29:9: note: each undeclared identifier is reported only once for each function it appears in
+configure:15940: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "libffi"
+| #define PACKAGE_TARNAME "libffi"
+| #define PACKAGE_VERSION "3.2.1"
+| #define PACKAGE_STRING "libffi 3.2.1"
+| #define PACKAGE_BUGREPORT "http://github.com/atgreen/libffi/issues"
+| #define PACKAGE_URL ""
+| #define PACKAGE "libffi"
+| #define VERSION "3.2.1"
+| #define STDC_HEADERS 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_MEMORY_H 1
+| #define HAVE_STRINGS_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_UNISTD_H 1
+| #define LT_OBJDIR ".libs/"
+| #define SIZEOF_SIZE_T 4
+| /* end confdefs.h.  */
+| 
+| int
+| main ()
+| {
+| 
+|       #if !(defined(__ICC) || defined(__ECC) || defined(__INTEL_COMPILER))
+|         thisisanerror;
+|       #endif
+| 
+|   ;
+|   return 0;
+| }
+configure:15940: i686-w64-mingw32.static-gcc -c   conftest.c >&5
+conftest.c: In function 'main':
+conftest.c:29:9: error: 'thisisanerror' undeclared (first use in this function)
+         thisisanerror;
+         ^
+conftest.c:29:9: note: each undeclared identifier is reported only once for each function it appears in
+configure:15940: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "libffi"
+| #define PACKAGE_TARNAME "libffi"
+| #define PACKAGE_VERSION "3.2.1"
+| #define PACKAGE_STRING "libffi 3.2.1"
+| #define PACKAGE_BUGREPORT "http://github.com/atgreen/libffi/issues"
+| #define PACKAGE_URL ""
+| #define PACKAGE "libffi"
+| #define VERSION "3.2.1"
+| #define STDC_HEADERS 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_MEMORY_H 1
+| #define HAVE_STRINGS_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_UNISTD_H 1
+| #define LT_OBJDIR ".libs/"
+| #define SIZEOF_SIZE_T 4
+| /* end confdefs.h.  */
+| 
+| int
+| main ()
+| {
+| 
+|       #if !(defined(__xlc__) || defined(__xlC__) || defined(__IBMC__) || defined(__IBMCPP__))
+|         thisisanerror;
+|       #endif
+| 
+|   ;
+|   return 0;
+| }
+configure:15940: i686-w64-mingw32.static-gcc -c   conftest.c >&5
+conftest.c: In function 'main':
+conftest.c:29:9: error: 'thisisanerror' undeclared (first use in this function)
+         thisisanerror;
+         ^
+conftest.c:29:9: note: each undeclared identifier is reported only once for each function it appears in
+configure:15940: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "libffi"
+| #define PACKAGE_TARNAME "libffi"
+| #define PACKAGE_VERSION "3.2.1"
+| #define PACKAGE_STRING "libffi 3.2.1"
+| #define PACKAGE_BUGREPORT "http://github.com/atgreen/libffi/issues"
+| #define PACKAGE_URL ""
+| #define PACKAGE "libffi"
+| #define VERSION "3.2.1"
+| #define STDC_HEADERS 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_MEMORY_H 1
+| #define HAVE_STRINGS_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_UNISTD_H 1
+| #define LT_OBJDIR ".libs/"
+| #define SIZEOF_SIZE_T 4
+| /* end confdefs.h.  */
+| 
+| int
+| main ()
+| {
+| 
+|       #if !(defined(__PATHCC__) || defined(__PATHSCALE__))
+|         thisisanerror;
+|       #endif
+| 
+|   ;
+|   return 0;
+| }
+configure:15940: i686-w64-mingw32.static-gcc -c   conftest.c >&5
+conftest.c: In function 'main':
+conftest.c:29:9: error: 'thisisanerror' undeclared (first use in this function)
+         thisisanerror;
+         ^
+conftest.c:29:9: note: each undeclared identifier is reported only once for each function it appears in
+configure:15940: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "libffi"
+| #define PACKAGE_TARNAME "libffi"
+| #define PACKAGE_VERSION "3.2.1"
+| #define PACKAGE_STRING "libffi 3.2.1"
+| #define PACKAGE_BUGREPORT "http://github.com/atgreen/libffi/issues"
+| #define PACKAGE_URL ""
+| #define PACKAGE "libffi"
+| #define VERSION "3.2.1"
+| #define STDC_HEADERS 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_MEMORY_H 1
+| #define HAVE_STRINGS_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_UNISTD_H 1
+| #define LT_OBJDIR ".libs/"
+| #define SIZEOF_SIZE_T 4
+| /* end confdefs.h.  */
+| 
+| int
+| main ()
+| {
+| 
+|       #if !(defined(__clang__))
+|         thisisanerror;
+|       #endif
+| 
+|   ;
+|   return 0;
+| }
+configure:15940: i686-w64-mingw32.static-gcc -c   conftest.c >&5
+configure:15940: $? = 0
+configure:15948: result: gnu
+configure:16223: checking whether C compiler accepts -fstrict-aliasing
+configure:16242: i686-w64-mingw32.static-gcc -c -O3 -fomit-frame-pointer  -fstrict-aliasing  conftest.c >&5
+configure:16242: $? = 0
+configure:16250: result: yes
+configure:16260: checking whether C compiler accepts -ffast-math
+configure:16279: i686-w64-mingw32.static-gcc -c -O3 -fomit-frame-pointer -fstrict-aliasing  -ffast-math  conftest.c >&5
+configure:16279: $? = 0
+configure:16287: result: yes
+configure:16308: checking for gcc architecture flag
+configure:16310: result: 
+configure:16695: checking for gcc architecture flag
+configure:16697: result: unknown
+configure:16720: checking whether C compiler accepts -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math
+configure:16739: i686-w64-mingw32.static-gcc -c -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math  -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math  conftest.c >&5
+configure:16739: $? = 0
+configure:16748: result: yes
+configure:16781: : CFLAGS="$CFLAGS "
+configure:16784: $? = 0
+configure:16799: checking CFLAGS for maximum warnings
+configure:16819: i686-w64-mingw32.static-gcc -c -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math  -warn all  -warn all  conftest.c >&5
+i686-w64-mingw32.static-gcc: error: all: No such file or directory
+i686-w64-mingw32.static-gcc: error: all: No such file or directory
+i686-w64-mingw32.static-gcc: error: unrecognized command line option '-warn'
+i686-w64-mingw32.static-gcc: error: unrecognized command line option '-warn'
+configure:16819: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "libffi"
+| #define PACKAGE_TARNAME "libffi"
+| #define PACKAGE_VERSION "3.2.1"
+| #define PACKAGE_STRING "libffi 3.2.1"
+| #define PACKAGE_BUGREPORT "http://github.com/atgreen/libffi/issues"
+| #define PACKAGE_URL ""
+| #define PACKAGE "libffi"
+| #define VERSION "3.2.1"
+| #define STDC_HEADERS 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_MEMORY_H 1
+| #define HAVE_STRINGS_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_UNISTD_H 1
+| #define LT_OBJDIR ".libs/"
+| #define SIZEOF_SIZE_T 4
+| /* end confdefs.h.  */
+| 
+| int
+| main ()
+| {
+| 
+|   ;
+|   return 0;
+| }
+configure:16819: i686-w64-mingw32.static-gcc -c -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math  -pedantic  -Wall  conftest.c >&5
+configure:16819: $? = 0
+configure:16827: result: -Wall
+configure:16843: : CFLAGS="$CFLAGS $ac_cv_cflags_warn_all"
+configure:16846: $? = 0
+configure:16876: checking whether to enable maintainer-specific portions of Makefiles
+configure:16885: result: no
+configure:16901: checking sys/mman.h usability
+configure:16901: i686-w64-mingw32.static-gcc -c -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math  -Wall -fexceptions  conftest.c >&5
+conftest.c:56:22: fatal error: sys/mman.h: No such file or directory
+compilation terminated.
+configure:16901: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "libffi"
+| #define PACKAGE_TARNAME "libffi"
+| #define PACKAGE_VERSION "3.2.1"
+| #define PACKAGE_STRING "libffi 3.2.1"
+| #define PACKAGE_BUGREPORT "http://github.com/atgreen/libffi/issues"
+| #define PACKAGE_URL ""
+| #define PACKAGE "libffi"
+| #define VERSION "3.2.1"
+| #define STDC_HEADERS 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_MEMORY_H 1
+| #define HAVE_STRINGS_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_UNISTD_H 1
+| #define LT_OBJDIR ".libs/"
+| #define SIZEOF_SIZE_T 4
+| /* end confdefs.h.  */
+| #include <stdio.h>
+| #ifdef HAVE_SYS_TYPES_H
+| # include <sys/types.h>
+| #endif
+| #ifdef HAVE_SYS_STAT_H
+| # include <sys/stat.h>
+| #endif
+| #ifdef STDC_HEADERS
+| # include <stdlib.h>
+| # include <stddef.h>
+| #else
+| # ifdef HAVE_STDLIB_H
+| #  include <stdlib.h>
+| # endif
+| #endif
+| #ifdef HAVE_STRING_H
+| # if !defined STDC_HEADERS && defined HAVE_MEMORY_H
+| #  include <memory.h>
+| # endif
+| # include <string.h>
+| #endif
+| #ifdef HAVE_STRINGS_H
+| # include <strings.h>
+| #endif
+| #ifdef HAVE_INTTYPES_H
+| # include <inttypes.h>
+| #endif
+| #ifdef HAVE_STDINT_H
+| # include <stdint.h>
+| #endif
+| #ifdef HAVE_UNISTD_H
+| # include <unistd.h>
+| #endif
+| #include <sys/mman.h>
+configure:16901: result: no
+configure:16901: checking sys/mman.h presence
+configure:16901: i686-w64-mingw32.static-gcc -E  conftest.c
+conftest.c:23:22: fatal error: sys/mman.h: No such file or directory
+compilation terminated.
+configure:16901: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "libffi"
+| #define PACKAGE_TARNAME "libffi"
+| #define PACKAGE_VERSION "3.2.1"
+| #define PACKAGE_STRING "libffi 3.2.1"
+| #define PACKAGE_BUGREPORT "http://github.com/atgreen/libffi/issues"
+| #define PACKAGE_URL ""
+| #define PACKAGE "libffi"
+| #define VERSION "3.2.1"
+| #define STDC_HEADERS 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_MEMORY_H 1
+| #define HAVE_STRINGS_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_UNISTD_H 1
+| #define LT_OBJDIR ".libs/"
+| #define SIZEOF_SIZE_T 4
+| /* end confdefs.h.  */
+| #include <sys/mman.h>
+configure:16901: result: no
+configure:16901: checking for sys/mman.h
+configure:16901: result: no
+configure:16914: checking for mmap
+configure:16914: i686-w64-mingw32.static-gcc -o conftest.exe -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math  -Wall -fexceptions   conftest.c  >&5
+/tmp/cccw6VR2.o:conftest.c:(.text.startup+0xc): undefined reference to `mmap'
+collect2: error: ld returned 1 exit status
+configure:16914: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "libffi"
+| #define PACKAGE_TARNAME "libffi"
+| #define PACKAGE_VERSION "3.2.1"
+| #define PACKAGE_STRING "libffi 3.2.1"
+| #define PACKAGE_BUGREPORT "http://github.com/atgreen/libffi/issues"
+| #define PACKAGE_URL ""
+| #define PACKAGE "libffi"
+| #define VERSION "3.2.1"
+| #define STDC_HEADERS 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_MEMORY_H 1
+| #define HAVE_STRINGS_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_UNISTD_H 1
+| #define LT_OBJDIR ".libs/"
+| #define SIZEOF_SIZE_T 4
+| /* end confdefs.h.  */
+| /* Define mmap to an innocuous variant, in case <limits.h> declares mmap.
+|    For example, HP-UX 11i <limits.h> declares gettimeofday.  */
+| #define mmap innocuous_mmap
+| 
+| /* System header to define __stub macros and hopefully few prototypes,
+|     which can conflict with char mmap (); below.
+|     Prefer <limits.h> to <assert.h> if __STDC__ is defined, since
+|     <limits.h> exists even on freestanding compilers.  */
+| 
+| #ifdef __STDC__
+| # include <limits.h>
+| #else
+| # include <assert.h>
+| #endif
+| 
+| #undef mmap
+| 
+| /* Override any GCC internal prototype to avoid an error.
+|    Use char because int might match the return type of a GCC
+|    builtin and then its argument prototype would still apply.  */
+| #ifdef __cplusplus
+| extern "C"
+| #endif
+| char mmap ();
+| /* The GNU C library defines this for functions which it implements
+|     to always fail with ENOSYS.  Some functions are actually named
+|     something starting with __ and the normal name is an alias.  */
+| #if defined __stub_mmap || defined __stub___mmap
+| choke me
+| #endif
+| 
+| int
+| main ()
+| {
+| return mmap ();
+|   ;
+|   return 0;
+| }
+configure:16914: result: no
+configure:16914: checking for mkostemp
+configure:16914: i686-w64-mingw32.static-gcc -o conftest.exe -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math  -Wall -fexceptions   conftest.c  >&5
+/tmp/cctZCyoj.o:conftest.c:(.text.startup+0xc): undefined reference to `mkostemp'
+collect2: error: ld returned 1 exit status
+configure:16914: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "libffi"
+| #define PACKAGE_TARNAME "libffi"
+| #define PACKAGE_VERSION "3.2.1"
+| #define PACKAGE_STRING "libffi 3.2.1"
+| #define PACKAGE_BUGREPORT "http://github.com/atgreen/libffi/issues"
+| #define PACKAGE_URL ""
+| #define PACKAGE "libffi"
+| #define VERSION "3.2.1"
+| #define STDC_HEADERS 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_MEMORY_H 1
+| #define HAVE_STRINGS_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_UNISTD_H 1
+| #define LT_OBJDIR ".libs/"
+| #define SIZEOF_SIZE_T 4
+| /* end confdefs.h.  */
+| /* Define mkostemp to an innocuous variant, in case <limits.h> declares mkostemp.
+|    For example, HP-UX 11i <limits.h> declares gettimeofday.  */
+| #define mkostemp innocuous_mkostemp
+| 
+| /* System header to define __stub macros and hopefully few prototypes,
+|     which can conflict with char mkostemp (); below.
+|     Prefer <limits.h> to <assert.h> if __STDC__ is defined, since
+|     <limits.h> exists even on freestanding compilers.  */
+| 
+| #ifdef __STDC__
+| # include <limits.h>
+| #else
+| # include <assert.h>
+| #endif
+| 
+| #undef mkostemp
+| 
+| /* Override any GCC internal prototype to avoid an error.
+|    Use char because int might match the return type of a GCC
+|    builtin and then its argument prototype would still apply.  */
+| #ifdef __cplusplus
+| extern "C"
+| #endif
+| char mkostemp ();
+| /* The GNU C library defines this for functions which it implements
+|     to always fail with ENOSYS.  Some functions are actually named
+|     something starting with __ and the normal name is an alias.  */
+| #if defined __stub_mkostemp || defined __stub___mkostemp
+| choke me
+| #endif
+| 
+| int
+| main ()
+| {
+| return mkostemp ();
+|   ;
+|   return 0;
+| }
+configure:16914: result: no
+configure:16924: checking for sys/mman.h
+configure:16924: result: no
+configure:16932: checking for mmap
+configure:16932: result: no
+configure:17622: checking for ANSI C header files
+configure:17726: result: yes
+configure:17736: checking for memcpy
+configure:17736: i686-w64-mingw32.static-gcc -o conftest.exe -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math  -Wall -fexceptions   conftest.c  >&5
+conftest.c:47:6: warning: conflicting types for built-in function 'memcpy'
+ char memcpy ();
+      ^
+configure:17736: $? = 0
+configure:17736: result: yes
+configure:17745: checking for size_t
+configure:17745: i686-w64-mingw32.static-gcc -c -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math  -Wall -fexceptions  conftest.c >&5
+configure:17745: $? = 0
+configure:17745: i686-w64-mingw32.static-gcc -c -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math  -Wall -fexceptions  conftest.c >&5
+conftest.c: In function 'main':
+conftest.c:61:21: error: expected expression before ')' token
+ if (sizeof ((size_t)))
+                     ^
+configure:17745: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "libffi"
+| #define PACKAGE_TARNAME "libffi"
+| #define PACKAGE_VERSION "3.2.1"
+| #define PACKAGE_STRING "libffi 3.2.1"
+| #define PACKAGE_BUGREPORT "http://github.com/atgreen/libffi/issues"
+| #define PACKAGE_URL ""
+| #define PACKAGE "libffi"
+| #define VERSION "3.2.1"
+| #define STDC_HEADERS 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_MEMORY_H 1
+| #define HAVE_STRINGS_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_UNISTD_H 1
+| #define LT_OBJDIR ".libs/"
+| #define SIZEOF_SIZE_T 4
+| #define STDC_HEADERS 1
+| #define HAVE_MEMCPY 1
+| /* end confdefs.h.  */
+| #include <stdio.h>
+| #ifdef HAVE_SYS_TYPES_H
+| # include <sys/types.h>
+| #endif
+| #ifdef HAVE_SYS_STAT_H
+| # include <sys/stat.h>
+| #endif
+| #ifdef STDC_HEADERS
+| # include <stdlib.h>
+| # include <stddef.h>
+| #else
+| # ifdef HAVE_STDLIB_H
+| #  include <stdlib.h>
+| # endif
+| #endif
+| #ifdef HAVE_STRING_H
+| # if !defined STDC_HEADERS && defined HAVE_MEMORY_H
+| #  include <memory.h>
+| # endif
+| # include <string.h>
+| #endif
+| #ifdef HAVE_STRINGS_H
+| # include <strings.h>
+| #endif
+| #ifdef HAVE_INTTYPES_H
+| # include <inttypes.h>
+| #endif
+| #ifdef HAVE_STDINT_H
+| # include <stdint.h>
+| #endif
+| #ifdef HAVE_UNISTD_H
+| # include <unistd.h>
+| #endif
+| int
+| main ()
+| {
+| if (sizeof ((size_t)))
+| 	    return 0;
+|   ;
+|   return 0;
+| }
+configure:17745: result: yes
+configure:17758: checking for working alloca.h
+configure:17775: i686-w64-mingw32.static-gcc -o conftest.exe -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math  -Wall -fexceptions   conftest.c  >&5
+conftest.c:25:20: fatal error: alloca.h: No such file or directory
+compilation terminated.
+configure:17775: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "libffi"
+| #define PACKAGE_TARNAME "libffi"
+| #define PACKAGE_VERSION "3.2.1"
+| #define PACKAGE_STRING "libffi 3.2.1"
+| #define PACKAGE_BUGREPORT "http://github.com/atgreen/libffi/issues"
+| #define PACKAGE_URL ""
+| #define PACKAGE "libffi"
+| #define VERSION "3.2.1"
+| #define STDC_HEADERS 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_MEMORY_H 1
+| #define HAVE_STRINGS_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_UNISTD_H 1
+| #define LT_OBJDIR ".libs/"
+| #define SIZEOF_SIZE_T 4
+| #define STDC_HEADERS 1
+| #define HAVE_MEMCPY 1
+| /* end confdefs.h.  */
+| #include <alloca.h>
+| int
+| main ()
+| {
+| char *p = (char *) alloca (2 * sizeof (int));
+| 			  if (p) return 0;
+|   ;
+|   return 0;
+| }
+configure:17783: result: no
+configure:17791: checking for alloca
+configure:17828: i686-w64-mingw32.static-gcc -o conftest.exe -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math  -Wall -fexceptions   conftest.c  >&5
+configure:17828: $? = 0
+configure:17836: result: yes
+configure:17947: checking size of double
+configure:17952: i686-w64-mingw32.static-gcc -c -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math  -Wall -fexceptions  conftest.c >&5
+configure:17952: $? = 0
+configure:17952: i686-w64-mingw32.static-gcc -c -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math  -Wall -fexceptions  conftest.c >&5
+conftest.c: In function 'main':
+conftest.c:62:12: error: size of array 'test_array' is negative
+ static int test_array [1 - 2 * !(((long int) (sizeof (double))) <= 0)];
+            ^
+configure:17952: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "libffi"
+| #define PACKAGE_TARNAME "libffi"
+| #define PACKAGE_VERSION "3.2.1"
+| #define PACKAGE_STRING "libffi 3.2.1"
+| #define PACKAGE_BUGREPORT "http://github.com/atgreen/libffi/issues"
+| #define PACKAGE_URL ""
+| #define PACKAGE "libffi"
+| #define VERSION "3.2.1"
+| #define STDC_HEADERS 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_MEMORY_H 1
+| #define HAVE_STRINGS_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_UNISTD_H 1
+| #define LT_OBJDIR ".libs/"
+| #define SIZEOF_SIZE_T 4
+| #define STDC_HEADERS 1
+| #define HAVE_MEMCPY 1
+| #define HAVE_ALLOCA 1
+| /* end confdefs.h.  */
+| #include <stdio.h>
+| #ifdef HAVE_SYS_TYPES_H
+| # include <sys/types.h>
+| #endif
+| #ifdef HAVE_SYS_STAT_H
+| # include <sys/stat.h>
+| #endif
+| #ifdef STDC_HEADERS
+| # include <stdlib.h>
+| # include <stddef.h>
+| #else
+| # ifdef HAVE_STDLIB_H
+| #  include <stdlib.h>
+| # endif
+| #endif
+| #ifdef HAVE_STRING_H
+| # if !defined STDC_HEADERS && defined HAVE_MEMORY_H
+| #  include <memory.h>
+| # endif
+| # include <string.h>
+| #endif
+| #ifdef HAVE_STRINGS_H
+| # include <strings.h>
+| #endif
+| #ifdef HAVE_INTTYPES_H
+| # include <inttypes.h>
+| #endif
+| #ifdef HAVE_STDINT_H
+| # include <stdint.h>
+| #endif
+| #ifdef HAVE_UNISTD_H
+| # include <unistd.h>
+| #endif
+| int
+| main ()
+| {
+| static int test_array [1 - 2 * !(((long int) (sizeof (double))) <= 0)];
+| test_array [0] = 0;
+| return test_array [0];
+| 
+|   ;
+|   return 0;
+| }
+configure:17952: i686-w64-mingw32.static-gcc -c -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math  -Wall -fexceptions  conftest.c >&5
+conftest.c: In function 'main':
+conftest.c:62:12: error: size of array 'test_array' is negative
+ static int test_array [1 - 2 * !(((long int) (sizeof (double))) <= 1)];
+            ^
+configure:17952: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "libffi"
+| #define PACKAGE_TARNAME "libffi"
+| #define PACKAGE_VERSION "3.2.1"
+| #define PACKAGE_STRING "libffi 3.2.1"
+| #define PACKAGE_BUGREPORT "http://github.com/atgreen/libffi/issues"
+| #define PACKAGE_URL ""
+| #define PACKAGE "libffi"
+| #define VERSION "3.2.1"
+| #define STDC_HEADERS 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_MEMORY_H 1
+| #define HAVE_STRINGS_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_UNISTD_H 1
+| #define LT_OBJDIR ".libs/"
+| #define SIZEOF_SIZE_T 4
+| #define STDC_HEADERS 1
+| #define HAVE_MEMCPY 1
+| #define HAVE_ALLOCA 1
+| /* end confdefs.h.  */
+| #include <stdio.h>
+| #ifdef HAVE_SYS_TYPES_H
+| # include <sys/types.h>
+| #endif
+| #ifdef HAVE_SYS_STAT_H
+| # include <sys/stat.h>
+| #endif
+| #ifdef STDC_HEADERS
+| # include <stdlib.h>
+| # include <stddef.h>
+| #else
+| # ifdef HAVE_STDLIB_H
+| #  include <stdlib.h>
+| # endif
+| #endif
+| #ifdef HAVE_STRING_H
+| # if !defined STDC_HEADERS && defined HAVE_MEMORY_H
+| #  include <memory.h>
+| # endif
+| # include <string.h>
+| #endif
+| #ifdef HAVE_STRINGS_H
+| # include <strings.h>
+| #endif
+| #ifdef HAVE_INTTYPES_H
+| # include <inttypes.h>
+| #endif
+| #ifdef HAVE_STDINT_H
+| # include <stdint.h>
+| #endif
+| #ifdef HAVE_UNISTD_H
+| # include <unistd.h>
+| #endif
+| int
+| main ()
+| {
+| static int test_array [1 - 2 * !(((long int) (sizeof (double))) <= 1)];
+| test_array [0] = 0;
+| return test_array [0];
+| 
+|   ;
+|   return 0;
+| }
+configure:17952: i686-w64-mingw32.static-gcc -c -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math  -Wall -fexceptions  conftest.c >&5
+conftest.c: In function 'main':
+conftest.c:62:12: error: size of array 'test_array' is negative
+ static int test_array [1 - 2 * !(((long int) (sizeof (double))) <= 3)];
+            ^
+configure:17952: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "libffi"
+| #define PACKAGE_TARNAME "libffi"
+| #define PACKAGE_VERSION "3.2.1"
+| #define PACKAGE_STRING "libffi 3.2.1"
+| #define PACKAGE_BUGREPORT "http://github.com/atgreen/libffi/issues"
+| #define PACKAGE_URL ""
+| #define PACKAGE "libffi"
+| #define VERSION "3.2.1"
+| #define STDC_HEADERS 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_MEMORY_H 1
+| #define HAVE_STRINGS_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_UNISTD_H 1
+| #define LT_OBJDIR ".libs/"
+| #define SIZEOF_SIZE_T 4
+| #define STDC_HEADERS 1
+| #define HAVE_MEMCPY 1
+| #define HAVE_ALLOCA 1
+| /* end confdefs.h.  */
+| #include <stdio.h>
+| #ifdef HAVE_SYS_TYPES_H
+| # include <sys/types.h>
+| #endif
+| #ifdef HAVE_SYS_STAT_H
+| # include <sys/stat.h>
+| #endif
+| #ifdef STDC_HEADERS
+| # include <stdlib.h>
+| # include <stddef.h>
+| #else
+| # ifdef HAVE_STDLIB_H
+| #  include <stdlib.h>
+| # endif
+| #endif
+| #ifdef HAVE_STRING_H
+| # if !defined STDC_HEADERS && defined HAVE_MEMORY_H
+| #  include <memory.h>
+| # endif
+| # include <string.h>
+| #endif
+| #ifdef HAVE_STRINGS_H
+| # include <strings.h>
+| #endif
+| #ifdef HAVE_INTTYPES_H
+| # include <inttypes.h>
+| #endif
+| #ifdef HAVE_STDINT_H
+| # include <stdint.h>
+| #endif
+| #ifdef HAVE_UNISTD_H
+| # include <unistd.h>
+| #endif
+| int
+| main ()
+| {
+| static int test_array [1 - 2 * !(((long int) (sizeof (double))) <= 3)];
+| test_array [0] = 0;
+| return test_array [0];
+| 
+|   ;
+|   return 0;
+| }
+configure:17952: i686-w64-mingw32.static-gcc -c -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math  -Wall -fexceptions  conftest.c >&5
+conftest.c: In function 'main':
+conftest.c:62:12: error: size of array 'test_array' is negative
+ static int test_array [1 - 2 * !(((long int) (sizeof (double))) <= 7)];
+            ^
+configure:17952: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "libffi"
+| #define PACKAGE_TARNAME "libffi"
+| #define PACKAGE_VERSION "3.2.1"
+| #define PACKAGE_STRING "libffi 3.2.1"
+| #define PACKAGE_BUGREPORT "http://github.com/atgreen/libffi/issues"
+| #define PACKAGE_URL ""
+| #define PACKAGE "libffi"
+| #define VERSION "3.2.1"
+| #define STDC_HEADERS 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_MEMORY_H 1
+| #define HAVE_STRINGS_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_UNISTD_H 1
+| #define LT_OBJDIR ".libs/"
+| #define SIZEOF_SIZE_T 4
+| #define STDC_HEADERS 1
+| #define HAVE_MEMCPY 1
+| #define HAVE_ALLOCA 1
+| /* end confdefs.h.  */
+| #include <stdio.h>
+| #ifdef HAVE_SYS_TYPES_H
+| # include <sys/types.h>
+| #endif
+| #ifdef HAVE_SYS_STAT_H
+| # include <sys/stat.h>
+| #endif
+| #ifdef STDC_HEADERS
+| # include <stdlib.h>
+| # include <stddef.h>
+| #else
+| # ifdef HAVE_STDLIB_H
+| #  include <stdlib.h>
+| # endif
+| #endif
+| #ifdef HAVE_STRING_H
+| # if !defined STDC_HEADERS && defined HAVE_MEMORY_H
+| #  include <memory.h>
+| # endif
+| # include <string.h>
+| #endif
+| #ifdef HAVE_STRINGS_H
+| # include <strings.h>
+| #endif
+| #ifdef HAVE_INTTYPES_H
+| # include <inttypes.h>
+| #endif
+| #ifdef HAVE_STDINT_H
+| # include <stdint.h>
+| #endif
+| #ifdef HAVE_UNISTD_H
+| # include <unistd.h>
+| #endif
+| int
+| main ()
+| {
+| static int test_array [1 - 2 * !(((long int) (sizeof (double))) <= 7)];
+| test_array [0] = 0;
+| return test_array [0];
+| 
+|   ;
+|   return 0;
+| }
+configure:17952: i686-w64-mingw32.static-gcc -c -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math  -Wall -fexceptions  conftest.c >&5
+configure:17952: $? = 0
+configure:17952: i686-w64-mingw32.static-gcc -c -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math  -Wall -fexceptions  conftest.c >&5
+configure:17952: $? = 0
+configure:17952: i686-w64-mingw32.static-gcc -c -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math  -Wall -fexceptions  conftest.c >&5
+configure:17952: $? = 0
+configure:17952: i686-w64-mingw32.static-gcc -c -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math  -Wall -fexceptions  conftest.c >&5
+configure:17952: $? = 0
+configure:17966: result: 8
+configure:17980: checking size of long double
+configure:17985: i686-w64-mingw32.static-gcc -c -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math  -Wall -fexceptions  conftest.c >&5
+configure:17985: $? = 0
+configure:17985: i686-w64-mingw32.static-gcc -c -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math  -Wall -fexceptions  conftest.c >&5
+conftest.c: In function 'main':
+conftest.c:63:12: error: size of array 'test_array' is negative
+ static int test_array [1 - 2 * !(((long int) (sizeof (long double))) <= 0)];
+            ^
+configure:17985: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "libffi"
+| #define PACKAGE_TARNAME "libffi"
+| #define PACKAGE_VERSION "3.2.1"
+| #define PACKAGE_STRING "libffi 3.2.1"
+| #define PACKAGE_BUGREPORT "http://github.com/atgreen/libffi/issues"
+| #define PACKAGE_URL ""
+| #define PACKAGE "libffi"
+| #define VERSION "3.2.1"
+| #define STDC_HEADERS 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_MEMORY_H 1
+| #define HAVE_STRINGS_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_UNISTD_H 1
+| #define LT_OBJDIR ".libs/"
+| #define SIZEOF_SIZE_T 4
+| #define STDC_HEADERS 1
+| #define HAVE_MEMCPY 1
+| #define HAVE_ALLOCA 1
+| #define SIZEOF_DOUBLE 8
+| /* end confdefs.h.  */
+| #include <stdio.h>
+| #ifdef HAVE_SYS_TYPES_H
+| # include <sys/types.h>
+| #endif
+| #ifdef HAVE_SYS_STAT_H
+| # include <sys/stat.h>
+| #endif
+| #ifdef STDC_HEADERS
+| # include <stdlib.h>
+| # include <stddef.h>
+| #else
+| # ifdef HAVE_STDLIB_H
+| #  include <stdlib.h>
+| # endif
+| #endif
+| #ifdef HAVE_STRING_H
+| # if !defined STDC_HEADERS && defined HAVE_MEMORY_H
+| #  include <memory.h>
+| # endif
+| # include <string.h>
+| #endif
+| #ifdef HAVE_STRINGS_H
+| # include <strings.h>
+| #endif
+| #ifdef HAVE_INTTYPES_H
+| # include <inttypes.h>
+| #endif
+| #ifdef HAVE_STDINT_H
+| # include <stdint.h>
+| #endif
+| #ifdef HAVE_UNISTD_H
+| # include <unistd.h>
+| #endif
+| int
+| main ()
+| {
+| static int test_array [1 - 2 * !(((long int) (sizeof (long double))) <= 0)];
+| test_array [0] = 0;
+| return test_array [0];
+| 
+|   ;
+|   return 0;
+| }
+configure:17985: i686-w64-mingw32.static-gcc -c -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math  -Wall -fexceptions  conftest.c >&5
+conftest.c: In function 'main':
+conftest.c:63:12: error: size of array 'test_array' is negative
+ static int test_array [1 - 2 * !(((long int) (sizeof (long double))) <= 1)];
+            ^
+configure:17985: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "libffi"
+| #define PACKAGE_TARNAME "libffi"
+| #define PACKAGE_VERSION "3.2.1"
+| #define PACKAGE_STRING "libffi 3.2.1"
+| #define PACKAGE_BUGREPORT "http://github.com/atgreen/libffi/issues"
+| #define PACKAGE_URL ""
+| #define PACKAGE "libffi"
+| #define VERSION "3.2.1"
+| #define STDC_HEADERS 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_MEMORY_H 1
+| #define HAVE_STRINGS_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_UNISTD_H 1
+| #define LT_OBJDIR ".libs/"
+| #define SIZEOF_SIZE_T 4
+| #define STDC_HEADERS 1
+| #define HAVE_MEMCPY 1
+| #define HAVE_ALLOCA 1
+| #define SIZEOF_DOUBLE 8
+| /* end confdefs.h.  */
+| #include <stdio.h>
+| #ifdef HAVE_SYS_TYPES_H
+| # include <sys/types.h>
+| #endif
+| #ifdef HAVE_SYS_STAT_H
+| # include <sys/stat.h>
+| #endif
+| #ifdef STDC_HEADERS
+| # include <stdlib.h>
+| # include <stddef.h>
+| #else
+| # ifdef HAVE_STDLIB_H
+| #  include <stdlib.h>
+| # endif
+| #endif
+| #ifdef HAVE_STRING_H
+| # if !defined STDC_HEADERS && defined HAVE_MEMORY_H
+| #  include <memory.h>
+| # endif
+| # include <string.h>
+| #endif
+| #ifdef HAVE_STRINGS_H
+| # include <strings.h>
+| #endif
+| #ifdef HAVE_INTTYPES_H
+| # include <inttypes.h>
+| #endif
+| #ifdef HAVE_STDINT_H
+| # include <stdint.h>
+| #endif
+| #ifdef HAVE_UNISTD_H
+| # include <unistd.h>
+| #endif
+| int
+| main ()
+| {
+| static int test_array [1 - 2 * !(((long int) (sizeof (long double))) <= 1)];
+| test_array [0] = 0;
+| return test_array [0];
+| 
+|   ;
+|   return 0;
+| }
+configure:17985: i686-w64-mingw32.static-gcc -c -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math  -Wall -fexceptions  conftest.c >&5
+conftest.c: In function 'main':
+conftest.c:63:12: error: size of array 'test_array' is negative
+ static int test_array [1 - 2 * !(((long int) (sizeof (long double))) <= 3)];
+            ^
+configure:17985: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "libffi"
+| #define PACKAGE_TARNAME "libffi"
+| #define PACKAGE_VERSION "3.2.1"
+| #define PACKAGE_STRING "libffi 3.2.1"
+| #define PACKAGE_BUGREPORT "http://github.com/atgreen/libffi/issues"
+| #define PACKAGE_URL ""
+| #define PACKAGE "libffi"
+| #define VERSION "3.2.1"
+| #define STDC_HEADERS 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_MEMORY_H 1
+| #define HAVE_STRINGS_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_UNISTD_H 1
+| #define LT_OBJDIR ".libs/"
+| #define SIZEOF_SIZE_T 4
+| #define STDC_HEADERS 1
+| #define HAVE_MEMCPY 1
+| #define HAVE_ALLOCA 1
+| #define SIZEOF_DOUBLE 8
+| /* end confdefs.h.  */
+| #include <stdio.h>
+| #ifdef HAVE_SYS_TYPES_H
+| # include <sys/types.h>
+| #endif
+| #ifdef HAVE_SYS_STAT_H
+| # include <sys/stat.h>
+| #endif
+| #ifdef STDC_HEADERS
+| # include <stdlib.h>
+| # include <stddef.h>
+| #else
+| # ifdef HAVE_STDLIB_H
+| #  include <stdlib.h>
+| # endif
+| #endif
+| #ifdef HAVE_STRING_H
+| # if !defined STDC_HEADERS && defined HAVE_MEMORY_H
+| #  include <memory.h>
+| # endif
+| # include <string.h>
+| #endif
+| #ifdef HAVE_STRINGS_H
+| # include <strings.h>
+| #endif
+| #ifdef HAVE_INTTYPES_H
+| # include <inttypes.h>
+| #endif
+| #ifdef HAVE_STDINT_H
+| # include <stdint.h>
+| #endif
+| #ifdef HAVE_UNISTD_H
+| # include <unistd.h>
+| #endif
+| int
+| main ()
+| {
+| static int test_array [1 - 2 * !(((long int) (sizeof (long double))) <= 3)];
+| test_array [0] = 0;
+| return test_array [0];
+| 
+|   ;
+|   return 0;
+| }
+configure:17985: i686-w64-mingw32.static-gcc -c -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math  -Wall -fexceptions  conftest.c >&5
+conftest.c: In function 'main':
+conftest.c:63:12: error: size of array 'test_array' is negative
+ static int test_array [1 - 2 * !(((long int) (sizeof (long double))) <= 7)];
+            ^
+configure:17985: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "libffi"
+| #define PACKAGE_TARNAME "libffi"
+| #define PACKAGE_VERSION "3.2.1"
+| #define PACKAGE_STRING "libffi 3.2.1"
+| #define PACKAGE_BUGREPORT "http://github.com/atgreen/libffi/issues"
+| #define PACKAGE_URL ""
+| #define PACKAGE "libffi"
+| #define VERSION "3.2.1"
+| #define STDC_HEADERS 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_MEMORY_H 1
+| #define HAVE_STRINGS_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_UNISTD_H 1
+| #define LT_OBJDIR ".libs/"
+| #define SIZEOF_SIZE_T 4
+| #define STDC_HEADERS 1
+| #define HAVE_MEMCPY 1
+| #define HAVE_ALLOCA 1
+| #define SIZEOF_DOUBLE 8
+| /* end confdefs.h.  */
+| #include <stdio.h>
+| #ifdef HAVE_SYS_TYPES_H
+| # include <sys/types.h>
+| #endif
+| #ifdef HAVE_SYS_STAT_H
+| # include <sys/stat.h>
+| #endif
+| #ifdef STDC_HEADERS
+| # include <stdlib.h>
+| # include <stddef.h>
+| #else
+| # ifdef HAVE_STDLIB_H
+| #  include <stdlib.h>
+| # endif
+| #endif
+| #ifdef HAVE_STRING_H
+| # if !defined STDC_HEADERS && defined HAVE_MEMORY_H
+| #  include <memory.h>
+| # endif
+| # include <string.h>
+| #endif
+| #ifdef HAVE_STRINGS_H
+| # include <strings.h>
+| #endif
+| #ifdef HAVE_INTTYPES_H
+| # include <inttypes.h>
+| #endif
+| #ifdef HAVE_STDINT_H
+| # include <stdint.h>
+| #endif
+| #ifdef HAVE_UNISTD_H
+| # include <unistd.h>
+| #endif
+| int
+| main ()
+| {
+| static int test_array [1 - 2 * !(((long int) (sizeof (long double))) <= 7)];
+| test_array [0] = 0;
+| return test_array [0];
+| 
+|   ;
+|   return 0;
+| }
+configure:17985: i686-w64-mingw32.static-gcc -c -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math  -Wall -fexceptions  conftest.c >&5
+configure:17985: $? = 0
+configure:17985: i686-w64-mingw32.static-gcc -c -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math  -Wall -fexceptions  conftest.c >&5
+conftest.c: In function 'main':
+conftest.c:63:12: error: size of array 'test_array' is negative
+ static int test_array [1 - 2 * !(((long int) (sizeof (long double))) <= 11)];
+            ^
+configure:17985: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "libffi"
+| #define PACKAGE_TARNAME "libffi"
+| #define PACKAGE_VERSION "3.2.1"
+| #define PACKAGE_STRING "libffi 3.2.1"
+| #define PACKAGE_BUGREPORT "http://github.com/atgreen/libffi/issues"
+| #define PACKAGE_URL ""
+| #define PACKAGE "libffi"
+| #define VERSION "3.2.1"
+| #define STDC_HEADERS 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_MEMORY_H 1
+| #define HAVE_STRINGS_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_UNISTD_H 1
+| #define LT_OBJDIR ".libs/"
+| #define SIZEOF_SIZE_T 4
+| #define STDC_HEADERS 1
+| #define HAVE_MEMCPY 1
+| #define HAVE_ALLOCA 1
+| #define SIZEOF_DOUBLE 8
+| /* end confdefs.h.  */
+| #include <stdio.h>
+| #ifdef HAVE_SYS_TYPES_H
+| # include <sys/types.h>
+| #endif
+| #ifdef HAVE_SYS_STAT_H
+| # include <sys/stat.h>
+| #endif
+| #ifdef STDC_HEADERS
+| # include <stdlib.h>
+| # include <stddef.h>
+| #else
+| # ifdef HAVE_STDLIB_H
+| #  include <stdlib.h>
+| # endif
+| #endif
+| #ifdef HAVE_STRING_H
+| # if !defined STDC_HEADERS && defined HAVE_MEMORY_H
+| #  include <memory.h>
+| # endif
+| # include <string.h>
+| #endif
+| #ifdef HAVE_STRINGS_H
+| # include <strings.h>
+| #endif
+| #ifdef HAVE_INTTYPES_H
+| # include <inttypes.h>
+| #endif
+| #ifdef HAVE_STDINT_H
+| # include <stdint.h>
+| #endif
+| #ifdef HAVE_UNISTD_H
+| # include <unistd.h>
+| #endif
+| int
+| main ()
+| {
+| static int test_array [1 - 2 * !(((long int) (sizeof (long double))) <= 11)];
+| test_array [0] = 0;
+| return test_array [0];
+| 
+|   ;
+|   return 0;
+| }
+configure:17985: i686-w64-mingw32.static-gcc -c -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math  -Wall -fexceptions  conftest.c >&5
+configure:17985: $? = 0
+configure:17985: i686-w64-mingw32.static-gcc -c -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math  -Wall -fexceptions  conftest.c >&5
+configure:17985: $? = 0
+configure:17999: result: 12
+configure:18032: checking whether byte ordering is bigendian
+configure:18047: i686-w64-mingw32.static-gcc -c -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math  -Wall -fexceptions  conftest.c >&5
+conftest.c:30:9: error: unknown type name 'not'
+         not a universal capable compiler
+         ^
+conftest.c:30:15: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'universal'
+         not a universal capable compiler
+               ^
+conftest.c:30:15: error: unknown type name 'universal'
+configure:18047: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "libffi"
+| #define PACKAGE_TARNAME "libffi"
+| #define PACKAGE_VERSION "3.2.1"
+| #define PACKAGE_STRING "libffi 3.2.1"
+| #define PACKAGE_BUGREPORT "http://github.com/atgreen/libffi/issues"
+| #define PACKAGE_URL ""
+| #define PACKAGE "libffi"
+| #define VERSION "3.2.1"
+| #define STDC_HEADERS 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_MEMORY_H 1
+| #define HAVE_STRINGS_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_UNISTD_H 1
+| #define LT_OBJDIR ".libs/"
+| #define SIZEOF_SIZE_T 4
+| #define STDC_HEADERS 1
+| #define HAVE_MEMCPY 1
+| #define HAVE_ALLOCA 1
+| #define SIZEOF_DOUBLE 8
+| #define SIZEOF_LONG_DOUBLE 12
+| #define HAVE_LONG_DOUBLE 1
+| /* end confdefs.h.  */
+| #ifndef __APPLE_CC__
+| 	       not a universal capable compiler
+| 	     #endif
+| 	     typedef int dummy;
+| 
+configure:18092: i686-w64-mingw32.static-gcc -c -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math  -Wall -fexceptions  conftest.c >&5
+configure:18092: $? = 0
+configure:18110: i686-w64-mingw32.static-gcc -c -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math  -Wall -fexceptions  conftest.c >&5
+conftest.c: In function 'main':
+conftest.c:36:4: error: unknown type name 'not'
+    not big endian
+    ^
+conftest.c:36:12: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'endian'
+    not big endian
+            ^
+configure:18110: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "libffi"
+| #define PACKAGE_TARNAME "libffi"
+| #define PACKAGE_VERSION "3.2.1"
+| #define PACKAGE_STRING "libffi 3.2.1"
+| #define PACKAGE_BUGREPORT "http://github.com/atgreen/libffi/issues"
+| #define PACKAGE_URL ""
+| #define PACKAGE "libffi"
+| #define VERSION "3.2.1"
+| #define STDC_HEADERS 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_MEMORY_H 1
+| #define HAVE_STRINGS_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_UNISTD_H 1
+| #define LT_OBJDIR ".libs/"
+| #define SIZEOF_SIZE_T 4
+| #define STDC_HEADERS 1
+| #define HAVE_MEMCPY 1
+| #define HAVE_ALLOCA 1
+| #define SIZEOF_DOUBLE 8
+| #define SIZEOF_LONG_DOUBLE 12
+| #define HAVE_LONG_DOUBLE 1
+| /* end confdefs.h.  */
+| #include <sys/types.h>
+| 		#include <sys/param.h>
+| 
+| int
+| main ()
+| {
+| #if BYTE_ORDER != BIG_ENDIAN
+| 		 not big endian
+| 		#endif
+| 
+|   ;
+|   return 0;
+| }
+configure:18238: result: no
+configure:18257: checking assembler .cfi pseudo-op support
+configure:18275: i686-w64-mingw32.static-gcc -c -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math  -Wall -fexceptions  conftest.c >&5
+configure:18275: $? = 0
+configure:18283: result: yes
+configure:18369: checking assembler supports pc related relocs
+configure:18382: result: yes
+configure:18390: checking assembler .ascii pseudo-op support
+configure:18409: i686-w64-mingw32.static-gcc -c -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math  -Wall -fexceptions  conftest.c >&5
+configure:18409: $? = 0
+configure:18417: result: yes
+configure:18425: checking assembler .string pseudo-op support
+configure:18444: i686-w64-mingw32.static-gcc -c -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math  -Wall -fexceptions  conftest.c >&5
+configure:18444: $? = 0
+configure:18452: result: yes
+configure:18472: checking for _ prefix in compiled symbols
+configure:18482: i686-w64-mingw32.static-gcc -c -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math  -Wall -fexceptions  conftest.c >&5
+conftest.c: In function 'main':
+conftest.c:2:12: warning: statement with no effect [-Wunused-value]
+ int main(){nm_test_func;return 0;}
+            ^
+configure:18485: $? = 0
+configure:18489: /home/user/mxe/usr/bin/i686-w64-mingw32.static-nm -B conftest.o \| sed -n -e 's/^.*[	 ]\([ABCDGIRSTW][ABCDGIRSTW]*\)[	 ][	 ]*_\([_A-Za-z][_A-Za-z0-9]*\)$/\1 _\2 \2/p' | sed '/ __gnu_lto/d' \> conftest.nm
+configure:18492: $? = 0
+configure:18514: result: yes
+configure:18589: checking whether .eh_frame section should be read-only
+configure:18609: result: no
+configure:18624: checking for __attribute__((visibility("hidden")))
+configure:18633: i686-w64-mingw32.static-gcc -Werror -S conftest.c -o conftest.s 1>&5
+conftest.c: In function 'foo':
+conftest.c:1:1: error: visibility attribute not supported in this configuration; ignored [-Werror=attributes]
+ int __attribute__ ((visibility ("hidden"))) foo (void) { return 1  ; }
+ ^
+cc1: all warnings being treated as errors
+configure:18636: $? = 1
+configure:18645: result: no
+configure:18859: checking that generated files are newer than configure
+configure:18865: result: done
+configure:19077: creating ./config.status
+
+## ---------------------- ##
+## Running config.status. ##
+## ---------------------- ##
+
+This file was extended by libffi config.status 3.2.1, which was
+generated by GNU Autoconf 2.69.  Invocation command line was
+
+  CONFIG_FILES    = 
+  CONFIG_HEADERS  = 
+  CONFIG_LINKS    = 
+  CONFIG_COMMANDS = 
+  $ ./config.status 
+
+on user-VirtualBox
+
+config.status:1308: creating include/Makefile
+config.status:1308: creating include/ffi.h
+config.status:1308: creating Makefile
+config.status:1308: creating testsuite/Makefile
+config.status:1308: creating man/Makefile
+config.status:1308: creating libffi.pc
+config.status:1308: creating fficonfig.h
+config.status:1534: linking ../src/x86/ffitarget.h to include/ffitarget.h
+config.status:1553: executing buildir commands
+config.status:1583: create top_srcdir/Makefile guessed from local Makefile
+config.status:1698: build in i686-w64-mingw32.static (HOST=)
+config.status:1553: executing depfiles commands
+config.status:1553: executing libtool commands
+config.status:1553: executing include commands
+config.status:1553: executing src commands
+configure:21765: WARNING: unrecognized options: --enable-doc, --enable-gtk-doc, --enable-gtk-doc-html, --enable-gtk-doc-pdf, --with-html-dir, --disable-doxygen
+
+## ---------------- ##
+## Cache variables. ##
+## ---------------- ##
+
+ac_cv_build=i686-pc-linux-gnu
+ac_cv_c_bigendian=no
+ac_cv_c_compiler_gnu=yes
+ac_cv_cflags_warn_all=-Wall
+ac_cv_cxx_compiler_gnu=yes
+ac_cv_env_CCASFLAGS_set=
+ac_cv_env_CCASFLAGS_value=
+ac_cv_env_CCAS_set=
+ac_cv_env_CCAS_value=
+ac_cv_env_CPPFLAGS_set=
+ac_cv_env_CPPFLAGS_value=
+ac_cv_env_CPP_set=
+ac_cv_env_CPP_value=
+ac_cv_env_CXXCPP_set=
+ac_cv_env_CXXCPP_value=
+ac_cv_env_build_alias_set=set
+ac_cv_env_build_alias_value=i686-pc-linux-gnu
+ac_cv_env_host_alias_set=set
+ac_cv_env_host_alias_value=i686-w64-mingw32.static
+ac_cv_env_target_alias_set=
+ac_cv_env_target_alias_value=
+ac_cv_exeext=.exe
+ac_cv_func_alloca_works=yes
+ac_cv_func_memcpy=yes
+ac_cv_func_mkostemp=no
+ac_cv_func_mmap=no
+ac_cv_func_mmap_anon=no
+ac_cv_func_mmap_dev_zero=no
+ac_cv_func_mmap_file=no
+ac_cv_header_dlfcn_h=no
+ac_cv_header_inttypes_h=yes
+ac_cv_header_memory_h=yes
+ac_cv_header_stdc=yes
+ac_cv_header_stdint_h=yes
+ac_cv_header_stdlib_h=yes
+ac_cv_header_string_h=yes
+ac_cv_header_strings_h=yes
+ac_cv_header_sys_mman_h=no
+ac_cv_header_sys_stat_h=yes
+ac_cv_header_sys_types_h=yes
+ac_cv_header_unistd_h=yes
+ac_cv_host=i686-w64-mingw32.static
+ac_cv_objext=o
+ac_cv_path_EGREP='/bin/grep -E'
+ac_cv_path_FGREP='/bin/grep -F'
+ac_cv_path_GREP=/bin/grep
+ac_cv_path_SED=/bin/sed
+ac_cv_path_ax_enable_builddir_sed=sed
+ac_cv_path_install='/usr/bin/install -c'
+ac_cv_path_mkdir=/bin/mkdir
+ac_cv_prog_AR=i686-w64-mingw32.static-ar
+ac_cv_prog_AWK=mawk
+ac_cv_prog_CC=i686-w64-mingw32.static-gcc
+ac_cv_prog_CPP='i686-w64-mingw32.static-gcc -E'
+ac_cv_prog_CXX=i686-w64-mingw32.static-g++
+ac_cv_prog_CXXCPP='i686-w64-mingw32.static-g++ -E'
+ac_cv_prog_DLLTOOL=i686-w64-mingw32.static-dlltool
+ac_cv_prog_HAVE_DOXYGEN=false
+ac_cv_prog_OBJDUMP=i686-w64-mingw32.static-objdump
+ac_cv_prog_RANLIB=i686-w64-mingw32.static-ranlib
+ac_cv_prog_STRIP=i686-w64-mingw32.static-strip
+ac_cv_prog_ac_ct_MANIFEST_TOOL=mt
+ac_cv_prog_cc_c89=
+ac_cv_prog_cc_g=yes
+ac_cv_prog_cc_i686_w64_mingw32_static_gcc_c_o=yes
+ac_cv_prog_cxx_g=yes
+ac_cv_prog_make_make_set=yes
+ac_cv_sizeof_double=8
+ac_cv_sizeof_long_double=12
+ac_cv_sizeof_size_t=4
+ac_cv_target=i686-w64-mingw32.static
+ac_cv_type_size_t=yes
+ac_cv_working_alloca_h=no
+am_cv_CCAS_dependencies_compiler_type=gcc3
+am_cv_CC_dependencies_compiler_type=gcc3
+am_cv_CXX_dependencies_compiler_type=gcc3
+am_cv_make_support_nested_variables=yes
+ax_cv_c_compiler_vendor=gnu
+ax_cv_check_cflags___O3__fomit_frame_pointer__fstrict_aliasing__ffast_math=yes
+ax_cv_check_cflags___ffast_math=yes
+ax_cv_check_cflags___fstrict_aliasing=yes
+ax_cv_gcc_archflag=unknown
+gcc_cv_as_cfi_pseudo_op=yes
+libffi_cv_as_ascii_pseudo_op=yes
+libffi_cv_as_string_pseudo_op=yes
+libffi_cv_as_x86_pcrel=yes
+libffi_cv_hidden_visibility_attribute=no
+libffi_cv_ro_eh_frame=no
+lt_cv_ar_at_file=@
+lt_cv_deplibs_check_method='file_magic ^x86 archive import|^x86 DLL'
+lt_cv_file_magic_cmd=func_win32_libid
+lt_cv_file_magic_test_file=
+lt_cv_ld_reload_flag=-r
+lt_cv_nm_interface='BSD nm'
+lt_cv_objdir=.libs
+lt_cv_path_LD=/home/user/mxe/usr/bin/i686-w64-mingw32.static-ld
+lt_cv_path_LDCXX=/home/user/mxe/usr/bin/i686-w64-mingw32.static-ld
+lt_cv_path_NM='/home/user/mxe/usr/bin/i686-w64-mingw32.static-nm -B'
+lt_cv_path_mainfest_tool=no
+lt_cv_prog_compiler_c_o=yes
+lt_cv_prog_compiler_c_o_CXX=yes
+lt_cv_prog_compiler_pic='-DDLL_EXPORT -DPIC'
+lt_cv_prog_compiler_pic_CXX='-DDLL_EXPORT -DPIC'
+lt_cv_prog_compiler_pic_works=yes
+lt_cv_prog_compiler_pic_works_CXX=yes
+lt_cv_prog_compiler_rtti_exceptions=no
+lt_cv_prog_compiler_static_works=yes
+lt_cv_prog_compiler_static_works_CXX=yes
+lt_cv_prog_gnu_ld=yes
+lt_cv_prog_gnu_ldcxx=yes
+lt_cv_sharedlib_from_linklib_cmd=func_cygming_dll_for_implib
+lt_cv_sys_global_symbol_pipe='sed -n -e '\''s/^.*[	 ]\([ABCDGIRSTW][ABCDGIRSTW]*\)[	 ][	 ]*_\([_A-Za-z][_A-Za-z0-9]*\)$/\1 _\2 \2/p'\'' | sed '\''/ __gnu_lto/d'\'''
+lt_cv_sys_global_symbol_to_c_name_address='sed -n -e '\''s/^: \([^ ]*\)[ ]*$/  {\"\1\", (void *) 0},/p'\'' -e '\''s/^[ABCDGIRSTW]* \([^ ]*\) \([^ ]*\)$/  {"\2", (void *) \&\2},/p'\'''
+lt_cv_sys_global_symbol_to_c_name_address_lib_prefix='sed -n -e '\''s/^: \([^ ]*\)[ ]*$/  {\"\1\", (void *) 0},/p'\'' -e '\''s/^[ABCDGIRSTW]* \([^ ]*\) \(lib[^ ]*\)$/  {"\2", (void *) \&\2},/p'\'' -e '\''s/^[ABCDGIRSTW]* \([^ ]*\) \([^ ]*\)$/  {"lib\2", (void *) \&\2},/p'\'''
+lt_cv_sys_global_symbol_to_cdecl='sed -n -e '\''s/^T .* \(.*\)$/extern int \1();/p'\'' -e '\''s/^[ABCDGIRSTW]* .* \(.*\)$/extern char \1;/p'\'''
+lt_cv_sys_max_cmd_len=1572864
+lt_cv_sys_symbol_underscore=yes
+lt_cv_to_host_file_cmd=func_convert_file_nix_to_w32
+lt_cv_to_tool_file_cmd=func_convert_file_noop
+
+## ----------------- ##
+## Output variables. ##
+## ----------------- ##
+
+AARCH64_FALSE=''
+AARCH64_TRUE='#'
+ACLOCAL='${SHELL} /home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/missing aclocal-1.13'
+ALLOCA=''
+ALPHA_FALSE=''
+ALPHA_TRUE='#'
+AMDEPBACKSLASH='\'
+AMDEP_FALSE='#'
+AMDEP_TRUE=''
+AMTAR='$${TAR-tar}'
+AM_BACKSLASH='\'
+AM_DEFAULT_V='$(AM_DEFAULT_VERBOSITY)'
+AM_DEFAULT_VERBOSITY='1'
+AM_LTLDFLAGS='-no-undefined -bindir "$(bindir)"'
+AM_RUNTESTFLAGS=''
+AM_V='$(V)'
+AR='i686-w64-mingw32.static-ar'
+ARC_FALSE=''
+ARC_TRUE='#'
+ARM_FALSE=''
+ARM_TRUE='#'
+AUTOCONF='${SHELL} /home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/missing autoconf'
+AUTOHEADER='${SHELL} /home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/missing autoheader'
+AUTOMAKE='${SHELL} /home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/missing automake-1.13'
+AVR32_FALSE=''
+AVR32_TRUE='#'
+AWK='mawk'
+BFIN_FALSE=''
+BFIN_TRUE='#'
+CC='i686-w64-mingw32.static-gcc'
+CCAS='i686-w64-mingw32.static-gcc'
+CCASDEPMODE='depmode=gcc3'
+CCASFLAGS=''
+CCDEPMODE='depmode=gcc3'
+CFLAGS='-O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math  -Wall -fexceptions'
+CPP='i686-w64-mingw32.static-gcc -E'
+CPPFLAGS=''
+CXX='i686-w64-mingw32.static-g++'
+CXXCPP='i686-w64-mingw32.static-g++ -E'
+CXXDEPMODE='depmode=gcc3'
+CXXFLAGS='-g -O2'
+CYGPATH_W='echo'
+DEFS='-DHAVE_CONFIG_H'
+DEPDIR='.deps'
+DLLTOOL='i686-w64-mingw32.static-dlltool'
+DSYMUTIL=''
+DUMPBIN=''
+ECHO_C=''
+ECHO_N='-n'
+ECHO_T=''
+EGREP='/bin/grep -E'
+EXEEXT='.exe'
+FFI_DEBUG_FALSE=''
+FFI_DEBUG_TRUE='#'
+FFI_EXEC_TRAMPOLINE_TABLE='0'
+FFI_EXEC_TRAMPOLINE_TABLE_FALSE=''
+FFI_EXEC_TRAMPOLINE_TABLE_TRUE='#'
+FGREP='/bin/grep -F'
+FRV_FALSE=''
+FRV_TRUE='#'
+GREP='/bin/grep'
+HAVE_LONG_DOUBLE='1'
+HAVE_LONG_DOUBLE_VARIANT='0'
+IA64_FALSE=''
+IA64_TRUE='#'
+INSTALL_DATA='${INSTALL} -m 644'
+INSTALL_PROGRAM='${INSTALL}'
+INSTALL_SCRIPT='${INSTALL}'
+INSTALL_STRIP_PROGRAM='$(install_sh) -c -s'
+LD='/home/user/mxe/usr/bin/i686-w64-mingw32.static-ld'
+LDFLAGS=''
+LIBFFI_CRIS_FALSE=''
+LIBFFI_CRIS_TRUE='#'
+LIBOBJS=''
+LIBS=''
+LIBTOOL='$(SHELL) $(top_builddir)/libtool'
+LIPO=''
+LN_S='ln -s'
+LTLIBOBJS=''
+M32R_FALSE=''
+M32R_TRUE='#'
+M68K_FALSE=''
+M68K_TRUE='#'
+M88K_FALSE=''
+M88K_TRUE='#'
+MAINT='#'
+MAINTAINER_MODE_FALSE=''
+MAINTAINER_MODE_TRUE='#'
+MAKEINFO='${SHELL} /home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/missing makeinfo'
+MANIFEST_TOOL=':'
+METAG_FALSE=''
+METAG_TRUE='#'
+MICROBLAZE_FALSE=''
+MICROBLAZE_TRUE='#'
+MIPS_FALSE=''
+MIPS_TRUE='#'
+MKDIR_P='/bin/mkdir -p'
+MOXIE_FALSE=''
+MOXIE_TRUE='#'
+NIOS2_FALSE=''
+NIOS2_TRUE='#'
+NM='/home/user/mxe/usr/bin/i686-w64-mingw32.static-nm -B'
+NMEDIT=''
+OBJDUMP='i686-w64-mingw32.static-objdump'
+OBJEXT='o'
+OR1K_FALSE=''
+OR1K_TRUE='#'
+OTOOL64=''
+OTOOL=''
+PA64_HPUX_FALSE=''
+PA64_HPUX_TRUE='#'
+PACKAGE='libffi'
+PACKAGE_BUGREPORT='http://github.com/atgreen/libffi/issues'
+PACKAGE_NAME='libffi'
+PACKAGE_STRING='libffi 3.2.1'
+PACKAGE_TARNAME='libffi'
+PACKAGE_URL=''
+PACKAGE_VERSION='3.2.1'
+PATH_SEPARATOR=':'
+PA_HPUX_FALSE=''
+PA_HPUX_TRUE='#'
+PA_LINUX_FALSE=''
+PA_LINUX_TRUE='#'
+POWERPC_AIX_FALSE=''
+POWERPC_AIX_TRUE='#'
+POWERPC_DARWIN_FALSE=''
+POWERPC_DARWIN_TRUE='#'
+POWERPC_FALSE=''
+POWERPC_FREEBSD_FALSE=''
+POWERPC_FREEBSD_TRUE='#'
+POWERPC_TRUE='#'
+PRTDIAG=''
+RANLIB='i686-w64-mingw32.static-ranlib'
+S390_FALSE=''
+S390_TRUE='#'
+SED='/bin/sed'
+SET_MAKE=''
+SH64_FALSE=''
+SH64_TRUE='#'
+SHELL='/bin/bash'
+SH_FALSE=''
+SH_TRUE='#'
+SPARC_FALSE=''
+SPARC_TRUE='#'
+STRIP='i686-w64-mingw32.static-strip'
+TARGET='X86_WIN32'
+TARGETDIR='x86'
+TESTSUBDIR_FALSE='#'
+TESTSUBDIR_TRUE=''
+TILE_FALSE=''
+TILE_TRUE='#'
+VAX_FALSE=''
+VAX_TRUE='#'
+VERSION='3.2.1'
+X86_64_FALSE=''
+X86_64_TRUE='#'
+X86_DARWIN32_FALSE=''
+X86_DARWIN32_TRUE='#'
+X86_DARWIN64_FALSE=''
+X86_DARWIN64_TRUE='#'
+X86_DARWIN_FALSE=''
+X86_DARWIN_TRUE='#'
+X86_FALSE=''
+X86_FREEBSD_FALSE=''
+X86_FREEBSD_TRUE='#'
+X86_TRUE='#'
+X86_WIN32_FALSE='#'
+X86_WIN32_TRUE=''
+X86_WIN64_FALSE=''
+X86_WIN64_TRUE='#'
+XTENSA_FALSE=''
+XTENSA_TRUE='#'
+ac_ct_AR=''
+ac_ct_CC=''
+ac_ct_CXX=''
+ac_ct_DUMPBIN=''
+am__EXEEXT_FALSE='#'
+am__EXEEXT_TRUE=''
+am__fastdepCCAS_FALSE='#'
+am__fastdepCCAS_TRUE=''
+am__fastdepCC_FALSE='#'
+am__fastdepCC_TRUE=''
+am__fastdepCXX_FALSE='#'
+am__fastdepCXX_TRUE=''
+am__include='include'
+am__isrc=' -I$(srcdir)'
+am__leading_dot='.'
+am__nodep='_no'
+am__quote=''
+am__tar='$${TAR-tar} chof - "$$tardir"'
+am__untar='$${TAR-tar} xf -'
+ax_enable_builddir_sed='sed'
+bindir='${exec_prefix}/bin'
+build='i686-pc-linux-gnu'
+build_alias='i686-pc-linux-gnu'
+build_cpu='i686'
+build_os='linux-gnu'
+build_vendor='pc'
+datadir='${datarootdir}'
+datarootdir='${prefix}/share'
+docdir='/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1.build_.sink'
+dvidir='${docdir}'
+exec_prefix='${prefix}'
+host='i686-w64-mingw32.static'
+host_alias='i686-w64-mingw32.static'
+host_cpu='i686'
+host_os='mingw32.static'
+host_vendor='w64'
+htmldir='${docdir}'
+includedir='${prefix}/include'
+infodir='/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1.build_.sink'
+install_sh='${SHELL} /home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/install-sh'
+libdir='${exec_prefix}/lib'
+libexecdir='${exec_prefix}/libexec'
+localedir='${datarootdir}/locale'
+localstatedir='${prefix}/var'
+mandir='/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1.build_.sink'
+mkdir_p='$(MKDIR_P)'
+oldincludedir='/usr/include'
+pdfdir='${docdir}'
+prefix='/home/user/mxe/usr/i686-w64-mingw32.static'
+program_transform_name='s,x,x,'
+psdir='${docdir}'
+sbindir='${exec_prefix}/sbin'
+sharedstatedir='${prefix}/com'
+sys_symbol_underscore='yes'
+sysconfdir='${prefix}/etc'
+target='i686-w64-mingw32.static'
+target_alias='i686-w64-mingw32.static'
+target_cpu='i686'
+target_os='mingw32.static'
+target_vendor='w64'
+toolexecdir='${exec_prefix}/lib/gcc-lib/$(target_alias)'
+toolexeclibdir='${exec_prefix}/lib/../lib'
+
+## ----------- ##
+## confdefs.h. ##
+## ----------- ##
+
+/* confdefs.h */
+#define PACKAGE_NAME "libffi"
+#define PACKAGE_TARNAME "libffi"
+#define PACKAGE_VERSION "3.2.1"
+#define PACKAGE_STRING "libffi 3.2.1"
+#define PACKAGE_BUGREPORT "http://github.com/atgreen/libffi/issues"
+#define PACKAGE_URL ""
+#define PACKAGE "libffi"
+#define VERSION "3.2.1"
+#define STDC_HEADERS 1
+#define HAVE_SYS_TYPES_H 1
+#define HAVE_SYS_STAT_H 1
+#define HAVE_STDLIB_H 1
+#define HAVE_STRING_H 1
+#define HAVE_MEMORY_H 1
+#define HAVE_STRINGS_H 1
+#define HAVE_INTTYPES_H 1
+#define HAVE_STDINT_H 1
+#define HAVE_UNISTD_H 1
+#define LT_OBJDIR ".libs/"
+#define SIZEOF_SIZE_T 4
+#define STDC_HEADERS 1
+#define HAVE_MEMCPY 1
+#define HAVE_ALLOCA 1
+#define SIZEOF_DOUBLE 8
+#define SIZEOF_LONG_DOUBLE 12
+#define HAVE_LONG_DOUBLE 1
+#define HAVE_AS_CFI_PSEUDO_OP 1
+#define HAVE_AS_X86_PCREL 1
+#define HAVE_AS_ASCII_PSEUDO_OP 1
+#define HAVE_AS_STRING_PSEUDO_OP 1
+#define SYMBOL_UNDERSCORE 1
+#define EH_FRAME_FLAGS "aw"
+
+configure: exit 0
+
+## ---------------- ##
+## Cache variables. ##
+## ---------------- ##
+
+ac_cv_build=i686-pc-linux-gnu
+ac_cv_env_CCASFLAGS_set=
+ac_cv_env_CCASFLAGS_value=
+ac_cv_env_CCAS_set=
+ac_cv_env_CCAS_value=
+ac_cv_env_CPPFLAGS_set=
+ac_cv_env_CPPFLAGS_value=
+ac_cv_env_CPP_set=
+ac_cv_env_CPP_value=
+ac_cv_env_CXXCPP_set=
+ac_cv_env_CXXCPP_value=
+ac_cv_env_build_alias_set=set
+ac_cv_env_build_alias_value=i686-pc-linux-gnu
+ac_cv_env_host_alias_set=set
+ac_cv_env_host_alias_value=i686-w64-mingw32.static
+ac_cv_env_target_alias_set=
+ac_cv_env_target_alias_value=
+ac_cv_host=i686-w64-mingw32.static
+ac_cv_prog_HAVE_DOXYGEN=false
+ac_cv_target=i686-w64-mingw32.static
+
+## ----------------- ##
+## Output variables. ##
+## ----------------- ##
+
+AARCH64_FALSE=''
+AARCH64_TRUE=''
+ACLOCAL=''
+ALLOCA=''
+ALPHA_FALSE=''
+ALPHA_TRUE=''
+AMDEPBACKSLASH=''
+AMDEP_FALSE=''
+AMDEP_TRUE=''
+AMTAR=''
+AM_BACKSLASH=''
+AM_DEFAULT_V=''
+AM_DEFAULT_VERBOSITY=''
+AM_LTLDFLAGS=''
+AM_RUNTESTFLAGS=''
+AM_V=''
+AR=''
+ARC_FALSE=''
+ARC_TRUE=''
+ARM_FALSE=''
+ARM_TRUE=''
+AUTOCONF=''
+AUTOHEADER=''
+AUTOMAKE=''
+AVR32_FALSE=''
+AVR32_TRUE=''
+AWK=''
+BFIN_FALSE=''
+BFIN_TRUE=''
+CC=''
+CCAS=''
+CCASDEPMODE=''
+CCASFLAGS=''
+CCDEPMODE=''
+CFLAGS=''
+CPP=''
+CPPFLAGS=''
+CXX=''
+CXXCPP=''
+CXXDEPMODE=''
+CXXFLAGS=''
+CYGPATH_W=''
+DEFS=''
+DEPDIR=''
+DLLTOOL=''
+DSYMUTIL=''
+DUMPBIN=''
+ECHO_C=''
+ECHO_N='-n'
+ECHO_T=''
+EGREP=''
+EXEEXT=''
+FFI_DEBUG_FALSE=''
+FFI_DEBUG_TRUE=''
+FFI_EXEC_TRAMPOLINE_TABLE=''
+FFI_EXEC_TRAMPOLINE_TABLE_FALSE=''
+FFI_EXEC_TRAMPOLINE_TABLE_TRUE=''
+FGREP=''
+FRV_FALSE=''
+FRV_TRUE=''
+GREP=''
+HAVE_LONG_DOUBLE=''
+HAVE_LONG_DOUBLE_VARIANT=''
+IA64_FALSE=''
+IA64_TRUE=''
+INSTALL_DATA=''
+INSTALL_PROGRAM=''
+INSTALL_SCRIPT=''
+INSTALL_STRIP_PROGRAM=''
+LD=''
+LDFLAGS=''
+LIBFFI_CRIS_FALSE=''
+LIBFFI_CRIS_TRUE=''
+LIBOBJS=''
+LIBS=''
+LIBTOOL=''
+LIPO=''
+LN_S=''
+LTLIBOBJS=''
+M32R_FALSE=''
+M32R_TRUE=''
+M68K_FALSE=''
+M68K_TRUE=''
+M88K_FALSE=''
+M88K_TRUE=''
+MAINT=''
+MAINTAINER_MODE_FALSE=''
+MAINTAINER_MODE_TRUE=''
+MAKEINFO=''
+MANIFEST_TOOL=''
+METAG_FALSE=''
+METAG_TRUE=''
+MICROBLAZE_FALSE=''
+MICROBLAZE_TRUE=''
+MIPS_FALSE=''
+MIPS_TRUE=''
+MKDIR_P=''
+MOXIE_FALSE=''
+MOXIE_TRUE=''
+NIOS2_FALSE=''
+NIOS2_TRUE=''
+NM=''
+NMEDIT=''
+OBJDUMP=''
+OBJEXT=''
+OR1K_FALSE=''
+OR1K_TRUE=''
+OTOOL64=''
+OTOOL=''
+PA64_HPUX_FALSE=''
+PA64_HPUX_TRUE=''
+PACKAGE=''
+PACKAGE_BUGREPORT='http://github.com/atgreen/libffi/issues'
+PACKAGE_NAME='libffi'
+PACKAGE_STRING='libffi 3.2.1'
+PACKAGE_TARNAME='libffi'
+PACKAGE_URL=''
+PACKAGE_VERSION='3.2.1'
+PATH_SEPARATOR=':'
+PA_HPUX_FALSE=''
+PA_HPUX_TRUE=''
+PA_LINUX_FALSE=''
+PA_LINUX_TRUE=''
+POWERPC_AIX_FALSE=''
+POWERPC_AIX_TRUE=''
+POWERPC_DARWIN_FALSE=''
+POWERPC_DARWIN_TRUE=''
+POWERPC_FALSE=''
+POWERPC_FREEBSD_FALSE=''
+POWERPC_FREEBSD_TRUE=''
+POWERPC_TRUE=''
+PRTDIAG=''
+RANLIB=''
+S390_FALSE=''
+S390_TRUE=''
+SED=''
+SET_MAKE=''
+SH64_FALSE=''
+SH64_TRUE=''
+SHELL='/bin/bash'
+SH_FALSE=''
+SH_TRUE=''
+SPARC_FALSE=''
+SPARC_TRUE=''
+STRIP=''
+TARGET='i686-w64-mingw32.static'
+TARGETDIR=''
+TESTSUBDIR_FALSE=''
+TESTSUBDIR_TRUE=''
+TILE_FALSE=''
+TILE_TRUE=''
+VAX_FALSE=''
+VAX_TRUE=''
+VERSION=''
+X86_64_FALSE=''
+X86_64_TRUE=''
+X86_DARWIN32_FALSE=''
+X86_DARWIN32_TRUE=''
+X86_DARWIN64_FALSE=''
+X86_DARWIN64_TRUE=''
+X86_DARWIN_FALSE=''
+X86_DARWIN_TRUE=''
+X86_FALSE=''
+X86_FREEBSD_FALSE=''
+X86_FREEBSD_TRUE=''
+X86_TRUE=''
+X86_WIN32_FALSE=''
+X86_WIN32_TRUE=''
+X86_WIN64_FALSE=''
+X86_WIN64_TRUE=''
+XTENSA_FALSE=''
+XTENSA_TRUE=''
+ac_ct_AR=''
+ac_ct_CC=''
+ac_ct_CXX=''
+ac_ct_DUMPBIN=''
+am__EXEEXT_FALSE=''
+am__EXEEXT_TRUE=''
+am__fastdepCCAS_FALSE=''
+am__fastdepCCAS_TRUE=''
+am__fastdepCC_FALSE=''
+am__fastdepCC_TRUE=''
+am__fastdepCXX_FALSE=''
+am__fastdepCXX_TRUE=''
+am__include=''
+am__isrc=''
+am__leading_dot=''
+am__nodep=''
+am__quote=''
+am__tar=''
+am__untar=''
+ax_enable_builddir_sed=''
+bindir='${exec_prefix}/bin'
+build='i686-pc-linux-gnu'
+build_alias='i686-pc-linux-gnu'
+build_cpu='i686'
+build_os='linux-gnu'
+build_vendor='pc'
+datadir='${datarootdir}'
+datarootdir='${prefix}/share'
+docdir='/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1.build_.sink'
+dvidir='${docdir}'
+exec_prefix='NONE'
+host='i686-w64-mingw32.static'
+host_alias='i686-w64-mingw32.static'
+host_cpu='i686'
+host_os='mingw32.static'
+host_vendor='w64'
+htmldir='${docdir}'
+includedir='${prefix}/include'
+infodir='/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1.build_.sink'
+install_sh=''
+libdir='${exec_prefix}/lib'
+libexecdir='${exec_prefix}/libexec'
+localedir='${datarootdir}/locale'
+localstatedir='${prefix}/var'
+mandir='/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1.build_.sink'
+mkdir_p=''
+oldincludedir='/usr/include'
+pdfdir='${docdir}'
+prefix='/home/user/mxe/usr/i686-w64-mingw32.static'
+program_transform_name='s,x,x,'
+psdir='${docdir}'
+sbindir='${exec_prefix}/sbin'
+sharedstatedir='${prefix}/com'
+sys_symbol_underscore=''
+sysconfdir='${prefix}/etc'
+target='i686-w64-mingw32.static'
+target_alias='i686-w64-mingw32.static'
+target_cpu='i686'
+target_os='mingw32.static'
+target_vendor='w64'
+toolexecdir=''
+toolexeclibdir=''
+
+configure: exit 0
+
+settings.mk
+# This is a template of configuration file for MXE. See
+# docs/index.html for more extensive documentations.
+
+# This variable controls the number of compilation processes
+# within one package ("intra-package parallelism").
+#JOBS := 
+
+# This variable controls where intermediate files are created
+# this is necessary when compiling inside a virtualbox shared
+# directory. Some commands like strip fail in there with Protocol error
+# default is the current directory
+#MXE_TMP := /tmp
+
+# This variable controls the targets that will build.
+#MXE_TARGETS := i686-w64-mingw32.static i686-w64-mingw32.shared x86_64-w64-mingw32.static x86_64-w64-mingw32.shared
+
+# This variable controls which plugins are in use.
+# See plugins/README.md for further information.
+#override MXE_PLUGIN_DIRS += plugins/apps plugins/native
+
+# This variable controls the download mirror for SourceForge,
+# when it is used. Enabling the value below means auto.
+#SOURCEFORGE_MIRROR := downloads.sourceforge.net
+
+# The three lines below makes `make` build these "local
+# packages" instead of all packages.
+#LOCAL_PKG_LIST := boost curl file flac lzo pthreads vorbis wxwidgets
+#.DEFAULT_GOAL  := local-pkg-list
+#local-pkg-list: $(LOCAL_PKG_LIST)
+i686-w64-mingw32.static-strip '/home/user/mxe/usr/i686-w64-mingw32.static/bin/test-libffi.exe'
+(du -k -d 0 '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static' 2>/dev/null || du -k --max-depth 0 '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static') | sed -n 's/^\(\S*\).*/du: \1 KiB/p'
+du: 6620 KiB
+rm -rfv  '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static'
+removed directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1.build_'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1.build_.sink/libffi.info'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1.build_.sink/dir'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1.build_.sink/man3/ffi_prep_cif_var.3'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1.build_.sink/man3/ffi_call.3'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1.build_.sink/man3/ffi.3'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1.build_.sink/man3/ffi_prep_cif.3'
+removed directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1.build_.sink/man3'
+removed directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1.build_.sink'
+removed directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/readonly'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/ChangeLog.libffi-3.1'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/ChangeLog.libgcj'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/libtool-version'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/msvcc.sh'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/configure.ac'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/libffi.xcodeproj/project.pbxproj'
+removed directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/libffi.xcodeproj'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/man/ffi_prep_cif_var.3'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/man/ffi_call.3'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/man/Makefile.in'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/man/ffi.3'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/man/ffi_prep_cif.3'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/man/Makefile.am'
+removed directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/man'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/config.sub'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/README'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/Makefile.in'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/m88k/ffitarget.h'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/m88k/ffi.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/m88k/obsd.S'
+removed directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/m88k'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/ia64/unix.S'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/ia64/ia64_flags.h'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/ia64/ffitarget.h'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/ia64/ffi.c'
+removed directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/ia64'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/arm/gentramp.sh'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/arm/trampoline.S'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/arm/ffitarget.h'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/arm/sysv.S'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/arm/ffi.c'
+removed directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/arm'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/closures.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/bfin/ffitarget.h'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/bfin/sysv.S'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/bfin/ffi.c'
+removed directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/bfin'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/tile/tile.S'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/tile/ffitarget.h'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/tile/ffi.c'
+removed directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/tile'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/vax/elfbsd.S'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/vax/ffitarget.h'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/vax/ffi.c'
+removed directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/vax'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/sh/ffitarget.h'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/sh/sysv.S'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/sh/ffi.c'
+removed directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/sh'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/pa/linux.S'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/pa/ffitarget.h'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/pa/hpux32.S'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/pa/ffi.c'
+removed directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/pa'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/m68k/ffitarget.h'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/m68k/sysv.S'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/m68k/ffi.c'
+removed directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/m68k'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/m32r/ffitarget.h'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/m32r/sysv.S'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/m32r/ffi.c'
+removed directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/m32r'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/x86/ffi64.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/x86/darwin64.S'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/x86/unix64.S'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/x86/win32.S'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/x86/ffitarget.h'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/x86/sysv.S'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/x86/ffi.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/x86/win64.S'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/x86/darwin.S'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/x86/freebsd.S'
+removed directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/x86'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/sparc/v8.S'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/sparc/v9.S'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/sparc/ffitarget.h'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/sparc/ffi.c'
+removed directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/sparc'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/powerpc/aix_closure.S'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/powerpc/aix.S'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/powerpc/ffi_linux64.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/powerpc/asm.h'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/powerpc/darwin_closure.S'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/powerpc/ffi_powerpc.h'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/powerpc/ffitarget.h'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/powerpc/ffi_sysv.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/powerpc/sysv.S'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/powerpc/ffi.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/powerpc/ppc_closure.S'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/powerpc/linux64.S'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/powerpc/ffi_darwin.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/powerpc/linux64_closure.S'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/powerpc/darwin.S'
+removed directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/powerpc'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/nios2/ffitarget.h'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/nios2/sysv.S'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/nios2/ffi.c'
+removed directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/nios2'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/types.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/prep_cif.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/cris/ffitarget.h'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/cris/sysv.S'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/cris/ffi.c'
+removed directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/cris'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/aarch64/ffitarget.h'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/aarch64/sysv.S'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/aarch64/ffi.c'
+removed directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/aarch64'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/avr32/ffitarget.h'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/avr32/sysv.S'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/avr32/ffi.c'
+removed directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/avr32'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/frv/eabi.S'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/frv/ffitarget.h'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/frv/ffi.c'
+removed directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/frv'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/sh64/ffitarget.h'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/sh64/sysv.S'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/sh64/ffi.c'
+removed directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/sh64'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/mips/n32.S'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/mips/o32.S'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/mips/ffitarget.h'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/mips/ffi.c'
+removed directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/mips'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/debug.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/raw_api.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/xtensa/ffitarget.h'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/xtensa/sysv.S'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/xtensa/ffi.c'
+removed directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/xtensa'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/moxie/eabi.S'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/moxie/ffitarget.h'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/moxie/ffi.c'
+removed directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/moxie'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/dlmalloc.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/s390/ffitarget.h'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/s390/sysv.S'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/s390/ffi.c'
+removed directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/s390'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/arc/ffitarget.h'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/arc/ffi.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/arc/arcompact.S'
+removed directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/arc'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/alpha/ffitarget.h'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/alpha/ffi.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/alpha/osf.S'
+removed directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/alpha'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/or1k/ffitarget.h'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/or1k/sysv.S'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/or1k/ffi.c'
+removed directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/or1k'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/java_raw_api.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/microblaze/ffitarget.h'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/microblaze/sysv.S'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/microblaze/ffi.c'
+removed directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/microblaze'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/metag/ffitarget.h'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/metag/sysv.S'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/metag/ffi.c'
+removed directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src/metag'
+removed directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/src'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/acinclude.m4'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/libtool-ldflags'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/mdate-sh'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/libffi.pc.in'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/aclocal.m4'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/depcomp'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/ChangeLog.v1'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/ltmain.sh'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/install-sh'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/generate-darwin-source-and-headers.py'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/include/ffi.h.in'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/include/Makefile.in'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/include/ffi_common.h'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/include/Makefile.am'
+removed directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/include'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/Makefile'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/man/Makefile'
+removed directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/man'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/stamp-h1'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/fficonfig.h'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/m88k/.deps/obsd.Plo'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/m88k/.deps/ffi.Plo'
+removed directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/m88k/.deps'
+removed directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/m88k'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/ia64/.deps/unix.Plo'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/ia64/.deps/ffi.Plo'
+removed directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/ia64/.deps'
+removed directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/ia64'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/arm/.deps/sysv.Plo'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/arm/.deps/ffi.Plo'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/arm/.deps/trampoline.Plo'
+removed directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/arm/.deps'
+removed directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/arm'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/bfin/.deps/sysv.Plo'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/bfin/.deps/ffi.Plo'
+removed directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/bfin/.deps'
+removed directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/bfin'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/tile/.deps/ffi.Plo'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/tile/.deps/tile.Plo'
+removed directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/tile/.deps'
+removed directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/tile'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/vax/.deps/ffi.Plo'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/vax/.deps/elfbsd.Plo'
+removed directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/vax/.deps'
+removed directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/vax'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/prep_cif.o'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/sh/.deps/sysv.Plo'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/sh/.deps/ffi.Plo'
+removed directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/sh/.deps'
+removed directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/sh'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/pa/.deps/hpux32.Plo'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/pa/.deps/ffi.Plo'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/pa/.deps/linux.Plo'
+removed directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/pa/.deps'
+removed directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/pa'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/m68k/.deps/sysv.Plo'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/m68k/.deps/ffi.Plo'
+removed directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/m68k/.deps'
+removed directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/m68k'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/m32r/.deps/sysv.Plo'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/m32r/.deps/ffi.Plo'
+removed directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/m32r/.deps'
+removed directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/m32r'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/x86/.deps/win32.Plo'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/x86/.deps/win64.Plo'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/x86/.deps/darwin64.Plo'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/x86/.deps/ffi64.Plo'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/x86/.deps/freebsd.Plo'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/x86/.deps/sysv.Plo'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/x86/.deps/unix64.Plo'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/x86/.deps/ffi.Plo'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/x86/.deps/.dirstamp'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/x86/.deps/darwin.Plo'
+removed directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/x86/.deps'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/x86/ffi.o'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/x86/win32.lo'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/x86/win32.o'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/x86/ffi.lo'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/x86/.dirstamp'
+removed directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/x86'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/java_raw_api.o'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/types.o'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/sparc/.deps/v9.Plo'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/sparc/.deps/v8.Plo'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/sparc/.deps/ffi.Plo'
+removed directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/sparc/.deps'
+removed directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/sparc'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/.deps/java_raw_api.Plo'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/.deps/debug.Plo'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/.deps/types.Plo'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/.deps/raw_api.Plo'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/.deps/.dirstamp'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/.deps/closures.Plo'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/.deps/prep_cif.Plo'
+removed directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/.deps'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/powerpc/.deps/ppc_closure.Plo'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/powerpc/.deps/darwin_closure.Plo'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/powerpc/.deps/ffi_sysv.Plo'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/powerpc/.deps/linux64.Plo'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/powerpc/.deps/ffi_linux64.Plo'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/powerpc/.deps/aix.Plo'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/powerpc/.deps/sysv.Plo'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/powerpc/.deps/ffi.Plo'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/powerpc/.deps/linux64_closure.Plo'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/powerpc/.deps/ffi_darwin.Plo'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/powerpc/.deps/aix_closure.Plo'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/powerpc/.deps/darwin.Plo'
+removed directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/powerpc/.deps'
+removed directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/powerpc'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/nios2/.deps/sysv.Plo'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/nios2/.deps/ffi.Plo'
+removed directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/nios2/.deps'
+removed directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/nios2'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/raw_api.o'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/closures.o'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/cris/.deps/sysv.Plo'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/cris/.deps/ffi.Plo'
+removed directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/cris/.deps'
+removed directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/cris'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/raw_api.lo'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/types.lo'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/closures.lo'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/aarch64/.deps/sysv.Plo'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/aarch64/.deps/ffi.Plo'
+removed directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/aarch64/.deps'
+removed directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/aarch64'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/avr32/.deps/sysv.Plo'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/avr32/.deps/ffi.Plo'
+removed directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/avr32/.deps'
+removed directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/avr32'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/frv/.deps/ffi.Plo'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/frv/.deps/eabi.Plo'
+removed directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/frv/.deps'
+removed directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/frv'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/java_raw_api.lo'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/sh64/.deps/sysv.Plo'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/sh64/.deps/ffi.Plo'
+removed directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/sh64/.deps'
+removed directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/sh64'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/mips/.deps/o32.Plo'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/mips/.deps/n32.Plo'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/mips/.deps/ffi.Plo'
+removed directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/mips/.deps'
+removed directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/mips'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/xtensa/.deps/sysv.Plo'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/xtensa/.deps/ffi.Plo'
+removed directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/xtensa/.deps'
+removed directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/xtensa'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/moxie/.deps/ffi.Plo'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/moxie/.deps/eabi.Plo'
+removed directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/moxie/.deps'
+removed directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/moxie'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/s390/.deps/sysv.Plo'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/s390/.deps/ffi.Plo'
+removed directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/s390/.deps'
+removed directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/s390'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/arc/.deps/arcompact.Plo'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/arc/.deps/ffi.Plo'
+removed directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/arc/.deps'
+removed directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/arc'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/prep_cif.lo'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/.dirstamp'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/alpha/.deps/ffi.Plo'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/alpha/.deps/osf.Plo'
+removed directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/alpha/.deps'
+removed directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/alpha'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/or1k/.deps/sysv.Plo'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/or1k/.deps/ffi.Plo'
+removed directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/or1k/.deps'
+removed directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/or1k'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/microblaze/.deps/sysv.Plo'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/microblaze/.deps/ffi.Plo'
+removed directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/microblaze/.deps'
+removed directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/microblaze'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/metag/.deps/sysv.Plo'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/metag/.deps/ffi.Plo'
+removed directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/metag/.deps'
+removed directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src/metag'
+removed directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/src'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/.libs/libffi.la'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/.libs/libffi_convenience.la'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/.libs/libffi.lai'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/.libs/libffi.a'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/.libs/libffi_convenience.a'
+removed directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/.libs'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/libffi.la'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/libffi_convenience.la'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/include/Makefile'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/include/ffitarget.h'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/include/ffi.h'
+removed directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/include'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/Makefile'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/testsuite/Makefile'
+removed directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/testsuite'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/config.log'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/libffi.pc'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/config.status'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/local.exp'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static/libtool'
+removed directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/i686-w64-mingw32.static'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/LICENSE'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/fficonfig.h.in'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/config.guess'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/m4/asmcfi.m4'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/m4/libtool.m4'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/m4/ltsugar.m4'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/m4/ax_append_flag.m4'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/m4/ax_configure_args.m4'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/m4/ax_cflags_warn_all.m4'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/m4/ltoptions.m4'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/m4/ax_enable_builddir.m4'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/m4/ax_compiler_vendor.m4'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/m4/lt~obsolete.m4'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/m4/ax_check_compile_flag.m4'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/m4/ax_cc_maxopt.m4'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/m4/ax_gcc_x86_cpuid.m4'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/m4/ax_gcc_archflag.m4'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/m4/ltversion.m4'
+removed directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/m4'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/ChangeLog'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/Makefile.in'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/closure_fn0.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/struct6.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/cls_5_1_byte.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/cls_align_pointer.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/cls_9byte1.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/cls_pointer_stack.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/cls_align_sint16.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/return_dbl2.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/return_sc.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/cls_uint_va.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/err_bad_abi.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/negint.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/cls_double_va.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/err_bad_typedef.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/va_struct3.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/cls_ushort_va.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/cls_multi_ushortchar.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/va_struct1.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/float4.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/nested_struct5.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/cls_align_uint64.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/cls_6_1_byte.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/nested_struct6.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/cls_20byte.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/cls_pointer.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/cls_multi_schar.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/cls_ulong_va.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/struct1.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/cls_ushort.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/cls_struct_va1.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/cls_multi_sshortchar.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/cls_multi_uchar.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/cls_uchar.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/cls_longdouble.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/closure_fn1.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/cls_5byte.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/cls_18byte.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/nested_struct10.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/closure_loc_fn0.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/cls_6byte.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/cls_4_1byte.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/stret_large2.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/stret_large.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/strlen4.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/cls_align_longdouble_split.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/uninitialized.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/cls_16byte.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/promotion.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/va_struct2.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/huge_struct.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/strlen3.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/return_fl2.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/nested_struct11.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/cls_3_1byte.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/closure_fn3.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/return_dbl1.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/cls_align_sint32.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/cls_uint.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/closure_fn2.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/cls_7byte.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/nested_struct.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/return_ul.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/cls_align_longdouble_split2.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/struct9.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/cls_3byte1.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/float3.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/testclosure.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/cls_double.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/closure_simple.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/unwindtest_ffi_call.cc'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/struct3.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/cls_align_uint16.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/struct8.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/cls_64byte.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/cls_2byte.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/return_fl3.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/struct4.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/call.exp'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/float.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/cls_24byte.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/cls_align_double.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/cls_dbls_struct.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/return_dbl.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/cls_ulonglong.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/cls_12byte.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/cls_8byte.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/struct7.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/float_va.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/cls_align_sint64.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/return_ldl.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/cls_20byte1.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/stret_medium.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/struct5.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/cls_7_1_byte.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/closure_fn6.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/cls_4byte.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/return_fl1.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/nested_struct9.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/cls_align_longdouble.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/return_fl.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/problem1.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/closure_fn4.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/return_uc.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/many.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/nested_struct4.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/nested_struct3.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/nested_struct1.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/cls_multi_ushort.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/stret_medium2.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/cls_multi_sshort.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/cls_sshort.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/many2.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/cls_schar.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/cls_19byte.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/cls_3byte2.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/cls_sint.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/cls_uchar_va.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/float2.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/ffitest.h'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/return_ll.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/return_ll1.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/cls_align_uint32.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/cls_align_float.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/nested_struct8.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/closure_fn5.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/strlen2.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/nested_struct2.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/cls_longdouble_va.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/unwindtest.cc'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/cls_float.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/float1.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/nested_struct7.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/va_1.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/struct2.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/cls_1_1byte.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/cls_9byte2.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/strlen.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/pyobjc-tc.c'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call/return_sl.c'
+removed directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/libffi.call'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/lib/wrapper.exp'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/lib/libffi.exp'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/lib/target-libpath.exp'
+removed directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/lib'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/config/default.exp'
+removed directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/config'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite/Makefile.am'
+removed directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/testsuite'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/makefile.sed~'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/doc/libffi.info'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/doc/libffi.texi'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/doc/stamp-vti'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/doc/version.texi'
+removed directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/doc'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/compile'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/texinfo.tex'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/configure'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/missing'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/Makefile.am'
+removed '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1/ChangeLog.libffi'
+removed directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static/libffi-3.2.1'
+removed directory '/home/user/mxe/tmp-libffi-i686-w64-mingw32.static'
+touch '/home/user/mxe/usr/i686-w64-mingw32.static/installed/libffi'
+make[1]: Leaving directory '/home/user/mxe'
+
+real	3m3.559s
+user	0m31.416s
+sys	2m28.019s

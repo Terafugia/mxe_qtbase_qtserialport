@@ -1,0 +1,1997 @@
+make[1]: Entering directory '/home/user/mxe'
+uname -a
+Linux user-VirtualBox 4.13.0-21-generic #24-Ubuntu SMP Mon Dec 18 17:29:35 UTC 2017 i686 i686 i686 GNU/Linux
+git log --pretty=tformat:"%H - %s [%ar] [%d]" -1
+1b7d2e0562f2ec93848f536d2a9d4cd414356d9e - Update packages.json & build-matrix.html [3 days ago] [ (HEAD -> master, origin/master, origin/HEAD)]
+lsb_release -a 2>/dev/null || sw_vers 2>/dev/null || true
+Distributor ID:	Ubuntu
+Description:	Ubuntu 17.10
+Release:	17.10
+Codename:	artful
+autoconf --version 2>/dev/null | head -1
+autoconf (GNU Autoconf) 2.69
+automake --version 2>/dev/null | head -1
+automake (GNU automake) 1.15
+gcc --version
+gcc (Ubuntu 7.2.0-8ubuntu3) 7.2.0
+Copyright (C) 2017 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+g++ --version
+g++ (Ubuntu 7.2.0-8ubuntu3) 7.2.0
+Copyright (C) 2017 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+python --version
+Python 2.7.14
+perl --version 2>&1 | head -3
+
+This is perl 5, version 26, subversion 0 (v5.26.0) built for i686-linux-gnu-thread-multi-64int
+(with 56 registered patches, see perl -V for more detail)
+rm -rf   '/home/user/mxe/tmp-expat-i686-w64-mingw32.static'
+mkdir -p '/home/user/mxe/tmp-expat-i686-w64-mingw32.static'
+mkdir -p '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5'
+mkdir -p '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5.build_'
+# disable wine with readonly directory
+# see https://github.com/mxe/mxe/issues/841
+mkdir -p '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/readonly'
+chmod 0555 '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/readonly'
+cd '/home/user/mxe/tmp-expat-i686-w64-mingw32.static' &&     tar xjf '/home/user/mxe/pkg/expat-2.2.5.tar.bz2'
+cd '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5'
+cd '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5' && ./configure --host='i686-w64-mingw32.static' --build='i686-pc-linux-gnu' --prefix='/home/user/mxe/usr/i686-w64-mingw32.static'  --enable-static --disable-shared  ac_cv_prog_HAVE_DOXYGEN="false" --enable-doc=no --enable-gtk-doc=no --enable-gtk-doc-html=no --enable-gtk-doc-pdf=no --{docdir,infodir,mandir,with-html-dir}='/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5.build_.sink' --disable-doxygen
+configure: WARNING: unrecognized options: --enable-doc, --enable-gtk-doc, --enable-gtk-doc-html, --enable-gtk-doc-pdf, --with-html-dir, --disable-doxygen
+configure: loading site script /home/user/mxe/usr/i686-w64-mingw32.static/share/config.site
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for i686-w64-mingw32.static-strip... i686-w64-mingw32.static-strip
+checking for a thread-safe mkdir -p... /bin/mkdir -p
+checking for gawk... no
+checking for mawk... mawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking build system type... (cached) i686-pc-linux-gnu
+checking host system type... i686-w64-mingw32.static
+checking for i686-w64-mingw32.static-as... i686-w64-mingw32.static-as
+checking for i686-w64-mingw32.static-dlltool... i686-w64-mingw32.static-dlltool
+checking for i686-w64-mingw32.static-objdump... i686-w64-mingw32.static-objdump
+checking how to print strings... printf
+checking for style of include used by make... GNU
+checking for i686-w64-mingw32.static-gcc... i686-w64-mingw32.static-gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.exe
+checking for suffix of executables... .exe
+checking whether we are cross compiling... yes
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether i686-w64-mingw32.static-gcc accepts -g... yes
+checking for i686-w64-mingw32.static-gcc option to accept ISO C89... none needed
+checking whether i686-w64-mingw32.static-gcc understands -c and -o together... yes
+checking dependency style of i686-w64-mingw32.static-gcc... gcc3
+checking for a sed that does not truncate output... /bin/sed
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for fgrep... /bin/grep -F
+checking for ld used by i686-w64-mingw32.static-gcc... /home/user/mxe/usr/bin/i686-w64-mingw32.static-ld
+checking if the linker (/home/user/mxe/usr/bin/i686-w64-mingw32.static-ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /home/user/mxe/usr/bin/i686-w64-mingw32.static-nm -B
+checking the name lister (/home/user/mxe/usr/bin/i686-w64-mingw32.static-nm -B) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 1572864
+checking how to convert i686-pc-linux-gnu file names to i686-w64-mingw32.static format... func_convert_file_nix_to_w32
+checking how to convert i686-pc-linux-gnu file names to toolchain format... func_convert_file_noop
+checking for /home/user/mxe/usr/bin/i686-w64-mingw32.static-ld option to reload object files... -r
+checking for i686-w64-mingw32.static-objdump... (cached) i686-w64-mingw32.static-objdump
+checking how to recognize dependent libraries... file_magic ^x86 archive import|^x86 DLL
+checking for i686-w64-mingw32.static-dlltool... (cached) i686-w64-mingw32.static-dlltool
+checking how to associate runtime and link libraries... func_cygming_dll_for_implib
+checking for i686-w64-mingw32.static-ar... i686-w64-mingw32.static-ar
+checking for archiver @FILE support... @
+checking for i686-w64-mingw32.static-strip... (cached) i686-w64-mingw32.static-strip
+checking for i686-w64-mingw32.static-ranlib... i686-w64-mingw32.static-ranlib
+checking command to parse /home/user/mxe/usr/bin/i686-w64-mingw32.static-nm -B output from i686-w64-mingw32.static-gcc object... ok
+checking for sysroot... no
+checking for a working dd... /bin/dd
+checking how to truncate binary pipes... /bin/dd bs=4096 count=1
+checking for i686-w64-mingw32.static-mt... no
+checking for mt... mt
+configure: WARNING: using cross tools not prefixed with host triplet
+checking if mt is a manifest tool... no
+checking how to run the C preprocessor... i686-w64-mingw32.static-gcc -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking for dlfcn.h... no
+checking for objdir... .libs
+checking if i686-w64-mingw32.static-gcc supports -fno-rtti -fno-exceptions... no
+checking for i686-w64-mingw32.static-gcc option to produce PIC... -DDLL_EXPORT -DPIC
+checking if i686-w64-mingw32.static-gcc PIC flag -DDLL_EXPORT -DPIC works... yes
+checking if i686-w64-mingw32.static-gcc static flag -static works... yes
+checking if i686-w64-mingw32.static-gcc supports -c -o file.o... yes
+checking if i686-w64-mingw32.static-gcc supports -c -o file.o... (cached) yes
+checking whether the i686-w64-mingw32.static-gcc linker (/home/user/mxe/usr/bin/i686-w64-mingw32.static-ld) supports shared libraries... yes
+checking dynamic linker characteristics... Win32 ld.exe
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... no
+checking whether to build static libraries... yes
+checking for i686-w64-mingw32.static-gcc option to accept ISO C99... none needed
+checking for i686-w64-mingw32.static-g++... i686-w64-mingw32.static-g++
+checking whether we are using the GNU C++ compiler... yes
+checking whether i686-w64-mingw32.static-g++ accepts -g... yes
+checking dependency style of i686-w64-mingw32.static-g++... gcc3
+checking how to run the C++ preprocessor... i686-w64-mingw32.static-g++ -E
+checking for ld used by i686-w64-mingw32.static-g++... /home/user/mxe/usr/bin/i686-w64-mingw32.static-ld
+checking if the linker (/home/user/mxe/usr/bin/i686-w64-mingw32.static-ld) is GNU ld... yes
+checking whether the i686-w64-mingw32.static-g++ linker (/home/user/mxe/usr/bin/i686-w64-mingw32.static-ld) supports shared libraries... yes
+checking for i686-w64-mingw32.static-g++ option to produce PIC... -DDLL_EXPORT -DPIC
+checking if i686-w64-mingw32.static-g++ PIC flag -DDLL_EXPORT -DPIC works... yes
+checking if i686-w64-mingw32.static-g++ static flag -static works... yes
+checking if i686-w64-mingw32.static-g++ supports -c -o file.o... yes
+checking if i686-w64-mingw32.static-g++ supports -c -o file.o... (cached) yes
+checking whether the i686-w64-mingw32.static-g++ linker (/home/user/mxe/usr/bin/i686-w64-mingw32.static-ld) supports shared libraries... yes
+checking dynamic linker characteristics... Win32 ld.exe
+checking how to hardcode library paths into programs... immediate
+checking whether i686-w64-mingw32.static-gcc accepts -fexceptions... yes
+checking for ANSI C header files... (cached) yes
+checking whether byte ordering is bigendian... no
+checking for an ANSI C-conforming const... yes
+checking for size_t... yes
+checking for memmove... yes
+checking for bcopy... no
+checking for arc4random_buf (BSD or libbsd)... no
+checking for arc4random (BSD, macOS or libbsd)... no
+checking for getrandom (Linux 3.17+, glibc 2.25+)... no
+checking for syscall SYS_getrandom (Linux 3.17+)... no
+checking fcntl.h usability... yes
+checking fcntl.h presence... yes
+checking for fcntl.h... yes
+checking for unistd.h... (cached) yes
+checking for off_t... yes
+checking for stdlib.h... (cached) yes
+checking for unistd.h... (cached) yes
+checking for sys/param.h... yes
+checking for getpagesize... yes
+checking for working mmap... no
+checking for docbook2x-man... no
+checking for docbook2man... no
+checking for docbook-to-man... no
+./configure: line 17309: program: command not found
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating expat.pc
+config.status: creating doc/Makefile
+config.status: creating examples/Makefile
+config.status: creating lib/Makefile
+config.status: creating tests/Makefile
+config.status: creating tests/benchmark/Makefile
+config.status: creating xmlwf/Makefile
+config.status: creating run.sh
+config.status: creating expat_config.h
+config.status: executing depfiles commands
+config.status: executing libtool commands
+configure: WARNING: unrecognized options: --enable-doc, --enable-gtk-doc, --enable-gtk-doc-html, --enable-gtk-doc-pdf, --with-html-dir, --disable-doxygen
+make -C '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5' -j '1' install
+make[2]: Entering directory '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5'
+Making install in lib
+make[3]: Entering directory '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/lib'
+/bin/bash ../libtool  --tag=CC   --mode=compile i686-w64-mingw32.static-gcc -DHAVE_CONFIG_H -I. -I..   -DHAVE_EXPAT_CONFIG_H  -g -O2 -Wall -Wmissing-prototypes -Wstrict-prototypes -fexceptions -fno-strict-aliasing -MT loadlibrary.lo -MD -MP -MF .deps/loadlibrary.Tpo -c -o loadlibrary.lo loadlibrary.c
+libtool: compile:  i686-w64-mingw32.static-gcc -DHAVE_CONFIG_H -I. -I.. -DHAVE_EXPAT_CONFIG_H -g -O2 -Wall -Wmissing-prototypes -Wstrict-prototypes -fexceptions -fno-strict-aliasing -MT loadlibrary.lo -MD -MP -MF .deps/loadlibrary.Tpo -c loadlibrary.c -o loadlibrary.o
+mv -f .deps/loadlibrary.Tpo .deps/loadlibrary.Plo
+/bin/bash ../libtool  --tag=CC   --mode=compile i686-w64-mingw32.static-gcc -DHAVE_CONFIG_H -I. -I..   -DHAVE_EXPAT_CONFIG_H  -g -O2 -Wall -Wmissing-prototypes -Wstrict-prototypes -fexceptions -fno-strict-aliasing -MT xmlparse.lo -MD -MP -MF .deps/xmlparse.Tpo -c -o xmlparse.lo xmlparse.c
+libtool: compile:  i686-w64-mingw32.static-gcc -DHAVE_CONFIG_H -I. -I.. -DHAVE_EXPAT_CONFIG_H -g -O2 -Wall -Wmissing-prototypes -Wstrict-prototypes -fexceptions -fno-strict-aliasing -MT xmlparse.lo -MD -MP -MF .deps/xmlparse.Tpo -c xmlparse.c -o xmlparse.o
+mv -f .deps/xmlparse.Tpo .deps/xmlparse.Plo
+/bin/bash ../libtool  --tag=CC   --mode=compile i686-w64-mingw32.static-gcc -DHAVE_CONFIG_H -I. -I..   -DHAVE_EXPAT_CONFIG_H  -g -O2 -Wall -Wmissing-prototypes -Wstrict-prototypes -fexceptions -fno-strict-aliasing -MT xmltok.lo -MD -MP -MF .deps/xmltok.Tpo -c -o xmltok.lo xmltok.c
+libtool: compile:  i686-w64-mingw32.static-gcc -DHAVE_CONFIG_H -I. -I.. -DHAVE_EXPAT_CONFIG_H -g -O2 -Wall -Wmissing-prototypes -Wstrict-prototypes -fexceptions -fno-strict-aliasing -MT xmltok.lo -MD -MP -MF .deps/xmltok.Tpo -c xmltok.c -o xmltok.o
+mv -f .deps/xmltok.Tpo .deps/xmltok.Plo
+/bin/bash ../libtool  --tag=CC   --mode=compile i686-w64-mingw32.static-gcc -DHAVE_CONFIG_H -I. -I..   -DHAVE_EXPAT_CONFIG_H  -g -O2 -Wall -Wmissing-prototypes -Wstrict-prototypes -fexceptions -fno-strict-aliasing -MT xmlrole.lo -MD -MP -MF .deps/xmlrole.Tpo -c -o xmlrole.lo xmlrole.c
+libtool: compile:  i686-w64-mingw32.static-gcc -DHAVE_CONFIG_H -I. -I.. -DHAVE_EXPAT_CONFIG_H -g -O2 -Wall -Wmissing-prototypes -Wstrict-prototypes -fexceptions -fno-strict-aliasing -MT xmlrole.lo -MD -MP -MF .deps/xmlrole.Tpo -c xmlrole.c -o xmlrole.o
+mv -f .deps/xmlrole.Tpo .deps/xmlrole.Plo
+/bin/bash ../libtool  --tag=CC   --mode=link i686-w64-mingw32.static-gcc  -g -O2 -Wall -Wmissing-prototypes -Wstrict-prototypes -fexceptions -fno-strict-aliasing -no-undefined -version-info 7:7:6 -rpath /home/user/mxe/usr/i686-w64-mingw32.static/lib -fno-strict-aliasing -o libexpat.la -rpath /home/user/mxe/usr/i686-w64-mingw32.static/lib loadlibrary.lo xmlparse.lo xmltok.lo xmlrole.lo  
+libtool: link: i686-w64-mingw32.static-ar cru .libs/libexpat.a  loadlibrary.o xmlparse.o xmltok.o xmlrole.o
+i686-w64-mingw32.static-ar: `u' modifier ignored since `D' is the default (see `U')
+libtool: link: i686-w64-mingw32.static-ranlib .libs/libexpat.a
+libtool: link: ( cd ".libs" && rm -f "libexpat.la" && ln -s "../libexpat.la" "libexpat.la" )
+make[4]: Entering directory '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/lib'
+ /bin/mkdir -p '/home/user/mxe/usr/i686-w64-mingw32.static/lib'
+ /bin/bash ../libtool   --mode=install /usr/bin/install -c   libexpat.la '/home/user/mxe/usr/i686-w64-mingw32.static/lib'
+libtool: install: /usr/bin/install -c .libs/libexpat.lai /home/user/mxe/usr/i686-w64-mingw32.static/lib/libexpat.la
+libtool: install: /usr/bin/install -c .libs/libexpat.a /home/user/mxe/usr/i686-w64-mingw32.static/lib/libexpat.a
+libtool: install: chmod 644 /home/user/mxe/usr/i686-w64-mingw32.static/lib/libexpat.a
+libtool: install: i686-w64-mingw32.static-ranlib /home/user/mxe/usr/i686-w64-mingw32.static/lib/libexpat.a
+ /bin/mkdir -p '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5.build_.sink'
+ /usr/bin/install -c -m 644 ../AUTHORS ../Changes '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5.build_.sink'
+ /bin/mkdir -p '/home/user/mxe/usr/i686-w64-mingw32.static/include'
+ /usr/bin/install -c -m 644 ../expat_config.h expat.h expat_external.h '/home/user/mxe/usr/i686-w64-mingw32.static/include'
+make  install-data-hook
+make[5]: Entering directory '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/lib'
+cd "/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5.build_.sink" && mv -f Changes changelog
+make[5]: Leaving directory '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/lib'
+make[4]: Leaving directory '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/lib'
+make[3]: Leaving directory '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/lib'
+Making install in examples
+make[3]: Entering directory '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/examples'
+i686-w64-mingw32.static-gcc -DHAVE_CONFIG_H -I. -I..  -I./../lib -DHAVE_EXPAT_CONFIG_H  -g -O2 -Wall -Wmissing-prototypes -Wstrict-prototypes -fexceptions -fno-strict-aliasing -MT elements.o -MD -MP -MF .deps/elements.Tpo -c -o elements.o elements.c
+mv -f .deps/elements.Tpo .deps/elements.Po
+/bin/bash ../libtool  --tag=CC   --mode=link i686-w64-mingw32.static-gcc  -g -O2 -Wall -Wmissing-prototypes -Wstrict-prototypes -fexceptions -fno-strict-aliasing  -fno-strict-aliasing -o elements.exe elements.o ../lib/libexpat.la 
+libtool: link: i686-w64-mingw32.static-gcc -g -O2 -Wall -Wmissing-prototypes -Wstrict-prototypes -fexceptions -fno-strict-aliasing -fno-strict-aliasing -o elements.exe elements.o  ../lib/.libs/libexpat.a
+i686-w64-mingw32.static-gcc -DHAVE_CONFIG_H -I. -I..  -I./../lib -DHAVE_EXPAT_CONFIG_H  -g -O2 -Wall -Wmissing-prototypes -Wstrict-prototypes -fexceptions -fno-strict-aliasing -MT outline.o -MD -MP -MF .deps/outline.Tpo -c -o outline.o outline.c
+mv -f .deps/outline.Tpo .deps/outline.Po
+/bin/bash ../libtool  --tag=CC   --mode=link i686-w64-mingw32.static-gcc  -g -O2 -Wall -Wmissing-prototypes -Wstrict-prototypes -fexceptions -fno-strict-aliasing  -fno-strict-aliasing -o outline.exe outline.o ../lib/libexpat.la 
+libtool: link: i686-w64-mingw32.static-gcc -g -O2 -Wall -Wmissing-prototypes -Wstrict-prototypes -fexceptions -fno-strict-aliasing -fno-strict-aliasing -o outline.exe outline.o  ../lib/.libs/libexpat.a
+make[4]: Entering directory '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/examples'
+make[4]: Nothing to be done for 'install-exec-am'.
+make[4]: Nothing to be done for 'install-data-am'.
+make[4]: Leaving directory '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/examples'
+make[3]: Leaving directory '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/examples'
+Making install in tests
+make[3]: Entering directory '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/tests'
+Making install in .
+make[4]: Entering directory '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/tests'
+i686-w64-mingw32.static-gcc -DHAVE_CONFIG_H -I. -I..  -I./../lib -DHAVE_EXPAT_CONFIG_H  -g -O2 -Wall -Wmissing-prototypes -Wstrict-prototypes -fexceptions -fno-strict-aliasing -MT chardata.o -MD -MP -MF .deps/chardata.Tpo -c -o chardata.o chardata.c
+mv -f .deps/chardata.Tpo .deps/chardata.Po
+i686-w64-mingw32.static-gcc -DHAVE_CONFIG_H -I. -I..  -I./../lib -DHAVE_EXPAT_CONFIG_H  -g -O2 -Wall -Wmissing-prototypes -Wstrict-prototypes -fexceptions -fno-strict-aliasing -MT structdata.o -MD -MP -MF .deps/structdata.Tpo -c -o structdata.o structdata.c
+mv -f .deps/structdata.Tpo .deps/structdata.Po
+i686-w64-mingw32.static-gcc -DHAVE_CONFIG_H -I. -I..  -I./../lib -DHAVE_EXPAT_CONFIG_H  -g -O2 -Wall -Wmissing-prototypes -Wstrict-prototypes -fexceptions -fno-strict-aliasing -MT memcheck.o -MD -MP -MF .deps/memcheck.Tpo -c -o memcheck.o memcheck.c
+mv -f .deps/memcheck.Tpo .deps/memcheck.Po
+i686-w64-mingw32.static-gcc -DHAVE_CONFIG_H -I. -I..  -I./../lib -DHAVE_EXPAT_CONFIG_H  -g -O2 -Wall -Wmissing-prototypes -Wstrict-prototypes -fexceptions -fno-strict-aliasing -MT minicheck.o -MD -MP -MF .deps/minicheck.Tpo -c -o minicheck.o minicheck.c
+mv -f .deps/minicheck.Tpo .deps/minicheck.Po
+rm -f libruntests.a
+i686-w64-mingw32.static-ar cru libruntests.a chardata.o structdata.o memcheck.o minicheck.o 
+i686-w64-mingw32.static-ar: `u' modifier ignored since `D' is the default (see `U')
+i686-w64-mingw32.static-ranlib libruntests.a
+make[5]: Entering directory '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/tests'
+make[5]: Nothing to be done for 'install-exec-am'.
+make[5]: Nothing to be done for 'install-data-am'.
+make[5]: Leaving directory '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/tests'
+make[4]: Leaving directory '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/tests'
+Making install in benchmark
+make[4]: Entering directory '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/tests/benchmark'
+i686-w64-mingw32.static-gcc -DHAVE_CONFIG_H -I. -I../..  -I./../../lib -DHAVE_EXPAT_CONFIG_H  -g -O2 -Wall -Wmissing-prototypes -Wstrict-prototypes -fexceptions -fno-strict-aliasing -MT benchmark.o -MD -MP -MF .deps/benchmark.Tpo -c -o benchmark.o benchmark.c
+mv -f .deps/benchmark.Tpo .deps/benchmark.Po
+/bin/bash ../../libtool  --tag=CC   --mode=link i686-w64-mingw32.static-gcc  -g -O2 -Wall -Wmissing-prototypes -Wstrict-prototypes -fexceptions -fno-strict-aliasing  -fno-strict-aliasing -o benchmark.exe benchmark.o ../../lib/libexpat.la 
+libtool: link: i686-w64-mingw32.static-gcc -g -O2 -Wall -Wmissing-prototypes -Wstrict-prototypes -fexceptions -fno-strict-aliasing -fno-strict-aliasing -o benchmark.exe benchmark.o  ../../lib/.libs/libexpat.a
+make[5]: Entering directory '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/tests/benchmark'
+make[5]: Nothing to be done for 'install-exec-am'.
+make[5]: Nothing to be done for 'install-data-am'.
+make[5]: Leaving directory '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/tests/benchmark'
+make[4]: Leaving directory '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/tests/benchmark'
+make[3]: Leaving directory '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/tests'
+Making install in xmlwf
+make[3]: Entering directory '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/xmlwf'
+i686-w64-mingw32.static-gcc -DHAVE_CONFIG_H -I. -I..  -I./../lib  -DHAVE_EXPAT_CONFIG_H  -g -O2 -Wall -Wmissing-prototypes -Wstrict-prototypes -fexceptions -fno-strict-aliasing -MT xmlwf-xmlwf.o -MD -MP -MF .deps/xmlwf-xmlwf.Tpo -c -o xmlwf-xmlwf.o `test -f 'xmlwf.c' || echo './'`xmlwf.c
+mv -f .deps/xmlwf-xmlwf.Tpo .deps/xmlwf-xmlwf.Po
+i686-w64-mingw32.static-gcc -DHAVE_CONFIG_H -I. -I..  -I./../lib  -DHAVE_EXPAT_CONFIG_H  -g -O2 -Wall -Wmissing-prototypes -Wstrict-prototypes -fexceptions -fno-strict-aliasing -MT xmlwf-xmlfile.o -MD -MP -MF .deps/xmlwf-xmlfile.Tpo -c -o xmlwf-xmlfile.o `test -f 'xmlfile.c' || echo './'`xmlfile.c
+mv -f .deps/xmlwf-xmlfile.Tpo .deps/xmlwf-xmlfile.Po
+i686-w64-mingw32.static-gcc -DHAVE_CONFIG_H -I. -I..  -I./../lib  -DHAVE_EXPAT_CONFIG_H  -g -O2 -Wall -Wmissing-prototypes -Wstrict-prototypes -fexceptions -fno-strict-aliasing -MT xmlwf-codepage.o -MD -MP -MF .deps/xmlwf-codepage.Tpo -c -o xmlwf-codepage.o `test -f 'codepage.c' || echo './'`codepage.c
+mv -f .deps/xmlwf-codepage.Tpo .deps/xmlwf-codepage.Po
+i686-w64-mingw32.static-gcc -DHAVE_CONFIG_H -I. -I..  -I./../lib  -DHAVE_EXPAT_CONFIG_H  -g -O2 -Wall -Wmissing-prototypes -Wstrict-prototypes -fexceptions -fno-strict-aliasing -MT xmlwf-readfilemap.o -MD -MP -MF .deps/xmlwf-readfilemap.Tpo -c -o xmlwf-readfilemap.o `test -f 'readfilemap.c' || echo './'`readfilemap.c
+mv -f .deps/xmlwf-readfilemap.Tpo .deps/xmlwf-readfilemap.Po
+/bin/bash ../libtool  --tag=CC   --mode=link i686-w64-mingw32.static-gcc  -g -O2 -Wall -Wmissing-prototypes -Wstrict-prototypes -fexceptions -fno-strict-aliasing  -fno-strict-aliasing -o xmlwf.exe xmlwf-xmlwf.o xmlwf-xmlfile.o xmlwf-codepage.o xmlwf-readfilemap.o ../lib/libexpat.la 
+libtool: link: i686-w64-mingw32.static-gcc -g -O2 -Wall -Wmissing-prototypes -Wstrict-prototypes -fexceptions -fno-strict-aliasing -fno-strict-aliasing -o xmlwf.exe xmlwf-xmlwf.o xmlwf-xmlfile.o xmlwf-codepage.o xmlwf-readfilemap.o  ../lib/.libs/libexpat.a
+make[4]: Entering directory '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/xmlwf'
+ /bin/mkdir -p '/home/user/mxe/usr/i686-w64-mingw32.static/bin'
+  /bin/bash ../libtool   --mode=install /usr/bin/install -c xmlwf.exe '/home/user/mxe/usr/i686-w64-mingw32.static/bin'
+libtool: install: /usr/bin/install -c xmlwf.exe /home/user/mxe/usr/i686-w64-mingw32.static/bin/xmlwf.exe
+make[4]: Nothing to be done for 'install-data-am'.
+make[4]: Leaving directory '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/xmlwf'
+make[3]: Leaving directory '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/xmlwf'
+Making install in doc
+make[3]: Entering directory '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/doc'
+make[4]: Entering directory '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/doc'
+make[4]: Nothing to be done for 'install-exec-am'.
+ /bin/mkdir -p '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5.build_.sink/man1'
+ /usr/bin/install -c -m 644 xmlwf.1 '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5.build_.sink/man1'
+make[4]: Leaving directory '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/doc'
+make[3]: Leaving directory '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/doc'
+make[3]: Entering directory '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5'
+make[4]: Entering directory '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5'
+make[4]: Nothing to be done for 'install-exec-am'.
+ /bin/mkdir -p '/home/user/mxe/usr/i686-w64-mingw32.static/lib/pkgconfig'
+ /usr/bin/install -c -m 644 expat.pc '/home/user/mxe/usr/i686-w64-mingw32.static/lib/pkgconfig'
+make[4]: Leaving directory '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5'
+make[3]: Leaving directory '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5'
+make[2]: Leaving directory '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5'
+
+/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/config.log
+This file contains any messages produced by compilers while
+running configure, to aid debugging if configure makes a mistake.
+
+It was created by expat configure 2.2.5, which was
+generated by GNU Autoconf 2.69.  Invocation command line was
+
+  $ ./configure --host=i686-w64-mingw32.static --build=i686-pc-linux-gnu --prefix=/home/user/mxe/usr/i686-w64-mingw32.static --enable-static --disable-shared ac_cv_prog_HAVE_DOXYGEN=false --enable-doc=no --enable-gtk-doc=no --enable-gtk-doc-html=no --enable-gtk-doc-pdf=no --docdir=/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5.build_.sink --infodir=/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5.build_.sink --mandir=/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5.build_.sink --with-html-dir=/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5.build_.sink --disable-doxygen
+
+## --------- ##
+## Platform. ##
+## --------- ##
+
+hostname = user-VirtualBox
+uname -m = i686
+uname -r = 4.13.0-21-generic
+uname -s = Linux
+uname -v = #24-Ubuntu SMP Mon Dec 18 17:29:35 UTC 2017
+
+/usr/bin/uname -p = unknown
+/bin/uname -X     = unknown
+
+/bin/arch              = unknown
+/usr/bin/arch -k       = unknown
+/usr/convex/getsysinfo = unknown
+/usr/bin/hostinfo      = unknown
+/bin/machine           = unknown
+/usr/bin/oslevel       = unknown
+/bin/universe          = unknown
+
+PATH: /home/user/mxe/usr/i686-pc-linux-gnu/bin
+PATH: /home/user/mxe/usr/bin
+PATH: /home/user/mxe/usr/i686-pc-linux-gnu/bin
+PATH: /home/user/mxe/usr/bin
+PATH: /usr/local/sbin
+PATH: /usr/local/bin
+PATH: /usr/sbin
+PATH: /usr/bin
+PATH: /sbin
+PATH: /bin
+PATH: /usr/games
+PATH: /usr/local/games
+PATH: /snap/bin
+
+
+## ----------- ##
+## Core tests. ##
+## ----------- ##
+
+configure:2339: loading site script /home/user/mxe/usr/i686-w64-mingw32.static/share/config.site
+| ac_cv_build=i686-pc-linux-gnu
+configure:2486: checking for a BSD-compatible install
+configure:2554: result: /usr/bin/install -c
+configure:2565: checking whether build environment is sane
+configure:2620: result: yes
+configure:2679: checking for i686-w64-mingw32.static-strip
+configure:2695: found /home/user/mxe/usr/bin/i686-w64-mingw32.static-strip
+configure:2706: result: i686-w64-mingw32.static-strip
+configure:2771: checking for a thread-safe mkdir -p
+configure:2810: result: /bin/mkdir -p
+configure:2817: checking for gawk
+configure:2847: result: no
+configure:2817: checking for mawk
+configure:2833: found /usr/bin/mawk
+configure:2844: result: mawk
+configure:2855: checking whether make sets $(MAKE)
+configure:2877: result: yes
+configure:2906: checking whether make supports nested variables
+configure:2923: result: yes
+configure:3068: checking build system type
+configure:3082: result: i686-pc-linux-gnu
+configure:3102: checking host system type
+configure:3115: result: i686-w64-mingw32.static
+configure:3142: checking for i686-w64-mingw32.static-as
+configure:3158: found /home/user/mxe/usr/bin/i686-w64-mingw32.static-as
+configure:3169: result: i686-w64-mingw32.static-as
+configure:3234: checking for i686-w64-mingw32.static-dlltool
+configure:3250: found /home/user/mxe/usr/bin/i686-w64-mingw32.static-dlltool
+configure:3261: result: i686-w64-mingw32.static-dlltool
+configure:3326: checking for i686-w64-mingw32.static-objdump
+configure:3342: found /home/user/mxe/usr/bin/i686-w64-mingw32.static-objdump
+configure:3353: result: i686-w64-mingw32.static-objdump
+configure:3484: checking how to print strings
+configure:3511: result: printf
+configure:3544: checking for style of include used by make
+configure:3572: result: GNU
+configure:3603: checking for i686-w64-mingw32.static-gcc
+configure:3619: found /home/user/mxe/usr/bin/i686-w64-mingw32.static-gcc
+configure:3630: result: i686-w64-mingw32.static-gcc
+configure:3899: checking for C compiler version
+configure:3908: i686-w64-mingw32.static-gcc --version >&5
+i686-w64-mingw32.static-gcc (GCC) 5.4.0
+Copyright (C) 2015 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+configure:3919: $? = 0
+configure:3908: i686-w64-mingw32.static-gcc -v >&5
+Using built-in specs.
+COLLECT_GCC=i686-w64-mingw32.static-gcc
+COLLECT_LTO_WRAPPER=/home/user/mxe/usr/libexec/gcc/i686-w64-mingw32.static/5.4.0/lto-wrapper
+Target: i686-w64-mingw32.static
+Configured with: /home/user/mxe/tmp-gcc-i686-w64-mingw32.static/gcc-5.4.0/configure ac_cv_prog_HAVE_DOXYGEN=false --enable-doc=no --enable-gtk-doc=no --enable-gtk-doc-html=no --enable-gtk-doc-pdf=no --docdir=/home/user/mxe/tmp-gcc-i686-w64-mingw32.static/gcc-5.4.0.build_.sink --infodir=/home/user/mxe/tmp-gcc-i686-w64-mingw32.static/gcc-5.4.0.build_.sink --mandir=/home/user/mxe/tmp-gcc-i686-w64-mingw32.static/gcc-5.4.0.build_.sink --with-html-dir=/home/user/mxe/tmp-gcc-i686-w64-mingw32.static/gcc-5.4.0.build_.sink --disable-doxygen --target=i686-w64-mingw32.static --build=i686-pc-linux-gnu --prefix=/home/user/mxe/usr --libdir=/home/user/mxe/usr/lib --enable-languages=c,c++,objc,fortran --enable-version-specific-runtime-libs --with-gcc --with-gnu-ld --with-gnu-as --disable-nls --disable-shared --disable-multilib --without-x --disable-win32-registry --enable-threads=win32 --enable-sjlj-exceptions --enable-libgomp --with-gmp=/home/user/mxe/usr/i686-pc-linux-gnu --with-isl=/home/user/mxe/usr/i686-pc-linux-gnu --with-mpc=/home/user/mxe/usr/i686-pc-linux-gnu --with-mpfr=/home/user/mxe/usr/i686-pc-linux-gnu --with-as=/home/user/mxe/usr/bin/i686-w64-mingw32.static-as --with-ld=/home/user/mxe/usr/bin/i686-w64-mingw32.static-ld --with-nm=/home/user/mxe/usr/bin/i686-w64-mingw32.static-nm
+Thread model: win32
+gcc version 5.4.0 (GCC) 
+configure:3919: $? = 0
+configure:3908: i686-w64-mingw32.static-gcc -V >&5
+i686-w64-mingw32.static-gcc: error: unrecognized command line option '-V'
+i686-w64-mingw32.static-gcc: fatal error: no input files
+compilation terminated.
+configure:3919: $? = 1
+configure:3908: i686-w64-mingw32.static-gcc -qversion >&5
+i686-w64-mingw32.static-gcc: error: unrecognized command line option '-qversion'
+i686-w64-mingw32.static-gcc: fatal error: no input files
+compilation terminated.
+configure:3919: $? = 1
+configure:3939: checking whether the C compiler works
+configure:3961: i686-w64-mingw32.static-gcc   -DHAVE_EXPAT_CONFIG_H  conftest.c  >&5
+configure:3965: $? = 0
+configure:4013: result: yes
+configure:4016: checking for C compiler default output file name
+configure:4018: result: a.exe
+configure:4024: checking for suffix of executables
+configure:4031: i686-w64-mingw32.static-gcc -o conftest.exe   -DHAVE_EXPAT_CONFIG_H  conftest.c  >&5
+configure:4035: $? = 0
+configure:4057: result: .exe
+configure:4079: checking whether we are cross compiling
+configure:4117: result: yes
+configure:4122: checking for suffix of object files
+configure:4144: i686-w64-mingw32.static-gcc -c   -DHAVE_EXPAT_CONFIG_H conftest.c >&5
+configure:4148: $? = 0
+configure:4169: result: o
+configure:4173: checking whether we are using the GNU C compiler
+configure:4192: i686-w64-mingw32.static-gcc -c   -DHAVE_EXPAT_CONFIG_H conftest.c >&5
+configure:4192: $? = 0
+configure:4201: result: yes
+configure:4210: checking whether i686-w64-mingw32.static-gcc accepts -g
+configure:4230: i686-w64-mingw32.static-gcc -c -g  -DHAVE_EXPAT_CONFIG_H conftest.c >&5
+configure:4230: $? = 0
+configure:4271: result: yes
+configure:4288: checking for i686-w64-mingw32.static-gcc option to accept ISO C89
+configure:4351: i686-w64-mingw32.static-gcc  -c -g -O2  -DHAVE_EXPAT_CONFIG_H conftest.c >&5
+configure:4351: $? = 0
+configure:4364: result: none needed
+configure:4389: checking whether i686-w64-mingw32.static-gcc understands -c and -o together
+configure:4411: i686-w64-mingw32.static-gcc -c conftest.c -o conftest2.o
+configure:4414: $? = 0
+configure:4411: i686-w64-mingw32.static-gcc -c conftest.c -o conftest2.o
+configure:4414: $? = 0
+configure:4426: result: yes
+configure:4445: checking dependency style of i686-w64-mingw32.static-gcc
+configure:4556: result: gcc3
+configure:4571: checking for a sed that does not truncate output
+configure:4635: result: /bin/sed
+configure:4653: checking for grep that handles long lines and -e
+configure:4711: result: /bin/grep
+configure:4716: checking for egrep
+configure:4778: result: /bin/grep -E
+configure:4783: checking for fgrep
+configure:4845: result: /bin/grep -F
+configure:4880: checking for ld used by i686-w64-mingw32.static-gcc
+configure:4947: result: /home/user/mxe/usr/bin/i686-w64-mingw32.static-ld
+configure:4954: checking if the linker (/home/user/mxe/usr/bin/i686-w64-mingw32.static-ld) is GNU ld
+configure:4969: result: yes
+configure:4981: checking for BSD- or MS-compatible name lister (nm)
+configure:5035: result: /home/user/mxe/usr/bin/i686-w64-mingw32.static-nm -B
+configure:5165: checking the name lister (/home/user/mxe/usr/bin/i686-w64-mingw32.static-nm -B) interface
+configure:5172: i686-w64-mingw32.static-gcc -c -g -O2  -DHAVE_EXPAT_CONFIG_H conftest.c >&5
+configure:5175: /home/user/mxe/usr/bin/i686-w64-mingw32.static-nm -B "conftest.o"
+configure:5178: output
+00000000 b .bss
+00000000 d .data
+00000000 N .debug_abbrev
+00000000 N .debug_aranges
+00000000 N .debug_info
+00000000 N .debug_line
+00000000 r .rdata$zzz
+00000000 t .text
+00000000 B _some_variable
+configure:5185: result: BSD nm
+configure:5188: checking whether ln -s works
+configure:5192: result: yes
+configure:5200: checking the maximum length of command line arguments
+configure:5336: result: 1572864
+configure:5384: checking how to convert i686-pc-linux-gnu file names to i686-w64-mingw32.static format
+configure:5424: result: func_convert_file_nix_to_w32
+configure:5431: checking how to convert i686-pc-linux-gnu file names to toolchain format
+configure:5451: result: func_convert_file_noop
+configure:5458: checking for /home/user/mxe/usr/bin/i686-w64-mingw32.static-ld option to reload object files
+configure:5465: result: -r
+configure:5499: checking for i686-w64-mingw32.static-objdump
+configure:5526: result: i686-w64-mingw32.static-objdump
+configure:5595: checking how to recognize dependent libraries
+configure:5795: result: file_magic ^x86 archive import|^x86 DLL
+configure:5840: checking for i686-w64-mingw32.static-dlltool
+configure:5867: result: i686-w64-mingw32.static-dlltool
+configure:5937: checking how to associate runtime and link libraries
+configure:5964: result: func_cygming_dll_for_implib
+configure:5981: checking for i686-w64-mingw32.static-ar
+configure:5997: found /home/user/mxe/usr/bin/i686-w64-mingw32.static-ar
+configure:6008: result: i686-w64-mingw32.static-ar
+configure:6089: checking for archiver @FILE support
+configure:6106: i686-w64-mingw32.static-gcc -c -g -O2  -DHAVE_EXPAT_CONFIG_H conftest.c >&5
+configure:6106: $? = 0
+configure:6109: i686-w64-mingw32.static-ar cru libconftest.a @conftest.lst >&5
+i686-w64-mingw32.static-ar: `u' modifier ignored since `D' is the default (see `U')
+configure:6112: $? = 0
+configure:6117: i686-w64-mingw32.static-ar cru libconftest.a @conftest.lst >&5
+i686-w64-mingw32.static-ar: `u' modifier ignored since `D' is the default (see `U')
+i686-w64-mingw32.static-ar: conftest.o: No such file or directory
+configure:6120: $? = 1
+configure:6132: result: @
+configure:6150: checking for i686-w64-mingw32.static-strip
+configure:6177: result: i686-w64-mingw32.static-strip
+configure:6249: checking for i686-w64-mingw32.static-ranlib
+configure:6265: found /home/user/mxe/usr/bin/i686-w64-mingw32.static-ranlib
+configure:6276: result: i686-w64-mingw32.static-ranlib
+configure:6418: checking command to parse /home/user/mxe/usr/bin/i686-w64-mingw32.static-nm -B output from i686-w64-mingw32.static-gcc object
+configure:6571: i686-w64-mingw32.static-gcc -c -g -O2  -DHAVE_EXPAT_CONFIG_H conftest.c >&5
+configure:6574: $? = 0
+configure:6578: /home/user/mxe/usr/bin/i686-w64-mingw32.static-nm -B conftest.o \| sed -n -e 's/^.*[ ]\([ABCDGIRSTW][ABCDGIRSTW]*\)[ ][ ]*\([_A-Za-z][_A-Za-z0-9]*\)$/\1 \2 \2/p' | sed '/ __gnu_lto/d' \> conftest.nm
+configure:6581: $? = 0
+cannot find nm_test_var in conftest.nm
+configure:6571: i686-w64-mingw32.static-gcc -c -g -O2  -DHAVE_EXPAT_CONFIG_H conftest.c >&5
+configure:6574: $? = 0
+configure:6578: /home/user/mxe/usr/bin/i686-w64-mingw32.static-nm -B conftest.o \| sed -n -e 's/^.*[ ]\([ABCDGIRSTW][ABCDGIRSTW]*\)[ ][ ]*_\([_A-Za-z][_A-Za-z0-9]*\)$/\1 _\2 \2/p' | sed '/ __gnu_lto/d' \> conftest.nm
+configure:6581: $? = 0
+configure:6647: i686-w64-mingw32.static-gcc -o conftest.exe -g -O2  -DHAVE_EXPAT_CONFIG_H  conftest.c conftstm.o >&5
+configure:6650: $? = 0
+configure:6688: result: ok
+configure:6735: checking for sysroot
+configure:6765: result: no
+configure:6772: checking for a working dd
+configure:6810: result: /bin/dd
+configure:6814: checking how to truncate binary pipes
+configure:6829: result: /bin/dd bs=4096 count=1
+configure:7118: checking for i686-w64-mingw32.static-mt
+configure:7148: result: no
+configure:7158: checking for mt
+configure:7174: found /bin/mt
+configure:7185: result: mt
+configure:7197: WARNING: using cross tools not prefixed with host triplet
+configure:7208: checking if mt is a manifest tool
+configure:7214: mt '-?'
+configure:7222: result: no
+configure:7899: checking how to run the C preprocessor
+configure:7930: i686-w64-mingw32.static-gcc -E  -DHAVE_EXPAT_CONFIG_H conftest.c
+configure:7930: $? = 0
+configure:7944: i686-w64-mingw32.static-gcc -E  -DHAVE_EXPAT_CONFIG_H conftest.c
+conftest.c:11:28: fatal error: ac_nonexistent.h: No such file or directory
+compilation terminated.
+configure:7944: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "expat"
+| #define PACKAGE_TARNAME "expat"
+| #define PACKAGE_VERSION "2.2.5"
+| #define PACKAGE_STRING "expat 2.2.5"
+| #define PACKAGE_BUGREPORT "expat-bugs@libexpat.org"
+| #define PACKAGE_URL ""
+| #define PACKAGE "expat"
+| #define VERSION "2.2.5"
+| /* end confdefs.h.  */
+| #include <ac_nonexistent.h>
+configure:7969: result: i686-w64-mingw32.static-gcc -E
+configure:7989: i686-w64-mingw32.static-gcc -E  -DHAVE_EXPAT_CONFIG_H conftest.c
+configure:7989: $? = 0
+configure:8003: i686-w64-mingw32.static-gcc -E  -DHAVE_EXPAT_CONFIG_H conftest.c
+conftest.c:11:28: fatal error: ac_nonexistent.h: No such file or directory
+compilation terminated.
+configure:8003: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "expat"
+| #define PACKAGE_TARNAME "expat"
+| #define PACKAGE_VERSION "2.2.5"
+| #define PACKAGE_STRING "expat 2.2.5"
+| #define PACKAGE_BUGREPORT "expat-bugs@libexpat.org"
+| #define PACKAGE_URL ""
+| #define PACKAGE "expat"
+| #define VERSION "2.2.5"
+| /* end confdefs.h.  */
+| #include <ac_nonexistent.h>
+configure:8032: checking for ANSI C header files
+configure:8052: i686-w64-mingw32.static-gcc -c -g -O2  -DHAVE_EXPAT_CONFIG_H conftest.c >&5
+configure:8052: $? = 0
+configure:8136: result: yes
+configure:8149: checking for sys/types.h
+configure:8149: i686-w64-mingw32.static-gcc -c -g -O2  -DHAVE_EXPAT_CONFIG_H conftest.c >&5
+configure:8149: $? = 0
+configure:8149: result: yes
+configure:8149: checking for sys/stat.h
+configure:8149: i686-w64-mingw32.static-gcc -c -g -O2  -DHAVE_EXPAT_CONFIG_H conftest.c >&5
+configure:8149: $? = 0
+configure:8149: result: yes
+configure:8149: checking for stdlib.h
+configure:8149: i686-w64-mingw32.static-gcc -c -g -O2  -DHAVE_EXPAT_CONFIG_H conftest.c >&5
+configure:8149: $? = 0
+configure:8149: result: yes
+configure:8149: checking for string.h
+configure:8149: i686-w64-mingw32.static-gcc -c -g -O2  -DHAVE_EXPAT_CONFIG_H conftest.c >&5
+configure:8149: $? = 0
+configure:8149: result: yes
+configure:8149: checking for memory.h
+configure:8149: i686-w64-mingw32.static-gcc -c -g -O2  -DHAVE_EXPAT_CONFIG_H conftest.c >&5
+configure:8149: $? = 0
+configure:8149: result: yes
+configure:8149: checking for strings.h
+configure:8149: i686-w64-mingw32.static-gcc -c -g -O2  -DHAVE_EXPAT_CONFIG_H conftest.c >&5
+configure:8149: $? = 0
+configure:8149: result: yes
+configure:8149: checking for inttypes.h
+configure:8149: i686-w64-mingw32.static-gcc -c -g -O2  -DHAVE_EXPAT_CONFIG_H conftest.c >&5
+configure:8149: $? = 0
+configure:8149: result: yes
+configure:8149: checking for stdint.h
+configure:8149: i686-w64-mingw32.static-gcc -c -g -O2  -DHAVE_EXPAT_CONFIG_H conftest.c >&5
+configure:8149: $? = 0
+configure:8149: result: yes
+configure:8149: checking for unistd.h
+configure:8149: i686-w64-mingw32.static-gcc -c -g -O2  -DHAVE_EXPAT_CONFIG_H conftest.c >&5
+configure:8149: $? = 0
+configure:8149: result: yes
+configure:8163: checking for dlfcn.h
+configure:8163: i686-w64-mingw32.static-gcc -c -g -O2  -DHAVE_EXPAT_CONFIG_H conftest.c >&5
+conftest.c:55:19: fatal error: dlfcn.h: No such file or directory
+compilation terminated.
+configure:8163: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "expat"
+| #define PACKAGE_TARNAME "expat"
+| #define PACKAGE_VERSION "2.2.5"
+| #define PACKAGE_STRING "expat 2.2.5"
+| #define PACKAGE_BUGREPORT "expat-bugs@libexpat.org"
+| #define PACKAGE_URL ""
+| #define PACKAGE "expat"
+| #define VERSION "2.2.5"
+| #define STDC_HEADERS 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_MEMORY_H 1
+| #define HAVE_STRINGS_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_UNISTD_H 1
+| /* end confdefs.h.  */
+| #include <stdio.h>
+| #ifdef HAVE_SYS_TYPES_H
+| # include <sys/types.h>
+| #endif
+| #ifdef HAVE_SYS_STAT_H
+| # include <sys/stat.h>
+| #endif
+| #ifdef STDC_HEADERS
+| # include <stdlib.h>
+| # include <stddef.h>
+| #else
+| # ifdef HAVE_STDLIB_H
+| #  include <stdlib.h>
+| # endif
+| #endif
+| #ifdef HAVE_STRING_H
+| # if !defined STDC_HEADERS && defined HAVE_MEMORY_H
+| #  include <memory.h>
+| # endif
+| # include <string.h>
+| #endif
+| #ifdef HAVE_STRINGS_H
+| # include <strings.h>
+| #endif
+| #ifdef HAVE_INTTYPES_H
+| # include <inttypes.h>
+| #endif
+| #ifdef HAVE_STDINT_H
+| # include <stdint.h>
+| #endif
+| #ifdef HAVE_UNISTD_H
+| # include <unistd.h>
+| #endif
+| 
+| #include <dlfcn.h>
+configure:8163: result: no
+configure:8417: checking for objdir
+configure:8432: result: .libs
+configure:8696: checking if i686-w64-mingw32.static-gcc supports -fno-rtti -fno-exceptions
+configure:8714: i686-w64-mingw32.static-gcc -c -g -O2  -DHAVE_EXPAT_CONFIG_H -fno-rtti -fno-exceptions conftest.c >&5
+cc1: warning: command line option '-fno-rtti' is valid for C++/ObjC++ but not for C
+configure:8718: $? = 0
+configure:8731: result: no
+configure:9089: checking for i686-w64-mingw32.static-gcc option to produce PIC
+configure:9096: result: -DDLL_EXPORT -DPIC
+configure:9104: checking if i686-w64-mingw32.static-gcc PIC flag -DDLL_EXPORT -DPIC works
+configure:9122: i686-w64-mingw32.static-gcc -c -g -O2  -DHAVE_EXPAT_CONFIG_H -DDLL_EXPORT -DPIC -DPIC conftest.c >&5
+configure:9126: $? = 0
+configure:9139: result: yes
+configure:9168: checking if i686-w64-mingw32.static-gcc static flag -static works
+configure:9196: result: yes
+configure:9211: checking if i686-w64-mingw32.static-gcc supports -c -o file.o
+configure:9232: i686-w64-mingw32.static-gcc -c -g -O2  -DHAVE_EXPAT_CONFIG_H -o out/conftest2.o conftest.c >&5
+configure:9236: $? = 0
+configure:9258: result: yes
+configure:9266: checking if i686-w64-mingw32.static-gcc supports -c -o file.o
+configure:9313: result: yes
+configure:9346: checking whether the i686-w64-mingw32.static-gcc linker (/home/user/mxe/usr/bin/i686-w64-mingw32.static-ld) supports shared libraries
+configure:10605: result: yes
+configure:10845: checking dynamic linker characteristics
+configure:11676: result: Win32 ld.exe
+configure:11798: checking how to hardcode library paths into programs
+configure:11823: result: immediate
+configure:12371: checking whether stripping libraries is possible
+configure:12376: result: yes
+configure:12411: checking if libtool supports shared libraries
+configure:12413: result: yes
+configure:12416: checking whether to build shared libraries
+configure:12441: result: no
+configure:12444: checking whether to build static libraries
+configure:12448: result: yes
+configure:12490: checking for i686-w64-mingw32.static-gcc option to accept ISO C99
+configure:12639: i686-w64-mingw32.static-gcc  -c -g -O2  -DHAVE_EXPAT_CONFIG_H conftest.c >&5
+configure:12639: $? = 0
+configure:12652: result: none needed
+configure:12681: checking for i686-w64-mingw32.static-g++
+configure:12697: found /home/user/mxe/usr/bin/i686-w64-mingw32.static-g++
+configure:12708: result: i686-w64-mingw32.static-g++
+configure:12779: checking for C++ compiler version
+configure:12788: i686-w64-mingw32.static-g++ --version >&5
+i686-w64-mingw32.static-g++ (GCC) 5.4.0
+Copyright (C) 2015 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+configure:12799: $? = 0
+configure:12788: i686-w64-mingw32.static-g++ -v >&5
+Using built-in specs.
+COLLECT_GCC=i686-w64-mingw32.static-g++
+COLLECT_LTO_WRAPPER=/home/user/mxe/usr/libexec/gcc/i686-w64-mingw32.static/5.4.0/lto-wrapper
+Target: i686-w64-mingw32.static
+Configured with: /home/user/mxe/tmp-gcc-i686-w64-mingw32.static/gcc-5.4.0/configure ac_cv_prog_HAVE_DOXYGEN=false --enable-doc=no --enable-gtk-doc=no --enable-gtk-doc-html=no --enable-gtk-doc-pdf=no --docdir=/home/user/mxe/tmp-gcc-i686-w64-mingw32.static/gcc-5.4.0.build_.sink --infodir=/home/user/mxe/tmp-gcc-i686-w64-mingw32.static/gcc-5.4.0.build_.sink --mandir=/home/user/mxe/tmp-gcc-i686-w64-mingw32.static/gcc-5.4.0.build_.sink --with-html-dir=/home/user/mxe/tmp-gcc-i686-w64-mingw32.static/gcc-5.4.0.build_.sink --disable-doxygen --target=i686-w64-mingw32.static --build=i686-pc-linux-gnu --prefix=/home/user/mxe/usr --libdir=/home/user/mxe/usr/lib --enable-languages=c,c++,objc,fortran --enable-version-specific-runtime-libs --with-gcc --with-gnu-ld --with-gnu-as --disable-nls --disable-shared --disable-multilib --without-x --disable-win32-registry --enable-threads=win32 --enable-sjlj-exceptions --enable-libgomp --with-gmp=/home/user/mxe/usr/i686-pc-linux-gnu --with-isl=/home/user/mxe/usr/i686-pc-linux-gnu --with-mpc=/home/user/mxe/usr/i686-pc-linux-gnu --with-mpfr=/home/user/mxe/usr/i686-pc-linux-gnu --with-as=/home/user/mxe/usr/bin/i686-w64-mingw32.static-as --with-ld=/home/user/mxe/usr/bin/i686-w64-mingw32.static-ld --with-nm=/home/user/mxe/usr/bin/i686-w64-mingw32.static-nm
+Thread model: win32
+gcc version 5.4.0 (GCC) 
+configure:12799: $? = 0
+configure:12788: i686-w64-mingw32.static-g++ -V >&5
+i686-w64-mingw32.static-g++: error: unrecognized command line option '-V'
+i686-w64-mingw32.static-g++: fatal error: no input files
+compilation terminated.
+configure:12799: $? = 1
+configure:12788: i686-w64-mingw32.static-g++ -qversion >&5
+i686-w64-mingw32.static-g++: error: unrecognized command line option '-qversion'
+i686-w64-mingw32.static-g++: fatal error: no input files
+compilation terminated.
+configure:12799: $? = 1
+configure:12803: checking whether we are using the GNU C++ compiler
+configure:12822: i686-w64-mingw32.static-g++ -c   -DHAVE_EXPAT_CONFIG_H conftest.cpp >&5
+configure:12822: $? = 0
+configure:12831: result: yes
+configure:12840: checking whether i686-w64-mingw32.static-g++ accepts -g
+configure:12860: i686-w64-mingw32.static-g++ -c -g  -DHAVE_EXPAT_CONFIG_H conftest.cpp >&5
+configure:12860: $? = 0
+configure:12901: result: yes
+configure:12926: checking dependency style of i686-w64-mingw32.static-g++
+configure:13037: result: gcc3
+configure:13070: checking how to run the C++ preprocessor
+configure:13097: i686-w64-mingw32.static-g++ -E  -DHAVE_EXPAT_CONFIG_H conftest.cpp
+configure:13097: $? = 0
+configure:13111: i686-w64-mingw32.static-g++ -E  -DHAVE_EXPAT_CONFIG_H conftest.cpp
+conftest.cpp:22:28: fatal error: ac_nonexistent.h: No such file or directory
+compilation terminated.
+configure:13111: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "expat"
+| #define PACKAGE_TARNAME "expat"
+| #define PACKAGE_VERSION "2.2.5"
+| #define PACKAGE_STRING "expat 2.2.5"
+| #define PACKAGE_BUGREPORT "expat-bugs@libexpat.org"
+| #define PACKAGE_URL ""
+| #define PACKAGE "expat"
+| #define VERSION "2.2.5"
+| #define STDC_HEADERS 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_MEMORY_H 1
+| #define HAVE_STRINGS_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_UNISTD_H 1
+| #define LT_OBJDIR ".libs/"
+| /* end confdefs.h.  */
+| #include <ac_nonexistent.h>
+configure:13136: result: i686-w64-mingw32.static-g++ -E
+configure:13156: i686-w64-mingw32.static-g++ -E  -DHAVE_EXPAT_CONFIG_H conftest.cpp
+configure:13156: $? = 0
+configure:13170: i686-w64-mingw32.static-g++ -E  -DHAVE_EXPAT_CONFIG_H conftest.cpp
+conftest.cpp:22:28: fatal error: ac_nonexistent.h: No such file or directory
+compilation terminated.
+configure:13170: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "expat"
+| #define PACKAGE_TARNAME "expat"
+| #define PACKAGE_VERSION "2.2.5"
+| #define PACKAGE_STRING "expat 2.2.5"
+| #define PACKAGE_BUGREPORT "expat-bugs@libexpat.org"
+| #define PACKAGE_URL ""
+| #define PACKAGE "expat"
+| #define VERSION "2.2.5"
+| #define STDC_HEADERS 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_MEMORY_H 1
+| #define HAVE_STRINGS_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_UNISTD_H 1
+| #define LT_OBJDIR ".libs/"
+| /* end confdefs.h.  */
+| #include <ac_nonexistent.h>
+configure:13332: checking for ld used by i686-w64-mingw32.static-g++
+configure:13399: result: /home/user/mxe/usr/bin/i686-w64-mingw32.static-ld
+configure:13406: checking if the linker (/home/user/mxe/usr/bin/i686-w64-mingw32.static-ld) is GNU ld
+configure:13421: result: yes
+configure:13476: checking whether the i686-w64-mingw32.static-g++ linker (/home/user/mxe/usr/bin/i686-w64-mingw32.static-ld) supports shared libraries
+configure:14549: result: yes
+configure:14585: i686-w64-mingw32.static-g++ -c -g -O2  -DHAVE_EXPAT_CONFIG_H conftest.cpp >&5
+configure:14588: $? = 0
+configure:15069: checking for i686-w64-mingw32.static-g++ option to produce PIC
+configure:15076: result: -DDLL_EXPORT -DPIC
+configure:15084: checking if i686-w64-mingw32.static-g++ PIC flag -DDLL_EXPORT -DPIC works
+configure:15102: i686-w64-mingw32.static-g++ -c -g -O2  -DHAVE_EXPAT_CONFIG_H -DDLL_EXPORT -DPIC -DPIC conftest.cpp >&5
+configure:15106: $? = 0
+configure:15119: result: yes
+configure:15142: checking if i686-w64-mingw32.static-g++ static flag -static works
+configure:15170: result: yes
+configure:15182: checking if i686-w64-mingw32.static-g++ supports -c -o file.o
+configure:15203: i686-w64-mingw32.static-g++ -c -g -O2  -DHAVE_EXPAT_CONFIG_H -o out/conftest2.o conftest.cpp >&5
+configure:15207: $? = 0
+configure:15229: result: yes
+configure:15234: checking if i686-w64-mingw32.static-g++ supports -c -o file.o
+configure:15281: result: yes
+configure:15311: checking whether the i686-w64-mingw32.static-g++ linker (/home/user/mxe/usr/bin/i686-w64-mingw32.static-ld) supports shared libraries
+configure:15351: result: yes
+configure:15492: checking dynamic linker characteristics
+configure:16250: result: Win32 ld.exe
+configure:16315: checking how to hardcode library paths into programs
+configure:16340: result: immediate
+configure:16385: checking whether i686-w64-mingw32.static-gcc accepts -fexceptions
+configure:16398: i686-w64-mingw32.static-gcc -o conftest.exe -g -O2 -Wall -Wmissing-prototypes -Wstrict-prototypes -fexceptions  -DHAVE_EXPAT_CONFIG_H  conftest.c  >&5
+conftest.c:24:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+ main ()
+ ^
+configure:16398: $? = 0
+configure:16399: result: yes
+configure:16416: checking for ANSI C header files
+configure:16520: result: yes
+configure:16530: checking whether byte ordering is bigendian
+configure:16552: i686-w64-mingw32.static-gcc -c -g -O2 -Wall -Wmissing-prototypes -Wstrict-prototypes -fexceptions -fno-strict-aliasing  -DHAVE_EXPAT_CONFIG_H conftest.c >&5
+conftest.c:26:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+ main ()
+ ^
+configure:16552: $? = 0
+configure:16569: i686-w64-mingw32.static-gcc -c -g -O2 -Wall -Wmissing-prototypes -Wstrict-prototypes -fexceptions -fno-strict-aliasing  -DHAVE_EXPAT_CONFIG_H conftest.c >&5
+conftest.c:26:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+ main ()
+ ^
+conftest.c: In function 'main':
+conftest.c:30:2: error: unknown type name 'not'
+  not big endian
+  ^
+conftest.c:30:10: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'endian'
+  not big endian
+          ^
+configure:16569: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "expat"
+| #define PACKAGE_TARNAME "expat"
+| #define PACKAGE_VERSION "2.2.5"
+| #define PACKAGE_STRING "expat 2.2.5"
+| #define PACKAGE_BUGREPORT "expat-bugs@libexpat.org"
+| #define PACKAGE_URL ""
+| #define PACKAGE "expat"
+| #define VERSION "2.2.5"
+| #define STDC_HEADERS 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_MEMORY_H 1
+| #define HAVE_STRINGS_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_UNISTD_H 1
+| #define LT_OBJDIR ".libs/"
+| #define STDC_HEADERS 1
+| /* end confdefs.h.  */
+| #include <sys/types.h>
+| #include <sys/param.h>
+| int
+| main ()
+| {
+| 
+| #if BYTE_ORDER != BIG_ENDIAN
+|  not big endian
+| #endif
+|   ;
+|   return 0;
+| }
+configure:16605: result: no
+configure:16658: checking for an ANSI C-conforming const
+configure:16724: i686-w64-mingw32.static-gcc -c -g -O2 -Wall -Wmissing-prototypes -Wstrict-prototypes -fexceptions -fno-strict-aliasing  -DHAVE_EXPAT_CONFIG_H conftest.c >&5
+conftest.c:26:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+ main ()
+ ^
+configure:16724: $? = 0
+configure:16731: result: yes
+configure:16739: checking for size_t
+configure:16739: i686-w64-mingw32.static-gcc -c -g -O2 -Wall -Wmissing-prototypes -Wstrict-prototypes -fexceptions -fno-strict-aliasing  -DHAVE_EXPAT_CONFIG_H conftest.c >&5
+conftest.c:58:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+ main ()
+ ^
+configure:16739: $? = 0
+configure:16739: i686-w64-mingw32.static-gcc -c -g -O2 -Wall -Wmissing-prototypes -Wstrict-prototypes -fexceptions -fno-strict-aliasing  -DHAVE_EXPAT_CONFIG_H conftest.c >&5
+conftest.c:58:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+ main ()
+ ^
+conftest.c: In function 'main':
+conftest.c:60:21: error: expected expression before ')' token
+ if (sizeof ((size_t)))
+                     ^
+configure:16739: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "expat"
+| #define PACKAGE_TARNAME "expat"
+| #define PACKAGE_VERSION "2.2.5"
+| #define PACKAGE_STRING "expat 2.2.5"
+| #define PACKAGE_BUGREPORT "expat-bugs@libexpat.org"
+| #define PACKAGE_URL ""
+| #define PACKAGE "expat"
+| #define VERSION "2.2.5"
+| #define STDC_HEADERS 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_MEMORY_H 1
+| #define HAVE_STRINGS_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_UNISTD_H 1
+| #define LT_OBJDIR ".libs/"
+| #define STDC_HEADERS 1
+| #define BYTEORDER 1234
+| /* end confdefs.h.  */
+| #include <stdio.h>
+| #ifdef HAVE_SYS_TYPES_H
+| # include <sys/types.h>
+| #endif
+| #ifdef HAVE_SYS_STAT_H
+| # include <sys/stat.h>
+| #endif
+| #ifdef STDC_HEADERS
+| # include <stdlib.h>
+| # include <stddef.h>
+| #else
+| # ifdef HAVE_STDLIB_H
+| #  include <stdlib.h>
+| # endif
+| #endif
+| #ifdef HAVE_STRING_H
+| # if !defined STDC_HEADERS && defined HAVE_MEMORY_H
+| #  include <memory.h>
+| # endif
+| # include <string.h>
+| #endif
+| #ifdef HAVE_STRINGS_H
+| # include <strings.h>
+| #endif
+| #ifdef HAVE_INTTYPES_H
+| # include <inttypes.h>
+| #endif
+| #ifdef HAVE_STDINT_H
+| # include <stdint.h>
+| #endif
+| #ifdef HAVE_UNISTD_H
+| # include <unistd.h>
+| #endif
+| int
+| main ()
+| {
+| if (sizeof ((size_t)))
+| 	    return 0;
+|   ;
+|   return 0;
+| }
+configure:16739: result: yes
+configure:16753: checking for memmove
+configure:16753: i686-w64-mingw32.static-gcc -o conftest.exe -g -O2 -Wall -Wmissing-prototypes -Wstrict-prototypes -fexceptions -fno-strict-aliasing  -DHAVE_EXPAT_CONFIG_H  -fno-strict-aliasing conftest.c  >&5
+conftest.c:47:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+ char memmove ();
+ ^
+conftest.c:47:6: warning: conflicting types for built-in function 'memmove'
+ char memmove ();
+      ^
+conftest.c:56:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+ main ()
+ ^
+configure:16753: $? = 0
+configure:16753: result: yes
+configure:16753: checking for bcopy
+configure:16753: i686-w64-mingw32.static-gcc -o conftest.exe -g -O2 -Wall -Wmissing-prototypes -Wstrict-prototypes -fexceptions -fno-strict-aliasing  -DHAVE_EXPAT_CONFIG_H  -fno-strict-aliasing conftest.c  >&5
+conftest.c:48:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+ char bcopy ();
+ ^
+conftest.c:48:6: warning: conflicting types for built-in function 'bcopy'
+ char bcopy ();
+      ^
+conftest.c:57:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+ main ()
+ ^
+/tmp/ccTZIXbq.o: In function `main':
+/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/conftest.c:59: undefined reference to `bcopy'
+collect2: error: ld returned 1 exit status
+configure:16753: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "expat"
+| #define PACKAGE_TARNAME "expat"
+| #define PACKAGE_VERSION "2.2.5"
+| #define PACKAGE_STRING "expat 2.2.5"
+| #define PACKAGE_BUGREPORT "expat-bugs@libexpat.org"
+| #define PACKAGE_URL ""
+| #define PACKAGE "expat"
+| #define VERSION "2.2.5"
+| #define STDC_HEADERS 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_MEMORY_H 1
+| #define HAVE_STRINGS_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_UNISTD_H 1
+| #define LT_OBJDIR ".libs/"
+| #define STDC_HEADERS 1
+| #define BYTEORDER 1234
+| #define HAVE_MEMMOVE 1
+| /* end confdefs.h.  */
+| /* Define bcopy to an innocuous variant, in case <limits.h> declares bcopy.
+|    For example, HP-UX 11i <limits.h> declares gettimeofday.  */
+| #define bcopy innocuous_bcopy
+| 
+| /* System header to define __stub macros and hopefully few prototypes,
+|     which can conflict with char bcopy (); below.
+|     Prefer <limits.h> to <assert.h> if __STDC__ is defined, since
+|     <limits.h> exists even on freestanding compilers.  */
+| 
+| #ifdef __STDC__
+| # include <limits.h>
+| #else
+| # include <assert.h>
+| #endif
+| 
+| #undef bcopy
+| 
+| /* Override any GCC internal prototype to avoid an error.
+|    Use char because int might match the return type of a GCC
+|    builtin and then its argument prototype would still apply.  */
+| #ifdef __cplusplus
+| extern "C"
+| #endif
+| char bcopy ();
+| /* The GNU C library defines this for functions which it implements
+|     to always fail with ENOSYS.  Some functions are actually named
+|     something starting with __ and the normal name is an alias.  */
+| #if defined __stub_bcopy || defined __stub___bcopy
+| choke me
+| #endif
+| 
+| int
+| main ()
+| {
+| return bcopy ();
+|   ;
+|   return 0;
+| }
+configure:16753: result: no
+configure:16864: checking for arc4random_buf (BSD or libbsd)
+configure:16879: i686-w64-mingw32.static-gcc -o conftest.exe -g -O2 -Wall -Wmissing-prototypes -Wstrict-prototypes -fexceptions -fno-strict-aliasing  -DHAVE_EXPAT_CONFIG_H  -fno-strict-aliasing conftest.c  >&5
+conftest.c:30:7: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+   int main() {
+       ^
+conftest.c: In function 'main':
+conftest.c:31:5: warning: implicit declaration of function 'arc4random_buf' [-Wimplicit-function-declaration]
+     arc4random_buf(NULL, 0U);
+     ^
+/tmp/ccYq0TFZ.o: In function `main':
+/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/conftest.c:31: undefined reference to `arc4random_buf'
+collect2: error: ld returned 1 exit status
+configure:16879: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "expat"
+| #define PACKAGE_TARNAME "expat"
+| #define PACKAGE_VERSION "2.2.5"
+| #define PACKAGE_STRING "expat 2.2.5"
+| #define PACKAGE_BUGREPORT "expat-bugs@libexpat.org"
+| #define PACKAGE_URL ""
+| #define PACKAGE "expat"
+| #define VERSION "2.2.5"
+| #define STDC_HEADERS 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_MEMORY_H 1
+| #define HAVE_STRINGS_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_UNISTD_H 1
+| #define LT_OBJDIR ".libs/"
+| #define STDC_HEADERS 1
+| #define BYTEORDER 1234
+| #define HAVE_MEMMOVE 1
+| /* end confdefs.h.  */
+| 
+|   #include <stdlib.h>  /* for arc4random_buf on BSD, for NULL */
+|   #if defined(HAVE_LIBBSD)
+|   # include <bsd/stdlib.h>
+|   #endif
+|   int main() {
+|     arc4random_buf(NULL, 0U);
+|     return 0;
+|   }
+| 
+configure:16889: result: no
+configure:16892: checking for arc4random (BSD, macOS or libbsd)
+configure:16908: i686-w64-mingw32.static-gcc -o conftest.exe -g -O2 -Wall -Wmissing-prototypes -Wstrict-prototypes -fexceptions -fno-strict-aliasing  -DHAVE_EXPAT_CONFIG_H  -fno-strict-aliasing conftest.c  >&5
+conftest.c:31:11: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+       int main() {
+           ^
+conftest.c: In function 'main':
+conftest.c:32:11: warning: implicit declaration of function 'arc4random' [-Wimplicit-function-declaration]
+           arc4random();
+           ^
+/tmp/ccrBXrpd.o: In function `main':
+/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/conftest.c:32: undefined reference to `arc4random'
+collect2: error: ld returned 1 exit status
+configure:16908: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "expat"
+| #define PACKAGE_TARNAME "expat"
+| #define PACKAGE_VERSION "2.2.5"
+| #define PACKAGE_STRING "expat 2.2.5"
+| #define PACKAGE_BUGREPORT "expat-bugs@libexpat.org"
+| #define PACKAGE_URL ""
+| #define PACKAGE "expat"
+| #define VERSION "2.2.5"
+| #define STDC_HEADERS 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_MEMORY_H 1
+| #define HAVE_STRINGS_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_UNISTD_H 1
+| #define LT_OBJDIR ".libs/"
+| #define STDC_HEADERS 1
+| #define BYTEORDER 1234
+| #define HAVE_MEMMOVE 1
+| /* end confdefs.h.  */
+| 
+|       #if defined(HAVE_LIBBSD)
+|       # include <bsd/stdlib.h>
+|       #else
+|       # include <stdlib.h>
+|       #endif
+|       int main() {
+|           arc4random();
+|           return 0;
+|       }
+| 
+configure:16918: result: no
+configure:16930: checking for getrandom (Linux 3.17+, glibc 2.25+)
+configure:16942: i686-w64-mingw32.static-gcc -o conftest.exe -g -O2 -Wall -Wmissing-prototypes -Wstrict-prototypes -fexceptions -fno-strict-aliasing  -DHAVE_EXPAT_CONFIG_H  -fno-strict-aliasing conftest.c  >&5
+conftest.c:27:26: fatal error: sys/random.h: No such file or directory
+compilation terminated.
+configure:16942: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "expat"
+| #define PACKAGE_TARNAME "expat"
+| #define PACKAGE_VERSION "2.2.5"
+| #define PACKAGE_STRING "expat 2.2.5"
+| #define PACKAGE_BUGREPORT "expat-bugs@libexpat.org"
+| #define PACKAGE_URL ""
+| #define PACKAGE "expat"
+| #define VERSION "2.2.5"
+| #define STDC_HEADERS 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_MEMORY_H 1
+| #define HAVE_STRINGS_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_UNISTD_H 1
+| #define LT_OBJDIR ".libs/"
+| #define STDC_HEADERS 1
+| #define BYTEORDER 1234
+| #define HAVE_MEMMOVE 1
+| /* end confdefs.h.  */
+| 
+|   #include <stdlib.h>  /* for NULL */
+|   #include <sys/random.h>
+|   int main() {
+|     return getrandom(NULL, 0U, 0U);
+|   }
+| 
+configure:16952: result: no
+configure:16955: checking for syscall SYS_getrandom (Linux 3.17+)
+configure:16969: i686-w64-mingw32.static-gcc -o conftest.exe -g -O2 -Wall -Wmissing-prototypes -Wstrict-prototypes -fexceptions -fno-strict-aliasing  -DHAVE_EXPAT_CONFIG_H  -fno-strict-aliasing conftest.c  >&5
+conftest.c:28:56: fatal error: sys/syscall.h: No such file or directory
+compilation terminated.
+configure:16969: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "expat"
+| #define PACKAGE_TARNAME "expat"
+| #define PACKAGE_VERSION "2.2.5"
+| #define PACKAGE_STRING "expat 2.2.5"
+| #define PACKAGE_BUGREPORT "expat-bugs@libexpat.org"
+| #define PACKAGE_URL ""
+| #define PACKAGE "expat"
+| #define VERSION "2.2.5"
+| #define STDC_HEADERS 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_MEMORY_H 1
+| #define HAVE_STRINGS_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_UNISTD_H 1
+| #define LT_OBJDIR ".libs/"
+| #define STDC_HEADERS 1
+| #define BYTEORDER 1234
+| #define HAVE_MEMMOVE 1
+| /* end confdefs.h.  */
+| 
+|       #include <stdlib.h>  /* for NULL */
+|       #include <unistd.h>  /* for syscall */
+|       #include <sys/syscall.h>  /* for SYS_getrandom */
+|       int main() {
+|         syscall(SYS_getrandom, NULL, 0, 0);
+|         return 0;
+|       }
+| 
+configure:16979: result: no
+configure:16994: checking fcntl.h usability
+configure:16994: i686-w64-mingw32.static-gcc -c -g -O2 -Wall -Wmissing-prototypes -Wstrict-prototypes -fexceptions -fno-strict-aliasing  -DHAVE_EXPAT_CONFIG_H conftest.c >&5
+configure:16994: $? = 0
+configure:16994: result: yes
+configure:16994: checking fcntl.h presence
+configure:16994: i686-w64-mingw32.static-gcc -E  -DHAVE_EXPAT_CONFIG_H conftest.c
+configure:16994: $? = 0
+configure:16994: result: yes
+configure:16994: checking for fcntl.h
+configure:16994: result: yes
+configure:16994: checking for unistd.h
+configure:16994: result: yes
+configure:17004: checking for off_t
+configure:17004: i686-w64-mingw32.static-gcc -c -g -O2 -Wall -Wmissing-prototypes -Wstrict-prototypes -fexceptions -fno-strict-aliasing  -DHAVE_EXPAT_CONFIG_H conftest.c >&5
+conftest.c:61:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+ main ()
+ ^
+configure:17004: $? = 0
+configure:17004: i686-w64-mingw32.static-gcc -c -g -O2 -Wall -Wmissing-prototypes -Wstrict-prototypes -fexceptions -fno-strict-aliasing  -DHAVE_EXPAT_CONFIG_H conftest.c >&5
+conftest.c:61:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+ main ()
+ ^
+conftest.c: In function 'main':
+conftest.c:63:20: error: expected expression before ')' token
+ if (sizeof ((off_t)))
+                    ^
+configure:17004: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "expat"
+| #define PACKAGE_TARNAME "expat"
+| #define PACKAGE_VERSION "2.2.5"
+| #define PACKAGE_STRING "expat 2.2.5"
+| #define PACKAGE_BUGREPORT "expat-bugs@libexpat.org"
+| #define PACKAGE_URL ""
+| #define PACKAGE "expat"
+| #define VERSION "2.2.5"
+| #define STDC_HEADERS 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_MEMORY_H 1
+| #define HAVE_STRINGS_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_UNISTD_H 1
+| #define LT_OBJDIR ".libs/"
+| #define STDC_HEADERS 1
+| #define BYTEORDER 1234
+| #define HAVE_MEMMOVE 1
+| #define HAVE_FCNTL_H 1
+| #define HAVE_UNISTD_H 1
+| /* end confdefs.h.  */
+| #include <stdio.h>
+| #ifdef HAVE_SYS_TYPES_H
+| # include <sys/types.h>
+| #endif
+| #ifdef HAVE_SYS_STAT_H
+| # include <sys/stat.h>
+| #endif
+| #ifdef STDC_HEADERS
+| # include <stdlib.h>
+| # include <stddef.h>
+| #else
+| # ifdef HAVE_STDLIB_H
+| #  include <stdlib.h>
+| # endif
+| #endif
+| #ifdef HAVE_STRING_H
+| # if !defined STDC_HEADERS && defined HAVE_MEMORY_H
+| #  include <memory.h>
+| # endif
+| # include <string.h>
+| #endif
+| #ifdef HAVE_STRINGS_H
+| # include <strings.h>
+| #endif
+| #ifdef HAVE_INTTYPES_H
+| # include <inttypes.h>
+| #endif
+| #ifdef HAVE_STDINT_H
+| # include <stdint.h>
+| #endif
+| #ifdef HAVE_UNISTD_H
+| # include <unistd.h>
+| #endif
+| int
+| main ()
+| {
+| if (sizeof ((off_t)))
+| 	    return 0;
+|   ;
+|   return 0;
+| }
+configure:17004: result: yes
+configure:17021: checking for stdlib.h
+configure:17021: result: yes
+configure:17021: checking for unistd.h
+configure:17021: result: yes
+configure:17021: checking for sys/param.h
+configure:17021: i686-w64-mingw32.static-gcc -c -g -O2 -Wall -Wmissing-prototypes -Wstrict-prototypes -fexceptions -fno-strict-aliasing  -DHAVE_EXPAT_CONFIG_H conftest.c >&5
+configure:17021: $? = 0
+configure:17021: result: yes
+configure:17041: checking for getpagesize
+configure:17041: i686-w64-mingw32.static-gcc -o conftest.exe -g -O2 -Wall -Wmissing-prototypes -Wstrict-prototypes -fexceptions -fno-strict-aliasing  -DHAVE_EXPAT_CONFIG_H  -fno-strict-aliasing conftest.c  >&5
+conftest.c:53:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+ char getpagesize ();
+ ^
+conftest.c:62:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+ main ()
+ ^
+configure:17041: $? = 0
+configure:17041: result: yes
+configure:17050: checking for working mmap
+configure:17207: result: no
+configure:17271: checking for docbook2x-man
+configure:17301: result: no
+configure:17271: checking for docbook2man
+configure:17301: result: no
+configure:17271: checking for docbook-to-man
+configure:17301: result: no
+configure:17437: checking that generated files are newer than configure
+configure:17443: result: done
+configure:17486: creating ./config.status
+
+## ---------------------- ##
+## Running config.status. ##
+## ---------------------- ##
+
+This file was extended by expat config.status 2.2.5, which was
+generated by GNU Autoconf 2.69.  Invocation command line was
+
+  CONFIG_FILES    = 
+  CONFIG_HEADERS  = 
+  CONFIG_LINKS    = 
+  CONFIG_COMMANDS = 
+  $ ./config.status 
+
+on user-VirtualBox
+
+config.status:1200: creating Makefile
+config.status:1200: creating expat.pc
+config.status:1200: creating doc/Makefile
+config.status:1200: creating examples/Makefile
+config.status:1200: creating lib/Makefile
+config.status:1200: creating tests/Makefile
+config.status:1200: creating tests/benchmark/Makefile
+config.status:1200: creating xmlwf/Makefile
+config.status:1200: creating run.sh
+config.status:1200: creating expat_config.h
+config.status:1429: executing depfiles commands
+config.status:1429: executing libtool commands
+configure:19904: WARNING: unrecognized options: --enable-doc, --enable-gtk-doc, --enable-gtk-doc-html, --enable-gtk-doc-pdf, --with-html-dir, --disable-doxygen
+
+## ---------------- ##
+## Cache variables. ##
+## ---------------- ##
+
+ac_cv_build=i686-pc-linux-gnu
+ac_cv_c_bigendian=no
+ac_cv_c_compiler_gnu=yes
+ac_cv_c_const=yes
+ac_cv_cxx_compiler_gnu=yes
+ac_cv_env_CCC_set=
+ac_cv_env_CCC_value=
+ac_cv_env_CC_set=
+ac_cv_env_CC_value=
+ac_cv_env_CFLAGS_set=
+ac_cv_env_CFLAGS_value=
+ac_cv_env_CPPFLAGS_set=
+ac_cv_env_CPPFLAGS_value=
+ac_cv_env_CPP_set=
+ac_cv_env_CPP_value=
+ac_cv_env_CXXCPP_set=
+ac_cv_env_CXXCPP_value=
+ac_cv_env_CXXFLAGS_set=
+ac_cv_env_CXXFLAGS_value=
+ac_cv_env_CXX_set=
+ac_cv_env_CXX_value=
+ac_cv_env_DOCBOOK_TO_MAN_set=
+ac_cv_env_DOCBOOK_TO_MAN_value=
+ac_cv_env_LDFLAGS_set=
+ac_cv_env_LDFLAGS_value=
+ac_cv_env_LIBS_set=
+ac_cv_env_LIBS_value=
+ac_cv_env_LT_SYS_LIBRARY_PATH_set=
+ac_cv_env_LT_SYS_LIBRARY_PATH_value=
+ac_cv_env_build_alias_set=set
+ac_cv_env_build_alias_value=i686-pc-linux-gnu
+ac_cv_env_host_alias_set=set
+ac_cv_env_host_alias_value=i686-w64-mingw32.static
+ac_cv_env_target_alias_set=
+ac_cv_env_target_alias_value=
+ac_cv_exeext=.exe
+ac_cv_func_bcopy=no
+ac_cv_func_getpagesize=yes
+ac_cv_func_memmove=yes
+ac_cv_func_mmap_fixed_mapped=no
+ac_cv_header_dlfcn_h=no
+ac_cv_header_fcntl_h=yes
+ac_cv_header_inttypes_h=yes
+ac_cv_header_memory_h=yes
+ac_cv_header_stdc=yes
+ac_cv_header_stdint_h=yes
+ac_cv_header_stdlib_h=yes
+ac_cv_header_string_h=yes
+ac_cv_header_strings_h=yes
+ac_cv_header_sys_param_h=yes
+ac_cv_header_sys_stat_h=yes
+ac_cv_header_sys_types_h=yes
+ac_cv_header_unistd_h=yes
+ac_cv_host=i686-w64-mingw32.static
+ac_cv_objext=o
+ac_cv_path_EGREP='/bin/grep -E'
+ac_cv_path_FGREP='/bin/grep -F'
+ac_cv_path_GREP=/bin/grep
+ac_cv_path_SED=/bin/sed
+ac_cv_path_install='/usr/bin/install -c'
+ac_cv_path_lt_DD=/bin/dd
+ac_cv_path_mkdir=/bin/mkdir
+ac_cv_prog_AR=i686-w64-mingw32.static-ar
+ac_cv_prog_AS=i686-w64-mingw32.static-as
+ac_cv_prog_AWK=mawk
+ac_cv_prog_CC=i686-w64-mingw32.static-gcc
+ac_cv_prog_CPP='i686-w64-mingw32.static-gcc -E'
+ac_cv_prog_CXX=i686-w64-mingw32.static-g++
+ac_cv_prog_CXXCPP='i686-w64-mingw32.static-g++ -E'
+ac_cv_prog_DLLTOOL=i686-w64-mingw32.static-dlltool
+ac_cv_prog_HAVE_DOXYGEN=false
+ac_cv_prog_OBJDUMP=i686-w64-mingw32.static-objdump
+ac_cv_prog_RANLIB=i686-w64-mingw32.static-ranlib
+ac_cv_prog_STRIP=i686-w64-mingw32.static-strip
+ac_cv_prog_ac_ct_MANIFEST_TOOL=mt
+ac_cv_prog_cc_c89=
+ac_cv_prog_cc_c99=
+ac_cv_prog_cc_g=yes
+ac_cv_prog_cxx_g=yes
+ac_cv_prog_make_make_set=yes
+ac_cv_type_off_t=yes
+ac_cv_type_size_t=yes
+am_cv_CC_dependencies_compiler_type=gcc3
+am_cv_CXX_dependencies_compiler_type=gcc3
+am_cv_make_support_nested_variables=yes
+am_cv_prog_cc_c_o=yes
+lt_cv_ar_at_file=@
+lt_cv_deplibs_check_method='file_magic ^x86 archive import|^x86 DLL'
+lt_cv_file_magic_cmd=func_win32_libid
+lt_cv_file_magic_test_file=
+lt_cv_ld_reload_flag=-r
+lt_cv_nm_interface='BSD nm'
+lt_cv_objdir=.libs
+lt_cv_path_LD=/home/user/mxe/usr/bin/i686-w64-mingw32.static-ld
+lt_cv_path_LDCXX=/home/user/mxe/usr/bin/i686-w64-mingw32.static-ld
+lt_cv_path_NM='/home/user/mxe/usr/bin/i686-w64-mingw32.static-nm -B'
+lt_cv_path_mainfest_tool=no
+lt_cv_prog_compiler_c_o=yes
+lt_cv_prog_compiler_c_o_CXX=yes
+lt_cv_prog_compiler_pic='-DDLL_EXPORT -DPIC'
+lt_cv_prog_compiler_pic_CXX='-DDLL_EXPORT -DPIC'
+lt_cv_prog_compiler_pic_works=yes
+lt_cv_prog_compiler_pic_works_CXX=yes
+lt_cv_prog_compiler_rtti_exceptions=no
+lt_cv_prog_compiler_static_works=yes
+lt_cv_prog_compiler_static_works_CXX=yes
+lt_cv_prog_gnu_ld=yes
+lt_cv_prog_gnu_ldcxx=yes
+lt_cv_sharedlib_from_linklib_cmd=func_cygming_dll_for_implib
+lt_cv_sys_global_symbol_pipe='sed -n -e '\''s/^.*[	 ]\([ABCDGIRSTW][ABCDGIRSTW]*\)[	 ][	 ]*_\([_A-Za-z][_A-Za-z0-9]*\)$/\1 _\2 \2/p'\'' | sed '\''/ __gnu_lto/d'\'''
+lt_cv_sys_global_symbol_to_c_name_address='sed -n -e '\''s/^: \(.*\) .*$/  {"\1", (void *) 0},/p'\'' -e '\''s/^[ABCDGIRSTW][ABCDGIRSTW]* .* \(.*\)$/  {"\1", (void *) \&\1},/p'\'''
+lt_cv_sys_global_symbol_to_c_name_address_lib_prefix='sed -n -e '\''s/^: \(.*\) .*$/  {"\1", (void *) 0},/p'\'' -e '\''s/^[ABCDGIRSTW][ABCDGIRSTW]* .* \(lib.*\)$/  {"\1", (void *) \&\1},/p'\'' -e '\''s/^[ABCDGIRSTW][ABCDGIRSTW]* .* \(.*\)$/  {"lib\1", (void *) \&\1},/p'\'''
+lt_cv_sys_global_symbol_to_cdecl='sed -n -e '\''s/^T .* \(.*\)$/extern int \1();/p'\'' -e '\''s/^[ABCDGIRSTW][ABCDGIRSTW]* .* \(.*\)$/extern char \1;/p'\'''
+lt_cv_sys_global_symbol_to_import=
+lt_cv_sys_max_cmd_len=1572864
+lt_cv_to_host_file_cmd=func_convert_file_nix_to_w32
+lt_cv_to_tool_file_cmd=func_convert_file_noop
+lt_cv_truncate_bin='/bin/dd bs=4096 count=1'
+
+## ----------------- ##
+## Output variables. ##
+## ----------------- ##
+
+ACLOCAL='${SHELL} /home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/conftools/missing aclocal-1.15'
+AMDEPBACKSLASH='\'
+AMDEP_FALSE='#'
+AMDEP_TRUE=''
+AMTAR='$${TAR-tar}'
+AM_BACKSLASH='\'
+AM_DEFAULT_V='$(AM_DEFAULT_VERBOSITY)'
+AM_DEFAULT_VERBOSITY='1'
+AM_V='$(V)'
+AR='i686-w64-mingw32.static-ar'
+AS='i686-w64-mingw32.static-as'
+AUTOCONF='${SHELL} /home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/conftools/missing autoconf'
+AUTOHEADER='${SHELL} /home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/conftools/missing autoheader'
+AUTOMAKE='${SHELL} /home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/conftools/missing automake-1.15'
+AWK='mawk'
+CC='i686-w64-mingw32.static-gcc'
+CCDEPMODE='depmode=gcc3'
+CFLAGS='-g -O2 -Wall -Wmissing-prototypes -Wstrict-prototypes -fexceptions -fno-strict-aliasing'
+CPP='i686-w64-mingw32.static-gcc -E'
+CPPFLAGS=' -DHAVE_EXPAT_CONFIG_H'
+CXX='i686-w64-mingw32.static-g++'
+CXXCPP='i686-w64-mingw32.static-g++ -E'
+CXXDEPMODE='depmode=gcc3'
+CXXFLAGS='-g -O2 -fno-strict-aliasing'
+CYGPATH_W='echo'
+DEFS='-DHAVE_CONFIG_H'
+DEPDIR='.deps'
+DLLTOOL='i686-w64-mingw32.static-dlltool'
+DOCBOOK_TO_MAN=''
+DSYMUTIL=''
+DUMPBIN=''
+ECHO_C=''
+ECHO_N='-n'
+ECHO_T=''
+EGREP='/bin/grep -E'
+EXEEXT='.exe'
+FGREP='/bin/grep -F'
+FILEMAP='readfilemap'
+GREP='/bin/grep'
+INSTALL_DATA='${INSTALL} -m 644'
+INSTALL_PROGRAM='${INSTALL}'
+INSTALL_SCRIPT='${INSTALL}'
+INSTALL_STRIP_PROGRAM='$(install_sh) -c -s'
+LD='/home/user/mxe/usr/bin/i686-w64-mingw32.static-ld'
+LDFLAGS=' -fno-strict-aliasing'
+LIBAGE='6'
+LIBCURRENT='7'
+LIBOBJS=''
+LIBREVISION='7'
+LIBS=''
+LIBTOOL='$(SHELL) $(top_builddir)/libtool'
+LIPO=''
+LN_S='ln -s'
+LTLIBOBJS=''
+LT_SYS_LIBRARY_PATH=''
+MAKEINFO='${SHELL} /home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/conftools/missing makeinfo'
+MANIFEST_TOOL=':'
+MINGW_FALSE='#'
+MINGW_TRUE=''
+MKDIR_P='/bin/mkdir -p'
+NM='/home/user/mxe/usr/bin/i686-w64-mingw32.static-nm -B'
+NMEDIT=''
+OBJDUMP='i686-w64-mingw32.static-objdump'
+OBJEXT='o'
+OTOOL64=''
+OTOOL=''
+PACKAGE='expat'
+PACKAGE_BUGREPORT='expat-bugs@libexpat.org'
+PACKAGE_NAME='expat'
+PACKAGE_STRING='expat 2.2.5'
+PACKAGE_TARNAME='expat'
+PACKAGE_URL=''
+PACKAGE_VERSION='2.2.5'
+PATH_SEPARATOR=':'
+RANLIB='i686-w64-mingw32.static-ranlib'
+SED='/bin/sed'
+SET_MAKE=''
+SHELL='/bin/bash'
+STRIP='i686-w64-mingw32.static-strip'
+UNICODE_FALSE=''
+UNICODE_TRUE='#'
+VERSION='2.2.5'
+WITH_DOCBOOK_FALSE=''
+WITH_DOCBOOK_TRUE='#'
+WITH_XMLWF_FALSE='#'
+WITH_XMLWF_TRUE=''
+ac_ct_AR=''
+ac_ct_CC=''
+ac_ct_CXX=''
+ac_ct_DUMPBIN=''
+am__EXEEXT_FALSE='#'
+am__EXEEXT_TRUE=''
+am__fastdepCC_FALSE='#'
+am__fastdepCC_TRUE=''
+am__fastdepCXX_FALSE='#'
+am__fastdepCXX_TRUE=''
+am__include='include'
+am__isrc=''
+am__leading_dot='.'
+am__nodep='_no'
+am__quote=''
+am__tar='$${TAR-tar} chof - "$$tardir"'
+am__untar='$${TAR-tar} xf -'
+bindir='${exec_prefix}/bin'
+build='i686-pc-linux-gnu'
+build_alias='i686-pc-linux-gnu'
+build_cpu='i686'
+build_os='linux-gnu'
+build_vendor='pc'
+datadir='${datarootdir}'
+datarootdir='${prefix}/share'
+docdir='/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5.build_.sink'
+dvidir='${docdir}'
+exec_prefix='${prefix}'
+host='i686-w64-mingw32.static'
+host_alias='i686-w64-mingw32.static'
+host_cpu='i686'
+host_os='mingw32.static'
+host_vendor='w64'
+htmldir='${docdir}'
+includedir='${prefix}/include'
+infodir='/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5.build_.sink'
+install_sh='${SHELL} /home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/conftools/install-sh'
+libdir='${exec_prefix}/lib'
+libexecdir='${exec_prefix}/libexec'
+localedir='${datarootdir}/locale'
+localstatedir='${prefix}/var'
+mandir='/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5.build_.sink'
+mkdir_p='$(MKDIR_P)'
+oldincludedir='/usr/include'
+pdfdir='${docdir}'
+prefix='/home/user/mxe/usr/i686-w64-mingw32.static'
+program_transform_name='s,x,x,'
+psdir='${docdir}'
+sbindir='${exec_prefix}/sbin'
+sharedstatedir='${prefix}/com'
+sysconfdir='${prefix}/etc'
+target_alias=''
+
+## ----------- ##
+## confdefs.h. ##
+## ----------- ##
+
+/* confdefs.h */
+#define PACKAGE_NAME "expat"
+#define PACKAGE_TARNAME "expat"
+#define PACKAGE_VERSION "2.2.5"
+#define PACKAGE_STRING "expat 2.2.5"
+#define PACKAGE_BUGREPORT "expat-bugs@libexpat.org"
+#define PACKAGE_URL ""
+#define PACKAGE "expat"
+#define VERSION "2.2.5"
+#define STDC_HEADERS 1
+#define HAVE_SYS_TYPES_H 1
+#define HAVE_SYS_STAT_H 1
+#define HAVE_STDLIB_H 1
+#define HAVE_STRING_H 1
+#define HAVE_MEMORY_H 1
+#define HAVE_STRINGS_H 1
+#define HAVE_INTTYPES_H 1
+#define HAVE_STDINT_H 1
+#define HAVE_UNISTD_H 1
+#define LT_OBJDIR ".libs/"
+#define STDC_HEADERS 1
+#define BYTEORDER 1234
+#define HAVE_MEMMOVE 1
+#define HAVE_FCNTL_H 1
+#define HAVE_UNISTD_H 1
+#define HAVE_STDLIB_H 1
+#define HAVE_UNISTD_H 1
+#define HAVE_SYS_PARAM_H 1
+#define HAVE_GETPAGESIZE 1
+#define XML_NS 1
+#define XML_DTD 1
+#define XML_DEV_URANDOM 1
+#define XML_CONTEXT_BYTES 1024
+
+configure: exit 0
+
+settings.mk
+# This is a template of configuration file for MXE. See
+# docs/index.html for more extensive documentations.
+
+# This variable controls the number of compilation processes
+# within one package ("intra-package parallelism").
+#JOBS := 
+
+# This variable controls where intermediate files are created
+# this is necessary when compiling inside a virtualbox shared
+# directory. Some commands like strip fail in there with Protocol error
+# default is the current directory
+#MXE_TMP := /tmp
+
+# This variable controls the targets that will build.
+#MXE_TARGETS := i686-w64-mingw32.static i686-w64-mingw32.shared x86_64-w64-mingw32.static x86_64-w64-mingw32.shared
+
+# This variable controls which plugins are in use.
+# See plugins/README.md for further information.
+#override MXE_PLUGIN_DIRS += plugins/apps plugins/native
+
+# This variable controls the download mirror for SourceForge,
+# when it is used. Enabling the value below means auto.
+#SOURCEFORGE_MIRROR := downloads.sourceforge.net
+
+# The three lines below makes `make` build these "local
+# packages" instead of all packages.
+#LOCAL_PKG_LIST := boost curl file flac lzo pthreads vorbis wxwidgets
+#.DEFAULT_GOAL  := local-pkg-list
+#local-pkg-list: $(LOCAL_PKG_LIST)
+i686-w64-mingw32.static-strip '/home/user/mxe/usr/i686-w64-mingw32.static/bin/test-expat.exe'
+i686-w64-mingw32.static-strip: '/home/user/mxe/usr/i686-w64-mingw32.static/bin/test-expat.exe': No such file
+Makefile:786: recipe for target 'build-only-expat_i686-w64-mingw32.static' failed
+make[1]: [build-only-expat_i686-w64-mingw32.static] Error 1 (ignored)
+(du -k -d 0 '/home/user/mxe/tmp-expat-i686-w64-mingw32.static' 2>/dev/null || du -k --max-depth 0 '/home/user/mxe/tmp-expat-i686-w64-mingw32.static') | sed -n 's/^\(\S*\).*/du: \1 KiB/p'
+du: 7580 KiB
+rm -rfv  '/home/user/mxe/tmp-expat-i686-w64-mingw32.static'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5.build_.sink/man1/xmlwf.1'
+removed directory '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5.build_.sink/man1'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5.build_.sink/changelog'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5.build_.sink/AUTHORS'
+removed directory '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5.build_.sink'
+removed directory '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5.build_'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/run.sh'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/expat.pc.in'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/expat_config.h.in'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/configure.ac'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/conftools/ac_c_bigendian_cross.m4'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/conftools/expat.m4'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/conftools/config.sub'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/conftools/test-driver'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/conftools/depcomp'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/conftools/ltmain.sh'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/conftools/install-sh'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/conftools/config.guess'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/conftools/PrintPath'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/conftools/compile'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/conftools/missing'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/conftools/get-version.sh'
+removed directory '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/conftools'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/stamp-h1'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/COPYING'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/Makefile.in'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/aclocal.m4'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/examples/elements.vcxproj.filters'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/examples/Makefile.in'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/examples/elements.o'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/examples/outline.vcxproj'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/examples/elements.exe'
+removed directory '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/examples/.libs'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/examples/.deps/outline.Po'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/examples/.deps/elements.Po'
+removed directory '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/examples/.deps'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/examples/elements.c'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/examples/Makefile'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/examples/elements.vcxproj'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/examples/outline.o'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/examples/outline.vcxproj.filters'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/examples/outline.c'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/examples/outline.exe'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/examples/Makefile.am'
+removed directory '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/examples'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/expat_config.h.cmake'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/lib/winconfig.h'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/lib/nametab.h'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/lib/libexpatw.def'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/lib/xmltok.c'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/lib/expatw_static.vcxproj.filters'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/lib/xmltok.lo'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/lib/expat.vcxproj'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/lib/expat_static.vcxproj'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/lib/Makefile.in'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/lib/xmlparse.lo'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/lib/ascii.h'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/lib/siphash.h'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/lib/xmlrole.c'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/lib/.libs/libexpat.la'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/lib/.libs/libexpat.a'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/lib/.libs/libexpat.lai'
+removed directory '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/lib/.libs'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/lib/expat_external.h'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/lib/xmlrole.o'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/lib/internal.h'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/lib/xmlparse.c'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/lib/expatw.vcxproj'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/lib/loadlibrary.c'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/lib/.deps/xmltok.Plo'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/lib/.deps/xmlrole.Plo'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/lib/.deps/loadlibrary.Plo'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/lib/.deps/xmlparse.Plo'
+removed directory '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/lib/.deps'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/lib/xmlrole.h'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/lib/latin1tab.h'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/lib/libexpat.la'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/lib/xmltok.h'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/lib/loadlibrary.lo'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/lib/Makefile'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/lib/asciitab.h'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/lib/iasciitab.h'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/lib/xmlparse.o'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/lib/libexpat.def'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/lib/expatw_static.vcxproj'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/lib/xmltok_impl.c'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/lib/xmltok_ns.c'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/lib/expat.h'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/lib/expatw.vcxproj.filters'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/lib/xmltok.o'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/lib/expat.vcxproj.filters'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/lib/loadlibrary.o'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/lib/expat_static.vcxproj.filters'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/lib/Makefile.am'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/lib/utf8tab.h'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/lib/xmltok_impl.h'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/lib/xmlrole.lo'
+removed directory '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/lib'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/Makefile'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/expat_config.h'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/CMakeLists.txt'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/README.md'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/m4/libtool.m4'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/m4/ltsugar.m4'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/m4/ltoptions.m4'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/m4/lt~obsolete.m4'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/m4/ltversion.m4'
+removed directory '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/m4'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/test-driver-wrapper.sh'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/doc/valid-xhtml10.png'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/doc/style.css'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/doc/Makefile.in'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/doc/xmlwf.xml'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/doc/reference.html'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/doc/expat.png'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/doc/Makefile'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/doc/xmlwf.1'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/doc/Makefile.am'
+removed directory '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/doc'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/expat.sln'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/win32/expat.iss'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/win32/MANIFEST.txt'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/win32/README.txt'
+removed directory '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/win32'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/AUTHORS'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/config.log'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/run.sh.in'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/configure'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/Changes'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/config.status'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/expat.pc'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/CMake.README'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/tests/memcheck.h'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/tests/xmltest.log.expected'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/tests/runtests.c'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/tests/benchmark/Makefile.in'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/tests/benchmark/benchmark.exe'
+removed directory '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/tests/benchmark/.libs'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/tests/benchmark/benchmark.c'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/tests/benchmark/.deps/benchmark.Po'
+removed directory '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/tests/benchmark/.deps'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/tests/benchmark/Makefile'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/tests/benchmark/benchmark.o'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/tests/benchmark/benchmark.sln'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/tests/benchmark/benchmark.vcxproj'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/tests/benchmark/Makefile.am'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/tests/benchmark/README.txt'
+removed directory '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/tests/benchmark'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/tests/minicheck.h'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/tests/libruntests.a'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/tests/runtests.vcxproj'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/tests/minicheck.c'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/tests/Makefile.in'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/tests/chardata.c'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/tests/.deps/memcheck.Po'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/tests/.deps/runtestspp.Po'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/tests/.deps/runtests.Po'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/tests/.deps/structdata.Po'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/tests/.deps/minicheck.Po'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/tests/.deps/chardata.Po'
+removed directory '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/tests/.deps'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/tests/minicheck.o'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/tests/Makefile'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/tests/chardata.o'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/tests/udiffer.py'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/tests/structdata.c'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/tests/memcheck.o'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/tests/structdata.o'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/tests/runtests.sln'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/tests/chardata.h'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/tests/runtestspp.cpp'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/tests/xmltest.sh'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/tests/runtests.vcxproj.filters'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/tests/memcheck.c'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/tests/structdata.h'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/tests/Makefile.am'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/tests/README.txt'
+removed directory '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/tests'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/Makefile.am'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/libtool'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/xmlwf/xmlwf-readfilemap.o'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/xmlwf/xmlwf.c'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/xmlwf/xmlmime.h'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/xmlwf/win32filemap.c'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/xmlwf/Makefile.in'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/xmlwf/xmlwf.vcxproj'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/xmlwf/xmltchar.h'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/xmlwf/codepage.h'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/xmlwf/ct.c'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/xmlwf/xmlwf.vcxproj.filters'
+removed directory '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/xmlwf/.libs'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/xmlwf/xmlwf.exe'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/xmlwf/.deps/xmlwf-xmlwf.Po'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/xmlwf/.deps/xmlwf-codepage.Po'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/xmlwf/.deps/xmlwf-xmlfile.Po'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/xmlwf/.deps/xmlwf-readfilemap.Po'
+removed directory '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/xmlwf/.deps'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/xmlwf/xmlwf-xmlfile.o'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/xmlwf/xmlurl.h'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/xmlwf/Makefile'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/xmlwf/codepage.c'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/xmlwf/unixfilemap.c'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/xmlwf/xmlfile.c'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/xmlwf/filemap.h'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/xmlwf/xmlmime.c'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/xmlwf/readfilemap.c'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/xmlwf/xmlfile.h'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/xmlwf/xmlwin32url.cxx'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/xmlwf/xmlwf-codepage.o'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/xmlwf/xmlwf-xmlwf.o'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/xmlwf/Makefile.am'
+removed directory '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/xmlwf'
+removed '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5/ConfigureChecks.cmake'
+removed directory '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/expat-2.2.5'
+removed directory '/home/user/mxe/tmp-expat-i686-w64-mingw32.static/readonly'
+removed directory '/home/user/mxe/tmp-expat-i686-w64-mingw32.static'
+touch '/home/user/mxe/usr/i686-w64-mingw32.static/installed/expat'
+make[1]: Leaving directory '/home/user/mxe'
+
+real	3m2.618s
+user	0m42.098s
+sys	2m16.408s

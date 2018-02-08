@@ -1,0 +1,62 @@
+========================================
+   GNU MP 6.1.2: tests/test-suite.log
+========================================
+
+# TOTAL: 8
+# PASS:  0
+# SKIP:  0
+# XFAIL: 0
+# FAIL:  8
+# XPASS: 0
+# ERROR: 0
+
+.. contents:: :depth: 2
+
+FAIL: t-bswap
+=============
+
+../test-driver: line 107: ./t-bswap.exe: cannot execute binary file: Exec format error
+FAIL t-bswap.exe (exit status: 126)
+
+FAIL: t-constants
+=================
+
+../test-driver: line 107: ./t-constants.exe: cannot execute binary file: Exec format error
+FAIL t-constants.exe (exit status: 126)
+
+FAIL: t-count_zeros
+===================
+
+../test-driver: line 107: ./t-count_zeros.exe: cannot execute binary file: Exec format error
+FAIL t-count_zeros.exe (exit status: 126)
+
+FAIL: t-hightomask
+==================
+
+../test-driver: line 107: ./t-hightomask.exe: cannot execute binary file: Exec format error
+FAIL t-hightomask.exe (exit status: 126)
+
+FAIL: t-modlinv
+===============
+
+../test-driver: line 107: ./t-modlinv.exe: cannot execute binary file: Exec format error
+FAIL t-modlinv.exe (exit status: 126)
+
+FAIL: t-popc
+============
+
+../test-driver: line 107: ./t-popc.exe: cannot execute binary file: Exec format error
+FAIL t-popc.exe (exit status: 126)
+
+FAIL: t-parity
+==============
+
+../test-driver: line 107: ./t-parity.exe: cannot execute binary file: Exec format error
+FAIL t-parity.exe (exit status: 126)
+
+FAIL: t-sub
+===========
+
+../test-driver: line 107: ./t-sub.exe: cannot execute binary file: Exec format error
+FAIL t-sub.exe (exit status: 126)
+

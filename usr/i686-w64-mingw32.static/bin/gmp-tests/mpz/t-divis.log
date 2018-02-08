@@ -1,0 +1,2 @@
+../../test-driver: line 107: ./t-divis.exe: cannot execute binary file: Exec format error
+FAIL t-divis.exe (exit status: 126)

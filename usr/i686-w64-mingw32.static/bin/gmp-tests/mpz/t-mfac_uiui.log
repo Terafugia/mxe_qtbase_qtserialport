@@ -1,0 +1,2 @@
+../../test-driver: line 107: ./t-mfac_uiui.exe: cannot execute binary file: Exec format error
+FAIL t-mfac_uiui.exe (exit status: 126)

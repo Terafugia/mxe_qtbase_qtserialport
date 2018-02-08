@@ -1,0 +1,2864 @@
+make[1]: Entering directory '/home/user/mxe'
+uname -a
+Linux user-VirtualBox 4.13.0-21-generic #24-Ubuntu SMP Mon Dec 18 17:29:35 UTC 2017 i686 i686 i686 GNU/Linux
+git log --pretty=tformat:"%H - %s [%ar] [%d]" -1
+1b7d2e0562f2ec93848f536d2a9d4cd414356d9e - Update packages.json & build-matrix.html [3 days ago] [ (HEAD -> master, origin/master, origin/HEAD)]
+lsb_release -a 2>/dev/null || sw_vers 2>/dev/null || true
+Distributor ID:	Ubuntu
+Description:	Ubuntu 17.10
+Release:	17.10
+Codename:	artful
+autoconf --version 2>/dev/null | head -1
+autoconf (GNU Autoconf) 2.69
+automake --version 2>/dev/null | head -1
+automake (GNU automake) 1.15
+gcc --version
+gcc (Ubuntu 7.2.0-8ubuntu3) 7.2.0
+Copyright (C) 2017 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+g++ --version
+g++ (Ubuntu 7.2.0-8ubuntu3) 7.2.0
+Copyright (C) 2017 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+python --version
+Python 2.7.14
+perl --version 2>&1 | head -3
+
+This is perl 5, version 26, subversion 0 (v5.26.0) built for i686-linux-gnu-thread-multi-64int
+(with 56 registered patches, see perl -V for more detail)
+rm -rf   '/home/user/mxe/tmp-isl-i686-pc-linux-gnu'
+mkdir -p '/home/user/mxe/tmp-isl-i686-pc-linux-gnu'
+mkdir -p '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15'
+mkdir -p '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15.build_'
+# disable wine with readonly directory
+# see https://github.com/mxe/mxe/issues/841
+mkdir -p '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/readonly'
+chmod 0555 '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/readonly'
+cd '/home/user/mxe/tmp-isl-i686-pc-linux-gnu' &&     tar xjf '/home/user/mxe/pkg/isl-0.15.tar.bz2'
+cd '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15'
+cd '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15' && ./configure --host='i686-pc-linux-gnu' --build='i686-pc-linux-gnu' --prefix='/home/user/mxe/usr/i686-pc-linux-gnu'  --enable-static --disable-shared  ac_cv_prog_HAVE_DOXYGEN="false" --enable-doc=no --enable-gtk-doc=no --enable-gtk-doc-html=no --enable-gtk-doc-pdf=no --{docdir,infodir,mandir,with-html-dir}='/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15.build_.sink' --disable-doxygen --with-gmp-prefix='/home/user/mxe/usr/i686-pc-linux-gnu'
+configure: WARNING: unrecognized options: --enable-doc, --enable-gtk-doc, --enable-gtk-doc-html, --enable-gtk-doc-pdf, --with-html-dir, --disable-doxygen
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /bin/mkdir -p
+checking for gawk... no
+checking for mawk... mawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking whether make supports nested variables... (cached) yes
+checking for i686-pc-linux-gnu-gcc... no
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking whether gcc understands -c and -o together... yes
+checking for style of include used by make... GNU
+checking dependency style of gcc... gcc3
+checking for i686-pc-linux-gnu-g++... no
+checking for i686-pc-linux-gnu-c++... no
+checking for i686-pc-linux-gnu-gpp... no
+checking for i686-pc-linux-gnu-aCC... no
+checking for i686-pc-linux-gnu-CC... no
+checking for i686-pc-linux-gnu-cxx... no
+checking for i686-pc-linux-gnu-cc++... no
+checking for i686-pc-linux-gnu-cl.exe... no
+checking for i686-pc-linux-gnu-FCC... no
+checking for i686-pc-linux-gnu-KCC... no
+checking for i686-pc-linux-gnu-RCC... no
+checking for i686-pc-linux-gnu-xlC_r... no
+checking for i686-pc-linux-gnu-xlC... no
+checking for g++... g++
+checking whether we are using the GNU C++ compiler... yes
+checking whether g++ accepts -g... yes
+checking dependency style of g++... gcc3
+checking for C compiler vendor... gnu
+checking build system type... i686-pc-linux-gnu
+checking host system type... i686-pc-linux-gnu
+checking whether C compiler accepts -malign-double... yes
+checking whether C compiler accepts -fstrict-aliasing... yes
+checking whether C compiler accepts -ffast-math... yes
+checking for gcc architecture flag... 
+checking for x86 cpuid 0 output... a:756e6547:6c65746e:49656e69
+checking for x86 cpuid 1 output... 6fb:800:80200209:78bfbff
+checking whether C compiler accepts -march=pentiumpro... yes
+checking for gcc architecture flag... -march=pentiumpro
+checking whether C compiler accepts -O3 -fomit-frame-pointer -malign-double -fstrict-aliasing -ffast-math -march=pentiumpro... yes
+checking whether the compiler supports function __attribute__((__warn_unused_result__))... yes
+checking for __attribute__... yes
+checking how to print strings... printf
+checking for a sed that does not truncate output... /bin/sed
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for fgrep... /bin/grep -F
+checking for ld used by gcc... /usr/bin/ld
+checking if the linker (/usr/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/nm -B
+checking the name lister (/usr/bin/nm -B) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 1572864
+checking how to convert i686-pc-linux-gnu file names to i686-pc-linux-gnu format... func_convert_file_noop
+checking how to convert i686-pc-linux-gnu file names to toolchain format... func_convert_file_noop
+checking for /usr/bin/ld option to reload object files... -r
+checking for i686-pc-linux-gnu-objdump... no
+checking for objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking for i686-pc-linux-gnu-dlltool... no
+checking for dlltool... no
+checking how to associate runtime and link libraries... printf %s\n
+checking for i686-pc-linux-gnu-ar... no
+checking for ar... ar
+checking for archiver @FILE support... @
+checking for i686-pc-linux-gnu-strip... no
+checking for strip... strip
+checking for i686-pc-linux-gnu-ranlib... no
+checking for ranlib... ranlib
+checking command to parse /usr/bin/nm -B output from gcc object... ok
+checking for sysroot... no
+checking for i686-pc-linux-gnu-mt... no
+checking for mt... mt
+checking if mt is a manifest tool... no
+checking how to run the C preprocessor... gcc -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if gcc supports -fno-rtti -fno-exceptions... no
+checking for gcc option to produce PIC... -fPIC -DPIC
+checking if gcc PIC flag -fPIC -DPIC works... yes
+checking if gcc static flag -static works... yes
+checking if gcc supports -c -o file.o... yes
+checking if gcc supports -c -o file.o... (cached) yes
+checking whether the gcc linker (/usr/bin/ld) supports shared libraries... yes
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... no
+checking whether to build static libraries... yes
+checking how to run the C++ preprocessor... g++ -E
+checking for ld used by g++... /usr/bin/ld
+checking if the linker (/usr/bin/ld) is GNU ld... yes
+checking whether the g++ linker (/usr/bin/ld) supports shared libraries... yes
+checking for g++ option to produce PIC... -fPIC -DPIC
+checking if g++ PIC flag -fPIC -DPIC works... yes
+checking if g++ static flag -static works... yes
+checking if g++ supports -c -o file.o... yes
+checking if g++ supports -c -o file.o... (cached) yes
+checking whether the g++ linker (/usr/bin/ld) supports shared libraries... yes
+checking dynamic linker characteristics... (cached) GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking for perl... perl
+checking for pdflatex... no
+checking for pod2html... pod2html
+checking for stdint types... stdint.h (shortcircuit)
+make use of stdint.h in include/isl/stdint.h (assuming C99 compatible system)
+checking which gmp to use... system
+checking gmp.h usability... yes
+checking gmp.h presence... yes
+checking for gmp.h... yes
+checking for main in -lgmp... yes
+checking whether mp_get_memory_functions is declared... yes
+checking whether ffs is declared... yes
+checking whether __builtin_ffs is declared... yes
+checking which clang to use... no
+checking for C compiler vendor... (cached) gnu
+checking our pkgconfig libname... isl
+checking our pkgconfig version... 0.15
+checking our pkgconfig_libdir... ${libdir}/pkgconfig
+expanded our pkgconfig_libdir... /home/user/mxe/usr/i686-pc-linux-gnu/lib/pkgconfig
+checking our pkgconfig_libfile... isl.pc
+checking our package / suffix... isl / 
+checking our pkgconfig description... isl Library
+checking our pkgconfig requires... 
+checking our pkgconfig ext libs... -lisl -lgmp
+checking our pkgconfig cppflags... -I/home/user/mxe/usr/i686-pc-linux-gnu/include
+checking our pkgconfig ldflags... -L/home/user/mxe/usr/i686-pc-linux-gnu/lib
+noninstalled pkgconfig -L /home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/.libs
+noninstalled pkgconfig -I /home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/./include
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating doc/Makefile
+config.status: creating bound_test.sh
+config.status: creating codegen_test.sh
+config.status: creating pip_test.sh
+config.status: creating isl_config.h
+config.status: executing depfiles commands
+config.status: executing libtool commands
+config.status: executing include/isl/stdint.h commands
+config.status: creating include/isl/stdint.h : _ISL_INCLUDE_ISL_STDINT_H
+config.status: executing isl.pc commands
+config.status: creating isl.pc.in
+config.status: creating isl.pc
+config.status: creating isl-uninstalled.pc
+config.status: creating isl-uninstalled.sh
+configure: WARNING: unrecognized options: --enable-doc, --enable-gtk-doc, --enable-gtk-doc-html, --enable-gtk-doc-pdf, --with-html-dir, --disable-doxygen
+make -C '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15' -j '1' 
+make[2]: Entering directory '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15'
+make  all-recursive
+make[3]: Entering directory '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15'
+Making all in .
+make[4]: Entering directory '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15'
+  CC       isl_gmp.lo
+  CC       isl_val_gmp.lo
+  CC       isl_ast_int.lo
+  CC       isl_aff.lo
+  CC       isl_affine_hull.lo
+  CC       isl_arg.lo
+  CC       isl_ast.lo
+  CC       isl_ast_build.lo
+isl_ast_build.c: In function ‘isl_ast_build_from_context’:
+isl_ast_build.c:101:37: warning: ‘%d’ directive output may be truncated writing between 1 and 10 bytes into a region of size between 4 and 13 [-Wformat-truncation=]
+   snprintf(name, sizeof(name), "c%d_%d", i, j++);
+                                     ^~
+isl_ast_build.c:101:32: note: directive argument in the range [0, 2147483647]
+   snprintf(name, sizeof(name), "c%d_%d", i, j++);
+                                ^~~~~~~~
+In file included from /usr/include/stdio.h:862:0,
+                 from ./include/isl/map.h:13,
+                 from isl_ast_build.c:13:
+/usr/include/i386-linux-gnu/bits/stdio2.h:64:10: note: ‘__builtin___snprintf_chk’ output between 5 and 23 bytes into a destination of size 16
+   return __builtin___snprintf_chk (__s, __n, __USE_FORTIFY_LEVEL - 1,
+          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        __bos (__s), __fmt, __va_arg_pack ());
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  CC       isl_ast_build_expr.lo
+  CC       isl_ast_codegen.lo
+  CC       isl_ast_graft.lo
+  CC       isl_band.lo
+  CC       basis_reduction_tab.lo
+  CC       isl_bernstein.lo
+  CC       isl_blk.lo
+  CC       isl_bound.lo
+  CC       isl_coalesce.lo
+  CC       isl_constraint.lo
+  CC       isl_convex_hull.lo
+  CC       isl_ctx.lo
+  CC       isl_deprecated.lo
+  CC       isl_dim_map.lo
+  CC       isl_equalities.lo
+  CC       isl_factorization.lo
+  CC       isl_farkas.lo
+  CC       isl_flow.lo
+  CC       isl_fold.lo
+  CC       isl_hash.lo
+  CC       isl_id_to_ast_expr.lo
+  CC       isl_id_to_pw_aff.lo
+  CC       isl_ilp.lo
+  CC       isl_input.lo
+  CC       isl_local_space.lo
+  CC       isl_lp.lo
+  CC       isl_map.lo
+  CC       isl_map_list.lo
+  CC       isl_map_simplify.lo
+  CC       isl_map_subtract.lo
+  CC       isl_map_to_basic_set.lo
+  CC       isl_mat.lo
+  CC       isl_morph.lo
+  CC       isl_id.lo
+  CC       isl_obj.lo
+  CC       isl_options.lo
+  CC       isl_output.lo
+  CC       isl_point.lo
+  CC       isl_polynomial.lo
+  CC       isl_printer.lo
+  CC       print.lo
+  CC       isl_range.lo
+  CC       isl_reordering.lo
+  CC       isl_sample.lo
+  CC       isl_scan.lo
+  CC       isl_schedule.lo
+  CC       isl_schedule_band.lo
+  CC       isl_schedule_node.lo
+  CC       isl_schedule_read.lo
+  CC       isl_schedule_tree.lo
+  CC       isl_scheduler.lo
+  CC       isl_set_list.lo
+  CC       isl_sort.lo
+  CC       isl_space.lo
+  CC       isl_stream.lo
+  CC       isl_seq.lo
+  CC       isl_tab.lo
+  CC       isl_tab_pip.lo
+  CC       isl_tarjan.lo
+  CC       isl_transitive_closure.lo
+  CC       isl_union_map.lo
+  CC       isl_val.lo
+  CC       isl_vec.lo
+  CC       isl_version.lo
+  CC       isl_vertices.lo
+  CCLD     libisl.la
+ar: `u' modifier ignored since `D' is the default (see `U')
+  CC       isl_test.o
+  CCLD     isl_test
+  CC       polyhedron_sample.o
+  CCLD     isl_polyhedron_sample
+  CC       pip.o
+  CCLD     isl_pip
+  CC       polyhedron_minimize.o
+  CCLD     isl_polyhedron_minimize
+  CC       polytope_scan.o
+  CCLD     isl_polytope_scan
+  CC       polyhedron_detect_equalities.o
+  CCLD     isl_polyhedron_detect_equalities
+  CC       cat.o
+  CCLD     isl_cat
+  CC       closure.o
+  CCLD     isl_closure
+  CC       bound.o
+  CCLD     isl_bound
+  CC       codegen.o
+  CCLD     isl_codegen
+make[4]: Leaving directory '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15'
+Making all in doc
+make[4]: Entering directory '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/doc'
+make[4]: Nothing to be done for 'all'.
+make[4]: Leaving directory '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/doc'
+make[3]: Leaving directory '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15'
+make[2]: Leaving directory '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15'
+make -C '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15' -j '1' install
+make[2]: Entering directory '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15'
+Making install in .
+make[3]: Entering directory '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15'
+make[4]: Entering directory '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15'
+ /bin/mkdir -p '/home/user/mxe/usr/i686-pc-linux-gnu/lib'
+ /bin/bash ./libtool   --mode=install /usr/bin/install -c   libisl.la '/home/user/mxe/usr/i686-pc-linux-gnu/lib'
+libtool: install: /usr/bin/install -c .libs/libisl.lai /home/user/mxe/usr/i686-pc-linux-gnu/lib/libisl.la
+libtool: install: /usr/bin/install -c .libs/libisl.a /home/user/mxe/usr/i686-pc-linux-gnu/lib/libisl.a
+libtool: install: chmod 644 /home/user/mxe/usr/i686-pc-linux-gnu/lib/libisl.a
+libtool: install: ranlib /home/user/mxe/usr/i686-pc-linux-gnu/lib/libisl.a
+libtool: finish: PATH="/home/user/mxe/usr/i686-pc-linux-gnu/bin:/home/user/mxe/usr/bin:/home/user/mxe/usr/i686-pc-linux-gnu/bin:/home/user/mxe/usr/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/sbin" ldconfig -n /home/user/mxe/usr/i686-pc-linux-gnu/lib
+----------------------------------------------------------------------
+Libraries have been installed in:
+   /home/user/mxe/usr/i686-pc-linux-gnu/lib
+
+If you ever happen to want to link against installed libraries
+in a given directory, LIBDIR, you must either use libtool, and
+specify the full pathname of the library, or use the '-LLIBDIR'
+flag during linking and do at least one of the following:
+   - add LIBDIR to the 'LD_LIBRARY_PATH' environment variable
+     during execution
+   - add LIBDIR to the 'LD_RUN_PATH' environment variable
+     during linking
+   - use the '-Wl,-rpath -Wl,LIBDIR' linker flag
+   - have your system administrator add LIBDIR to '/etc/ld.so.conf'
+
+See any operating system documentation about shared libraries for
+more information, such as the ld(1) and ld.so(8) manual pages.
+----------------------------------------------------------------------
+Cannot find isl library name. GDB bindings not installed.
+ /bin/mkdir -p '/home/user/mxe/usr/i686-pc-linux-gnu/include/isl/deprecated'
+ /usr/bin/install -c -m 644 include/isl/deprecated/int.h include/isl/deprecated/aff_int.h include/isl/deprecated/ast_int.h include/isl/deprecated/constraint_int.h include/isl/deprecated/ilp_int.h include/isl/deprecated/map_int.h include/isl/deprecated/mat_int.h include/isl/deprecated/point_int.h include/isl/deprecated/polynomial_int.h include/isl/deprecated/set_int.h include/isl/deprecated/union_map_int.h include/isl/deprecated/val_int.h include/isl/deprecated/vec_int.h '/home/user/mxe/usr/i686-pc-linux-gnu/include/isl/deprecated'
+ /bin/mkdir -p '/home/user/mxe/usr/i686-pc-linux-gnu/include/isl'
+ /usr/bin/install -c -m 644 include/isl/stdint.h '/home/user/mxe/usr/i686-pc-linux-gnu/include/isl'
+ /bin/mkdir -p '/home/user/mxe/usr/i686-pc-linux-gnu/lib/pkgconfig'
+ /usr/bin/install -c -m 644 isl.pc '/home/user/mxe/usr/i686-pc-linux-gnu/lib/pkgconfig'
+ /bin/mkdir -p '/home/user/mxe/usr/i686-pc-linux-gnu/include/isl'
+ /usr/bin/install -c -m 644 include/isl/val_gmp.h include/isl/aff.h include/isl/aff_type.h include/isl/arg.h include/isl/ast.h include/isl/ast_type.h include/isl/ast_build.h include/isl/band.h include/isl/constraint.h include/isl/ctx.h include/isl/flow.h include/isl/id.h include/isl/id_to_ast_expr.h include/isl/id_to_pw_aff.h include/isl/ilp.h include/isl/hash.h include/isl/hmap.h include/isl/list.h include/isl/local_space.h include/isl/lp.h include/isl/mat.h include/isl/map.h include/isl/map_to_basic_set.h include/isl/map_type.h include/isl/multi.h include/isl/obj.h include/isl/options.h include/isl/point.h include/isl/polynomial.h include/isl/polynomial_type.h include/isl/printer.h include/isl/schedule.h include/isl/schedule_node.h include/isl/schedule_type.h include/isl/set.h include/isl/set_type.h include/isl/space.h include/isl/stream.h include/isl/union_map.h include/isl/union_map_type.h '/home/user/mxe/usr/i686-pc-linux-gnu/include/isl'
+ /usr/bin/install -c -m 644 include/isl/union_set.h include/isl/union_set_type.h include/isl/val.h include/isl/vec.h include/isl/version.h include/isl/vertices.h '/home/user/mxe/usr/i686-pc-linux-gnu/include/isl'
+make[4]: Leaving directory '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15'
+make[3]: Leaving directory '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15'
+Making install in doc
+make[3]: Entering directory '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/doc'
+make[4]: Entering directory '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/doc'
+make[4]: Nothing to be done for 'install-exec-am'.
+make[4]: Nothing to be done for 'install-data-am'.
+make[4]: Leaving directory '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/doc'
+make[3]: Leaving directory '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/doc'
+make[2]: Leaving directory '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15'
+
+/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/config.log
+This file contains any messages produced by compilers while
+running configure, to aid debugging if configure makes a mistake.
+
+It was created by isl configure 0.15, which was
+generated by GNU Autoconf 2.69.  Invocation command line was
+
+  $ ./configure --host=i686-pc-linux-gnu --build=i686-pc-linux-gnu --prefix=/home/user/mxe/usr/i686-pc-linux-gnu --enable-static --disable-shared ac_cv_prog_HAVE_DOXYGEN=false --enable-doc=no --enable-gtk-doc=no --enable-gtk-doc-html=no --enable-gtk-doc-pdf=no --docdir=/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15.build_.sink --infodir=/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15.build_.sink --mandir=/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15.build_.sink --with-html-dir=/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15.build_.sink --disable-doxygen --with-gmp-prefix=/home/user/mxe/usr/i686-pc-linux-gnu
+
+## --------- ##
+## Platform. ##
+## --------- ##
+
+hostname = user-VirtualBox
+uname -m = i686
+uname -r = 4.13.0-21-generic
+uname -s = Linux
+uname -v = #24-Ubuntu SMP Mon Dec 18 17:29:35 UTC 2017
+
+/usr/bin/uname -p = unknown
+/bin/uname -X     = unknown
+
+/bin/arch              = unknown
+/usr/bin/arch -k       = unknown
+/usr/convex/getsysinfo = unknown
+/usr/bin/hostinfo      = unknown
+/bin/machine           = unknown
+/usr/bin/oslevel       = unknown
+/bin/universe          = unknown
+
+PATH: /home/user/mxe/usr/i686-pc-linux-gnu/bin
+PATH: /home/user/mxe/usr/bin
+PATH: /home/user/mxe/usr/i686-pc-linux-gnu/bin
+PATH: /home/user/mxe/usr/bin
+PATH: /usr/local/sbin
+PATH: /usr/local/bin
+PATH: /usr/sbin
+PATH: /usr/bin
+PATH: /sbin
+PATH: /bin
+PATH: /usr/games
+PATH: /usr/local/games
+PATH: /snap/bin
+
+
+## ----------- ##
+## Core tests. ##
+## ----------- ##
+
+configure:2814: checking for a BSD-compatible install
+configure:2882: result: /usr/bin/install -c
+configure:2893: checking whether build environment is sane
+configure:2948: result: yes
+configure:3099: checking for a thread-safe mkdir -p
+configure:3138: result: /bin/mkdir -p
+configure:3145: checking for gawk
+configure:3175: result: no
+configure:3145: checking for mawk
+configure:3161: found /usr/bin/mawk
+configure:3172: result: mawk
+configure:3183: checking whether make sets $(MAKE)
+configure:3205: result: yes
+configure:3234: checking whether make supports nested variables
+configure:3251: result: yes
+configure:3387: checking whether make supports nested variables
+configure:3404: result: yes
+configure:3438: checking for i686-pc-linux-gnu-gcc
+configure:3468: result: no
+configure:3478: checking for gcc
+configure:3494: found /usr/bin/gcc
+configure:3505: result: gcc
+configure:3734: checking for C compiler version
+configure:3743: gcc --version >&5
+gcc (Ubuntu 7.2.0-8ubuntu3) 7.2.0
+Copyright (C) 2017 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+configure:3754: $? = 0
+configure:3743: gcc -v >&5
+Using built-in specs.
+COLLECT_GCC=gcc
+COLLECT_LTO_WRAPPER=/usr/lib/gcc/i686-linux-gnu/7/lto-wrapper
+Target: i686-linux-gnu
+Configured with: ../src/configure -v --with-pkgversion='Ubuntu 7.2.0-8ubuntu3' --with-bugurl=file:///usr/share/doc/gcc-7/README.Bugs --enable-languages=c,ada,c++,go,brig,d,fortran,objc,obj-c++ --prefix=/usr --with-gcc-major-version-only --program-suffix=-7 --program-prefix=i686-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --with-sysroot=/ --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-libmpx --enable-plugin --enable-default-pie --with-system-zlib --with-target-system-zlib --enable-objc-gc=auto --enable-targets=all --enable-multiarch --disable-werror --with-arch-32=i686 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-checking=release --build=i686-linux-gnu --host=i686-linux-gnu --target=i686-linux-gnu
+Thread model: posix
+gcc version 7.2.0 (Ubuntu 7.2.0-8ubuntu3) 
+configure:3754: $? = 0
+configure:3743: gcc -V >&5
+gcc: error: unrecognized command line option '-V'
+gcc: fatal error: no input files
+compilation terminated.
+configure:3754: $? = 1
+configure:3743: gcc -qversion >&5
+gcc: error: unrecognized command line option '-qversion'; did you mean '--version'?
+gcc: fatal error: no input files
+compilation terminated.
+configure:3754: $? = 1
+configure:3774: checking whether the C compiler works
+configure:3796: gcc    conftest.c  >&5
+configure:3800: $? = 0
+configure:3848: result: yes
+configure:3851: checking for C compiler default output file name
+configure:3853: result: a.out
+configure:3859: checking for suffix of executables
+configure:3866: gcc -o conftest    conftest.c  >&5
+configure:3870: $? = 0
+configure:3892: result: 
+configure:3914: checking whether we are cross compiling
+configure:3922: gcc -o conftest    conftest.c  >&5
+configure:3926: $? = 0
+configure:3933: ./conftest
+configure:3937: $? = 0
+configure:3952: result: no
+configure:3957: checking for suffix of object files
+configure:3979: gcc -c   conftest.c >&5
+configure:3983: $? = 0
+configure:4004: result: o
+configure:4008: checking whether we are using the GNU C compiler
+configure:4027: gcc -c   conftest.c >&5
+configure:4027: $? = 0
+configure:4036: result: yes
+configure:4045: checking whether gcc accepts -g
+configure:4065: gcc -c -g  conftest.c >&5
+configure:4065: $? = 0
+configure:4106: result: yes
+configure:4123: checking for gcc option to accept ISO C89
+configure:4186: gcc  -c -g -O2  conftest.c >&5
+configure:4186: $? = 0
+configure:4199: result: none needed
+configure:4224: checking whether gcc understands -c and -o together
+configure:4246: gcc -c conftest.c -o conftest2.o
+configure:4249: $? = 0
+configure:4246: gcc -c conftest.c -o conftest2.o
+configure:4249: $? = 0
+configure:4261: result: yes
+configure:4289: checking for style of include used by make
+configure:4317: result: GNU
+configure:4343: checking dependency style of gcc
+configure:4454: result: gcc3
+configure:4483: checking for i686-pc-linux-gnu-g++
+configure:4513: result: no
+configure:4483: checking for i686-pc-linux-gnu-c++
+configure:4513: result: no
+configure:4483: checking for i686-pc-linux-gnu-gpp
+configure:4513: result: no
+configure:4483: checking for i686-pc-linux-gnu-aCC
+configure:4513: result: no
+configure:4483: checking for i686-pc-linux-gnu-CC
+configure:4513: result: no
+configure:4483: checking for i686-pc-linux-gnu-cxx
+configure:4513: result: no
+configure:4483: checking for i686-pc-linux-gnu-cc++
+configure:4513: result: no
+configure:4483: checking for i686-pc-linux-gnu-cl.exe
+configure:4513: result: no
+configure:4483: checking for i686-pc-linux-gnu-FCC
+configure:4513: result: no
+configure:4483: checking for i686-pc-linux-gnu-KCC
+configure:4513: result: no
+configure:4483: checking for i686-pc-linux-gnu-RCC
+configure:4513: result: no
+configure:4483: checking for i686-pc-linux-gnu-xlC_r
+configure:4513: result: no
+configure:4483: checking for i686-pc-linux-gnu-xlC
+configure:4513: result: no
+configure:4527: checking for g++
+configure:4543: found /usr/bin/g++
+configure:4554: result: g++
+configure:4581: checking for C++ compiler version
+configure:4590: g++ --version >&5
+g++ (Ubuntu 7.2.0-8ubuntu3) 7.2.0
+Copyright (C) 2017 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+configure:4601: $? = 0
+configure:4590: g++ -v >&5
+Using built-in specs.
+COLLECT_GCC=g++
+COLLECT_LTO_WRAPPER=/usr/lib/gcc/i686-linux-gnu/7/lto-wrapper
+Target: i686-linux-gnu
+Configured with: ../src/configure -v --with-pkgversion='Ubuntu 7.2.0-8ubuntu3' --with-bugurl=file:///usr/share/doc/gcc-7/README.Bugs --enable-languages=c,ada,c++,go,brig,d,fortran,objc,obj-c++ --prefix=/usr --with-gcc-major-version-only --program-suffix=-7 --program-prefix=i686-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --with-sysroot=/ --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-libmpx --enable-plugin --enable-default-pie --with-system-zlib --with-target-system-zlib --enable-objc-gc=auto --enable-targets=all --enable-multiarch --disable-werror --with-arch-32=i686 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-checking=release --build=i686-linux-gnu --host=i686-linux-gnu --target=i686-linux-gnu
+Thread model: posix
+gcc version 7.2.0 (Ubuntu 7.2.0-8ubuntu3) 
+configure:4601: $? = 0
+configure:4590: g++ -V >&5
+g++: error: unrecognized command line option '-V'
+g++: fatal error: no input files
+compilation terminated.
+configure:4601: $? = 1
+configure:4590: g++ -qversion >&5
+g++: error: unrecognized command line option '-qversion'; did you mean '--version'?
+g++: fatal error: no input files
+compilation terminated.
+configure:4601: $? = 1
+configure:4605: checking whether we are using the GNU C++ compiler
+configure:4624: g++ -c   conftest.cpp >&5
+configure:4624: $? = 0
+configure:4633: result: yes
+configure:4642: checking whether g++ accepts -g
+configure:4662: g++ -c -g  conftest.cpp >&5
+configure:4662: $? = 0
+configure:4703: result: yes
+configure:4728: checking dependency style of g++
+configure:4839: result: gcc3
+configure:4857: checking for C compiler vendor
+configure:4881: gcc -c -g -O2  conftest.c >&5
+conftest.c: In function 'main':
+conftest.c:17:7: error: 'thisisanerror' undeclared (first use in this function)
+       thisisanerror;
+       ^~~~~~~~~~~~~
+conftest.c:17:7: note: each undeclared identifier is reported only once for each function it appears in
+configure:4881: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "isl"
+| #define PACKAGE_TARNAME "isl"
+| #define PACKAGE_VERSION "0.15"
+| #define PACKAGE_STRING "isl 0.15"
+| #define PACKAGE_BUGREPORT "isl-development@googlegroups.com"
+| #define PACKAGE_URL ""
+| #define PACKAGE "isl"
+| #define VERSION "0.15"
+| /* end confdefs.h.  */
+| 
+| int
+| main ()
+| {
+| 
+| #if !(defined(__ICC) || defined(__ECC) || defined(__INTEL_COMPILER))
+|       thisisanerror;
+| #endif
+| 
+|   ;
+|   return 0;
+| }
+configure:4881: gcc -c -g -O2  conftest.c >&5
+conftest.c: In function 'main':
+conftest.c:17:7: error: 'thisisanerror' undeclared (first use in this function)
+       thisisanerror;
+       ^~~~~~~~~~~~~
+conftest.c:17:7: note: each undeclared identifier is reported only once for each function it appears in
+configure:4881: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "isl"
+| #define PACKAGE_TARNAME "isl"
+| #define PACKAGE_VERSION "0.15"
+| #define PACKAGE_STRING "isl 0.15"
+| #define PACKAGE_BUGREPORT "isl-development@googlegroups.com"
+| #define PACKAGE_URL ""
+| #define PACKAGE "isl"
+| #define VERSION "0.15"
+| /* end confdefs.h.  */
+| 
+| int
+| main ()
+| {
+| 
+| #if !(defined(__xlc__) || defined(__xlC__) || defined(__IBMC__) || defined(__IBMCPP__))
+|       thisisanerror;
+| #endif
+| 
+|   ;
+|   return 0;
+| }
+configure:4881: gcc -c -g -O2  conftest.c >&5
+conftest.c: In function 'main':
+conftest.c:17:7: error: 'thisisanerror' undeclared (first use in this function)
+       thisisanerror;
+       ^~~~~~~~~~~~~
+conftest.c:17:7: note: each undeclared identifier is reported only once for each function it appears in
+configure:4881: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "isl"
+| #define PACKAGE_TARNAME "isl"
+| #define PACKAGE_VERSION "0.15"
+| #define PACKAGE_STRING "isl 0.15"
+| #define PACKAGE_BUGREPORT "isl-development@googlegroups.com"
+| #define PACKAGE_URL ""
+| #define PACKAGE "isl"
+| #define VERSION "0.15"
+| /* end confdefs.h.  */
+| 
+| int
+| main ()
+| {
+| 
+| #if !(defined(__PATHCC__) || defined(__PATHSCALE__))
+|       thisisanerror;
+| #endif
+| 
+|   ;
+|   return 0;
+| }
+configure:4881: gcc -c -g -O2  conftest.c >&5
+conftest.c: In function 'main':
+conftest.c:17:7: error: 'thisisanerror' undeclared (first use in this function)
+       thisisanerror;
+       ^~~~~~~~~~~~~
+conftest.c:17:7: note: each undeclared identifier is reported only once for each function it appears in
+configure:4881: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "isl"
+| #define PACKAGE_TARNAME "isl"
+| #define PACKAGE_VERSION "0.15"
+| #define PACKAGE_STRING "isl 0.15"
+| #define PACKAGE_BUGREPORT "isl-development@googlegroups.com"
+| #define PACKAGE_URL ""
+| #define PACKAGE "isl"
+| #define VERSION "0.15"
+| /* end confdefs.h.  */
+| 
+| int
+| main ()
+| {
+| 
+| #if !(defined(__clang__))
+|       thisisanerror;
+| #endif
+| 
+|   ;
+|   return 0;
+| }
+configure:4881: gcc -c -g -O2  conftest.c >&5
+configure:4881: $? = 0
+configure:4888: result: gnu
+configure:4895: checking build system type
+configure:4909: result: i686-pc-linux-gnu
+configure:4929: checking host system type
+configure:4942: result: i686-pc-linux-gnu
+configure:5218: checking whether C compiler accepts -malign-double
+configure:5237: gcc -c -malign-double  conftest.c >&5
+configure:5237: $? = 0
+configure:5247: result: yes
+configure:5257: checking whether C compiler accepts -fstrict-aliasing
+configure:5276: gcc -c -fstrict-aliasing  conftest.c >&5
+configure:5276: $? = 0
+configure:5286: result: yes
+configure:5296: checking whether C compiler accepts -ffast-math
+configure:5315: gcc -c -ffast-math  conftest.c >&5
+configure:5315: $? = 0
+configure:5325: result: yes
+configure:5346: checking for gcc architecture flag
+configure:5348: result: 
+configure:5370: checking for x86 cpuid 0 output
+configure:5399: gcc -o conftest -O3 -fomit-frame-pointer -malign-double -fstrict-aliasing -ffast-math   conftest.c  >&5
+configure:5399: $? = 0
+configure:5399: ./conftest
+configure:5399: $? = 0
+configure:5409: result: a:756e6547:6c65746e:49656e69
+configure:5425: checking for x86 cpuid 1 output
+configure:5454: gcc -o conftest -O3 -fomit-frame-pointer -malign-double -fstrict-aliasing -ffast-math   conftest.c  >&5
+configure:5454: $? = 0
+configure:5454: ./conftest
+configure:5454: $? = 0
+configure:5464: result: 6fb:800:80200209:78bfbff
+configure:5678: checking whether C compiler accepts -march=pentiumpro
+configure:5693: gcc -c -march=pentiumpro  conftest.c >&5
+configure:5693: $? = 0
+configure:5701: result: yes
+configure:5718: checking for gcc architecture flag
+configure:5720: result: -march=pentiumpro
+configure:5752: checking whether C compiler accepts -O3 -fomit-frame-pointer -malign-double -fstrict-aliasing -ffast-math -march=pentiumpro
+configure:5767: gcc -c -O3 -fomit-frame-pointer -malign-double -fstrict-aliasing -ffast-math -march=pentiumpro  conftest.c >&5
+configure:5767: $? = 0
+configure:5775: result: yes
+configure:5795: checking whether the compiler supports function __attribute__((__warn_unused_result__))
+configure:5813: gcc -c -O3 -fomit-frame-pointer -malign-double -fstrict-aliasing -ffast-math -march=pentiumpro  conftest.c >&5
+configure:5813: $? = 0
+configure:5820: result: yes
+configure:5829: checking for __attribute__
+configure:5851: gcc -c -O3 -fomit-frame-pointer -malign-double -fstrict-aliasing -ffast-math -march=pentiumpro  conftest.c >&5
+configure:5851: $? = 0
+configure:5860: result: yes
+configure:5915: checking how to print strings
+configure:5942: result: printf
+configure:5963: checking for a sed that does not truncate output
+configure:6027: result: /bin/sed
+configure:6045: checking for grep that handles long lines and -e
+configure:6103: result: /bin/grep
+configure:6108: checking for egrep
+configure:6170: result: /bin/grep -E
+configure:6175: checking for fgrep
+configure:6237: result: /bin/grep -F
+configure:6272: checking for ld used by gcc
+configure:6339: result: /usr/bin/ld
+configure:6346: checking if the linker (/usr/bin/ld) is GNU ld
+configure:6361: result: yes
+configure:6373: checking for BSD- or MS-compatible name lister (nm)
+configure:6422: result: /usr/bin/nm -B
+configure:6552: checking the name lister (/usr/bin/nm -B) interface
+configure:6559: gcc -c -O3 -fomit-frame-pointer -malign-double -fstrict-aliasing -ffast-math -march=pentiumpro  conftest.c >&5
+configure:6562: /usr/bin/nm -B "conftest.o"
+configure:6565: output
+00000000 B some_variable
+configure:6572: result: BSD nm
+configure:6575: checking whether ln -s works
+configure:6579: result: yes
+configure:6587: checking the maximum length of command line arguments
+configure:6718: result: 1572864
+configure:6766: checking how to convert i686-pc-linux-gnu file names to i686-pc-linux-gnu format
+configure:6806: result: func_convert_file_noop
+configure:6813: checking how to convert i686-pc-linux-gnu file names to toolchain format
+configure:6833: result: func_convert_file_noop
+configure:6840: checking for /usr/bin/ld option to reload object files
+configure:6847: result: -r
+configure:6881: checking for i686-pc-linux-gnu-objdump
+configure:6911: result: no
+configure:6921: checking for objdump
+configure:6937: found /usr/bin/objdump
+configure:6948: result: objdump
+configure:6980: checking how to recognize dependent libraries
+configure:7177: result: pass_all
+configure:7222: checking for i686-pc-linux-gnu-dlltool
+configure:7252: result: no
+configure:7262: checking for dlltool
+configure:7292: result: no
+configure:7322: checking how to associate runtime and link libraries
+configure:7349: result: printf %s\n
+configure:7365: checking for i686-pc-linux-gnu-ar
+configure:7395: result: no
+configure:7409: checking for ar
+configure:7425: found /usr/bin/ar
+configure:7436: result: ar
+configure:7473: checking for archiver @FILE support
+configure:7490: gcc -c -O3 -fomit-frame-pointer -malign-double -fstrict-aliasing -ffast-math -march=pentiumpro  conftest.c >&5
+configure:7490: $? = 0
+configure:7493: ar cru libconftest.a @conftest.lst >&5
+ar: `u' modifier ignored since `D' is the default (see `U')
+configure:7496: $? = 0
+configure:7501: ar cru libconftest.a @conftest.lst >&5
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: conftest.o: No such file or directory
+configure:7504: $? = 1
+configure:7516: result: @
+configure:7534: checking for i686-pc-linux-gnu-strip
+configure:7564: result: no
+configure:7574: checking for strip
+configure:7590: found /usr/bin/strip
+configure:7601: result: strip
+configure:7633: checking for i686-pc-linux-gnu-ranlib
+configure:7663: result: no
+configure:7673: checking for ranlib
+configure:7689: found /usr/bin/ranlib
+configure:7700: result: ranlib
+configure:7802: checking command to parse /usr/bin/nm -B output from gcc object
+configure:7955: gcc -c -O3 -fomit-frame-pointer -malign-double -fstrict-aliasing -ffast-math -march=pentiumpro  conftest.c >&5
+configure:7958: $? = 0
+configure:7962: /usr/bin/nm -B conftest.o \| sed -n -e 's/^.*[ ]\([ABCDGIRSTW][ABCDGIRSTW]*\)[ ][ ]*\([_A-Za-z][_A-Za-z0-9]*\)$/\1 \2 \2/p' | sed '/ __gnu_lto/d' \> conftest.nm
+configure:7965: $? = 0
+configure:8031: gcc -o conftest -O3 -fomit-frame-pointer -malign-double -fstrict-aliasing -ffast-math -march=pentiumpro   conftest.c conftstm.o >&5
+configure:8034: $? = 0
+configure:8072: result: ok
+configure:8119: checking for sysroot
+configure:8149: result: no
+configure:8422: checking for i686-pc-linux-gnu-mt
+configure:8452: result: no
+configure:8462: checking for mt
+configure:8478: found /bin/mt
+configure:8489: result: mt
+configure:8512: checking if mt is a manifest tool
+configure:8518: mt '-?'
+configure:8526: result: no
+configure:9168: checking how to run the C preprocessor
+configure:9199: gcc -E  conftest.c
+configure:9199: $? = 0
+configure:9213: gcc -E  conftest.c
+conftest.c:13:10: fatal error: ac_nonexistent.h: No such file or directory
+ #include <ac_nonexistent.h>
+          ^~~~~~~~~~~~~~~~~~
+compilation terminated.
+configure:9213: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "isl"
+| #define PACKAGE_TARNAME "isl"
+| #define PACKAGE_VERSION "0.15"
+| #define PACKAGE_STRING "isl 0.15"
+| #define PACKAGE_BUGREPORT "isl-development@googlegroups.com"
+| #define PACKAGE_URL ""
+| #define PACKAGE "isl"
+| #define VERSION "0.15"
+| #define GCC_WARN_UNUSED_RESULT __attribute__((__warn_unused_result__))
+| #define HAVE___ATTRIBUTE__ 1
+| /* end confdefs.h.  */
+| #include <ac_nonexistent.h>
+configure:9238: result: gcc -E
+configure:9258: gcc -E  conftest.c
+configure:9258: $? = 0
+configure:9272: gcc -E  conftest.c
+conftest.c:13:10: fatal error: ac_nonexistent.h: No such file or directory
+ #include <ac_nonexistent.h>
+          ^~~~~~~~~~~~~~~~~~
+compilation terminated.
+configure:9272: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "isl"
+| #define PACKAGE_TARNAME "isl"
+| #define PACKAGE_VERSION "0.15"
+| #define PACKAGE_STRING "isl 0.15"
+| #define PACKAGE_BUGREPORT "isl-development@googlegroups.com"
+| #define PACKAGE_URL ""
+| #define PACKAGE "isl"
+| #define VERSION "0.15"
+| #define GCC_WARN_UNUSED_RESULT __attribute__((__warn_unused_result__))
+| #define HAVE___ATTRIBUTE__ 1
+| /* end confdefs.h.  */
+| #include <ac_nonexistent.h>
+configure:9301: checking for ANSI C header files
+configure:9321: gcc -c -O3 -fomit-frame-pointer -malign-double -fstrict-aliasing -ffast-math -march=pentiumpro  conftest.c >&5
+configure:9321: $? = 0
+configure:9394: gcc -o conftest -O3 -fomit-frame-pointer -malign-double -fstrict-aliasing -ffast-math -march=pentiumpro   conftest.c  >&5
+configure:9394: $? = 0
+configure:9394: ./conftest
+configure:9394: $? = 0
+configure:9405: result: yes
+configure:9418: checking for sys/types.h
+configure:9418: gcc -c -O3 -fomit-frame-pointer -malign-double -fstrict-aliasing -ffast-math -march=pentiumpro  conftest.c >&5
+configure:9418: $? = 0
+configure:9418: result: yes
+configure:9418: checking for sys/stat.h
+configure:9418: gcc -c -O3 -fomit-frame-pointer -malign-double -fstrict-aliasing -ffast-math -march=pentiumpro  conftest.c >&5
+configure:9418: $? = 0
+configure:9418: result: yes
+configure:9418: checking for stdlib.h
+configure:9418: gcc -c -O3 -fomit-frame-pointer -malign-double -fstrict-aliasing -ffast-math -march=pentiumpro  conftest.c >&5
+configure:9418: $? = 0
+configure:9418: result: yes
+configure:9418: checking for string.h
+configure:9418: gcc -c -O3 -fomit-frame-pointer -malign-double -fstrict-aliasing -ffast-math -march=pentiumpro  conftest.c >&5
+configure:9418: $? = 0
+configure:9418: result: yes
+configure:9418: checking for memory.h
+configure:9418: gcc -c -O3 -fomit-frame-pointer -malign-double -fstrict-aliasing -ffast-math -march=pentiumpro  conftest.c >&5
+configure:9418: $? = 0
+configure:9418: result: yes
+configure:9418: checking for strings.h
+configure:9418: gcc -c -O3 -fomit-frame-pointer -malign-double -fstrict-aliasing -ffast-math -march=pentiumpro  conftest.c >&5
+configure:9418: $? = 0
+configure:9418: result: yes
+configure:9418: checking for inttypes.h
+configure:9418: gcc -c -O3 -fomit-frame-pointer -malign-double -fstrict-aliasing -ffast-math -march=pentiumpro  conftest.c >&5
+configure:9418: $? = 0
+configure:9418: result: yes
+configure:9418: checking for stdint.h
+configure:9418: gcc -c -O3 -fomit-frame-pointer -malign-double -fstrict-aliasing -ffast-math -march=pentiumpro  conftest.c >&5
+configure:9418: $? = 0
+configure:9418: result: yes
+configure:9418: checking for unistd.h
+configure:9418: gcc -c -O3 -fomit-frame-pointer -malign-double -fstrict-aliasing -ffast-math -march=pentiumpro  conftest.c >&5
+configure:9418: $? = 0
+configure:9418: result: yes
+configure:9432: checking for dlfcn.h
+configure:9432: gcc -c -O3 -fomit-frame-pointer -malign-double -fstrict-aliasing -ffast-math -march=pentiumpro  conftest.c >&5
+configure:9432: $? = 0
+configure:9432: result: yes
+configure:9647: checking for objdir
+configure:9662: result: .libs
+configure:9933: checking if gcc supports -fno-rtti -fno-exceptions
+configure:9951: gcc -c -O3 -fomit-frame-pointer -malign-double -fstrict-aliasing -ffast-math -march=pentiumpro  -fno-rtti -fno-exceptions conftest.c >&5
+cc1: warning: command line option '-fno-rtti' is valid for C++/ObjC++ but not for C
+configure:9955: $? = 0
+configure:9968: result: no
+configure:10316: checking for gcc option to produce PIC
+configure:10323: result: -fPIC -DPIC
+configure:10331: checking if gcc PIC flag -fPIC -DPIC works
+configure:10349: gcc -c -O3 -fomit-frame-pointer -malign-double -fstrict-aliasing -ffast-math -march=pentiumpro  -fPIC -DPIC -DPIC conftest.c >&5
+configure:10353: $? = 0
+configure:10366: result: yes
+configure:10395: checking if gcc static flag -static works
+configure:10423: result: yes
+configure:10438: checking if gcc supports -c -o file.o
+configure:10459: gcc -c -O3 -fomit-frame-pointer -malign-double -fstrict-aliasing -ffast-math -march=pentiumpro  -o out/conftest2.o conftest.c >&5
+configure:10463: $? = 0
+configure:10485: result: yes
+configure:10493: checking if gcc supports -c -o file.o
+configure:10540: result: yes
+configure:10573: checking whether the gcc linker (/usr/bin/ld) supports shared libraries
+configure:11721: result: yes
+configure:11961: checking dynamic linker characteristics
+configure:12488: gcc -o conftest -O3 -fomit-frame-pointer -malign-double -fstrict-aliasing -ffast-math -march=pentiumpro   -Wl,-rpath -Wl,/foo conftest.c  >&5
+configure:12488: $? = 0
+configure:12699: result: GNU/Linux ld.so
+configure:12806: checking how to hardcode library paths into programs
+configure:12831: result: immediate
+configure:13379: checking whether stripping libraries is possible
+configure:13384: result: yes
+configure:13419: checking if libtool supports shared libraries
+configure:13421: result: yes
+configure:13424: checking whether to build shared libraries
+configure:13445: result: no
+configure:13448: checking whether to build static libraries
+configure:13452: result: yes
+configure:13475: checking how to run the C++ preprocessor
+configure:13502: g++ -E  conftest.cpp
+configure:13502: $? = 0
+configure:13516: g++ -E  conftest.cpp
+conftest.cpp:25:10: fatal error: ac_nonexistent.h: No such file or directory
+ #include <ac_nonexistent.h>
+          ^~~~~~~~~~~~~~~~~~
+compilation terminated.
+configure:13516: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "isl"
+| #define PACKAGE_TARNAME "isl"
+| #define PACKAGE_VERSION "0.15"
+| #define PACKAGE_STRING "isl 0.15"
+| #define PACKAGE_BUGREPORT "isl-development@googlegroups.com"
+| #define PACKAGE_URL ""
+| #define PACKAGE "isl"
+| #define VERSION "0.15"
+| #define GCC_WARN_UNUSED_RESULT __attribute__((__warn_unused_result__))
+| #define HAVE___ATTRIBUTE__ 1
+| #define STDC_HEADERS 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_MEMORY_H 1
+| #define HAVE_STRINGS_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_UNISTD_H 1
+| #define HAVE_DLFCN_H 1
+| #define LT_OBJDIR ".libs/"
+| /* end confdefs.h.  */
+| #include <ac_nonexistent.h>
+configure:13541: result: g++ -E
+configure:13561: g++ -E  conftest.cpp
+configure:13561: $? = 0
+configure:13575: g++ -E  conftest.cpp
+conftest.cpp:25:10: fatal error: ac_nonexistent.h: No such file or directory
+ #include <ac_nonexistent.h>
+          ^~~~~~~~~~~~~~~~~~
+compilation terminated.
+configure:13575: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "isl"
+| #define PACKAGE_TARNAME "isl"
+| #define PACKAGE_VERSION "0.15"
+| #define PACKAGE_STRING "isl 0.15"
+| #define PACKAGE_BUGREPORT "isl-development@googlegroups.com"
+| #define PACKAGE_URL ""
+| #define PACKAGE "isl"
+| #define VERSION "0.15"
+| #define GCC_WARN_UNUSED_RESULT __attribute__((__warn_unused_result__))
+| #define HAVE___ATTRIBUTE__ 1
+| #define STDC_HEADERS 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_MEMORY_H 1
+| #define HAVE_STRINGS_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_UNISTD_H 1
+| #define HAVE_DLFCN_H 1
+| #define LT_OBJDIR ".libs/"
+| /* end confdefs.h.  */
+| #include <ac_nonexistent.h>
+configure:13744: checking for ld used by g++
+configure:13811: result: /usr/bin/ld
+configure:13818: checking if the linker (/usr/bin/ld) is GNU ld
+configure:13833: result: yes
+configure:13888: checking whether the g++ linker (/usr/bin/ld) supports shared libraries
+configure:14886: result: yes
+configure:14922: g++ -c -g -O2  conftest.cpp >&5
+configure:14925: $? = 0
+configure:15446: checking for g++ option to produce PIC
+configure:15453: result: -fPIC -DPIC
+configure:15461: checking if g++ PIC flag -fPIC -DPIC works
+configure:15479: g++ -c -g -O2  -fPIC -DPIC -DPIC conftest.cpp >&5
+configure:15483: $? = 0
+configure:15496: result: yes
+configure:15519: checking if g++ static flag -static works
+configure:15547: result: yes
+configure:15559: checking if g++ supports -c -o file.o
+configure:15580: g++ -c -g -O2  -o out/conftest2.o conftest.cpp >&5
+configure:15584: $? = 0
+configure:15606: result: yes
+configure:15611: checking if g++ supports -c -o file.o
+configure:15658: result: yes
+configure:15688: checking whether the g++ linker (/usr/bin/ld) supports shared libraries
+configure:15724: result: yes
+configure:15865: checking dynamic linker characteristics
+configure:16530: result: GNU/Linux ld.so
+configure:16583: checking how to hardcode library paths into programs
+configure:16608: result: immediate
+configure:16672: checking for perl
+configure:16688: found /usr/bin/perl
+configure:16699: result: perl
+configure:16709: checking for pdflatex
+configure:16739: result: no
+configure:16746: checking for pod2html
+configure:16762: found /usr/bin/pod2html
+configure:16773: result: pod2html
+configure:16792: checking for stdint types
+configure:16815: gcc -c   conftest.c >&5
+configure:16815: $? = 0
+configure:16859: result: stdint.h (shortcircuit)
+configure:17246: result: make use of stdint.h in include/isl/stdint.h (assuming C99 compatible system)
+configure:17360: checking which gmp to use
+configure:17362: result: system
+configure:17380: checking gmp.h usability
+configure:17380: gcc -c -O3 -fomit-frame-pointer -malign-double -fstrict-aliasing -ffast-math -march=pentiumpro -I/home/user/mxe/usr/i686-pc-linux-gnu/include  conftest.c >&5
+configure:17380: $? = 0
+configure:17380: result: yes
+configure:17380: checking gmp.h presence
+configure:17380: gcc -E -I/home/user/mxe/usr/i686-pc-linux-gnu/include  conftest.c
+configure:17380: $? = 0
+configure:17380: result: yes
+configure:17380: checking for gmp.h
+configure:17380: result: yes
+configure:17388: checking for main in -lgmp
+configure:17407: gcc -o conftest -O3 -fomit-frame-pointer -malign-double -fstrict-aliasing -ffast-math -march=pentiumpro -I/home/user/mxe/usr/i686-pc-linux-gnu/include  -L/home/user/mxe/usr/i686-pc-linux-gnu/lib  conftest.c -lgmp  -lgmp  >&5
+configure:17407: $? = 0
+configure:17416: result: yes
+configure:17444: gcc -o conftest -O3 -fomit-frame-pointer -malign-double -fstrict-aliasing -ffast-math -march=pentiumpro -I/home/user/mxe/usr/i686-pc-linux-gnu/include  -L/home/user/mxe/usr/i686-pc-linux-gnu/lib  conftest.c -lgmp -lgmp  >&5
+configure:17444: $? = 0
+configure:17467: checking whether mp_get_memory_functions is declared
+configure:17467: gcc -c -O3 -fomit-frame-pointer -malign-double -fstrict-aliasing -ffast-math -march=pentiumpro -I/home/user/mxe/usr/i686-pc-linux-gnu/include  conftest.c >&5
+configure:17467: $? = 0
+configure:17467: result: yes
+configure:17557: checking whether ffs is declared
+configure:17557: gcc -c -O3 -fomit-frame-pointer -malign-double -fstrict-aliasing -ffast-math -march=pentiumpro  conftest.c >&5
+configure:17557: $? = 0
+configure:17557: result: yes
+configure:17569: checking whether __builtin_ffs is declared
+configure:17569: gcc -c -O3 -fomit-frame-pointer -malign-double -fstrict-aliasing -ffast-math -march=pentiumpro  conftest.c >&5
+configure:17569: $? = 0
+configure:17569: result: yes
+configure:17661: checking which clang to use
+configure:17663: result: no
+configure:18172: checking for C compiler vendor
+configure:18203: result: gnu
+configure:18224: checking our pkgconfig libname
+configure:18232: result: isl
+configure:18235: checking our pkgconfig version
+configure:18243: result: 0.15
+configure:18246: checking our pkgconfig_libdir
+configure:18253: result: ${libdir}/pkgconfig
+configure:18256: result: expanded our pkgconfig_libdir... /home/user/mxe/usr/i686-pc-linux-gnu/lib/pkgconfig
+configure:18260: checking our pkgconfig_libfile
+configure:18266: result: isl.pc
+configure:18273: checking our package / suffix
+configure:18277: result: isl / 
+configure:18280: checking our pkgconfig description
+configure:18287: result: isl Library
+configure:18290: checking our pkgconfig requires
+configure:18295: result: 
+configure:18298: checking our pkgconfig ext libs
+configure:18305: result: -lisl -lgmp
+configure:18308: checking our pkgconfig cppflags
+configure:18313: result: -I/home/user/mxe/usr/i686-pc-linux-gnu/include
+configure:18316: checking our pkgconfig ldflags
+configure:18321: result: -L/home/user/mxe/usr/i686-pc-linux-gnu/lib
+configure:18361: result: noninstalled pkgconfig -L /home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/.libs
+configure:18396: result: noninstalled pkgconfig -I /home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/./include
+configure:18565: checking that generated files are newer than configure
+configure:18571: result: done
+configure:18622: creating ./config.status
+
+## ---------------------- ##
+## Running config.status. ##
+## ---------------------- ##
+
+This file was extended by isl config.status 0.15, which was
+generated by GNU Autoconf 2.69.  Invocation command line was
+
+  CONFIG_FILES    = 
+  CONFIG_HEADERS  = 
+  CONFIG_LINKS    = 
+  CONFIG_COMMANDS = 
+  $ ./config.status 
+
+on user-VirtualBox
+
+config.status:1225: creating Makefile
+config.status:1225: creating doc/Makefile
+config.status:1225: creating bound_test.sh
+config.status:1225: creating codegen_test.sh
+config.status:1225: creating pip_test.sh
+config.status:1225: creating isl_config.h
+config.status:1454: executing depfiles commands
+config.status:1454: executing libtool commands
+config.status:1454: executing include/isl/stdint.h commands
+config.status:2199: creating include/isl/stdint.h : _ISL_INCLUDE_ISL_STDINT_H
+config.status:1454: executing isl.pc commands
+config.status:2681: creating isl.pc.in
+config.status:2704: creating isl.pc
+config.status:2730: creating isl-uninstalled.pc
+config.status:2760: creating isl-uninstalled.sh
+configure:21609: WARNING: unrecognized options: --enable-doc, --enable-gtk-doc, --enable-gtk-doc-html, --enable-gtk-doc-pdf, --with-html-dir, --disable-doxygen
+
+## ---------------- ##
+## Cache variables. ##
+## ---------------- ##
+
+ac_cv_build=i686-pc-linux-gnu
+ac_cv_c_compiler_gnu=yes
+ac_cv_cxx_compiler_gnu=yes
+ac_cv_env_CCC_set=
+ac_cv_env_CCC_value=
+ac_cv_env_CC_set=
+ac_cv_env_CC_value=
+ac_cv_env_CFLAGS_set=
+ac_cv_env_CFLAGS_value=
+ac_cv_env_CPPFLAGS_set=
+ac_cv_env_CPPFLAGS_value=
+ac_cv_env_CPP_set=
+ac_cv_env_CPP_value=
+ac_cv_env_CXXCPP_set=
+ac_cv_env_CXXCPP_value=
+ac_cv_env_CXXFLAGS_set=
+ac_cv_env_CXXFLAGS_value=
+ac_cv_env_CXX_set=
+ac_cv_env_CXX_value=
+ac_cv_env_LDFLAGS_set=
+ac_cv_env_LDFLAGS_value=
+ac_cv_env_LIBS_set=
+ac_cv_env_LIBS_value=
+ac_cv_env_build_alias_set=set
+ac_cv_env_build_alias_value=i686-pc-linux-gnu
+ac_cv_env_host_alias_set=set
+ac_cv_env_host_alias_value=i686-pc-linux-gnu
+ac_cv_env_target_alias_set=
+ac_cv_env_target_alias_value=
+ac_cv_have_decl___builtin_ffs=yes
+ac_cv_have_decl_ffs=yes
+ac_cv_have_decl_mp_get_memory_functions=yes
+ac_cv_header_dlfcn_h=yes
+ac_cv_header_gmp_h=yes
+ac_cv_header_inttypes_h=yes
+ac_cv_header_memory_h=yes
+ac_cv_header_stdc=yes
+ac_cv_header_stdint=stdint.h
+ac_cv_header_stdint_h=yes
+ac_cv_header_stdint_t=stdint.h
+ac_cv_header_stdlib_h=yes
+ac_cv_header_string_h=yes
+ac_cv_header_strings_h=yes
+ac_cv_header_sys_stat_h=yes
+ac_cv_header_sys_types_h=yes
+ac_cv_header_unistd_h=yes
+ac_cv_host=i686-pc-linux-gnu
+ac_cv_lib_gmp_main=yes
+ac_cv_objext=o
+ac_cv_path_EGREP='/bin/grep -E'
+ac_cv_path_FGREP='/bin/grep -F'
+ac_cv_path_GREP=/bin/grep
+ac_cv_path_SED=/bin/sed
+ac_cv_path_install='/usr/bin/install -c'
+ac_cv_path_mkdir=/bin/mkdir
+ac_cv_prog_AWK=mawk
+ac_cv_prog_CPP='gcc -E'
+ac_cv_prog_CXXCPP='g++ -E'
+ac_cv_prog_HAVE_DOXYGEN=false
+ac_cv_prog_PERL=perl
+ac_cv_prog_POD2HTML=pod2html
+ac_cv_prog_ac_ct_AR=ar
+ac_cv_prog_ac_ct_CC=gcc
+ac_cv_prog_ac_ct_CXX=g++
+ac_cv_prog_ac_ct_MANIFEST_TOOL=mt
+ac_cv_prog_ac_ct_OBJDUMP=objdump
+ac_cv_prog_ac_ct_RANLIB=ranlib
+ac_cv_prog_ac_ct_STRIP=strip
+ac_cv_prog_cc_c89=
+ac_cv_prog_cc_g=yes
+ac_cv_prog_cxx_g=yes
+ac_cv_prog_make_make_set=yes
+ac_cv_stdint_message='using gnu compiler gcc (Ubuntu 7.2.0-8ubuntu3) 7.2.0'
+ac_cv_stdint_result='(assuming C99 compatible system)'
+am_cv_CC_dependencies_compiler_type=gcc3
+am_cv_CXX_dependencies_compiler_type=gcc3
+am_cv_make_support_nested_variables=yes
+am_cv_prog_cc_c_o=yes
+ax_cv___attribute__=yes
+ax_cv_c_compiler_vendor=gnu
+ax_cv_c_flags__O3__fomit_frame_pointer__malign_double__fstrict_aliasing__ffast_math__march_pentiumpro=yes
+ax_cv_c_flags__ffast_math=yes
+ax_cv_c_flags__fstrict_aliasing=yes
+ax_cv_c_flags__malign_double=yes
+ax_cv_c_flags__march_pentiumpro=yes
+ax_cv_gcc_archflag=-march=pentiumpro
+ax_cv_gcc_warn_unused_result=yes
+ax_cv_gcc_x86_cpuid_0=a:756e6547:6c65746e:49656e69
+ax_cv_gcc_x86_cpuid_1=6fb:800:80200209:78bfbff
+lt_cv_ar_at_file=@
+lt_cv_deplibs_check_method=pass_all
+lt_cv_file_magic_cmd='$MAGIC_CMD'
+lt_cv_file_magic_test_file=
+lt_cv_ld_reload_flag=-r
+lt_cv_nm_interface='BSD nm'
+lt_cv_objdir=.libs
+lt_cv_path_LD=/usr/bin/ld
+lt_cv_path_LDCXX=/usr/bin/ld
+lt_cv_path_NM='/usr/bin/nm -B'
+lt_cv_path_mainfest_tool=no
+lt_cv_prog_compiler_c_o=yes
+lt_cv_prog_compiler_c_o_CXX=yes
+lt_cv_prog_compiler_pic='-fPIC -DPIC'
+lt_cv_prog_compiler_pic_CXX='-fPIC -DPIC'
+lt_cv_prog_compiler_pic_works=yes
+lt_cv_prog_compiler_pic_works_CXX=yes
+lt_cv_prog_compiler_rtti_exceptions=no
+lt_cv_prog_compiler_static_works=yes
+lt_cv_prog_compiler_static_works_CXX=yes
+lt_cv_prog_gnu_ld=yes
+lt_cv_prog_gnu_ldcxx=yes
+lt_cv_sharedlib_from_linklib_cmd='printf %s\n'
+lt_cv_shlibpath_overrides_runpath=yes
+lt_cv_sys_global_symbol_pipe='sed -n -e '\''s/^.*[	 ]\([ABCDGIRSTW][ABCDGIRSTW]*\)[	 ][	 ]*\([_A-Za-z][_A-Za-z0-9]*\)$/\1 \2 \2/p'\'' | sed '\''/ __gnu_lto/d'\'''
+lt_cv_sys_global_symbol_to_c_name_address='sed -n -e '\''s/^: \(.*\) .*$/  {"\1", (void *) 0},/p'\'' -e '\''s/^[ABCDGIRSTW][ABCDGIRSTW]* .* \(.*\)$/  {"\1", (void *) \&\1},/p'\'''
+lt_cv_sys_global_symbol_to_c_name_address_lib_prefix='sed -n -e '\''s/^: \(.*\) .*$/  {"\1", (void *) 0},/p'\'' -e '\''s/^[ABCDGIRSTW][ABCDGIRSTW]* .* \(lib.*\)$/  {"\1", (void *) \&\1},/p'\'' -e '\''s/^[ABCDGIRSTW][ABCDGIRSTW]* .* \(.*\)$/  {"lib\1", (void *) \&\1},/p'\'''
+lt_cv_sys_global_symbol_to_cdecl='sed -n -e '\''s/^T .* \(.*\)$/extern int \1();/p'\'' -e '\''s/^[ABCDGIRSTW][ABCDGIRSTW]* .* \(.*\)$/extern char \1;/p'\'''
+lt_cv_sys_global_symbol_to_import=
+lt_cv_sys_max_cmd_len=1572864
+lt_cv_to_host_file_cmd=func_convert_file_noop
+lt_cv_to_tool_file_cmd=func_convert_file_noop
+
+## ----------------- ##
+## Output variables. ##
+## ----------------- ##
+
+ACLOCAL='${SHELL} /home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/missing aclocal-1.14'
+AMDEPBACKSLASH='\'
+AMDEP_FALSE='#'
+AMDEP_TRUE=''
+AMTAR='$${TAR-tar}'
+AM_BACKSLASH='\'
+AM_DEFAULT_V='$(AM_DEFAULT_VERBOSITY)'
+AM_DEFAULT_VERBOSITY='0'
+AM_V='$(V)'
+AR='ar'
+AUTOCONF='${SHELL} /home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/missing autoconf'
+AUTOHEADER='${SHELL} /home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/missing autoheader'
+AUTOMAKE='${SHELL} /home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/missing automake-1.14'
+AWK='mawk'
+CC='gcc'
+CCDEPMODE='depmode=gcc3'
+CFLAGS='-O3 -fomit-frame-pointer -malign-double -fstrict-aliasing -ffast-math -march=pentiumpro'
+CLANG_CXXFLAGS=''
+CLANG_LDFLAGS=''
+CLANG_LIBS=''
+CPP='gcc -E'
+CPPFLAGS=''
+CXX='g++'
+CXXCPP='g++ -E'
+CXXDEPMODE='depmode=gcc3'
+CXXFLAGS='-g -O2'
+CYGPATH_W='echo'
+DEFS='-DHAVE_CONFIG_H'
+DEPDIR='.deps'
+DLLTOOL='false'
+DSYMUTIL=''
+DUMPBIN=''
+ECHO_C=''
+ECHO_N='-n'
+ECHO_T=''
+EGREP='/bin/grep -E'
+EXEEXT=''
+FGREP='/bin/grep -F'
+GENERATE_DOC_FALSE=''
+GENERATE_DOC_TRUE='#'
+GIT_HEAD=''
+GIT_HEAD_ID='isl-0.15'
+GIT_HEAD_VERSION='isl-0.15'
+GMP_FOR_MP_FALSE='#'
+GMP_FOR_MP_TRUE=''
+GREP='/bin/grep'
+HAVE_CLANG_FALSE=''
+HAVE_CLANG_TRUE='#'
+IMATH_FOR_MP_FALSE=''
+IMATH_FOR_MP_TRUE='#'
+INSTALL_DATA='${INSTALL} -m 644'
+INSTALL_PROGRAM='${INSTALL}'
+INSTALL_SCRIPT='${INSTALL}'
+INSTALL_STRIP_PROGRAM='$(install_sh) -c -s'
+LD='/usr/bin/ld'
+LDFLAGS=''
+LIBOBJS=''
+LIBS=''
+LIBTOOL='$(SHELL) $(top_builddir)/libtool'
+LIB_CLANG_EDIT=''
+LIPO=''
+LN_S='ln -s'
+LTLIBOBJS=''
+MAKEINFO='${SHELL} /home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/missing makeinfo'
+MANIFEST_TOOL=':'
+MKDIR_P='/bin/mkdir -p'
+MP_CPPFLAGS='-I/home/user/mxe/usr/i686-pc-linux-gnu/include'
+MP_LDFLAGS='-L/home/user/mxe/usr/i686-pc-linux-gnu/lib'
+MP_LIBS='-lgmp'
+NEED_GET_MEMORY_FUNCTIONS_FALSE=''
+NEED_GET_MEMORY_FUNCTIONS_TRUE='#'
+NM='/usr/bin/nm -B'
+NMEDIT=''
+OBJDUMP='objdump'
+OBJEXT='o'
+OTOOL64=''
+OTOOL=''
+PACKAGE='isl'
+PACKAGE_BUGREPORT='isl-development@googlegroups.com'
+PACKAGE_NAME='isl'
+PACKAGE_STRING='isl 0.15'
+PACKAGE_TARNAME='isl'
+PACKAGE_URL=''
+PACKAGE_VERSION='0.15'
+PATH_SEPARATOR=':'
+PDFLATEX=''
+PERL='perl'
+POD2HTML='pod2html'
+PRTDIAG=''
+RANLIB='ranlib'
+SED='/bin/sed'
+SET_MAKE=''
+SHELL='/bin/bash'
+STRIP='strip'
+VERSION='0.15'
+WARNING_FLAGS=''
+ac_ct_AR='ar'
+ac_ct_CC='gcc'
+ac_ct_CXX='g++'
+ac_ct_DUMPBIN=''
+am__EXEEXT_FALSE=''
+am__EXEEXT_TRUE='#'
+am__fastdepCC_FALSE='#'
+am__fastdepCC_TRUE=''
+am__fastdepCXX_FALSE='#'
+am__fastdepCXX_TRUE=''
+am__include='include'
+am__isrc=''
+am__leading_dot='.'
+am__nodep='_no'
+am__quote=''
+am__tar='$${TAR-tar} chof - "$$tardir"'
+am__untar='$${TAR-tar} xf -'
+bindir='${exec_prefix}/bin'
+build='i686-pc-linux-gnu'
+build_alias='i686-pc-linux-gnu'
+build_cpu='i686'
+build_os='linux-gnu'
+build_vendor='pc'
+datadir='${datarootdir}'
+datarootdir='${prefix}/share'
+docdir='/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15.build_.sink'
+dvidir='${docdir}'
+exec_prefix='${prefix}'
+host='i686-pc-linux-gnu'
+host_alias='i686-pc-linux-gnu'
+host_cpu='i686'
+host_os='linux-gnu'
+host_vendor='pc'
+htmldir='${docdir}'
+includedir='${prefix}/include'
+infodir='/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15.build_.sink'
+install_sh='${SHELL} /home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/install-sh'
+libdir='${exec_prefix}/lib'
+libexecdir='${exec_prefix}/libexec'
+llvm_config_found=''
+localedir='${datarootdir}/locale'
+localstatedir='${prefix}/var'
+mandir='/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15.build_.sink'
+mkdir_p='$(MKDIR_P)'
+oldincludedir='/usr/include'
+pdfdir='${docdir}'
+pkgconfig_libdir='${libdir}/pkgconfig'
+pkgconfig_libfile='isl.pc'
+prefix='/home/user/mxe/usr/i686-pc-linux-gnu'
+program_transform_name='s,x,x,'
+psdir='${docdir}'
+sbindir='${exec_prefix}/sbin'
+sharedstatedir='${prefix}/com'
+sysconfdir='${prefix}/etc'
+target_alias=''
+versioninfo='15:0:0'
+
+## ----------- ##
+## confdefs.h. ##
+## ----------- ##
+
+/* confdefs.h */
+#define PACKAGE_NAME "isl"
+#define PACKAGE_TARNAME "isl"
+#define PACKAGE_VERSION "0.15"
+#define PACKAGE_STRING "isl 0.15"
+#define PACKAGE_BUGREPORT "isl-development@googlegroups.com"
+#define PACKAGE_URL ""
+#define PACKAGE "isl"
+#define VERSION "0.15"
+#define GCC_WARN_UNUSED_RESULT __attribute__((__warn_unused_result__))
+#define HAVE___ATTRIBUTE__ 1
+#define STDC_HEADERS 1
+#define HAVE_SYS_TYPES_H 1
+#define HAVE_SYS_STAT_H 1
+#define HAVE_STDLIB_H 1
+#define HAVE_STRING_H 1
+#define HAVE_MEMORY_H 1
+#define HAVE_STRINGS_H 1
+#define HAVE_INTTYPES_H 1
+#define HAVE_STDINT_H 1
+#define HAVE_UNISTD_H 1
+#define HAVE_DLFCN_H 1
+#define LT_OBJDIR ".libs/"
+#define USE_GMP_FOR_MP /**/
+#define HAVE_LIBGMP 1
+#define HAVE_DECL_MP_GET_MEMORY_FUNCTIONS 1
+#define HAVE_DECL_FFS 1
+#define HAVE_DECL___BUILTIN_FFS 1
+
+configure: exit 0
+
+settings.mk
+# This is a template of configuration file for MXE. See
+# docs/index.html for more extensive documentations.
+
+# This variable controls the number of compilation processes
+# within one package ("intra-package parallelism").
+#JOBS := 
+
+# This variable controls where intermediate files are created
+# this is necessary when compiling inside a virtualbox shared
+# directory. Some commands like strip fail in there with Protocol error
+# default is the current directory
+#MXE_TMP := /tmp
+
+# This variable controls the targets that will build.
+#MXE_TARGETS := i686-w64-mingw32.static i686-w64-mingw32.shared x86_64-w64-mingw32.static x86_64-w64-mingw32.shared
+
+# This variable controls which plugins are in use.
+# See plugins/README.md for further information.
+#override MXE_PLUGIN_DIRS += plugins/apps plugins/native
+
+# This variable controls the download mirror for SourceForge,
+# when it is used. Enabling the value below means auto.
+#SOURCEFORGE_MIRROR := downloads.sourceforge.net
+
+# The three lines below makes `make` build these "local
+# packages" instead of all packages.
+#LOCAL_PKG_LIST := boost curl file flac lzo pthreads vorbis wxwidgets
+#.DEFAULT_GOAL  := local-pkg-list
+#local-pkg-list: $(LOCAL_PKG_LIST)
+i686-pc-linux-gnu-strip '/home/user/mxe/usr/i686-pc-linux-gnu/bin/test-isl.exe'
+bash: i686-pc-linux-gnu-strip: command not found
+Makefile:786: recipe for target 'build-only-isl_i686-pc-linux-gnu' failed
+make[1]: [build-only-isl_i686-pc-linux-gnu] Error 127 (ignored)
+(du -k -d 0 '/home/user/mxe/tmp-isl-i686-pc-linux-gnu' 2>/dev/null || du -k --max-depth 0 '/home/user/mxe/tmp-isl-i686-pc-linux-gnu') | sed -n 's/^\(\S*\).*/du: \1 KiB/p'
+du: 42068 KiB
+rm -rfv  '/home/user/mxe/tmp-isl-i686-pc-linux-gnu'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_coalesce.o'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/polyhedron_detect_equalities.o'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_ctx_private.h'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_ast_int.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_point.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_tarjan.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_list_templ.h'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_tarjan.lo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_schedule_band.o'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_ast_graft.o'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_sort.o'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_ctx.lo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_ast_build.o'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_arg.o'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_multi_apply_set.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_options.lo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_id_to_pw_aff.o'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_tab.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_val_gmp.o'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_reordering.lo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_ast_build_expr.h'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_factorization.h'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_convex_hull.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/configure.ac'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_space.o'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/print_templ.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_aff_private.h'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_mat_private.h'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_scan.o'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_multi_gist.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_stream.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl.pc.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_basis_reduction.h'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_ast_build_expr.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_set_list.o'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_val_gmp.lo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_multi_apply_union_set.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_scan.h'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_polynomial.o'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_union_map_private.h'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_printer_private.h'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_pip'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/stamp-h1'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_stream.o'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_convex_hull.o'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_map_list.lo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_aff.lo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_farkas.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_convex_hull.lo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_union_templ.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_union_map.o'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/config.sub'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_fold.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_map_list.o'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_version.lo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_constraint_private.h'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_point_private.h'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/bound_test.sh.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/cat.o'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_val.lo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_schedule.lo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_tab.h'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_sample.o'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_map_private.h'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_local_space.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_tab_pip.o'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/README'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_hash.o'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_scan.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_map_lexopt_templ.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_bound'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/Makefile.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_space_private.h'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_aff.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_map_simplify.o'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_map_to_basic_set.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_reordering.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_map_to_basic_set.o'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_local_space.o'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/basis_reduction_tab.o'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_equalities.o'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/polytope_scan.o'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_mat.lo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/basis_reduction_templ.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test-driver'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_schedule_read.o'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_transitive_closure.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_options.o'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/print.o'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/print.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_tarjan.o'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_output.lo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_multi_floor.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_printer.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_sample.h'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/libisl.la'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_seq.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_set_list.lo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_polynomial.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_factorization.lo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/.libs/libisl.la'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/.libs/libisl.a'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/.libs/libisl.lai'
+removed directory '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/.libs'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_closure'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_sample.lo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_point.lo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_schedule_node.lo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_vertices.lo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_val_gmp.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_ctx.o'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_scheduler.o'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_blk.lo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/polyhedron_sample.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/closure.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_union_map.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_yaml.h'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/print.lo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/aclocal.m4'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_lp.o'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/polytope_scan.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_gmp.lo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_schedule_band.lo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_factorization.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_list_templ.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_polynomial.lo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/.deps/closure.Po'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/.deps/isl_farkas.Plo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/.deps/isl_map_to_basic_set.Plo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/.deps/isl_point.Plo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/.deps/isl_ilp.Plo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/.deps/isl_schedule_band.Plo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/.deps/isl_options.Plo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/.deps/bound.Po'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/.deps/isl_map_subtract.Plo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/.deps/isl_ast_build.Plo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/.deps/isl_val.Plo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/.deps/isl_factorization.Plo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/.deps/isl_map_simplify.Plo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/.deps/polyhedron_detect_equalities.Po'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/.deps/isl_arg.Plo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/.deps/isl_affine_hull.Plo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/.deps/isl_sort.Plo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/.deps/isl_val_imath.Plo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/.deps/polyhedron_sample.Po'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/.deps/pip.Po'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/.deps/isl_schedule_tree.Plo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/.deps/isl_stream.Plo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/.deps/isl_morph.Plo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/.deps/isl_ast_codegen.Plo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/.deps/isl_tab.Plo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/.deps/isl_gmp.Plo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/.deps/isl_tab_pip.Plo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/.deps/isl_obj.Plo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/.deps/isl_convex_hull.Plo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/.deps/isl_val_gmp.Plo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/.deps/isl_transitive_closure.Plo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/.deps/isl_map.Plo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/.deps/isl_constraint.Plo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/.deps/isl_bernstein.Plo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/.deps/isl_band.Plo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/.deps/isl_set_list.Plo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/.deps/isl_id.Plo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/.deps/isl_sample.Plo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/.deps/cat.Po'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/.deps/isl_deprecated.Plo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/.deps/isl_coalesce.Plo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/.deps/isl_version.Plo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/.deps/isl_ast_graft.Plo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/.deps/isl_map_list.Plo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/.deps/isl_vertices.Plo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/.deps/isl_test.Po'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/.deps/isl_hash.Plo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/.deps/isl_mat.Plo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/.deps/isl_ast.Plo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/.deps/isl_vec.Plo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/.deps/mp_get_memory_functions.Plo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/.deps/polytope_scan.Po'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/.deps/isl_seq.Plo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/.deps/isl_bound.Plo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/.deps/isl_local_space.Plo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/.deps/isl_aff.Plo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/.deps/isl_union_map.Plo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/.deps/isl_reordering.Plo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/.deps/isl_schedule_node.Plo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/.deps/isl_schedule_read.Plo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/.deps/isl_printer.Plo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/.deps/isl_tarjan.Plo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/.deps/isl_scheduler.Plo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/.deps/isl_space.Plo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/.deps/isl_id_to_ast_expr.Plo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/.deps/isl_scan.Plo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/.deps/isl_imath.Plo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/.deps/isl_range.Plo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/.deps/isl_equalities.Plo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/.deps/isl_blk.Plo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/.deps/isl_id_to_pw_aff.Plo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/.deps/isl_output.Plo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/.deps/print.Plo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/.deps/isl_input.Plo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/.deps/isl_fold.Plo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/.deps/polyhedron_minimize.Po'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/.deps/isl_ast_int.Plo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/.deps/isl_lp.Plo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/.deps/isl_flow.Plo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/.deps/isl_schedule.Plo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/.deps/isl_ctx.Plo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/.deps/isl_ast_build_expr.Plo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/.deps/isl_polynomial.Plo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/.deps/basis_reduction_tab.Plo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/.deps/isl_dim_map.Plo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/.deps/codegen.Po'
+removed directory '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/.deps'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_lp.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/polyhedron_sample.o'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_power_templ.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_constraint.lo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/depcomp'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_config.h.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_map_list.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_equalities.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_fold.lo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_affine_hull.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl.pc'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_seq.o'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_arg.lo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_vec.o'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_ast_graft.lo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_map.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_aff.o'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_multi_apply_templ.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_schedule_read.lo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/GIT_HEAD_ID'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_ctx.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_ast.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_bernstein.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_stream.lo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_id_to_ast_expr.o'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_mat.o'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/ltmain.sh'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_ast_build.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_vec.lo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_flow.o'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/pip.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_schedule_tree.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/install-sh'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_multi_templ.h'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_vertices.o'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_blk.o'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_bound.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_constraint.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_schedule_tree.o'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_map_subtract.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_stream_private.h'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/polyhedron_minimize.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_obj.o'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_dim_map.h'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_mat.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_id_to_ast_expr.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_id.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_polyhedron_detect_equalities'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_local_space.lo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_schedule_band.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/include/isl/version.h'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/include/isl/hash.h'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/include/isl/aff.h'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/include/isl/polynomial_type.h'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/include/isl/schedule.h'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/include/isl/point.h'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/include/isl/stdint.h'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/include/isl/id.h'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/include/isl/ast_type.h'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/include/isl/schedule_node.h'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/include/isl/ctx.h'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/include/isl/vertices.h'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/include/isl/union_map.h'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/include/isl/printer.h'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/include/isl/map_to_basic_set.h'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/include/isl/multi.h'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/include/isl/val.h'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/include/isl/obj.h'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/include/isl/ast_build.h'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/include/isl/ilp.h'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/include/isl/stream.h'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/include/isl/id_to_pw_aff.h'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/include/isl/list.h'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/include/isl/union_map_type.h'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/include/isl/vec.h'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/include/isl/union_set.h'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/include/isl/deprecated/ilp_int.h'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/include/isl/deprecated/constraint_int.h'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/include/isl/deprecated/point_int.h'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/include/isl/deprecated/map_int.h'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/include/isl/deprecated/polynomial_int.h'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/include/isl/deprecated/mat_int.h'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/include/isl/deprecated/set_int.h'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/include/isl/deprecated/union_map_int.h'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/include/isl/deprecated/vec_int.h'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/include/isl/deprecated/val_int.h'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/include/isl/deprecated/aff_int.h'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/include/isl/deprecated/ast_int.h'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/include/isl/deprecated/int.h'
+removed directory '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/include/isl/deprecated'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/include/isl/local_space.h'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/include/isl/union_set_type.h'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/include/isl/ast.h'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/include/isl/set_type.h'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/include/isl/schedule_type.h'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/include/isl/hmap.h'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/include/isl/arg.h'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/include/isl/options.h'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/include/isl/map_type.h'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/include/isl/band.h'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/include/isl/val_gmp.h'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/include/isl/flow.h'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/include/isl/id_to_ast_expr.h'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/include/isl/mat.h'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/include/isl/set.h'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/include/isl/space.h'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/include/isl/aff_type.h'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/include/isl/lp.h'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/include/isl/map.h'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/include/isl/polynomial.h'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/include/isl/constraint.h'
+removed directory '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/include/isl'
+removed directory '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/include'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_tab_pip.lo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_ilp.lo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_factorization.o'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_int.h'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_range.o'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_input.o'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/codegen.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/Makefile'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/bound_test.sh'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/bound.o'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_imath.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/cat.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_multi_templ.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/gitversion.h'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/mp_get_memory_functions.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_band.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_vec.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_ilp.o'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_lp.lo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_ast_graft.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_sort.h'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_ast_build.lo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/LICENSE'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_id_private.h'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_farkas.o'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_map_simplify.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_polyhedron_sample'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_id.lo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_output.o'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/pip_test.sh'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_input.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/polyhedron_detect_equalities.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_codegen'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_printer.o'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/codegen.o'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_map.lo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_local_space_private.h'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_ast_int.lo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/config.guess'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_schedule_read.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/basis_reduction_tab.lo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_flow.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/imath_wrap/wrap.h'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/imath_wrap/imath.h'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/imath_wrap/imrat.h'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/imath_wrap/.deps/imrat.Plo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/imath_wrap/.deps/imath.Plo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/imath_wrap/.deps/gmp_compat.Plo'
+removed directory '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/imath_wrap/.deps'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/imath_wrap/gmp_compat.h'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/imath_wrap/gmp_compat.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/imath_wrap/imath.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/imath_wrap/imrat.c'
+removed directory '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/imath_wrap'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/closure.o'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/m4/ax_submodule.m4'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/m4/ax_set_warning_flags.m4'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/m4/ax_create_stdint_h.m4'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/m4/ax_detect_gmp.m4'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/m4/libtool.m4'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/m4/ax_check_compiler_flags.m4'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/m4/ltsugar.m4'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/m4/ax_detect_imath.m4'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/m4/ax_create_pkgconfig_info.m4'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/m4/ax_detect_git_head.m4'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/m4/ltoptions.m4'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/m4/ax_compiler_vendor.m4'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/m4/lt~obsolete.m4'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/m4/ax_gcc_warn_unused_result.m4'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/m4/ax_c___attribute__.m4'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/m4/ax_cc_maxopt.m4'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/m4/ax_gcc_x86_cpuid.m4'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/m4/ax_gcc_archflag.m4'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/m4/ltversion.m4'
+removed directory '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/m4'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_morph.h'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_ast_codegen.o'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_version.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_id_to_pw_aff.lo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/imath/imath.h'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/imath/imrat.h'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/imath/gmp_compat.h'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/imath/gmp_compat.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/imath/imath.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/imath/imrat.c'
+removed directory '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/imath'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_affine_hull.lo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_int_gmp.h'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_bernstein.lo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_config.h'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_sample.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_hide_deprecated.h'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_bound.o'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_map_subtract.lo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_coalesce.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_map_to_basic_set.lo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_schedule_band.h'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_options.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/interface/extract_interface.cc'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/interface/all.h'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/interface/Makefile.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/interface/extract_interface.h'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/interface/python.cc'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/interface/isl.py.top'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/interface/python.h'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/interface/isl.py'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/interface/Makefile.am'
+removed directory '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/interface'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_morph.lo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_map.o'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_input.lo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_blk.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_hash.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_ilp_private.h'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_bernstein.o'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_scheduler.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_gmp.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/ChangeLog'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_id.o'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_ast_codegen.lo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_ast_int.o'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/codegen_test.sh'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_reordering.h'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_sort.lo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_dim_map.o'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_transitive_closure.lo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_band_private.h'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_obj.lo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_multi_intersect.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_test.o'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_schedule_tree.h'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/doc/manual.pdf'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/doc/Makefile.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/doc/isl.bib'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/doc/implementation.tex'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/doc/chicago.sty'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/doc/manual.tex'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/doc/user.pod'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/doc/Makefile'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/doc/mypod2latex'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/doc/SubmittingPatches'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/doc/CodingStyle'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/doc/chicago.bst'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/doc/Makefile.am'
+removed directory '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/doc'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_coalesce.lo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_hmap_templ.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_bound.lo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_sort.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_fold.o'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_ast_private.h'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_ast_graft_private.h'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_imath.h'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_map_subtract.o'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_tab_pip.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/compile'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_vertices.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_space.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_version.o'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_obj.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_schedule_private.h'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_lp_private.h'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_val_private.h'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_flow.lo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/pip.o'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_ast_build_expr.o'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_config_post.h'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_val.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_pw_templ.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_range.lo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_ast.lo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_arg.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_blk.h'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_scheduler.lo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_equalities.lo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_ast.o'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/codegen_test.sh.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_tab.lo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_farkas.lo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_affine_hull.o'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_schedule_node.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_equalities.h'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_range.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_transitive_closure.o'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_val.o'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_morph.o'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_morph.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_output.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_union_map.lo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_constraint.o'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/AUTHORS'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_schedule.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_deprecated.o'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/small.pip'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/convex5.polylib'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/convex7.polylib'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/square.pip'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/affine2.polylib'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/equality5.pwqp'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/toplas.pwqp'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/devos.pwqp'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/philippe3vars.pwqp'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/convex11.polylib'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/ex.pip'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/sven.pip'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/linearExample.pwqp'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/philippePolynomialCoeff1P.pwqp'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/affine.polylib'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/faddeev.pwqp'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/sor1d.pip'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/convex6.polylib'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/convex9.polylib'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/basicTest.pwqp'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/negative.pip'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/max.pip'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/test3Deg3Var.pwqp'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/product.pwqp'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/equality3.pwqp'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/convex15.polylib'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/application2.omega'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/convex1.polylib'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/convex2.polylib'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/equality1.pwqp'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/basicLinear2.pwqp'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/equality2.pwqp'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/philippeNeg.pwqp'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/convex8.polylib'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/convex0.polylib'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/shift_unroll.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/atomic3.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/unroll.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/hoist.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/stride6.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/shift.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/stride.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/component4.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/unroll9.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/isolate3.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/unroll8.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/component2.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/isolate4.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/component3.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/component6.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/iter5-0.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/lu_spmd-1.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/substitution-4.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/lefur01-0.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/floor_bound-2.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/lu-2.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/guard1-0.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/lift2-4.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/floor_bound-1.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/syr2k-1.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/wak2-0.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/lu-1.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/m7-1.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/m2-1.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/stride1-0.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/lefur01-0.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/guard1-0.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/m11-0.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/iter3-0.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/floor_bound-5.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/olda-0.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/if_then-3.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/lift1-4.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/lift2-1.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/lift1-0.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/ge-1.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/code_gen-0.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/ts1d-orig0-0.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/substitution-0.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/iter8-0.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/iter6-0.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/ts1d-check-sblock-0.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/x-1.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/stride7-1.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/if_then-5.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/chosol-1.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/lu_spmd-1.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/gist-4.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/code_gen-2.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/collard-0.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/olda-0.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/iter6-0.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/m12-0.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/stride7-0.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/m10-1.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/README'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/syr2k-1.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/gc-0.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/gist-1.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/code_gen-0.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/gist-5.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/lu_ijk-0.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/substitution-3.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/stride4-0.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/if_then-5.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/lift2-5.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/iter8-0.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/gist-4.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/floor_bound-2.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/syr2k-0.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/m4-1.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/substitution-2.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/lu-2.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/dagstuhl1-0.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/gist-1.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/wak3-0.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/syr2k-3.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/gist-3.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/m9-0.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/wak3-1.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/ts1d-mp-i_ts-m_b-0.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/iter9-0.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/if_then-0.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/lefur00-0.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/gist-2.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/wak1-1.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/gc-0.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/wak1-0.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/basics-0.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/gist-0.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/chosol-1.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/stride1-0.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/lift2-2.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/floor_bound-3.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/fc1-1.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/m7-0.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/iter7-0.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/iter6-1.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/lefur00-0.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/wak2-1.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/wak4-1.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/fc1-0.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/lu_spmd-0.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/iter2-0.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/stride4-0.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/lu_ijk-1.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/p.delft-0.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/lift1-0.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/iter5-0.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/syr2k-2.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/m12-1.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/m7-1.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/lift1-2.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/m8-1.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/stride6-1.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/gist-2.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/m1-0.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/lu_spmd-0.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/floor_bound-4.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/lift1-1.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/lefur01-1.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/code_gen-1.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/stride3-0.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/gist-5.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/x-0.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/m7-0.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/if_then-0.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/substitution-1.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/basics-0.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/wak2-1.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/m1-0.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/stride6-0.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/floor_bound-1.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/lefur04-0.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/floor_bound-5.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/ts1d-orig0-0.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/substitution-1.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/syr2k-3.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/iter1-0.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/m3-0.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/gist-3.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/lu_ijk-0.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/x-0.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/wak4-0.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/p6-1.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/basics-1.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/floor_bound-6.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/m2-1.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/x-1.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/ge-1.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/code_gen-2.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/fc1-2.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/lu_ijk-1.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/dagstuhl1-1.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/lift2-1.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/stride3-0.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/if_then-4.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/lift1-3.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/stride6-1.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/fc2-1.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/p.delft-0.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/ge-0.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/stride5-0.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/wak4-0.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/ts1d-check-sblock-0.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/m11-0.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/wak3-1.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/m9-1.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/lift2-3.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/chosol-0.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/lift2-0.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/syr2k-0.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/fc2-0.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/m1-1.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/lift1-1.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/wak2-0.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/wak4-1.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/p.delft2-0.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/m9-0.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/lefur04-0.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/lefur01-1.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/m12-1.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/lift1-5.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/p.delft2-0.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/if_then-4.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/m4-0.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/p6-0.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/m9-1.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/collard-0.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/dagstuhl1-1.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/wak3-0.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/ts1d-mp-i_ts-m_b-0.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/hpf-0.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/lu_ijk-2.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/stride7-0.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/lift2-2.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/iter9-0.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/lift1-5.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/m10-0.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/m10-1.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/fc2-0.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/lift1-4.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/lift1-2.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/basics-1.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/stride6-2.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/if_then-1.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/stride7-1.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/olda-1.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/lu-1.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/ts1d-check0-0.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/chosol-0.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/p6-0.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/fc1-0.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/lift2-0.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/lefur03-0.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/m8-0.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/hpf-0.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/lu-0.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/stride2-0.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/fc1-2.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/lift2-5.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/lu-3.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/m4-1.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/fc1-1.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/if_then-2.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/guard1-1.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/guard1-1.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/m4-0.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/stride2-0.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/code_gen-1.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/substitution-2.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/floor_bound-0.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/lu-3.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/m8-0.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/stride6-0.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/lift1-3.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/syr2k-2.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/m2-0.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/m3-0.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/ts1d-check0-0.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/m2-0.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/if_then-3.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/substitution-3.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/m8-1.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/lu-0.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/floor_bound-6.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/lu_ijk-2.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/substitution-4.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/iter4-0.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/iter7-0.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/iter3-0.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/olda-1.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/stride6-2.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/iter6-1.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/lift2-4.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/substitution-0.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/m12-0.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/if_then-2.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/fc2-1.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/iter2-0.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/ge-0.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/floor_bound-4.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/iter1-0.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/floor_bound-0.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/p6-1.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/floor_bound-3.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/iter4-0.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/wak1-0.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/m10-0.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/m1-1.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/dagstuhl1-0.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/if_then-1.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/lift2-3.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/stride5-0.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/gist-0.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/lefur03-0.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega/wak1-1.in'
+removed directory '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/omega'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/unroll6.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/stride6.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/unroll2.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/isolate2.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/separate.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/isolate5.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/unroll7.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/isolate1.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/component5.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/disjuncts.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/atomic3.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/component2.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/atomic2.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/component1.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/single_valued.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/filter.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/empty.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/gemm.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/hoist.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/shift_unroll.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/component6.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/component0.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/separate.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/unroll10.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/lu.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/separate.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/isolate1.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/dwt.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/atomic.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/roman.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/mod.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/component3.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/filter.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/component1.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/unroll3.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/stride7.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/stride7.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/reservoir-pingali3.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/mod3.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/largeur.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/reservoir-loechner4.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/faber.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/otl.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/levenshtein-1-2-3.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/unroll.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/reservoir-lim-lam6.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/jacobi-shared.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/reservoir-lim-lam5.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/reservoir-mg-rprj3.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/nul_basic2.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/thomasset.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/stride.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/0D-1.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/reservoir-loechner5.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/0D-1.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/lu2.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/youcef.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/tiling.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/darte.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/reservoir-lim-lam2.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/orc.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/reservoir-loechner5.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/iftest.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/test.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/reservoir-two.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/dealII.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/donotsimp.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/reservoir-stride2.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/mod.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/reservoir-lim-lam4.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/nul_basic1.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/basic-bounds-2.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/equality2.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/reservoir-pingali6.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/reservoir-QR.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/reservoir-mg-resid.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/reservoir-pingali5.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/forwardsub-2-1-2-3.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/reservoir-jacobi3.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/classen2.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/uday_scalars.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/infinite2.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/walters2.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/stride3.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/basic-bounds-6.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/reservoir-fusion1.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/unroll2.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/esced.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/lux.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/cholesky2.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/README'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/basic-bounds-5.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/mode.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/0D-3.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/guide.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/reservoir-lim-lam1.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/singleton.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/reservoir-jacobi3.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/1point-2.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/backtrack.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/swim.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/1point-1.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/youcef.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/no_lindep.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/4-param.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/min-2-1.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/basic-bounds-1.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/mod3.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/param-split.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/esced.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/sor1d.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/mod2.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/nul_lcpc.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/reservoir-stride2.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/reservoir-mg-psinv.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/lineality-2-1-2.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/gauss.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/forwardsub-3-1-2.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/mxm-shared.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/dealII.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/equality.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/reservoir-lim-lam2.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/reservoir-pingali1.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/mod4.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/tiling.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/reservoir-QR.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/basic-bounds-4.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/reservoir-cholesky2.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/lu2.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/gesced2.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/dot2.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/reservoir-jacobi2.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/dot.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/byu98-1-2-3.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/reservoir-pingali5.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/classen.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/darte.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/square+triangle-1-1-2-3.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/swim.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/reservoir-pingali2.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/multi-stride.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/block.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/yosr2.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/reservoir-tang-xue1.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/min-3-1.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/wavefront.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/mode.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/yosr.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/reservoir-stride.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/4-param.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/walters3.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/nul_complex1.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/nul_complex1.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/reservoir-jacobi2.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/reservoir-mg-rprj3.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/reservoir-long.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/param-split.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/iftest.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/logo.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/reservoir-loechner4.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/forwardsub-3-1-2.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/reservoir-lim-lam4.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/basic-bounds-4.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/levenshtein-1-2-3.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/stride2.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/infinite2.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/lu.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/reservoir-pingali4.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/sor1d.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/classen2.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/union.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/min-4-1.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/min-1-1.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/jacobi-shared.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/square+triangle-1-1-2-3.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/dot2.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/block2.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/reservoir-long.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/cholesky.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/reservoir-two.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/equality2.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/mod.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/lux.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/stride3.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/reservoir-mg-interp.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/emploi.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/0D-2.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/usvd_e_t.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/basic-bounds-2.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/block3.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/yosr.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/reservoir-pingali2.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/reservoir-pingali1.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/nul_basic2.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/iftest2.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/rectangle.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/cholesky2.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/reservoir-lim-lam5.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/0D-2.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/reservoir-stride.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/lu.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/reservoir-lim-lam1.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/min-2-1.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/logopar.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/constant.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/vivien.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/reservoir-liu-zhuge1.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/forwardsub-1-1-2.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/vasilache.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/ex1.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/reservoir-pingali3.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/basic-bounds-3.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/reservoir-cholesky2.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/nul_lcpc.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/singleton.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/1point-2.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/walters3.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/reservoir-mg-resid.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/orc.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/basic-bounds-1.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/multi-stride2.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/durbin_e_s.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/reservoir-mg-interp2.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/stride.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/min-4-1.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/forwardsub-1-1-2.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/walters.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/reservoir-lim-lam6.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/lineality-1-2.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/1point-1.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/otl.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/mod2.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/multi-stride2.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/reservoir-loechner3.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/constbound.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/multi-mm-1.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/gesced.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/equality.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/reservoir-fusion2.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/christian.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/cholesky.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/reservoir-mg-psinv.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/unroll.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/merge.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/gesced.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/dot.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/min-3-1.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/largeur.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/forwardsub-2-1-2-3.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/logopar.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/basic-bounds-5.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/gauss.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/rectangle.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/logo.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/wavefront.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/gesced3.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/no_lindep.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/uday_scalars.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/merge.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/gesced3.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/min-1-1.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/vivien2.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/backtrack.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/emploi.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/reservoir-fusion1.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/classen.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/guide.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/usvd_e_t.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/faber.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/nul_basic1.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/multi-stride.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/stride4.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/reservoir-fusion2.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/lex.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/reservoir-mg-interp.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/reservoir-bastoul3.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/block.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/pouchet.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/yosr2.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/test.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/reservoir-mg-interp2.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/vivien2.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/reservoir-bastoul3.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/reservoir-lim-lam3.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/0D-3.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/constbound.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/unroll2.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/reservoir-loechner3.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/youcefn.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/donotsimp.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/pouchet.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/vivien.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/basic-bounds-3.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/thomasset.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/lineality-2-1-2.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/lex.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/mxm-shared.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/christian.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/durbin_e_s.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/multi-mm-1.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/reservoir-pingali4.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/vasilache.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/reservoir-lim-lam3.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/stride2.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/basic-bounds-6.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/union.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/constant.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/reservoir-pingali6.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/block2.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/gesced2.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/reservoir-tang-xue1.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/iftest2.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/mod4.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/walters.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/reservoir-liu-zhuge1.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/youcefn.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/block3.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/ex1.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/byu98-1-2-3.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/lineality-1-2.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/walters2.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog/stride4.st'
+removed directory '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/cloog'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/separation_class3.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/lu.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/shift2.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/atomic.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/unroll3.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/shift2.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/stride.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/unroll4.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/unroll11.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/unroll4.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/unroll2.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/stride5.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/unroll6.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/isolate4.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/unroll7.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/isolate6.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/component4.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/atomic2.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/separation_class2.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/separate2.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/dwt.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/isolate2.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/component5.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/unroll8.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/isolate3.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/separation_class3.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/roman.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/unroll.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/component0.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/hoist2.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/stride5.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/mod.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/isolate5.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/empty.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/separation_class2.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/unroll10.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/single_valued.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/unroll11.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/separate2.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/atomic4.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/hoist2.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/pldi2012/figure8_a.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/pldi2012/figure7_d.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/pldi2012/README'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/pldi2012/figure7_b.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/pldi2012/figure7_d.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/pldi2012/figure8_b.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/pldi2012/figure7_c.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/pldi2012/figure8_b.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/pldi2012/figure8_a.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/pldi2012/figure7_c.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/pldi2012/figure7_b.c'
+removed directory '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/pldi2012'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/unroll10.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/atomic4.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/separation_class4.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/separation_class.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/isolate6.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/unroll9.st'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/disjuncts.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/gemm.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/separation_class4.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/atomic.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/separation_class.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen/shift.in'
+removed directory '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/codegen'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/convex10.polylib'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/ex2.pip'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/seghir-vd.pip'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/tobi.pip'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/basicTestParameterPosNeg.pwqp'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/cg1.pip'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/convex12.polylib'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/convex14.polylib'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/set.omega'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/esced.pip'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/brisebarre.pip'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/split.pwqp'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/boulet.pip'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/philippePolynomialCoeff.pwqp'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/basicLinear.pwqp'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/philippe3vars3pars.pwqp'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/convex3.polylib'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/convex4.polylib'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/application.omega'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/neg.pwqp'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/philippe.pwqp'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/convex13.polylib'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/affine3.polylib'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/unexpanded.pwqp'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/gist1.polylib'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/equality4.pwqp'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs/fimmel.pip'
+removed directory '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/test_inputs'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_bound.h'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_dim_map.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_reordering.o'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_multi_macro.h'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl-uninstalled.pc'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_printer.lo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_gmp.o'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/config.log'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_hash.lo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_ast_build_private.h'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_dim_map.lo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_scan.lo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_ilp.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_seq.lo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_id_to_pw_aff.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_range.h'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/configure'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl.py'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/pip_test.sh.in'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_band.lo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_ast_build_expr.lo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_deprecated.lo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_ast_codegen.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/polyhedron_minimize.o'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_vec_private.h'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_schedule_node.o'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/missing'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_schedule_tree.lo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_int_imath.h'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_vertices_private.h'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_point.o'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/bound.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/config.status'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/basis_reduction_tab.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_id_to_ast_expr.lo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_polyhedron_minimize'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_map_simplify.lo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/Makefile.am'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_schedule.o'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_deprecated.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_band.o'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_test.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_tab.o'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_options_private.h'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_seq.h'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_tarjan.h'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl-uninstalled.sh'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_bernstein.h'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_polytope_scan'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/libtool'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_set_list.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_space.lo'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_cat'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_val_imath.c'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_schedule_node_private.h'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_polynomial_private.h'
+removed '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15/isl_test'
+removed directory '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15'
+removed directory '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/isl-0.15.build_'
+removed directory '/home/user/mxe/tmp-isl-i686-pc-linux-gnu/readonly'
+removed directory '/home/user/mxe/tmp-isl-i686-pc-linux-gnu'
+touch '/home/user/mxe/usr/i686-pc-linux-gnu/installed/isl'
+make[1]: Leaving directory '/home/user/mxe'
+
+real	10m10.976s
+user	4m6.631s
+sys	5m50.166s

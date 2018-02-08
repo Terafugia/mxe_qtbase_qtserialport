@@ -1,0 +1,2 @@
+../../test-driver: line 107: ./t-sizeinbase.exe: cannot execute binary file: Exec format error
+FAIL t-sizeinbase.exe (exit status: 126)

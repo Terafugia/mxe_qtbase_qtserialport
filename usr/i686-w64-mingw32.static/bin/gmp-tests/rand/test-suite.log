@@ -1,0 +1,56 @@
+=============================================
+   GNU MP 6.1.2: tests/rand/test-suite.log
+=============================================
+
+# TOTAL: 7
+# PASS:  0
+# SKIP:  0
+# XFAIL: 0
+# FAIL:  7
+# XPASS: 0
+# ERROR: 0
+
+.. contents:: :depth: 2
+
+FAIL: t-iset
+============
+
+../../test-driver: line 107: ./t-iset.exe: cannot execute binary file: Exec format error
+FAIL t-iset.exe (exit status: 126)
+
+FAIL: t-lc2exp
+==============
+
+../../test-driver: line 107: ./t-lc2exp.exe: cannot execute binary file: Exec format error
+FAIL t-lc2exp.exe (exit status: 126)
+
+FAIL: t-mt
+==========
+
+../../test-driver: line 107: ./t-mt.exe: cannot execute binary file: Exec format error
+FAIL t-mt.exe (exit status: 126)
+
+FAIL: t-rand
+============
+
+../../test-driver: line 107: ./t-rand.exe: cannot execute binary file: Exec format error
+FAIL t-rand.exe (exit status: 126)
+
+FAIL: t-urbui
+=============
+
+../../test-driver: line 107: ./t-urbui.exe: cannot execute binary file: Exec format error
+FAIL t-urbui.exe (exit status: 126)
+
+FAIL: t-urmui
+=============
+
+../../test-driver: line 107: ./t-urmui.exe: cannot execute binary file: Exec format error
+FAIL t-urmui.exe (exit status: 126)
+
+FAIL: t-urndmm
+==============
+
+../../test-driver: line 107: ./t-urndmm.exe: cannot execute binary file: Exec format error
+FAIL t-urndmm.exe (exit status: 126)
+

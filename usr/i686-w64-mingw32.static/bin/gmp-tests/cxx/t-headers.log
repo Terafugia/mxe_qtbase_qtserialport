@@ -1,0 +1,2 @@
+../../test-driver: line 107: ./t-headers.exe: cannot execute binary file: Exec format error
+FAIL t-headers.exe (exit status: 126)

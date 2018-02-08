@@ -1,0 +1,25 @@
+--2018-02-08 05:47:39--  https://downloads.sourceforge.net/project/expat/expat/2.2.5/expat-2.2.5.tar.bz2
+Resolving downloads.sourceforge.net (downloads.sourceforge.net)... 216.34.181.59
+Connecting to downloads.sourceforge.net (downloads.sourceforge.net)|216.34.181.59|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://netix.dl.sourceforge.net/project/expat/expat/2.2.5/expat-2.2.5.tar.bz2 [following]
+--2018-02-08 05:47:40--  https://netix.dl.sourceforge.net/project/expat/expat/2.2.5/expat-2.2.5.tar.bz2
+Resolving netix.dl.sourceforge.net (netix.dl.sourceforge.net)... 87.121.121.2
+Connecting to netix.dl.sourceforge.net (netix.dl.sourceforge.net)|87.121.121.2|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 510868 (499K) [application/octet-stream]
+Saving to: ‘/home/user/mxe/pkg/.tmp-expat-2.2.5.tar.bz2’
+
+     0K .......... .......... .......... .......... .......... 10%  164K 3s
+    50K .......... .......... .......... .......... .......... 20%  463K 2s
+   100K .......... .......... .......... .......... .......... 30%  566K 1s
+   150K .......... .......... .......... .......... .......... 40%  486K 1s
+   200K .......... .......... .......... .......... .......... 50% 6.25M 1s
+   250K .......... .......... .......... .......... .......... 60%  499K 0s
+   300K .......... .......... .......... .......... .......... 70% 7.45M 0s
+   350K .......... .......... .......... .......... .......... 80% 7.46M 0s
+   400K .......... .......... .......... .......... .......... 90%  691K 0s
+   450K .......... .......... .......... .......... ........  100% 4.47M=0.8s
+
+2018-02-08 05:47:42 (617 KB/s) - ‘/home/user/mxe/pkg/.tmp-expat-2.2.5.tar.bz2’ saved [510868/510868]
+

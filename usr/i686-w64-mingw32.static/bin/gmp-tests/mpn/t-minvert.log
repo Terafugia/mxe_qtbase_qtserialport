@@ -1,0 +1,2 @@
+../../test-driver: line 107: ./t-minvert.exe: cannot execute binary file: Exec format error
+FAIL t-minvert.exe (exit status: 126)

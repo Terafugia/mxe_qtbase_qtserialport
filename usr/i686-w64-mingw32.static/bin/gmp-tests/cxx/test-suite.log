@@ -1,0 +1,134 @@
+============================================
+   GNU MP 6.1.2: tests/cxx/test-suite.log
+============================================
+
+# TOTAL: 20
+# PASS:  0
+# SKIP:  0
+# XFAIL: 0
+# FAIL:  20
+# XPASS: 0
+# ERROR: 0
+
+.. contents:: :depth: 2
+
+FAIL: t-binary
+==============
+
+../../test-driver: line 107: ./t-binary.exe: cannot execute binary file: Exec format error
+FAIL t-binary.exe (exit status: 126)
+
+FAIL: t-cast
+============
+
+../../test-driver: line 107: ./t-cast.exe: cannot execute binary file: Exec format error
+FAIL t-cast.exe (exit status: 126)
+
+FAIL: t-cxx11
+=============
+
+../../test-driver: line 107: ./t-cxx11.exe: cannot execute binary file: Exec format error
+FAIL t-cxx11.exe (exit status: 126)
+
+FAIL: t-headers
+===============
+
+../../test-driver: line 107: ./t-headers.exe: cannot execute binary file: Exec format error
+FAIL t-headers.exe (exit status: 126)
+
+FAIL: t-iostream
+================
+
+../../test-driver: line 107: ./t-iostream.exe: cannot execute binary file: Exec format error
+FAIL t-iostream.exe (exit status: 126)
+
+FAIL: t-istream
+===============
+
+../../test-driver: line 107: ./t-istream.exe: cannot execute binary file: Exec format error
+FAIL t-istream.exe (exit status: 126)
+
+FAIL: t-locale
+==============
+
+../../test-driver: line 107: ./t-locale.exe: cannot execute binary file: Exec format error
+FAIL t-locale.exe (exit status: 126)
+
+FAIL: t-misc
+============
+
+../../test-driver: line 107: ./t-misc.exe: cannot execute binary file: Exec format error
+FAIL t-misc.exe (exit status: 126)
+
+FAIL: t-mix
+===========
+
+../../test-driver: line 107: ./t-mix.exe: cannot execute binary file: Exec format error
+FAIL t-mix.exe (exit status: 126)
+
+FAIL: t-ops
+===========
+
+../../test-driver: line 107: ./t-ops.exe: cannot execute binary file: Exec format error
+FAIL t-ops.exe (exit status: 126)
+
+FAIL: t-ops2
+============
+
+../../test-driver: line 107: ./t-ops2.exe: cannot execute binary file: Exec format error
+FAIL t-ops2.exe (exit status: 126)
+
+FAIL: t-ops3
+============
+
+../../test-driver: line 107: ./t-ops3.exe: cannot execute binary file: Exec format error
+FAIL t-ops3.exe (exit status: 126)
+
+FAIL: t-ostream
+===============
+
+../../test-driver: line 107: ./t-ostream.exe: cannot execute binary file: Exec format error
+FAIL t-ostream.exe (exit status: 126)
+
+FAIL: t-prec
+============
+
+../../test-driver: line 107: ./t-prec.exe: cannot execute binary file: Exec format error
+FAIL t-prec.exe (exit status: 126)
+
+FAIL: t-ternary
+===============
+
+../../test-driver: line 107: ./t-ternary.exe: cannot execute binary file: Exec format error
+FAIL t-ternary.exe (exit status: 126)
+
+FAIL: t-unary
+=============
+
+../../test-driver: line 107: ./t-unary.exe: cannot execute binary file: Exec format error
+FAIL t-unary.exe (exit status: 126)
+
+FAIL: t-do-exceptions-work-at-all-with-this-compiler
+====================================================
+
+../../test-driver: line 107: ./t-do-exceptions-work-at-all-with-this-compiler.exe: cannot execute binary file: Exec format error
+FAIL t-do-exceptions-work-at-all-with-this-compiler.exe (exit status: 126)
+
+FAIL: t-assign
+==============
+
+../../test-driver: line 107: ./t-assign.exe: cannot execute binary file: Exec format error
+FAIL t-assign.exe (exit status: 126)
+
+FAIL: t-constr
+==============
+
+../../test-driver: line 107: ./t-constr.exe: cannot execute binary file: Exec format error
+FAIL t-constr.exe (exit status: 126)
+
+FAIL: t-rand
+============
+
+../../test-driver: line 107: ./t-rand.exe: cannot execute binary file: Exec format error
+FAIL t-rand.exe (exit status: 126)
+

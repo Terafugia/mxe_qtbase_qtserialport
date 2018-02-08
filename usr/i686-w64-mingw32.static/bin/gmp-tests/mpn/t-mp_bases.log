@@ -1,0 +1,2 @@
+../../test-driver: line 107: ./t-mp_bases.exe: cannot execute binary file: Exec format error
+FAIL t-mp_bases.exe (exit status: 126)

@@ -1,0 +1,2 @@
+../../test-driver: line 107: ./t-locale.exe: cannot execute binary file: Exec format error
+FAIL t-locale.exe (exit status: 126)

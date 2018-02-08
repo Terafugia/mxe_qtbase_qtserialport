@@ -1,0 +1,2 @@
+../../test-driver: line 107: ./t-io_raw.exe: cannot execute binary file: Exec format error
+FAIL t-io_raw.exe (exit status: 126)

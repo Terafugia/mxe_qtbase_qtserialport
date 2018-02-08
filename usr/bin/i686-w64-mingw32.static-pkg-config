@@ -1,0 +1,2 @@
+#!/bin/sh
+PKG_CONFIG_PATH="/home/user/mxe/usr/i686-w64-mingw32.static/qt5/lib/pkgconfig":"$PKG_CONFIG_PATH_i686_w64_mingw32_static" PKG_CONFIG_SYSROOT_DIR= PKG_CONFIG_LIBDIR="/home/user/mxe/usr/i686-w64-mingw32.static/lib/pkgconfig" PKG_CONFIG_SYSTEM_INCLUDE_PATH="/home/user/mxe/usr/i686-w64-mingw32.static/include" PKG_CONFIG_SYSTEM_LIBRARY_PATH="/home/user/mxe/usr/i686-w64-mingw32.static/lib" exec "/home/user/mxe/usr/i686-pc-linux-gnu/bin/pkgconf" --static "$@"
