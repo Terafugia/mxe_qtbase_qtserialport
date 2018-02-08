@@ -1,3 +1,5 @@
+It is a clone of (MXE)[https://github.com/mxe/mxe]. Please visit it to know about license and etc.
+
 # How to build qt project for Windows on Linux
 
 **It is strongly recommended to use it on virtual machine**
