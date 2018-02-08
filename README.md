@@ -1,4 +1,4 @@
-It is a clone of (MXE)[https://github.com/mxe/mxe]. Please visit it to know about license and etc.
+It is a clone of [MXE](https://github.com/mxe/mxe). Please visit it to know about license and etc.
 
 # How to build qt project for Windows on Linux
 
