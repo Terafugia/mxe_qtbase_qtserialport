@@ -1,7 +1,8 @@
-It is a build of [MXE](https://github.com/mxe/mxe). Please visit it to know about license and etc.
-We use it to accelerate building on gitlab-ci (building of qt with mxe takes a lot of time). Note also that this build contains static Qt - read a Qt license.
+It is a build of [MXE](https://github.com/mxe/mxe). Please visit it to know about license and etc. Note also that this build contains static Qt - read a Qt license.
 
-If you have a time - use [MXE](https://github.com/mxe/mxe).
+We use it to accelerate building on gitlab-ci (building of qt with mxe takes a lot of time).
+
+If you have a time - build [MXE](https://github.com/mxe/mxe) in your machine.
 
 If you can use arch-linux - use [mingw-w64-archlinux](https://sourceforge.net/projects/mingw-w64-archlinux/).
 
