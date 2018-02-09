@@ -6,7 +6,7 @@ If you have a time - build [MXE](https://github.com/mxe/mxe) in your machine.
 
 If you can use arch-linux - use [mingw-w64-archlinux](https://sourceforge.net/projects/mingw-w64-archlinux/).
 
-# How to build Qt project for Windows on Linux
+# How to build Qt project for Windows on Ubuntu or Debian Linux
 
 **It is strongly recommended to use it on virtual machine**
 
