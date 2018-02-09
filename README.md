@@ -1,20 +1,20 @@
 It is a clone of [MXE](https://github.com/mxe/mxe). Please visit it to know about license and etc.
 
-# How to build qt project for Windows on Linux
+# How to build Qt project for Windows on Linux
 
 **It is strongly recommended to use it on virtual machine**
 
 Use username **"user"** or create /home/user directory:
 ```
 sudo mkdir /home/user/
-chmod a+rw /home/user/
+sudo chmod a+rw /home/user/
 ```
 
 If you are using x64 machine, do:
 ```
-dpkg --add-architecture i386
-apt update
-apt -y install libc6:i386 libncurses5:i386 libstdc++6:i386
+sudo dpkg --add-architecture i386
+sudo apt update
+sudo apt-get install -y libc6:i386 libncurses5:i386 libstdc++6:i386
 ```
 
 Then do:
