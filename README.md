@@ -16,7 +16,7 @@ sudo mkdir /home/user/
 sudo chmod a+rw /home/user/
 ```
 
-If you are using x64 machine, do:
+If you use x64 machine (**gitlab-ci does**), do:
 ```
 sudo dpkg --add-architecture i386
 sudo apt update
